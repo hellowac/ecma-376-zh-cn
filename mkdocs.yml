@@ -1,0 +1,309 @@
+# 文档属性配置
+site_name: ECMA-376标准中文版(部分) # 文档标题
+repo_name: hellowac
+repo_url: https://github.com/hellowac/ecma-376-zh-cn
+site_description: hellowac
+
+# 主题配置
+theme:
+        name: material # 主题
+        language: zh # 主题语言: 中文简体
+        custom_dir: overrides # 自定义文件夹
+        palette:
+                primary: teal # 主题色
+                accent: blue # 提示颜色
+        features:
+                - header.autohide # 顶部导航栏自动隐藏
+                - navigation.top # 回到顶部按钮
+                - navigation.tabs # 导航栏顶部tab化
+                - navigation.tabs.sticky # 顶部导航栏始终显示
+                - navigation.path # 路径导航支持
+                - content.tabs.link # 支持tab内容标题的锚点
+                - content.code.copy # 代码块支持拷贝
+                - content.tooltips # 工具提示
+                - navigation.indexes # 分组标题导航到index页面
+                - navigation.prune # 导航修剪
+                - navigation.instant # 即时加载
+
+# 插件
+plugins:
+        - search # 搜索支持
+        - mike # 支持文档版本化
+        - autorefs # 锚点跨md文档支持
+        - glightbox # 照片点击放大支持, 依赖Python包: mkdocs-glightbox
+        # - mkdocstrings: # 支持从项目中生成文档, 依赖python包: mkdocstrings , https://github.com/mkdocstrings/mkdocstrings
+        #           default_handler: python # 默认处理语言, 更多选项参考: https://mkdocstrings.github.io/usage/
+        #           handlers:
+        #                   python:
+        #                           paths: [..] # 查找的模块，在上一级目录
+        #                           options:
+        #                                   show_bases: true # 显示继承的类
+        #                                   show_root_heading: true # 显示顶级标题
+        #                                   show_root_members_full_path: true # 显示顶级下面成员的全路径
+        #                                   show_symbol_type_heading: true # 显示不同类标识符号
+        #                                   members_order: "source" # 按成员在源文件中出现的顺序排序成员。
+        #                                   merge_init_into_class: true # 是否将__init__方法合并到类的签名和文档字符串中
+        #                                   show_if_no_docstring: false # 显示对象标题，即使它没有文档字符串或带有文档字符串的子项。
+        #                                   show_signature: true # 显示方法和函数签名。
+        #                                   show_signature_annotations: True # 在方法和函数签名中显示类型注释。
+        #                                   separate_signature: True # 是否将整个签名放在标题下方的代码块中。
+        #                                   docstring_section_style: table # 显示文档注释时的样式, list, https://mkdocstrings.github.io/python/usage/configuration/docstrings/#docstring_section_style
+        #                                   docstring_style: google
+
+        - git-revision-date-localized: # 支持文档创建时间显示， https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+                  locale: zh
+                  enable_creation_date: true
+                  type: date
+
+# 监听文件变动的目录 https://mkdocstrings.github.io/usage/#watch-directories
+watch:
+        - . # 包含父级源码目录
+
+# 扩展
+extra:
+        version: # 支持文档版本化
+                provider: mike # mike 部署支持
+
+extra_css:
+        - stylesheets/extra.css
+
+# 扩展支持， 支持数学符号
+# extra_javascript:
+#   - https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js
+extra_javascript:
+        - javascripts/mathjax.js
+        - https://polyfill.io/v3/polyfill.min.js?features=es6
+        - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# markdown内部扩展配置
+markdown_extensions:
+        - abbr # 工具提示 支持
+        - admonition # 忠告 支持
+        - codehilite
+        - def_list # 指定定义列表, 就是名称冒号内容的方式
+        - attr_list # 支持标签里面的 属性定义
+        - footnotes # 脚注支持
+        - pymdownx.caret # 插入符支持
+        - pymdownx.mark # 标记支持
+        - pymdownx.tilde # 代字号支持
+        - pymdownx.details # 详情可折叠，支持, 依赖 admonition
+        - pymdownx.inlinehilite # 行内高亮显示
+        - pymdownx.snippets
+        - markdown.extensions.toc: # https://facelessuser.github.io/pymdown-extensions/faq/#function-references-in-yaml
+                  slugify:
+                          !!python/object/apply:pymdownx.slugs.slugify {
+                                  kwds: {case: lower},
+                          }
+                  permalink: true
+        - pymdownx.highlight: # 高亮显示代码块  https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
+                  use_pygments: true
+                  pygments_lang_class: true
+                  noclasses: true
+                  pygments_style: default
+        - pymdownx.superfences: # 一些扩展功能的基础定义
+                  custom_fences: # 代码块自定义
+                          - name: mermaid # mermaid图表支持
+                            class: mermaid
+                            format: !!python/name:pymdownx.superfences.fence_code_format
+        - pymdownx.tasklist: # 任务列表支持
+                  custom_checkbox: true
+        - pymdownx.tabbed: # 支持内容tab， 依赖 pymdownx.superfences
+                  alternate_style: true
+        - pymdownx.critic: # 突出显示内容
+                  mode: view
+        - pymdownx.keys # 键盘快捷键支持
+        - pymdownx.smartsymbols # 智能符号
+        - pymdownx.emoji: # emoji 表情支持  https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#emoji
+                  emoji_index: !!python/name:material.extensions.emoji.twemoji
+                  emoji_generator:
+                          !!python/name:material.extensions.emoji.to_svg # 页面导航
+
+
+        - pymdownx.arithmatex: # https://squidfunk.github.io/mkdocs-material/reference/math/#mathjax-mkdocsyml
+                  generic: true
+
+nav:
+        - 概述:
+                  - index.md
+        - Part1(2016):
+                  - ecma-part1/index.md
+                  - 1. 适用范围: ecma-part1/chapter-1.md
+                  - 2. 一致性: ecma-part1/chapter-2.md
+                  - 3. 规范性参考文献: ecma-part1/chapter-3.md
+                  - 4. 术语和定义: ecma-part1/chapter-4.md
+                  - 5. 符号约定: ecma-part1/chapter-5.md
+                  - 6. 缩略语: ecma-part1/chapter-6.md
+                  - 7. 一般说明: ecma-part1/chapter-7.md
+                  - 8. 概述: ecma-part1/chapter-8.md
+                  - 9. 包: ecma-part1/chapter-9.md
+                  - 10. 标记兼容性和可扩展性: ecma-part1/chapter-10.md
+                  - 11. WordprocessingML: ecma-part1/chapter-11.md
+                  - 12. SpreadsheetML: ecma-part1/chapter-12.md
+                  - 13. PresentationML: ecma-part1/chapter-13.md
+                  - 14. DrawingML: ecma-part1/chapter-14.md
+                  - 15. Shared: ecma-part1/chapter-15.md
+                  - 16. 部件概览: ecma-part1/chapter-16.md
+                  - 17. WordprocessingML 参考资料: ecma-part1/chapter-17.md
+                  - 18. SpareadsheetML 参考资料: ecma-part1/chapter-18.md
+                  - 19. PresentationML 参考资料:
+                            - ecma-part1/chapter19/index.md
+                            - 19.1 目录: ecma-part1/chapter19/tableofcontent.md
+                            - 19.2 演示文稿: ecma-part1/chapter19/presentation.md
+                            - 19.3 幻灯片: ecma-part1/chapter19/slides.md
+                            - 19.4 评论: ecma-part1/chapter19/comments.md
+                            - 19.5 动画: ecma-part1/chapter19/animation.md
+                            - 19.6 幻灯片同步数据: ecma-part1/chapter19/slidesyncdata.md
+                            - 19.7 简单类型: ecma-part1/chapter19/simpletypes.md
+                  - 20. DrawingML - 框架参考资料:
+                            - ecma-part1/chapter20/index.md
+                            - 20.1 DrawingML - Main:
+                                      - ecma-part1/chapter20/main/index.md
+                                      - ecma-part1/chapter20/main/toc.md
+                                      - ecma-part1/chapter20/main/basics.md
+                                      - ecma-part1/chapter20/main/audioandvideo.md
+                                      - ecma-part1/chapter20/main/styles.md
+                                      - ecma-part1/chapter20/main/3d.md
+                                      - ecma-part1/chapter20/main/shared_style_sheet.md
+                                      - ecma-part1/chapter20/main/coordinate.md
+                                      - ecma-part1/chapter20/main/shape_fill.md
+                                      - ecma-part1/chapter20/main/shape_definitions.md
+                                      - ecma-part1/chapter20/main/simple_types.md
+                            - ecma-part1/chapter20/picture.md
+                            - ecma-part1/chapter20/lockedcanvas.md
+                            - ecma-part1/chapter20/worddrawing.md
+                            - ecma-part1/chapter20/spreaddrawing.md
+                  - 21. DrawingML - 组件参考资料:
+                            - ecma-part1/chapter21/index.md
+                            - ecma-part1/chapter21/main.md
+                            - ecma-part1/chapter21/charts.md
+                            - ecma-part1/chapter21/chartDrawing.md
+                            - ecma-part1/chapter21/diagram.md
+                  - 22. Shared MLs 参考资料:
+                            - ecma-part1/chapter22/math.md
+                            - ecma-part1/chapter22/extendedproperties.md
+                            - ecma-part1/chapter22/customproperties.md
+                            - ecma-part1/chapter22/varianttypes.md
+                            - ecma-part1/chapter22/customxmldata.md
+                            - ecma-part1/chapter22/bibliography.md
+                            - ecma-part1/chapter22/additionalcharacteri.md
+                            - ecma-part1/chapter22/officedocumentrelationships.md
+                            - ecma-part1/chapter22/sharedsimpletypes.md
+                  - 23. Custom XML Schema 参考资料: ecma-part1/chapter-23.md
+                  - 附录A:Schemas - W3C XML Schema: ecma-part1/annex-a.md
+                  - 附录B:Schemas - RELAX NG: ecma-part1/annex-b.md
+                  - 附录C:附加语法约束: ecma-part1/annex-c.md
+                  - 附录D:示例中的命名空间前缀映射: ecma-part1/annex-d.md
+                  - 附录E:WordprocessingML 自定义 XML 数据提取: ecma-part1/annex-e.md
+                  - 附录F:WordprocessingML 页面边框: ecma-part1/annex-f.md
+                  - 附录G:预定义的 SpreadsheetML 样式定义: ecma-part1/annex-g.md
+                  - 附录H:预定义 DrawingML 形状和文本几何形状示例: ecma-part1/annex-h.md
+                  - 附录I:双向支持: ecma-part1/annex-i.md
+                  - 附录J:无障碍最佳实践: ecma-part1/annex-j.md
+                  - 附录K:根元素位置: ecma-part1/annex-k.md
+                  - 附录L:入门读物:
+                            - ecma-part1/annexL/index.md
+                            - ecma-part1/annexL/wordml.md
+                            - ecma-part1/annexL/spreadml.md
+                            - ecma-part1/annexL/presentml.md
+                            - L.4 DrawingML 简介:
+                                      - ecma-part1/annexL/drawingml/index.md
+                                      - ecma-part1/annexL/drawingml/basics.md
+                                      - ecma-part1/annexL/drawingml/audio.md
+                                      - ecma-part1/annexL/drawingml/styles.md
+                                      - ecma-part1/annexL/drawingml/text.md
+                                      - ecma-part1/annexL/drawingml/tables.md
+                                      - ecma-part1/annexL/drawingml/3daspects.md
+                                      - ecma-part1/annexL/drawingml/coordinate.md
+                                      - ecma-part1/annexL/drawingml/shape_pr.md
+                                      - ecma-part1/annexL/drawingml/shape_def.md
+                                      - ecma-part1/annexL/drawingml/pictures.md
+                                      - ecma-part1/annexL/drawingml/wordml.md
+                                      - ecma-part1/annexL/drawingml/spreadml.md
+                                      - ecma-part1/annexL/drawingml/charts.md
+                                      - ecma-part1/annexL/drawingml/chart_drawing.md
+                                      - ecma-part1/annexL/drawingml/diagrams.md
+                            - ecma-part1/annexL/vml.md
+                            - ecma-part1/annexL/sharedml.md
+                            - ecma-part1/annexL/topics.md
+                  - 附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异: ecma-part1/annex-m.md
+                  - 参考文献: ecma-part1/bibliography.md
+        - Part2(2016): ecma-part2-refrence.md
+        - Part3(2015): ecma-part3-refrence.md
+        - xsd:
+                  - xsd/old/xmlSchema/pml.md
+                  - xsd/old/xmlSchema/sml.md
+                  - xsd/old/xmlSchema/wml.md
+                  - opc:
+                            - xsd/new/opc/opc-contentTypes.md
+                            - xsd/new/opc/opc-coreProperties.md
+                            - xsd/new/opc/opc-digSig.md
+                            - xsd/new/opc/opc-relationships.md
+                  - dml:
+                            - xsd/old/xmlSchema/dml-chart.md
+                            - xsd/old/xmlSchema/dml-chartDrawing.md
+                            - xsd/old/xmlSchema/dml-diagram.md
+                            - xsd/old/xmlSchema/dml-lockedCanvas.md
+                            - xsd/old/xmlSchema/dml-main.md
+                            - xsd/old/xmlSchema/dml-picture.md
+                            - xsd/old/xmlSchema/dml-spreadsheetDrawing.md
+                            - xsd/old/xmlSchema/dml-wordprocessingDrawing.md
+                  - shared:
+                            - xsd/old/xmlSchema/shared-additionalCharacteristics.md
+                            - xsd/old/xmlSchema/shared-bibliography.md
+                            - xsd/old/xmlSchema/shared-commonSimpleTypes.md
+                            - xsd/old/xmlSchema/shared-customXmlDataProperties.md
+                            - xsd/old/xmlSchema/shared-customXmlSchemaProperties.md
+                            - xsd/old/xmlSchema/shared-documentPropertiesCustom.md
+                            - xsd/old/xmlSchema/shared-documentPropertiesExtended.md
+                            - xsd/old/xmlSchema/shared-documentPropertiesVariantTypes.md
+                            - xsd/old/xmlSchema/shared-math.md
+                            - xsd/old/xmlSchema/shared-relationshipReference.md
+        - xsd(新版本):
+                  - xsd/new/xmlSchema/pml.md
+                  - xsd/new/xmlSchema/sml.md
+                  - xsd/new/xmlSchema/wml.md
+                  - opc:
+                            - xsd/new/opc/opc-contentTypes.md
+                            - xsd/new/opc/opc-coreProperties.md
+                            - xsd/new/opc/opc-digSig.md
+                            - xsd/new/opc/opc-relationships.md
+                  - dml:
+                            - xsd/new/xmlSchema/dml-chart.md
+                            - xsd/new/xmlSchema/dml-chartDrawing.md
+                            - xsd/new/xmlSchema/dml-diagram.md
+                            - xsd/new/xmlSchema/dml-lockedCanvas.md
+                            - xsd/new/xmlSchema/dml-main.md
+                            - xsd/new/xmlSchema/dml-picture.md
+                            - xsd/new/xmlSchema/dml-spreadsheetDrawing.md
+                            - xsd/new/xmlSchema/dml-wordprocessingDrawing.md
+                  - shared:
+                            - xsd/new/xmlSchema/shared-additionalCharacteristics.md
+                            - xsd/new/xmlSchema/shared-bibliography.md
+                            - xsd/new/xmlSchema/shared-commonSimpleTypes.md
+                            - xsd/new/xmlSchema/shared-customXmlDataProperties.md
+                            - xsd/new/xmlSchema/shared-customXmlSchemaProperties.md
+                            - xsd/new/xmlSchema/shared-documentPropertiesCustom.md
+                            - xsd/new/xmlSchema/shared-documentPropertiesExtended.md
+                            - xsd/new/xmlSchema/shared-documentPropertiesVariantTypes.md
+                            - xsd/new/xmlSchema/shared-math.md
+                            - xsd/new/xmlSchema/shared-relationshipReference.md
+        - 其他资料:
+                  - 解析XSD文件: other/xsd-parse.md
+                  - lxml库:
+                            - lxml/lxml.md
+                            - lxml/whylxml.md
+                            - lxml/installinglxml.md
+                            - lxml/benchmarksandspeed.md
+                            - lxml/elementtreecompatibilityoflxmletree.md
+                            - lxml/lxmlfaq.md
+                            - 利用lxml进行开发:
+                                      - lxml/lxmlobjectify.md
+                            - 扩展lxml:
+                                      - lxml/extendlxml/element_classes.md
+                  - 文档树形结构:
+                            - struct/theme.md
+                            - struct/presentation.md
+                            - struct/slidemaster.md
+                            - struct/slidelayout.md
+                            - struct/slide.md
+        # - 关于: about.md

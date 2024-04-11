@@ -1,0 +1,133 @@
+# 主题部件结构
+
+- a:theme - [OfficeStyleSheet](../ecma-part1/chapter20/main/shared_style_sheet.md#20169-theme-主题) - 主题
+    - a:themeElements - [BaseStyles](../ecma-part1/chapter20/main/shared_style_sheet.md#201610-themeelements-主题元素集) - 主题元素集
+        - a:clrScheme - [ColorScheme](../ecma-part1/chapter20/main/shared_style_sheet.md#20162-clrscheme-颜色方案) - 颜色方案
+            - a:dk1 - [Color](../ecma-part1/chapter20/main/styles.md#201419-dk1-深色-1) - 深色-1
+                - color - [可选][6选1]
+                    - a:scrgbClr - [ScRgbColor](../ecma-part1/chapter20/main/basics.md#2012330-scrgbclr-rgb-颜色模型---百分比变体) - rgb-颜色模型---百分比变体
+                    - a:srgbClr - [SRgbColor](../ecma-part1/chapter20/main/basics.md#2012332-srgbclr-rgb-颜色模型---十六进制变体) - rgb-颜色模型---十六进制变体
+                    - a:hslClr - [HslColor](../ecma-part1/chapter20/main/basics.md#2012313-hslclr-色相饱和度亮度颜色模型) - 色相饱和度亮度颜色模型
+                    - a:sysClr - [SystemColor](../ecma-part1/chapter20/main/basics.md#2012333-sysclr-系统颜色) - 系统颜色
+                    - a:schemeClr - [SchemeColor](../ecma-part1/chapter20/main/basics.md#2012329-schemeclr-方案颜色) - 方案颜色
+                    - a:prstClr - [PresetColor](../ecma-part1/chapter20/main/basics.md#2012322-prstclr-预设颜色) - 预设颜色
+            - a:lt1 - [Color](../ecma-part1/chapter20/main/styles.md#2014122-lt1-浅色-1) - 浅色-1
+                - color - ...
+            - a:dk2 - [Color](../ecma-part1/chapter20/main/styles.md#2014110-dk2-深色-2) - 深色-2
+                - color - ...
+            - a:lt2 - [Color](../ecma-part1/chapter20/main/styles.md#2014123-lt2-浅色-2) - 浅色-2
+                - color - ...
+            - a:accent1 - [Color](../ecma-part1/chapter20/main/styles.md#201411-accent1-强调色-1) - 强调色-1
+                - color - ...
+            - a:accent2 - [Color](../ecma-part1/chapter20/main/styles.md#201412-accent2-强调色-2) - 强调色-2
+                - color - ...
+            - a:accent3 - [Color](../ecma-part1/chapter20/main/styles.md#201413-accent3-强调色-3) - 强调色-3
+                - color - ...
+            - a:accent4 - [Color](../ecma-part1/chapter20/main/styles.md#201414-accent4-强调色-4) - 强调色-4
+                - color - ...
+            - a:accent5 - [Color](../ecma-part1/chapter20/main/styles.md#201415-accent5-强调色-5) - 强调色-5
+                - color - ...
+            - a:accent6 - [Color](../ecma-part1/chapter20/main/styles.md#201416-accent6-强调色-6) - 强调色-6
+                - color - ...
+            - a:hlink - [Color](../ecma-part1/chapter20/main/styles.md#2014119-hlink-超链接) - 超链接颜色
+                - color - ...
+            - a:folHlink - [Color](../ecma-part1/chapter20/main/styles.md#2014115-folhlink-已关注的超链接) - 已点击超链接颜色
+                - color - ...
+            - 其他属性，参考文档
+        - a:fontScheme - [FontScheme](../ecma-part1/chapter20/main/styles.md#2014118-fontscheme-字体方案) - 字体方案
+            - a:majorFont - [FontCollection](../ecma-part1/chapter20/main/styles.md#2014124-majorfont-主要字体) - 主要字体
+            - a:minorFont - [FontCollection](../ecma-part1/chapter20/main/styles.md#2014125-minorfont-次要字体) - 次要字体
+            - 其他属性，参考文档
+        - a:fmtScheme - [StyleMatrix](../ecma-part1/chapter20/main/styles.md#2014114-fmtscheme-格式方案) - 格式方案
+            - a:fillStyleLst - [FillStyleList](../ecma-part1/chapter20/main/styles.md#2014113-fillstylelst-填充样式列表) - 填充样式列表
+                - 填充样式列表: 可能的值:
+                    - a:noFill - [NoFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201844-nofill-无填充) - 无填充
+                    - a:solidFill - [SolidColorFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201854-solidfill-实心填充) - 实心填充
+                    - a:gradFill - [GradientFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201833-gradfill-渐变填充) - 渐变填充
+                    - a:blipFill - [BlipFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201814-blipfill-图片填充) - 图片填充
+                    - a:pattFill - [PatternFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201847-pattfill-图案填充) - 图案填充
+                    - a:grpFill - [GroupFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201835-grpfill-组合填充)
+            - a:lnStyleLst - [LineStyleList](../ecma-part1/chapter20/main/styles.md#2014121-lnstylelst-线条样式列表) - 线条样式列表
+                - 线条样式列表:
+                    - a:ln - [LineProperties](../ecma-part1/chapter20/main/basics.md#2012224-ln-大纲) - 线条(轮廓)样式
+            - a:effectStyleLst - [EffectStyleList](../ecma-part1/chapter20/main/styles.md#2014112-effectstylelst-效果样式列表) - 效果样式列表
+                - 效果样式列表:
+                    - a:effectStyle - [EffectStyleItem](../ecma-part1/chapter20/main/styles.md#2014111-effectstyle-效果样式) - 效果样式
+                        - effect - 效果样式 [可选][2选1]
+                            - a:effectLst - [EffectList](../ecma-part1/chapter20/main/shape_fill.md#201826-effectlst-效果列表) - 效果列表
+                            - a:effectDag - [EffectContainer](../ecma-part1/chapter20/main/shape_fill.md#201820-cont-效果容器) - 效果容器
+                    - a:scene3d - [Scene3D](../ecma-part1/chapter20/main/styles.md#2014126-scene3d-3d-场景属性) - 3D场景属性
+                    - a:sp3d - [Shape3D](../ecma-part1/chapter20/main/styles.md#21456-xxx) - 3D形状属性 - 未翻译
+            - a:bgFillStyleLst - [BackgroundFillStyleList](../ecma-part1/chapter20/main/styles.md#201417-bgfillstylelst-背景填充样式列表) - 背景填充样式列表
+                - 样式列表: 可能的值:
+                    - a:noFill - [NoFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201844-nofill-无填充) - 无填充
+                    - a:solidFill - [SolidColorFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201854-solidfill-实心填充) - 实心填充
+                    - a:gradFill - [GradientFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201833-gradfill-渐变填充) - 渐变填充
+                    - a:blipFill - [BlipFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201814-blipfill-图片填充) - 图片填充
+                    - a:pattFill - [PatternFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201847-pattfill-图案填充) - 图案填充
+                    - a:grpFill - [GroupFillProperties](../ecma-part1/chapter20/main/shape_fill.md#201835-grpfill-组合填充)
+    - a:objectDefaults - [ObjectStyleDefaults](../ecma-part1/chapter20/main/shared_style_sheet.md#20167-objectdefaults-对象默认属性) - 对象默认样式
+        - a:spDef - [DefaultShapeDefinition](../ecma-part1/chapter20/main/styles.md#2014127-spdef-形状默认样式) - 形状默认样式
+            - a:spPr - [ShapeProperties](../ecma-part1/chapter20/main/basics.md#2012235-sppr-形状属性) - 形状属性 - 参考[图形属性](./slide.md#图形属性)
+            - a:bodyPr - [TextBodyProperties](../ecma-part1/chapter21/main.md#211211-bodypr-正文属性) - 正文属性 - 参考[正文格式](./slide.md#正文格式)
+            - a:lstStyle - [TextBodyProperties](../ecma-part1/chapter21/main.md#2112412-lststyle-文本列表样式) - 文本列表样式 - 参考[正文格式](./slide.md#正文格式)
+            - a:style - [ShapeStyle](../ecma-part1/chapter20/main/basics.md#2012237-style-形状样式) - 形状样式 - 参考[正文格式](./slide.md#图形样式)
+        - a:lnDef - [DefaultShapeDefinition](../ecma-part1/chapter20/main/styles.md#2014120-lndef-行默认样式) - 线条默认样式
+            - a:spPr - [ShapeProperties](../ecma-part1/chapter20/main/basics.md#2012235-sppr-形状属性) - 形状属性 - 参考[图形属性](./slide.md#图形属性)
+            - a:bodyPr - [TextBodyProperties](../ecma-part1/chapter21/main.md#211211-bodypr-正文属性) - 正文属性 - 参考[正文格式](./slide.md#正文格式)
+            - a:lstStyle - [TextBodyProperties](../ecma-part1/chapter21/main.md#2112412-lststyle-文本列表样式) - 文本列表样式 - 参考[正文格式](./slide.md#正文格式)
+            - a:style - [ShapeStyle](../ecma-part1/chapter20/main/basics.md#2012237-style-形状样式) - 形状样式 - 参考[正文格式](./slide.md#图形样式)
+        - a:txDef - [DefaultShapeDefinition](../ecma-part1/chapter20/main/styles.md#2014128-txdef-文本默认样式) - 文本默认样式
+            - a:spPr - [ShapeProperties](../ecma-part1/chapter20/main/basics.md#2012235-sppr-形状属性) - 形状属性 - 参考[图形属性](./slide.md#图形属性)
+            - a:bodyPr - [TextBodyProperties](../ecma-part1/chapter21/main.md#211211-bodypr-正文属性) - 正文属性 - 参考[正文格式](./slide.md#正文格式)
+            - a:lstStyle - [TextBodyProperties](../ecma-part1/chapter21/main.md#2112412-lststyle-文本列表样式) - 文本列表样式 - 参考[正文格式](./slide.md#正文格式)
+            - a:style - [ShapeStyle](../ecma-part1/chapter20/main/basics.md#2012237-style-形状样式) - 形状样式 - 参考[正文格式](./slide.md#图形样式)
+    - a:extraClrSchemeLst - [ObjectStyleDefaults](../ecma-part1/chapter20/main/shared_style_sheet.md#20165-extraclrschemelst-额外配色方案列表) - 额外的颜色方案列表
+        - a:extraClrScheme - [ColorSchemeAndMapping](../ecma-part1/chapter20/main/shared_style_sheet.md#20164-extraclrscheme-额外的配色方案) - 额外的配色方案
+            - a:clrScheme - [ColorScheme](../ecma-part1/chapter20/main/shared_style_sheet.md#20162-clrscheme-颜色方案) - 颜色方案
+                - a:dk1 - [Color](../ecma-part1/chapter20/main/styles.md#201419-dk1-深色-1) - 深色-1
+                    - color - [可选][6选1]
+                        - a:scrgbClr - [ScRgbColor](../ecma-part1/chapter20/main/basics.md#2012330-scrgbclr-rgb-颜色模型---百分比变体) - rgb-颜色模型---百分比变体
+                        - a:srgbClr - [SRgbColor](../ecma-part1/chapter20/main/basics.md#2012332-srgbclr-rgb-颜色模型---十六进制变体) - rgb-颜色模型---十六进制变体
+                        - a:hslClr - [HslColor](../ecma-part1/chapter20/main/basics.md#2012313-hslclr-色相饱和度亮度颜色模型) - 色相饱和度亮度颜色模型
+                        - a:sysClr - [SystemColor](../ecma-part1/chapter20/main/basics.md#2012333-sysclr-系统颜色) - 系统颜色
+                        - a:schemeClr - [SchemeColor](../ecma-part1/chapter20/main/basics.md#2012329-schemeclr-方案颜色) - 方案颜色
+                        - a:prstClr - [PresetColor](../ecma-part1/chapter20/main/basics.md#2012322-prstclr-预设颜色) - 预设颜色
+                - a:lt1 - [Color](../ecma-part1/chapter20/main/styles.md#2014122-lt1-浅色-1) - 浅色-1
+                    - color - [可选][6选1]
+                        - ...
+                - a:dk2 - [Color](../ecma-part1/chapter20/main/styles.md#2014110-dk2-深色-2) - 深色-2
+                    - color - [可选][6选1]
+                        - ...
+                - a:lt2 - [Color](../ecma-part1/chapter20/main/styles.md#2014123-lt2-浅色-2) - 浅色-2
+                    - color - [可选][6选1]
+                        - ...
+                - a:accent1 - [Color](../ecma-part1/chapter20/main/styles.md#201411-accent1-强调色-1) - 强调色-1
+                    - color - [可选][6选1]
+                        - ...
+                - a:accent2 - [Color](../ecma-part1/chapter20/main/styles.md#201412-accent2-强调色-2) - 强调色-2
+                    - color - [可选][6选1]
+                        - ...
+                - a:accent3 - [Color](../ecma-part1/chapter20/main/styles.md#201413-accent3-强调色-3) - 强调色-3
+                    - color - [可选][6选1]
+                        - ...
+                - a:accent4 - [Color](../ecma-part1/chapter20/main/styles.md#201414-accent4-强调色-4) - 强调色-4
+                    - color - [可选][6选1]
+                        - ...
+                - a:accent5 - [Color](../ecma-part1/chapter20/main/styles.md#201415-accent5-强调色-5) - 强调色-5
+                    - color - [可选][6选1]
+                        - ...
+                - a:accent6 - [Color](../ecma-part1/chapter20/main/styles.md#201416-accent6-强调色-6) - 强调色-6
+                    - color - [可选][6选1]
+                        - ...
+                - a:hlink - [Color](../ecma-part1/chapter20/main/styles.md#2014119-hlink-超链接) - 超链接颜色
+                    - color - [可选][6选1]
+                        - ...
+                - a:folHlink - [Color](../ecma-part1/chapter20/main/styles.md#2014115-folhlink-已关注的超链接) - 已点击超链接颜色
+                    - color - [可选][6选1]
+                        - ...
+                - 其他属性，参考文档
+            - a:clrMap - [ColorMapping](../ecma-part1/chapter20/main/shared_style_sheet.md#20161-clrmap-颜色映射) - 颜色映射
+                - 其他属性，参考文档
+    - a:custClrLst - [CustomColorList](../ecma-part1/chapter20/main/shared_style_sheet.md#custClrLst) - 自定义颜色列表
+    - 其他属性，参考文档

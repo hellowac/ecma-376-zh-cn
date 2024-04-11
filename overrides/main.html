@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block outdated %}
+你当前浏览的版本已不是最新版本，
+<a href="{{ '../' ~ base_url }}">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+{% endblock %}

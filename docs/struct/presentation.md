@@ -1,0 +1,52 @@
+# 演示文稿部件结构
+
+- p:presentation - [Presentation](../ecma-part1/chapter19/presentation.md#192126-presentation-演示文稿) - 演示文稿
+    - p:sldMasterIdLst - [SlideMasterIdList](../ecma-part1/chapter19/presentation.md#192137-sldmasteridlst-幻灯片母板id列表) - 幻灯片母板id列表
+        - p:sldMasterId - [SlideMasterIdListEntry](../ecma-part1/chapter19/presentation.md#192136-sldmasterid-幻灯片母板id) - 幻灯片母板id
+            - 其他属性，参考文档
+    - p:notesMasterIdLst - [NotesMasterIdList](../ecma-part1/chapter19/presentation.md#192121-notesmasteridlst-notes-主-id-列表) - 注释母版幻灯片的标识ID列表
+        - p:notesMasterId - [NotesMasterIdListEntry](../ecma-part1/chapter19/presentation.md#192120-notesmasterid-笔记主-id) - 笔记主母板id
+            - 其他属性，参考文档
+    - p:handoutMasterIdLst - [HandoutMasterIdList](../ecma-part1/chapter19/presentation.md#192115-handoutmasteridlst-讲义主-id-列表) - 讲义母板ID列表
+        - p:HandoutMasterIdListEntry - [HandoutMasterIdListEntry](../ecma-part1/chapter19/presentation.md#192114-handoutmasterid-讲义主-id) -讲义母板ID
+            - 其他属性，参考文档
+    - p:sldIdLst - [SlideIdList](../ecma-part1/chapter19/presentation.md#192134-sldidlst-幻灯片id列表) - 幻灯片ID列表
+        - p:p:sldId - [SlideIdListEntry](../ecma-part1/chapter19/presentation.md#192133-sldid-幻灯片id) - 幻灯片id
+            - 其他属性，参考文档
+    - p:sldSz - [SlideSize](../ecma-part1/chapter19/presentation.md#192139-sldsz-演示文稿幻灯片的尺寸) - 演示文稿幻灯片的尺寸
+        - 其他属性，参考文档
+    - p:notesSz - [PositiveSize2D](../ecma-part1/chapter19/presentation.md#192122-notessz-备注幻灯片尺寸) - 备注幻灯片尺寸
+        - 其他属性，参考文档
+    - p:smartTags - [SmartTags](../ecma-part1/chapter19/presentation.md#192140-smarttags-智能标签) - 智能标签
+        - 其他属性，参考文档
+    - p:embeddedFontLst - [EmbeddedFontList](../ecma-part1/chapter19/presentation.md#192110-embeddedfontlst-嵌入字体列表) - 嵌入字体列表
+        - p:embeddedFont - [EmbeddedFontListEntry](../ecma-part1/chapter19/presentation.md#19219-embeddedfont-嵌入字体) - 嵌入字体
+            - p:font - [TextFont](../ecma-part1/chapter19/presentation.md#192113-font-嵌入字体名称) - 嵌入字体名称
+            - p:regular - [EmbeddedFontDataId](../ecma-part1/chapter19/presentation.md#192129-regular-常规嵌入字体) - 常规嵌入字体
+            - p:blod - [EmbeddedFontDataId](../ecma-part1/chapter19/presentation.md#19211-bold-粗体嵌入字体) - 粗体嵌入字体
+            - p:italic - [EmbeddedFontDataId](../ecma-part1/chapter19/presentation.md#192116-italic-斜体嵌入字体) - 斜体嵌入字体
+            - p:boldItalic - [EmbeddedFontDataId](../ecma-part1/chapter19/presentation.md#19212-bolditalic-粗体斜体嵌入字体) - 粗体斜体嵌入字体
+    - p:custShowLst - [CustomShowList](../ecma-part1/chapter19/presentation.md#19217-custshowlst-自定义放映列表) - 自定义放映列表
+        - p:custShow - [CustomShow](../ecma-part1/chapter19/presentation.md#19216-custshow-自定义放映) - 自定义放映
+            - p:sldLst - [SlideRelationshipList](../ecma-part1/chapter19/presentation.md#192135-sldlst-演示文稿幻灯片列表) - 演示文稿幻灯片列表
+                - p:sld - [SlideRelationshipListEntry](../ecma-part1/chapter19/presentation.md#192131-sld-演示文稿幻灯片) - 演示文稿幻灯片
+                    - 其他属性，参考文档
+            - 其他属性，参考文档
+    - p:photoAlbum - [PhotoAlbum](../ecma-part1/chapter19/presentation.md#192124-photoalbum-相册信息) - 相册信息
+        - 其他属性，参考文档
+    - p:custDataLst - [CustomerDataList](../ecma-part1/chapter19/presentation.md#192118-kiosk-信息亭幻灯片放映模式) - 信息亭幻灯片放映模式
+        - p:custData - [CustomerData](../ecma-part1/chapter19/slides.md#193117-custdata-客户数据) - 客户数据
+            - 其他属性，参考文档
+        - p:tags - [TagsData](../ecma-part1/chapter19/slides.md#193147-tags-客户数据标签) - 客户数据标签
+            - 其他属性，参考文档
+    - p:kinsoku - [Kinsoku](../ecma-part1/chapter19/presentation.md#192117-kinsoku-避头尾设置) - 避头尾设置
+        - 其他属性，参考文档
+    - p:defaultTextStyle - [TextListStyle](../ecma-part1/chapter19/presentation.md#19218-defaulttextstyle-演示文稿默认文本样式) - 演示文稿默认文本样式
+        - a:defPPr - [TextParagraphProperties](../ecma-part1/chapter21/main.md#211222-defppr-默认段落样式) - 默认段落样式
+        - a:lvl1pPr - [TextParagraphProperties](../ecma-part1/chapter21/main.md#2112413-lvl1ppr-列表级别-1-文本样式) - 列表级别-1-文本样式
+        - a:lvl2pPr - [TextParagraphProperties](../ecma-part1/chapter21/main.md#2112414-lvl2ppr-列表级别-2-文本样式) - 列表级别-2-文本样式
+        - ...
+        - a:lvl9pPr - [TextParagraphProperties](../ecma-part1/chapter21/main.md#2112421-lvl9ppr-列表级别-9-文本样式) - 列表级别-9-文本样式
+    - p:modifyVerifier - [ModifyVerifier](../ecma-part1/chapter19/presentation.md#192119-modifyverifier-修改验证器) - 修改验证器
+        - 其他属性，参考文档
+    - 其他属性，参考文档
