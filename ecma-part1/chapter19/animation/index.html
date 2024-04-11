@@ -1,0 +1,4825 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../comments/">
+      
+      
+        <link rel="next" href="../slidesyncdata/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>19.5 动画 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#195-animation" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              19.5 动画
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_20" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_20" id="__nav_2_20_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_20_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_20">
+            <span class="md-nav__icon md-icon"></span>
+            19. PresentationML 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tableofcontent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.2 演示文稿
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.3 幻灯片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comments/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.4 评论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    19.5 动画
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    19.5 动画
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1951-anim-animate" class="md-nav__link">
+    19.5.1 anim (Animate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1952-animclr-animate-color-behavior" class="md-nav__link">
+    19.5.2 animClr (Animate Color Behavior)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1953-animeffect-animate-effect" class="md-nav__link">
+    19.5.3 animEffect (Animate Effect)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1954-animmotion-animate-motion" class="md-nav__link">
+    19.5.4 animMotion (Animate Motion)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1955-animrot-animate-rotation" class="md-nav__link">
+    19.5.5 animRot (Animate Rotation)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1956-animscale-animate-scale" class="md-nav__link">
+    19.5.6 animScale (Animate Scale)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1957-attrname-attribute-name" class="md-nav__link">
+    19.5.7 attrName (Attribute Name)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1958-attrnamelst-attribute-name-list" class="md-nav__link">
+    19.5.8 attrNameLst (Attribute Name List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1959-audio-audio" class="md-nav__link">
+    19.5.9 audio (Audio)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19510-bg-background" class="md-nav__link">
+    19.5.10 bg (Background)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19511-bldasone-build-as-one" class="md-nav__link">
+    19.5.11 bldAsOne (Build As One)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19512-blddgm-build-diagram" class="md-nav__link">
+    19.5.12 bldDgm (Build Diagram)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19513-bldgraphic-build-graphics" class="md-nav__link">
+    19.5.13 bldGraphic (Build Graphics)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19514-bldlst-build-list" class="md-nav__link">
+    19.5.14 bldLst (Build List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19515-bldolechart-build-embedded-chart" class="md-nav__link">
+    19.5.15 bldOleChart (Build Embedded Chart)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19516-bldp-build-paragraph" class="md-nav__link">
+    19.5.16 bldP (Build Paragraph)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19517-bldsub-build-sub-elements" class="md-nav__link">
+    19.5.17 bldSub (Build Sub Elements)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19518-blinds-blinds-slide-transition" class="md-nav__link">
+    19.5.18 blinds (Blinds Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19519-boolval-boolean-variant" class="md-nav__link">
+    19.5.19 boolVal (Boolean Variant)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19520-by-by" class="md-nav__link">
+    19.5.20 by (By)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19521-by-by" class="md-nav__link">
+    19.5.21 by (By)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19522-cbhvr-common-behavior" class="md-nav__link">
+    19.5.22 cBhvr (Common Behavior)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19523-charrg-character-range" class="md-nav__link">
+    19.5.23 charRg (Character Range)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19524-checker-checker-slide-transition" class="md-nav__link">
+    19.5.24 checker (Checker Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19525-childtnlst-children-time-node-list" class="md-nav__link">
+    19.5.25 childTnLst (Children Time Node List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19526-circle-circle-slide-transition" class="md-nav__link">
+    19.5.26 circle (Circle Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19527-clrval-color-value" class="md-nav__link">
+    19.5.27 clrVal (Color Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19528-cmd-command" class="md-nav__link">
+    19.5.28 cmd (Command)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19529-cmedianode-common-media-node-properties" class="md-nav__link">
+    19.5.29 cMediaNode (Common Media Node Properties)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19530-comb-comb-slide-transition" class="md-nav__link">
+    19.5.30 comb (Comb Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19531-cond-condition" class="md-nav__link">
+    19.5.31 cond (Condition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19532-cover-cover-slide-transition" class="md-nav__link">
+    19.5.32 cover (Cover Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19533-ctn-common-time-node-properties" class="md-nav__link">
+    19.5.33 cTn (Common Time Node Properties)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19534-cut-cut-slide-transition" class="md-nav__link">
+    19.5.34 cut (Cut Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19535-diamond-diamond-slide-transition" class="md-nav__link">
+    19.5.35 diamond (Diamond Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19536-dissolve-dissolve-slide-transition" class="md-nav__link">
+    19.5.36 dissolve (Dissolve Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19537-endcondlst-end-conditions-list" class="md-nav__link">
+    19.5.37 endCondLst (End Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19538-endsnd-stop-sound-action" class="md-nav__link">
+    19.5.38 endSnd (Stop Sound Action)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19539-endsync-endsync" class="md-nav__link">
+    19.5.39 endSync (EndSync)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19540-excl-exclusive" class="md-nav__link">
+    19.5.40 excl (Exclusive)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19541-fade-fade-slide-transition" class="md-nav__link">
+    19.5.41 fade (Fade Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19542-fltval-float-value" class="md-nav__link">
+    19.5.42 fltVal (Float Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19543-from-from" class="md-nav__link">
+    19.5.43 from (From)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19544-from-from" class="md-nav__link">
+    19.5.44 from (From)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19545-graphicel-graphic-element" class="md-nav__link">
+    19.5.45 graphicEl (Graphic Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19546-hsl-hsl" class="md-nav__link">
+    19.5.46 hsl (HSL)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19547-inktgt-ink-target" class="md-nav__link">
+    19.5.47 inkTgt (Ink Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19548-intval-integer" class="md-nav__link">
+    19.5.48 intVal (Integer)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19549-iterate-iterate" class="md-nav__link">
+    19.5.49 iterate (Iterate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19550-newsflash-newsflash-slide-transition" class="md-nav__link">
+    19.5.50 newsflash (Newsflash Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19551-nextcondlst-next-conditions-list" class="md-nav__link">
+    19.5.51 nextCondLst (Next Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19552-olechartel-embedded-chart-element" class="md-nav__link">
+    19.5.52 oleChartEl (Embedded Chart Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19553-par-parallel-time-node" class="md-nav__link">
+    19.5.53 par (Parallel Time Node)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19554-plus-plus-slide-transition" class="md-nav__link">
+    19.5.54 plus (Plus Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19555-prevcondlst-previous-conditions-list" class="md-nav__link">
+    19.5.55 prevCondLst (Previous Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19556-prg-paragraph-text-range" class="md-nav__link">
+    19.5.56 pRg (Paragraph Text Range)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19557-progress-progress" class="md-nav__link">
+    19.5.57 progress (Progress)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19558-pull-pull-slide-transition" class="md-nav__link">
+    19.5.58 pull (Pull Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19559-push-push-slide-transition" class="md-nav__link">
+    19.5.59 push (Push Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19560-random-random-slide-transition" class="md-nav__link">
+    19.5.60 random (Random Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19561-randombar-random-bar-slide-transition" class="md-nav__link">
+    19.5.61 randomBar (Random Bar Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19562-rctr-rotation-center" class="md-nav__link">
+    19.5.62 rCtr (Rotation Center)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19563-rgb-rgb" class="md-nav__link">
+    19.5.63 rgb (RGB)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19564-rtn-runtime-node-trigger-choice" class="md-nav__link">
+    19.5.64 rtn (Runtime Node Trigger Choice)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19565-seq-sequence-time-node" class="md-nav__link">
+    19.5.65 seq (Sequence Time Node)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19566-set-set-time-node-behavior" class="md-nav__link">
+    19.5.66 set (Set Time Node Behavior)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19567-sldtgt-slide-target" class="md-nav__link">
+    19.5.67 sldTgt (Slide Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19568-snd-sound" class="md-nav__link">
+    19.5.68 snd (Sound)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19569-sndac-sound-action" class="md-nav__link">
+    19.5.69 sndAc (Sound Action)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19570-sndtgt-sound-target" class="md-nav__link">
+    19.5.70 sndTgt (Sound Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19571-split-split-slide-transition" class="md-nav__link">
+    19.5.71 split (Split Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19572-sptgt-shape-target" class="md-nav__link">
+    19.5.72 spTgt (Shape Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19573-stcondlst-start-conditions-list" class="md-nav__link">
+    19.5.73 stCondLst (Start Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19574-strips-strips-slide-transition" class="md-nav__link">
+    19.5.74 strips (Strips Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19575-strval-string-value" class="md-nav__link">
+    19.5.75 strVal (String Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19576-stsnd-start-sound-action" class="md-nav__link">
+    19.5.76 stSnd (Start Sound Action)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19577-subsp-subshape" class="md-nav__link">
+    19.5.77 subSp (Subshape)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19578-subtnlst-sub-timenodes-list" class="md-nav__link">
+    19.5.78 subTnLst (Sub-TimeNodes List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19579-tav-time-animate-value" class="md-nav__link">
+    19.5.79 tav (Time Animate Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19580-tavlst-time-animated-value-list" class="md-nav__link">
+    19.5.80 tavLst (Time Animated Value List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19581-tgtel-target-element" class="md-nav__link">
+    19.5.81 tgtEl (Target Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19582-tmabs-time-absolute" class="md-nav__link">
+    19.5.82 tmAbs (Time Absolute)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19583-tmpct-time-percentage" class="md-nav__link">
+    19.5.83 tmPct (Time Percentage)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19584-tmpl-template-effects" class="md-nav__link">
+    19.5.84 tmpl (Template Effects)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19585-tmpllst-template-effects" class="md-nav__link">
+    19.5.85 tmplLst (Template effects)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19586-tn-time-node" class="md-nav__link">
+    19.5.86 tn (Time Node)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19587-tnlst-time-node-list" class="md-nav__link">
+    19.5.87 tnLst (Time Node List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19588-to-to" class="md-nav__link">
+    19.5.88 to (To)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19589-to-to" class="md-nav__link">
+    19.5.89 to (To)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19590-to-to" class="md-nav__link">
+    19.5.90 to (To)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19591-txel-text-element" class="md-nav__link">
+    19.5.91 txEl (Text Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19592-val-value" class="md-nav__link">
+    19.5.92 val (Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19593-video-video" class="md-nav__link">
+    19.5.93 video (Video)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19594-wedge-wedge-slide-transition" class="md-nav__link">
+    19.5.94 wedge (Wedge Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19595-wheel-wheel-slide-transition" class="md-nav__link">
+    19.5.95 wheel (Wheel Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19596-wipe-wipe-slide-transition" class="md-nav__link">
+    19.5.96 wipe (Wipe Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19597-zoom-zoom-slide-transition" class="md-nav__link">
+    19.5.97 zoom (Zoom Slide Transition)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slidesyncdata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.6 幻灯片同步数据
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19.7 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1951-anim-animate" class="md-nav__link">
+    19.5.1 anim (Animate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1952-animclr-animate-color-behavior" class="md-nav__link">
+    19.5.2 animClr (Animate Color Behavior)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1953-animeffect-animate-effect" class="md-nav__link">
+    19.5.3 animEffect (Animate Effect)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1954-animmotion-animate-motion" class="md-nav__link">
+    19.5.4 animMotion (Animate Motion)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1955-animrot-animate-rotation" class="md-nav__link">
+    19.5.5 animRot (Animate Rotation)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1956-animscale-animate-scale" class="md-nav__link">
+    19.5.6 animScale (Animate Scale)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1957-attrname-attribute-name" class="md-nav__link">
+    19.5.7 attrName (Attribute Name)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1958-attrnamelst-attribute-name-list" class="md-nav__link">
+    19.5.8 attrNameLst (Attribute Name List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1959-audio-audio" class="md-nav__link">
+    19.5.9 audio (Audio)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19510-bg-background" class="md-nav__link">
+    19.5.10 bg (Background)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19511-bldasone-build-as-one" class="md-nav__link">
+    19.5.11 bldAsOne (Build As One)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19512-blddgm-build-diagram" class="md-nav__link">
+    19.5.12 bldDgm (Build Diagram)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19513-bldgraphic-build-graphics" class="md-nav__link">
+    19.5.13 bldGraphic (Build Graphics)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19514-bldlst-build-list" class="md-nav__link">
+    19.5.14 bldLst (Build List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19515-bldolechart-build-embedded-chart" class="md-nav__link">
+    19.5.15 bldOleChart (Build Embedded Chart)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19516-bldp-build-paragraph" class="md-nav__link">
+    19.5.16 bldP (Build Paragraph)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19517-bldsub-build-sub-elements" class="md-nav__link">
+    19.5.17 bldSub (Build Sub Elements)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19518-blinds-blinds-slide-transition" class="md-nav__link">
+    19.5.18 blinds (Blinds Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19519-boolval-boolean-variant" class="md-nav__link">
+    19.5.19 boolVal (Boolean Variant)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19520-by-by" class="md-nav__link">
+    19.5.20 by (By)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19521-by-by" class="md-nav__link">
+    19.5.21 by (By)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19522-cbhvr-common-behavior" class="md-nav__link">
+    19.5.22 cBhvr (Common Behavior)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19523-charrg-character-range" class="md-nav__link">
+    19.5.23 charRg (Character Range)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19524-checker-checker-slide-transition" class="md-nav__link">
+    19.5.24 checker (Checker Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19525-childtnlst-children-time-node-list" class="md-nav__link">
+    19.5.25 childTnLst (Children Time Node List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19526-circle-circle-slide-transition" class="md-nav__link">
+    19.5.26 circle (Circle Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19527-clrval-color-value" class="md-nav__link">
+    19.5.27 clrVal (Color Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19528-cmd-command" class="md-nav__link">
+    19.5.28 cmd (Command)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19529-cmedianode-common-media-node-properties" class="md-nav__link">
+    19.5.29 cMediaNode (Common Media Node Properties)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19530-comb-comb-slide-transition" class="md-nav__link">
+    19.5.30 comb (Comb Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19531-cond-condition" class="md-nav__link">
+    19.5.31 cond (Condition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19532-cover-cover-slide-transition" class="md-nav__link">
+    19.5.32 cover (Cover Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19533-ctn-common-time-node-properties" class="md-nav__link">
+    19.5.33 cTn (Common Time Node Properties)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19534-cut-cut-slide-transition" class="md-nav__link">
+    19.5.34 cut (Cut Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19535-diamond-diamond-slide-transition" class="md-nav__link">
+    19.5.35 diamond (Diamond Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19536-dissolve-dissolve-slide-transition" class="md-nav__link">
+    19.5.36 dissolve (Dissolve Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19537-endcondlst-end-conditions-list" class="md-nav__link">
+    19.5.37 endCondLst (End Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19538-endsnd-stop-sound-action" class="md-nav__link">
+    19.5.38 endSnd (Stop Sound Action)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19539-endsync-endsync" class="md-nav__link">
+    19.5.39 endSync (EndSync)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19540-excl-exclusive" class="md-nav__link">
+    19.5.40 excl (Exclusive)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19541-fade-fade-slide-transition" class="md-nav__link">
+    19.5.41 fade (Fade Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19542-fltval-float-value" class="md-nav__link">
+    19.5.42 fltVal (Float Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19543-from-from" class="md-nav__link">
+    19.5.43 from (From)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19544-from-from" class="md-nav__link">
+    19.5.44 from (From)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19545-graphicel-graphic-element" class="md-nav__link">
+    19.5.45 graphicEl (Graphic Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19546-hsl-hsl" class="md-nav__link">
+    19.5.46 hsl (HSL)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19547-inktgt-ink-target" class="md-nav__link">
+    19.5.47 inkTgt (Ink Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19548-intval-integer" class="md-nav__link">
+    19.5.48 intVal (Integer)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19549-iterate-iterate" class="md-nav__link">
+    19.5.49 iterate (Iterate)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19550-newsflash-newsflash-slide-transition" class="md-nav__link">
+    19.5.50 newsflash (Newsflash Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19551-nextcondlst-next-conditions-list" class="md-nav__link">
+    19.5.51 nextCondLst (Next Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19552-olechartel-embedded-chart-element" class="md-nav__link">
+    19.5.52 oleChartEl (Embedded Chart Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19553-par-parallel-time-node" class="md-nav__link">
+    19.5.53 par (Parallel Time Node)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19554-plus-plus-slide-transition" class="md-nav__link">
+    19.5.54 plus (Plus Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19555-prevcondlst-previous-conditions-list" class="md-nav__link">
+    19.5.55 prevCondLst (Previous Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19556-prg-paragraph-text-range" class="md-nav__link">
+    19.5.56 pRg (Paragraph Text Range)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19557-progress-progress" class="md-nav__link">
+    19.5.57 progress (Progress)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19558-pull-pull-slide-transition" class="md-nav__link">
+    19.5.58 pull (Pull Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19559-push-push-slide-transition" class="md-nav__link">
+    19.5.59 push (Push Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19560-random-random-slide-transition" class="md-nav__link">
+    19.5.60 random (Random Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19561-randombar-random-bar-slide-transition" class="md-nav__link">
+    19.5.61 randomBar (Random Bar Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19562-rctr-rotation-center" class="md-nav__link">
+    19.5.62 rCtr (Rotation Center)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19563-rgb-rgb" class="md-nav__link">
+    19.5.63 rgb (RGB)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19564-rtn-runtime-node-trigger-choice" class="md-nav__link">
+    19.5.64 rtn (Runtime Node Trigger Choice)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19565-seq-sequence-time-node" class="md-nav__link">
+    19.5.65 seq (Sequence Time Node)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19566-set-set-time-node-behavior" class="md-nav__link">
+    19.5.66 set (Set Time Node Behavior)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19567-sldtgt-slide-target" class="md-nav__link">
+    19.5.67 sldTgt (Slide Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19568-snd-sound" class="md-nav__link">
+    19.5.68 snd (Sound)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19569-sndac-sound-action" class="md-nav__link">
+    19.5.69 sndAc (Sound Action)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19570-sndtgt-sound-target" class="md-nav__link">
+    19.5.70 sndTgt (Sound Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19571-split-split-slide-transition" class="md-nav__link">
+    19.5.71 split (Split Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19572-sptgt-shape-target" class="md-nav__link">
+    19.5.72 spTgt (Shape Target)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19573-stcondlst-start-conditions-list" class="md-nav__link">
+    19.5.73 stCondLst (Start Conditions List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19574-strips-strips-slide-transition" class="md-nav__link">
+    19.5.74 strips (Strips Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19575-strval-string-value" class="md-nav__link">
+    19.5.75 strVal (String Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19576-stsnd-start-sound-action" class="md-nav__link">
+    19.5.76 stSnd (Start Sound Action)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19577-subsp-subshape" class="md-nav__link">
+    19.5.77 subSp (Subshape)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19578-subtnlst-sub-timenodes-list" class="md-nav__link">
+    19.5.78 subTnLst (Sub-TimeNodes List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19579-tav-time-animate-value" class="md-nav__link">
+    19.5.79 tav (Time Animate Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19580-tavlst-time-animated-value-list" class="md-nav__link">
+    19.5.80 tavLst (Time Animated Value List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19581-tgtel-target-element" class="md-nav__link">
+    19.5.81 tgtEl (Target Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19582-tmabs-time-absolute" class="md-nav__link">
+    19.5.82 tmAbs (Time Absolute)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19583-tmpct-time-percentage" class="md-nav__link">
+    19.5.83 tmPct (Time Percentage)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19584-tmpl-template-effects" class="md-nav__link">
+    19.5.84 tmpl (Template Effects)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19585-tmpllst-template-effects" class="md-nav__link">
+    19.5.85 tmplLst (Template effects)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19586-tn-time-node" class="md-nav__link">
+    19.5.86 tn (Time Node)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19587-tnlst-time-node-list" class="md-nav__link">
+    19.5.87 tnLst (Time Node List)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19588-to-to" class="md-nav__link">
+    19.5.88 to (To)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19589-to-to" class="md-nav__link">
+    19.5.89 to (To)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19590-to-to" class="md-nav__link">
+    19.5.90 to (To)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19591-txel-text-element" class="md-nav__link">
+    19.5.91 txEl (Text Element)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19592-val-value" class="md-nav__link">
+    19.5.92 val (Value)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19593-video-video" class="md-nav__link">
+    19.5.93 video (Video)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19594-wedge-wedge-slide-transition" class="md-nav__link">
+    19.5.94 wedge (Wedge Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19595-wheel-wheel-slide-transition" class="md-nav__link">
+    19.5.95 wheel (Wheel Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19596-wipe-wipe-slide-transition" class="md-nav__link">
+    19.5.96 wipe (Wipe Slide Transition)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19597-zoom-zoom-slide-transition" class="md-nav__link">
+    19.5.97 zoom (Zoom Slide Transition)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="195-animation">19.5 Animation<a class="headerlink" href="#195-animation" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Animation</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1951-anim-animate">19.5.1 anim (Animate)<a class="headerlink" href="#1951-anim-animate" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>anim (Animate)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1952-animclr-animate-color-behavior">19.5.2 animClr (Animate Color Behavior)<a class="headerlink" href="#1952-animclr-animate-color-behavior" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>animClr (Animate Color Behavior)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1953-animeffect-animate-effect">19.5.3 animEffect (Animate Effect)<a class="headerlink" href="#1953-animeffect-animate-effect" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>animEffect (Animate Effect)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1954-animmotion-animate-motion">19.5.4 animMotion (Animate Motion)<a class="headerlink" href="#1954-animmotion-animate-motion" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>animMotion (Animate Motion)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1955-animrot-animate-rotation">19.5.5 animRot (Animate Rotation)<a class="headerlink" href="#1955-animrot-animate-rotation" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>animRot (Animate Rotation)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1956-animscale-animate-scale">19.5.6 animScale (Animate Scale)<a class="headerlink" href="#1956-animscale-animate-scale" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>animScale (Animate Scale)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1957-attrname-attribute-name">19.5.7 attrName (Attribute Name)<a class="headerlink" href="#1957-attrname-attribute-name" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>attrName (Attribute Name)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1958-attrnamelst-attribute-name-list">19.5.8 attrNameLst (Attribute Name List)<a class="headerlink" href="#1958-attrnamelst-attribute-name-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>attrNameLst (Attribute Name List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="1959-audio-audio">19.5.9 audio (Audio)<a class="headerlink" href="#1959-audio-audio" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>audio (Audio)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19510-bg-background">19.5.10 bg (Background)<a class="headerlink" href="#19510-bg-background" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bg (Background)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19511-bldasone-build-as-one">19.5.11 bldAsOne (Build As One)<a class="headerlink" href="#19511-bldasone-build-as-one" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldAsOne (Build As One)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19512-blddgm-build-diagram">19.5.12 bldDgm (Build Diagram)<a class="headerlink" href="#19512-blddgm-build-diagram" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldDgm (Build Diagram)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19513-bldgraphic-build-graphics">19.5.13 bldGraphic (Build Graphics)<a class="headerlink" href="#19513-bldgraphic-build-graphics" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldGraphic (Build Graphics)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19514-bldlst-build-list">19.5.14 bldLst (Build List)<a class="headerlink" href="#19514-bldlst-build-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldLst (Build List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19515-bldolechart-build-embedded-chart">19.5.15 bldOleChart (Build Embedded Chart)<a class="headerlink" href="#19515-bldolechart-build-embedded-chart" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldOleChart (Build Embedded Chart)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19516-bldp-build-paragraph">19.5.16 bldP (Build Paragraph)<a class="headerlink" href="#19516-bldp-build-paragraph" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldP (Build Paragraph)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19517-bldsub-build-sub-elements">19.5.17 bldSub (Build Sub Elements)<a class="headerlink" href="#19517-bldsub-build-sub-elements" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>bldSub (Build Sub Elements)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19518-blinds-blinds-slide-transition">19.5.18 blinds (Blinds Slide Transition)<a class="headerlink" href="#19518-blinds-blinds-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>blinds (Blinds Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19519-boolval-boolean-variant">19.5.19 boolVal (Boolean Variant)<a class="headerlink" href="#19519-boolval-boolean-variant" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>boolVal (Boolean Variant)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19520-by-by">19.5.20 by (By)<a class="headerlink" href="#19520-by-by" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>by (By)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19521-by-by">19.5.21 by (By)<a class="headerlink" href="#19521-by-by" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>by (By)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19522-cbhvr-common-behavior">19.5.22 cBhvr (Common Behavior)<a class="headerlink" href="#19522-cbhvr-common-behavior" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cBhvr (Common Behavior)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19523-charrg-character-range">19.5.23 charRg (Character Range)<a class="headerlink" href="#19523-charrg-character-range" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>charRg (Character Range)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19524-checker-checker-slide-transition">19.5.24 checker (Checker Slide Transition)<a class="headerlink" href="#19524-checker-checker-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>checker (Checker Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19525-childtnlst-children-time-node-list">19.5.25 childTnLst (Children Time Node List)<a class="headerlink" href="#19525-childtnlst-children-time-node-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>childTnLst (Children Time Node List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19526-circle-circle-slide-transition">19.5.26 circle (Circle Slide Transition)<a class="headerlink" href="#19526-circle-circle-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>circle (Circle Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19527-clrval-color-value">19.5.27 clrVal (Color Value)<a class="headerlink" href="#19527-clrval-color-value" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>clrVal (Color Value)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19528-cmd-command">19.5.28 cmd (Command)<a class="headerlink" href="#19528-cmd-command" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cmd (Command)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19529-cmedianode-common-media-node-properties">19.5.29 cMediaNode (Common Media Node Properties)<a class="headerlink" href="#19529-cmedianode-common-media-node-properties" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cMediaNode (Common Media Node Properties)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19530-comb-comb-slide-transition">19.5.30 comb (Comb Slide Transition)<a class="headerlink" href="#19530-comb-comb-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">中文</label><label for="__tabbed_31_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>comb (Comb Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19531-cond-condition">19.5.31 cond (Condition)<a class="headerlink" href="#19531-cond-condition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">中文</label><label for="__tabbed_32_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cond (Condition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19532-cover-cover-slide-transition">19.5.32 cover (Cover Slide Transition)<a class="headerlink" href="#19532-cover-cover-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">中文</label><label for="__tabbed_33_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cover (Cover Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19533-ctn-common-time-node-properties">19.5.33 cTn (Common Time Node Properties)<a class="headerlink" href="#19533-ctn-common-time-node-properties" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">中文</label><label for="__tabbed_34_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cTn (Common Time Node Properties)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19534-cut-cut-slide-transition">19.5.34 cut (Cut Slide Transition)<a class="headerlink" href="#19534-cut-cut-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">中文</label><label for="__tabbed_35_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>cut (Cut Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19535-diamond-diamond-slide-transition">19.5.35 diamond (Diamond Slide Transition)<a class="headerlink" href="#19535-diamond-diamond-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">中文</label><label for="__tabbed_36_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>diamond (Diamond Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19536-dissolve-dissolve-slide-transition">19.5.36 dissolve (Dissolve Slide Transition)<a class="headerlink" href="#19536-dissolve-dissolve-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">中文</label><label for="__tabbed_37_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>dissolve (Dissolve Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19537-endcondlst-end-conditions-list">19.5.37 endCondLst (End Conditions List)<a class="headerlink" href="#19537-endcondlst-end-conditions-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><input id="__tabbed_38_2" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="__tabbed_38_1">中文</label><label for="__tabbed_38_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>endCondLst (End Conditions List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19538-endsnd-stop-sound-action">19.5.38 endSnd (Stop Sound Action)<a class="headerlink" href="#19538-endsnd-stop-sound-action" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:2"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><input id="__tabbed_39_2" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="__tabbed_39_1">中文</label><label for="__tabbed_39_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>endSnd (Stop Sound Action)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19539-endsync-endsync">19.5.39 endSync (EndSync)<a class="headerlink" href="#19539-endsync-endsync" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="40:2"><input checked="checked" id="__tabbed_40_1" name="__tabbed_40" type="radio" /><input id="__tabbed_40_2" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="__tabbed_40_1">中文</label><label for="__tabbed_40_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>endSync (EndSync)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19540-excl-exclusive">19.5.40 excl (Exclusive)<a class="headerlink" href="#19540-excl-exclusive" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="41:2"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><input id="__tabbed_41_2" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">中文</label><label for="__tabbed_41_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>excl (Exclusive)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19541-fade-fade-slide-transition">19.5.41 fade (Fade Slide Transition)<a class="headerlink" href="#19541-fade-fade-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="42:2"><input checked="checked" id="__tabbed_42_1" name="__tabbed_42" type="radio" /><input id="__tabbed_42_2" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="__tabbed_42_1">中文</label><label for="__tabbed_42_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>fade (Fade Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19542-fltval-float-value">19.5.42 fltVal (Float Value)<a class="headerlink" href="#19542-fltval-float-value" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="43:2"><input checked="checked" id="__tabbed_43_1" name="__tabbed_43" type="radio" /><input id="__tabbed_43_2" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="__tabbed_43_1">中文</label><label for="__tabbed_43_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>fltVal (Float Value)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19543-from-from">19.5.43 from (From)<a class="headerlink" href="#19543-from-from" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="44:2"><input checked="checked" id="__tabbed_44_1" name="__tabbed_44" type="radio" /><input id="__tabbed_44_2" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="__tabbed_44_1">中文</label><label for="__tabbed_44_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>from (From)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19544-from-from">19.5.44 from (From)<a class="headerlink" href="#19544-from-from" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="45:2"><input checked="checked" id="__tabbed_45_1" name="__tabbed_45" type="radio" /><input id="__tabbed_45_2" name="__tabbed_45" type="radio" /><div class="tabbed-labels"><label for="__tabbed_45_1">中文</label><label for="__tabbed_45_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>from (From)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19545-graphicel-graphic-element">19.5.45 graphicEl (Graphic Element)<a class="headerlink" href="#19545-graphicel-graphic-element" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="46:2"><input checked="checked" id="__tabbed_46_1" name="__tabbed_46" type="radio" /><input id="__tabbed_46_2" name="__tabbed_46" type="radio" /><div class="tabbed-labels"><label for="__tabbed_46_1">中文</label><label for="__tabbed_46_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>graphicEl (Graphic Element)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19546-hsl-hsl">19.5.46 hsl (HSL)<a class="headerlink" href="#19546-hsl-hsl" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="47:2"><input checked="checked" id="__tabbed_47_1" name="__tabbed_47" type="radio" /><input id="__tabbed_47_2" name="__tabbed_47" type="radio" /><div class="tabbed-labels"><label for="__tabbed_47_1">中文</label><label for="__tabbed_47_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>hsl (HSL)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19547-inktgt-ink-target">19.5.47 inkTgt (Ink Target)<a class="headerlink" href="#19547-inktgt-ink-target" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="48:2"><input checked="checked" id="__tabbed_48_1" name="__tabbed_48" type="radio" /><input id="__tabbed_48_2" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="__tabbed_48_1">中文</label><label for="__tabbed_48_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>inkTgt (Ink Target)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19548-intval-integer">19.5.48 intVal (Integer)<a class="headerlink" href="#19548-intval-integer" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="49:2"><input checked="checked" id="__tabbed_49_1" name="__tabbed_49" type="radio" /><input id="__tabbed_49_2" name="__tabbed_49" type="radio" /><div class="tabbed-labels"><label for="__tabbed_49_1">中文</label><label for="__tabbed_49_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>intVal (Integer)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19549-iterate-iterate">19.5.49 iterate (Iterate)<a class="headerlink" href="#19549-iterate-iterate" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="50:2"><input checked="checked" id="__tabbed_50_1" name="__tabbed_50" type="radio" /><input id="__tabbed_50_2" name="__tabbed_50" type="radio" /><div class="tabbed-labels"><label for="__tabbed_50_1">中文</label><label for="__tabbed_50_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>iterate (Iterate)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19550-newsflash-newsflash-slide-transition">19.5.50 newsflash (Newsflash Slide Transition)<a class="headerlink" href="#19550-newsflash-newsflash-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="51:2"><input checked="checked" id="__tabbed_51_1" name="__tabbed_51" type="radio" /><input id="__tabbed_51_2" name="__tabbed_51" type="radio" /><div class="tabbed-labels"><label for="__tabbed_51_1">中文</label><label for="__tabbed_51_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>newsflash (Newsflash Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19551-nextcondlst-next-conditions-list">19.5.51 nextCondLst (Next Conditions List)<a class="headerlink" href="#19551-nextcondlst-next-conditions-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="52:2"><input checked="checked" id="__tabbed_52_1" name="__tabbed_52" type="radio" /><input id="__tabbed_52_2" name="__tabbed_52" type="radio" /><div class="tabbed-labels"><label for="__tabbed_52_1">中文</label><label for="__tabbed_52_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>nextCondLst (Next Conditions List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19552-olechartel-embedded-chart-element">19.5.52 oleChartEl (Embedded Chart Element)<a class="headerlink" href="#19552-olechartel-embedded-chart-element" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="53:2"><input checked="checked" id="__tabbed_53_1" name="__tabbed_53" type="radio" /><input id="__tabbed_53_2" name="__tabbed_53" type="radio" /><div class="tabbed-labels"><label for="__tabbed_53_1">中文</label><label for="__tabbed_53_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>oleChartEl (Embedded Chart Element)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19553-par-parallel-time-node">19.5.53 par (Parallel Time Node)<a class="headerlink" href="#19553-par-parallel-time-node" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="54:2"><input checked="checked" id="__tabbed_54_1" name="__tabbed_54" type="radio" /><input id="__tabbed_54_2" name="__tabbed_54" type="radio" /><div class="tabbed-labels"><label for="__tabbed_54_1">中文</label><label for="__tabbed_54_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>par (Parallel Time Node)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19554-plus-plus-slide-transition">19.5.54 plus (Plus Slide Transition)<a class="headerlink" href="#19554-plus-plus-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="55:2"><input checked="checked" id="__tabbed_55_1" name="__tabbed_55" type="radio" /><input id="__tabbed_55_2" name="__tabbed_55" type="radio" /><div class="tabbed-labels"><label for="__tabbed_55_1">中文</label><label for="__tabbed_55_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>plus (Plus Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19555-prevcondlst-previous-conditions-list">19.5.55 prevCondLst (Previous Conditions List)<a class="headerlink" href="#19555-prevcondlst-previous-conditions-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="56:2"><input checked="checked" id="__tabbed_56_1" name="__tabbed_56" type="radio" /><input id="__tabbed_56_2" name="__tabbed_56" type="radio" /><div class="tabbed-labels"><label for="__tabbed_56_1">中文</label><label for="__tabbed_56_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>prevCondLst (Previous Conditions List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19556-prg-paragraph-text-range">19.5.56 pRg (Paragraph Text Range)<a class="headerlink" href="#19556-prg-paragraph-text-range" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="57:2"><input checked="checked" id="__tabbed_57_1" name="__tabbed_57" type="radio" /><input id="__tabbed_57_2" name="__tabbed_57" type="radio" /><div class="tabbed-labels"><label for="__tabbed_57_1">中文</label><label for="__tabbed_57_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>pRg (Paragraph Text Range)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19557-progress-progress">19.5.57 progress (Progress)<a class="headerlink" href="#19557-progress-progress" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="58:2"><input checked="checked" id="__tabbed_58_1" name="__tabbed_58" type="radio" /><input id="__tabbed_58_2" name="__tabbed_58" type="radio" /><div class="tabbed-labels"><label for="__tabbed_58_1">中文</label><label for="__tabbed_58_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>progress (Progress)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19558-pull-pull-slide-transition">19.5.58 pull (Pull Slide Transition)<a class="headerlink" href="#19558-pull-pull-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="59:2"><input checked="checked" id="__tabbed_59_1" name="__tabbed_59" type="radio" /><input id="__tabbed_59_2" name="__tabbed_59" type="radio" /><div class="tabbed-labels"><label for="__tabbed_59_1">中文</label><label for="__tabbed_59_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>pull (Pull Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19559-push-push-slide-transition">19.5.59 push (Push Slide Transition)<a class="headerlink" href="#19559-push-push-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="60:2"><input checked="checked" id="__tabbed_60_1" name="__tabbed_60" type="radio" /><input id="__tabbed_60_2" name="__tabbed_60" type="radio" /><div class="tabbed-labels"><label for="__tabbed_60_1">中文</label><label for="__tabbed_60_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>push (Push Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19560-random-random-slide-transition">19.5.60 random (Random Slide Transition)<a class="headerlink" href="#19560-random-random-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="61:2"><input checked="checked" id="__tabbed_61_1" name="__tabbed_61" type="radio" /><input id="__tabbed_61_2" name="__tabbed_61" type="radio" /><div class="tabbed-labels"><label for="__tabbed_61_1">中文</label><label for="__tabbed_61_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>random (Random Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19561-randombar-random-bar-slide-transition">19.5.61 randomBar (Random Bar Slide Transition)<a class="headerlink" href="#19561-randombar-random-bar-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="62:2"><input checked="checked" id="__tabbed_62_1" name="__tabbed_62" type="radio" /><input id="__tabbed_62_2" name="__tabbed_62" type="radio" /><div class="tabbed-labels"><label for="__tabbed_62_1">中文</label><label for="__tabbed_62_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>randomBar (Random Bar Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19562-rctr-rotation-center">19.5.62 rCtr (Rotation Center)<a class="headerlink" href="#19562-rctr-rotation-center" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="63:2"><input checked="checked" id="__tabbed_63_1" name="__tabbed_63" type="radio" /><input id="__tabbed_63_2" name="__tabbed_63" type="radio" /><div class="tabbed-labels"><label for="__tabbed_63_1">中文</label><label for="__tabbed_63_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>rCtr (Rotation Center)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19563-rgb-rgb">19.5.63 rgb (RGB)<a class="headerlink" href="#19563-rgb-rgb" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="64:2"><input checked="checked" id="__tabbed_64_1" name="__tabbed_64" type="radio" /><input id="__tabbed_64_2" name="__tabbed_64" type="radio" /><div class="tabbed-labels"><label for="__tabbed_64_1">中文</label><label for="__tabbed_64_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>rgb (RGB)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19564-rtn-runtime-node-trigger-choice">19.5.64 rtn (Runtime Node Trigger Choice)<a class="headerlink" href="#19564-rtn-runtime-node-trigger-choice" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="65:2"><input checked="checked" id="__tabbed_65_1" name="__tabbed_65" type="radio" /><input id="__tabbed_65_2" name="__tabbed_65" type="radio" /><div class="tabbed-labels"><label for="__tabbed_65_1">中文</label><label for="__tabbed_65_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>rtn (Runtime Node Trigger Choice)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19565-seq-sequence-time-node">19.5.65 seq (Sequence Time Node)<a class="headerlink" href="#19565-seq-sequence-time-node" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="66:2"><input checked="checked" id="__tabbed_66_1" name="__tabbed_66" type="radio" /><input id="__tabbed_66_2" name="__tabbed_66" type="radio" /><div class="tabbed-labels"><label for="__tabbed_66_1">中文</label><label for="__tabbed_66_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>seq (Sequence Time Node)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19566-set-set-time-node-behavior">19.5.66 set (Set Time Node Behavior)<a class="headerlink" href="#19566-set-set-time-node-behavior" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="67:2"><input checked="checked" id="__tabbed_67_1" name="__tabbed_67" type="radio" /><input id="__tabbed_67_2" name="__tabbed_67" type="radio" /><div class="tabbed-labels"><label for="__tabbed_67_1">中文</label><label for="__tabbed_67_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>set (Set Time Node Behavior)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19567-sldtgt-slide-target">19.5.67 sldTgt (Slide Target)<a class="headerlink" href="#19567-sldtgt-slide-target" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="68:2"><input checked="checked" id="__tabbed_68_1" name="__tabbed_68" type="radio" /><input id="__tabbed_68_2" name="__tabbed_68" type="radio" /><div class="tabbed-labels"><label for="__tabbed_68_1">中文</label><label for="__tabbed_68_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>sldTgt (Slide Target)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19568-snd-sound">19.5.68 snd (Sound)<a class="headerlink" href="#19568-snd-sound" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="69:2"><input checked="checked" id="__tabbed_69_1" name="__tabbed_69" type="radio" /><input id="__tabbed_69_2" name="__tabbed_69" type="radio" /><div class="tabbed-labels"><label for="__tabbed_69_1">中文</label><label for="__tabbed_69_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>snd (Sound)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19569-sndac-sound-action">19.5.69 sndAc (Sound Action)<a class="headerlink" href="#19569-sndac-sound-action" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="70:2"><input checked="checked" id="__tabbed_70_1" name="__tabbed_70" type="radio" /><input id="__tabbed_70_2" name="__tabbed_70" type="radio" /><div class="tabbed-labels"><label for="__tabbed_70_1">中文</label><label for="__tabbed_70_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>sndAc (Sound Action)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19570-sndtgt-sound-target">19.5.70 sndTgt (Sound Target)<a class="headerlink" href="#19570-sndtgt-sound-target" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="71:2"><input checked="checked" id="__tabbed_71_1" name="__tabbed_71" type="radio" /><input id="__tabbed_71_2" name="__tabbed_71" type="radio" /><div class="tabbed-labels"><label for="__tabbed_71_1">中文</label><label for="__tabbed_71_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>sndTgt (Sound Target)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19571-split-split-slide-transition">19.5.71 split (Split Slide Transition)<a class="headerlink" href="#19571-split-split-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="72:2"><input checked="checked" id="__tabbed_72_1" name="__tabbed_72" type="radio" /><input id="__tabbed_72_2" name="__tabbed_72" type="radio" /><div class="tabbed-labels"><label for="__tabbed_72_1">中文</label><label for="__tabbed_72_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>split (Split Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19572-sptgt-shape-target">19.5.72 spTgt (Shape Target)<a class="headerlink" href="#19572-sptgt-shape-target" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="73:2"><input checked="checked" id="__tabbed_73_1" name="__tabbed_73" type="radio" /><input id="__tabbed_73_2" name="__tabbed_73" type="radio" /><div class="tabbed-labels"><label for="__tabbed_73_1">中文</label><label for="__tabbed_73_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>spTgt (Shape Target)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19573-stcondlst-start-conditions-list">19.5.73 stCondLst (Start Conditions List)<a class="headerlink" href="#19573-stcondlst-start-conditions-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="74:2"><input checked="checked" id="__tabbed_74_1" name="__tabbed_74" type="radio" /><input id="__tabbed_74_2" name="__tabbed_74" type="radio" /><div class="tabbed-labels"><label for="__tabbed_74_1">中文</label><label for="__tabbed_74_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>stCondLst (Start Conditions List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19574-strips-strips-slide-transition">19.5.74 strips (Strips Slide Transition)<a class="headerlink" href="#19574-strips-strips-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="75:2"><input checked="checked" id="__tabbed_75_1" name="__tabbed_75" type="radio" /><input id="__tabbed_75_2" name="__tabbed_75" type="radio" /><div class="tabbed-labels"><label for="__tabbed_75_1">中文</label><label for="__tabbed_75_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>strips (Strips Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19575-strval-string-value">19.5.75 strVal (String Value)<a class="headerlink" href="#19575-strval-string-value" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="76:2"><input checked="checked" id="__tabbed_76_1" name="__tabbed_76" type="radio" /><input id="__tabbed_76_2" name="__tabbed_76" type="radio" /><div class="tabbed-labels"><label for="__tabbed_76_1">中文</label><label for="__tabbed_76_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>strVal (String Value)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19576-stsnd-start-sound-action">19.5.76 stSnd (Start Sound Action)<a class="headerlink" href="#19576-stsnd-start-sound-action" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="77:2"><input checked="checked" id="__tabbed_77_1" name="__tabbed_77" type="radio" /><input id="__tabbed_77_2" name="__tabbed_77" type="radio" /><div class="tabbed-labels"><label for="__tabbed_77_1">中文</label><label for="__tabbed_77_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>stSnd (Start Sound Action)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19577-subsp-subshape">19.5.77 subSp (Subshape)<a class="headerlink" href="#19577-subsp-subshape" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="78:2"><input checked="checked" id="__tabbed_78_1" name="__tabbed_78" type="radio" /><input id="__tabbed_78_2" name="__tabbed_78" type="radio" /><div class="tabbed-labels"><label for="__tabbed_78_1">中文</label><label for="__tabbed_78_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>subSp (Subshape)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19578-subtnlst-sub-timenodes-list">19.5.78 subTnLst (Sub-TimeNodes List)<a class="headerlink" href="#19578-subtnlst-sub-timenodes-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="79:2"><input checked="checked" id="__tabbed_79_1" name="__tabbed_79" type="radio" /><input id="__tabbed_79_2" name="__tabbed_79" type="radio" /><div class="tabbed-labels"><label for="__tabbed_79_1">中文</label><label for="__tabbed_79_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>subTnLst (Sub-TimeNodes List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19579-tav-time-animate-value">19.5.79 tav (Time Animate Value)<a class="headerlink" href="#19579-tav-time-animate-value" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="80:2"><input checked="checked" id="__tabbed_80_1" name="__tabbed_80" type="radio" /><input id="__tabbed_80_2" name="__tabbed_80" type="radio" /><div class="tabbed-labels"><label for="__tabbed_80_1">中文</label><label for="__tabbed_80_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tav (Time Animate Value)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19580-tavlst-time-animated-value-list">19.5.80 tavLst (Time Animated Value List)<a class="headerlink" href="#19580-tavlst-time-animated-value-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="81:2"><input checked="checked" id="__tabbed_81_1" name="__tabbed_81" type="radio" /><input id="__tabbed_81_2" name="__tabbed_81" type="radio" /><div class="tabbed-labels"><label for="__tabbed_81_1">中文</label><label for="__tabbed_81_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tavLst (Time Animated Value List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19581-tgtel-target-element">19.5.81 tgtEl (Target Element)<a class="headerlink" href="#19581-tgtel-target-element" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="82:2"><input checked="checked" id="__tabbed_82_1" name="__tabbed_82" type="radio" /><input id="__tabbed_82_2" name="__tabbed_82" type="radio" /><div class="tabbed-labels"><label for="__tabbed_82_1">中文</label><label for="__tabbed_82_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tgtEl (Target Element)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19582-tmabs-time-absolute">19.5.82 tmAbs (Time Absolute)<a class="headerlink" href="#19582-tmabs-time-absolute" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="83:2"><input checked="checked" id="__tabbed_83_1" name="__tabbed_83" type="radio" /><input id="__tabbed_83_2" name="__tabbed_83" type="radio" /><div class="tabbed-labels"><label for="__tabbed_83_1">中文</label><label for="__tabbed_83_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tmAbs (Time Absolute)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19583-tmpct-time-percentage">19.5.83 tmPct (Time Percentage)<a class="headerlink" href="#19583-tmpct-time-percentage" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="84:2"><input checked="checked" id="__tabbed_84_1" name="__tabbed_84" type="radio" /><input id="__tabbed_84_2" name="__tabbed_84" type="radio" /><div class="tabbed-labels"><label for="__tabbed_84_1">中文</label><label for="__tabbed_84_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tmPct (Time Percentage)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19584-tmpl-template-effects">19.5.84 tmpl (Template Effects)<a class="headerlink" href="#19584-tmpl-template-effects" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="85:2"><input checked="checked" id="__tabbed_85_1" name="__tabbed_85" type="radio" /><input id="__tabbed_85_2" name="__tabbed_85" type="radio" /><div class="tabbed-labels"><label for="__tabbed_85_1">中文</label><label for="__tabbed_85_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tmpl (Template Effects)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19585-tmpllst-template-effects">19.5.85 tmplLst (Template effects)<a class="headerlink" href="#19585-tmpllst-template-effects" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="86:2"><input checked="checked" id="__tabbed_86_1" name="__tabbed_86" type="radio" /><input id="__tabbed_86_2" name="__tabbed_86" type="radio" /><div class="tabbed-labels"><label for="__tabbed_86_1">中文</label><label for="__tabbed_86_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tmplLst (Template effects)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19586-tn-time-node">19.5.86 tn (Time Node)<a class="headerlink" href="#19586-tn-time-node" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="87:2"><input checked="checked" id="__tabbed_87_1" name="__tabbed_87" type="radio" /><input id="__tabbed_87_2" name="__tabbed_87" type="radio" /><div class="tabbed-labels"><label for="__tabbed_87_1">中文</label><label for="__tabbed_87_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tn (Time Node)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19587-tnlst-time-node-list">19.5.87 tnLst (Time Node List)<a class="headerlink" href="#19587-tnlst-time-node-list" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="88:2"><input checked="checked" id="__tabbed_88_1" name="__tabbed_88" type="radio" /><input id="__tabbed_88_2" name="__tabbed_88" type="radio" /><div class="tabbed-labels"><label for="__tabbed_88_1">中文</label><label for="__tabbed_88_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>tnLst (Time Node List)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19588-to-to">19.5.88 to (To)<a class="headerlink" href="#19588-to-to" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="89:2"><input checked="checked" id="__tabbed_89_1" name="__tabbed_89" type="radio" /><input id="__tabbed_89_2" name="__tabbed_89" type="radio" /><div class="tabbed-labels"><label for="__tabbed_89_1">中文</label><label for="__tabbed_89_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>to (To)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19589-to-to">19.5.89 to (To)<a class="headerlink" href="#19589-to-to" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="90:2"><input checked="checked" id="__tabbed_90_1" name="__tabbed_90" type="radio" /><input id="__tabbed_90_2" name="__tabbed_90" type="radio" /><div class="tabbed-labels"><label for="__tabbed_90_1">中文</label><label for="__tabbed_90_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>to (To)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19590-to-to">19.5.90 to (To)<a class="headerlink" href="#19590-to-to" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="91:2"><input checked="checked" id="__tabbed_91_1" name="__tabbed_91" type="radio" /><input id="__tabbed_91_2" name="__tabbed_91" type="radio" /><div class="tabbed-labels"><label for="__tabbed_91_1">中文</label><label for="__tabbed_91_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>to (To)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19591-txel-text-element">19.5.91 txEl (Text Element)<a class="headerlink" href="#19591-txel-text-element" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="92:2"><input checked="checked" id="__tabbed_92_1" name="__tabbed_92" type="radio" /><input id="__tabbed_92_2" name="__tabbed_92" type="radio" /><div class="tabbed-labels"><label for="__tabbed_92_1">中文</label><label for="__tabbed_92_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>txEl (Text Element)  </strong></p>
+</div>
+</div>
+</div>
+<h2 id="19592-val-value">19.5.92 val (Value)<a class="headerlink" href="#19592-val-value" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="93:2"><input checked="checked" id="__tabbed_93_1" name="__tabbed_93" type="radio" /><input id="__tabbed_93_2" name="__tabbed_93" type="radio" /><div class="tabbed-labels"><label for="__tabbed_93_1">中文</label><label for="__tabbed_93_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>val (Value)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19593-video-video">19.5.93 video (Video)<a class="headerlink" href="#19593-video-video" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="94:2"><input checked="checked" id="__tabbed_94_1" name="__tabbed_94" type="radio" /><input id="__tabbed_94_2" name="__tabbed_94" type="radio" /><div class="tabbed-labels"><label for="__tabbed_94_1">中文</label><label for="__tabbed_94_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>video (Video)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19594-wedge-wedge-slide-transition">19.5.94 wedge (Wedge Slide Transition)<a class="headerlink" href="#19594-wedge-wedge-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="95:2"><input checked="checked" id="__tabbed_95_1" name="__tabbed_95" type="radio" /><input id="__tabbed_95_2" name="__tabbed_95" type="radio" /><div class="tabbed-labels"><label for="__tabbed_95_1">中文</label><label for="__tabbed_95_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>wedge (Wedge Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19595-wheel-wheel-slide-transition">19.5.95 wheel (Wheel Slide Transition)<a class="headerlink" href="#19595-wheel-wheel-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="96:2"><input checked="checked" id="__tabbed_96_1" name="__tabbed_96" type="radio" /><input id="__tabbed_96_2" name="__tabbed_96" type="radio" /><div class="tabbed-labels"><label for="__tabbed_96_1">中文</label><label for="__tabbed_96_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>wheel (Wheel Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19596-wipe-wipe-slide-transition">19.5.96 wipe (Wipe Slide Transition)<a class="headerlink" href="#19596-wipe-wipe-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="97:2"><input checked="checked" id="__tabbed_97_1" name="__tabbed_97" type="radio" /><input id="__tabbed_97_2" name="__tabbed_97" type="radio" /><div class="tabbed-labels"><label for="__tabbed_97_1">中文</label><label for="__tabbed_97_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>wipe (Wipe Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+<h2 id="19597-zoom-zoom-slide-transition">19.5.97 zoom (Zoom Slide Transition)<a class="headerlink" href="#19597-zoom-zoom-slide-transition" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="98:2"><input checked="checked" id="__tabbed_98_1" name="__tabbed_98" type="radio" /><input id="__tabbed_98_2" name="__tabbed_98" type="radio" /><div class="tabbed-labels"><label for="__tabbed_98_1">中文</label><label for="__tabbed_98_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>zoom (Zoom Slide Transition)</strong></p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

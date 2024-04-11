@@ -1,0 +1,2701 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="ecma-part1/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>Office 文件解析入门 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#office-文件解析入门" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../.">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Office 文件解析入门
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="ecma-part1/" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="." class="md-nav__link md-nav__link--active">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="ecma-part1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="ecma-part1/chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="ecma-part1/chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="ecma-part1/chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="ecma-part1/chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="ecma-part1/annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part1/bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#概述---office-解析相关协议" class="md-nav__link">
+    概述 - Office 解析相关协议
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opc---open-package-convention" class="md-nav__link">
+    OPC - Open Package Convention
+  </a>
+  
+    <nav class="md-nav" aria-label="OPC - Open Package Convention">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#part" class="md-nav__link">
+    Part
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship" class="md-nav__link">
+    Relationship
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenttypes" class="md-nav__link">
+    ContentTypes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ml--markup-language" class="md-nav__link">
+    *ML (* Markup Language)
+  </a>
+  
+    <nav class="md-nav" aria-label="*ML (* Markup Language)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#xsd---xml-schema-definition-或者-xml-schema" class="md-nav__link">
+    XSD - XML Schema Definition 或者 XML Schema
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pptx-解析的基本流程" class="md-nav__link">
+    PPTX 解析的基本流程
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poinpoi" class="md-nav__link">
+    POI/NPOI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#最后" class="md-nav__link">
+    最后
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="office-文件解析入门">Office 文件解析入门<a class="headerlink" href="#office-文件解析入门" title="Permanent link">&para;</a></h1>
+<p>原文: <a href="https://keyou.github.io/blog/2016/09/17/office解析/">https://keyou.github.io/blog/2016/09/17/office解析/</a></p>
+<h2 id="概述---office-解析相关协议">概述 - Office 解析相关协议<a class="headerlink" href="#概述---office-解析相关协议" title="Permanent link">&para;</a></h2>
+<p>这里所讲的 Office 文件指的是微软 Office2007 及以后的 PPT/EXCEL/WORD 等文件格式，因为 Office2007 以前的文件是用二进制格式定义的，不在本文的讨论内容中。</p>
+<p>Office2007 以后的文件格式属于 OOXML 文件格式，OOXML 是基于 zip+xml 定义的。</p>
+<p>OOXML 全称 Office Open XML File Formats，最初是由 <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> 定义的，它目前已经到第六版。后来 <a href="https://www.iso.org/standard/71691.html">ISO/IEC 29500</a> 也开始掺和OOXML格式的定义，不过可以认为从 <a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-376/">ECMA-376</a> 的第2版开始，这两个标准是一样的。目前最新的 OOXML 标准是在 2016 年发布的 <code>ECMA-376 5th edition</code> 或者 <code>ISO/IEC 29500:2016</code>。</p>
+<p>微软的 Office 实现了OOXML格式，但不是全部，微软在 <a href="https://learn.microsoft.com/en-us/openspecs/office_standards/ms-oe376/db9b9b72-b10b-4e7e-844c-09f88c972219">这篇文章</a> 中描述了其对标准的支持情况。</p>
+<div class="admonition info">
+<p class="admonition-title">注意</p>
+<p>微软对ECMA-376支持的文章，可能会不时更新，仅作为参考。</p>
+</div>
+<p>OOXML = OPC + <em>ML ，下面会分别介绍 OPC 和</em>ML。</p>
+<ins class="critic block">
+<p>由于 EMCA 文档可以免费在网上下载的，而 ISO 文档需要付费才能获取，因此下文的内容都是基于 ECMA-376 文档。</p>
+</ins>
+<h2 id="opc---open-package-convention">OPC - Open Package Convention<a class="headerlink" href="#opc---open-package-convention" title="Permanent link">&para;</a></h2>
+<ins class="critic block">
+<p>关于 OPC 的详细内容请参考 ECMA-376,Fourth Edition,Part 2。</p>
+</ins>
+<div class="admonition info">
+<p class="admonition-title">注意</p>
+<p>也就是标准的第二部分: <a href="ecma-part2-refrence/">ecma-376-part2-refrence</a></p>
+</div>
+<p>OPC 中文名开放打包协定，是一种基于 zip+xml 定义的文件存储格式。一个 OPC 文件（不管其文件后缀是什么）本质上就是一个 zip 文件，你可以用任何常见的解压软件进行解压，解压后你看到的那些文件的组织结构，就是以 OPC 定义的方式存储的。下图是一个PPTX文件解压后的目录结构：</p>
+<p><a class="glightbox" href="imgs/ppt-decompress.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="imgs/ppt-decompress.png" /></a></p>
+<p>OPC 中有3个重要的概念要理解：<code>Part</code> , <code>Relationship</code> , <code>ContentTypes</code>。</p>
+<h3 id="part"><code>Part</code><a class="headerlink" href="#part" title="Permanent link">&para;</a></h3>
+<p>Part 可以简单理解为 zip 中的文件，每一个文件都是一个 <code>Part</code> ，它可以是任何格式，比如图片，xml文件等。在 Office 文件中，各种 Markup Language 定义的内容就作为 XML 存储在 <code>Part</code> 中。</p>
+<h3 id="relationship"><code>Relationship</code><a class="headerlink" href="#relationship" title="Permanent link">&para;</a></h3>
+<p><code>Relationship</code> 是一种特殊的 <code>Part</code> ，它描述了各 <code>Part</code> 之间的依赖关系。根据OPC协议的规定，所有的 <code>Relationship</code> 都必须存储在名为 <code>_rels</code> 的文件夹中，并且所有 <code>Relationship</code> 的文件名都必须以 <code>.rels</code> 为后缀。</p>
+<p>每一个 <code>Part</code> 根据业务需求都可以有对应的 <code>Relationship</code> 文件，比如在 PPTX 文件中，有一个 Part 为 <code>/ppt/presentation.xml</code> ，它对应的 Relationship 文件（只能）为<code>/ppt/_rels/presentation.xml.rels</code> ，不能是任何其它名字或者位置的文件。下面是一个 PPTX 文件中的 presentation.xml.rels 文件：</p>
+<div class="language-XML highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #9C6500">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;slides/slide2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/tableStyles&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;tableStyles.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/slide&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;slides/slide1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/slideMaster&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;slideMasters/slideMaster1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;theme/theme1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/viewProps&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;viewProps.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/officeDocument/2006/relationships/presProps&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;presProps.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p><code>Relationship</code> 文件的根节点是 <code>RelationShips</code>, 它是 <code>Relationship</code> 节点的集合，每一个 <code>Relationship</code> 节点都代表一个依赖关系。它的各个属性的意义如下：  </p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>是否必须</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Id</code></td>
+<td>是</td>
+<td>唯一标识符，在当前文件中是唯一的，不同文件中可以重复</td>
+</tr>
+<tr>
+<td><code>Type</code></td>
+<td>是</td>
+<td><code>Target</code> 的文件类型</td>
+</tr>
+<tr>
+<td><code>Target</code></td>
+<td>是</td>
+<td>目标 <code>Part</code> 的路径，可以用相对路径也可以用绝对路径</td>
+</tr>
+<tr>
+<td><code>TargetMode</code></td>
+<td>否</td>
+<td>目标的类型，值可以是 <code>Internal</code> 或者 <code>External</code> （默认是<code>Internal</code>）,表示 <code>Target</code> 是OPC文件内部的还是外部的</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contenttypes"><code>ContentTypes</code><a class="headerlink" href="#contenttypes" title="Permanent link">&para;</a></h3>
+<p><code>ContentTypes</code> 在zip压缩包的根目录下，文件名为 <code>[Content_Types].xml</code> ，它记录了该OPC文件中除了他自己以外的所有文件的类型。下面是一个PPTX文件的 <code>ContentTypes</code> 文件：</p>
+<div class="language-XML highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #9C6500">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;Types</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/package/2006/content-types&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Default</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Extension=</span><span style="color: #BA2121">&quot;jpeg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;image/jpeg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Default</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Extension=</span><span style="color: #BA2121">&quot;rels&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-package.relationships+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Default</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Extension=</span><span style="color: #BA2121">&quot;xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/presentation.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.presentation.main+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/slideMasters/slideMaster1.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.slideMaster+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/slides/slide1.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.slide+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/slides/slide2.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.slide+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/presProps.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.presProps+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/viewProps.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.viewProps+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/theme/theme1.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.theme+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/tableStyles.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/slideLayouts/slideLayout1.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/ppt/slideLayouts/slideLayout2.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.presentationml.slideLayout+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/docProps/core.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-package.core-properties+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Override</span><span style="color: #bbbbbb"> </span><span style="color: #687822">PartName=</span><span style="color: #BA2121">&quot;/docProps/app.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ContentType=</span><span style="color: #BA2121">&quot;application/vnd.openxmlformats-officedocument.extended-properties+xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Types&gt;</span>
+</code></pre></div>
+<p>其中有两种标签 <code>Default</code> 和 <code>Override</code> , <code>Default</code> 指明了拥有文件后缀名和文件类型的对应关系， <code>Override</code> 指明了某一个文件的文件类型。</p>
+<p>比如：<code>&lt;Default Extension="jpeg" ContentType="image/jpeg"/&gt;</code> 的意思是后缀为 <code>jpeg</code> 的文件都是 <code>image/jpeg</code> 类型的文件，因此在OPC中不建议根据文件后缀名来判断一个文件的类型，而应该根据 <code>ContentTypes</code> 文件中记录的信息来判断文件类型。</p>
+<h2 id="ml--markup-language"><code>*ML (* Markup Language)</code><a class="headerlink" href="#ml--markup-language" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>关于各种 <code>ML</code> 语言的详细信息请参考<a href="ecma-part1/"><code>ECMA-376,Fifth Edition,Part 1</code></a> 。</p>
+</blockquote>
+<p><code>Markup Language (ML)</code> 译为 <code>标记语言</code>，是一种用 XML 来描述数据的"语言"，比如：</p>
+<table>
+<thead>
+<tr>
+<th>*ML</th>
+<th>全名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PML</code></td>
+<td><code>Presentation Markup Language</code></td>
+<td>PPT 中各种数据的描述</td>
+</tr>
+<tr>
+<td><code>WML</code></td>
+<td><code>Wordprocessing Markup Language</code></td>
+<td>Word 中数据的描述</td>
+</tr>
+<tr>
+<td><code>SML</code></td>
+<td><code>Spreadsheet Markup Language</code></td>
+<td>Excel 中数据的描述</td>
+</tr>
+<tr>
+<td><code>DML</code></td>
+<td><code>Drawing Markup Language</code></td>
+<td>Office 所有格式中都可以使用，用来描述矢量图形，图表等</td>
+</tr>
+<tr>
+<td><code>SharedML</code></td>
+<td><code>Shared Markup Language</code></td>
+<td>描述了文档属性，音视频，图片，文档主题等内容，它被所有Office文件使用</td>
+</tr>
+</tbody>
+</table>
+<p>比如之前提到的 <code>presentation.xml</code> 文件，它的文件内容就是在 <code>PML</code> 中定义的。具体信息可以查看 <code>ECMA-376,Fifth Edition,Part 1</code>。但是，ECMA-376 太长了，还没看就头疼，怎么办。</p>
+<p>首先了解一下在 EMCA-376 中用来定义各种 ML 语言的 <a href="xsd">XSD</a>：</p>
+<h3 id="xsd---xml-schema-definition-或者-xml-schema"><code>XSD - XML Schema Definition</code> 或者 <a href="xsd/new/xmlSchema/pml/"><code>XML Schema</code></a><a class="headerlink" href="#xsd---xml-schema-definition-或者-xml-schema" title="Permanent link">&para;</a></h3>
+<p><a href="[xsd/new/xmlSchema/pml.md](https://www.w3school.com.cn/schema/index.asp)"><code>XSD</code></a> 类似 <a href="https://www.w3school.com.cn/dtd/index.asp"><code>DTD</code></a>，它们有相似的作用。在 <code>ECMA-376</code> 中，所有的 <code>Markup Language</code> 都是 XML 格式的，而这些 XML 的具体节点内容，都是用 <code>XSD</code> 来定义的，所以我们要对它有一定的了解：</p>
+<blockquote>
+<p>XML Schema(XSD) 的作用：</p>
+<ul>
+<li>定义可出现在文档中的元素</li>
+<li>定义可出现在文档中的属性</li>
+<li>定义哪个元素是子元素</li>
+<li>定义子元素的次序</li>
+<li>定义子元素的数目</li>
+<li>定义元素是否为空，或者是否可包含文本</li>
+<li>定义元素和属性的数据类型</li>
+<li>定义元素和属性的默认值以及固定值<br />
+（可以在 <a href="[xsd](https://www.w3school.com.cn/schema/index.asp)">这里</a> 找到 <code>XSD</code> 的详细内容。）</li>
+</ul>
+</blockquote>
+<p>在 <code>XSD</code> 中，有两个比较重要的概念：<code>Simple Type（简单类型）</code> 和 <code>Complex Type（复杂类型）</code>：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simple Type Element</td>
+<td>简单类型元素，指那些仅包含文本的元素。它不会包含任何其他的元素或属性。 比如：<code>&lt;id&gt;123&lt;/id&gt;</code>，这里元素 <code>id</code> 就是简单类型元素。</td>
+</tr>
+<tr>
+<td>Complex Type Element</td>
+<td>复杂类型元素，指那些可以包含其他任意元素或者属性的元素。</td>
+</tr>
+</tbody>
+</table>
+<p>比如在 PML 中定义 <strong>页面大小（SlideSize）</strong> 这个元素（节点）的 XSD 如下：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;xsd:complexType name=&quot;CT_SlideSize&quot;&gt; 
+    &lt;xsd:attribute name=&quot;cx&quot; type=&quot;ST_SlideSizeCoordinate&quot; use=&quot;required&quot;/&gt; 
+    &lt;xsd:attribute name=&quot;cy&quot; type=&quot;ST_SlideSizeCoordinate&quot; use=&quot;required&quot;/&gt; 
+    &lt;xsd:attribute name=&quot;type&quot; type=&quot;ST_SlideSizeType&quot; use=&quot;optional&quot; default=&quot;custom&quot;/&gt; 
+&lt;/xsd:complexType&gt;
+</code></pre></div>
+<p>可以看出 <code>CT_SlideSize</code> 是个 complexType（复杂类型） 的元素，并且它有三个 <code>attribute（属性）</code> ，分别是 <code>cx</code> , <code>cy</code> 和 <code>type</code>，根据它们 <code>type</code> 的前缀 <code>ST_</code> ，可以看出这三个属性都是简单类型的，并且是 <code>required</code> 的。如果你明白了这里的描述，再去看 ECMA-376 中各种 ML 语言的定义应该会简单一点。</p>
+<p><strong>PS: 在看 ECMA-376 的时候可以先只看前 16 章的内容，只有160页左右，如果只算内容的话更少，后面的将近 5000 页都可以解析哪部分就去看哪部分就行了。言外之意就是，其实也没有想象中的那么唬人。JUST DO IT !</strong></p>
+<h2 id="pptx-解析的基本流程">PPTX 解析的基本流程<a class="headerlink" href="#pptx-解析的基本流程" title="Permanent link">&para;</a></h2>
+<p>这里以 PPTX 的解析为例，其它的 WORD 或者 EXCEL 可以触类旁通。</p>
+<p>基本流程如下：</p>
+<ol>
+<li>读取 <code>/[Content_Types].xml</code> 文件，获取到所有文件的类型；<br />
+<em>这部分需要了解 OPC 中关于 ContentTypes 的内容。</em></li>
+<li>读取 <code>/_rels/.rels</code> 这个所谓的 <code>Package Relationship</code> 文件，获取 <code>presentation.xml</code> 文件的位置，比如 <code>/ppt/presentation.xml</code>；<br />
+<em>这部分需要了解 OPC 中关于 Relationship 的内容以及 PML 的基本内容。</em></li>
+<li>读取 <code>/ppt/presentation.xml</code> 文件以及其关联的 Relationship 文件 <code>/ppt/_rels/presentation.xml.rels</code>，得到该PPT所有页面文件的存储位置，比如 <code>/ppt/slides/slide1.xml</code>，以及 slideMaster（母版）文件的存储位置，比如 <code>/ppt/slideMasters/slideMaster1.xml</code>，以及 slideLayout（板式）等相关文件的存储位置；<br />
+<em>这部分需要了解 PML 中关于 Presentation 的定义，也就是 PML 的 XSD 中定义的 <code>CT_Presentation</code> 类型。这个时候可以去详细的阅读 Presentation 章节的详细信息了。</em></li>
+<li>读取 <code>/ppt/slides/slide1.xml</code> 文件内容以及其关联的 Relationship    <code>/ppt/slides/_rels/slide1.xml.rels</code>，可以得到该页面的所有元素信息；<br />
+<em>这部分要完整解析就需要了解所有 PML、DML、SharedML 中的内容了。</em></li>
+</ol>
+<p>不知道看到这里你还要不要自己解析啊？如果不愿意了，那大名鼎鼎的 POI 也许可以救你于水深火热。</p>
+<h2 id="poinpoi">POI/NPOI<a class="headerlink" href="#poinpoi" title="Permanent link">&para;</a></h2>
+<p>POI 是 Apache 的项目，<a href="https://poi.apache.org/">这里</a> 是它的官网（NPOI 是 POI 的 .NET 版本）。背景知识我就不介绍了，这里摘自<a href="https://zh.wikipedia.org/wiki/Apache_POI">维基百科</a>对它模块划分的介绍，可以在自己解析的时候参考：</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>HSSF － 提供读写Microsoft Excel XLS 格式文件的功能。</li>
+<li>XSSF － 提供读写Microsoft Excel OOXML XLSX 格式文件的功能。</li>
+<li>HWPF － 提供读写Microsoft Word DOC 格式文件的功能。</li>
+<li>XWPF － 提供读写Microsoft Word DOCX 格式文件的功能。</li>
+<li>HSLF － 提供读写Microsoft PowerPoint格式文件的功能。</li>
+<li>HDGF － 提供读Microsoft Visio格式文件的功能。</li>
+<li>HPBF － 提供读Microsoft Publisher格式文件的功能。</li>
+<li>HSMF － 提供读Microsoft Outlook格式文件的功能。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>POIFS (Poor Obfuscation Implementation File System) – This component reads and writes Microsoft's OLE 2 Compound document format. Since all Microsoft Office files are OLE 2 files, this component is the basic building block of all the other POI elements. POIFS can therefore be used to read a wider variety of files, beyond those whose explicit decoders are already written in POI.（也就是OPC模块）</li>
+<li>HSSF (Horrible SpreadSheet Format) – reads and writes Microsoft Excel (XLS) format files. It can read files written by Excel 97 onwards; this file format is known as the BIFF 8 format. As the Excel file format is complex and contains a number of tricky characteristics, some of the more advanced features cannot be read.（）</li>
+<li>XSSF (XML SpreadSheet Format) – reads and writes Office Open XML (XLSX) format files. Similar feature set to HSSF, but for Office Open XML files.</li>
+<li>HPSF (Horrible Property Set Format) – reads "Document Summary" information from Microsoft Office files. This is essentially the information that one can see by using the File|Properties menu item within an Office application.</li>
+<li>HWPF (Horrible Word Processor Format) – aims to read and write Microsoft Word 97 (DOC) format files. This component is in initial stages of development.</li>
+<li>XWPF (XML Word Processor Format) – similar feature set to HWPF, but for Office Open XML files.</li>
+<li>HSLF (Horrible Slide Layout Format) – a pure Java implementation for Microsoft PowerPoint files. This provides the ability to read, create and edit presentations (though some things are easier to do than others)</li>
+<li>HDGF (Horrible DiaGram Format) – an initial pure Java implementation for Microsoft Visio binary files. It provides an ability to read the low level contents of the files.</li>
+<li>HPBF (Horrible PuBlisher Format) – a pure Java implementation for Microsoft Publisher files.</li>
+<li>HSMF (Horrible Stupid Mail Format[7][better source needed]) – a pure Java implementation for Microsoft Outlook MSG files.[8]</li>
+<li>DDF (Dreadful Drawing Format) – a package for decoding the Microsoft Office Drawing format.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>需要注意的是 POI 貌似对 PPT 的支持比较弱？</p>
+<h2 id="最后">最后<a class="headerlink" href="#最后" title="Permanent link">&para;</a></h2>
+<p>完全解析 Office 格式是一项巨大的工程，开始之前要有充分的成本考虑。</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

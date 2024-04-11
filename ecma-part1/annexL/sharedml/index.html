@@ -1,0 +1,3415 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../vml/">
+      
+      
+        <link rel="next" href="../topics/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.6 Shared MLs 简介 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l6-shared-mls-简介" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.6 Shared MLs 简介
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../drawingml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l61-数学" class="md-nav__link">
+    L.6.1 数学
+  </a>
+  
+    <nav class="md-nav" aria-label="L.6.1 数学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l611-强调对象" class="md-nav__link">
+    L.6.1.1 强调对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l612-bar-object" class="md-nav__link">
+    L.6.1.2 Bar Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l613-border-box-object" class="md-nav__link">
+    L.6.1.3 Border Box Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l614-box-object" class="md-nav__link">
+    L.6.1.4 Box Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l615-delimiters" class="md-nav__link">
+    L.6.1.5 Delimiters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l616-array-object" class="md-nav__link">
+    L.6.1.6 Array Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l617-fraction-object" class="md-nav__link">
+    L.6.1.7 Fraction Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l618-function-apply-object" class="md-nav__link">
+    L.6.1.8 Function Apply Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l619-group-character-object" class="md-nav__link">
+    L.6.1.9 Group Character Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6110-upper-and-lower-limits" class="md-nav__link">
+    L.6.1.10 Upper and Lower Limits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6111-matrix-object" class="md-nav__link">
+    L.6.1.11 Matrix Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6112-n-ary-object" class="md-nav__link">
+    L.6.1.12 N-ary Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6113-literal-operators-and-operator-emulators" class="md-nav__link">
+    L.6.1.13 Literal Operators and Operator Emulators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6114-phantom-object" class="md-nav__link">
+    L.6.1.14 Phantom Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6115-radical-object" class="md-nav__link">
+    L.6.1.15 Radical Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6116-scripts-superscript-subscript-subsuperscript-presubsuperscript" class="md-nav__link">
+    L.6.1.16 Scripts (Superscript, Subscript, SubSuperscript, PreSubSuperscript)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6117-math-paragraphs" class="md-nav__link">
+    L.6.1.17 Math Paragraphs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l62-metadata" class="md-nav__link">
+    L.6.2 Metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="L.6.2 Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l621-metadata-properties" class="md-nav__link">
+    L.6.2.1 Metadata Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l622-core-properties" class="md-nav__link">
+    L.6.2.2 Core Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l623-extended-properties" class="md-nav__link">
+    L.6.2.3 Extended Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l624-custom-properties" class="md-nav__link">
+    L.6.2.4 Custom Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l625-variant-types" class="md-nav__link">
+    L.6.2.5 Variant Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l63-custom-xml-data" class="md-nav__link">
+    L.6.3 Custom XML Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l64-bibliography" class="md-nav__link">
+    L.6.4 Bibliography
+  </a>
+  
+    <nav class="md-nav" aria-label="L.6.4 Bibliography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l641-types-of-sources" class="md-nav__link">
+    L.6.4.1 Types of Sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l642-child-elements" class="md-nav__link">
+    L.6.4.2 Child Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l643-author" class="md-nav__link">
+    L.6.4.3 Author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l644-lcid-guid-tag-and-reforder" class="md-nav__link">
+    L.6.4.4 LCID, Guid, Tag, and RefOrder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l61-数学" class="md-nav__link">
+    L.6.1 数学
+  </a>
+  
+    <nav class="md-nav" aria-label="L.6.1 数学">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l611-强调对象" class="md-nav__link">
+    L.6.1.1 强调对象
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l612-bar-object" class="md-nav__link">
+    L.6.1.2 Bar Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l613-border-box-object" class="md-nav__link">
+    L.6.1.3 Border Box Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l614-box-object" class="md-nav__link">
+    L.6.1.4 Box Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l615-delimiters" class="md-nav__link">
+    L.6.1.5 Delimiters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l616-array-object" class="md-nav__link">
+    L.6.1.6 Array Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l617-fraction-object" class="md-nav__link">
+    L.6.1.7 Fraction Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l618-function-apply-object" class="md-nav__link">
+    L.6.1.8 Function Apply Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l619-group-character-object" class="md-nav__link">
+    L.6.1.9 Group Character Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6110-upper-and-lower-limits" class="md-nav__link">
+    L.6.1.10 Upper and Lower Limits
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6111-matrix-object" class="md-nav__link">
+    L.6.1.11 Matrix Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6112-n-ary-object" class="md-nav__link">
+    L.6.1.12 N-ary Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6113-literal-operators-and-operator-emulators" class="md-nav__link">
+    L.6.1.13 Literal Operators and Operator Emulators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6114-phantom-object" class="md-nav__link">
+    L.6.1.14 Phantom Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6115-radical-object" class="md-nav__link">
+    L.6.1.15 Radical Object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6116-scripts-superscript-subscript-subsuperscript-presubsuperscript" class="md-nav__link">
+    L.6.1.16 Scripts (Superscript, Subscript, SubSuperscript, PreSubSuperscript)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l6117-math-paragraphs" class="md-nav__link">
+    L.6.1.17 Math Paragraphs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l62-metadata" class="md-nav__link">
+    L.6.2 Metadata
+  </a>
+  
+    <nav class="md-nav" aria-label="L.6.2 Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l621-metadata-properties" class="md-nav__link">
+    L.6.2.1 Metadata Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l622-core-properties" class="md-nav__link">
+    L.6.2.2 Core Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l623-extended-properties" class="md-nav__link">
+    L.6.2.3 Extended Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l624-custom-properties" class="md-nav__link">
+    L.6.2.4 Custom Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l625-variant-types" class="md-nav__link">
+    L.6.2.5 Variant Types
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l63-custom-xml-data" class="md-nav__link">
+    L.6.3 Custom XML Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l64-bibliography" class="md-nav__link">
+    L.6.4 Bibliography
+  </a>
+  
+    <nav class="md-nav" aria-label="L.6.4 Bibliography">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l641-types-of-sources" class="md-nav__link">
+    L.6.4.1 Types of Sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l642-child-elements" class="md-nav__link">
+    L.6.4.2 Child Elements
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l643-author" class="md-nav__link">
+    L.6.4.3 Author
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l644-lcid-guid-tag-and-reforder" class="md-nav__link">
+    L.6.4.4 LCID, Guid, Tag, and RefOrder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l6-shared-mls-简介">L.6 Shared MLs 简介<a class="headerlink" href="#l6-shared-mls-简介" title="Permanent link">&para;</a></h1>
+<p><strong>Introduction to Shared MLs</strong></p>
+<div class="admonition info">
+<p class="admonition-title">NOTE</p>
+<p>pdf 原文共 31 页.</p>
+</div>
+<h2 id="l61-数学">L.6.1 数学<a class="headerlink" href="#l61-数学" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在 Office 数学标记语言 (OMML) 中，所有数学文本都显示在数学区域中。 此类文本可以由方程、数学表达式或简单变量组成。 数学区域由 <code>oMath</code> 和 <code>oMathPara</code> 元素表示。 有两种数学区域：内联(inline)和显示(display)。 内联数学区域与不在数学区域中的文本一起显示在一行或多行上。 显示数学区域填充整个段落。 更具体地说，显示数学区域由数学段落组成，由 <code>oMathPara</code> 元素表示。 数学段落是一组由软回车符分隔的一个或多个方程或表达式； 也就是说，它们是组成单个段落的独立数学实体。 数学段落有其自己的理由，可能与父（非数学）段落的理由不同。 数学段落中的所有对象都具有相同类型的理由。</p>
+<p>显示(diaplay)和内联(inline)数学区域具有本质上不同的格式特征。 内联数学区域通常消耗较少的垂直空间，以帮助最小化或消除非数学段落行间距的变化。 例如，这是通过减小内联分数和 n 元对象(n-ary objects)相对于其显示大小的大小来实现的。 OMML 具有文档级属性，可设置某些数学区域属性的默认选择。 其中包括显示数学区域属性，即默认情况下是否将积分和其他 n 元限制显示在 n 元运算符的下方和上方，或者显示为下标和上标。</p>
+<p>以下小节介绍了构成 OMML 模式大部分的每个数学对象。 由于这种语言是为文本处理而不是计算而设计的，因此在以 XML 表示形式编写数学区域时，会更多地关注数学文本的布局和外观，而不是数学语义。也就是说 <span class="arithmatex">\(\overrightarrow{abc}\)</span> 和 <span class="arithmatex">\(\overbrace{abc}\)</span> 由同一对象表示，尽管它们具有不同的数学含义，因为两者都由与拉伸字符配对的文本组成。类似地，$\frac{n}{k} $ 和 $\frac{n}{k} $ 都用分数对象表示。 尽管在数学上它们具有不同的含义，但它们的布局相似。 另一个例子是 <span class="arithmatex">\(x^2\)</span> ，它可以是 <span class="arithmatex">\(x\)</span> 的平方或张量分量。 无论这些语义如何，它都由上标对象表示。</p>
+<p>尽管本节中描述的功能主要是关于表达式和数学文本的外观，但 ECMA-376 中定义的其他标记提供了独立的功能，可以计算数学公式和表达式。 SpreadsheetML (§L.2.15.1) 中的公式和 WordprocessingML (§L.1.17.1) 中的字段是两个示例。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Math</strong></p>
+<p>In the Office Math Markup Language (OMML), all mathematical text appears in math zones. Such text can consist of equations, mathematical expressions or simple variables. A math zone is represented by the oMath and oMathPara elements. There are two kinds of math zones: inline and display. An inline math zone appears on a line or lines along with text that is not in the math zone. A display math zone fills a whole paragraph. More specifically, a display math zone consists of a math paragraph, which is represented by the oMathPara element. The math paragraph is a group of one or more equations or expressions separated by soft carriage returns; that is, they are separate mathematical entities that comprise a single paragraph. A math paragraph has its own justification that can differ from that of the parent (non-math) paragraph. All objects within a math paragraph have the same type of justification.</p>
+<p>Display and inline math zones have innately different formatting characteristics. Inline math zones typically consume less vertical space to help minimize or eliminate changes in the non-math paragraph line spacing. This is accomplished, for example, by reducing the size of inline fractions and n-ary objects relative to their display sizes. OMML has document-level properties that set the default choices for some math-zone properties. These include the display math-zone properties of whether integral and other n-ary limits are displayed by default below and above an n-ary operator or as subscripts and superscripts.</p>
+<p>The following subclauses introduce each of the math objects that comprise the majority of the OMML schema. Since this language is designed for text processing rather than calculations, when writing math zones in an XML representation, more attention is given to the layout and appearance of mathematical  text than to mathematical semantics. That is <span class="arithmatex">\(\overrightarrow{abc}\)</span> and <span class="arithmatex">\(\overbrace{abc}\)</span> are represented by the same object,  although they have different mathematical meanings, because both consist of text paired with a stretching character. Similarly,$\frac{n}{k} $ and $\frac{n}{k} $ are both represented by a fraction object. Though mathematically they have different meaning, their layout is similar. Another example is <span class="arithmatex">\(x^2\)</span> , which could be <span class="arithmatex">\(x\)</span> squared or a tensor component. Regardless of these semantics, it is represented by a superscript object.</p>
+<p>Although the functionality described in this clause is primarily about the appearance of expressions and mathematical text, other markup defined in ECMA-376 provides independent functionality enabling mathematical formulas and expressions to be calculated. Formulas in SpreadsheetML (§L.2.15.1) and Fields in WordprocessingML (§L.1.17.1) are two examples.</p>
+</div>
+</div>
+</div>
+<h3 id="l611-强调对象">L.6.1.1 强调对象<a class="headerlink" href="#l611-强调对象" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>重音对象用于表示任何具有位于基础上方的组合变音标记的基线文本。 重音只有一个子元素，即基本元素。 重音符号本身作为属性存储。</p>
+<p>例如，考虑以下带有变音符号的字母：</p>
+<div class="arithmatex">\[\dot{a}  \ddot{a}   \widetilde{a} \hat{a}  \vec{a}  \]</div>
+<p>本示例中最后一个字母的 XML 为：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;m:acc&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;m:accPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;m:chr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">m:val=</span><span style="color: #BA2121">&quot;-&gt;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/m:accPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;m:e&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;m:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;m:t&gt;</span>a<span style="color: #008000; font-weight: bold">&lt;/m:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/m:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/m:e&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/m:acc&gt;</span>
+</code></pre></div>
+<p>在此示例中，这些字母的 XML 表示形式的唯一区别是重音字符。</p>
+<p><a class="glightbox" href="../imgs/math-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/math-1.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Accent Object</strong></p>
+<p>The accent object is used to represent any baseline text having a combining diacritical mark placed above the base. The accent has only one child, the base element. The accent mark itself is stored as a property.</p>
+<p>For example, consider the following letters having diacritical marks:</p>
+<div class="arithmatex">\[\dot{a}  \ddot{a}   \widetilde{a} \hat{a}  \vec{a}  \]</div>
+<p>The XML for the last letter in this example is:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;m:acc&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;m:accPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;m:chr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">m:val=</span><span style="color: #BA2121">&quot;-&gt;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/m:accPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;m:e&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;m:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;m:t&gt;</span>a<span style="color: #008000; font-weight: bold">&lt;/m:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/m:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/m:e&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/m:acc&gt;</span>
+</code></pre></div>
+<p>In this example, the only difference in the XML representations of these letters is the accent character. </p>
+<p><a class="glightbox" href="../imgs/math-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/math-1.png" /></a></p>
+</div>
+</div>
+</div>
+<h3 id="l612-bar-object">L.6.1.2 Bar Object<a class="headerlink" href="#l612-bar-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Bar Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l613-border-box-object">L.6.1.3 Border Box Object<a class="headerlink" href="#l613-border-box-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Border Box Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l614-box-object">L.6.1.4 Box Object<a class="headerlink" href="#l614-box-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Box Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l615-delimiters">L.6.1.5 Delimiters<a class="headerlink" href="#l615-delimiters" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Delimiters</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l616-array-object">L.6.1.6 Array Object<a class="headerlink" href="#l616-array-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Array Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l617-fraction-object">L.6.1.7 Fraction Object<a class="headerlink" href="#l617-fraction-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Fraction Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l618-function-apply-object">L.6.1.8 Function Apply Object<a class="headerlink" href="#l618-function-apply-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Function Apply Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l619-group-character-object">L.6.1.9 Group Character Object<a class="headerlink" href="#l619-group-character-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Group Character Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6110-upper-and-lower-limits">L.6.1.10 Upper and Lower Limits<a class="headerlink" href="#l6110-upper-and-lower-limits" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Upper and Lower Limits</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6111-matrix-object">L.6.1.11 Matrix Object<a class="headerlink" href="#l6111-matrix-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Matrix Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6112-n-ary-object">L.6.1.12 N-ary Object<a class="headerlink" href="#l6112-n-ary-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>N-ary Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6113-literal-operators-and-operator-emulators">L.6.1.13 Literal Operators and Operator Emulators<a class="headerlink" href="#l6113-literal-operators-and-operator-emulators" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Literal Operators and Operator Emulators</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6114-phantom-object">L.6.1.14 Phantom Object<a class="headerlink" href="#l6114-phantom-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Phantom Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6115-radical-object">L.6.1.15 Radical Object<a class="headerlink" href="#l6115-radical-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Radical Object</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6116-scripts-superscript-subscript-subsuperscript-presubsuperscript">L.6.1.16 Scripts (Superscript, Subscript, SubSuperscript, PreSubSuperscript)<a class="headerlink" href="#l6116-scripts-superscript-subscript-subsuperscript-presubsuperscript" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Scripts (Superscript, Subscript, SubSuperscript, PreSubSuperscript)</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l6117-math-paragraphs">L.6.1.17 Math Paragraphs<a class="headerlink" href="#l6117-math-paragraphs" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Math Paragraphs</strong></p>
+</div>
+</div>
+</div>
+<h2 id="l62-metadata">L.6.2 Metadata<a class="headerlink" href="#l62-metadata" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Metadata</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l621-metadata-properties">L.6.2.1 Metadata Properties<a class="headerlink" href="#l621-metadata-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Metadata Properties</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l622-core-properties">L.6.2.2 Core Properties<a class="headerlink" href="#l622-core-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Core Properties</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l623-extended-properties">L.6.2.3 Extended Properties<a class="headerlink" href="#l623-extended-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Extended Properties</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l624-custom-properties">L.6.2.4 Custom Properties<a class="headerlink" href="#l624-custom-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Custom Properties</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l625-variant-types">L.6.2.5 Variant Types<a class="headerlink" href="#l625-variant-types" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Variant Types</strong></p>
+</div>
+</div>
+</div>
+<h2 id="l63-custom-xml-data">L.6.3 Custom XML Data<a class="headerlink" href="#l63-custom-xml-data" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Custom XML Data</strong></p>
+</div>
+</div>
+</div>
+<h2 id="l64-bibliography">L.6.4 Bibliography<a class="headerlink" href="#l64-bibliography" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Bibliography</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l641-types-of-sources">L.6.4.1 Types of Sources<a class="headerlink" href="#l641-types-of-sources" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Types of Sources</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l642-child-elements">L.6.4.2 Child Elements<a class="headerlink" href="#l642-child-elements" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Child Elements</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l643-author">L.6.4.3 Author<a class="headerlink" href="#l643-author" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Author</strong></p>
+</div>
+</div>
+</div>
+<h3 id="l644-lcid-guid-tag-and-reforder">L.6.4.4 LCID, Guid, Tag, and RefOrder<a class="headerlink" href="#l644-lcid-guid-tag-and-reforder" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>LCID, Guid, Tag, and RefOrder</strong></p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

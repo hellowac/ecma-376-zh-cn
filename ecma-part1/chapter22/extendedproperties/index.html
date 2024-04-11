@@ -1,0 +1,3721 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../math/">
+      
+      
+        <link rel="next" href="../customproperties/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>22.2 扩展属性 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#222-扩展属性" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              22.2 扩展属性
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_23" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_23_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_23">
+            <span class="md-nav__icon md-icon"></span>
+            22. Shared MLs 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.1 Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    22.2 扩展属性
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    22.2 扩展属性
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2221-概览" class="md-nav__link">
+    22.2.1 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2222-元素" class="md-nav__link">
+    22.2.2 元素
+  </a>
+  
+    <nav class="md-nav" aria-label="22.2.2 元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22221-application-应用名称" class="md-nav__link">
+    22.2.2.1 Application (应用名称)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22222-appversion-应用版本" class="md-nav__link">
+    22.2.2.2 AppVersion (应用版本)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22223-characters-字符总数" class="md-nav__link">
+    22.2.2.3 Characters (字符总数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22224-characterswithspaces-字符数带空格" class="md-nav__link">
+    22.2.2.4 CharactersWithSpaces (字符数（带空格）)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22225-company-公司名称" class="md-nav__link">
+    22.2.2.5 Company (公司名称)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22226-digsig-数字签名" class="md-nav__link">
+    22.2.2.6 DigSig (数字签名)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22227-docsecurity-文档安全" class="md-nav__link">
+    22.2.2.7 DocSecurity (文档安全)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22228-headingpairs-标题对" class="md-nav__link">
+    22.2.2.8 HeadingPairs (标题对)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22229-hiddenslides-隐藏幻灯片数量" class="md-nav__link">
+    22.2.2.9 HiddenSlides (隐藏幻灯片数量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222210-hlinks-超链接列表" class="md-nav__link">
+    22.2.2.10 HLinks (超链接列表)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222211-hyperlinkbase-相对超链接基础" class="md-nav__link">
+    22.2.2.11 HyperlinkBase (相对超链接基础)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222212-hyperlinkschanged-超链接已更改" class="md-nav__link">
+    22.2.2.12 HyperlinksChanged (超链接已更改)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222213-lines-行数" class="md-nav__link">
+    22.2.2.13 Lines (行数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222214-linksuptodate-最新链接" class="md-nav__link">
+    22.2.2.14 LinksUpToDate (最新链接)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222215-manager-主管姓名" class="md-nav__link">
+    22.2.2.15 Manager (主管姓名)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222216-mmclips-多媒体剪辑总数" class="md-nav__link">
+    22.2.2.16 MMClips (多媒体剪辑总数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222217-notes-包含注释笔记的幻灯片数量" class="md-nav__link">
+    22.2.2.17 Notes (包含注释/笔记的幻灯片数量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222218-pages-总页数" class="md-nav__link">
+    22.2.2.18 Pages (总页数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222219-paragraphs-段落总数" class="md-nav__link">
+    22.2.2.19 Paragraphs (段落总数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222220-presentationformat-演示文稿的预期格式" class="md-nav__link">
+    22.2.2.20 PresentationFormat (演示文稿的预期格式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222221-properties-应用程序特定的文件属性" class="md-nav__link">
+    22.2.2.21 Properties (应用程序特定的文件属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222222-scalecrop-缩略图显示模式" class="md-nav__link">
+    22.2.2.22 ScaleCrop (缩略图显示模式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222223-shareddoc-共享文档" class="md-nav__link">
+    22.2.2.23 SharedDoc (共享文档)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222224-slides-幻灯片元数据元素" class="md-nav__link">
+    22.2.2.24 Slides (幻灯片元数据元素)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222225-template-文档模板名称" class="md-nav__link">
+    22.2.2.25 Template (文档模板名称)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222226-titlesofparts-部件标题" class="md-nav__link">
+    22.2.2.26 TitlesOfParts (部件标题)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222227-totaltime-总编辑时间元数据元素" class="md-nav__link">
+    22.2.2.27 TotalTime (总编辑时间元数据元素)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222228-words-字数" class="md-nav__link">
+    22.2.2.28 Words (字数)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.3 自定义属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../varianttypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.4 变体类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customxmldata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.5 自定义 XML Data 属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.6 参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additionalcharacteri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.7 附加特性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../officedocumentrelationships/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.8 Office 文档关系
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharedsimpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.9 Shared Simple Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2221-概览" class="md-nav__link">
+    22.2.1 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2222-元素" class="md-nav__link">
+    22.2.2 元素
+  </a>
+  
+    <nav class="md-nav" aria-label="22.2.2 元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22221-application-应用名称" class="md-nav__link">
+    22.2.2.1 Application (应用名称)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22222-appversion-应用版本" class="md-nav__link">
+    22.2.2.2 AppVersion (应用版本)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22223-characters-字符总数" class="md-nav__link">
+    22.2.2.3 Characters (字符总数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22224-characterswithspaces-字符数带空格" class="md-nav__link">
+    22.2.2.4 CharactersWithSpaces (字符数（带空格）)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22225-company-公司名称" class="md-nav__link">
+    22.2.2.5 Company (公司名称)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22226-digsig-数字签名" class="md-nav__link">
+    22.2.2.6 DigSig (数字签名)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22227-docsecurity-文档安全" class="md-nav__link">
+    22.2.2.7 DocSecurity (文档安全)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22228-headingpairs-标题对" class="md-nav__link">
+    22.2.2.8 HeadingPairs (标题对)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22229-hiddenslides-隐藏幻灯片数量" class="md-nav__link">
+    22.2.2.9 HiddenSlides (隐藏幻灯片数量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222210-hlinks-超链接列表" class="md-nav__link">
+    22.2.2.10 HLinks (超链接列表)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222211-hyperlinkbase-相对超链接基础" class="md-nav__link">
+    22.2.2.11 HyperlinkBase (相对超链接基础)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222212-hyperlinkschanged-超链接已更改" class="md-nav__link">
+    22.2.2.12 HyperlinksChanged (超链接已更改)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222213-lines-行数" class="md-nav__link">
+    22.2.2.13 Lines (行数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222214-linksuptodate-最新链接" class="md-nav__link">
+    22.2.2.14 LinksUpToDate (最新链接)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222215-manager-主管姓名" class="md-nav__link">
+    22.2.2.15 Manager (主管姓名)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222216-mmclips-多媒体剪辑总数" class="md-nav__link">
+    22.2.2.16 MMClips (多媒体剪辑总数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222217-notes-包含注释笔记的幻灯片数量" class="md-nav__link">
+    22.2.2.17 Notes (包含注释/笔记的幻灯片数量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222218-pages-总页数" class="md-nav__link">
+    22.2.2.18 Pages (总页数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222219-paragraphs-段落总数" class="md-nav__link">
+    22.2.2.19 Paragraphs (段落总数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222220-presentationformat-演示文稿的预期格式" class="md-nav__link">
+    22.2.2.20 PresentationFormat (演示文稿的预期格式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222221-properties-应用程序特定的文件属性" class="md-nav__link">
+    22.2.2.21 Properties (应用程序特定的文件属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222222-scalecrop-缩略图显示模式" class="md-nav__link">
+    22.2.2.22 ScaleCrop (缩略图显示模式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222223-shareddoc-共享文档" class="md-nav__link">
+    22.2.2.23 SharedDoc (共享文档)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222224-slides-幻灯片元数据元素" class="md-nav__link">
+    22.2.2.24 Slides (幻灯片元数据元素)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222225-template-文档模板名称" class="md-nav__link">
+    22.2.2.25 Template (文档模板名称)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222226-titlesofparts-部件标题" class="md-nav__link">
+    22.2.2.26 TitlesOfParts (部件标题)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222227-totaltime-总编辑时间元数据元素" class="md-nav__link">
+    22.2.2.27 TotalTime (总编辑时间元数据元素)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222228-words-字数" class="md-nav__link">
+    22.2.2.28 Words (字数)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="222-扩展属性">22.2 扩展属性<a class="headerlink" href="#222-扩展属性" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>扩展属性(Extended properties)是一组预定义的元数据属性，适用于 Office Open XML 文档。 这些属性扩展了第 2 部分中定义的核心属性集：“开放包装约定”，这些属性对所有包都是通用的。</p>
+<p>扩展属性存储在扩展文件属性部件中：</p>
+<p><table border=1>
+    <tr>
+        <td>Source Relationship</td>
+        <td>http://purl.oclc.org/ooxml/officeDocument/relationships/extendedProperties</td>
+    </tr>
+    <tr>
+        <td>Content Type</td>
+        <td>application/vnd.openxmlformats-officedocument.extended-properties+xml</td>
+    </tr>
+</table></p>
+<p>每个扩展属性都表示为扩展属性部件中的一个元素。 扩展属性元素是不可重复的，可以为空或省略。 如果省略所有扩展属性元素，则可以从文档中排除扩展属性部件。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>扩展文件属性部件示例：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #9C6500">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;Properties</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://…/extended-properties&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">xmlns:vt=</span><span style="color: #BA2121">&quot;http://…/docPropsVTypes&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Template&gt;</span>Sales<span style="color: #bbbbbb"> </span>Report.dotm<span style="color: #008000; font-weight: bold">&lt;/Template&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;TotalTime&gt;</span>0<span style="color: #008000; font-weight: bold">&lt;/TotalTime&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Pages&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/Pages&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Words&gt;</span>166<span style="color: #008000; font-weight: bold">&lt;/Words&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Characters&gt;</span>948<span style="color: #008000; font-weight: bold">&lt;/Characters&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Application&gt;</span>Microsoft<span style="color: #bbbbbb"> </span>Office<span style="color: #bbbbbb"> </span>Word<span style="color: #008000; font-weight: bold">&lt;/Application&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;DocSecurity&gt;</span>0<span style="color: #008000; font-weight: bold">&lt;/DocSecurity&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Lines&gt;</span>7<span style="color: #008000; font-weight: bold">&lt;/Lines&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Paragraphs&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/Paragraphs&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;ScaleCrop&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/ScaleCrop&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Company&gt;</span>Northwind<span style="color: #bbbbbb"> </span>Traders<span style="color: #008000; font-weight: bold">&lt;/Company&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;LinksUpToDate&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/LinksUpToDate&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;CharactersWithSpaces&gt;</span>1112<span style="color: #008000; font-weight: bold">&lt;/CharactersWithSpaces&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;SharedDoc&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/SharedDoc&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;HyperlinksChanged&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/HyperlinksChanged&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;AppVersion&gt;</span>12.0000<span style="color: #008000; font-weight: bold">&lt;/AppVersion&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Properties&gt;</span><span style="color: #bbbbbb"> </span>
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>Extended Properties</strong></p>
+<p>Extended properties are a predefined set of metadata properties that are applicable to Office Open XML documents. These properties extend the set of core properties defined in Part 2: "Open Packaging Conventions" which are common to all packages.</p>
+<p>Extended properties are stored within an Extended File Properties part with:</p>
+<p><table border=1>
+    <tr>
+        <td>Source Relationship</td>
+        <td>http://purl.oclc.org/ooxml/officeDocument/relationships/extendedProperties</td>
+    </tr>
+    <tr>
+        <td>Content Type</td>
+        <td>application/vnd.openxmlformats-officedocument.extended-properties+xml</td>
+    </tr>
+</table></p>
+<p>Each extended property is represented as an element in the extended properties part. Extended properties elements are non-repeatable and can be empty or omitted. If all extended property elements are omitted then the extended properties part can be excluded from a document.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A sample extended file properties part:</p>
+</div>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #9C6500">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;Properties</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://…/extended-properties&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">xmlns:vt=</span><span style="color: #BA2121">&quot;http://…/docPropsVTypes&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Template&gt;</span>Sales<span style="color: #bbbbbb"> </span>Report.dotm<span style="color: #008000; font-weight: bold">&lt;/Template&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;TotalTime&gt;</span>0<span style="color: #008000; font-weight: bold">&lt;/TotalTime&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Pages&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/Pages&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Words&gt;</span>166<span style="color: #008000; font-weight: bold">&lt;/Words&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Characters&gt;</span>948<span style="color: #008000; font-weight: bold">&lt;/Characters&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Application&gt;</span>Microsoft<span style="color: #bbbbbb"> </span>Office<span style="color: #bbbbbb"> </span>Word<span style="color: #008000; font-weight: bold">&lt;/Application&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;DocSecurity&gt;</span>0<span style="color: #008000; font-weight: bold">&lt;/DocSecurity&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Lines&gt;</span>7<span style="color: #008000; font-weight: bold">&lt;/Lines&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Paragraphs&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/Paragraphs&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;ScaleCrop&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/ScaleCrop&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;Company&gt;</span>Northwind<span style="color: #bbbbbb"> </span>Traders<span style="color: #008000; font-weight: bold">&lt;/Company&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;LinksUpToDate&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/LinksUpToDate&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;CharactersWithSpaces&gt;</span>1112<span style="color: #008000; font-weight: bold">&lt;/CharactersWithSpaces&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;SharedDoc&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/SharedDoc&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;HyperlinksChanged&gt;</span>false<span style="color: #008000; font-weight: bold">&lt;/HyperlinksChanged&gt;</span>
+..<span style="color: #008000; font-weight: bold">&lt;AppVersion&gt;</span>12.0000<span style="color: #008000; font-weight: bold">&lt;/AppVersion&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Properties&gt;</span><span style="color: #bbbbbb"> </span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="2221-概览">22.2.1 概览<a class="headerlink" href="#2221-概览" title="Permanent link">&para;</a></h2>
+<p>This subclause is informative.</p>
+<ul>
+<li>[22.2.2] Elements</li>
+<li>[22.2.2.1] Application (Application Name)</li>
+<li>[22.2.2.2] AppVersion (Application Version)</li>
+<li>[22.2.2.3] Characters (Total Number of Characters)</li>
+<li>[22.2.2.4] CharactersWithSpaces (Number of Characters (With Spaces))</li>
+<li>[22.2.2.5] Company (Name of Company)</li>
+<li>[22.2.2.6] DigSig (Digital Signature)</li>
+<li>[22.2.2.7] DocSecurity (Document Security)</li>
+<li>[22.2.2.8] HeadingPairs (Heading Pairs)</li>
+<li>[22.2.2.9] HiddenSlides (Number of Hidden Slides)</li>
+<li>[22.2.2.10] HLinks (Hyperlink List)</li>
+<li>[22.2.2.11] HyperlinkBase (Relative Hyperlink Base)</li>
+<li>[22.2.2.12] HyperlinksChanged (Hyperlinks Changed)</li>
+<li>[22.2.2.13] Lines (Number of Lines)</li>
+<li>[22.2.2.14] LinksUpToDate (Links Up-to-Date)</li>
+<li>[22.2.2.15] Manager (Name of Manager)</li>
+<li>[22.2.2.16] MMClips (Total Number of Multimedia Clips)</li>
+<li>[22.2.2.17] Notes (Number of Slides Containing Notes)</li>
+<li>[22.2.2.18] Pages (Total Number of Pages)</li>
+<li>[22.2.2.19] Paragraphs (Total Number of Paragraphs)</li>
+<li>[22.2.2.20] PresentationFormat (Intended Format of Presentation)</li>
+<li>[22.2.2.21] Properties (Application Specific File Properties)</li>
+<li>[22.2.2.22] ScaleCrop (Thumbnail Display Mode)</li>
+<li>[22.2.2.23] SharedDoc (Shared Document)</li>
+<li>[22.2.2.24] Slides (Slides Metadata Element)</li>
+<li>[22.2.2.25] Template (Name of Document Template)</li>
+<li>[22.2.2.26] TitlesOfParts (Part Titles)</li>
+<li>[22.2.2.27] TotalTime (Total Edit Time Metadata Element)</li>
+<li>[22.2.2.28] Words (Word Count)</li>
+</ul>
+<p>End of informative text.</p>
+<h2 id="2222-元素">22.2.2 元素<a class="headerlink" href="#2222-元素" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下元素指定此命名空间的内容：</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Elements</strong></p>
+<p>The following elements specify the contents of this namespace:</p>
+</div>
+</div>
+</div>
+<h3 id="22221-application-应用名称">22.2.2.1 Application (应用名称)<a class="headerlink" href="#22221-application-应用名称" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定创建该文档的应用程序的名称。</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Application (Application Name)</strong></p>
+<p>This element specifies the name of the application that created this document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22222-appversion-应用版本">22.2.2.2 AppVersion (应用版本)<a class="headerlink" href="#22222-appversion-应用版本" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定生成该文档的应用程序的版本。</p>
+<p>该元素的内容应采用 XX.YYYY 的形式，其中 X 和 Y 代表数值，否则该文档应被视为不合格。</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>该元素的内容并不代表绝对值，而是限定Application元素的内容以区分同一生产者的不同版本。 应用程序应仅以提供信息的方式使用此信息（作为文档元数据）。</p>
+</div>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>AppVersion (Application Version)</strong></p>
+<p>This element specifies the version of the application which produced this document.</p>
+<p>The content of this element shall be of the form XX.YYYY where X and Y represent numerical values, or the document shall be considered non-conformant.</p>
+<p>[Note: The contents of this element do not represent absolute values, but rather qualify the contents of the Application element to differentiate between different versions of the same producer. Applications should use this information in an informative manner only (as document metadata). end note]</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22223-characters-字符总数">22.2.2.3 Characters (字符总数)<a class="headerlink" href="#22223-characters-字符总数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定文档中的字符总数。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Characters (Total Number of Characters)</strong></p>
+<p>This element specifies the total number of characters in a document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22224-characterswithspaces-字符数带空格">22.2.2.4 CharactersWithSpaces (字符数（带空格）)<a class="headerlink" href="#22224-characterswithspaces-字符数带空格" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定本文档中字符数（包括空格）的最后计数。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>CharactersWithSpaces (Number of Characters (With Spaces))</strong></p>
+<p>This element specifies the last count of the number of characters (including spaces) in this document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22225-company-公司名称">22.2.2.5 Company (公司名称)<a class="headerlink" href="#22225-company-公司名称" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定与文档关联的公司名称。</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Company (Name of Company)</strong></p>
+<p>This element specifies the name of a company associated with the document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22226-digsig-数字签名">22.2.2.6 DigSig (数字签名)<a class="headerlink" href="#22226-digsig-数字签名" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素包含数字签名文档的签名。</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>此属性是遗留文档用来存储其二进制表示的数字签名的机制，应避免使用第 2 部分中定义的明确定义的机制。此属性的任何使用都应仅用于遗留兼容性，并且是 应用程序定义的。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>该元素内容模型 (CT_DigSigBlob) 的 W3C XML 架构定义位于 [§A.6.2] 中。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>DigSig (Digital Signature)</strong></p>
+<p>This element contains the signature of a digitally signed document.</p>
+<p>[Note: This property is a mechanism used by legacy documents to store the digital signature of its binary representation, and should be avoided in favor of the well-defined mechanism defined in Part 2. Any use of this property should be for legacy compatibility only, and is application-defined. end note]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_DigSigBlob) is located in §A.6.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22227-docsecurity-文档安全">22.2.2.7 DocSecurity (文档安全)<a class="headerlink" href="#22227-docsecurity-文档安全" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元数据元素将文档的安全级别指定为数值。 文档安全性定义为：</p>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>文档安全</strong></th>
+            <th><strong>安全级别</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>文档受密码保护。</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>建议以只读方式打开文档。</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>文档强制以只读方式打开。</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>文档已锁定以进行注释。</td>
+        </tr>
+    </tbody>
+</table></p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>DocSecurity (Document Security)</strong></p>
+<p>This metadata element specifies the security level of a document as a numeric value. Document security is defined as:</p>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>DocSecurity</strong></th>
+            <th><strong>Security Level</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Document is password protected.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Document is recommended to be opened as read-only.</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Document is enforced to be opened as read-only.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Document is locked for annotation.</td>
+        </tr>
+    </tbody>
+</table></p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22228-headingpairs-标题对">22.2.2.8 HeadingPairs (标题对)<a class="headerlink" href="#22228-headingpairs-标题对" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>标题对</strong>(Heading pairs)指示文档部件的分组以及每组中的部件数量。 这些部件不是文档部件，而是文档部件的概念表示。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>由三张具有应用主题的幻灯片组成的演示文稿可以具有以下 HeadingPairs 表示形式：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;HeadingPairs&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">size=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;variant&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Theme<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>Titles<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/HeadingPairs&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>该元素内容模型 (CT_VectorVariant) 的 W3C XML 模式定义位于 [§A.6.2] 中。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>HeadingPairs (Heading Pairs)</strong></p>
+<p>Heading pairs indicates the grouping of document parts and the number of parts in each group. These parts are not document parts but conceptual representations of document sections.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A presentation composing of three slides with an applied theme can have the following HeadingPairs representation:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;HeadingPairs&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">size=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;variant&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Theme<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>Titles<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/HeadingPairs&gt;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>The W3C XML Schema definition of this element’s content model (CT_VectorVariant) is located in [§A.6.2].</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 id="22229-hiddenslides-隐藏幻灯片数量">22.2.2.9 HiddenSlides (隐藏幻灯片数量)<a class="headerlink" href="#22229-hiddenslides-隐藏幻灯片数量" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定演示文稿文档中隐藏幻灯片的数量。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>HiddenSlides (Number of Hidden Slides)</strong></p>
+<p>This element specifies the number of hidden slides in a presentation document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222210-hlinks-超链接列表">22.2.2.10 HLinks (超链接列表)<a class="headerlink" href="#222210-hlinks-超链接列表" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定上次保存时文档中的超链接集。</p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>该元素内容模型 (CT_VectorVariant) 的 W3C XML 架构定义位于 [§A.6.2] 中。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>HLinks (Hyperlink List)</strong></p>
+<p>This element specifies the set of hyperlinks that were in this document when last saved.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_VectorVariant) is located in §A.6.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="222211-hyperlinkbase-相对超链接基础">22.2.2.11 HyperlinkBase (相对超链接基础)<a class="headerlink" href="#222211-hyperlinkbase-相对超链接基础" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定用于评估本文档中的相对超链接的基本字符串。</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>HyperlinkBase (Relative Hyperlink Base)</strong></p>
+<p>This element specifies the base string used for evaluating relative hyperlinks in this document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222212-hyperlinkschanged-超链接已更改">22.2.2.12 HyperlinksChanged (超链接已更改)<a class="headerlink" href="#222212-hyperlinkschanged-超链接已更改" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定该部件中的一个或多个超链接是由生产者在该部件中专门更新的。 下一个打开本文档的制作者应使用本部件规定的新超链接来更新超链接关系。</p>
+<p>该元素的可能值由 W3C XML 架构布尔数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>linksChanged (Hyperlinks Changed)</strong></p>
+<p>This element specifies that one or more hyperlinks in this part were updated exclusively in this part by a producer. The next producer to open this document shall update the hyperlink relationships with the new hyperlinks specified in this part.</p>
+<p>The possible values for this element are defined by the W3C XML Schema boolean datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222213-lines-行数">22.2.2.13 Lines (行数)<a class="headerlink" href="#222213-lines-行数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定合格生产者最后一次保存文档时的总行数（如果适用）。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Lines (Number of Lines)</strong></p>
+<p>This element specifies the total number of lines in a document when last saved by a conforming producer if applicable.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222214-linksuptodate-最新链接">22.2.2.14 LinksUpToDate (最新链接)<a class="headerlink" href="#222214-linksuptodate-最新链接" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指示文档中的超链接是否是最新的。 将此元素设置为 TRUE 以指示超链接已更新。 将此元素设置为 FALSE 以指示超链接已过时。</p>
+<p>该元素的可能值由 W3C XML 架构布尔数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>LinksUpToDate (Links Up-to-Date)</strong></p>
+<p>This element indicates whether hyperlinks in a document are up-to-date. Set this element to TRUE to indicate that hyperlinks are updated. Set this element to FALSE to indicate that hyperlinks are outdated.</p>
+<p>The possible values for this element are defined by the W3C XML Schema boolean datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222215-manager-主管姓名">22.2.2.15 Manager (主管姓名)<a class="headerlink" href="#222215-manager-主管姓名" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定与文档关联的主管的姓名。</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Manager (Name of Manager)</strong></p>
+<p>This element specifies the name of a supervisor associated with the document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222216-mmclips-多媒体剪辑总数">22.2.2.16 MMClips (多媒体剪辑总数)<a class="headerlink" href="#222216-mmclips-多媒体剪辑总数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定文档中存在的声音或视频剪辑的总数。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>MMClips (Total Number of Multimedia Clips)</strong></p>
+<p>This element specifies the total number of sound or video clips that are present in the document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222217-notes-包含注释笔记的幻灯片数量">22.2.2.17 Notes (包含注释/笔记的幻灯片数量)<a class="headerlink" href="#222217-notes-包含注释笔记的幻灯片数量" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定演示文稿中包含注释的幻灯片的数量。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Notes (Number of Slides Containing Notes)</strong></p>
+<p>This element specifies the number of slides in a presentation containing notes.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222218-pages-总页数">22.2.2.18 Pages (总页数)<a class="headerlink" href="#222218-pages-总页数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定文档的总页数（如果适用）。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Pages (Total Number of Pages)</strong></p>
+<p>This element specifies the total number of pages of a document if applicable.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222219-paragraphs-段落总数">22.2.2.19 Paragraphs (段落总数)<a class="headerlink" href="#222219-paragraphs-段落总数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定文档中找到的段落总数（如果适用）。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Paragraphs (Total Number of Paragraphs)</strong></p>
+<p>This element specifies the total number of paragraphs found in a document if applicable.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222220-presentationformat-演示文稿的预期格式">22.2.2.20 PresentationFormat (演示文稿的预期格式)<a class="headerlink" href="#222220-presentationformat-演示文稿的预期格式" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定演示文稿文档的预期格式。 例如，打算在视频上显示的演示具有 PresentationFormat “Vedio”。</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>PresentationFormat (Intended Format of Presentation)</strong></p>
+<p>This element specifies the intended format for a presentation document. For example, a presentation intended to be shown on video has PresentationFormat "Video".</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222221-properties-应用程序特定的文件属性">22.2.2.21 Properties (应用程序特定的文件属性)<a class="headerlink" href="#222221-properties-应用程序特定的文件属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定文档的应用程序属性。 对于字符串类型的属性，NCR 转义格式 (<code>_xHHHH_</code>) 用于任何无效的 XML 字符。</p>
+<p>[Note: 该元素内容模型 (CT_Properties) 的 W3C XML 模式定义位于 [§A.6.2] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Properties (Application Specific File Properties)</strong></p>
+<p>This element specifies the application properties of a document. For properties of type string, NCR escape format (<em>xHHHH</em>) is used for any invalid XML characters.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Properties) is located in §A.6.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="222222-scalecrop-缩略图显示模式">22.2.2.22 ScaleCrop (缩略图显示模式)<a class="headerlink" href="#222222-scalecrop-缩略图显示模式" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指示文档缩略图的显示模式。 将此元素设置为 TRUE 可缩放文档缩略图以适应显示。 将此元素设置为 FALSE 可以裁剪文档缩略图，从而仅显示适合显示屏的部分。</p>
+<p>该元素的可能值由 W3C XML 架构布尔数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ScaleCrop (Thumbnail Display Mode)</strong></p>
+<p>This element indicates the display mode of the document thumbnail. Set this element to TRUE to enable scaling of the document thumbnail to the display. Set this element to FALSE to enable cropping of the document thumbnail to show only sections that fits the display.</p>
+<p>The possible values for this element are defined by the W3C XML Schema boolean datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222223-shareddoc-共享文档">22.2.2.23 SharedDoc (共享文档)<a class="headerlink" href="#222223-shareddoc-共享文档" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指示该文档当前是否在多个生产者之间共享。 如果此元素设置为 TRUE，则生产者在更新文档时应小心。</p>
+<p>该元素的可能值由 W3C XML 架构布尔数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>SharedDoc (Shared Document)</strong></p>
+<p>This element indicates if this document is currently shared between multiple producers. If this element is set to TRUE, producers should take care when updating the document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema boolean datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222224-slides-幻灯片元数据元素">22.2.2.24 Slides (幻灯片元数据元素)<a class="headerlink" href="#222224-slides-幻灯片元数据元素" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定演示文档中幻灯片的总数。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Slides (Slides Metadata Element)</strong></p>
+<p>This element specifies the total number of slides in a presentation document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222225-template-文档模板名称">22.2.2.25 Template (文档模板名称)<a class="headerlink" href="#222225-template-文档模板名称" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定外部文档模板的名称，该模板包含用于创建当前文档的格式和样式信息。</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Template (Name of Document Template)</strong></p>
+<p>This element specifies the name of an external document template containing format and style information used to create the current document.</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222226-titlesofparts-部件标题">22.2.2.26 TitlesOfParts (部件标题)<a class="headerlink" href="#222226-titlesofparts-部件标题" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定每个文档的标题。 这些部件不是文档部件，而是文档部件的概念表示。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>由应用主题“货币(Currency)”的三张幻灯片组成的演示文稿可以具有以下 TitlesofParts 表示形式：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;TitlesofParts&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">size=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;lpstr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Currency<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>1<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>2<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>3<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/TitlesofParts&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>该元素内容模型 (CT_VectorLpstr) 的 W3C XML 架构定义位于 §A.6.2 中。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>TitlesOfParts (Part Titles)</strong></p>
+<p>This element specifies the title of each document. These parts are not document parts but conceptual representations of document sections.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A presentation composing of three slides with an applied theme "Currency" can have the following TitlesofParts representation:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;TitlesofParts&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">size=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;lpstr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Currency<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>1<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>2<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Slide<span style="color: #bbbbbb"> </span>3<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/TitlesofParts&gt;</span>
+</code></pre></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>The W3C XML Schema definition of this element’s content model (CT_VectorLpstr) is located in §A.6.2. </p>
+</div>
+</div>
+</div>
+</div>
+<h3 id="222227-totaltime-总编辑时间元数据元素">22.2.2.27 TotalTime (总编辑时间元数据元素)<a class="headerlink" href="#222227-totaltime-总编辑时间元数据元素" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>编辑文档的总时间。 默认时间单位是分钟。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>TotalTime (Total Edit Time Metadata Element)</strong></p>
+<p>Total time that a document has been edited. The default time unit is minutes.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="222228-words-字数">22.2.2.28 Words (字数)<a class="headerlink" href="#222228-words-字数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定上次保存时文档中包含的总字数。</p>
+<p>此元素的可能值由 W3C XML Schema int 数据类型定义</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Words (Word Count)</strong></p>
+<p>This element specifies the total number of words contained in a document when last saved.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

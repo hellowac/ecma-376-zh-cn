@@ -1,0 +1,5026 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../coordinate/">
+      
+      
+        <link rel="next" href="../shape_def/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.8 形状属性和效果 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l48-形状属性和效果" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.8 形状属性和效果
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3daspects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l481-介绍" class="md-nav__link">
+    L.4.8.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l482-颜色模型" class="md-nav__link">
+    L.4.8.2 颜色模型
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.2 颜色模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4821-scrgbclr" class="md-nav__link">
+    L.4.8.2.1 scrgbClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4822-srgbclr" class="md-nav__link">
+    L.4.8.2.2 srgbClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4823-hslclr" class="md-nav__link">
+    L.4.8.2.3 hslClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4824-sysclr" class="md-nav__link">
+    L.4.8.2.4 sysClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4825-schemeclr" class="md-nav__link">
+    L.4.8.2.5 schemeClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4826-prstclr" class="md-nav__link">
+    L.4.8.2.6 prstClr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l483-颜色变换" class="md-nav__link">
+    L.4.8.3 颜色变换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l484-填充特性" class="md-nav__link">
+    L.4.8.4 填充特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.4 填充特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4841-solid-fills" class="md-nav__link">
+    L.4.8.4.1 Solid Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4842-gradient-fills" class="md-nav__link">
+    L.4.8.4.2 Gradient Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4843-blip-fills" class="md-nav__link">
+    L.4.8.4.3 Blip Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4844-pattern-fills" class="md-nav__link">
+    L.4.8.4.4 Pattern Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4845-group-fills" class="md-nav__link">
+    L.4.8.4.5 Group Fills
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l485-线条特性" class="md-nav__link">
+    L.4.8.5 线条特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.5 线条特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4851-线条填充特性" class="md-nav__link">
+    L.4.8.5.1 线条填充特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4852-线条虚线特性" class="md-nav__link">
+    L.4.8.5.2 线条虚线特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.5.2 线条虚线特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l48521-自定义虚线" class="md-nav__link">
+    L.4.8.5.2.1 自定义虚线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4853-线条连接特性" class="md-nav__link">
+    L.4.8.5.3 线条连接特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4854-头尾特性" class="md-nav__link">
+    L.4.8.5.4 头/尾特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4855-线条属性" class="md-nav__link">
+    L.4.8.5.5 线条属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l486-效果" class="md-nav__link">
+    L.4.8.6 效果
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.6 效果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4861-效果列表" class="md-nav__link">
+    L.4.8.6.1 效果列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4862-模糊" class="md-nav__link">
+    L.4.8.6.2 模糊
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4863-内部阴影" class="md-nav__link">
+    L.4.8.6.3 内部阴影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4864-外部阴影" class="md-nav__link">
+    L.4.8.6.4 外部阴影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4865-预设阴影" class="md-nav__link">
+    L.4.8.6.5 预设阴影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4866-反射效果" class="md-nav__link">
+    L.4.8.6.6 反射效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4867-软边缘效果" class="md-nav__link">
+    L.4.8.6.7 软边缘效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4868-发光效果" class="md-nav__link">
+    L.4.8.6.8 发光效果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pictures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l481-介绍" class="md-nav__link">
+    L.4.8.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l482-颜色模型" class="md-nav__link">
+    L.4.8.2 颜色模型
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.2 颜色模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4821-scrgbclr" class="md-nav__link">
+    L.4.8.2.1 scrgbClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4822-srgbclr" class="md-nav__link">
+    L.4.8.2.2 srgbClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4823-hslclr" class="md-nav__link">
+    L.4.8.2.3 hslClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4824-sysclr" class="md-nav__link">
+    L.4.8.2.4 sysClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4825-schemeclr" class="md-nav__link">
+    L.4.8.2.5 schemeClr
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4826-prstclr" class="md-nav__link">
+    L.4.8.2.6 prstClr
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l483-颜色变换" class="md-nav__link">
+    L.4.8.3 颜色变换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l484-填充特性" class="md-nav__link">
+    L.4.8.4 填充特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.4 填充特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4841-solid-fills" class="md-nav__link">
+    L.4.8.4.1 Solid Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4842-gradient-fills" class="md-nav__link">
+    L.4.8.4.2 Gradient Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4843-blip-fills" class="md-nav__link">
+    L.4.8.4.3 Blip Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4844-pattern-fills" class="md-nav__link">
+    L.4.8.4.4 Pattern Fills
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4845-group-fills" class="md-nav__link">
+    L.4.8.4.5 Group Fills
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l485-线条特性" class="md-nav__link">
+    L.4.8.5 线条特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.5 线条特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4851-线条填充特性" class="md-nav__link">
+    L.4.8.5.1 线条填充特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4852-线条虚线特性" class="md-nav__link">
+    L.4.8.5.2 线条虚线特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.5.2 线条虚线特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l48521-自定义虚线" class="md-nav__link">
+    L.4.8.5.2.1 自定义虚线
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4853-线条连接特性" class="md-nav__link">
+    L.4.8.5.3 线条连接特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4854-头尾特性" class="md-nav__link">
+    L.4.8.5.4 头/尾特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4855-线条属性" class="md-nav__link">
+    L.4.8.5.5 线条属性
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l486-效果" class="md-nav__link">
+    L.4.8.6 效果
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.8.6 效果">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4861-效果列表" class="md-nav__link">
+    L.4.8.6.1 效果列表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4862-模糊" class="md-nav__link">
+    L.4.8.6.2 模糊
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4863-内部阴影" class="md-nav__link">
+    L.4.8.6.3 内部阴影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4864-外部阴影" class="md-nav__link">
+    L.4.8.6.4 外部阴影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4865-预设阴影" class="md-nav__link">
+    L.4.8.6.5 预设阴影
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4866-反射效果" class="md-nav__link">
+    L.4.8.6.6 反射效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4867-软边缘效果" class="md-nav__link">
+    L.4.8.6.7 软边缘效果
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4868-发光效果" class="md-nav__link">
+    L.4.8.6.8 发光效果
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l48-形状属性和效果">L.4.8 形状属性和效果<a class="headerlink" href="#l48-形状属性和效果" title="Permanent link">&para;</a></h1>
+<p><strong>Shape Properties and Effects</strong></p>
+<h2 id="l481-介绍">L.4.8.1 介绍<a class="headerlink" href="#l481-介绍" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>还涵盖了颜色模型，因为填充、线条和效果都参考颜色模型架构来表示颜色。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Introduction</strong></p>
+<p>Color Models are also covered, as Fills, Lines, and Effects all reference color model schemas to represent color.</p>
+</div>
+</div>
+</div>
+<h2 id="l482-颜色模型">L.4.8.2 颜色模型<a class="headerlink" href="#l482-颜色模型" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>有多种表达颜色的方法：scrgbClr、srgbClr、hslClr、sysClr、schemeClr 和 prstClr。 尽管 srgbClr 是最常用的模型，但拥有各种等效颜色模型的基本原理源于对自然表达颜色选择的不同方式的渴望。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:scrgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;10000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">g=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;30000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Color Models</strong></p>
+<p>There are several methods of expressing color: scrgbClr, srgbClr, hslClr, sysClr, schemeClr, and prstClr. Although srgbClr is the most commonly used model, the rationale for having various equivalent color models stems from a desire to have different ways of naturally expressing a color choice. </p>
+</div>
+</div>
+</div>
+<h3 id="l4821-scrgbclr">L.4.8.2.1 scrgbClr<a class="headerlink" href="#l4821-scrgbclr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>scrgbClr 是表达红、绿、蓝颜色的传统形式。 值以百分比表示。 r、g 和 b 都是必需的，分别对应于红色、绿色和蓝色。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:scrgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;10000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">g=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;30000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>scrgbClr</strong></p>
+<p>scrgbClr is a legacy form of expressing Red, Green, Blue color. Values are expressed in Percentages. r, g, and b are all required and correspond to red, green, and blue, respectively.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:scrgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;10000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">g=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;30000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4822-srgbclr">L.4.8.2.2 srgbClr<a class="headerlink" href="#l4822-srgbclr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>srgbClr 与 scrgbClr 类似，不同之处在于，它们不是将值表示为百分比，而是使用每种颜色的两个十六进制数字（按 RGB 顺序）指定。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FFFF00&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>srgbClr</strong></p>
+<p>srgbClr is similar to scrgbClr with the exception that instead of expressing the values as percentages,they are specified using two hex digits per color, in the order RGB.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FFFF00&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4823-hslclr">L.4.8.2.3 hslClr<a class="headerlink" href="#l4823-hslclr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>hslClr 使用色调、饱和度和发光颜色模型表示颜色。 值以百分比表示。 h、s 和 l 都是必需的，分别对应于色调、饱和度和发光度。 假设感知伽玛值为 2.2。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:hslClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">h=</span><span style="color: #BA2121">&quot;10000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">s=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">l=</span><span style="color: #BA2121">&quot;30000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>hslClr</strong></p>
+<p>hslClr represents a color using the Hue, Saturation, and Luminescence color model. Values are expressed in Percentages. h, s, and l are all required, and correspond to hue, saturation, and luminescence respectively. A perceptual gamma of 2.2 is assumed.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:hslClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">h=</span><span style="color: #BA2121">&quot;10000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">s=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">l=</span><span style="color: #BA2121">&quot;30000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4824-sysclr">L.4.8.2.4 sysClr<a class="headerlink" href="#l4824-sysclr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>sysClr 代表系统颜色，并引入间接级别。 例如，指定：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;windowText&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>将颜色绑定为系统中为“窗口文本”选择的颜色。 可能的值为：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>scrollBar
+background
+activeCaption
+inactiveCaption
+menu
+window
+windowFrame
+menuText
+windowText
+captionText
+activeBorder
+inactiveBorder
+appWorkspace
+highlight
+highlightText
+btnFace
+btnShadow
+grayText
+btnText
+inactiveCaptionText
+btnHighlight
+3dDkShadow
+3dLight
+infoText
+infoBk
+hotLight
+gradientActiveCaption
+gradientInactiveCaption
+menuHighlight
+menuBar
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>sysClr</strong></p>
+<p>sysClr represents a system color, and introduces a level of indirection. For example, specifying:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;windowText&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>binds the color to be the color chosen in the system for "Window Text". The possible values are:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>scrollBar
+background
+activeCaption
+inactiveCaption
+menu
+window
+windowFrame
+menuText
+windowText
+captionText
+activeBorder
+inactiveBorder
+appWorkspace
+highlight
+highlightText
+btnFace
+btnShadow
+grayText
+btnText
+inactiveCaptionText
+btnHighlight
+3dDkShadow
+3dLight
+infoText
+infoBk
+hotLight
+gradientActiveCaption
+gradientInactiveCaption
+menuHighlight
+menuBar
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4825-schemeclr">L.4.8.2.5 schemeClr<a class="headerlink" href="#l4825-schemeclr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>schemaClr 代表主题中的颜色。 如果主题绑定发生变化，颜色也会发生变化。 例如，指定：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>将颜色绑定为当前主题的 Light 1 颜色。 可能的值为：</p>
+<ul>
+<li>accent1 - 额外方案颜色 1</li>
+<li>accent2 - 额外方案颜色 2</li>
+<li>accent3 - 额外方案颜色 3</li>
+<li>accent4 - 额外方案颜色 4</li>
+<li>accent5 - 额外方案颜色 5</li>
+<li>accent6 - 额外方案颜色 6</li>
+<li>bg1 - 语义背景颜色</li>
+<li>bg2 - 语义附加背景颜色</li>
+<li>dk1 - 主深色 1</li>
+<li>dk2 - 主深色 2</li>
+<li>folHlink - 已点击的超链接颜色</li>
+<li>hlink -  超链接颜色</li>
+<li>lt1 -  主浅色 1</li>
+<li>lt2 -  主浅色 2</li>
+<li>phClr - 主题定义中使用的颜色，意思是“使用样式的颜色”</li>
+<li>tx1 -  语义文本颜色</li>
+<li>tx2 -  语义附加文本颜色</li>
+</ul>
+<details class="success" open="open">
+<summary>译注: 关于 phClr</summary>
+<p>原文参考: http://officeopenxml.com/prSlide-color.php</p>
+<p><strong>主题内的颜色占位符</strong></p>
+<p><strong>注意:</strong> 关于在主题(themes)中使用<strong>占位颜色</strong>(placeholders for colors)， 例如: 主题可以定义实心填充(solid fill)，如下所示，使用 占位符 <code>phClr</code> 作为值。 这意味着填充将<strong>使用引用主题填充样式时提供的指定颜色</strong>。 假设主题中出现以下内容。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #3D7B7B; font-style: italic">&lt;!--主题填充样式中定义的列表--&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;a:fillStyleLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;phClr&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span>...
+<span style="color: #008000; font-weight: bold">&lt;/a:fillStyleLst&gt;</span>
+</code></pre></div>
+<p>此填充可以在带有 <code>&lt;p:style&gt;</code> 元素的形状中引用，使用样式中 <code>&lt;a:fillRef&gt;</code> 元素的 <code>idx</code> 属性。<code>&lt;a:fillRef&gt;</code> 使用子 <code>&lt;a:schemeClr&gt;</code> 元素指定的主题颜色。 下面的 <code>accent2</code> 颜色被指定为用于<strong>代替主题中占位符的颜色</strong>。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>
+<span style="color: #bbbbbb">    </span>...
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:fillRef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:fillRef&gt;</span>
+<span style="color: #bbbbbb">    </span>...
+<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+</code></pre></div>
+<p>在这个例子中，这似乎是不必要的操作。 但是，请记住，主题内的 <code>&lt;a:schemeClr&gt;</code> 元素规范可能会<strong>指定许多不同的效果和颜色变换（作为子元素），因此颜色可能只是整体填充外观的一个组成部分。</strong> 例如: 主题中定义的背景填充样式列表</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:bgFillStyleLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;phClr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;!--占位符颜色 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;phClr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">&lt;!--占位符颜色， 但同时指定了颜色变换 --&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:tint</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;95000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:satMod</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;170000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:gradFill</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rotWithShape=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;phClr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;!--占位符颜色， 但同时指定了颜色变换 --&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:tint</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;93000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:satMod</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;150000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:shade</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;98000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:lumMod</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;102000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;50000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;phClr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;!--占位符颜色， 但同时指定了颜色变换 --&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:tint</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;98000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:satMod</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;130000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:shade</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;90000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:lumMod</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;103000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;100000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;phClr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;!--占位符颜色， 但同时指定了颜色变换 --&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:shade</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;63000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:satMod</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;120000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gsLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:lin</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;5400000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">scaled=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:bgFillStyleLst&gt;</span>
+</code></pre></div>
+<p>使用时，可能是这样:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:cSld&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:bg&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:bgRef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1001&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span><span style="color: #bbbbbb">   </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 使用主题中定义的bgFillStyleLst中的填充样式 --&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;bg1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 使用主题中定义的bg1指定的颜色 --&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:bgRef&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:bg&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spTree&gt;</span>
+<span style="color: #bbbbbb">        </span>...<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spTree&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:cSld&gt;</span>
+</code></pre></div>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>schemeClr</strong></p>
+<p>schemeClr represents a color from a theme. The color changes if theme bindings change. For example, specifying:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>binds the color to be Light 1 color of the current theme. The possible values are:</p>
+<ul>
+<li>accent1 - extra scheme color 1</li>
+<li>accent2 - extra scheme color 2</li>
+<li>accent3 - extra scheme color 3</li>
+<li>accent4 - extra scheme color 4</li>
+<li>accent5 - extra scheme color 5</li>
+<li>accent6 - extra scheme color 6</li>
+<li>bg1 - semantic background color</li>
+<li>bg2 - semantic additional background color</li>
+<li>dk1 - main dark color 1</li>
+<li>dk2 - main dark color 2</li>
+<li>folHlink - followed hyperlink color</li>
+<li>hlink -  hyperlink color</li>
+<li>lt1 -  Main light color 1</li>
+<li>lt2 -  main light color 2</li>
+<li>phClr - a color used in theme definitions which means "use the color of</li>
+<li>the -  style"</li>
+<li>tx1 -  semantic text color</li>
+<li>tx2 -  semantic additional text color</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4826-prstclr">L.4.8.2.6 prstClr<a class="headerlink" href="#l4826-prstclr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>prstClr 代表预设颜色。 这是颜色的旧定义，目前已不再使用。 预设颜色是从旧版 Office 中提供的多个预设中进行的选择。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:prstClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;black&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>所选颜色是“黑色(black)”。 根据 DrawingML 架构的定义，此设置的有效值为：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>aliceBlue
+antiqueWhite
+aqua
+aquamarine
+azure
+beige
+bisque
+black
+blanchedAlmond
+blue
+blueViolet
+brown
+burlyWood
+cadetBlue
+chartreuse
+chocolate
+coral
+cornflowerBlue
+cornsilk
+crimson
+cyan
+darkBlue
+darkCyan
+darkGray
+darkGrey
+darkGreen
+darkKhaki
+darkMagenta
+darkOliveGreen
+darkOrange
+darkOrchid
+darkRed
+darkSalmon
+darkSeaGreen
+darkSlateBlue
+darkSlateGray
+darkSlateGrey
+darkTurquoise
+darkViolet
+dkBlue
+dkCyan
+dkGoldenrod
+dkGray
+dkGrey
+dkGreen
+dkKhaki
+dkMagenta
+dkOliveGreen
+dkOrange
+dkOrchid
+dkRed
+dkSalmon
+dkSeaGreen
+dkSlateBlue
+dkSlateGray
+dkSlateGrey
+dkTurquoise
+dkViolet
+deepPink
+deepSkyBlue
+dimGray
+dimGrey
+dodgerBlue
+firebrick
+floralWhite
+forestGreen
+fuchsia
+gainsboro
+ghostWhite
+gold
+goldenrod
+gray
+grey
+green
+greenYellow
+honeydew
+hotPink
+indianRed
+indigo
+ivory
+khaki
+lavender
+lavenderBlush
+lawnGreen
+lemonChiffon
+lightBlue
+lightCoral
+lightCyan
+lightGoldenrodYellow
+lightGray
+lightGreen
+lightPink
+lightSalmon
+lightSeaGreen
+lightSkyBlue
+lightSlateGray
+lightSteelBlue
+lightYellow
+ltBlue
+ltCoral
+ltCyan
+ltGoldenrodYellow
+ltGray
+ltGrey
+ltGreen
+ltPink
+ltSalmon
+ltSeaGreen
+ltSkyBlue
+ltSlateGray
+ltSlateGrey
+ltSteelBlue
+ltYellow
+lime
+limeGreen
+linen
+magenta
+maroon
+medAquamarine
+medBlue
+medOrchid
+medPurple
+medSeaGreen
+medSlateBlue
+medSpringGreen
+medTurquoise
+medVioletRed
+mediumAquamarine
+mediumBlue
+mediumOrchid
+mediumPurple
+mediumSeaGreen
+mediumSlateBlue
+mediumSpringGreen
+mediumTurquoise
+mediumVioletRed
+midnightBlue
+mintCream
+mistyRose
+moccasin
+navajoWhite
+navy
+oldLace
+olive
+oliveDrab
+orange
+orangeRed
+orchid
+paleGoldenrod
+paleGreen
+paleTurquoise
+paleVioletRed
+papayaWhip
+peachPuff
+peru
+pink
+plum
+powderBlue
+purple
+red
+rosyBrown
+royalBlue
+saddleBrown
+salmon
+sandyBrown
+seaGreen
+seaShell
+sienna
+silver
+skyBlue
+slateBlue
+slateGray
+slateGrey
+snow
+springGreen
+steelBlue
+tan
+teal
+thistle
+tomato
+transparent
+turquoise
+violet
+wheat
+white
+whiteSmoke
+yellow
+yellowGreen
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>prstClr</strong></p>
+<p>prstClr represents a preset color. This is a legacy definition of colors which is no longer currently used. A preset color is a choice from among several presets provided in older versions of Office. </p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:prstClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;black&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>The selected color is "black". Valid values for this setting, as defined by the DrawingML schema, are:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>aliceBlue
+antiqueWhite
+aqua
+aquamarine
+azure
+beige
+bisque
+black
+blanchedAlmond
+blue
+blueViolet
+brown
+burlyWood
+cadetBlue
+chartreuse
+chocolate
+coral
+cornflowerBlue
+cornsilk
+crimson
+cyan
+darkBlue
+darkCyan
+darkGray
+darkGrey
+darkGreen
+darkKhaki
+darkMagenta
+darkOliveGreen
+darkOrange
+darkOrchid
+darkRed
+darkSalmon
+darkSeaGreen
+darkSlateBlue
+darkSlateGray
+darkSlateGrey
+darkTurquoise
+darkViolet
+dkBlue
+dkCyan
+dkGoldenrod
+dkGray
+dkGrey
+dkGreen
+dkKhaki
+dkMagenta
+dkOliveGreen
+dkOrange
+dkOrchid
+dkRed
+dkSalmon
+dkSeaGreen
+dkSlateBlue
+dkSlateGray
+dkSlateGrey
+dkTurquoise
+dkViolet
+deepPink
+deepSkyBlue
+dimGray
+dimGrey
+dodgerBlue
+firebrick
+floralWhite
+forestGreen
+fuchsia
+gainsboro
+ghostWhite
+gold
+goldenrod
+gray
+grey
+green
+greenYellow
+honeydew
+hotPink
+indianRed
+indigo
+ivory
+khaki
+lavender
+lavenderBlush
+lawnGreen
+lemonChiffon
+lightBlue
+lightCoral
+lightCyan
+lightGoldenrodYellow
+lightGray
+lightGreen
+lightPink
+lightSalmon
+lightSeaGreen
+lightSkyBlue
+lightSlateGray
+lightSteelBlue
+lightYellow
+ltBlue
+ltCoral
+ltCyan
+ltGoldenrodYellow
+ltGray
+ltGrey
+ltGreen
+ltPink
+ltSalmon
+ltSeaGreen
+ltSkyBlue
+ltSlateGray
+ltSlateGrey
+ltSteelBlue
+ltYellow
+lime
+limeGreen
+linen
+magenta
+maroon
+medAquamarine
+medBlue
+medOrchid
+medPurple
+medSeaGreen
+medSlateBlue
+medSpringGreen
+medTurquoise
+medVioletRed
+mediumAquamarine
+mediumBlue
+mediumOrchid
+mediumPurple
+mediumSeaGreen
+mediumSlateBlue
+mediumSpringGreen
+mediumTurquoise
+mediumVioletRed
+midnightBlue
+mintCream
+mistyRose
+moccasin
+navajoWhite
+navy
+oldLace
+olive
+oliveDrab
+orange
+orangeRed
+orchid
+paleGoldenrod
+paleGreen
+paleTurquoise
+paleVioletRed
+papayaWhip
+peachPuff
+peru
+pink
+plum
+powderBlue
+purple
+red
+rosyBrown
+royalBlue
+saddleBrown
+salmon
+sandyBrown
+seaGreen
+seaShell
+sienna
+silver
+skyBlue
+slateBlue
+slateGray
+slateGrey
+snow
+springGreen
+steelBlue
+tan
+teal
+thistle
+tomato
+transparent
+turquoise
+violet
+wheat
+white
+whiteSmoke
+yellow
+yellowGreen
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="l483-颜色变换">L.4.8.3 颜色变换<a class="headerlink" href="#l483-颜色变换" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>颜色变换是对基础颜色的相关属性的修改。 例如，透明度是与颜色相关的属性。 颜色变换被指定为任何颜色模型标签的子标签。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;00B050&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:alpha</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;51000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:srgbClr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+</code></pre></div>
+<p>以下是允许的颜色变换以及它们所应用的变换的描述：</p>
+<ul>
+<li>tint: 产生其输入颜色的较浅版本。 10% 色调是输入颜色的 10% 与 90% 白色相结合。</li>
+<li>shade: 产生其输入颜色的较暗版本。 10% 阴影是输入颜色的 10% 与 90% 黑色的组合。</li>
+<li>comp: 产生其输入颜色的补色。 例如，红色的补色是绿色。</li>
+<li>inv: 产生其输入颜色的反色。 例如，红色 (1,0,0) 的逆是青色 (0,1,1)。</li>
+<li>gray: 考虑红、绿、蓝原色的相对强度，生成输入颜色的灰度。</li>
+<li>alpha: 产生具有指定不透明度的输入颜色，但其颜色不变。</li>
+<li>alphaOff: 产生其输入颜色的或多或少不透明的版本。 Alpha 偏移永远不会将 Alpha 增加到超过 100% 或减少到 0% 以下； 即，变换的结果将 alpha 固定在 [0%,100%] 范围内。 10% 的 Alpha 偏移会将 50% 的不透明度增加到 60%。 -10% Alpha 偏移会将 50% 的不透明度降低到 40%。</li>
+<li>alphaMod: 产生其输入颜色的或多或少不透明的版本。 Alpha 调制永远不会将 Alpha 值增加到超过 100%。 200% Alpha 调制使输入颜色的不透明度是以前的两倍。 50% Alpha 调制使输入颜色的不透明度减半。</li>
+<li>hue: 生成具有指定色调的输入颜色，但其饱和度和亮度保持不变。</li>
+<li>hueOff: 生成色调发生变化但饱和度和亮度不变的输入颜色。</li>
+<li>hueMod: 产生输入颜色，其色调按给定百分比调制。</li>
+<li>sat: 生成具有指定饱和度的输入颜色，但其色调和亮度保持不变。 通常饱和度值落在 [0%, 100%] 范围内。</li>
+<li>satOff: 生成饱和度发生变化但色调和亮度不变的输入颜色。</li>
+<li>satMod: 生成输入颜色，其饱和度按给定百分比进行调制。 50% 饱和度调制可将饱和度降低一半。 200% 饱和度调制使饱和度加倍。</li>
+<li>lum: 生成具有指定亮度的输入颜色，但其色调和饱和度保持不变。 通常，亮度值落在 [0%,100%] 范围内。</li>
+<li>lumOff: 生成亮度发生变化但色调和饱和度不变的输入颜色。</li>
+<li>lumMod: 产生输入颜色，其亮度按给定百分比调制。 50% 亮度调制会将亮度降低一半。 200% 亮度调制使亮度加倍。</li>
+<li>red: 生成具有指定红色分量的输入颜色，但其绿色和蓝色分量不变。</li>
+<li>redOff: 生成红色分量发生变化但绿色和蓝色分量不变的输入颜色。</li>
+<li>redMod: 产生输入颜色，其红色分量按给定百分比调制。 50% 红色调制将红色分量减少一半。 200% 红色调制使红色分量加倍。</li>
+<li>green: 生成具有指定绿色分量的输入颜色，但其红色和蓝色分量不变。</li>
+<li>greenOff: 产生绿色分量发生变化但红色和蓝色分量不变的输入颜色。</li>
+<li>greenMod: 产生输入颜色，其绿色分量按给定百分比调制。 50% 绿色调制将绿色成分减少一半。 200% 绿色调制使绿色分量加倍。</li>
+<li>blue: 生成具有指定蓝色分量的输入颜色，但其红色和绿色分量不变。</li>
+<li>blueOff: 生成蓝色分量发生变化但红色和绿色分量不变的输入颜色。</li>
+<li>blueMod: 产生输入颜色，其蓝色分量按给定百分比调制。 50% 蓝色调制将蓝色分量减少一半。 200% 蓝色调制使蓝色分量加倍。</li>
+<li>gamma: 产生其输入颜色的 sRGB gamma 偏移。</li>
+<li>invGamma: 产生其输入颜色的逆 sRGB gamma 偏移。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Color Transforms</strong></p>
+<p>A color transform is a modification to related properties of an underlying color. For example, transparency is a property that is related to color. Color transforms are specified as child tags off any color model's tag.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;00B050&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:alpha</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;51000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:srgbClr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+</code></pre></div>
+<p>The following are the allowed color transforms and descriptions of the transformations they apply:</p>
+<ul>
+<li>tint: Yields a lighter version of its input color. A 10% tint is 10% of the input color combined with 90% white.</li>
+<li>shade: Yields a darker version of its input color. A 10% shade is 10% of the input color combined with 90% black.</li>
+<li>comp: Yields the complement of its input color. For example, the complement of red is green.</li>
+<li>inv: Yields the inverse of its input color. For example, the inverse of red (1,0,0) is cyan (0,1,1).</li>
+<li>gray: Yields a grayscale of its input color, taking into relative intensities of the red, green, and blue primaries.</li>
+<li>alpha: Yields its input color with the specified opacity, but with its color unchanged.</li>
+<li>alphaOff: Yields a more or less opaque version of its input color. An alpha offset never increases the alpha beyond 100% or decreases below 0%; i.e., the result of the transform pins the alpha to the range of [0%,100%]. A 10% alpha offset increases a 50% opacity to 60%. A -10% alpha offset decreases a 50% opacity to 40%.</li>
+<li>alphaMod: Yields a more or less opaque version of its input color. An alpha modulate never increases the alpha beyond 100%. A 200% alpha modulate makes an input color twice as opaque as before. A 50% alpha modulate makes an input color half as opaque as before.</li>
+<li>hue: Yields the input color with the specified hue, but with its saturation and luminance unchanged.</li>
+<li>hueOff: Yields the input color with its hue shifted, but with its saturation and luminance unchanged.</li>
+<li>hueMod: Yields the input color with its hue modulated by the given percentage.</li>
+<li>sat: Yields the input color with the specified saturation, but with its hue and luminance unchanged. Typically saturation values fall in the range [0%, 100%].</li>
+<li>satOff: Yields the input color with its saturation shifted, but with its hue and luminance unchanged.</li>
+<li>satMod: Yields the input color with its saturation modulated by the given percentage. A 50% saturation modulate reduces the saturation by half. A 200% saturation modulate doubles the saturation.</li>
+<li>lum: Yields the input color with the specified luminance, but with its hue and saturation unchanged. Typically, luminance values fall in the range [0%,100%].</li>
+<li>lumOff: Yields the input color with its luminance shifted, but with its hue and saturation unchanged.</li>
+<li>lumMod: Yields the input color with its luminance modulated by the given percentage. A 50% luminance modulate reduces the luminance by half. A 200% luminance modulate doubles the luminance.</li>
+<li>red: Yields the input color with the specified red component, but with its green and blue components unchanged.</li>
+<li>redOff: Yields the input color with its red component shifted, but with its green and blue components unchanged.</li>
+<li>redMod: Yields the input color with its red component modulated by the given percentage. A 50% red modulate reduces the red component by half. A 200% red modulate doubles the red component.</li>
+<li>green: Yields the input color with the specified green component, but with its red and blue components unchanged.</li>
+<li>greenOff: Yields the input color with its green component shifted, but with its red and blue components unchanged.</li>
+<li>greenMod: Yields the input color with its green component modulated by the given percentage. A 50% green modulate reduces the green component by half. A 200% green modulate doubles the green component.</li>
+<li>blue: Yields the input color with the specified blue component, but with its red and green components unchanged.</li>
+<li>blueOff: Yields the input color with its blue component shifted, but with its red and green components unchanged.</li>
+<li>blueMod: Yields the input color with its blue component modulated by the given percentage. A 50% blue modulate reduces the blue component by half. A 200% blue modulate doubles the blue component.</li>
+<li>gamma: Yields the sRGB gamma shift of its input color.</li>
+<li>invGamma: Yields the inverse sRGB gamma shift of its input color.</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="l484-填充特性">L.4.8.4 填充特性<a class="headerlink" href="#l484-填充特性" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p><strong>Fills</strong></p>
+<p>填充有六种类型：</p>
+<ul>
+<li>No Fill</li>
+<li>Solid Fill</li>
+<li>Gradient Fill</li>
+<li>Blip Fill</li>
+<li>Pattern Fill</li>
+<li>Group Fill</li>
+</ul>
+<p>这些类型描述了所有填充的一般结构； 然而，并非所有位置都允许所有填充。 例如，在线上不允许使用图片填充(Blip Fill)和组填充(Group Fill)。</p>
+</div>
+</div>
+</div>
+<h3 id="l4841-solid-fills">L.4.8.4.1 Solid Fills<a class="headerlink" href="#l4841-solid-fills" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;5410200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2438400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2895600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;304800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FFFF00&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-1.png" /></a></p>
+<p>纯色填充使用任何颜色模型指定单一颜色</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Solid Fills</strong></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;5410200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2438400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2895600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;304800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FFFF00&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-1.png" /></a></p>
+<p>A solid fill specifies a single color, using any color model</p>
+</div>
+</div>
+</div>
+<h3 id="l4842-gradient-fills">L.4.8.4.2 Gradient Fills<a class="headerlink" href="#l4842-gradient-fills" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:gradFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;69000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:scrgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">g=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:gsLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lin</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;2700000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">scaled=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-2.png" /></a></p>
+<p>(阴影文本是渐变停止列表.)</p>
+<p>渐变填充由三个元素组成：渐变停止点列表、着色规范以及一些属性。</p>
+<p>渐变填充有两个可用属性。</p>
+<ul>
+<li>翻转指定在使用平铺区域填充较大的填充区域时如何翻转平铺区域.</li>
+<li>rotWithShape 指定形状旋转时填充是否随形状一起旋转.</li>
+</ul>
+<p>渐变停止列表是构成渐变填充的位置和颜色的列表。 位置以百分比指定。</p>
+<p>着色规范指定两种可能的渐变填充类型：<strong>线性或基于路径</strong>。 <strong>线性填充</strong>遵循由直线角度指定的直线方向。 基于<strong>路径的填充</strong>遵循明确定义的路径（例如形状、圆形或矩形）的轮廓。</p>
+<p><a class="glightbox" href="../imgs/shape-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-3.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Gradient Fills</strong></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:gradFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;69000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:scrgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">g=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:gsLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lin</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;2700000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">scaled=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-2.png" /></a></p>
+<p>(The shaded text is the Gradient Stop List.)</p>
+<p>Gradient Fills consist of three elements: a list of gradient stops, a shading specification, as well as some attributes.</p>
+<p>Two attributes are available on gradient fills.</p>
+<ul>
+<li>flip specifies how to flip a tile region when using it to fill a larger fill region.</li>
+<li>rotWithShape specifies whether the fill rotates along with a shape when the shape is rotated.</li>
+</ul>
+<p>A gradient stop list is a list of locations and colors that make up the gradient fill. Positions are specified as percentages.</p>
+<p>The shading specification specifies the two possible kinds of gradient fills: linear, or path based. A linear fill follows a straight-line direction as specified by the angle of the line. A path-based fill follows the contours of a well-defined path (such as a shape, circle, or rectangle).</p>
+<p><a class="glightbox" href="../imgs/shape-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-3.png" /></a></p>
+</div>
+</div>
+</div>
+<h3 id="l4843-blip-fills">L.4.8.4.3 Blip Fills<a class="headerlink" href="#l4843-blip-fills" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:srcRect</span><span style="color: #bbbbbb"> </span><span style="color: #687822">1=</span><span style="color: #BA2121">&quot;11000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">t=</span><span style="color: #BA2121">&quot;14000&quot;</span>
+<span style="color: #bbbbbb">               </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;28667&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-4.png" /></a></p>
+<p>BLIP 是指二进制大图像或图片。 光点填充由多个组件组成：参考(Blip Reference)、源矩形(Source Rectangle)和填充模式(Fill Mode)。</p>
+<p>Blip 引用 <code>a:blip</code> 是对 <code>blip</code> 内容本身的主要引用。 参考 ID 用作主链接，其属性允许指定 blip 的压缩级别（以下之一：电子邮件、屏幕、打印、hqprint、none）。 可以选择指定 Blip 效果来指示原始 blip 内容的修改。 光点效果(Blip Effects)有：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>alphaBiLevel
+alphaCeiling
+alphaFloor
+alphaInv
+alphaMod
+alphaModFix
+alphaRepl
+biLevel
+blur
+clrChange
+clrRepl
+duotone
+fillOverlay
+grayscl
+hsl
+lum
+tint
+</code></pre></div>
+<p>光点效果(blip effects)镜像颜色变换（有关光点效果(blip effects)的描述，请参阅颜色变换子条款中的描述）。</p>
+<p>源矩形(Source Rectangle), <code>a:srcRect</code>, 用于实现图像裁剪，表示感兴趣内容的矩形窗口。</p>
+<p>最后，可以使用两种填充模式：<strong>平铺和拉伸</strong>。 这指示当用户将图像大小调整到大于源矩形的区域时要执行的行为。 平铺“平铺(tiles)”图像，以便简单地复制图像内容，同时拉伸缩放源矩形内容以填充 <code>fillRect</code>（blip 填充形状的边界框）的边界。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Blip Fills</strong></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:srcRect</span><span style="color: #bbbbbb"> </span><span style="color: #687822">1=</span><span style="color: #BA2121">&quot;11000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">t=</span><span style="color: #BA2121">&quot;14000&quot;</span>
+<span style="color: #bbbbbb">               </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;28667&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-4.png" /></a></p>
+<p>BLIPs refer to Binary Large Image or Pictures. Blip Fills are made up of several components: a Blip Reference, a Source Rectangle, and a Fill Mode.</p>
+<p>The Blip reference, a:blip, is the main reference to the blip content itself. A reference ID serves as the main link with an attribute allowed to specify compression level of the blip (one of: email, screen, print, hqprint, none). A Blip Effect can optionally be specified to indicate a modification of the raw blip content. Blip Effects are:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>alphaBiLevel
+alphaCeiling
+alphaFloor
+alphaInv
+alphaMod
+alphaModFix
+alphaRepl
+biLevel
+blur
+clrChange
+clrRepl
+duotone
+fillOverlay
+grayscl
+hsl
+lum
+tint
+</code></pre></div>
+<p>The blip effects mirror the color transformations (see the descriptions in the color transformations subclause for descriptions of Blip Effects).</p>
+<p>A Source Rectangle, a:srcRect, is used to implement image cropping, and indicates the rectangular window of content which is of interest.</p>
+<p>Finally, two fill modes are possible, tiling, and stretching. This indicates the behavior to be performed when the user resizes an image to an area larger than the source rectangle. Tiling 'tiles' an image so that image content is simply duplicated while stretching scales the source rectangle content to fill the bounds of the fillRect (bounding box of blip filled shape). </p>
+</div>
+</div>
+</div>
+<h3 id="l4844-pattern-fills">L.4.8.4.4 Pattern Fills<a class="headerlink" href="#l4844-pattern-fills" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-5.png" /></a></p>
+<p>图案填充(Pattern Fills)是旧版 Office 11 填充，由前景色、背景色和预设图案值组成。 可能的模式值为：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>pct5
+pct10
+pct20
+pct25
+pct30
+pct40
+pct50
+pct60
+pct70
+pct75
+pct80
+pct90
+horz
+vert
+ltHorz
+ltVert
+dkHorz
+dkVert
+narHorz
+narVert
+dashHorz
+dashVert
+cross
+dnDiag
+upDiag
+ltDnDiag
+ltUpDiag
+dkDnDiag
+dkUpDiag
+wdDnDiag
+wdUpDiag
+dashDnDiag
+dashUpDiag
+diagCross
+smCheck
+lgCheck
+smGrid
+lgGrid
+dotGrid
+smConfetti
+lgConfetti
+horzBrick
+diagBrick
+solidDmnd
+openDmnd
+dotDmnd
+plaid
+sphere
+weave
+divot
+shingle
+wave
+trellis
+zigZag
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Pattern Fills</strong></p>
+<p><a class="glightbox" href="../imgs/shape-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-5.png" /></a></p>
+<p>Pattern Fills are legacy Office 11 fills which consist of a Foreground Color, a Background Color and a preset pattern value. Possible pattern values are:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>pct5
+pct10
+pct20
+pct25
+pct30
+pct40
+pct50
+pct60
+pct70
+pct75
+pct80
+pct90
+horz
+vert
+ltHorz
+ltVert
+dkHorz
+dkVert
+narHorz
+narVert
+dashHorz
+dashVert
+cross
+dnDiag
+upDiag
+ltDnDiag
+ltUpDiag
+dkDnDiag
+dkUpDiag
+wdDnDiag
+wdUpDiag
+dashDnDiag
+dashUpDiag
+diagCross
+smCheck
+lgCheck
+smGrid
+lgGrid
+dotGrid
+smConfetti
+lgConfetti
+horzBrick
+diagBrick
+solidDmnd
+openDmnd
+dotDmnd
+plaid
+sphere
+weave
+divot
+shingle
+wave
+trellis
+zigZag
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4845-group-fills">L.4.8.4.5 Group Fills<a class="headerlink" href="#l4845-group-fills" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>当对象组合在一起时，组填充是一种方便的结构，用于指示任何单个元素的填充属性继承自父组的填充属性。 </p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:grpSp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvGrpSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;00B050&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:grpFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>…<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:grpFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:&gt;&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:grpSp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-6.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Group Fills</strong></p>
+<p>When objects are grouped together, a group fill is a convenient structure for indicating that the fill properties of any individual element inherits from the fill properties of parent group. </p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:grpSp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvGrpSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;00B050&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:grpFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>…<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:grpFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;p:style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:style&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:&gt;&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:grpSp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-6.png" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="l485-线条特性">L.4.8.5 线条特性<a class="headerlink" href="#l485-线条特性" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>虽然很明显，线条特性 <code>a:ln</code> 用于表示线条的特性，但可能不太明显的是该结构可以出现的位置。 线条不仅仅是线条——几乎任何对象都可以具有线条特性——通常指的是形状、图片或文本上可能存在的轮廓。 在这种情况下使用的线还产生我们希望保留的附加特征 - 就像线段相遇（即线连接）时发生的情况一样。 因此，在理解本节有关线特性的内容时，重要的是要可视化两种可能的情况——单个线段和该线段的特性，以及多个线段的情况（例如，自动形状的轮廓）。 通过考虑这两种情况，大多数特性的含义变得直观清晰。</p>
+<p>线条特性由几个部分组成：<strong>线条填充特性、线条虚线特性、线条连接特性、头/尾特性以及一些属性。</strong></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Line Properties</strong></p>
+<p>While it is obvious that line properties, a:ln are used to represent properties for lines, what might be less obvious is where this structure can appear. Lines aren't just for lines-- just about any object can have a line property-- usually referring to the outlines that are possible on shapes, pictures, or text. Lines used in this context also yield additional characteristics we wish to persist-- like what happens when line segments meet (i.e., line joins). So when understanding this section on line properties, it's important to visualize two possible cases-- a single line segment and the properties of that segment, and the case of multiple line segments (e.g., an outline of an autoshape). By considering both cases, the meaning of most properties becomes intuitively clear.</p>
+<p>Line properties consist of several sections: line fill properties, line dash properties, line join properties, head/tail properties, as well as a few attributes.</p>
+</div>
+</div>
+</div>
+<h3 id="l4851-线条填充特性">L.4.8.5.1 线条填充特性<a class="headerlink" href="#l4851-线条填充特性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>线填充特性是一般填充特性的真子集。 可以使用以下之一：<code>noFill</code>、<code>solidFill</code>、<code>gradFill</code> 或 <code>pattFill</code>。 线条填充属性不允许使用点填充(Blip fills)和组填充(group fills)。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Line Fill Properties</strong></p>
+<p>Line fill properties are a proper subset of general fill properties. One of the following can be used: noFill, solidFill, gradFill, or pattFill. Blip fills and group fills are not permitted for line fill properties.</p>
+</div>
+</div>
+</div>
+<h3 id="l4852-线条虚线特性">L.4.8.5.2 线条虚线特性<a class="headerlink" href="#l4852-线条虚线特性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>线条虚线特性可以是预设之一：<code>a:prstDash</code>，也可以是自定义虚线方案：<code>a:custDash</code>。 对于预设，可以使用以下选项：</p>
+<ul>
+<li><strong>solid</strong>: Solid (continuous) pen.</li>
+<li><strong>dot</strong>: Dot style. [- - - - - - - - - - - ]</li>
+<li><strong>dash</strong>: Short dash style. [---- ---- ---- ---- ---- ---- ]</li>
+<li><strong>lgDash</strong>: Long dash style. [-------- -------- -------- -------- ]</li>
+<li><strong>dashDot</strong>" Short dash followed by dot. [---- - ---- - ---- - ---- - ]</li>
+<li><strong>lgDashDot</strong>: Long dash followed by dot. [-------- - -------- - -------- - ]</li>
+<li><strong>lgDashDotDot</strong>: Long dash followed by two dots. [-------- - - -------- - - ]</li>
+<li><strong>sysDash</strong>: System short dash style (PS_DASH). [--- --- --- --- --- --- --- --- --- --- --- ]</li>
+<li><strong>sysDot</strong>: System dot style (PS_DOT). [- - - - - - - - - - - - - - - - - - - - - - ]</li>
+<li><strong>sysDashDot</strong>: System short dash and one dot (PS_DASHDOT) [--- - --- - --- - --- - --- - --- - --- - --- - ]</li>
+<li><strong>sysDashDotDot</strong>: System short dash and two dots (PS_DASHDOTDOT) [--- - - --- - - --- - - --- - - --- - - --- - - ]</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Line Dash Properties</strong></p>
+<p>Line Dash properties can be either one of the presets, a:prstDash, or a custom dashing scheme, a:custDash. For the presets, the following options are available:</p>
+<ul>
+<li>solid: Solid (continuous) pen.</li>
+<li>dot: Dot style. [- - - - - - - - - - - ]</li>
+<li>dash: Short dash style. [---- ---- ---- ---- ---- ---- ]</li>
+<li>lgDash: Long dash style. [-------- -------- -------- -------- ]</li>
+<li>dashDot" Short dash followed by dot. [---- - ---- - ---- - ---- - ]</li>
+<li>lgDashDot: Long dash followed by dot. [-------- - -------- - -------- - ]</li>
+<li>lgDashDotDot: Long dash followed by two dots. [-------- - - -------- - - ]</li>
+<li>sysDash: System short dash style (PS_DASH). [--- --- --- --- --- --- --- --- --- --- --- ]</li>
+<li>sysDot: System dot style (PS_DOT). [- - - - - - - - - - - - - - - - - - - - - - ]</li>
+<li>sysDashDot: System short dash and one dot (PS_DASHDOT) [--- - --- - --- - --- - --- - --- - --- - --- - ]</li>
+<li>sysDashDotDot: System short dash and two dots (PS_DASHDOTDOT) [--- - - --- - - --- - - --- - - --- - - --- - - ]</li>
+</ul>
+</div>
+</div>
+</div>
+<h4 id="l48521-自定义虚线">L.4.8.5.2.1 自定义虚线<a class="headerlink" href="#l48521-自定义虚线" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>自定义虚线允许完全灵活地表达任何虚线方案。 由于自定义虚线的表达方式，自定义虚线也称为虚线停止列表，a:ds。 列表的元素指定两个属性：d 表示虚线相对于线宽的长度，sp 表示空格相对于线宽的长度。 可以将任意数量的元素组合成虚线停止列表，以实现表达虚线方案(dashing schemes)的完全通用性。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Custom Dashes</strong></p>
+<p>Custom dashes allow full flexibility in expressing any dashing scheme. Custom dashes are also known as dash stop lists, a:ds, due to the way the custom dashes are expressed. An element of the list specifies two attributes: d for the length of the dash relative to line width, and sp for length of the space relative to line width. Any number of elements can be combined into a dash stop list for full generality in expressing dashing schemes.</p>
+</div>
+</div>
+</div>
+<h3 id="l4853-线条连接特性">L.4.8.5.3 线条连接特性<a class="headerlink" href="#l4853-线条连接特性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;38100&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cap=</span><span style="color: #BA2121">&quot;sq&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cmpd=</span><span style="color: #BA2121">&quot;thickThin&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:prstDash</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;sysDot&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bevel/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+</code></pre></div>
+<p>线连接特性用于表达线段相交时所发生情况的视觉外观。 它们可以是圆形、斜角或斜接的。 请注意以下矩形的角，它们说明了线连接特性的效果。</p>
+<p><a class="glightbox" href="../imgs/shape-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-7.png" /></a></p>
+<p>线连接特性的唯一属性是 <code>lim</code>。 该属性限制了线可以延伸以形成连接的数量。 通常，这种情况相对较少发生，但在几乎平行线的情况下，此属性就会发挥作用。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Line Join Properties</strong></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;38100&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cap=</span><span style="color: #BA2121">&quot;sq&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cmpd=</span><span style="color: #BA2121">&quot;thickThin&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:prstDash</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;sysDot&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bevel/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+</code></pre></div>
+<p>Line join properties are for expressing the visual appearance of what happens when line segments meet. They can be round, beveled, or mitered. Notice the corners of the following rectangles, which illustrate the effect line join properties have.</p>
+<p><a class="glightbox" href="../imgs/shape-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-7.png" /></a></p>
+<p>The only attribute of line join properties is lim. This attribute limits the amount by which lines can be extended to form a join. Normally, this is a relatively infrequent occurrence, but in the case of nearly parallel lines, this attribute comes into play.</p>
+</div>
+</div>
+</div>
+<h3 id="l4854-头尾特性">L.4.8.5.4 头/尾特性<a class="headerlink" href="#l4854-头尾特性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>头/尾端特性指定线的头或尾是否有任何特殊附件。 所有参数均在属性中指定：<code>type</code>、<code>w</code>（线端宽度与线宽的比值）和 <code>len</code>（线端相对于线宽的长度）。 默认情况下，不应用任何头/尾端属性。 类型可以是以下之一：无(none)、三角形(triangle)、隐形(stealth)、菱形(diamond)、椭圆形(oval)、箭头(arrow)。 <code>w</code> 和<code>len</code>可以是<code>sm</code>、<code>med</code>和<code>lg</code>之一，分别对应小、中、大。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;25400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cap=</span><span style="color: #BA2121">&quot;rnd&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cmpd=</span><span style="color: #BA2121">&quot;sng&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;4F81BD&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:prstDash</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;solid&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:tailEnd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;arrow&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;lg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">len=</span><span style="color: #BA2121">&quot;lg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-8.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Head/Tail End Properties</strong></p>
+<p>Head/Tail End properties specify whether there are any special attachments to the head or the tail of a line. All parameters are specified in attributes: a type, a w (width of line end to width of line), and a len (length of the end relative to the line width). By default, no head/tail end properties are applied. The type can be one of: none, triangle, stealth, diamond, oval, arrow. w and len can be one of sm, med and lg corresponding to small, medium, and large respectively.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;25400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cap=</span><span style="color: #BA2121">&quot;rnd&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cmpd=</span><span style="color: #BA2121">&quot;sng&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;4F81BD&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:prstDash</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;solid&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:tailEnd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;arrow&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;lg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">len=</span><span style="color: #BA2121">&quot;lg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shape-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-8.png" /></a></p>
+</div>
+</div>
+</div>
+<h3 id="l4855-线条属性">L.4.8.5.5 线条属性<a class="headerlink" href="#l4855-线条属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>线特性 <code>a:ln</code> 有几个属性： <code>w</code> 指定线宽。 <code>cap</code> 指定线端是否为圆形(round)（值 <code>rnd</code>）、方形(square)（<code>sq</code>）或平坦(flat)（<code>flat</code>）。</p>
+<p><a class="glightbox" href="../imgs/shape-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-9.png" /></a></p>
+<p><code>cmpd</code> 指定复合线类型。 其允许值如下所示：</p>
+<p><a class="glightbox" href="../imgs/shape-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-10.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Line Attributes</strong></p>
+<p>Line Properties, a:ln, takes several attributes: w specifies the line width. cap specifies whether the line ends are round (value rnd), square (sq), or flat (flat).</p>
+<p><a class="glightbox" href="../imgs/shape-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-9.png" /></a></p>
+<p>cmpd specifies a compound line type. Its permitted values are shown below:</p>
+<p><a class="glightbox" href="../imgs/shape-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-10.png" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="l486-效果">L.4.8.6 效果<a class="headerlink" href="#l486-效果" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>阴影最自然地应用于形状，但与填充特性和线条特性一样，它们也可以应用于形状、图片和文本。 效果有两种表示方式：通过阴影列表 <code>a:effectLst</code> 或阴影容器 <code>a:effectDag</code>。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Effects</strong></p>
+<p>Effects are most naturally applied to shapes, but like fill properties and line properties, they can apply to shapes, pictures, and text. Effects are represented two ways: via an Effect List, a:effectLst, or an effects container, a:effectDag.</p>
+</div>
+</div>
+</div>
+<h3 id="l4861-效果列表">L.4.8.6.1 效果列表<a class="headerlink" href="#l4861-效果列表" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-11.png" /></a></p>
+<p>效果列表由一个或多个可以依次应用的原始效果组成。 原语(primitives)是：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Blur
+fillOverlay
+glow
+innerShdw
+outerShdw
+prstShdw
+reflection
+softEdge
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Blur</strong></p>
+<p><a class="glightbox" href="../imgs/shape-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-11.png" /></a></p>
+<p>An effect list is made up of one or more primitive effects that can be applied one after another. The primitives are:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Blur
+fillOverlay
+glow
+innerShdw
+outerShdw
+prstShdw
+reflection
+softEdge
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4862-模糊">L.4.8.6.2 模糊<a class="headerlink" href="#l4862-模糊" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>模糊会模糊所有颜色通道，包括 Alpha。 这里应用两个属性，<code>rad</code>（模糊半径）和<code>grow</code>（布尔值）。 增长指定边界是否应因模糊而增长。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Blur</strong></p>
+<p>Blur blurs all color channels, including alpha. Two attributes, rad (radius of blur) and grow (boolean), apply here. grow specifies if the bounds should grow as a result of the blurring.</p>
+</div>
+</div>
+</div>
+<h3 id="l4863-内部阴影">L.4.8.6.3 内部阴影<a class="headerlink" href="#l4863-内部阴影" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../imgs/shape-12.png" /></a></p>
+<p>内部阴影包含颜色选择以及三个属性：</p>
+<ul>
+<li><strong>blurRad</strong>: 模糊半径</li>
+<li><strong>dist</strong>: 阴影偏移多远</li>
+<li><strong>dir</strong>: 偏移阴影的方向</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Blur</strong></p>
+<p><a class="glightbox" href="../imgs/shape-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alt text" src="../imgs/shape-12.png" /></a></p>
+<p>Inner Shadows contain a color choice, as well as three attributes:</p>
+<ul>
+<li>blurRad: blur radius</li>
+<li>dist: how far to offset the shadow</li>
+<li>dir: direction to offset the shadow</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4864-外部阴影">L.4.8.6.4 外部阴影<a class="headerlink" href="#l4864-外部阴影" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-13.png" /></a></p>
+<p>外部阴影包含颜色选择以及多个属性：</p>
+<ul>
+<li>blurRad: 模糊半径</li>
+<li>dist: 阴影偏移多远</li>
+<li>dir: 偏移阴影的方向</li>
+<li>sx, sy: 水平/垂直比例因子</li>
+<li>kx, ky: 水平/垂直倾斜角度</li>
+<li>algn: 阴影对齐。 首先进行对齐，并有效地设置缩放、倾斜和偏移的原点</li>
+<li>rotWithShape: (boolean) 随着形状旋转阴影</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Outer Shadow</strong></p>
+<p><a class="glightbox" href="../imgs/shape-13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-13.png" /></a></p>
+<p>Outer shadows contain a color choice as well as several attributes:</p>
+<ul>
+<li>blurRad: blur radius</li>
+<li>dist: how far to offset the shadow</li>
+<li>dir: direction to offset the shadow</li>
+<li>sx, sy: horizontal/vertical scale factors</li>
+<li>kx, ky: horizontal/vertical skew angles</li>
+<li>algn: shadow alignment. Alignment happens first and effectively sets the origin for scale, skew, and offset</li>
+<li>rotWithShape: (boolean) Rotate shadow with shape</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4865-预设阴影">L.4.8.6.5 预设阴影<a class="headerlink" href="#l4865-预设阴影" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>预设阴影由颜色选择和预设阴影组成：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>shdw1
+shdw2
+shdw3
+shdw4
+shdw5
+shdw6
+shdw7
+shdw8
+shdw9
+shdw10
+shdw11
+shdw12
+shdw13
+shdw14
+shdw15
+shdw16
+shdw17
+shdw18
+shdw19
+shdw20
+</code></pre></div>
+<p>预设阴影的属性是：</p>
+<ul>
+<li><strong>dist</strong>: 阴影偏移多远</li>
+<li><strong>dir</strong>: 偏移阴影的方向</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Preset Shadows</strong></p>
+<p>Preset shadows consist of a color choice, and a preset shadow:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>shdw1
+shdw2
+shdw3
+shdw4
+shdw5
+shdw6
+shdw7
+shdw8
+shdw9
+shdw10
+shdw11
+shdw12
+shdw13
+shdw14
+shdw15
+shdw16
+shdw17
+shdw18
+shdw19
+shdw20
+</code></pre></div>
+<p>The attributes for Preset Shadows are:</p>
+<ul>
+<li>dist: how far to offset the shadow</li>
+<li>dir: direction to offset the shadow</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4866-反射效果">L.4.8.6.6 反射效果<a class="headerlink" href="#l4866-反射效果" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-14.png" /></a></p>
+<p>反射完全通过属性来表示：</p>
+<ul>
+<li><strong>blurRad</strong>: 模糊半径</li>
+<li><strong>stA</strong>: （Start Alpha）开始反射不透明度</li>
+<li><strong>stPos</strong>: 沿着起始 alpha 值的梯度斜坡的起始位置</li>
+<li><strong>endA</strong>: (End Alpha) 结束反射不透明度</li>
+<li><strong>endPos</strong>: 沿梯度的结束位置，结束 alpha 值的斜坡</li>
+<li><strong>dist</strong>: 抵消反射多远</li>
+<li><strong>dir</strong>: 偏移反射的方向</li>
+<li><strong>fadeDir</strong>: alpha 梯度的方向，相对于形状本身的斜坡</li>
+<li><strong>sx, sy</strong>: 水平/垂直比例因子</li>
+<li><strong>kx, ky</strong>: 水平/垂直倾斜角度</li>
+<li><strong>algn</strong>: 反射对准</li>
+<li><strong>rotWithShape</strong>: (boolean) 随着形状旋转反射</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Reflection Effects</strong></p>
+<p><a class="glightbox" href="../imgs/shape-14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-14.png" /></a></p>
+<p>Reflections are represented entirely through attributes:</p>
+<ul>
+<li>blurRad: Blur Radius</li>
+<li>stA: (Start Alpha) starting reflection opacity</li>
+<li>stPos: start position along gradient ramp of start alpha value</li>
+<li>endA: (End Alpha) ending reflection opacity</li>
+<li>endPos: end position along gradient, ramp of end alpha value</li>
+<li>dist: how far to offset reflection</li>
+<li>dir: Direction to offset reflection</li>
+<li>fadeDir: direction of alpha gradient, ramp relative to shape itself</li>
+<li>sx, sy: horizontal/vertical scale factors</li>
+<li>kx, ky: horizontal/vertical skew angles</li>
+<li>algn: reflection alignment</li>
+<li>rotWithShape: (boolean) rotate reflection with shape</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4867-软边缘效果">L.4.8.6.7 软边缘效果<a class="headerlink" href="#l4867-软边缘效果" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-15.png" /></a></p>
+<p>软边缘根据指定的模糊半径 <code>rad</code> 模糊所应用对象的边缘。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Soft Edge Effects</strong></p>
+<p><a class="glightbox" href="../imgs/shape-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-15.png" /></a></p>
+<p>Soft Edge blurs the edges of the applied object subject to the specified blur radius rad.</p>
+</div>
+</div>
+</div>
+<h3 id="l4868-发光效果">L.4.8.6.8 发光效果<a class="headerlink" href="#l4868-发光效果" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">中文</label><label for="__tabbed_31_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a class="glightbox" href="../imgs/shape-16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-16.png" /></a></p>
+<p>发光效果与软边缘效果非常相似，但不同之处在于，除了 <code>rad</code> 之外，它还允许颜色特性。 基本上，发光是一种软边缘效果，除了使用指定的颜色而不是对象的颜色。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Glow Effects</strong></p>
+<p><a class="glightbox" href="../imgs/shape-16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shape-16.png" /></a></p>
+<p>A glow effect is very similar to a soft edge effect, but differs in that it permits a color specification in addition to rad. Basically, a glow is a soft edge effect, except with the color specified used instead of the object's color.</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

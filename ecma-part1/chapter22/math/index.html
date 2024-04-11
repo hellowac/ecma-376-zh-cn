@@ -1,0 +1,6034 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../chapter21/diagram/">
+      
+      
+        <link rel="next" href="../extendedproperties/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>22.1 Math - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#221-math" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              22.1 Math
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_23" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_23_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_23">
+            <span class="md-nav__icon md-icon"></span>
+            22. Shared MLs 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    22.1 Math
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    22.1 Math
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#目录" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2212-elements" class="md-nav__link">
+    22.1.2 Elements
+  </a>
+  
+    <nav class="md-nav" aria-label="22.1.2 Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22121-acc-accent" class="md-nav__link">
+    22.1.2.1 acc (Accent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22122-accpr-accent-properties" class="md-nav__link">
+    22.1.2.2 accPr (Accent Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22123-aln-alignment" class="md-nav__link">
+    22.1.2.3 aln (Alignment)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22124-alnscr-align-scripts" class="md-nav__link">
+    22.1.2.4 alnScr (Align Scripts)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22125-argpr-argument-properties" class="md-nav__link">
+    22.1.2.5 argPr (Argument Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22126-argsz-argument-size" class="md-nav__link">
+    22.1.2.6 argSz (Argument Size)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22127-bar-bar" class="md-nav__link">
+    22.1.2.7 bar (Bar)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22128-barpr-bar-properties" class="md-nav__link">
+    22.1.2.8 barPr (Bar Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22129-basejc-matrix-base-justification" class="md-nav__link">
+    22.1.2.9 baseJc (Matrix Base Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221210-begchr-delimiter-beginning-character" class="md-nav__link">
+    22.1.2.10 begChr (Delimiter Beginning Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221211-borderbox-border-box-object" class="md-nav__link">
+    22.1.2.11 borderBox (Border-Box Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221212-borderboxpr-border-box-properties" class="md-nav__link">
+    22.1.2.12 borderBoxPr (Border-Box Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221213-box-box-object" class="md-nav__link">
+    22.1.2.13 box (Box Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221214-boxpr-box-properties" class="md-nav__link">
+    22.1.2.14 boxPr (Box Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221215-brk-break" class="md-nav__link">
+    22.1.2.15 brk (Break)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221216-brkbin-break-on-binary-operators" class="md-nav__link">
+    22.1.2.16 brkBin (Break on Binary Operators)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221217-brkbinsub-break-on-binary-subtraction" class="md-nav__link">
+    22.1.2.17 brkBinSub (Break on Binary Subtraction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221218-cgp-matrix-column-gap" class="md-nav__link">
+    22.1.2.18 cGp (Matrix Column Gap)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221219-cgprule-matrix-column-gap-rule" class="md-nav__link">
+    22.1.2.19 cGpRule (Matrix Column Gap Rule)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221220-chr-character" class="md-nav__link">
+    22.1.2.20 chr (Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221221-count-matrix-column-count" class="md-nav__link">
+    22.1.2.21 count (Matrix Column Count)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221222-csp-minimum-matrix-column-width" class="md-nav__link">
+    22.1.2.22 cSp (Minimum Matrix Column Width)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221223-ctrlpr-control-properties" class="md-nav__link">
+    22.1.2.23 ctrlPr (Control Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221224-d-delimiter-object" class="md-nav__link">
+    22.1.2.24 d (Delimiter Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221225-defjc-default-justification" class="md-nav__link">
+    22.1.2.25 defJc (Default Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221226-deg-degree" class="md-nav__link">
+    22.1.2.26 deg (Degree)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221227-deghide-hide-degree" class="md-nav__link">
+    22.1.2.27 degHide (Hide Degree)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221228-den-denominator" class="md-nav__link">
+    22.1.2.28 den (Denominator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221229-diff-differential" class="md-nav__link">
+    22.1.2.29 diff (Differential)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221230-dispdef-use-display-math-defaults" class="md-nav__link">
+    22.1.2.30 dispDef (Use Display Math Defaults)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221231-dpr-delimiter-properties" class="md-nav__link">
+    22.1.2.31 dPr (Delimiter Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221232-e-element-argument" class="md-nav__link">
+    22.1.2.32 e (Element (Argument))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221233-endchr-delimiter-ending-character" class="md-nav__link">
+    22.1.2.33 endChr (Delimiter Ending Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221234-eqarr-array-object" class="md-nav__link">
+    22.1.2.34 eqArr (Array Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221235-eqarrpr-array-properties" class="md-nav__link">
+    22.1.2.35 eqArrPr (Array Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221236-f-fraction-object" class="md-nav__link">
+    22.1.2.36 f (Fraction Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221237-fname-function-name" class="md-nav__link">
+    22.1.2.37 fName (Function Name)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221238-fpr-fraction-properties" class="md-nav__link">
+    22.1.2.38 fPr (Fraction Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221239-func-function-apply-object" class="md-nav__link">
+    22.1.2.39 func (Function Apply Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221240-funcpr-function-properties" class="md-nav__link">
+    22.1.2.40 funcPr (Function Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221241-groupchr-group-character-object" class="md-nav__link">
+    22.1.2.41 groupChr (Group-Character Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221242-groupchrpr-group-character-properties" class="md-nav__link">
+    22.1.2.42 groupChrPr (Group-Character Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221243-grow-n-ary-grow" class="md-nav__link">
+    22.1.2.43 grow (n-ary Grow)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221244-hidebot-hide-bottom-edge" class="md-nav__link">
+    22.1.2.44 hideBot (Hide Bottom Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221245-hideleft-hide-left-edge" class="md-nav__link">
+    22.1.2.45 hideLeft (Hide Left Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221246-hideright-hide-right-edge" class="md-nav__link">
+    22.1.2.46 hideRight (Hide Right Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221247-hidetop-hide-top-edge" class="md-nav__link">
+    22.1.2.47 hideTop (Hide Top Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221248-intersp-inter-equation-spacing" class="md-nav__link">
+    22.1.2.48 interSp (Inter-Equation Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221249-intlim-integral-limit-locations" class="md-nav__link">
+    22.1.2.49 intLim (Integral Limit Locations)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221250-intrasp-intra-equation-spacing" class="md-nav__link">
+    22.1.2.50 intraSp (Intra-Equation Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221251-jc-justification" class="md-nav__link">
+    22.1.2.51 jc (Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221252-lim-limit" class="md-nav__link">
+    22.1.2.52 lim (Limit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221253-limloc-n-ary-limit-location" class="md-nav__link">
+    22.1.2.53 limLoc (n-ary Limit Location)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221254-limlow-lower-limit-object" class="md-nav__link">
+    22.1.2.54 limLow (Lower-Limit Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221255-limlowpr-lower-limit-properties" class="md-nav__link">
+    22.1.2.55 limLowPr (Lower-Limit Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221256-limupp-upper-limit-object" class="md-nav__link">
+    22.1.2.56 limUpp (Upper-Limit Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221257-limupppr-upper-limit-properties" class="md-nav__link">
+    22.1.2.57 limUppPr (Upper-Limit Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221258-lit-literal" class="md-nav__link">
+    22.1.2.58 lit (Literal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221259-lmargin-left-margin" class="md-nav__link">
+    22.1.2.59 lMargin (Left Margin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221260-m-matrix-object" class="md-nav__link">
+    22.1.2.60 m (Matrix Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221261-mathfont-math-font" class="md-nav__link">
+    22.1.2.61 mathFont (Math Font)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221262-mathpr-math-properties" class="md-nav__link">
+    22.1.2.62 mathPr (Math Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221263-maxdist-maximum-distribution" class="md-nav__link">
+    22.1.2.63 maxDist (Maximum Distribution)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221264-mc-matrix-column" class="md-nav__link">
+    22.1.2.64 mc (Matrix Column)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221265-mcjc-matrix-column-justification" class="md-nav__link">
+    22.1.2.65 mcJc (Matrix Column Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221266-mcpr-matrix-column-properties" class="md-nav__link">
+    22.1.2.66 mcPr (Matrix Column Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221267-mcs-matrix-columns" class="md-nav__link">
+    22.1.2.67 mcs (Matrix Columns)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221268-mpr-matrix-properties" class="md-nav__link">
+    22.1.2.68 mPr (Matrix Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221269-mr-matrix-row" class="md-nav__link">
+    22.1.2.69 mr (Matrix Row)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221270-nary-n-ary-operator-object" class="md-nav__link">
+    22.1.2.70 nary (n-ary Operator Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221271-narylim-n-ary-limit-location" class="md-nav__link">
+    22.1.2.71 naryLim (n-ary Limit Location)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221272-narypr-n-ary-properties" class="md-nav__link">
+    22.1.2.72 naryPr (n-ary Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221273-nobreak-no-break" class="md-nav__link">
+    22.1.2.73 noBreak (No Break)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221274-nor-normal-text" class="md-nav__link">
+    22.1.2.74 nor (Normal Text)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221275-num-numerator" class="md-nav__link">
+    22.1.2.75 num (Numerator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221276-objdist-object-distribution" class="md-nav__link">
+    22.1.2.76 objDist (Object Distribution)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221277-omath-office-math" class="md-nav__link">
+    22.1.2.77 oMath (Office Math)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221278-omathpara-office-math-paragraph" class="md-nav__link">
+    22.1.2.78 oMathPara (Office Math Paragraph)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221279-omathparapr-office-math-paragraph-properties" class="md-nav__link">
+    22.1.2.79 oMathParaPr (Office Math Paragraph Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221280-opemu-operator-emulator" class="md-nav__link">
+    22.1.2.80 opEmu (Operator Emulator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221281-phant-phantom-object" class="md-nav__link">
+    22.1.2.81 phant (Phantom Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221282-phantpr-phantom-properties" class="md-nav__link">
+    22.1.2.82 phantPr (Phantom Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221283-plchide-hide-placeholders-matrix" class="md-nav__link">
+    22.1.2.83 plcHide (Hide Placeholders (Matrix))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221284-pos-position" class="md-nav__link">
+    22.1.2.84 pos (Position)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221285-postsp-post-paragraph-spacing" class="md-nav__link">
+    22.1.2.85 postSp (Post-Paragraph Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221286-presp-pre-paragraph-spacing" class="md-nav__link">
+    22.1.2.86 preSp (Pre-Paragraph Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221287-r-run" class="md-nav__link">
+    22.1.2.87 r (Run)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221288-rad-radical-object" class="md-nav__link">
+    22.1.2.88 rad (Radical Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221289-radpr-radical-properties" class="md-nav__link">
+    22.1.2.89 radPr (Radical Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221290-rmargin-right-margin" class="md-nav__link">
+    22.1.2.90 rMargin (Right Margin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221291-rpr-run-properties" class="md-nav__link">
+    22.1.2.91 rPr (Run Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221292-rsp-row-spacing-array" class="md-nav__link">
+    22.1.2.92 rSp (Row Spacing (Array))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221293-rsprule-row-spacing-rule" class="md-nav__link">
+    22.1.2.93 rSpRule (Row Spacing Rule)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221294-scr-script" class="md-nav__link">
+    22.1.2.94 scr (Script)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221295-sepchr-delimiter-separator-character" class="md-nav__link">
+    22.1.2.95 sepChr (Delimiter Separator Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221296-show-phantom-show" class="md-nav__link">
+    22.1.2.96 show (Phantom Show)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221297-shp-shape-delimiters" class="md-nav__link">
+    22.1.2.97 shp (Shape (Delimiters))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221298-smallfrac-small-fraction" class="md-nav__link">
+    22.1.2.98 smallFrac (Small Fraction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221299-spre-pre-sub-superscript-object" class="md-nav__link">
+    22.1.2.99 sPre (Pre-Sub-Superscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212100-sprepr-pre-sub-superscript-properties" class="md-nav__link">
+    22.1.2.100 sPrePr (Pre-Sub-Superscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212101-ssub-subscript-object" class="md-nav__link">
+    22.1.2.101 sSub (Subscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212102-ssubpr-subscript-properties" class="md-nav__link">
+    22.1.2.102 sSubPr (Subscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212103-ssubsup-sub-superscript-object" class="md-nav__link">
+    22.1.2.103 sSubSup (Sub-Superscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212104-ssubsuppr-sub-superscript-properties" class="md-nav__link">
+    22.1.2.104 sSubSupPr (Sub-Superscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212105-ssup-superscript-object" class="md-nav__link">
+    22.1.2.105 sSup (Superscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212106-ssuppr-superscript-properties" class="md-nav__link">
+    22.1.2.106 sSupPr (Superscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212107-strikebltr-border-box-strikethrough-bottom-left-to-top-right" class="md-nav__link">
+    22.1.2.107 strikeBLTR (Border Box Strikethrough Bottom-Left to Top-Right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212108-strikeh-border-box-strikethrough-horizontal" class="md-nav__link">
+    22.1.2.108 strikeH (Border Box Strikethrough Horizontal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212109-striketlbr-border-box-strikethrough-top-left-to-bottom-right" class="md-nav__link">
+    22.1.2.109 strikeTLBR (Border Box Strikethrough Top-Left to Bottom-Right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212110-strikev-border-box-strikethrough-vertical" class="md-nav__link">
+    22.1.2.110 strikeV (Border Box Strikethrough Vertical)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212111-sty-style" class="md-nav__link">
+    22.1.2.111 sty (style)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212112-sub-subscript-pre-sub-superscript" class="md-nav__link">
+    22.1.2.112 sub (Subscript (Pre-Sub-Superscript))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212113-subhide-hide-subscript-n-ary" class="md-nav__link">
+    22.1.2.113 subHide (Hide Subscript (n-ary))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212114-sup-superscript-superscript-object" class="md-nav__link">
+    22.1.2.114 sup (Superscript (Superscript object))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212115-suphide-hide-superscript-n-ary" class="md-nav__link">
+    22.1.2.115 supHide (Hide Superscript (n-ary))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212116-t-text" class="md-nav__link">
+    22.1.2.116 t (Text)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212117-transp-transparent-phantom" class="md-nav__link">
+    22.1.2.117 transp (Transparent (Phantom))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212118-type-fraction-type" class="md-nav__link">
+    22.1.2.118 type (Fraction type)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212119-vertjc-vertical-justification" class="md-nav__link">
+    22.1.2.119 vertJc (Vertical Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212120-wrapindent-wrap-indent" class="md-nav__link">
+    22.1.2.120 wrapIndent (Wrap Indent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212121-wrapright-wrap-right" class="md-nav__link">
+    22.1.2.121 wrapRight (Wrap Right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212122-zeroasc-phantom-zero-ascent" class="md-nav__link">
+    22.1.2.122 zeroAsc (Phantom Zero Ascent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212123-zerodesc-phantom-zero-descent" class="md-nav__link">
+    22.1.2.123 zeroDesc (Phantom Zero Descent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212124-zerowid-phantom-zero-width" class="md-nav__link">
+    22.1.2.124 zeroWid (Phantom Zero Width)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2213-simple-types" class="md-nav__link">
+    22.1.3 Simple Types
+  </a>
+  
+    <nav class="md-nav" aria-label="22.1.3 Simple Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22131-st_breakbin-break-binary-operators" class="md-nav__link">
+    22.1.3.1 ST_BreakBin (Break Binary Operators)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22132-st_breakbinsub-break-on-binary-subtraction" class="md-nav__link">
+    22.1.3.2 ST_BreakBinSub (Break on Binary Subtraction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22133-st_char-character" class="md-nav__link">
+    22.1.3.3 ST_Char (Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22134-st_ftype-fraction-type" class="md-nav__link">
+    22.1.3.4 ST_FType (Fraction Type)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22135-st_integer2-integer-value--2-to-2" class="md-nav__link">
+    22.1.3.5 ST_Integer2 (Integer value (-2 to 2))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22136-st_integer255-integer-value-1-to-255" class="md-nav__link">
+    22.1.3.6 ST_Integer255 (Integer value (1 to 255))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22137-st_jc-justification" class="md-nav__link">
+    22.1.3.7 ST_Jc (Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22138-st_limloc-limit-location" class="md-nav__link">
+    22.1.3.8 ST_LimLoc (Limit Location)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22139-st_script-script" class="md-nav__link">
+    22.1.3.9 ST_Script (Script)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221310-st_shp-shape-delimiters" class="md-nav__link">
+    22.1.3.10 ST_Shp (Shape (Delimiters))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221311-st_spacingrule-spacing-rule" class="md-nav__link">
+    22.1.3.11 ST_SpacingRule (Spacing Rule)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221312-st_style-style" class="md-nav__link">
+    22.1.3.12 ST_Style (Style)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221313-st_topbot-top-bottom" class="md-nav__link">
+    22.1.3.13 ST_TopBot (Top-Bottom)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221314-st_unsignedinteger-unsigned-integer" class="md-nav__link">
+    22.1.3.14 ST_UnSignedInteger (Unsigned integer.)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extendedproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.2 扩展属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.3 自定义属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../varianttypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.4 变体类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customxmldata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.5 自定义 XML Data 属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.6 参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additionalcharacteri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.7 附加特性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../officedocumentrelationships/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.8 Office 文档关系
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharedsimpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.9 Shared Simple Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#目录" class="md-nav__link">
+    目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2212-elements" class="md-nav__link">
+    22.1.2 Elements
+  </a>
+  
+    <nav class="md-nav" aria-label="22.1.2 Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22121-acc-accent" class="md-nav__link">
+    22.1.2.1 acc (Accent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22122-accpr-accent-properties" class="md-nav__link">
+    22.1.2.2 accPr (Accent Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22123-aln-alignment" class="md-nav__link">
+    22.1.2.3 aln (Alignment)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22124-alnscr-align-scripts" class="md-nav__link">
+    22.1.2.4 alnScr (Align Scripts)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22125-argpr-argument-properties" class="md-nav__link">
+    22.1.2.5 argPr (Argument Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22126-argsz-argument-size" class="md-nav__link">
+    22.1.2.6 argSz (Argument Size)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22127-bar-bar" class="md-nav__link">
+    22.1.2.7 bar (Bar)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22128-barpr-bar-properties" class="md-nav__link">
+    22.1.2.8 barPr (Bar Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22129-basejc-matrix-base-justification" class="md-nav__link">
+    22.1.2.9 baseJc (Matrix Base Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221210-begchr-delimiter-beginning-character" class="md-nav__link">
+    22.1.2.10 begChr (Delimiter Beginning Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221211-borderbox-border-box-object" class="md-nav__link">
+    22.1.2.11 borderBox (Border-Box Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221212-borderboxpr-border-box-properties" class="md-nav__link">
+    22.1.2.12 borderBoxPr (Border-Box Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221213-box-box-object" class="md-nav__link">
+    22.1.2.13 box (Box Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221214-boxpr-box-properties" class="md-nav__link">
+    22.1.2.14 boxPr (Box Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221215-brk-break" class="md-nav__link">
+    22.1.2.15 brk (Break)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221216-brkbin-break-on-binary-operators" class="md-nav__link">
+    22.1.2.16 brkBin (Break on Binary Operators)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221217-brkbinsub-break-on-binary-subtraction" class="md-nav__link">
+    22.1.2.17 brkBinSub (Break on Binary Subtraction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221218-cgp-matrix-column-gap" class="md-nav__link">
+    22.1.2.18 cGp (Matrix Column Gap)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221219-cgprule-matrix-column-gap-rule" class="md-nav__link">
+    22.1.2.19 cGpRule (Matrix Column Gap Rule)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221220-chr-character" class="md-nav__link">
+    22.1.2.20 chr (Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221221-count-matrix-column-count" class="md-nav__link">
+    22.1.2.21 count (Matrix Column Count)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221222-csp-minimum-matrix-column-width" class="md-nav__link">
+    22.1.2.22 cSp (Minimum Matrix Column Width)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221223-ctrlpr-control-properties" class="md-nav__link">
+    22.1.2.23 ctrlPr (Control Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221224-d-delimiter-object" class="md-nav__link">
+    22.1.2.24 d (Delimiter Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221225-defjc-default-justification" class="md-nav__link">
+    22.1.2.25 defJc (Default Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221226-deg-degree" class="md-nav__link">
+    22.1.2.26 deg (Degree)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221227-deghide-hide-degree" class="md-nav__link">
+    22.1.2.27 degHide (Hide Degree)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221228-den-denominator" class="md-nav__link">
+    22.1.2.28 den (Denominator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221229-diff-differential" class="md-nav__link">
+    22.1.2.29 diff (Differential)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221230-dispdef-use-display-math-defaults" class="md-nav__link">
+    22.1.2.30 dispDef (Use Display Math Defaults)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221231-dpr-delimiter-properties" class="md-nav__link">
+    22.1.2.31 dPr (Delimiter Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221232-e-element-argument" class="md-nav__link">
+    22.1.2.32 e (Element (Argument))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221233-endchr-delimiter-ending-character" class="md-nav__link">
+    22.1.2.33 endChr (Delimiter Ending Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221234-eqarr-array-object" class="md-nav__link">
+    22.1.2.34 eqArr (Array Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221235-eqarrpr-array-properties" class="md-nav__link">
+    22.1.2.35 eqArrPr (Array Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221236-f-fraction-object" class="md-nav__link">
+    22.1.2.36 f (Fraction Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221237-fname-function-name" class="md-nav__link">
+    22.1.2.37 fName (Function Name)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221238-fpr-fraction-properties" class="md-nav__link">
+    22.1.2.38 fPr (Fraction Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221239-func-function-apply-object" class="md-nav__link">
+    22.1.2.39 func (Function Apply Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221240-funcpr-function-properties" class="md-nav__link">
+    22.1.2.40 funcPr (Function Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221241-groupchr-group-character-object" class="md-nav__link">
+    22.1.2.41 groupChr (Group-Character Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221242-groupchrpr-group-character-properties" class="md-nav__link">
+    22.1.2.42 groupChrPr (Group-Character Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221243-grow-n-ary-grow" class="md-nav__link">
+    22.1.2.43 grow (n-ary Grow)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221244-hidebot-hide-bottom-edge" class="md-nav__link">
+    22.1.2.44 hideBot (Hide Bottom Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221245-hideleft-hide-left-edge" class="md-nav__link">
+    22.1.2.45 hideLeft (Hide Left Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221246-hideright-hide-right-edge" class="md-nav__link">
+    22.1.2.46 hideRight (Hide Right Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221247-hidetop-hide-top-edge" class="md-nav__link">
+    22.1.2.47 hideTop (Hide Top Edge)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221248-intersp-inter-equation-spacing" class="md-nav__link">
+    22.1.2.48 interSp (Inter-Equation Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221249-intlim-integral-limit-locations" class="md-nav__link">
+    22.1.2.49 intLim (Integral Limit Locations)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221250-intrasp-intra-equation-spacing" class="md-nav__link">
+    22.1.2.50 intraSp (Intra-Equation Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221251-jc-justification" class="md-nav__link">
+    22.1.2.51 jc (Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221252-lim-limit" class="md-nav__link">
+    22.1.2.52 lim (Limit)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221253-limloc-n-ary-limit-location" class="md-nav__link">
+    22.1.2.53 limLoc (n-ary Limit Location)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221254-limlow-lower-limit-object" class="md-nav__link">
+    22.1.2.54 limLow (Lower-Limit Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221255-limlowpr-lower-limit-properties" class="md-nav__link">
+    22.1.2.55 limLowPr (Lower-Limit Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221256-limupp-upper-limit-object" class="md-nav__link">
+    22.1.2.56 limUpp (Upper-Limit Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221257-limupppr-upper-limit-properties" class="md-nav__link">
+    22.1.2.57 limUppPr (Upper-Limit Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221258-lit-literal" class="md-nav__link">
+    22.1.2.58 lit (Literal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221259-lmargin-left-margin" class="md-nav__link">
+    22.1.2.59 lMargin (Left Margin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221260-m-matrix-object" class="md-nav__link">
+    22.1.2.60 m (Matrix Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221261-mathfont-math-font" class="md-nav__link">
+    22.1.2.61 mathFont (Math Font)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221262-mathpr-math-properties" class="md-nav__link">
+    22.1.2.62 mathPr (Math Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221263-maxdist-maximum-distribution" class="md-nav__link">
+    22.1.2.63 maxDist (Maximum Distribution)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221264-mc-matrix-column" class="md-nav__link">
+    22.1.2.64 mc (Matrix Column)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221265-mcjc-matrix-column-justification" class="md-nav__link">
+    22.1.2.65 mcJc (Matrix Column Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221266-mcpr-matrix-column-properties" class="md-nav__link">
+    22.1.2.66 mcPr (Matrix Column Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221267-mcs-matrix-columns" class="md-nav__link">
+    22.1.2.67 mcs (Matrix Columns)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221268-mpr-matrix-properties" class="md-nav__link">
+    22.1.2.68 mPr (Matrix Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221269-mr-matrix-row" class="md-nav__link">
+    22.1.2.69 mr (Matrix Row)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221270-nary-n-ary-operator-object" class="md-nav__link">
+    22.1.2.70 nary (n-ary Operator Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221271-narylim-n-ary-limit-location" class="md-nav__link">
+    22.1.2.71 naryLim (n-ary Limit Location)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221272-narypr-n-ary-properties" class="md-nav__link">
+    22.1.2.72 naryPr (n-ary Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221273-nobreak-no-break" class="md-nav__link">
+    22.1.2.73 noBreak (No Break)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221274-nor-normal-text" class="md-nav__link">
+    22.1.2.74 nor (Normal Text)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221275-num-numerator" class="md-nav__link">
+    22.1.2.75 num (Numerator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221276-objdist-object-distribution" class="md-nav__link">
+    22.1.2.76 objDist (Object Distribution)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221277-omath-office-math" class="md-nav__link">
+    22.1.2.77 oMath (Office Math)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221278-omathpara-office-math-paragraph" class="md-nav__link">
+    22.1.2.78 oMathPara (Office Math Paragraph)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221279-omathparapr-office-math-paragraph-properties" class="md-nav__link">
+    22.1.2.79 oMathParaPr (Office Math Paragraph Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221280-opemu-operator-emulator" class="md-nav__link">
+    22.1.2.80 opEmu (Operator Emulator)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221281-phant-phantom-object" class="md-nav__link">
+    22.1.2.81 phant (Phantom Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221282-phantpr-phantom-properties" class="md-nav__link">
+    22.1.2.82 phantPr (Phantom Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221283-plchide-hide-placeholders-matrix" class="md-nav__link">
+    22.1.2.83 plcHide (Hide Placeholders (Matrix))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221284-pos-position" class="md-nav__link">
+    22.1.2.84 pos (Position)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221285-postsp-post-paragraph-spacing" class="md-nav__link">
+    22.1.2.85 postSp (Post-Paragraph Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221286-presp-pre-paragraph-spacing" class="md-nav__link">
+    22.1.2.86 preSp (Pre-Paragraph Spacing)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221287-r-run" class="md-nav__link">
+    22.1.2.87 r (Run)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221288-rad-radical-object" class="md-nav__link">
+    22.1.2.88 rad (Radical Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221289-radpr-radical-properties" class="md-nav__link">
+    22.1.2.89 radPr (Radical Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221290-rmargin-right-margin" class="md-nav__link">
+    22.1.2.90 rMargin (Right Margin)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221291-rpr-run-properties" class="md-nav__link">
+    22.1.2.91 rPr (Run Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221292-rsp-row-spacing-array" class="md-nav__link">
+    22.1.2.92 rSp (Row Spacing (Array))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221293-rsprule-row-spacing-rule" class="md-nav__link">
+    22.1.2.93 rSpRule (Row Spacing Rule)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221294-scr-script" class="md-nav__link">
+    22.1.2.94 scr (Script)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221295-sepchr-delimiter-separator-character" class="md-nav__link">
+    22.1.2.95 sepChr (Delimiter Separator Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221296-show-phantom-show" class="md-nav__link">
+    22.1.2.96 show (Phantom Show)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221297-shp-shape-delimiters" class="md-nav__link">
+    22.1.2.97 shp (Shape (Delimiters))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221298-smallfrac-small-fraction" class="md-nav__link">
+    22.1.2.98 smallFrac (Small Fraction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221299-spre-pre-sub-superscript-object" class="md-nav__link">
+    22.1.2.99 sPre (Pre-Sub-Superscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212100-sprepr-pre-sub-superscript-properties" class="md-nav__link">
+    22.1.2.100 sPrePr (Pre-Sub-Superscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212101-ssub-subscript-object" class="md-nav__link">
+    22.1.2.101 sSub (Subscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212102-ssubpr-subscript-properties" class="md-nav__link">
+    22.1.2.102 sSubPr (Subscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212103-ssubsup-sub-superscript-object" class="md-nav__link">
+    22.1.2.103 sSubSup (Sub-Superscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212104-ssubsuppr-sub-superscript-properties" class="md-nav__link">
+    22.1.2.104 sSubSupPr (Sub-Superscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212105-ssup-superscript-object" class="md-nav__link">
+    22.1.2.105 sSup (Superscript Object)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212106-ssuppr-superscript-properties" class="md-nav__link">
+    22.1.2.106 sSupPr (Superscript Properties)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212107-strikebltr-border-box-strikethrough-bottom-left-to-top-right" class="md-nav__link">
+    22.1.2.107 strikeBLTR (Border Box Strikethrough Bottom-Left to Top-Right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212108-strikeh-border-box-strikethrough-horizontal" class="md-nav__link">
+    22.1.2.108 strikeH (Border Box Strikethrough Horizontal)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212109-striketlbr-border-box-strikethrough-top-left-to-bottom-right" class="md-nav__link">
+    22.1.2.109 strikeTLBR (Border Box Strikethrough Top-Left to Bottom-Right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212110-strikev-border-box-strikethrough-vertical" class="md-nav__link">
+    22.1.2.110 strikeV (Border Box Strikethrough Vertical)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212111-sty-style" class="md-nav__link">
+    22.1.2.111 sty (style)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212112-sub-subscript-pre-sub-superscript" class="md-nav__link">
+    22.1.2.112 sub (Subscript (Pre-Sub-Superscript))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212113-subhide-hide-subscript-n-ary" class="md-nav__link">
+    22.1.2.113 subHide (Hide Subscript (n-ary))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212114-sup-superscript-superscript-object" class="md-nav__link">
+    22.1.2.114 sup (Superscript (Superscript object))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212115-suphide-hide-superscript-n-ary" class="md-nav__link">
+    22.1.2.115 supHide (Hide Superscript (n-ary))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212116-t-text" class="md-nav__link">
+    22.1.2.116 t (Text)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212117-transp-transparent-phantom" class="md-nav__link">
+    22.1.2.117 transp (Transparent (Phantom))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212118-type-fraction-type" class="md-nav__link">
+    22.1.2.118 type (Fraction type)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212119-vertjc-vertical-justification" class="md-nav__link">
+    22.1.2.119 vertJc (Vertical Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212120-wrapindent-wrap-indent" class="md-nav__link">
+    22.1.2.120 wrapIndent (Wrap Indent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212121-wrapright-wrap-right" class="md-nav__link">
+    22.1.2.121 wrapRight (Wrap Right)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212122-zeroasc-phantom-zero-ascent" class="md-nav__link">
+    22.1.2.122 zeroAsc (Phantom Zero Ascent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212123-zerodesc-phantom-zero-descent" class="md-nav__link">
+    22.1.2.123 zeroDesc (Phantom Zero Descent)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2212124-zerowid-phantom-zero-width" class="md-nav__link">
+    22.1.2.124 zeroWid (Phantom Zero Width)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2213-simple-types" class="md-nav__link">
+    22.1.3 Simple Types
+  </a>
+  
+    <nav class="md-nav" aria-label="22.1.3 Simple Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22131-st_breakbin-break-binary-operators" class="md-nav__link">
+    22.1.3.1 ST_BreakBin (Break Binary Operators)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22132-st_breakbinsub-break-on-binary-subtraction" class="md-nav__link">
+    22.1.3.2 ST_BreakBinSub (Break on Binary Subtraction)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22133-st_char-character" class="md-nav__link">
+    22.1.3.3 ST_Char (Character)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22134-st_ftype-fraction-type" class="md-nav__link">
+    22.1.3.4 ST_FType (Fraction Type)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22135-st_integer2-integer-value--2-to-2" class="md-nav__link">
+    22.1.3.5 ST_Integer2 (Integer value (-2 to 2))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22136-st_integer255-integer-value-1-to-255" class="md-nav__link">
+    22.1.3.6 ST_Integer255 (Integer value (1 to 255))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22137-st_jc-justification" class="md-nav__link">
+    22.1.3.7 ST_Jc (Justification)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22138-st_limloc-limit-location" class="md-nav__link">
+    22.1.3.8 ST_LimLoc (Limit Location)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22139-st_script-script" class="md-nav__link">
+    22.1.3.9 ST_Script (Script)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221310-st_shp-shape-delimiters" class="md-nav__link">
+    22.1.3.10 ST_Shp (Shape (Delimiters))
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221311-st_spacingrule-spacing-rule" class="md-nav__link">
+    22.1.3.11 ST_SpacingRule (Spacing Rule)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221312-st_style-style" class="md-nav__link">
+    22.1.3.12 ST_Style (Style)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221313-st_topbot-top-bottom" class="md-nav__link">
+    22.1.3.13 ST_TopBot (Top-Bottom)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#221314-st_unsignedinteger-unsigned-integer" class="md-nav__link">
+    22.1.3.14 ST_UnSignedInteger (Unsigned integer.)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="221-math">22.1 Math<a class="headerlink" href="#221-math" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下文档指定了 OOXML 数学文本的 XML 表示形式。 这种共享的 ML 称为 Office 数学标记语言 (OMML)。 OMML表示的数学文本包括但不限于：方程、表达式、公式、矩阵和其他数学元素。 显示模式下数学文本实例的最外层 OMML 元素是 oMathPara，一个或多个数学文本实例的数学段落。 数学段落内数学文本的每个实例都表示为单个 oMath。 每个 oMath 内部都是数学运算 &reg; 和对象或函数（例如重音符号 (acc) 或分数 (f)）的组合。</p>
+</div>
+<div class="tabbed-block">
+<p>The following documentation specifies the XML representation of mathematical text for OOXML. This shared ML is known as that Office Math Markup Language (OMML). Mathematical text represented by OMML includes but is not limited to: equations, expressions, formulas, matrices, and other mathematical elements. The outermost OMML element of an instance of mathematical text in display mode is oMathPara, a math paragraph of one or more instances of mathematical text. Each instance of mathematical text inside the math paragraph is represented as a single oMath. Inside each oMath is a combination of mathematical runs &reg; and objects or functions such as accents (acc) or fractions (f).</p>
+</div>
+</div>
+</div>
+<h2 id="目录">目录<a class="headerlink" href="#目录" title="Permanent link">&para;</a></h2>
+<p>"Table of Contents"</p>
+<p>This subclause is informative.</p>
+<ul>
+<li>22.1.2 Elements<ul>
+<li>22.1.2.1 acc (Accent)</li>
+<li>22.1.2.2 accPr (Accent Properties)</li>
+<li>22.1.2.3 aln (Alignment)</li>
+<li>22.1.2.4 alnScr (Align Scripts)</li>
+<li>22.1.2.5 argPr (Argument Properties)</li>
+<li>22.1.2.6 argSz (Argument Size)</li>
+<li>22.1.2.7 bar (Bar)</li>
+<li>22.1.2.8 barPr (Bar Properties)</li>
+<li>22.1.2.9 baseJc (Matrix Base Justification)</li>
+<li>22.1.2.10 begChr (Delimiter Beginning Character)</li>
+<li>22.1.2.11 borderBox (Border-Box Object)</li>
+<li>22.1.2.12 borderBoxPr (Border-Box Properties)</li>
+<li>22.1.2.13 box (Box Object)</li>
+<li>22.1.2.14 boxPr (Box Properties)</li>
+<li>22.1.2.15 brk (Break)</li>
+<li>22.1.2.16 brkBin (Break on Binary Operators)</li>
+<li>22.1.2.17 brkBinSub (Break on Binary Subtraction)</li>
+<li>22.1.2.18 cGp (Matrix Column Gap)</li>
+<li>22.1.2.19 cGpRule (Matrix Column Gap Rule)</li>
+<li>22.1.2.20 chr (Character)</li>
+<li>22.1.2.21 count (Matrix Column Count)</li>
+<li>22.1.2.22 cSp (Minimum Matrix Column Width)</li>
+<li>22.1.2.23 ctrlPr (Control Properties)</li>
+<li>22.1.2.24 d (Delimiter Object)</li>
+<li>22.1.2.25 defJc (Default Justification)</li>
+<li>22.1.2.26 deg (Degree)</li>
+<li>22.1.2.27 degHide (Hide Degree)</li>
+<li>22.1.2.28 den (Denominator)</li>
+<li>22.1.2.29 diff (Differential)</li>
+<li>22.1.2.30 dispDef (Use Display Math Defaults)</li>
+<li>22.1.2.31 dPr (Delimiter Properties)</li>
+<li>22.1.2.32 e (Element (Argument))</li>
+<li>22.1.2.33 endChr (Delimiter Ending Character)</li>
+<li>22.1.2.34 eqArr (Array Object)</li>
+<li>22.1.2.35 eqArrPr (Array Properties)</li>
+<li>22.1.2.36 f (Fraction Object)</li>
+<li>22.1.2.37 fName (Function Name)</li>
+<li>22.1.2.38 fPr (Fraction Properties)</li>
+<li>22.1.2.39 func (Function Apply Object)</li>
+<li>22.1.2.40 funcPr (Function Properties)</li>
+<li>22.1.2.41 groupChr (Group-Character Object)</li>
+<li>22.1.2.42 groupChrPr (Group-Character Properties)</li>
+<li>22.1.2.43 grow (n-ary Grow)</li>
+<li>22.1.2.44 hideBot (Hide Bottom Edge)</li>
+<li>22.1.2.45 hideLeft (Hide Left Edge)</li>
+<li>22.1.2.46 hideRight (Hide Right Edge)</li>
+<li>22.1.2.47 hideTop (Hide Top Edge)</li>
+<li>22.1.2.48 interSp (Inter-Equation Spacing)</li>
+<li>22.1.2.49 intLim (Integral Limit Locations)</li>
+<li>22.1.2.50 intraSp (Intra-Equation Spacing)</li>
+<li>22.1.2.51 jc (Justification)</li>
+<li>22.1.2.52 lim (Limit)</li>
+<li>22.1.2.53 limLoc (n-ary Limit Location)</li>
+<li>22.1.2.54 limLow (Lower-Limit Object)</li>
+<li>22.1.2.55 limLowPr (Lower-Limit Properties)</li>
+<li>22.1.2.56 limUpp (Upper-Limit Object)</li>
+<li>22.1.2.57 limUppPr (Upper-Limit Properties)</li>
+<li>22.1.2.58 lit (Literal)</li>
+<li>22.1.2.59 lMargin (Left Margin)</li>
+<li>22.1.2.60 m (Matrix Object)</li>
+<li>22.1.2.61 mathFont (Math Font)</li>
+<li>22.1.2.62 mathPr (Math Properties)</li>
+<li>22.1.2.63 maxDist (Maximum Distribution)</li>
+<li>22.1.2.64 mc (Matrix Column)</li>
+<li>22.1.2.65 mcJc (Matrix Column Justification)</li>
+<li>22.1.2.66 mcPr (Matrix Column Properties)</li>
+<li>22.1.2.67 mcs (Matrix Columns)</li>
+<li>22.1.2.68 mPr (Matrix Properties)</li>
+<li>22.1.2.69 mr (Matrix Row)</li>
+<li>22.1.2.70 nary (n-ary Operator Object)</li>
+<li>22.1.2.71 naryLim (n-ary Limit Location)</li>
+<li>22.1.2.72 naryPr (n-ary Properties)</li>
+<li>22.1.2.73 noBreak (No Break)</li>
+<li>22.1.2.74 nor (Normal Text)</li>
+<li>22.1.2.75 num (Numerator)</li>
+<li>22.1.2.76 objDist (Object Distribution)</li>
+<li>22.1.2.77 oMath (Office Math)</li>
+<li>22.1.2.78 oMathPara (Office Math Paragraph)</li>
+<li>22.1.2.79 oMathParaPr (Office Math Paragraph Properties)</li>
+<li>22.1.2.80 opEmu (Operator Emulator)</li>
+<li>22.1.2.81 phant (Phantom Object)</li>
+<li>22.1.2.82 phantPr (Phantom Properties)</li>
+<li>22.1.2.83 plcHide (Hide Placeholders (Matrix))</li>
+<li>22.1.2.84 pos (Position)</li>
+<li>22.1.2.85 postSp (Post-Paragraph Spacing)</li>
+<li>22.1.2.86 preSp (Pre-Paragraph Spacing)</li>
+<li>22.1.2.87 r (Run)</li>
+<li>22.1.2.88 rad (Radical Object)</li>
+<li>22.1.2.89 radPr (Radical Properties)</li>
+<li>22.1.2.90 rMargin (Right Margin)</li>
+<li>22.1.2.91 rPr (Run Properties)</li>
+<li>22.1.2.92 rSp (Row Spacing (Array))</li>
+<li>22.1.2.93 rSpRule (Row Spacing Rule)</li>
+<li>22.1.2.94 scr (Script)</li>
+<li>22.1.2.95 sepChr (Delimiter Separator Character)</li>
+<li>22.1.2.96 show (Phantom Show)</li>
+<li>22.1.2.97 shp (Shape (Delimiters))</li>
+<li>22.1.2.98 smallFrac (Small Fraction)</li>
+<li>22.1.2.99 sPre (Pre-Sub-Superscript Object)</li>
+<li>22.1.2.100 sPrePr (Pre-Sub-Superscript Properties)</li>
+<li>22.1.2.101 sSub (Subscript Object)</li>
+<li>22.1.2.102 sSubPr (Subscript Properties)</li>
+<li>22.1.2.103 sSubSup (Sub-Superscript Object)</li>
+<li>22.1.2.104 sSubSupPr (Sub-Superscript Properties)</li>
+<li>22.1.2.105 sSup (Superscript Object)</li>
+<li>22.1.2.106 sSupPr (Superscript Properties)</li>
+<li>22.1.2.107 strikeBLTR (Border Box Strikethrough Bottom-Left to Top-Right)</li>
+<li>22.1.2.108 strikeH (Border Box Strikethrough Horizontal)</li>
+<li>22.1.2.109 strikeTLBR (Border Box Strikethrough Top-Left to Bottom-Right)</li>
+<li>22.1.2.110 strikeV (Border Box Strikethrough Vertical)</li>
+<li>22.1.2.111 sty (style)</li>
+<li>22.1.2.112 sub (Subscript (Pre-Sub-Superscript))</li>
+<li>22.1.2.113 subHide (Hide Subscript (n-ary))</li>
+<li>22.1.2.114 sup (Superscript (Superscript object))</li>
+<li>22.1.2.115 supHide (Hide Superscript (n-ary))</li>
+<li>22.1.2.116 t (Text)</li>
+<li>22.1.2.117 transp (Transparent (Phantom))</li>
+<li>22.1.2.118 type (Fraction type)</li>
+<li>22.1.2.119 vertJc (Vertical Justification)</li>
+<li>22.1.2.120 wrapIndent (Wrap Indent)</li>
+<li>22.1.2.121 wrapRight (Wrap Right)</li>
+<li>22.1.2.122 zeroAsc (Phantom Zero Ascent)</li>
+<li>22.1.2.123 zeroDesc (Phantom Zero Descent)</li>
+<li>22.1.2.124 zeroWid (Phantom Zero Width)</li>
+</ul>
+</li>
+<li>22.1.3 Simple Types<ul>
+<li>22.1.3.1 ST_BreakBin (Break Binary Operators)</li>
+<li>22.1.3.2 ST_BreakBinSub (Break on Binary Subtraction)</li>
+<li>22.1.3.3 ST_Char (Character)</li>
+<li>22.1.3.4 ST_FType (Fraction Type)</li>
+<li>22.1.3.5 ST_Integer2 (Integer value (-2 to 2))</li>
+<li>22.1.3.6 ST_Integer255 (Integer value (1 to 255))</li>
+<li>22.1.3.7 ST_Jc (Justification)</li>
+<li>22.1.3.8 ST_LimLoc (Limit Location)</li>
+<li>22.1.3.9 ST_Script (Script)</li>
+<li>22.1.3.10 ST_Shp (Shape (Delimiters))</li>
+<li>22.1.3.11 ST_SpacingRule (Spacing Rule)</li>
+<li>22.1.3.12 ST_Style (Style)</li>
+<li>22.1.3.13 ST_TopBot (Top-Bottom)</li>
+<li>22.1.3.14 ST_UnSignedInteger (Unsigned integer.)</li>
+</ul>
+</li>
+</ul>
+<p>End of informative text.</p>
+<h2 id="2212-elements">22.1.2 Elements<a class="headerlink" href="#2212-elements" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"Elements"</p>
+</div>
+</div>
+</div>
+<h3 id="22121-acc-accent">22.1.2.1 acc (Accent)<a class="headerlink" href="#22121-acc-accent" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"acc (Accent)"</p>
+</div>
+</div>
+</div>
+<h3 id="22122-accpr-accent-properties">22.1.2.2 accPr (Accent Properties)<a class="headerlink" href="#22122-accpr-accent-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"accPr (Accent Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="22123-aln-alignment">22.1.2.3 aln (Alignment)<a class="headerlink" href="#22123-aln-alignment" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"aln (Alignment)"</p>
+</div>
+</div>
+</div>
+<h3 id="22124-alnscr-align-scripts">22.1.2.4 alnScr (Align Scripts)<a class="headerlink" href="#22124-alnscr-align-scripts" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"alnScr (Align Scripts)"</p>
+</div>
+</div>
+</div>
+<h3 id="22125-argpr-argument-properties">22.1.2.5 argPr (Argument Properties)<a class="headerlink" href="#22125-argpr-argument-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"argPr (Argument Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="22126-argsz-argument-size">22.1.2.6 argSz (Argument Size)<a class="headerlink" href="#22126-argsz-argument-size" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"argSz (Argument Size)"</p>
+</div>
+</div>
+</div>
+<h3 id="22127-bar-bar">22.1.2.7 bar (Bar)<a class="headerlink" href="#22127-bar-bar" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"bar (Bar)"</p>
+</div>
+</div>
+</div>
+<h3 id="22128-barpr-bar-properties">22.1.2.8 barPr (Bar Properties)<a class="headerlink" href="#22128-barpr-bar-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"barPr (Bar Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="22129-basejc-matrix-base-justification">22.1.2.9 baseJc (Matrix Base Justification)<a class="headerlink" href="#22129-basejc-matrix-base-justification" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"baseJc (Matrix Base Justification)"</p>
+</div>
+</div>
+</div>
+<h3 id="221210-begchr-delimiter-beginning-character">22.1.2.10 begChr (Delimiter Beginning Character)<a class="headerlink" href="#221210-begchr-delimiter-beginning-character" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"begChr (Delimiter Beginning Character)"</p>
+</div>
+</div>
+</div>
+<h3 id="221211-borderbox-border-box-object">22.1.2.11 borderBox (Border-Box Object)<a class="headerlink" href="#221211-borderbox-border-box-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"borderBox (Border-Box Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221212-borderboxpr-border-box-properties">22.1.2.12 borderBoxPr (Border-Box Properties)<a class="headerlink" href="#221212-borderboxpr-border-box-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"borderBoxPr (Border-Box Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221213-box-box-object">22.1.2.13 box (Box Object)<a class="headerlink" href="#221213-box-box-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"box (Box Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221214-boxpr-box-properties">22.1.2.14 boxPr (Box Properties)<a class="headerlink" href="#221214-boxpr-box-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"boxPr (Box Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221215-brk-break">22.1.2.15 brk (Break)<a class="headerlink" href="#221215-brk-break" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"brk (Break)"</p>
+</div>
+</div>
+</div>
+<h3 id="221216-brkbin-break-on-binary-operators">22.1.2.16 brkBin (Break on Binary Operators)<a class="headerlink" href="#221216-brkbin-break-on-binary-operators" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"brkBin (Break on Binary Operators)"</p>
+</div>
+</div>
+</div>
+<h3 id="221217-brkbinsub-break-on-binary-subtraction">22.1.2.17 brkBinSub (Break on Binary Subtraction)<a class="headerlink" href="#221217-brkbinsub-break-on-binary-subtraction" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"brkBinSub (Break on Binary Subtraction)"</p>
+</div>
+</div>
+</div>
+<h3 id="221218-cgp-matrix-column-gap">22.1.2.18 cGp (Matrix Column Gap)<a class="headerlink" href="#221218-cgp-matrix-column-gap" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"cGp (Matrix Column Gap)"</p>
+</div>
+</div>
+</div>
+<h3 id="221219-cgprule-matrix-column-gap-rule">22.1.2.19 cGpRule (Matrix Column Gap Rule)<a class="headerlink" href="#221219-cgprule-matrix-column-gap-rule" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"cGpRule (Matrix Column Gap Rule)"</p>
+</div>
+</div>
+</div>
+<h3 id="221220-chr-character">22.1.2.20 chr (Character)<a class="headerlink" href="#221220-chr-character" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"chr (Character)"</p>
+</div>
+</div>
+</div>
+<h3 id="221221-count-matrix-column-count">22.1.2.21 count (Matrix Column Count)<a class="headerlink" href="#221221-count-matrix-column-count" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"count (Matrix Column Count)"</p>
+</div>
+</div>
+</div>
+<h3 id="221222-csp-minimum-matrix-column-width">22.1.2.22 cSp (Minimum Matrix Column Width)<a class="headerlink" href="#221222-csp-minimum-matrix-column-width" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"cSp (Minimum Matrix Column Width)"</p>
+</div>
+</div>
+</div>
+<h3 id="221223-ctrlpr-control-properties">22.1.2.23 ctrlPr (Control Properties)<a class="headerlink" href="#221223-ctrlpr-control-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ctrlPr (Control Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221224-d-delimiter-object">22.1.2.24 d (Delimiter Object)<a class="headerlink" href="#221224-d-delimiter-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"d (Delimiter Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221225-defjc-default-justification">22.1.2.25 defJc (Default Justification)<a class="headerlink" href="#221225-defjc-default-justification" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"defJc (Default Justification)"</p>
+</div>
+</div>
+</div>
+<h3 id="221226-deg-degree">22.1.2.26 deg (Degree)<a class="headerlink" href="#221226-deg-degree" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"deg (Degree)"</p>
+</div>
+</div>
+</div>
+<h3 id="221227-deghide-hide-degree">22.1.2.27 degHide (Hide Degree)<a class="headerlink" href="#221227-deghide-hide-degree" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"degHide (Hide Degree)"</p>
+</div>
+</div>
+</div>
+<h3 id="221228-den-denominator">22.1.2.28 den (Denominator)<a class="headerlink" href="#221228-den-denominator" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"den (Denominator)"</p>
+</div>
+</div>
+</div>
+<h3 id="221229-diff-differential">22.1.2.29 diff (Differential)<a class="headerlink" href="#221229-diff-differential" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">中文</label><label for="__tabbed_31_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"diff (Differential)"</p>
+</div>
+</div>
+</div>
+<h3 id="221230-dispdef-use-display-math-defaults">22.1.2.30 dispDef (Use Display Math Defaults)<a class="headerlink" href="#221230-dispdef-use-display-math-defaults" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">中文</label><label for="__tabbed_32_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"dispDef (Use Display Math Defaults)"</p>
+</div>
+</div>
+</div>
+<h3 id="221231-dpr-delimiter-properties">22.1.2.31 dPr (Delimiter Properties)<a class="headerlink" href="#221231-dpr-delimiter-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">中文</label><label for="__tabbed_33_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"dPr (Delimiter Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221232-e-element-argument">22.1.2.32 e (Element (Argument))<a class="headerlink" href="#221232-e-element-argument" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">中文</label><label for="__tabbed_34_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"e (Element (Argument))"</p>
+</div>
+</div>
+</div>
+<h3 id="221233-endchr-delimiter-ending-character">22.1.2.33 endChr (Delimiter Ending Character)<a class="headerlink" href="#221233-endchr-delimiter-ending-character" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">中文</label><label for="__tabbed_35_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"endChr (Delimiter Ending Character)"</p>
+</div>
+</div>
+</div>
+<h3 id="221234-eqarr-array-object">22.1.2.34 eqArr (Array Object)<a class="headerlink" href="#221234-eqarr-array-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">中文</label><label for="__tabbed_36_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"eqArr (Array Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221235-eqarrpr-array-properties">22.1.2.35 eqArrPr (Array Properties)<a class="headerlink" href="#221235-eqarrpr-array-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">中文</label><label for="__tabbed_37_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"eqArrPr (Array Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221236-f-fraction-object">22.1.2.36 f (Fraction Object)<a class="headerlink" href="#221236-f-fraction-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><input id="__tabbed_38_2" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="__tabbed_38_1">中文</label><label for="__tabbed_38_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"f (Fraction Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221237-fname-function-name">22.1.2.37 fName (Function Name)<a class="headerlink" href="#221237-fname-function-name" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:2"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><input id="__tabbed_39_2" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="__tabbed_39_1">中文</label><label for="__tabbed_39_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"fName (Function Name)"</p>
+</div>
+</div>
+</div>
+<h3 id="221238-fpr-fraction-properties">22.1.2.38 fPr (Fraction Properties)<a class="headerlink" href="#221238-fpr-fraction-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="40:2"><input checked="checked" id="__tabbed_40_1" name="__tabbed_40" type="radio" /><input id="__tabbed_40_2" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="__tabbed_40_1">中文</label><label for="__tabbed_40_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"fPr (Fraction Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221239-func-function-apply-object">22.1.2.39 func (Function Apply Object)<a class="headerlink" href="#221239-func-function-apply-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="41:2"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><input id="__tabbed_41_2" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">中文</label><label for="__tabbed_41_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"func (Function Apply Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221240-funcpr-function-properties">22.1.2.40 funcPr (Function Properties)<a class="headerlink" href="#221240-funcpr-function-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="42:2"><input checked="checked" id="__tabbed_42_1" name="__tabbed_42" type="radio" /><input id="__tabbed_42_2" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="__tabbed_42_1">中文</label><label for="__tabbed_42_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"funcPr (Function Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221241-groupchr-group-character-object">22.1.2.41 groupChr (Group-Character Object)<a class="headerlink" href="#221241-groupchr-group-character-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="43:2"><input checked="checked" id="__tabbed_43_1" name="__tabbed_43" type="radio" /><input id="__tabbed_43_2" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="__tabbed_43_1">中文</label><label for="__tabbed_43_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"groupChr (Group-Character Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221242-groupchrpr-group-character-properties">22.1.2.42 groupChrPr (Group-Character Properties)<a class="headerlink" href="#221242-groupchrpr-group-character-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="44:2"><input checked="checked" id="__tabbed_44_1" name="__tabbed_44" type="radio" /><input id="__tabbed_44_2" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="__tabbed_44_1">中文</label><label for="__tabbed_44_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"groupChrPr (Group-Character Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221243-grow-n-ary-grow">22.1.2.43 grow (n-ary Grow)<a class="headerlink" href="#221243-grow-n-ary-grow" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="45:2"><input checked="checked" id="__tabbed_45_1" name="__tabbed_45" type="radio" /><input id="__tabbed_45_2" name="__tabbed_45" type="radio" /><div class="tabbed-labels"><label for="__tabbed_45_1">中文</label><label for="__tabbed_45_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"grow (n-ary Grow)"</p>
+</div>
+</div>
+</div>
+<h3 id="221244-hidebot-hide-bottom-edge">22.1.2.44 hideBot (Hide Bottom Edge)<a class="headerlink" href="#221244-hidebot-hide-bottom-edge" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="46:2"><input checked="checked" id="__tabbed_46_1" name="__tabbed_46" type="radio" /><input id="__tabbed_46_2" name="__tabbed_46" type="radio" /><div class="tabbed-labels"><label for="__tabbed_46_1">中文</label><label for="__tabbed_46_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"hideBot (Hide Bottom Edge)"</p>
+</div>
+</div>
+</div>
+<h3 id="221245-hideleft-hide-left-edge">22.1.2.45 hideLeft (Hide Left Edge)<a class="headerlink" href="#221245-hideleft-hide-left-edge" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="47:2"><input checked="checked" id="__tabbed_47_1" name="__tabbed_47" type="radio" /><input id="__tabbed_47_2" name="__tabbed_47" type="radio" /><div class="tabbed-labels"><label for="__tabbed_47_1">中文</label><label for="__tabbed_47_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"hideLeft (Hide Left Edge)"</p>
+</div>
+</div>
+</div>
+<h3 id="221246-hideright-hide-right-edge">22.1.2.46 hideRight (Hide Right Edge)<a class="headerlink" href="#221246-hideright-hide-right-edge" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="48:2"><input checked="checked" id="__tabbed_48_1" name="__tabbed_48" type="radio" /><input id="__tabbed_48_2" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="__tabbed_48_1">中文</label><label for="__tabbed_48_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"hideRight (Hide Right Edge)"</p>
+</div>
+</div>
+</div>
+<h3 id="221247-hidetop-hide-top-edge">22.1.2.47 hideTop (Hide Top Edge)<a class="headerlink" href="#221247-hidetop-hide-top-edge" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="49:2"><input checked="checked" id="__tabbed_49_1" name="__tabbed_49" type="radio" /><input id="__tabbed_49_2" name="__tabbed_49" type="radio" /><div class="tabbed-labels"><label for="__tabbed_49_1">中文</label><label for="__tabbed_49_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"hideTop (Hide Top Edge)"</p>
+</div>
+</div>
+</div>
+<h3 id="221248-intersp-inter-equation-spacing">22.1.2.48 interSp (Inter-Equation Spacing)<a class="headerlink" href="#221248-intersp-inter-equation-spacing" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="50:2"><input checked="checked" id="__tabbed_50_1" name="__tabbed_50" type="radio" /><input id="__tabbed_50_2" name="__tabbed_50" type="radio" /><div class="tabbed-labels"><label for="__tabbed_50_1">中文</label><label for="__tabbed_50_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"interSp (Inter-Equation Spacing)"</p>
+</div>
+</div>
+</div>
+<h3 id="221249-intlim-integral-limit-locations">22.1.2.49 intLim (Integral Limit Locations)<a class="headerlink" href="#221249-intlim-integral-limit-locations" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="51:2"><input checked="checked" id="__tabbed_51_1" name="__tabbed_51" type="radio" /><input id="__tabbed_51_2" name="__tabbed_51" type="radio" /><div class="tabbed-labels"><label for="__tabbed_51_1">中文</label><label for="__tabbed_51_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"intLim (Integral Limit Locations)"</p>
+</div>
+</div>
+</div>
+<h3 id="221250-intrasp-intra-equation-spacing">22.1.2.50 intraSp (Intra-Equation Spacing)<a class="headerlink" href="#221250-intrasp-intra-equation-spacing" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="52:2"><input checked="checked" id="__tabbed_52_1" name="__tabbed_52" type="radio" /><input id="__tabbed_52_2" name="__tabbed_52" type="radio" /><div class="tabbed-labels"><label for="__tabbed_52_1">中文</label><label for="__tabbed_52_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"intraSp (Intra-Equation Spacing)"</p>
+</div>
+</div>
+</div>
+<h3 id="221251-jc-justification">22.1.2.51 jc (Justification)<a class="headerlink" href="#221251-jc-justification" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="53:2"><input checked="checked" id="__tabbed_53_1" name="__tabbed_53" type="radio" /><input id="__tabbed_53_2" name="__tabbed_53" type="radio" /><div class="tabbed-labels"><label for="__tabbed_53_1">中文</label><label for="__tabbed_53_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"jc (Justification)"</p>
+</div>
+</div>
+</div>
+<h3 id="221252-lim-limit">22.1.2.52 lim (Limit)<a class="headerlink" href="#221252-lim-limit" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="54:2"><input checked="checked" id="__tabbed_54_1" name="__tabbed_54" type="radio" /><input id="__tabbed_54_2" name="__tabbed_54" type="radio" /><div class="tabbed-labels"><label for="__tabbed_54_1">中文</label><label for="__tabbed_54_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"lim (Limit)"</p>
+</div>
+</div>
+</div>
+<h3 id="221253-limloc-n-ary-limit-location">22.1.2.53 limLoc (n-ary Limit Location)<a class="headerlink" href="#221253-limloc-n-ary-limit-location" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="55:2"><input checked="checked" id="__tabbed_55_1" name="__tabbed_55" type="radio" /><input id="__tabbed_55_2" name="__tabbed_55" type="radio" /><div class="tabbed-labels"><label for="__tabbed_55_1">中文</label><label for="__tabbed_55_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"limLoc (n-ary Limit Location)"</p>
+</div>
+</div>
+</div>
+<h3 id="221254-limlow-lower-limit-object">22.1.2.54 limLow (Lower-Limit Object)<a class="headerlink" href="#221254-limlow-lower-limit-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="56:2"><input checked="checked" id="__tabbed_56_1" name="__tabbed_56" type="radio" /><input id="__tabbed_56_2" name="__tabbed_56" type="radio" /><div class="tabbed-labels"><label for="__tabbed_56_1">中文</label><label for="__tabbed_56_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"limLow (Lower-Limit Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221255-limlowpr-lower-limit-properties">22.1.2.55 limLowPr (Lower-Limit Properties)<a class="headerlink" href="#221255-limlowpr-lower-limit-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="57:2"><input checked="checked" id="__tabbed_57_1" name="__tabbed_57" type="radio" /><input id="__tabbed_57_2" name="__tabbed_57" type="radio" /><div class="tabbed-labels"><label for="__tabbed_57_1">中文</label><label for="__tabbed_57_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"limLowPr (Lower-Limit Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221256-limupp-upper-limit-object">22.1.2.56 limUpp (Upper-Limit Object)<a class="headerlink" href="#221256-limupp-upper-limit-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="58:2"><input checked="checked" id="__tabbed_58_1" name="__tabbed_58" type="radio" /><input id="__tabbed_58_2" name="__tabbed_58" type="radio" /><div class="tabbed-labels"><label for="__tabbed_58_1">中文</label><label for="__tabbed_58_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"limUpp (Upper-Limit Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221257-limupppr-upper-limit-properties">22.1.2.57 limUppPr (Upper-Limit Properties)<a class="headerlink" href="#221257-limupppr-upper-limit-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="59:2"><input checked="checked" id="__tabbed_59_1" name="__tabbed_59" type="radio" /><input id="__tabbed_59_2" name="__tabbed_59" type="radio" /><div class="tabbed-labels"><label for="__tabbed_59_1">中文</label><label for="__tabbed_59_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"limUppPr (Upper-Limit Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221258-lit-literal">22.1.2.58 lit (Literal)<a class="headerlink" href="#221258-lit-literal" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="60:2"><input checked="checked" id="__tabbed_60_1" name="__tabbed_60" type="radio" /><input id="__tabbed_60_2" name="__tabbed_60" type="radio" /><div class="tabbed-labels"><label for="__tabbed_60_1">中文</label><label for="__tabbed_60_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"lit (Literal)"</p>
+</div>
+</div>
+</div>
+<h3 id="221259-lmargin-left-margin">22.1.2.59 lMargin (Left Margin)<a class="headerlink" href="#221259-lmargin-left-margin" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="61:2"><input checked="checked" id="__tabbed_61_1" name="__tabbed_61" type="radio" /><input id="__tabbed_61_2" name="__tabbed_61" type="radio" /><div class="tabbed-labels"><label for="__tabbed_61_1">中文</label><label for="__tabbed_61_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"lMargin (Left Margin)"</p>
+</div>
+</div>
+</div>
+<h3 id="221260-m-matrix-object">22.1.2.60 m (Matrix Object)<a class="headerlink" href="#221260-m-matrix-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="62:2"><input checked="checked" id="__tabbed_62_1" name="__tabbed_62" type="radio" /><input id="__tabbed_62_2" name="__tabbed_62" type="radio" /><div class="tabbed-labels"><label for="__tabbed_62_1">中文</label><label for="__tabbed_62_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"m (Matrix Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221261-mathfont-math-font">22.1.2.61 mathFont (Math Font)<a class="headerlink" href="#221261-mathfont-math-font" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="63:2"><input checked="checked" id="__tabbed_63_1" name="__tabbed_63" type="radio" /><input id="__tabbed_63_2" name="__tabbed_63" type="radio" /><div class="tabbed-labels"><label for="__tabbed_63_1">中文</label><label for="__tabbed_63_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mathFont (Math Font)"</p>
+</div>
+</div>
+</div>
+<h3 id="221262-mathpr-math-properties">22.1.2.62 mathPr (Math Properties)<a class="headerlink" href="#221262-mathpr-math-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="64:2"><input checked="checked" id="__tabbed_64_1" name="__tabbed_64" type="radio" /><input id="__tabbed_64_2" name="__tabbed_64" type="radio" /><div class="tabbed-labels"><label for="__tabbed_64_1">中文</label><label for="__tabbed_64_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mathPr (Math Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221263-maxdist-maximum-distribution">22.1.2.63 maxDist (Maximum Distribution)<a class="headerlink" href="#221263-maxdist-maximum-distribution" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="65:2"><input checked="checked" id="__tabbed_65_1" name="__tabbed_65" type="radio" /><input id="__tabbed_65_2" name="__tabbed_65" type="radio" /><div class="tabbed-labels"><label for="__tabbed_65_1">中文</label><label for="__tabbed_65_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"maxDist (Maximum Distribution)"</p>
+</div>
+</div>
+</div>
+<h3 id="221264-mc-matrix-column">22.1.2.64 mc (Matrix Column)<a class="headerlink" href="#221264-mc-matrix-column" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="66:2"><input checked="checked" id="__tabbed_66_1" name="__tabbed_66" type="radio" /><input id="__tabbed_66_2" name="__tabbed_66" type="radio" /><div class="tabbed-labels"><label for="__tabbed_66_1">中文</label><label for="__tabbed_66_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mc (Matrix Column)"</p>
+</div>
+</div>
+</div>
+<h3 id="221265-mcjc-matrix-column-justification">22.1.2.65 mcJc (Matrix Column Justification)<a class="headerlink" href="#221265-mcjc-matrix-column-justification" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="67:2"><input checked="checked" id="__tabbed_67_1" name="__tabbed_67" type="radio" /><input id="__tabbed_67_2" name="__tabbed_67" type="radio" /><div class="tabbed-labels"><label for="__tabbed_67_1">中文</label><label for="__tabbed_67_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mcJc (Matrix Column Justification)"</p>
+</div>
+</div>
+</div>
+<h3 id="221266-mcpr-matrix-column-properties">22.1.2.66 mcPr (Matrix Column Properties)<a class="headerlink" href="#221266-mcpr-matrix-column-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="68:2"><input checked="checked" id="__tabbed_68_1" name="__tabbed_68" type="radio" /><input id="__tabbed_68_2" name="__tabbed_68" type="radio" /><div class="tabbed-labels"><label for="__tabbed_68_1">中文</label><label for="__tabbed_68_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mcPr (Matrix Column Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221267-mcs-matrix-columns">22.1.2.67 mcs (Matrix Columns)<a class="headerlink" href="#221267-mcs-matrix-columns" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="69:2"><input checked="checked" id="__tabbed_69_1" name="__tabbed_69" type="radio" /><input id="__tabbed_69_2" name="__tabbed_69" type="radio" /><div class="tabbed-labels"><label for="__tabbed_69_1">中文</label><label for="__tabbed_69_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mcs (Matrix Columns)"</p>
+</div>
+</div>
+</div>
+<h3 id="221268-mpr-matrix-properties">22.1.2.68 mPr (Matrix Properties)<a class="headerlink" href="#221268-mpr-matrix-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="70:2"><input checked="checked" id="__tabbed_70_1" name="__tabbed_70" type="radio" /><input id="__tabbed_70_2" name="__tabbed_70" type="radio" /><div class="tabbed-labels"><label for="__tabbed_70_1">中文</label><label for="__tabbed_70_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mPr (Matrix Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221269-mr-matrix-row">22.1.2.69 mr (Matrix Row)<a class="headerlink" href="#221269-mr-matrix-row" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="71:2"><input checked="checked" id="__tabbed_71_1" name="__tabbed_71" type="radio" /><input id="__tabbed_71_2" name="__tabbed_71" type="radio" /><div class="tabbed-labels"><label for="__tabbed_71_1">中文</label><label for="__tabbed_71_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"mr (Matrix Row)"</p>
+</div>
+</div>
+</div>
+<h3 id="221270-nary-n-ary-operator-object">22.1.2.70 nary (n-ary Operator Object)<a class="headerlink" href="#221270-nary-n-ary-operator-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="72:2"><input checked="checked" id="__tabbed_72_1" name="__tabbed_72" type="radio" /><input id="__tabbed_72_2" name="__tabbed_72" type="radio" /><div class="tabbed-labels"><label for="__tabbed_72_1">中文</label><label for="__tabbed_72_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"nary (n-ary Operator Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221271-narylim-n-ary-limit-location">22.1.2.71 naryLim (n-ary Limit Location)<a class="headerlink" href="#221271-narylim-n-ary-limit-location" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="73:2"><input checked="checked" id="__tabbed_73_1" name="__tabbed_73" type="radio" /><input id="__tabbed_73_2" name="__tabbed_73" type="radio" /><div class="tabbed-labels"><label for="__tabbed_73_1">中文</label><label for="__tabbed_73_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"naryLim (n-ary Limit Location)"</p>
+</div>
+</div>
+</div>
+<h3 id="221272-narypr-n-ary-properties">22.1.2.72 naryPr (n-ary Properties)<a class="headerlink" href="#221272-narypr-n-ary-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="74:2"><input checked="checked" id="__tabbed_74_1" name="__tabbed_74" type="radio" /><input id="__tabbed_74_2" name="__tabbed_74" type="radio" /><div class="tabbed-labels"><label for="__tabbed_74_1">中文</label><label for="__tabbed_74_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"naryPr (n-ary Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221273-nobreak-no-break">22.1.2.73 noBreak (No Break)<a class="headerlink" href="#221273-nobreak-no-break" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="75:2"><input checked="checked" id="__tabbed_75_1" name="__tabbed_75" type="radio" /><input id="__tabbed_75_2" name="__tabbed_75" type="radio" /><div class="tabbed-labels"><label for="__tabbed_75_1">中文</label><label for="__tabbed_75_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"noBreak (No Break)"</p>
+</div>
+</div>
+</div>
+<h3 id="221274-nor-normal-text">22.1.2.74 nor (Normal Text)<a class="headerlink" href="#221274-nor-normal-text" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="76:2"><input checked="checked" id="__tabbed_76_1" name="__tabbed_76" type="radio" /><input id="__tabbed_76_2" name="__tabbed_76" type="radio" /><div class="tabbed-labels"><label for="__tabbed_76_1">中文</label><label for="__tabbed_76_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"nor (Normal Text)"</p>
+</div>
+</div>
+</div>
+<h3 id="221275-num-numerator">22.1.2.75 num (Numerator)<a class="headerlink" href="#221275-num-numerator" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="77:2"><input checked="checked" id="__tabbed_77_1" name="__tabbed_77" type="radio" /><input id="__tabbed_77_2" name="__tabbed_77" type="radio" /><div class="tabbed-labels"><label for="__tabbed_77_1">中文</label><label for="__tabbed_77_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"num (Numerator)"</p>
+</div>
+</div>
+</div>
+<h3 id="221276-objdist-object-distribution">22.1.2.76 objDist (Object Distribution)<a class="headerlink" href="#221276-objdist-object-distribution" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="78:2"><input checked="checked" id="__tabbed_78_1" name="__tabbed_78" type="radio" /><input id="__tabbed_78_2" name="__tabbed_78" type="radio" /><div class="tabbed-labels"><label for="__tabbed_78_1">中文</label><label for="__tabbed_78_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"objDist (Object Distribution)"</p>
+</div>
+</div>
+</div>
+<h3 id="221277-omath-office-math">22.1.2.77 oMath (Office Math)<a class="headerlink" href="#221277-omath-office-math" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="79:2"><input checked="checked" id="__tabbed_79_1" name="__tabbed_79" type="radio" /><input id="__tabbed_79_2" name="__tabbed_79" type="radio" /><div class="tabbed-labels"><label for="__tabbed_79_1">中文</label><label for="__tabbed_79_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"oMath (Office Math)"</p>
+</div>
+</div>
+</div>
+<h3 id="221278-omathpara-office-math-paragraph">22.1.2.78 oMathPara (Office Math Paragraph)<a class="headerlink" href="#221278-omathpara-office-math-paragraph" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="80:2"><input checked="checked" id="__tabbed_80_1" name="__tabbed_80" type="radio" /><input id="__tabbed_80_2" name="__tabbed_80" type="radio" /><div class="tabbed-labels"><label for="__tabbed_80_1">中文</label><label for="__tabbed_80_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"oMathPara (Office Math Paragraph)"</p>
+</div>
+</div>
+</div>
+<h3 id="221279-omathparapr-office-math-paragraph-properties">22.1.2.79 oMathParaPr (Office Math Paragraph Properties)<a class="headerlink" href="#221279-omathparapr-office-math-paragraph-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="81:2"><input checked="checked" id="__tabbed_81_1" name="__tabbed_81" type="radio" /><input id="__tabbed_81_2" name="__tabbed_81" type="radio" /><div class="tabbed-labels"><label for="__tabbed_81_1">中文</label><label for="__tabbed_81_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"oMathParaPr (Office Math Paragraph Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221280-opemu-operator-emulator">22.1.2.80 opEmu (Operator Emulator)<a class="headerlink" href="#221280-opemu-operator-emulator" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="82:2"><input checked="checked" id="__tabbed_82_1" name="__tabbed_82" type="radio" /><input id="__tabbed_82_2" name="__tabbed_82" type="radio" /><div class="tabbed-labels"><label for="__tabbed_82_1">中文</label><label for="__tabbed_82_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"opEmu (Operator Emulator)"</p>
+</div>
+</div>
+</div>
+<h3 id="221281-phant-phantom-object">22.1.2.81 phant (Phantom Object)<a class="headerlink" href="#221281-phant-phantom-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="83:2"><input checked="checked" id="__tabbed_83_1" name="__tabbed_83" type="radio" /><input id="__tabbed_83_2" name="__tabbed_83" type="radio" /><div class="tabbed-labels"><label for="__tabbed_83_1">中文</label><label for="__tabbed_83_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"phant (Phantom Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221282-phantpr-phantom-properties">22.1.2.82 phantPr (Phantom Properties)<a class="headerlink" href="#221282-phantpr-phantom-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="84:2"><input checked="checked" id="__tabbed_84_1" name="__tabbed_84" type="radio" /><input id="__tabbed_84_2" name="__tabbed_84" type="radio" /><div class="tabbed-labels"><label for="__tabbed_84_1">中文</label><label for="__tabbed_84_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"phantPr (Phantom Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221283-plchide-hide-placeholders-matrix">22.1.2.83 plcHide (Hide Placeholders (Matrix))<a class="headerlink" href="#221283-plchide-hide-placeholders-matrix" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="85:2"><input checked="checked" id="__tabbed_85_1" name="__tabbed_85" type="radio" /><input id="__tabbed_85_2" name="__tabbed_85" type="radio" /><div class="tabbed-labels"><label for="__tabbed_85_1">中文</label><label for="__tabbed_85_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"plcHide (Hide Placeholders (Matrix))"</p>
+</div>
+</div>
+</div>
+<h3 id="221284-pos-position">22.1.2.84 pos (Position)<a class="headerlink" href="#221284-pos-position" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="86:2"><input checked="checked" id="__tabbed_86_1" name="__tabbed_86" type="radio" /><input id="__tabbed_86_2" name="__tabbed_86" type="radio" /><div class="tabbed-labels"><label for="__tabbed_86_1">中文</label><label for="__tabbed_86_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"pos (Position)"</p>
+</div>
+</div>
+</div>
+<h3 id="221285-postsp-post-paragraph-spacing">22.1.2.85 postSp (Post-Paragraph Spacing)<a class="headerlink" href="#221285-postsp-post-paragraph-spacing" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="87:2"><input checked="checked" id="__tabbed_87_1" name="__tabbed_87" type="radio" /><input id="__tabbed_87_2" name="__tabbed_87" type="radio" /><div class="tabbed-labels"><label for="__tabbed_87_1">中文</label><label for="__tabbed_87_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"postSp (Post-Paragraph Spacing)"</p>
+</div>
+</div>
+</div>
+<h3 id="221286-presp-pre-paragraph-spacing">22.1.2.86 preSp (Pre-Paragraph Spacing)<a class="headerlink" href="#221286-presp-pre-paragraph-spacing" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="88:2"><input checked="checked" id="__tabbed_88_1" name="__tabbed_88" type="radio" /><input id="__tabbed_88_2" name="__tabbed_88" type="radio" /><div class="tabbed-labels"><label for="__tabbed_88_1">中文</label><label for="__tabbed_88_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"preSp (Pre-Paragraph Spacing)"</p>
+</div>
+</div>
+</div>
+<h3 id="221287-r-run">22.1.2.87 r (Run)<a class="headerlink" href="#221287-r-run" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="89:2"><input checked="checked" id="__tabbed_89_1" name="__tabbed_89" type="radio" /><input id="__tabbed_89_2" name="__tabbed_89" type="radio" /><div class="tabbed-labels"><label for="__tabbed_89_1">中文</label><label for="__tabbed_89_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"r (Run)"</p>
+</div>
+</div>
+</div>
+<h3 id="221288-rad-radical-object">22.1.2.88 rad (Radical Object)<a class="headerlink" href="#221288-rad-radical-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="90:2"><input checked="checked" id="__tabbed_90_1" name="__tabbed_90" type="radio" /><input id="__tabbed_90_2" name="__tabbed_90" type="radio" /><div class="tabbed-labels"><label for="__tabbed_90_1">中文</label><label for="__tabbed_90_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"rad (Radical Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="221289-radpr-radical-properties">22.1.2.89 radPr (Radical Properties)<a class="headerlink" href="#221289-radpr-radical-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="91:2"><input checked="checked" id="__tabbed_91_1" name="__tabbed_91" type="radio" /><input id="__tabbed_91_2" name="__tabbed_91" type="radio" /><div class="tabbed-labels"><label for="__tabbed_91_1">中文</label><label for="__tabbed_91_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"radPr (Radical Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221290-rmargin-right-margin">22.1.2.90 rMargin (Right Margin)<a class="headerlink" href="#221290-rmargin-right-margin" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="92:2"><input checked="checked" id="__tabbed_92_1" name="__tabbed_92" type="radio" /><input id="__tabbed_92_2" name="__tabbed_92" type="radio" /><div class="tabbed-labels"><label for="__tabbed_92_1">中文</label><label for="__tabbed_92_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"rMargin (Right Margin)"</p>
+</div>
+</div>
+</div>
+<h3 id="221291-rpr-run-properties">22.1.2.91 rPr (Run Properties)<a class="headerlink" href="#221291-rpr-run-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="93:2"><input checked="checked" id="__tabbed_93_1" name="__tabbed_93" type="radio" /><input id="__tabbed_93_2" name="__tabbed_93" type="radio" /><div class="tabbed-labels"><label for="__tabbed_93_1">中文</label><label for="__tabbed_93_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"rPr (Run Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="221292-rsp-row-spacing-array">22.1.2.92 rSp (Row Spacing (Array))<a class="headerlink" href="#221292-rsp-row-spacing-array" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="94:2"><input checked="checked" id="__tabbed_94_1" name="__tabbed_94" type="radio" /><input id="__tabbed_94_2" name="__tabbed_94" type="radio" /><div class="tabbed-labels"><label for="__tabbed_94_1">中文</label><label for="__tabbed_94_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"rSp (Row Spacing (Array))"</p>
+</div>
+</div>
+</div>
+<h3 id="221293-rsprule-row-spacing-rule">22.1.2.93 rSpRule (Row Spacing Rule)<a class="headerlink" href="#221293-rsprule-row-spacing-rule" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="95:2"><input checked="checked" id="__tabbed_95_1" name="__tabbed_95" type="radio" /><input id="__tabbed_95_2" name="__tabbed_95" type="radio" /><div class="tabbed-labels"><label for="__tabbed_95_1">中文</label><label for="__tabbed_95_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"rSpRule (Row Spacing Rule)"</p>
+</div>
+</div>
+</div>
+<h3 id="221294-scr-script">22.1.2.94 scr (Script)<a class="headerlink" href="#221294-scr-script" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="96:2"><input checked="checked" id="__tabbed_96_1" name="__tabbed_96" type="radio" /><input id="__tabbed_96_2" name="__tabbed_96" type="radio" /><div class="tabbed-labels"><label for="__tabbed_96_1">中文</label><label for="__tabbed_96_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"scr (Script)"</p>
+</div>
+</div>
+</div>
+<h3 id="221295-sepchr-delimiter-separator-character">22.1.2.95 sepChr (Delimiter Separator Character)<a class="headerlink" href="#221295-sepchr-delimiter-separator-character" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="97:2"><input checked="checked" id="__tabbed_97_1" name="__tabbed_97" type="radio" /><input id="__tabbed_97_2" name="__tabbed_97" type="radio" /><div class="tabbed-labels"><label for="__tabbed_97_1">中文</label><label for="__tabbed_97_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sepChr (Delimiter Separator Character)"</p>
+</div>
+</div>
+</div>
+<h3 id="221296-show-phantom-show">22.1.2.96 show (Phantom Show)<a class="headerlink" href="#221296-show-phantom-show" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="98:2"><input checked="checked" id="__tabbed_98_1" name="__tabbed_98" type="radio" /><input id="__tabbed_98_2" name="__tabbed_98" type="radio" /><div class="tabbed-labels"><label for="__tabbed_98_1">中文</label><label for="__tabbed_98_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"show (Phantom Show)"</p>
+</div>
+</div>
+</div>
+<h3 id="221297-shp-shape-delimiters">22.1.2.97 shp (Shape (Delimiters))<a class="headerlink" href="#221297-shp-shape-delimiters" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="99:2"><input checked="checked" id="__tabbed_99_1" name="__tabbed_99" type="radio" /><input id="__tabbed_99_2" name="__tabbed_99" type="radio" /><div class="tabbed-labels"><label for="__tabbed_99_1">中文</label><label for="__tabbed_99_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"shp (Shape (Delimiters))"</p>
+</div>
+</div>
+</div>
+<h3 id="221298-smallfrac-small-fraction">22.1.2.98 smallFrac (Small Fraction)<a class="headerlink" href="#221298-smallfrac-small-fraction" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="100:2"><input checked="checked" id="__tabbed_100_1" name="__tabbed_100" type="radio" /><input id="__tabbed_100_2" name="__tabbed_100" type="radio" /><div class="tabbed-labels"><label for="__tabbed_100_1">中文</label><label for="__tabbed_100_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"smallFrac (Small Fraction)"</p>
+</div>
+</div>
+</div>
+<h3 id="221299-spre-pre-sub-superscript-object">22.1.2.99 sPre (Pre-Sub-Superscript Object)<a class="headerlink" href="#221299-spre-pre-sub-superscript-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="101:2"><input checked="checked" id="__tabbed_101_1" name="__tabbed_101" type="radio" /><input id="__tabbed_101_2" name="__tabbed_101" type="radio" /><div class="tabbed-labels"><label for="__tabbed_101_1">中文</label><label for="__tabbed_101_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sPre (Pre-Sub-Superscript Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212100-sprepr-pre-sub-superscript-properties">22.1.2.100 sPrePr (Pre-Sub-Superscript Properties)<a class="headerlink" href="#2212100-sprepr-pre-sub-superscript-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="102:2"><input checked="checked" id="__tabbed_102_1" name="__tabbed_102" type="radio" /><input id="__tabbed_102_2" name="__tabbed_102" type="radio" /><div class="tabbed-labels"><label for="__tabbed_102_1">中文</label><label for="__tabbed_102_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sPrePr (Pre-Sub-Superscript Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212101-ssub-subscript-object">22.1.2.101 sSub (Subscript Object)<a class="headerlink" href="#2212101-ssub-subscript-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="103:2"><input checked="checked" id="__tabbed_103_1" name="__tabbed_103" type="radio" /><input id="__tabbed_103_2" name="__tabbed_103" type="radio" /><div class="tabbed-labels"><label for="__tabbed_103_1">中文</label><label for="__tabbed_103_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sSub (Subscript Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212102-ssubpr-subscript-properties">22.1.2.102 sSubPr (Subscript Properties)<a class="headerlink" href="#2212102-ssubpr-subscript-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="104:2"><input checked="checked" id="__tabbed_104_1" name="__tabbed_104" type="radio" /><input id="__tabbed_104_2" name="__tabbed_104" type="radio" /><div class="tabbed-labels"><label for="__tabbed_104_1">中文</label><label for="__tabbed_104_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sSubPr (Subscript Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212103-ssubsup-sub-superscript-object">22.1.2.103 sSubSup (Sub-Superscript Object)<a class="headerlink" href="#2212103-ssubsup-sub-superscript-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="105:2"><input checked="checked" id="__tabbed_105_1" name="__tabbed_105" type="radio" /><input id="__tabbed_105_2" name="__tabbed_105" type="radio" /><div class="tabbed-labels"><label for="__tabbed_105_1">中文</label><label for="__tabbed_105_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sSubSup (Sub-Superscript Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212104-ssubsuppr-sub-superscript-properties">22.1.2.104 sSubSupPr (Sub-Superscript Properties)<a class="headerlink" href="#2212104-ssubsuppr-sub-superscript-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="106:2"><input checked="checked" id="__tabbed_106_1" name="__tabbed_106" type="radio" /><input id="__tabbed_106_2" name="__tabbed_106" type="radio" /><div class="tabbed-labels"><label for="__tabbed_106_1">中文</label><label for="__tabbed_106_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sSubSupPr (Sub-Superscript Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212105-ssup-superscript-object">22.1.2.105 sSup (Superscript Object)<a class="headerlink" href="#2212105-ssup-superscript-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="107:2"><input checked="checked" id="__tabbed_107_1" name="__tabbed_107" type="radio" /><input id="__tabbed_107_2" name="__tabbed_107" type="radio" /><div class="tabbed-labels"><label for="__tabbed_107_1">中文</label><label for="__tabbed_107_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sSup (Superscript Object)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212106-ssuppr-superscript-properties">22.1.2.106 sSupPr (Superscript Properties)<a class="headerlink" href="#2212106-ssuppr-superscript-properties" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="108:2"><input checked="checked" id="__tabbed_108_1" name="__tabbed_108" type="radio" /><input id="__tabbed_108_2" name="__tabbed_108" type="radio" /><div class="tabbed-labels"><label for="__tabbed_108_1">中文</label><label for="__tabbed_108_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sSupPr (Superscript Properties)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212107-strikebltr-border-box-strikethrough-bottom-left-to-top-right">22.1.2.107 strikeBLTR (Border Box Strikethrough Bottom-Left to Top-Right)<a class="headerlink" href="#2212107-strikebltr-border-box-strikethrough-bottom-left-to-top-right" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="109:2"><input checked="checked" id="__tabbed_109_1" name="__tabbed_109" type="radio" /><input id="__tabbed_109_2" name="__tabbed_109" type="radio" /><div class="tabbed-labels"><label for="__tabbed_109_1">中文</label><label for="__tabbed_109_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"strikeBLTR (Border Box Strikethrough Bottom-Left to Top-Right)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212108-strikeh-border-box-strikethrough-horizontal">22.1.2.108 strikeH (Border Box Strikethrough Horizontal)<a class="headerlink" href="#2212108-strikeh-border-box-strikethrough-horizontal" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="110:2"><input checked="checked" id="__tabbed_110_1" name="__tabbed_110" type="radio" /><input id="__tabbed_110_2" name="__tabbed_110" type="radio" /><div class="tabbed-labels"><label for="__tabbed_110_1">中文</label><label for="__tabbed_110_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"strikeH (Border Box Strikethrough Horizontal)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212109-striketlbr-border-box-strikethrough-top-left-to-bottom-right">22.1.2.109 strikeTLBR (Border Box Strikethrough Top-Left to Bottom-Right)<a class="headerlink" href="#2212109-striketlbr-border-box-strikethrough-top-left-to-bottom-right" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="111:2"><input checked="checked" id="__tabbed_111_1" name="__tabbed_111" type="radio" /><input id="__tabbed_111_2" name="__tabbed_111" type="radio" /><div class="tabbed-labels"><label for="__tabbed_111_1">中文</label><label for="__tabbed_111_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"strikeTLBR (Border Box Strikethrough Top-Left to Bottom-Right)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212110-strikev-border-box-strikethrough-vertical">22.1.2.110 strikeV (Border Box Strikethrough Vertical)<a class="headerlink" href="#2212110-strikev-border-box-strikethrough-vertical" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="112:2"><input checked="checked" id="__tabbed_112_1" name="__tabbed_112" type="radio" /><input id="__tabbed_112_2" name="__tabbed_112" type="radio" /><div class="tabbed-labels"><label for="__tabbed_112_1">中文</label><label for="__tabbed_112_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"strikeV (Border Box Strikethrough Vertical)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212111-sty-style">22.1.2.111 sty (style)<a class="headerlink" href="#2212111-sty-style" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="113:2"><input checked="checked" id="__tabbed_113_1" name="__tabbed_113" type="radio" /><input id="__tabbed_113_2" name="__tabbed_113" type="radio" /><div class="tabbed-labels"><label for="__tabbed_113_1">中文</label><label for="__tabbed_113_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sty (style)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212112-sub-subscript-pre-sub-superscript">22.1.2.112 sub (Subscript (Pre-Sub-Superscript))<a class="headerlink" href="#2212112-sub-subscript-pre-sub-superscript" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="114:2"><input checked="checked" id="__tabbed_114_1" name="__tabbed_114" type="radio" /><input id="__tabbed_114_2" name="__tabbed_114" type="radio" /><div class="tabbed-labels"><label for="__tabbed_114_1">中文</label><label for="__tabbed_114_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sub (Subscript (Pre-Sub-Superscript))"</p>
+</div>
+</div>
+</div>
+<h3 id="2212113-subhide-hide-subscript-n-ary">22.1.2.113 subHide (Hide Subscript (n-ary))<a class="headerlink" href="#2212113-subhide-hide-subscript-n-ary" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="115:2"><input checked="checked" id="__tabbed_115_1" name="__tabbed_115" type="radio" /><input id="__tabbed_115_2" name="__tabbed_115" type="radio" /><div class="tabbed-labels"><label for="__tabbed_115_1">中文</label><label for="__tabbed_115_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"subHide (Hide Subscript (n-ary))"</p>
+</div>
+</div>
+</div>
+<h3 id="2212114-sup-superscript-superscript-object">22.1.2.114 sup (Superscript (Superscript object))<a class="headerlink" href="#2212114-sup-superscript-superscript-object" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="116:2"><input checked="checked" id="__tabbed_116_1" name="__tabbed_116" type="radio" /><input id="__tabbed_116_2" name="__tabbed_116" type="radio" /><div class="tabbed-labels"><label for="__tabbed_116_1">中文</label><label for="__tabbed_116_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"sup (Superscript (Superscript object))"</p>
+</div>
+</div>
+</div>
+<h3 id="2212115-suphide-hide-superscript-n-ary">22.1.2.115 supHide (Hide Superscript (n-ary))<a class="headerlink" href="#2212115-suphide-hide-superscript-n-ary" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="117:2"><input checked="checked" id="__tabbed_117_1" name="__tabbed_117" type="radio" /><input id="__tabbed_117_2" name="__tabbed_117" type="radio" /><div class="tabbed-labels"><label for="__tabbed_117_1">中文</label><label for="__tabbed_117_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"supHide (Hide Superscript (n-ary))"</p>
+</div>
+</div>
+</div>
+<h3 id="2212116-t-text">22.1.2.116 t (Text)<a class="headerlink" href="#2212116-t-text" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="118:2"><input checked="checked" id="__tabbed_118_1" name="__tabbed_118" type="radio" /><input id="__tabbed_118_2" name="__tabbed_118" type="radio" /><div class="tabbed-labels"><label for="__tabbed_118_1">中文</label><label for="__tabbed_118_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"t (Text)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212117-transp-transparent-phantom">22.1.2.117 transp (Transparent (Phantom))<a class="headerlink" href="#2212117-transp-transparent-phantom" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="119:2"><input checked="checked" id="__tabbed_119_1" name="__tabbed_119" type="radio" /><input id="__tabbed_119_2" name="__tabbed_119" type="radio" /><div class="tabbed-labels"><label for="__tabbed_119_1">中文</label><label for="__tabbed_119_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"transp (Transparent (Phantom))"</p>
+</div>
+</div>
+</div>
+<h3 id="2212118-type-fraction-type">22.1.2.118 type (Fraction type)<a class="headerlink" href="#2212118-type-fraction-type" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="120:2"><input checked="checked" id="__tabbed_120_1" name="__tabbed_120" type="radio" /><input id="__tabbed_120_2" name="__tabbed_120" type="radio" /><div class="tabbed-labels"><label for="__tabbed_120_1">中文</label><label for="__tabbed_120_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"type (Fraction type)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212119-vertjc-vertical-justification">22.1.2.119 vertJc (Vertical Justification)<a class="headerlink" href="#2212119-vertjc-vertical-justification" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="121:2"><input checked="checked" id="__tabbed_121_1" name="__tabbed_121" type="radio" /><input id="__tabbed_121_2" name="__tabbed_121" type="radio" /><div class="tabbed-labels"><label for="__tabbed_121_1">中文</label><label for="__tabbed_121_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"vertJc (Vertical Justification)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212120-wrapindent-wrap-indent">22.1.2.120 wrapIndent (Wrap Indent)<a class="headerlink" href="#2212120-wrapindent-wrap-indent" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="122:2"><input checked="checked" id="__tabbed_122_1" name="__tabbed_122" type="radio" /><input id="__tabbed_122_2" name="__tabbed_122" type="radio" /><div class="tabbed-labels"><label for="__tabbed_122_1">中文</label><label for="__tabbed_122_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"wrapIndent (Wrap Indent)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212121-wrapright-wrap-right">22.1.2.121 wrapRight (Wrap Right)<a class="headerlink" href="#2212121-wrapright-wrap-right" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="123:2"><input checked="checked" id="__tabbed_123_1" name="__tabbed_123" type="radio" /><input id="__tabbed_123_2" name="__tabbed_123" type="radio" /><div class="tabbed-labels"><label for="__tabbed_123_1">中文</label><label for="__tabbed_123_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"wrapRight (Wrap Right)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212122-zeroasc-phantom-zero-ascent">22.1.2.122 zeroAsc (Phantom Zero Ascent)<a class="headerlink" href="#2212122-zeroasc-phantom-zero-ascent" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="124:2"><input checked="checked" id="__tabbed_124_1" name="__tabbed_124" type="radio" /><input id="__tabbed_124_2" name="__tabbed_124" type="radio" /><div class="tabbed-labels"><label for="__tabbed_124_1">中文</label><label for="__tabbed_124_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"zeroAsc (Phantom Zero Ascent)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212123-zerodesc-phantom-zero-descent">22.1.2.123 zeroDesc (Phantom Zero Descent)<a class="headerlink" href="#2212123-zerodesc-phantom-zero-descent" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="125:2"><input checked="checked" id="__tabbed_125_1" name="__tabbed_125" type="radio" /><input id="__tabbed_125_2" name="__tabbed_125" type="radio" /><div class="tabbed-labels"><label for="__tabbed_125_1">中文</label><label for="__tabbed_125_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"zeroDesc (Phantom Zero Descent)"</p>
+</div>
+</div>
+</div>
+<h3 id="2212124-zerowid-phantom-zero-width">22.1.2.124 zeroWid (Phantom Zero Width)<a class="headerlink" href="#2212124-zerowid-phantom-zero-width" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="126:2"><input checked="checked" id="__tabbed_126_1" name="__tabbed_126" type="radio" /><input id="__tabbed_126_2" name="__tabbed_126" type="radio" /><div class="tabbed-labels"><label for="__tabbed_126_1">中文</label><label for="__tabbed_126_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"zeroWid (Phantom Zero Width)"</p>
+</div>
+</div>
+</div>
+<h2 id="2213-simple-types">22.1.3 Simple Types<a class="headerlink" href="#2213-simple-types" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="127:2"><input checked="checked" id="__tabbed_127_1" name="__tabbed_127" type="radio" /><input id="__tabbed_127_2" name="__tabbed_127" type="radio" /><div class="tabbed-labels"><label for="__tabbed_127_1">中文</label><label for="__tabbed_127_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"Simple Types"</p>
+</div>
+</div>
+</div>
+<h3 id="22131-st_breakbin-break-binary-operators">22.1.3.1 ST_BreakBin (Break Binary Operators)<a class="headerlink" href="#22131-st_breakbin-break-binary-operators" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="128:2"><input checked="checked" id="__tabbed_128_1" name="__tabbed_128" type="radio" /><input id="__tabbed_128_2" name="__tabbed_128" type="radio" /><div class="tabbed-labels"><label for="__tabbed_128_1">中文</label><label for="__tabbed_128_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_BreakBin (Break Binary Operators)"</p>
+</div>
+</div>
+</div>
+<h3 id="22132-st_breakbinsub-break-on-binary-subtraction">22.1.3.2 ST_BreakBinSub (Break on Binary Subtraction)<a class="headerlink" href="#22132-st_breakbinsub-break-on-binary-subtraction" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="129:2"><input checked="checked" id="__tabbed_129_1" name="__tabbed_129" type="radio" /><input id="__tabbed_129_2" name="__tabbed_129" type="radio" /><div class="tabbed-labels"><label for="__tabbed_129_1">中文</label><label for="__tabbed_129_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_BreakBinSub (Break on Binary Subtraction)"</p>
+</div>
+</div>
+</div>
+<h3 id="22133-st_char-character">22.1.3.3 ST_Char (Character)<a class="headerlink" href="#22133-st_char-character" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="130:2"><input checked="checked" id="__tabbed_130_1" name="__tabbed_130" type="radio" /><input id="__tabbed_130_2" name="__tabbed_130" type="radio" /><div class="tabbed-labels"><label for="__tabbed_130_1">中文</label><label for="__tabbed_130_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Char (Character)"</p>
+</div>
+</div>
+</div>
+<h3 id="22134-st_ftype-fraction-type">22.1.3.4 ST_FType (Fraction Type)<a class="headerlink" href="#22134-st_ftype-fraction-type" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="131:2"><input checked="checked" id="__tabbed_131_1" name="__tabbed_131" type="radio" /><input id="__tabbed_131_2" name="__tabbed_131" type="radio" /><div class="tabbed-labels"><label for="__tabbed_131_1">中文</label><label for="__tabbed_131_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_FType (Fraction Type)"</p>
+</div>
+</div>
+</div>
+<h3 id="22135-st_integer2-integer-value--2-to-2">22.1.3.5 ST_Integer2 (Integer value (-2 to 2))<a class="headerlink" href="#22135-st_integer2-integer-value--2-to-2" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="132:2"><input checked="checked" id="__tabbed_132_1" name="__tabbed_132" type="radio" /><input id="__tabbed_132_2" name="__tabbed_132" type="radio" /><div class="tabbed-labels"><label for="__tabbed_132_1">中文</label><label for="__tabbed_132_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Integer2 (Integer value (-2 to 2))"</p>
+</div>
+</div>
+</div>
+<h3 id="22136-st_integer255-integer-value-1-to-255">22.1.3.6 ST_Integer255 (Integer value (1 to 255))<a class="headerlink" href="#22136-st_integer255-integer-value-1-to-255" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="133:2"><input checked="checked" id="__tabbed_133_1" name="__tabbed_133" type="radio" /><input id="__tabbed_133_2" name="__tabbed_133" type="radio" /><div class="tabbed-labels"><label for="__tabbed_133_1">中文</label><label for="__tabbed_133_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Integer255 (Integer value (1 to 255))"</p>
+</div>
+</div>
+</div>
+<h3 id="22137-st_jc-justification">22.1.3.7 ST_Jc (Justification)<a class="headerlink" href="#22137-st_jc-justification" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="134:2"><input checked="checked" id="__tabbed_134_1" name="__tabbed_134" type="radio" /><input id="__tabbed_134_2" name="__tabbed_134" type="radio" /><div class="tabbed-labels"><label for="__tabbed_134_1">中文</label><label for="__tabbed_134_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Jc (Justification)"</p>
+</div>
+</div>
+</div>
+<h3 id="22138-st_limloc-limit-location">22.1.3.8 ST_LimLoc (Limit Location)<a class="headerlink" href="#22138-st_limloc-limit-location" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="135:2"><input checked="checked" id="__tabbed_135_1" name="__tabbed_135" type="radio" /><input id="__tabbed_135_2" name="__tabbed_135" type="radio" /><div class="tabbed-labels"><label for="__tabbed_135_1">中文</label><label for="__tabbed_135_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_LimLoc (Limit Location)"</p>
+</div>
+</div>
+</div>
+<h3 id="22139-st_script-script">22.1.3.9 ST_Script (Script)<a class="headerlink" href="#22139-st_script-script" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="136:2"><input checked="checked" id="__tabbed_136_1" name="__tabbed_136" type="radio" /><input id="__tabbed_136_2" name="__tabbed_136" type="radio" /><div class="tabbed-labels"><label for="__tabbed_136_1">中文</label><label for="__tabbed_136_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Script (Script)"</p>
+</div>
+</div>
+</div>
+<h3 id="221310-st_shp-shape-delimiters">22.1.3.10 ST_Shp (Shape (Delimiters))<a class="headerlink" href="#221310-st_shp-shape-delimiters" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="137:2"><input checked="checked" id="__tabbed_137_1" name="__tabbed_137" type="radio" /><input id="__tabbed_137_2" name="__tabbed_137" type="radio" /><div class="tabbed-labels"><label for="__tabbed_137_1">中文</label><label for="__tabbed_137_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Shp (Shape (Delimiters))"</p>
+</div>
+</div>
+</div>
+<h3 id="221311-st_spacingrule-spacing-rule">22.1.3.11 ST_SpacingRule (Spacing Rule)<a class="headerlink" href="#221311-st_spacingrule-spacing-rule" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="138:2"><input checked="checked" id="__tabbed_138_1" name="__tabbed_138" type="radio" /><input id="__tabbed_138_2" name="__tabbed_138" type="radio" /><div class="tabbed-labels"><label for="__tabbed_138_1">中文</label><label for="__tabbed_138_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_SpacingRule (Spacing Rule)"</p>
+</div>
+</div>
+</div>
+<h3 id="221312-st_style-style">22.1.3.12 ST_Style (Style)<a class="headerlink" href="#221312-st_style-style" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="139:2"><input checked="checked" id="__tabbed_139_1" name="__tabbed_139" type="radio" /><input id="__tabbed_139_2" name="__tabbed_139" type="radio" /><div class="tabbed-labels"><label for="__tabbed_139_1">中文</label><label for="__tabbed_139_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_Style (Style)"</p>
+</div>
+</div>
+</div>
+<h3 id="221313-st_topbot-top-bottom">22.1.3.13 ST_TopBot (Top-Bottom)<a class="headerlink" href="#221313-st_topbot-top-bottom" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="140:2"><input checked="checked" id="__tabbed_140_1" name="__tabbed_140" type="radio" /><input id="__tabbed_140_2" name="__tabbed_140" type="radio" /><div class="tabbed-labels"><label for="__tabbed_140_1">中文</label><label for="__tabbed_140_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_TopBot (Top-Bottom)"</p>
+</div>
+</div>
+</div>
+<h3 id="221314-st_unsignedinteger-unsigned-integer">22.1.3.14 ST_UnSignedInteger (Unsigned integer.)<a class="headerlink" href="#221314-st_unsignedinteger-unsigned-integer" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="141:2"><input checked="checked" id="__tabbed_141_1" name="__tabbed_141" type="radio" /><input id="__tabbed_141_2" name="__tabbed_141" type="radio" /><div class="tabbed-labels"><label for="__tabbed_141_1">中文</label><label for="__tabbed_141_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block">
+<p>"ST_UnSignedInteger (Unsigned integer.)"</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

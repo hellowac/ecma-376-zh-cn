@@ -1,0 +1,3985 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter-13/">
+      
+      
+        <link rel="next" href="../chapter-15/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>14. DrawingML - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#14-drawingml" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              14. DrawingML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#141-drawingml-特定术语词汇表" class="md-nav__link">
+    14.1 DrawingML 特定术语词汇表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-部件概览" class="md-nav__link">
+    14.2 部件概览
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2 部件概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1421-图表部件" class="md-nav__link">
+    14.2.1 图表部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1422-图表绘制部件" class="md-nav__link">
+    14.2.2 图表绘制部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1423-绘制颜色部件" class="md-nav__link">
+    14.2.3 绘制颜色部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1424-绘制数据部件" class="md-nav__link">
+    14.2.4 绘制数据部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1425-绘制布局定义部件" class="md-nav__link">
+    14.2.5 绘制布局定义部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1426-绘制样式部件" class="md-nav__link">
+    14.2.6 绘制样式部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1427-主题部件" class="md-nav__link">
+    14.2.7 主题部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1428-主题覆盖部件" class="md-nav__link">
+    14.2.8 主题覆盖部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1429-表格样式部件" class="md-nav__link">
+    14.2.9 表格样式部件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#141-drawingml-特定术语词汇表" class="md-nav__link">
+    14.1 DrawingML 特定术语词汇表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#142-部件概览" class="md-nav__link">
+    14.2 部件概览
+  </a>
+  
+    <nav class="md-nav" aria-label="14.2 部件概览">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1421-图表部件" class="md-nav__link">
+    14.2.1 图表部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1422-图表绘制部件" class="md-nav__link">
+    14.2.2 图表绘制部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1423-绘制颜色部件" class="md-nav__link">
+    14.2.3 绘制颜色部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1424-绘制数据部件" class="md-nav__link">
+    14.2.4 绘制数据部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1425-绘制布局定义部件" class="md-nav__link">
+    14.2.5 绘制布局定义部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1426-绘制样式部件" class="md-nav__link">
+    14.2.6 绘制样式部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1427-主题部件" class="md-nav__link">
+    14.2.7 主题部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1428-主题覆盖部件" class="md-nav__link">
+    14.2.8 主题覆盖部件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1429-表格样式部件" class="md-nav__link">
+    14.2.9 表格样式部件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="14-drawingml">14. DrawingML<a class="headerlink" href="#14-drawingml" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>本节中定义的关系项和部件由 WordprocessingML ([§11])、SpreadsheetML ([§12]) 和PresentationML ([§13]) 环境中的一个或多个使用。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>DrawingML</strong></p>
+<p>The relationship items and parts defined in this clause are used by one or more of WordprocessingML ([§11]), SpreadsheetML ([§12]), and PresentationML ([§13]) environments.</p>
+</div>
+</div>
+</div>
+<h2 id="141-drawingml-特定术语词汇表">14.1 DrawingML 特定术语词汇表<a class="headerlink" href="#141-drawingml-特定术语词汇表" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>diagram</strong> — 使用一组相关的颜色、数据、布局和样式部件显示的图片或图形表示形式。 图表类型的示例有循环图、组织图、金字塔图、目标图和维恩图。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Glossary of DrawingML-Specific Terms</strong></p>
+<p><strong>diagram</strong> — A picture or graphical representation that is displayed using a related set of color, data, layout, and style parts. Examples of diagram types are cycle, organization chart, pyramid, target, and Venn.</p>
+</div>
+</div>
+</div>
+<h2 id="142-部件概览">14.2 部件概览<a class="headerlink" href="#142-部件概览" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>从属于该子约定的子章节详细描述了 DrawingML 特有的每种部件类型。</p>
+<details class="info">
+<summary>Note</summary>
+<p>为方便起见，下表总结了这些子章节的信息:</p>
+<p><table>
+    <thead>
+        <tr>
+            <th> <strong>Part</strong> </th>
+            <th> <strong>Relationship Target of</strong> </th>
+            <th> <strong>Root Element</strong> </th>
+            <th> <strong>Ref.</strong> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> Chart </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+                All: Chart Drawing <br/> 
+            </td>
+            <td> chartSpace </td>
+            <td> <a href="#1421-图表部件">§14.2.1</a> </td>
+        </tr>
+        <tr>
+            <td> Chart Drawing </td>
+            <td> 
+                All: Chart
+            </td>
+            <td> userShapes </td>
+            <td> <a href="#1422-图表绘制部件">§14.2.2</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Colors </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> colorsDef </td>
+            <td> <a href="#1423-绘制颜色部件">§14.2.3</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Data </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> dataModel </td>
+            <td> <a href="#1424-绘制数据部件">§14.2.4</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Layout Definition </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> layoutDef </td>
+            <td> <a href="#1425-绘制布局定义部件">§14.2.5</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Style </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> styleDef </td>
+            <td> <a href="#1426-绘制样式部件">§14.2.6</a> </td>
+        </tr>
+        <tr>
+            <td> Theme </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Workbook <br/> 
+                PresentationML:  Handout Master, Notes Master, <br/> 
+                Presentation, Slide Master 
+            </td>
+            <td> theme </td>
+            <td> <a href="#1427-主题部件">§14.2.7</a> </td>
+        </tr>
+        <tr>
+            <td> Theme Override </td>
+            <td> 
+                PresentationML: Notes Slide, Slide, Slide Layout
+            </td>
+            <td> themeOverride </td>
+            <td> <a href="#1428-主题覆盖部件">§14.2.8</a> </td>
+        </tr>
+        <tr>
+            <td> Table Styles </td>
+            <td> 
+                PresentationML: Presentation
+            </td>
+            <td> tblStyleLst </td>
+            <td> <a href="#1429-表格样式部件">§14.2.9</a> </td>
+        </tr>
+    </tbody>
+</table></p>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>Part Summary</strong></p>
+<p>The subclauses subordinate to this one describe in detail each of the part types specific to DrawingML.</p>
+<details class="info">
+<summary>Note</summary>
+<p>For convenience, information from those subclauses is summarized in the following table:</p>
+<p><table>
+    <thead>
+        <tr>
+            <th> <strong>Part</strong> </th>
+            <th> <strong>Relationship Target of</strong> </th>
+            <th> <strong>Root Element</strong> </th>
+            <th> <strong>Ref.</strong> </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> Chart </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+                All: Chart Drawing <br/> 
+            </td>
+            <td> chartSpace </td>
+            <td> <a href="#1421-图表部件">§14.2.1</a> </td>
+        </tr>
+        <tr>
+            <td> Chart Drawing </td>
+            <td> 
+                All: Chart
+            </td>
+            <td> userShapes </td>
+            <td> <a href="#1422-图表绘制部件">§14.2.2</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Colors </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> colorsDef </td>
+            <td> <a href="#1423-绘制颜色部件">§14.2.3</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Data </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> dataModel </td>
+            <td> <a href="#1424-绘制数据部件">§14.2.4</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Layout Definition </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> layoutDef </td>
+            <td> <a href="#1425-绘制布局定义部件">§14.2.5</a> </td>
+        </tr>
+        <tr>
+            <td> Diagram Style </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Drawings <br/> 
+                PresentationML: Handout Master, Notes Master, <br/> 
+                Notes Slide, Slide Layout, Slide Master, Slide <br/> 
+            </td>
+            <td> styleDef </td>
+            <td> <a href="#1426-绘制样式部件">§14.2.6</a> </td>
+        </tr>
+        <tr>
+            <td> Theme </td>
+            <td> 
+                WordprocessingML: Main Document <br/> 
+                SpreadsheetML: Workbook <br/> 
+                PresentationML:  Handout Master, Notes Master, <br/> 
+                Presentation, Slide Master 
+            </td>
+            <td> theme </td>
+            <td> <a href="#1427-主题部件">§14.2.7</a> </td>
+        </tr>
+        <tr>
+            <td> Theme Override </td>
+            <td> 
+                PresentationML: Notes Slide, Slide, Slide Layout
+            </td>
+            <td> themeOverride </td>
+            <td> <a href="#1428-主题覆盖部件">§14.2.8</a> </td>
+        </tr>
+        <tr>
+            <td> Table Styles </td>
+            <td> 
+                PresentationML: Presentation
+            </td>
+            <td> tblStyleLst </td>
+            <td> <a href="#1429-表格样式部件">§14.2.9</a> </td>
+        </tr>
+    </tbody>
+</table></p>
+</details>
+</div>
+</div>
+</div>
+<h3 id="1421-图表部件">14.2.1 图表部件<a class="headerlink" href="#1421-图表部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.viewProps+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/chart</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/chart</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例描述了一个图表。</p>
+<p>包应包含文档中每个图表的图表部件。 </p>
+<p>在 WordprocessingML 文档中，每个此类部件应是主文档 ([§11.3.10]) 部件中显式关系的目标。 </p>
+<p>在 SpreadsheetML 文档中，每个此类部件应是绘图 ([§12.3.8]) 部件中显式关系的目标。 </p>
+<p>在 PresentationML 文档中，每个此类部件应是</p>
+<ul>
+<li>讲义母版（<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>）、</li>
+<li>注释母版（<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>）、</li>
+<li>注释幻灯片（<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>）</li>
+<li>幻灯片 (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>)、</li>
+<li>幻灯片布局 (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>) </li>
+<li>幻灯片母版 (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>) </li>
+</ul>
+<p>等的显式关系的目标。</p>
+<p>如果指向此图表绘图部件的图表是图表表部件中关系的目标，则也允许此部件作为</p>
+<ul>
+<li>图表绘图 (<a href="#1422-图表绘制部件">§14.2.2</a>) 部件</li>
+</ul>
+<p>中显式关系的目标。 </p>
+<p>换句话说，图表可以嵌入另一个图表, 唯一的限制是父级图表需是 <code>chartsheet</code> 的部件。</p>
+<details class="info">
+<summary>Example</summary>
+<p>以下主文档部件关系项包含与两个图表部件的关系，这些部件存储在 ZIP 项 <code>../charts/chartN.xml</code> 中：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;charts/chart1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;charts/chart2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>以下绘图部件关系项包含与图表部件的关系，该部件存储在 ZIP 项 <code>../charts/chart1.xml</code> 中：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/relationships/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../charts/chart1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>以下幻灯片部件关系项包含与两个图表部件的关系，这些部件存储在 ZIP 项 <code>../charts/chartN.xml</code> 中：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../charts/chart1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../charts/chart2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>该内容类型的一部件的根元素应为 <code>chartSpace</code>。</p>
+<details class="info">
+<summary>Example</summary>
+<p><code>Chart1.xml</code> 包含以下簇状条形图：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;c:chartSpace</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:chart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:title&gt;</span>
+<span style="color: #bbbbbb">            </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:title&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:plotArea&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:layout&gt;</span>
+<span style="color: #bbbbbb">                </span>…
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:layout&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:barChart&gt;</span>
+<span style="color: #bbbbbb">                </span>…
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:barChart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:plotArea&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:legend&gt;</span>
+<span style="color: #bbbbbb">            </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:legend&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:chart&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/c:chartSpace&gt;</span>
+</code></pre></div>
+</details>
+<p>对于 WordprocessingML 和 PresentationML 文档，图表的数据不直接存储在图表部件中。 
+相反，它应存储在该图表部件指定的嵌入式包 (<a href="../chapter-15/#15211-嵌入包部件">§15.2.11</a>) 部件所针对的嵌入式 SpreadsheetML 包 ([§12.2]) 中。 </p>
+<p>对于 SpreadsheetML 文档，图表的数据直接存储在绘图的父工作表中； 不得使用嵌入式 SpreadsheetML 包。</p>
+<p>图表部件应位于包含关系部件的包内（从语法上表达，关系元素的 <code>TargetMode</code> 属性应为 <code>Internal</code>）。</p>
+<p>图表部件允许与 ECMA-376 定义的以下部件有显式关系：</p>
+<ul>
+<li>Chart Drawing (<a href="#1422-图表绘制部件">§14.2.2</a>)</li>
+<li>Embedded Package (<a href="../chapter-15/#15211-嵌入包部件">§15.2.11</a>)</li>
+</ul>
+<p>图表部件不应与 ECMA-376 定义的任何其他部件有任何隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Chart Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.viewProps+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/chart</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/chart</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type describes a chart.</p>
+<p>A package shall contain a Chart part for each chart in the document. In a WordprocessingML document, each such part shall be the target of an explicit relationship in a Main Document ([§11.3.10]) part. In a SpreadsheetML document, each such part shall be the target of an explicit relationship in a Drawings ([§12.3.8]) part. In a PresentationML document, each such part shall be the target of an explicit relationship in a Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>), Notes Master (<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>), Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>), Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>), Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>), or Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>) part. This part is permitted to also be the target of an explicit relationship in a Chart Drawing (<a href="#1422-图表绘制部件">§14.2.2</a>) part, if the chart that points at this Chart Drawing part is the target of a relationship from a Chartsheet part. In other words, the only time a chart can embed another chart is if the parent chart is part of a chartsheet</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following Main Document part-relationship item contains relationships to two Chart parts, which are stored in the ZIP items <code>../charts/chartN.xml</code>:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;charts/chart1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;charts/chart2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>The following Drawings part-relationship item contains a relationship to a Chart part, which is stored in the ZIP item ../charts/chart1.xml:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/relationships/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../charts/chart1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>The following Slide part-relationship item contains relationships to two Chart parts, which are stored in the ZIP items ../charts/chartN.xml:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../charts/chart1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chart&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../charts/chart2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be chartSpace.</p>
+<details class="info">
+<summary>Example</summary>
+<p>chart1.xml contains the following clustered bar chart:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;c:chartSpace</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:chart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:title&gt;</span>
+<span style="color: #bbbbbb">            </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:title&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:plotArea&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:layout&gt;</span>
+<span style="color: #bbbbbb">                </span>…
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:layout&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:barChart&gt;</span>
+<span style="color: #bbbbbb">                </span>…
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:barChart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:plotArea&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:legend&gt;</span>
+<span style="color: #bbbbbb">            </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:legend&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:chart&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/c:chartSpace&gt;</span>
+</code></pre></div>
+</details>
+<p>For WordprocessingML and PresentationML documents, the data for a chart is not stored in the Chart part directly. Instead, it shall be stored in an embedded SpreadsheetML package ([§12.2]) targeted by an Embedded Package (<a href="../chapter-15/#15211-嵌入包部件">§15.2.11</a>) part specified by that Chart part. For SpreadsheetML documents, the data for a chart is stored directly in the Drawing’s parent worksheet; no embedded SpreadsheetML package shall be used.</p>
+<p>A Chart part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Chart part is permitted to have explicit relationships to the following parts defined by ECMA-376:</p>
+<ul>
+<li>Chart Drawing (<a href="#1422-图表绘制部件">§14.2.2</a>)</li>
+<li>Embedded Package (<a href="../chapter-15/#15211-嵌入包部件">§15.2.11</a>)</li>
+</ul>
+<p>A Chart part shall not have any implicit or explicit relationships to any other part defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1422-图表绘制部件">14.2.2 图表绘制部件<a class="headerlink" href="#1422-图表绘制部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/chart</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/chartUserShapes</code></td>
+    </tr>
+</table></p>
+<p>此零件类型的实例包含与此图表显式关联的所有基本绘图元素（形状）。 当移动图表时，这些绘图元素会自动随图表一起移动，并在调整图表大小时调整其大小。</p>
+<p>包允许每个图表部件包含一个图表绘图部件，并且每个此类部件应是图表 (<a href="#1421-图表部件">§14.2.1</a>) 部件的显式关系的目标。</p>
+<details class="info">
+<summary>Example</summary>
+<p>以下主文档部件关系项包含与两个图表部件的关系，这些部件存储在 ZIP 项 <code>../charts/chartN.xml</code> 中：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chartUserShapes&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../drawings/drawing1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>此内容类型(content type)对应的部件的根元素应为 <code>userShapes</code>。</p>
+<details class="info">
+<summary>Example</summary>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;c:userShapes</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:cdr=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:c=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/c:userShapes&gt;</span>
+</code></pre></div>
+</details>
+<p>图表绘制部件应位于包含关系部件的包内（从语法上表达，关系元素的 TargetMode 属性应为 Internal）。</p>
+<p>图表绘制部件允许与 ECMA-376 定义的以下部件有明确的关系：</p>
+<ul>
+<li>Chart (<a href="#1421-图表部件">§14.2.1</a>)</li>
+</ul>
+<p>图表绘制部件不应与 ECMA-376 定义的任何其他部件有任何隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Chart Drawing Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.chartshapes+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/chart</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/chartUserShapes</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type contains all basic drawing elements (shapes) which are explicitly associated with this chart. These drawing elements are automatically moved with the chart when it is moved and resized when the chart is resized.</p>
+<p>A package is permitted to contain one Chart Drawing part per chart part, and each such part shall be the target of an explicit relationship from a Chart (<a href="#1421-图表部件">§14.2.1</a>) part.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following Main Document part-relationship item contains relationships to two Chart parts, which are stored in the ZIP items <code>../charts/chartN.xml</code>:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/chartUserShapes&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../drawings/drawing1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be userShapes.</p>
+<details class="info">
+<summary>Example</summary>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;c:userShapes</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:cdr=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:c=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/c:userShapes&gt;</span>
+</code></pre></div>
+</details>
+<p>A Chart Drawing part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Chart Drawing part is permitted to have explicit relationships to the following parts defined by ECMA-376:</p>
+<ul>
+<li>Chart (<a href="#1421-图表部件">§14.2.1</a>)</li>
+</ul>
+<p>A Chart Drawing part shall not have any implicit or explicit relationships to any other part defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1423-绘制颜色部件">14.2.3 绘制颜色部件<a class="headerlink" href="#1423-绘制颜色部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramColors</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例包含图表的颜色信息。</p>
+<p>包中每个图表应包含一个图表颜色部件。 每个<strong>图表颜色部件</strong>(Diagram Colors part)应是 </p>
+<ul>
+<li>WordprocessingML Main Document ([§11.3.10])</li>
+<li>SpreadsheetML Drawings ([§12.3.8]) </li>
+<li>PresentationML Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>) </li>
+</ul>
+<p>这些部件的显式关系的目标。</p>
+<details class="info">
+<summary>Example</summary>
+<p>以下 SpreadsheetML 绘图部件关系项包含与两个图表颜色部件的关系，这两个部件存储在 ZIP 项 <code>../graphics/colorsN.xml</code> 中。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramColors&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/colors1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId8&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramColors&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/colors2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>该内容类型的一部件的根元素应为 <code>colorsDef</code> 。</p>
+<details class="info">
+<summary>Example</summary>
+<p><code>color1.xml</code> 包含以下内容：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cs:colorsDef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:cs=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uniqueId=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minVer=</span><span style="color: #BA2121">&quot;12.0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:title</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Primary Accent 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:desc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Primary Accent 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:catLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cs:cat</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;accent1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pri=</span><span style="color: #BA2121">&quot;11200&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cs:catLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cs:styleLbl&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cs:styleLbl&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cs:colorsDef&gt;</span>
+</code></pre></div>
+</details>
+<p>图颜色部件应位于包含关系部件的包内（从语法上表达，关系元素的 TargetMode 属性应为 Internal）。</p>
+<p>图颜色部件不应与 ECMA-376 定义的任何其他部件有隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Diagram Colors Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramColors+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramColors</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type contains color information for a diagram.</p>
+<p>A package shall contain exactly one Diagram Colors part per diagram. Each Diagram Colors part shall be the target of an explicit relationship in a WordprocessingML Main Document ([§11.3.10]), SpreadsheetML Drawings ([§12.3.8]), or PresentationML Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>) part.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following SpreadsheetML Drawings part-relationship item contains a relationship to two Diagram Colors parts, which are stored in the ZIP items <code>../graphics/colorsN.xml</code>.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramColors&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/colors1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId8&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramColors&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/colors2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be colorsDef.</p>
+<details class="info">
+<summary>Example</summary>
+<p>colors1.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cs:colorsDef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:cs=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uniqueId=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minVer=</span><span style="color: #BA2121">&quot;12.0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:title</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Primary Accent 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:desc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Primary Accent 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:catLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cs:cat</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;accent1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pri=</span><span style="color: #BA2121">&quot;11200&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cs:catLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cs:styleLbl&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cs:styleLbl&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cs:colorsDef&gt;</span>
+</code></pre></div>
+</details>
+<p>A Diagram Colors part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Diagram Colors part shall not have implicit or explicit relationships to any other part defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1424-绘制数据部件">14.2.4 绘制数据部件<a class="headerlink" href="#1424-绘制数据部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramData</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例包含图表的语义数据。</p>
+<p>包中每个<strong>图表</strong>(diagram)应包含一个<strong>图表数据部件</strong>(Diagram Data part)。 每个图表数据部件应是 </p>
+<ul>
+<li>
+<p>WordprocessingML:</p>
+<ul>
+<li>Main Document ([§11.3.10]) </li>
+</ul>
+</li>
+<li>
+<p>SpreadsheetML:</p>
+<ul>
+<li>Drawings part [§12.3.8]）； </li>
+</ul>
+</li>
+<li>
+<p>PresentationML:</p>
+<ul>
+<li>Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>)</li>
+<li>Notes Master (<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>)</li>
+<li>Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>)</li>
+<li>Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>)</li>
+<li>Slide Layout ([ §13.3.9])</li>
+<li>Slide Master <a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>）</li>
+</ul>
+</li>
+</ul>
+<p>等等这些部件显式关系的目标；</p>
+<details class="info">
+<summary>Example</summary>
+<p>以下 SpreadsheetML 绘图部件关系项包含与两个图表数据部件的关系，这两个部件存储在 ZIP 项 <code>../graphics/dataN.xml</code> 中。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramData&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/data1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramData&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/data2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>该内容类型的一部件的根元素应为 <code>dataModel</code> 。</p>
+<details class="info">
+<summary>Example</summary>
+<p><code>data1.xml</code> 包含以下内容：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;dm:dataModel</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:dm=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:ptLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dm:ptLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:cxnLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dm:cxnLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:bg/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:whole/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/dm:dataModel&gt;</span>
+</code></pre></div>
+</details>
+<p>图数据部件应位于包含关系部件的包内（从语法上表达，关系元素的 TargetMode 属性应为 Internal ）。</p>
+<p>图表数据部件允许与 ECMA-376 定义的以下部件具有显式关系：</p>
+<ul>
+<li>Image (<a href="../chapter-15/#15214-图片部件">§15.2.14</a>)</li>
+</ul>
+<p>图数据部件不应与 ECMA-376 定义的其他部件有任何隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Diagram Data Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramData+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramData</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type contains the semantic data for a diagram.</p>
+<p>A package shall contain exactly one Diagram Data part per diagram. Each Diagram Data part shall be the target of an explicit relationship in a WordprocessingML Main Document ([§11.3.10]); a SpreadsheetML Drawings part ([§12.3.8]); or a PresentationML Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>), Notes Master (<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>), Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>), Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>), Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>), or Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>) part.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following SpreadsheetML Drawings part-relationship item contains a relationship to two Diagram Data parts, which are stored in the ZIP items ../graphics/dataN.xml.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramData&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/data1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramData&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/data2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be dataModel.</p>
+<details class="info">
+<summary>Example</summary>
+<p>data1.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;dm:dataModel</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:dm=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:ptLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dm:ptLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:cxnLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dm:cxnLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:bg/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dm:whole/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/dm:dataModel&gt;</span>
+</code></pre></div>
+</details>
+<p>A Diagram Data part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Diagram Data part is permitted to have explicit relationships to the following parts defined by ECMA-376:</p>
+<ul>
+<li>Image (<a href="../chapter-15/#15214-图片部件">§15.2.14</a>)</li>
+</ul>
+<p>A Diagram Data part shall not have any implicit or explicit relationships to other parts defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1425-绘制布局定义部件">14.2.5 绘制布局定义部件<a class="headerlink" href="#1425-绘制布局定义部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramLayout</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的一个实例是一个模板，用于描述如何将与图表相关的数据映射到形状。</p>
+<p>包中的每个图表应包含一个<strong>图表布局定义部件</strong>(Diagram Layout Definition)。 
+每个<strong>布局定义部件</strong>( Layout Definition part)应是</p>
+<ul>
+<li>
+<p>WordprocessingML:</p>
+<ul>
+<li>Main Document([§11.3.10])</li>
+</ul>
+</li>
+<li>
+<p>SpreadsheetML:</p>
+</li>
+<li>
+<p>Drawings part([§12.3.8])； </p>
+</li>
+<li>
+<p>PresentationML:</p>
+</li>
+<li>
+<p>Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>)</p>
+</li>
+<li>Notes Master (§13.3.4)</li>
+<li>Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>)</li>
+<li>Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>)</li>
+<li>Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>) </li>
+<li>Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>)</li>
+</ul>
+<p>等等这些部件显式关系的目标。</p>
+<p>如果文档包含多个具有相同图形布局定义的图表，则每个图表都应具有其自己的该图表布局定义部件的副本。</p>
+<details class="info">
+<summary>Example</summary>
+<p>以下 SpreadsheetML 绘图部件关系项包含与两个图表布局定义部件的关系，这些部件存储在 ZIP 项 <code>../graphics/layoutN.xml</code> 中。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramLayout&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/layout1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId6&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramLayout&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/layout2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>该内容类型的一部件的根元素应为 <code>layoutDef</code> 。</p>
+<details class="info">
+<summary>Example</summary>
+<p><code>layout1.xml</code> 包含以下内容：:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;lo:layoutDef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:lo=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uniqueId=</span><span style="color: #BA2121">&quot;…2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minVer=</span><span style="color: #BA2121">&quot;12.0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">defStyle=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:title</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Hierarchy 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:desc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:catLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lo:cat</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;hierarchy&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pri=</span><span style="color: #BA2121">&quot;2000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:catLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:sampData&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:sampData&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:styleData&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:styleData&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:clrData&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:clrData&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:layoutNode</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Name0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">styleLbl=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">moveWith=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:layoutNode&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/lo:layoutDef&gt;</span>
+</code></pre></div>
+</details>
+<p>图布局定义部件应位于包含关系部件的包内（从语法上表达，关系元素的 TargetMode 属性应为 Internal ）。</p>
+<p>图表布局定义部件允许与 ECMA-376 定义的以下部件和项目有明确的关系：</p>
+<ul>
+<li>Image (<a href="../chapter-15/#15214-图片部件">§15.2.14</a>)</li>
+</ul>
+<p>图布局定义部件不应与 ECMA-376 定义的其他部件有任何隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Diagram Layout Definition Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramLayout+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramLayout</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type is a template that describes how diagram-related data is mapped to a shape.</p>
+<p>A package shall contain exactly one Diagram Layout Definition part per diagram. Each Layout Definition part
+shall be the target of an explicit relationship from a WordprocessingML Main Document ([§11.3.10]); a
+SpreadsheetML Drawings part ([§12.3.8]); or a PresentationML Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>), Notes Master (§13.3.4),
+Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>), Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>), Slide Layout (§13.3.9), or Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>) part. If a document
+contains multiple diagrams having the same graphic layout definition, each of those diagrams shall have its own
+copy of that Diagram Layout Definition part.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following SpreadsheetML Drawings part-relationship item contains a relationship to two Diagram Layout Definition parts, which are stored in the ZIP items ../graphics/layoutN.xml.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramLayout&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/layout1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId6&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramLayout&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/layout2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be layoutDef.</p>
+<details class="info">
+<summary>Example</summary>
+<p>layout1.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;lo:layoutDef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:lo=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uniqueId=</span><span style="color: #BA2121">&quot;…2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minVer=</span><span style="color: #BA2121">&quot;12.0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">defStyle=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:title</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Hierarchy 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:desc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:catLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lo:cat</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;hierarchy&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pri=</span><span style="color: #BA2121">&quot;2000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:catLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:sampData&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:sampData&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:styleData&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:styleData&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:clrData&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:clrData&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lo:layoutNode</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Name0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">styleLbl=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">moveWith=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lo:layoutNode&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/lo:layoutDef&gt;</span>
+</code></pre></div>
+</details>
+<p>A Diagram Layout Definition part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Diagram Layout Definition part is permitted to have explicit relationships to the following parts and items defined by ECMA-376:</p>
+<ul>
+<li>Image (<a href="../chapter-15/#15214-图片部件">§15.2.14</a>)</li>
+</ul>
+<p>A Diagram Layout Definition part shall not have any implicit or explicit relationships to other parts defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1426-绘制样式部件">14.2.6 绘制样式部件<a class="headerlink" href="#1426-绘制样式部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramQuickStyle</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例将图表语义信息映射到文档的主题。</p>
+<p>包中每个图表(diagram)应包含一个<strong>图表样式部件</strong>(Diagram Style part)。 每个<strong>样式部件</strong>(Style part)应是</p>
+<ul>
+<li>
+<p>WordprocessingML:</p>
+<ul>
+<li>Main Document([§11.3.10])</li>
+</ul>
+</li>
+<li>
+<p>SpreadsheetML:</p>
+</li>
+<li>
+<p>Drawings part([§12.3.8])； </p>
+</li>
+<li>
+<p>PresentationML:</p>
+</li>
+<li>
+<p>Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>)</p>
+</li>
+<li>Notes Master (§13.3.4)</li>
+<li>Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>)</li>
+<li>Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>)</li>
+<li>Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>) </li>
+<li>Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>)</li>
+</ul>
+<p>等等这些部件显式关系的目标。</p>
+<details class="info">
+<summary>Example</summary>
+<p>以下 SpreadsheetML 绘图部件关系项包含与两个图表样式部件的关系，这两个部件存储在 ZIP 项 <code>../graphics/quickStyleN.xml</code> 中。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId3&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramQuickStyle&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/quickStyle1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId7&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramQuickStyle&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/quickStyle2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>该内容类型的一部件的根元素应为 <code>styleDef</code> 。</p>
+<details class="info">
+<summary>Example</summary>
+<p>quickStyle1.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;qs:styleDef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:qs=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uniqueId=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minVer=</span><span style="color: #BA2121">&quot;12.0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:title</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Style 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:desc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Style 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:catLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;qs:cat</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;simple&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pri=</span><span style="color: #BA2121">&quot;10200&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:catLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:scene3d&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:scene3d&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:style&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:style&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:styleLbl&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:styleLbl&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/qs:styleDef&gt;</span>
+</code></pre></div>
+</details>
+<p>图样式部件应位于包含关系部件的包内（从语法上表达，关系元素的 TargetMode 属性应为 Internal）。</p>
+<p>图样式部件不应与 ECMA-376 定义的其他部件有隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Diagrame Style Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.drawingml.diagramStyle+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/diagram</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/diagramQuickStyle</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type maps diagram semantic information to a document's theme.</p>
+<p>A package shall contain exactly one Diagram Style part per diagram. Each Style part shall be the target of an explicit relationship from a WordprocessingML Main Document ([§11.3.10]); a SpreadsheetML Drawings part ([§12.3.8]); or a PresentationML Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>), Notes Master (<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>), Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>), Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>), Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>), or Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>) part.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following SpreadsheetML Drawings part-relationship item contains a relationship to two Diagram Style parts, which are stored in the ZIP items ../graphics/quickStyleN.xml.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId3&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramQuickStyle&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/quickStyle1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId7&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/diagramQuickStyle&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;../graphics/quickStyle2.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be styleDef.</p>
+<details class="info">
+<summary>Example</summary>
+<p>quickStyle1.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;qs:styleDef</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:qs=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uniqueId=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minVer=</span><span style="color: #BA2121">&quot;12.0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:title</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Style 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:desc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lang=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;Style 2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:catLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;qs:cat</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;simple&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pri=</span><span style="color: #BA2121">&quot;10200&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:catLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:scene3d&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:scene3d&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:style&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:style&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:styleLbl&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;qs:styleLbl</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/qs:styleLbl&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/qs:styleDef&gt;</span>
+</code></pre></div>
+</details>
+<p>A Diagram Style part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Diagram Style part shall not have implicit or explicit relationships to other parts defined by ECMA-376. </p>
+</div>
+</div>
+</div>
+<h3 id="1427-主题部件">14.2.7 主题部件<a class="headerlink" href="#1427-主题部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.theme+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/main</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/theme</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例包含有关文档主题的信息，该主题是<strong>配色方案</strong>(color scheme)、<strong>字体方案</strong>(font scheme)和 (format scheme)（后者也称为效果(effects)）的组合。</p>
+<p>对于 WordprocessingML 文档，主题的选择会影响标题的颜色和样式等。 </p>
+<p>对于 SpreadsheetML 文档，主题的选择会影响单元格内容和图表的颜色和样式等。 </p>
+<p>对于 PresentationML 文档，主题的选择会通过关联的母版影响幻灯片(slides)、讲义(handouts)和笔记(notes)的格式等。</p>
+<p>WordprocessingML 或 SpreadsheetML 包应包含零个或一个主题部件(Theme part)，该部件应是主文档(Main Document) ([§11.3.10]) 或工作簿(Workbook) ([§12.3.23]) 部件中隐式关系的目标。 </p>
+<p>PresentationML 包 中的<strong>每个</strong></p>
+<ul>
+<li>Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>)、</li>
+<li>Notes Master (<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>)、</li>
+<li>Slide Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>)、</li>
+<li>Presentation (<a href="../chapter-13/#1336-演示部件">§13.3.6</a>) </li>
+</ul>
+<p>应通过隐式关系包含零个或一个主题部件。</p>
+<details class="info">
+<summary>译注:关系详情</summary>
+<p>参考: <a href="../chapter-9/#92-office-open-xml-中的关系" target="_bank">9.2 Office Open Xml 中的关系</a></p>
+</details>
+<details class="info">
+<summary>Example</summary>
+<p>以下 WordprocessingML 主文档部件关系项包含与主题部件的关系，该主题存储在 ZIP 项 <code>theme/theme1.xml</code> 中：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/theme&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;theme/theme1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>此内容类型的一部件的根元素应为<code>theme</code>。</p>
+<details class="info">
+<summary>Example</summary>
+<p>theme1.xml 包含以下内容，其中 clrScheme 、fontScheme 和 fmtScheme 元素的名称属性分别对应于文档的颜色方案、字体方案和格式方案：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:theme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:a=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:themeElements&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:clrScheme&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:fontScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:fontScheme&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:fmtScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:fmtScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:themeElements&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:objectDefaults/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:theme&gt;</span>
+</code></pre></div>
+</details>
+<p>主题部件应位于包含关系部件的包内（从语法上表达，关系元素的 <code>TargetMode</code> 属性应为 <code>Internal</code> ）。</p>
+<p>主题部件允许包含与 ECMA-376 定义的以下部件的显式关系：</p>
+<ul>
+<li>Image (<a href="../chapter-15/#15214-图片部件">§15.2.14</a>)</li>
+</ul>
+<p>主题部件不应与 ECMA-376 定义的其他部件有任何隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Theme Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td><code>application/vnd.openxmlformats-officedocument.theme+xml</code>
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/main</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/theme</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type contains information about a document's theme, which is a combination of color scheme, font scheme, and format scheme (the latter also being referred to as effects). For a WordprocessingML document, th choice of theme affects the color and style of headings, among other things. For a SpreadsheetML document, the choice of theme affects the color and style of cell contents and charts, among other things. For a PresentationML document, the choice of theme affects the formatting of slides, handouts, and notes via the associated master, among other things.</p>
+<p>A WordprocessingML or SpreadsheetML package shall contain zero or one Theme part, which shall be the target
+of an implicit relationship in a Main Document (§11.3.10) or Workbook ([§12.3.23]) part. A PresentationML
+package shall contain zero or one Theme part per Handout Master (<a href="../chapter-13/#1333-讲义母板部件">§13.3.3</a>), Notes Master (<a href="../chapter-13/#1334-笔记母版部件">§13.3.4</a>), Slide
+Master (<a href="../chapter-13/#13310-幻灯片母版部件">§13.3.10</a>) or Presentation (§13.3.6) part via an implicit relationship.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following WordprocessingML Main Document part-relationship item contains a relationship to the Theme part, which is stored in the ZIP item theme/theme1.xml:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId4&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/theme&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;theme/theme1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be theme.</p>
+<details class="info">
+<summary>Example</summary>
+<p>theme1.xml contains the following, where the name attributes of the clrScheme, fontScheme, and fmtScheme elements correspond to the document's color scheme, font scheme, and format scheme, respectively:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:theme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:a=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:themeElements&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:clrScheme&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:fontScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:fontScheme&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:fmtScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:fmtScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:themeElements&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:objectDefaults/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:theme&gt;</span>
+</code></pre></div>
+</details>
+<p>A Theme part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Theme part is permitted to contain explicit relationships to the following parts defined by ECMA-376:</p>
+<ul>
+<li>Image (<a href="../chapter-15/#15214-图片部件">§15.2.14</a>)</li>
+</ul>
+<p>A Theme part shall not have any implicit or explicit relationships to other parts defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1428-主题覆盖部件">14.2.8 主题覆盖部件<a class="headerlink" href="#1428-主题覆盖部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td>application/vnd.openxmlformats-officedocument.themeOverride+xml
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/main</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/themeOverride</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例包含有关对象<strong>主题覆盖</strong>(theme override)的信息，这些信息覆盖特定的</p>
+<ul>
+<li>幻灯片(slide)、</li>
+<li>笔记幻灯片(notes slide)</li>
+<li>讲义(handout)</li>
+</ul>
+<p>的<strong>配色方案</strong>(color scheme)、<strong>字体方案</strong>(font scheme)和<strong>格式方案</strong>(format scheme)（后者也称为效果(effects)）。</p>
+<p>PresentationML 包应通过隐式关系为每个 </p>
+<ul>
+<li>Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>)、</li>
+<li>Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>) </li>
+<li>Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>) </li>
+</ul>
+<p>等等这些部件包含<strong>零个或一个主题覆盖部件</strong>(Theme Override part)。</p>
+<details class="info">
+<summary>译注:关系详情</summary>
+<p>参考: <a href="../chapter-9/#92-office-open-xml-中的关系" target="_bank">9.2 Office Open Xml 中的关系</a></p>
+</details>
+<details class="info">
+<summary>Example</summary>
+<p>以下 WordprocessingML 主文档部件关系项包含与主题部件的关系，该主题存储在 ZIP 项 <code>theme/theme1.xml</code> 中：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/themeOverride&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;theme/themeoverride1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>该内容类型的一部件的根元素应为 <code>ossOverride</code> 。</p>
+<details class="info">
+<summary>Example</summary>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:ossOverride</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:a=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/a:ossOverride&gt;</span>
+</code></pre></div>
+</details>
+<p>主题覆盖部件应位于包含关系部件的包内（从语法上表达，关系元素的 <code>TargetMode</code> 属性应为 <code>Internal</code> ）。</p>
+<p>主题覆盖部件不应包含与 ECMA-376 定义的其他部件的隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Theme Override Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td>application/vnd.openxmlformats-officedocument.themeOverride+xml
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/main</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/themeOverride</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type contains information about an object’s theme override, which are overrides to the color scheme, font scheme, and format scheme (the latter also being referred to as effects) for a particular slide, notes slide, or handout.</p>
+<p>A PresentationML package shall contain zero or one Theme Override part per Notes Slide (<a href="../chapter-13/#1335-笔记幻灯片部件">§13.3.5</a>), Slide (<a href="../chapter-13/#1338-幻灯片部件">§13.3.8</a>), or Slide Layout (<a href="../chapter-13/#1339-幻灯片布局部件">§13.3.9</a>) part via an implicit relationship.</p>
+<details class="info">
+<summary>Example</summary>
+<p>The following WordprocessingML Main Document part-relationship item contains a relationship to the Theme part, which is stored in the ZIP item theme/theme1.xml:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId1&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://…/themeOverride&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;theme/themeoverride1.xml&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+</details>
+<p>The root element for a part of this content type shall be ossOverride.</p>
+<details class="info">
+<summary>Example</summary>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:ossOverride</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:a=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/a:ossOverride&gt;</span>
+</code></pre></div>
+</details>
+<p>A Theme Override part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Theme Override part shall not contain implicit or explicit relationships to other parts defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<h3 id="1429-表格样式部件">14.2.9 表格样式部件<a class="headerlink" href="#1429-表格样式部件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td>application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/main</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/tableStyles</code></td>
+    </tr>
+</table></p>
+<p>此部件类型的实例包含有关此演示文稿中的表格所使用的<strong>表格样式</strong>(table styles)的信息。 表格样式定义<strong>行和列颜色</strong>、<strong>标题行颜色和文本</strong>等特征。</p>
+<p>通过<strong>隐式关系</strong>，PresentationML 包中的每个<strong>演示文稿部件</strong>(Presentation part) (<a href="../chapter-13/#1336-演示部件">§13.3.6</a>) <strong>不得包含超过一个表格样式部件</strong>。</p>
+<details class="info">
+<summary>译注:关系详情</summary>
+<p>参考: <a href="../chapter-9/#92-office-open-xml-中的关系" target="_bank">9.2 Office Open Xml 中的关系</a></p>
+</details>
+<details class="info">
+<summary>Example</summary>
+<p>tablestyles.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:tblStyleLst</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:a=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:tblStyle&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:tblStyle&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:tblStyleLst&gt;</span>
+</code></pre></div>
+</details>
+<p>表样式部件应位于包含关系部件的包内（从语法上表达，关系元素的 TargetMode 属性应为 Internal）。</p>
+<p>表样式部件不应包含与 ECMA-376 定义的其他部件的隐式或显式关系。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Table Styles Part</strong></p>
+<p><table border=1>
+    <tr>
+        <td><strong>Content Type</strong>:</td>
+        <td>application/vnd.openxmlformats-officedocument.presentationml.tableStyles+xml
+        </td>
+    </tr>
+    <tr>
+        <td><strong>Root Namespace</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/drawingml/main</code></td>
+    </tr>
+    <tr>
+        <td><strong>Source Relationship</strong>:</td>
+        <td><code>http://purl.oclc.org/ooxml/officeDocument/relationships/tableStyles</code></td>
+    </tr>
+</table></p>
+<p>An instance of this part type contains information about the table styles used by tables in this presentation. A table style defines characteristics such as row and column colors, heading row colors, and text.</p>
+<p>A PresentationML package shall contain no more than one Table Styles part per Presentation (<a href="../chapter-13/#1336-演示部件">§13.3.6</a>) part via an implicit relationship.</p>
+<details class="info">
+<summary>Example</summary>
+<p>tablestyles.xml contains the following:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:tblStyleLst</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns:a=</span><span style="color: #BA2121">&quot;…&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:tblStyle&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:tblStyle&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:tblStyleLst&gt;</span>
+</code></pre></div>
+</details>
+<p>A Table Styles part shall be located within the package containing the relationships part (expressed syntactically, the TargetMode attribute of the Relationship element shall be Internal).</p>
+<p>A Table Styles part shall not contain implicit or explicit relationships to other parts defined by ECMA-376.</p>
+</div>
+</div>
+</div>
+<!--链接定义-->
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

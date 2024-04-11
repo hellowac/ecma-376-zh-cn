@@ -1,0 +1,3305 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../shape_def/">
+      
+      
+        <link rel="next" href="../wordml/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.10 图片 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l410-图片" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.10 图片
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3daspects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l4101-介绍" class="md-nav__link">
+    L.4.10.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4102-指定基本图片" class="md-nav__link">
+    L.4.10.2 指定基本图片
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4103-将特性附加到该图片" class="md-nav__link">
+    L.4.10.3 将特性附加到该图片
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4104-变换这张图片" class="md-nav__link">
+    L.4.10.4 变换这张图片
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l4101-介绍" class="md-nav__link">
+    L.4.10.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4102-指定基本图片" class="md-nav__link">
+    L.4.10.2 指定基本图片
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4103-将特性附加到该图片" class="md-nav__link">
+    L.4.10.3 将特性附加到该图片
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4104-变换这张图片" class="md-nav__link">
+    L.4.10.4 变换这张图片
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l410-图片">L.4.10 图片<a class="headerlink" href="#l410-图片" title="Permanent link">&para;</a></h1>
+<p><strong>Pictures</strong></p>
+<h2 id="l4101-介绍">L.4.10.1 介绍<a class="headerlink" href="#l4101-介绍" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>DrawingML 图片文件格式分为以下主题：</p>
+<ul>
+<li>指定基本图片</li>
+<li>为该图片附加属性</li>
+<li>图片变换</li>
+</ul>
+<p>理解上述主题的最好方法是按照上面的顺序涵盖它们. </p>
+</div>
+<div class="tabbed-block">
+<p><strong>Introduction</strong></p>
+<p>The DrawingML Picture file format is broken down into the following subjects:</p>
+<ul>
+<li>Specifying a basic picture</li>
+<li>Attaching properties to this picture</li>
+<li>Transforming this picture</li>
+</ul>
+<p>The best way to understand the above subjects is to cover them in the ordering above. </p>
+</div>
+</div>
+</div>
+<h2 id="l4102-指定基本图片">L.4.10.2 指定基本图片<a class="headerlink" href="#l4102-指定基本图片" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>可以使用图片元素 <code>pic</code> 将图片插入到演示文稿幻灯片中，该元素与 <code>shape</code> 元素类似，但包含一些关键差异，可以更完整地存储图片信息。 这个基本图片元素应该包含 <code>blipfill</code> 和一些基本的<strong>非视觉图片属性</strong>(non-visual picture properties)。</p>
+<p><a class="glightbox" href="../imgs/pic-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="2123" src="../imgs/pic-1.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;St_Patrick&#39;s_Day.jpg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1346200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;914400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3657600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2743200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ln&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Specifying a Basic Picture</strong></p>
+<p>A picture can be inserted into a presentation slide by use of the picture element, pic, which is similar to the shape element but contains some key differences that enable more complete storage of picture information. This basic picture element should contain a blipfill and some basic non-visual picture properties.</p>
+<p><a class="glightbox" href="../imgs/pic-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="2123" src="../imgs/pic-1.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;St_Patrick&#39;s_Day.jpg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1346200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;914400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3657600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2743200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ln&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="l4103-将特性附加到该图片">L.4.10.3 将特性附加到该图片<a class="headerlink" href="#l4103-将特性附加到该图片" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>现在已经指定了基本图片，我们可以继续处理更复杂的特性，例如重新着色选项和图片描述。 在下图中，请注意曾经是绿色的图片已重新着色为紫色。 这可以通过利用双色调元素来完成，该元素允许设置两种基色以用于重新着色整个图片。 第一个用于作用于图片的较暗区域，第二个用于作用于较亮的区域。 我们可以在下面看到黑色（<code>#000000</code>）确实用于下面较暗的区域，而 <code>accent4</code>（在本例中为紫色）用于较亮的区域。</p>
+<p><a class="glightbox" href="../imgs/pic-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/pic-2.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;St_Patrick&#39;s_Day.jpg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">descr=</span><span style="color: #BA2121">&quot;This is a Saint Patrick&#39;s day picture&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:duotone&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;000000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:duotone&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:blip&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1346200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;914400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3657600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2743200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ln&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Attaching Properties to this Picture</strong></p>
+<p>Now that the base picture has been specified, we can move on to more complicated properties, such as recolor options and picture descriptions. In the picture below, notice that the picture that was once green has been re-colored in a purple hue. This can be done by utilizing the duotone element, which allows for the setting of two base colors to use for re-coloring the entire picture. The first is used to act upon the darker regions of the picture and the second is used to act upon the lighter regions. This we can see below that black (#000000) is indeed used below for the darker regions while accent4 (purple in this case) is used for the lighter areas.</p>
+<p><a class="glightbox" href="../imgs/pic-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/pic-2.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;St_Patrick&#39;s_Day.jpg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">descr=</span><span style="color: #BA2121">&quot;This is a Saint Patrick&#39;s day picture&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:duotone&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;000000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:duotone&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:blip&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1346200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;914400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3657600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2743200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ln&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="l4104-变换这张图片">L.4.10.4 变换这张图片<a class="headerlink" href="#l4104-变换这张图片" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>现在已经指定了基本特性和附加图片特性，我们可以开始合并形状特性。 下面是与上述相同的图片，应用了 3D 相机透视以及简单的阴影和白色轮廓。 这些形状特性与可应用于形状元素的特性相同。 此处可以通过图片周围的边框看到图片特定的差异。 边界不是向内和向外生长，而是仅向外生长。</p>
+<p><a class="glightbox" href="../imgs/pic-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/pic-3.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;St_Patrick&#39;s_Day.jpg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">descr=</span><span style="color: #BA2121">&quot;This is a Saint Patrick&#39;s day picture&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:duotone&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;000000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:duotone&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:blip&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1346200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;914400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3657600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2743200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;57150&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;bg1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:effectLst&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:outerShdw</span><span style="color: #bbbbbb"> </span><span style="color: #687822">blurRad=</span><span style="color: #BA2121">&quot;50800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">dist=</span><span style="color: #BA2121">&quot;50800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">dir=</span><span style="color: #BA2121">&quot;2700000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;tl&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rotWithShape=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;7D7D7D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:alpha</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;65000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:srgbClr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:outerShdw&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:effectLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:scene3d&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:camera</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;perspectiveRelaxedModerately&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:lightRig</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rig=</span><span style="color: #BA2121">&quot;threePt&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">dir=</span><span style="color: #BA2121">&quot;t&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:rot</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lat=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lon=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rev=</span><span style="color: #BA2121">&quot;18900000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:lightRig&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:scene3d&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Transforming this Picture</strong></p>
+<p>Now that both basic properties and additional picture properties have been specified, we can begin incorporating shape properties. Below is the same picture as described above, with 3D camera perspective applied along with a simple shadow and a white outline. These shape properties are the same that can be applied to a shape element. One picture-specific difference can be seen here with the border around the picture. Instead of the border growing both inward and outward, it only grows outward.</p>
+<p><a class="glightbox" href="../imgs/pic-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/pic-3.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;St_Patrick&#39;s_Day.jpg&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">descr=</span><span style="color: #BA2121">&quot;This is a Saint Patrick&#39;s day picture&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:duotone&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;000000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:duotone&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:blip&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1346200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;914400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3657600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2743200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rect&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:avLst</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;57150&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;bg1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:solidFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:effectLst&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:outerShdw</span><span style="color: #bbbbbb"> </span><span style="color: #687822">blurRad=</span><span style="color: #BA2121">&quot;50800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">dist=</span><span style="color: #BA2121">&quot;50800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">dir=</span><span style="color: #BA2121">&quot;2700000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;tl&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rotWithShape=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;7D7D7D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:alpha</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;65000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:srgbClr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:outerShdw&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:effectLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:scene3d&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:camera</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;perspectiveRelaxedModerately&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:lightRig</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rig=</span><span style="color: #BA2121">&quot;threePt&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">dir=</span><span style="color: #BA2121">&quot;t&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:rot</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lat=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lon=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rev=</span><span style="color: #BA2121">&quot;18900000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:lightRig&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:scene3d&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

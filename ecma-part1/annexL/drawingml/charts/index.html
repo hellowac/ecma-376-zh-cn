@@ -1,0 +1,3519 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../spreadml/">
+      
+      
+        <link rel="next" href="../chart_drawing/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.13 图表 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l413-图表" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.13 图表
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3daspects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pictures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l4131-概述" class="md-nav__link">
+    L.4.13.1 概述
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.13.1 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l41311-basic-chart-types" class="md-nav__link">
+    L.4.13.1.1 Basic Chart Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41312-基本图表组件" class="md-nav__link">
+    L.4.13.1.2 基本图表组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41313-3d图表" class="md-nav__link">
+    L.4.13.1.3 3D图表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41314-图表样式" class="md-nav__link">
+    L.4.13.1.4 图表样式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4132-xml-概述" class="md-nav__link">
+    L.4.13.2 XML 概述
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.13.2 XML 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l41321-关系" class="md-nav__link">
+    L.4.13.2.1 关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41322-图表" class="md-nav__link">
+    L.4.13.2.2 图表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4133-示例" class="md-nav__link">
+    L.4.13.3 示例
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l4131-概述" class="md-nav__link">
+    L.4.13.1 概述
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.13.1 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l41311-basic-chart-types" class="md-nav__link">
+    L.4.13.1.1 Basic Chart Types
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41312-基本图表组件" class="md-nav__link">
+    L.4.13.1.2 基本图表组件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41313-3d图表" class="md-nav__link">
+    L.4.13.1.3 3D图表
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41314-图表样式" class="md-nav__link">
+    L.4.13.1.4 图表样式
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4132-xml-概述" class="md-nav__link">
+    L.4.13.2 XML 概述
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.13.2 XML 概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l41321-关系" class="md-nav__link">
+    L.4.13.2.1 关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l41322-图表" class="md-nav__link">
+    L.4.13.2.2 图表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l4133-示例" class="md-nav__link">
+    L.4.13.3 示例
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l413-图表">L.4.13 图表<a class="headerlink" href="#l413-图表" title="Permanent link">&para;</a></h1>
+<p><strong>Charts</strong></p>
+<h2 id="l4131-概述">L.4.13.1 概述<a class="headerlink" href="#l4131-概述" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>图表通过显示数据的图形表示提供了一种可视化信息的好方法。 图表 XML 文件可以在不同的应用程序（例如电子表格、演示文稿和文字处理）之间重用和共享。</p>
+<p>图表有许多不同的风格，本文档提供了不同风格的图表以及用于生成它们的 XML 的基本概述。</p>
+<p>应用程序可能允许图表有许多不同的运行时行为，例如显示它们的规则。 本条款及其相应的参考材料仅定义存储和生成图表所需的 XML，并且不规定任何运行时行为。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Overview</strong></p>
+<p>Charts provide a great way to visualize information by displaying a graphical representation of the data. The chart XML files can be reused and shared among different applications, such as a spreadsheet, presentation, and word processing.</p>
+<p>Charts come in many different flavors, and this document provides a basic overview of both the different flavors of charts as well as the XML that is used to generate them.</p>
+<p>Applications might allow many different runtime behaviors for charts, such as rules for displaying them. This clause and its corresponding reference material define only the XML that is needed to store and generate the charts, and do not dictate any runtime behaviors. </p>
+</div>
+</div>
+</div>
+<h3 id="l41311-basic-chart-types">L.4.13.1.1 Basic Chart Types<a class="headerlink" href="#l41311-basic-chart-types" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>有10个基本图表。 以下是每种基本类型图表的示例：</p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Column Chart (shown above)" src="../imgs/chart-1.png" /></a>
+  <figcaption>柱形图（如上所示）</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Bar Chart (shown above)" src="../imgs/chart-2.png" /></a>
+  <figcaption>条形图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Line Chart (shown above)" src="../imgs/chart-3.png" /></a>
+  <figcaption>折线图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Pie Chart (shown above)" src="../imgs/chart-4.png" /></a>
+  <figcaption>饼形图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Area Chart (shown above)" src="../imgs/chart-5.png" /></a>
+  <figcaption>面积图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Scatter Chart (shown above)" src="../imgs/chart-6.png" /></a>
+  <figcaption>散点图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Stock Chart (shown above)" src="../imgs/chart-7.png" /></a>
+  <figcaption>股票走势图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Surface Chart (shown above)" src="../imgs/chart-8.png" /></a>
+  <figcaption>表面图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Doughnut Chart (shown above)" src="../imgs/chart-9.png" /></a>
+  <figcaption>圆环图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Bubble Chart (shown above)" src="../imgs/chart-10.png" /></a>
+  <figcaption>气泡图 (如上所示)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Radar Chart (shown above)" src="../imgs/chart-11.png" /></a>
+  <figcaption>雷达图 (如上所示)</figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Basic Chart Types</strong></p>
+<p>There are 10 basic charts. Below are examples of each basic type of chart:</p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Column Chart (shown above)" src="../imgs/chart-1.png" /></a>
+  <figcaption>Column Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Bar Chart (shown above)" src="../imgs/chart-2.png" /></a>
+  <figcaption>Bar Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Line Chart (shown above)" src="../imgs/chart-3.png" /></a>
+  <figcaption>Line Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Pie Chart (shown above)" src="../imgs/chart-4.png" /></a>
+  <figcaption>Pie Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Area Chart (shown above)" src="../imgs/chart-5.png" /></a>
+  <figcaption>Area Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Scatter Chart (shown above)" src="../imgs/chart-6.png" /></a>
+  <figcaption>Scatter Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Stock Chart (shown above)" src="../imgs/chart-7.png" /></a>
+  <figcaption>Stock Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Surface Chart (shown above)" src="../imgs/chart-8.png" /></a>
+  <figcaption>Surface Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Doughnut Chart (shown above)" src="../imgs/chart-9.png" /></a>
+  <figcaption>Doughnut Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Bubble Chart (shown above)" src="../imgs/chart-10.png" /></a>
+  <figcaption>Bubble Chart (shown above)</figcaption>
+</figure></p>
+<p><figure markdown>
+  <a class="glightbox" href="../imgs/chart-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Radar Chart (shown above)" src="../imgs/chart-11.png" /></a>
+  <figcaption>Radar Chart (shown above)</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<h3 id="l41312-基本图表组件">L.4.13.1.2 基本图表组件<a class="headerlink" href="#l41312-基本图表组件" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下是一些标记图表的不同单独组成部分的图表。 某些图表组件（例如垂线）仅显示在某些类型的图表上。</p>
+<p><a class="glightbox" href="../imgs/chart-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-12.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-13.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-14.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Basic Chart Components</strong></p>
+<p>Here are some diagrams that label the different individual components of a chart. Some chart components, such as drop lines, are only shown on certain types of charts. </p>
+<p><a class="glightbox" href="../imgs/chart-12.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-12.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-13.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-13.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-14.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-14.png" /></a></p>
+</div>
+</div>
+</div>
+<h3 id="l41313-3d图表">L.4.13.1.3 3D图表<a class="headerlink" href="#l41313-3d图表" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>大多数图表类型也有三维表示。 3D 图表具有额外的属性来描述深度、地板或墙壁，以及一些其他渲染效果。 下面是 2D 柱形图及其对应的 3D 柱形图。</p>
+<p><a class="glightbox" href="../imgs/chart-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-1.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-15.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>3D Charts</strong></p>
+<p>Most chart types also have three-dimensional representations. 3D charts have extra properties to describe depth, floor, or walls, as well as some other rendering effects. Below is a 2D column chart shown with its 3D counterpart.</p>
+<p><a class="glightbox" href="../imgs/chart-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-1.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-15.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-15.png" /></a></p>
+</div>
+</div>
+</div>
+<h3 id="l41314-图表样式">L.4.13.1.4 图表样式<a class="headerlink" href="#l41314-图表样式" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>图表可以应用不同的样式。 <strong>这本质上只是一组协调的着色和格式，应用于整个图表及其所有元素</strong>。 样式提供了一种快速、简单的方法来协调图表的外观和文档的其余部分。 下面是柱形图和饼图的渲染，显示相同的数据，并应用相同的样式。 还有许多不同类型风格的镜头。 两个图表都显示了它，以说明不同的样式如何在不同的图表类型中应用并保持一致。</p>
+<p><a class="glightbox" href="../imgs/chart-16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-16.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-17.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Chart Styles</strong></p>
+<p>Charts can have different styles applied to them. This is essentially just a coordinated set of coloring and formatting that is applied across an entire chart and all its elements. Styles allow a quick and easy way to coordinate the look and feel of a chart with the rest of the document. Below is a rendering of a column chart and pie chart showing the same data, with the same style applied. There is also a shot of many different types of styles. It is shown for both charts to illustrate how the idea of a style can apply, and be consistent, across different chart types.</p>
+<p><a class="glightbox" href="../imgs/chart-16.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-16.png" /></a></p>
+<p><a class="glightbox" href="../imgs/chart-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-17.png" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="l4132-xml-概述">L.4.13.2 XML 概述<a class="headerlink" href="#l4132-xml-概述" title="Permanent link">&para;</a></h2>
+<p><strong>XML Overview</strong></p>
+<h3 id="l41321-关系">L.4.13.2.1 关系<a class="headerlink" href="#l41321-关系" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>绘图 XML 部件包含一个图表元素，该元素表示<strong>关系 ID</strong>。 该 <code>ID</code> 由 <code>Drawing.rels</code> 部件引用，该部件指向相应的图表 XML 部件。 图表 XML 包含图表的核心定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Relationships</strong></p>
+<p>A Drawing XML part contains a chart element, which expresses a relationship ID. This ID is referenced by the drawing.rels part, which points to the corresponding chart XML part. Chart XML contains the core definition of the chart.</p>
+</div>
+</div>
+</div>
+<h3 id="l41322-图表">L.4.13.2.2 图表<a class="headerlink" href="#l41322-图表" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>不同的图表类型可以在 XML 中定义许多不同的组件，此处并未显示所有组件。 但对于许多图表来说，在非常高的级别上，图表 XML 由以下部分组成：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;chartSpace&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;chart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;view3D&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;perspective</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;30&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/view3D&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;plotArea&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;layout</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;barChart&gt;</span>...<span style="color: #008000; font-weight: bold">&lt;/barChart&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;catAx</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;valAx</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/plotArea&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;legend&gt;</span>...<span style="color: #008000; font-weight: bold">&lt;/legend&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/chart&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;printSettings&gt;</span>...<span style="color: #008000; font-weight: bold">&lt;/printSettings&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/chartSpace&gt;</span>
+</code></pre></div>
+<p><code>chartSpace</code> 是根节点，它包含一个定义图表的元素和一个定义图表打印设置的元素。</p>
+<p><code>chart</code> 是图表的根元素。 如果图表是 3D 图表，则包含 <code>view3D</code> 元素，该元素指定 <strong>3D 视图</strong>。 然后它有一个绘图区域，它定义布局并包含与图表类型相对应并定义图表类型的元素。</p>
+<p>定义图表类型的元素（上例中的 <code>barChart</code>）还可以指定类别轴数据（实际上只是类别的字符串）以及图表上显示的数字或值的缓存。 <code>cat</code> 元素定义类别轴的字符串缓存，<code>val</code> 元素定义数字缓存。</p>
+<p>根据图表的类型，绘图区域可以选择包含定义轴的元素（例如值轴和类别轴）或形状特性。 在上面的示例中，定义了类别轴 <code>catAx</code> 和值轴 <code>valAx</code>。 这些定义了轴的定位、方向、标签位置和刻度线等内容。 轴对应的实际字符串和数据由 <code>cat</code> 和 <code>val</code> 元素定义。</p>
+<p>最后，图表元素包含一个定义图表图例(legend)的图例(legend)元素。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Chart</strong></p>
+<p>Different chart types can have many different components defined in the XML, and not all are shown here. For many charts though, at a very high level, the chart XML is composed of the following pieces: </p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;chartSpace&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;chart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;view3D&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;perspective</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;30&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/view3D&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;plotArea&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;layout</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;barChart&gt;</span>...<span style="color: #008000; font-weight: bold">&lt;/barChart&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;catAx</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;valAx</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/plotArea&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;legend&gt;</span>...<span style="color: #008000; font-weight: bold">&lt;/legend&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/chart&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;printSettings&gt;</span>...<span style="color: #008000; font-weight: bold">&lt;/printSettings&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/chartSpace&gt;</span>
+</code></pre></div>
+<p>chartSpace is the root node, which contains an element defining the chart, and an element defining the print settings for the chart.</p>
+<p>chart is the root element for the chart. If the chart is a 3D chart, then a view3D element is contained, which specifies the 3D view. It then has a plot area, which defines a layout and contains an element that corresponds to, and defines, the type of chart.</p>
+<p>The element that defines the type of chart, barChart in the example above, can also specify caches for both category axis data (which is really just strings for the categories), as well as for the numbers, or values, shown on the chart. The cat element defines the string cache for the category axis, and the val element defines the number caches.</p>
+<p>Depending on the type of the chart, the plot area can optionally contain elements that define the axes— such as the value axis and category axis—or shape properties. In the example above, the category axis, catAx, and value axis, valAx are defined. These define things like positioning, orientation, label position, and tick marks for the axis. The actual strings and data that the axis corresponds to are defined by the cat and val elements.</p>
+<p>Lastly, the chart element contains a legend element which defines the chart legend.</p>
+</div>
+</div>
+</div>
+<h2 id="l4133-示例">L.4.13.3 示例<a class="headerlink" href="#l4133-示例" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>本节中的 XML 定义了以下 3D 图表：</p>
+<p><a class="glightbox" href="../imgs/chart-18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-18.png" /></a></p>
+<p>对于此示例，详细显示了图表元素的 xml。 图表元素的 xml 如下:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;c:chart&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:view3D&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:rotX</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;30&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:perspective</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;30&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:view3D&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:plotArea&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:layout&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:lastLayoutOuter&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:x</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;4.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:y</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;4.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:w</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;324.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:h</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;206.25&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:lastLayoutOuter&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:x</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:y</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:w</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;312.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:h</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;194.25&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:layout&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:pie3DChart&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:varyColors</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:ser&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:idx</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:order</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:cat&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;c:strRef&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:f&gt;</span>Sheet1!$A$1:$C$1<span style="color: #008000; font-weight: bold">&lt;/c:f&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:strCache&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>A<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>B<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>C<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;/c:strCache&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/c:strRef&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/c:cat&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:val&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;c:numRef&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:f&gt;</span>Sheet1!$A$2:$C$2<span style="color: #008000; font-weight: bold">&lt;/c:f&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:numCache&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;/c:numCache&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/c:numRef&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/c:val&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:ser&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:pie3DChart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:spPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;25400&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:plotArea&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:legend&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:legendPos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;r&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:layout&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:x</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;333.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:y</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;81.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:w</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;19.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:h</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;51.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:layout&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:legend&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:plotVisOnly</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/c:chart&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Example</strong></p>
+<p>The XML in this clause defines the following 3D chart:</p>
+<p><a class="glightbox" href="../imgs/chart-18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/chart-18.png" /></a></p>
+<p>For this example, the xml for the chart element is shown in detail. The xml for the chart element follows:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;c:chart&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:view3D&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:rotX</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;30&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:perspective</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;30&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:view3D&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:plotArea&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:layout&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:lastLayoutOuter&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:x</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;4.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:y</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;4.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:w</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;324.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:h</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;206.25&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:lastLayoutOuter&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:x</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:y</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:w</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;312.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:h</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;194.25&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:layout&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:pie3DChart&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:varyColors</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:ser&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:idx</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:order</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:cat&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;c:strRef&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:f&gt;</span>Sheet1!$A$1:$C$1<span style="color: #008000; font-weight: bold">&lt;/c:f&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:strCache&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>A<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>B<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>C<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;/c:strCache&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/c:strRef&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/c:cat&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:val&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;c:numRef&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:f&gt;</span>Sheet1!$A$2:$C$2<span style="color: #008000; font-weight: bold">&lt;/c:f&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;c:numCache&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;c:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                                </span><span style="color: #008000; font-weight: bold">&lt;c:v&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/c:v&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;/c:pt&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;/c:numCache&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/c:numRef&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/c:val&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:ser&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:pie3DChart&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:spPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ln</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;25400&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:noFill</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:plotArea&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:legend&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:legendPos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;r&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;c:layout&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:x</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;333.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:y</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;81.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:w</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;19.5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;c:h</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;51.75&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/c:lastLayout&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/c:layout&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/c:legend&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;c:plotVisOnly</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/c:chart&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

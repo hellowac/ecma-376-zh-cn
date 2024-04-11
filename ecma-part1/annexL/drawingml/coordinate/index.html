@@ -1,0 +1,3637 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3daspects/">
+      
+      
+        <link rel="next" href="../shape_pr/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.7 坐标系和变换 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l47-坐标系和变换" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.7 坐标系和变换
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3daspects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l471-介绍" class="md-nav__link">
+    L.4.7.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l472-坐标系统" class="md-nav__link">
+    L.4.7.2 坐标系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l473-形状变换" class="md-nav__link">
+    L.4.7.3 形状变换
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.7.3 形状变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4731-缩放和平移形状" class="md-nav__link">
+    L.4.7.3.1 缩放和平移形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4732-旋转形状" class="md-nav__link">
+    L.4.7.3.2 旋转形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4733-翻转形状" class="md-nav__link">
+    L.4.7.3.3 翻转形状
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l474-组合变换" class="md-nav__link">
+    L.4.7.4 组合变换
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.7.4 组合变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4741-缩放和平移组合" class="md-nav__link">
+    L.4.7.4.1 缩放和平移组(合)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4742-旋转组合" class="md-nav__link">
+    L.4.7.4.2 旋转组(合)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l475-嵌套变换" class="md-nav__link">
+    L.4.7.5 嵌套变换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l476-变换矩阵" class="md-nav__link">
+    L.4.7.6 变换矩阵
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.7.6 变换矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4761-符号定义" class="md-nav__link">
+    L.4.7.6.1 符号定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4762-变换过程" class="md-nav__link">
+    L.4.7.6.2 变换过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pictures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l471-介绍" class="md-nav__link">
+    L.4.7.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l472-坐标系统" class="md-nav__link">
+    L.4.7.2 坐标系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l473-形状变换" class="md-nav__link">
+    L.4.7.3 形状变换
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.7.3 形状变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4731-缩放和平移形状" class="md-nav__link">
+    L.4.7.3.1 缩放和平移形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4732-旋转形状" class="md-nav__link">
+    L.4.7.3.2 旋转形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4733-翻转形状" class="md-nav__link">
+    L.4.7.3.3 翻转形状
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l474-组合变换" class="md-nav__link">
+    L.4.7.4 组合变换
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.7.4 组合变换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4741-缩放和平移组合" class="md-nav__link">
+    L.4.7.4.1 缩放和平移组(合)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4742-旋转组合" class="md-nav__link">
+    L.4.7.4.2 旋转组(合)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l475-嵌套变换" class="md-nav__link">
+    L.4.7.5 嵌套变换
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l476-变换矩阵" class="md-nav__link">
+    L.4.7.6 变换矩阵
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.7.6 变换矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4761-符号定义" class="md-nav__link">
+    L.4.7.6.1 符号定义
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4762-变换过程" class="md-nav__link">
+    L.4.7.6.2 变换过程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l47-坐标系和变换">L.4.7 坐标系和变换<a class="headerlink" href="#l47-坐标系和变换" title="Permanent link">&para;</a></h1>
+<p><strong>Coordinate Systems and Transformations</strong></p>
+<h2 id="l471-介绍">L.4.7.1 介绍<a class="headerlink" href="#l471-介绍" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>本文档概述了形状和组的变换元素，在 DrawingML 中由“<a:xfrm>”表示。 这些模式(Schema)用于表示各个形状和组的缩放和旋转。</p>
+<p>[§L.4.7.2]、[§L.4.7.3] 和 [§L.4.7.4] 提供了变换管道的定性概述。 [§L.4.7.6] 提供了数学细节。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Introduction</strong></p>
+<p>This document provides an overview of the transformation elements for shapes and groups, represented by <code>&lt;a:xfrm&gt;</code> in DrawingML. These schemas are for the representation of scaling and rotation on individual shapes and groups.</p>
+<p>§L.4.7.2, §L.4.7.3, and §L.4.7.4 provide a qualitative overview of the transformation pipeline. §L.4.7.6 provides mathematical details.</p>
+</div>
+</div>
+</div>
+<h2 id="l472-坐标系统">L.4.7.2 坐标系统<a class="headerlink" href="#l472-坐标系统" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>所有 DrawingML 形状都位于<strong>二维笛卡尔坐标空间</strong>上，原点 (0,0) 位于画布的左上角。 从左向右移动时，x 轴坐标正向增长；从上向下移动时，y 轴坐标正向增长。</p>
+<p>坐标是在基于EMU单位测量的，可以是正值，也可以是负值。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Coordinate System</strong></p>
+<p>All DrawingML shapes are located on a 2-D Cartesian coordinate space with the origin (0,0) in the upper left-hand corner of the canvas. The x-axis coordinates grow positively as one moves from left to right, and the y-axis coordinates grow positively as one moves from top to bottom.</p>
+<p>Coordinates are measured in EMUs, and can be positive or negative.</p>
+</div>
+</div>
+</div>
+<h2 id="l473-形状变换">L.4.7.3 形状变换<a class="headerlink" href="#l473-形状变换" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在本小节中，我们描述形状的<strong>变换过程</strong>(transformation pipeline)。 总而言之，形状的形状变换被定义为以下操作序列：</p>
+<ol>
+<li><strong>将其原始边界框转换为由偏移和范围指定的矩形所需的平移和缩放。</strong></li>
+<li><strong>根据 <code>flipH</code> 和 <code>flipV</code> 跨越边界框中心的翻转。</strong></li>
+<li><strong>根据 <code>rot</code> 属性绕边界框中心旋转。</strong></li>
+</ol>
+<p>要渲染不在组内的形状 ([§L.4.7.4])，渲染器只需将形状变换应用于原始形状。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Shape Transformations</strong></p>
+<p>In this subclause, we describe the transformation pipeline for a shape. To summarize, the shape transformation for a shape is defined as the following sequence of operations:</p>
+<ol>
+<li>The translation and scaling required to transform its original bounding box to a rectangle specified by the offset and extents.</li>
+<li>A flip across the center of the bounding box according to flipH and flipV.</li>
+<li>A rotation about the center of the bounding box according to the rot attribute.</li>
+</ol>
+<p>To render a shape that is not inside a group (§L.4.7.4), the renderer simply applies the shape transformation to the original shape.</p>
+</div>
+</div>
+</div>
+<h3 id="l4731-缩放和平移形状">L.4.7.3.1 缩放和平移形状<a class="headerlink" href="#l4731-缩放和平移形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>形状会<strong>水平缩放</strong>(scaled horizontally)、<strong>垂直缩放</strong>(scaled vertically)并可以在两个维度上进行平移，以填充给定的边界框。 边界框通过指定 <code>x</code> 和 <code>y</code>（<code>a:off</code> 的属性 <code>x</code> 和 <code>y</code>）中的偏移量以及 <code>x</code> 和 <code>y</code> 中的范围（<code>a:ext</code> 的属性 <code>cx</code> 和 <code>cy</code>，两者都<strong>必须大于或等于 0</strong>）来表示 ）。 <ins class="critic">边界框的左上角位于偏移量处，边界框的右下角位于<strong>偏移量加范围</strong>处。</ins></p>
+<ins class="critic block">
+<p><strong>如果起始形状的宽度为零（例如，它是一条垂直线），则忽略 <code>a:ext</code> 的 <code>cx</code> 属性并跳过水平缩放。 类似地，如果起始形状的高度为零，则忽略 <code>a:ext</code> 的 <code>cy</code> 属性并跳过垂直缩放。</strong></p>
+</ins>
+<p><a class="glightbox" href="../imgs/coordinate-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-1.png" /></a></p>
+<p>以下 XML 片段表示上面星形的偏移量和范围：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1866680&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>请注意，如上面的示例所示，在缩放和平移形状以填充给定边界框时，附加到形状的任何效果都将被忽略。</p>
+<p>此示例说明不需要额外的参数来表示形状的缩放。 边界框参数足以表示缩放。 以下 XML 片段表示星形在缩放之前和之后的偏移量和范围。 在这个特定示例中，边界框被选择为具有相同的左上角，即相同的偏移量。</p>
+<p><a class="glightbox" href="../imgs/coordinate-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-2.png" /></a></p>
+<p>缩放前（小星星）：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>缩放后（大星星）：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2438400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2133600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Scaling and Translating a Shape</strong></p>
+<p>The shape is scaled horizontally, scaled vertically, and translated in both dimensions, to fill a given bounding box. The bounding box is represented by specifying an offset in x and y (attributes x and y of a:off) and extents in x and y (attributes cx and cy of a:ext, both of which must be greater than or equal to zero). The upper left corner of the bounding box is located at the offset, and the lower right corner of the bounding box is located at the offset plus extent. </p>
+<p>If the starting shape has zero width (e.g., it is a vertical line), then the cx attribute of a:ext is ignored and the horizontal scaling is skipped. Similarly, if the starting shape has zero height, then the cy attribute of a:ext is ignored and the vertical scaling is skipped. </p>
+<p><a class="glightbox" href="../imgs/coordinate-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-1.png" /></a></p>
+<p>The following XML fragment represents the offset and extents for the star shape above:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1866680&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>Notice that as demonstrated with the example above, any effects attached to the shape are disregarded when scaling and translating the shape to fill the given bounding box.</p>
+<p>This example illustrates that no additional parameters are needed to represent the scaling of a shape. The bounding-box parameters are sufficient to represent scaling. The following XML Fragments represent the offset and extents for a star shape, before and after scaling. In this particular example, the bounding boxes have been chosen to have the same upper-left corner, i.e., the same offset.</p>
+<p><a class="glightbox" href="../imgs/coordinate-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-2.png" /></a></p>
+<p>Before scaling (small star):</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>After scaling (large star):</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2438400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2133600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4732-旋转形状">L.4.7.3.2 旋转形状<a class="headerlink" href="#l4732-旋转形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>旋转用 <code>rot</code> 属性表示。 <strong>形状围绕边界框中心顺时针旋转，旋转量在 <code>rot</code> 属性中指定。 每个旋转单位为 <code>1/1,000</code> 弧分（<code>1/60,000</code> 度）。</strong></p>
+<p>此示例代表从上方观察的小星星，随后顺时针旋转 45 度。 由于 <code>y</code> 轴指向下方，因此顺时针旋转为正。</p>
+<p><a class="glightbox" href="../imgs/coordinate-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-3.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rot=</span><span style="color: #BA2121">&quot;2700000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Rotating a Shape</strong></p>
+<p>Rotation is represented with the rot attribute. The shape is rotated clockwise about the bounding-box center, by the amount specified in the rot attribute. Each unit of rotation is 1/1,000 of an arc minute (1/60,000 of a degree).</p>
+<p>This example represents the small star from above, with a subsequent 45-degree rotation clockwise. Since the y axis points down, a clockwise rotation is positive.</p>
+<p><a class="glightbox" href="../imgs/coordinate-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-3.png" /></a></p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rot=</span><span style="color: #BA2121">&quot;2700000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1371600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4733-翻转形状">L.4.7.3.3 翻转形状<a class="headerlink" href="#l4733-翻转形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>翻转是穿过与边界框中心相交的垂直或水平线的反射。 可选的<code>flipH</code>和<code>flipV</code>属性分别控制水平和垂直翻转。 如果不执行翻转，则每个都不存在或等于 <code>0</code>；如果要执行翻转，则每个都等于 <code>1</code>。</p>
+<p><a class="glightbox" href="../imgs/coordinate-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-4.png" /></a></p>
+<p>以下 XML 片段说明了已水平和垂直翻转的形状。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm</span><span style="color: #bbbbbb"> </span><span style="color: #687822">flipH=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">flipV=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">     </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3964937&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2652643&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">     </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;168838&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219199&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Flipping a Shape</strong></p>
+<p>A flip is a reflection across a vertical or horizontal line that intersects the center of the bounding box. The optional flipH and flipV attributes control horizontal and vertical flipping, respectively. Each is absent or equal to 0 if no flipping is to be performed, and equal to 1 if flipping is to be performed.</p>
+<p><a class="glightbox" href="../imgs/coordinate-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="111" src="../imgs/coordinate-4.png" /></a></p>
+<p>The following XML fragment illustrates a shape that has been flipped both horizontally and vertically.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm</span><span style="color: #bbbbbb"> </span><span style="color: #687822">flipH=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">flipV=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">     </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3964937&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2652643&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">     </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;168838&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219199&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="l474-组合变换">L.4.7.4 组合变换<a class="headerlink" href="#l474-组合变换" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>组合由零到多个形状组成。 因为组合是一个形状，所以这种组合关系可以递归嵌套。 （具有零个形状的组合是退化的；它不产生用户可见的输出。具有一种形状的组合也是退化的；它不具有超越单一形状的表征能力。）</p>
+<p><strong>组合变换</strong>的定义与<strong>形状变换</strong>的定义相同，只是我们使用其所有子项在单独旋转之前的<strong>并集</strong>来代替形状的预变换边界框。 总而言之，组合变换是以下操作序列：</p>
+<ol>
+<li><strong>将子级边界框的并集转换为由组的偏移和范围属性定义的矩形所需的平移和缩放。</strong></li>
+<li><strong>根据 <code>FlipH</code> 和 <code>FlipV</code> 属性围绕该边界框进行翻转。</strong></li>
+<li><strong>根据 rot 属性围绕该边界框的中心进行旋转。</strong></li>
+</ol>
+<p>要渲染组合层次结构内的简单形状，渲染器不会简单地将形状变换和所有父级组合变换应用于原始形状。 相反（参见[§L.4.7.5]），它应用等于以下操作序列的转换：</p>
+<ol>
+<li><strong>水平缩放和翻转的因子等于其自身变换及其父级变换中水平缩放和翻转的乘积。</strong></li>
+<li><strong>垂直缩放和翻转的因子等于其自身变换及其父变换中垂直缩放和翻转的乘积。</strong></li>
+<li><strong>旋转量等于其自身变换中的旋转量及其父级变换中的旋转量之和。</strong></li>
+<li><strong>平移，使其中心与通过将形状变换和所有父组变换应用到形状的原始中心而获得的点重合。</strong></li>
+</ol>
+<p>由于与形状的变换过程相似，接下来的小节主要介绍说明性示例。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Group Transformations</strong></p>
+<p>A group is composed of zero to many shapes. Because a group is a shape, this composition relationship can nest recursively. (A group with zero shapes is degenerate; it produces no user-visible output. A group with one shape is also degenerate; it has no representational power beyond that of the one shape.)</p>
+<p>The definition of a group transformation is identical to that of a shape transformation, except that in place of the pre-transform bounding box of a shape, we use the union of all of its children prior to their individual rotations. To summarize, a group transformation is the following sequence of operations:</p>
+<ol>
+<li>The translation and scaling required to transform the union of the children's bounding boxes to a rectangle defined by the group's offset and extent attributes.</li>
+<li>A flipped about that bounding box according to the flipH and flipV attributes.</li>
+<li>A rotation about the center of that bounding box according to the rot attribute.</li>
+</ol>
+<p>To render a simple shape that is inside a group hierarchy, the renderer does not simply apply the shape transformation and all parent group transformations to the original shape. Instead (see §L.4.7.5), it apples the transformation equal to the following sequence of operations:</p>
+<ol>
+<li>Horizontal scaling and flipping by a factor equal to the product of the horizontal scalings and flips in its own transformation and those of its parents.</li>
+<li>Vertical scaling and flipping by a factor equal to the product of the vertical scalings and flips in its own transformation and those of its parents.</li>
+<li>Rotation by an amount equal to the sum of the rotations in its own transformation and those of its parents.</li>
+<li>Translation such that its center coincides with the point obtained by applying the shape transformation and all parent group transformations to the shape's original center. </li>
+</ol>
+<p>Because of the similarity with the transformation pipeline for a shape, the forthcoming subsections primarily cover illustrative examples.</p>
+</div>
+</div>
+</div>
+<h3 id="l4741-缩放和平移组合">L.4.7.4.1 缩放和平移组(合)<a class="headerlink" href="#l4741-缩放和平移组合" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该组合可以<strong>水平缩放</strong>、<strong>垂直缩放</strong>以及在两个维度上进行<strong>平移</strong>。 选择参数将<strong>子边界框</strong>（由 <code>a:chOff</code> 和 <code>a:chExt</code> 指定）转换为<strong>组边界框</strong>（由 <code>a:off</code> 和 <code>a:ext</code> 指定）。 子边界框被定义为组合子级周围的边界框，就像它们的 <code>rot</code> 属性不存在时一样。</p>
+<p>子边界框在 <code>a:chExt</code> 中的 <code>cx</code> 或 <code>cy</code> 可能为零值，例如，因为起始形状是水平线或垂直线，或者因为起始形状被缩放为具有零宽度或高度。 这种情况的处理方式与前面针对简单形状所描述的方式相同。</p>
+<p>此示例演示了子边界框的定义。 左侧的两个形状（旋转的正方形）被分组。 右侧的两个形状（未旋转的正方形）也被分组。</p>
+<p><a class="glightbox" href="../imgs/coordinate-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-5.png" /></a></p>
+<p>红带不是绘图的一部分； 每个代表一个组的子边界框。 在 XML 片段中，子边界框具有相同的 <code>y</code> 值，说明它们是根据旋转之前的正方形的边界框计算的。 </p>
+<p>对于左侧组：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;762000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;762000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>对于右侧组：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;4978400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;4978400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>本小节中的其余示例说明了组的平移和缩放。</p>
+<p>在这种情况下，两个形状被分组：箭头和三角形。 不应用进一步的平移、缩放、旋转或翻转。</p>
+<p>为了表示这种情况，子边界框是这两个形状周围的边界框； 并且因为没有应用进一步的变换，所以组边界框等于子边界框。</p>
+<p><a class="glightbox" href="../imgs/coordinate-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-6.png" /></a></p>
+<p>以下是表示组合的转换变量的 XML 片段。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2209800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2514600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;4038600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2286000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2209800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2514600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;4038600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2286000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:grpSpPr&gt;</span>
+</code></pre></div>
+<p>这个例子说明不需要额外的参数来表示组合的转换。 一组移至右侧。 下图显示了转换之前的起始状态。 请注意，<strong>offset==ChOffset</strong> 和 <strong>extent==ChExtent</strong>。</p>
+<p><a class="glightbox" href="../imgs/coordinate-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-7.png" /></a></p>
+<p>增加偏移的 x 分量会将组移至右侧。</p>
+<p><a class="glightbox" href="../imgs/coordinate-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-8.png" /></a></p>
+<p>类似地，可以通过调整组边界框来执行缩放。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Scaling and Translating a Group</strong></p>
+<p>The group is scaled horizontally, scaled vertically, and translated in both dimensions. The parameters are chosen to transform the child bounding box (specified by a:chOff and a:chExt) to the group bounding box (specified by a:off and a:ext). The child bounding box is defined as the bounding box around the group's children as they would have been had their rot attributes been absent.</p>
+<p>It is possible for the child bounding box to have a zero value for cx or cy in a:chExt, e.g., because the starting shape is a horizontal or vertical line, or because the starting shape was scaled to have zero width or height. Such a case is handled in the same way as previously described for simple shapes.</p>
+<p>This example demonstrates the definition of the child bounding box. The two shapes on the left, rotated squares, are grouped. The two shapes on the right, non-rotated squares, are also grouped.</p>
+<p><a class="glightbox" href="../imgs/coordinate-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-5.png" /></a></p>
+<p>The red bands are not part of the drawing; each represents the child bounding box of a group. In the XML fragments, the child bounding boxes have identical y values, illustrating that they are computed based on the bounding boxes of the squares prior to their rotation. </p>
+<p>For the left-hand group:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;762000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;762000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>For the right-hand group:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;4978400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;4978400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1828800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;3327400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1219200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+</code></pre></div>
+<p>The remainder of the examples in this subsection illustrate translation and scaling of a group.</p>
+<p>In this situation, two shapes are grouped: an arrow and a triangle. No further translation, scaling, rotation, or flipping is applied.</p>
+<p>To represent this situation, the child bounding box is the bounding box around both of these shapes; and because no further transformation is applied, the group bounding box is equal to the child bounding box. </p>
+<p><a class="glightbox" href="../imgs/coordinate-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-6.png" /></a></p>
+<p>The following is an XML snippet representing the transform variables of the group.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2209800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2514600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;4038600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2286000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2209800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2514600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;4038600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;2286000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:grpSpPr&gt;</span>
+</code></pre></div>
+<p>This example illustrates that no additional parameters are needed to represent the translation of a group. A group is moved to the right. The following diagram shows the starting state, prior to the translation. Note that offset==ChOffset and extent==ChExtent.</p>
+<p><a class="glightbox" href="../imgs/coordinate-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-7.png" /></a></p>
+<p>Increasing the x component of the offset moves the group to the right.</p>
+<p><a class="glightbox" href="../imgs/coordinate-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-8.png" /></a></p>
+<p>Similarly, scaling can be performed by adjusting the group bounding box.</p>
+</div>
+</div>
+</div>
+<h3 id="l4742-旋转组合">L.4.7.4.2 旋转组(合)<a class="headerlink" href="#l4742-旋转组合" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>组旋转与形状旋转相同。 该组围绕边界框中心顺时针旋转，旋转量在 <code>rot</code> 属性中指定。</p>
+<p>在此示例中，组顺时针旋转 <code>90</code> 度。 下图显示了旋转之前的起始状态。</p>
+<p><a class="glightbox" href="../imgs/coordinate-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-9.png" /></a></p>
+<p>将旋转属性设置为 5,400,000 会将组顺时针旋转 <code>90</code> 度。</p>
+<p><a class="glightbox" href="../imgs/coordinate-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-10.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Rotating a Group</strong></p>
+<p>Group rotation is identical to shape rotation. The group is rotated clockwise about the bounding-box center, by the amount specified in the rot attribute. </p>
+<p>In this example, group is rotated 90 degrees clockwise. The following diagram shows the starting state, prior to the rotation.</p>
+<p><a class="glightbox" href="../imgs/coordinate-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-9.png" /></a></p>
+<p>Setting the rotation attribute to 5,400,000 rotates the group clockwise 90 degrees.</p>
+<p><a class="glightbox" href="../imgs/coordinate-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-10.png" /></a></p>
+</div>
+</div>
+</div>
+<h2 id="l475-嵌套变换">L.4.7.5 嵌套变换<a class="headerlink" href="#l475-嵌套变换" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下示例说明了[§L.4.7.4]介绍末尾处描述的渲染过程，在缩放组包含旋转子组的任何情况下，该渲染过程都不同于传统的变换过程。</p>
+<details class="info">
+<summary>Example</summary>
+<p>在此示例中，左侧的图是一个组，其中包含一个旋转的红色方块，其中心位于一个未旋转的蓝色方块内。 右侧的图是同一组，水平缩放。 红色正方形沿着平行于其自身边缘的轴而不是平行于蓝色正方形边缘的轴缩放。</p>
+<p><a class="glightbox" href="../imgs/coordinate-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-11.png" /></a></p>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>Nesting Transformations</strong></p>
+<p>The following example illustrates the rendering procedure described at the end of the introduction to §L.4.7.4, which differs from a conventional transformation pipeline in any case where a scaled group contains a rotated child. </p>
+<details class="info">
+<summary>Example</summary>
+<p>In this example, the diagram on the left side is a group that comprises a rotated red square centered inside a non-rotated blue square. The diagram on the right side is the same group, scaled horizontally. The red square scales along an axis parallel to its own edges instead of an axis parallel to the edges of the blue square. </p>
+<p><a class="glightbox" href="../imgs/coordinate-11.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/coordinate-11.png" /></a></p>
+</details>
+</div>
+</div>
+</div>
+<h2 id="l476-变换矩阵">L.4.7.6 变换矩阵<a class="headerlink" href="#l476-变换矩阵" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>前面的部分完整定义了变换过程及其参数。 本节通过数学描述来帮助开发人员实现该过程。 它被概括为描述形状变换过程或组变换过程。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Transformation Matrices</strong></p>
+<p>The preceding sections fully define the transformation pipeline and its parameters. This section assists developers in implementing the pipeline by describing it mathematically. It is generalized to describe either the shape transformation pipeline or the group transformation pipeline.</p>
+</div>
+</div>
+</div>
+<h3 id="l4761-符号定义">L.4.7.6.1 符号定义<a class="headerlink" href="#l4761-符号定义" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>让以下符号代表前面部分中描述的参数。</p>
+<dl>
+<dt><span class="arithmatex">\((B_x, B_y)\)</span></dt>
+<dd>
+<p>对于形状：未变换形状的左上角。</p>
+<p>对于组：子边界框的左上角 (<code>a:chOff</code>)。</p>
+</dd>
+<dt><span class="arithmatex">\((D_x, D_y)\)</span></dt>
+<dd>
+<p>对于形状：未变换形状的（宽度，高度）。</p>
+<p>对于组：子边界框 (<code>a:chExt</code>) 的（宽度、高度）。</p>
+</dd>
+<dt><span class="arithmatex">\((B_{x}^{'} , B_{y}^{'})\)</span></dt>
+<dd>
+<p>旋转和翻转之前，边界框的左上角（<code>a:off</code>）。</p>
+</dd>
+<dt><span class="arithmatex">\((D_{x}^{'} , D_{y}^{'})\)</span></dt>
+<dd>
+<p>在旋转和翻转之前，边界框 (<code>a:ext</code>) 的（宽度、高度）。</p>
+</dd>
+<dt><span class="arithmatex">\(\theta\)</span></dt>
+<dd>
+<p>顺时针旋转（来自属性 <code>rot</code>，它使用千分之一弧分）。</p>
+</dd>
+<dt><span class="arithmatex">\(F_x\)</span></dt>
+<dd>
+<p>如果 FlipH 为真，则为 −1； 否则+1。</p>
+</dd>
+<dt><span class="arithmatex">\(F_y\)</span></dt>
+<dd>
+<p>如果 FlipV 为真，则为 −1； 否则+1。</p>
+</dd>
+</dl>
+<p>我们使用齐次坐标，其中点 <span class="arithmatex">\(p\)</span> 表示为以下形式</p>
+<div class="arithmatex">\[p = \begin{bmatrix}x\\y\\1\end{bmatrix} \cdot \]</div>
+<p>我们使用通过<strong>左乘</strong>来应用变换的约定。 因此，为了通过对点 <span class="arithmatex">\(p\)</span> 应用变换 <span class="arithmatex">\(T\)</span> 来获得点 <span class="arithmatex">\(p^{'}\)</span>，我们可以这样写：</p>
+<div class="arithmatex">\[ p^{'} = T p \]</div>
+</div>
+<div class="tabbed-block">
+<p><strong>Symbol Definitions</strong></p>
+<p>Let the following symbols represent parameters described in the preceding sections. </p>
+<dl>
+<dt><span class="arithmatex">\((B_x, B_y)\)</span></dt>
+<dd>
+<p>For a shape: upper left corner of untransformed shape.</p>
+<p>For a group: upper left corner of child bounding box (a:chOff).</p>
+</dd>
+<dt><span class="arithmatex">\((D_x, D_y)\)</span></dt>
+<dd>
+<p>For a shape: (width,height) of untransformed shape.</p>
+<p>For a group: (width,height) of child bounding box (a:chExt).</p>
+</dd>
+<dt><span class="arithmatex">\((B_{x}^{'} , B_{y}^{'})\)</span></dt>
+<dd>
+<p>Upper left corner of bounding box (a:off), prior to rotation and flip.</p>
+</dd>
+<dt><span class="arithmatex">\((D_{x}^{'} , D_{y}^{'})\)</span></dt>
+<dd>
+<p>(width,height) of bounding box (a:ext), prior to rotation and flip.</p>
+</dd>
+<dt><span class="arithmatex">\(\theta\)</span></dt>
+<dd>
+<p>Clockwise rotation (from the attribute rot, which uses thousandths of an arc minute). </p>
+</dd>
+<dt><span class="arithmatex">\(F_x\)</span></dt>
+<dd>
+<p>−1 if flipH is true; +1 otherwise.</p>
+</dd>
+<dt><span class="arithmatex">\(F_y\)</span></dt>
+<dd>
+<p>−1 if flipV is true; +1 otherwise.</p>
+</dd>
+</dl>
+<p>We use homogeneous coordinates, in which a point p is represented in the form</p>
+<div class="arithmatex">\[p = \begin{bmatrix}x\\y\\1\end{bmatrix} \cdot \]</div>
+<p>We use the convention in which transformations are applied by left-hand multiplication. Thus, to obtain the point p' by applying transformation T to point p we write:</p>
+<div class="arithmatex">\[ p^{'} = T p \]</div>
+</div>
+</div>
+</div>
+<h3 id="l4762-变换过程">L.4.7.6.2 变换过程<a class="headerlink" href="#l4762-变换过程" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>定义形状变换或组变换的整个变换过程由本小节末尾定义的矩阵 <span class="arithmatex">\(T\)</span> 表示。</p>
+<p>缩放和平移由以下矩阵产生：</p>
+<div class="arithmatex">\[T_{st} = \begin{bmatrix} \frac{D_{x}^{'}}{D_{x}}  &amp; 0 &amp; B_{x}^{'} -(\frac{D_{x}^{'}}{D_{x}}) B_x \\ 0 &amp; \frac{D_{y}^{'}}{D_{y}} &amp; B_{y}^{'} - (\frac{D_{y}^{'}}{D_{y}})B_y\\  0 &amp; 0 &amp; 1 \end{bmatrix} \cdot \]</div>
+<p>以下矩阵将边界框平移到原点，为旋转和翻转做准备：</p>
+<div class="arithmatex">\[ U = \begin{bmatrix} 1  &amp; 0 &amp; -(B_{x}^{'} + \frac{D_{x}^{'}}{2})\\ 0  &amp; 1 &amp; -(B_{y}^{'} + \frac{D_{y}^{'}}{2})\\ 0  &amp; 0 &amp; 1 \end{bmatrix} \cdot \]</div>
+<p>旋转和翻转由以下矩阵产生：</p>
+<div class="arithmatex">\[ T_{rf} = U^{-1}\begin{bmatrix} cos\theta &amp; -sin\theta &amp; 0 \\  sin\theta &amp; cos\theta &amp; 0 \\  0 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix}  F_x &amp; 0 &amp; 0 \\  0 &amp; F_y &amp; 0 \\  0 &amp; 0 &amp; 1 \end{bmatrix} U \cdot  \]</div>
+<p>组层次结构中一个步骤的整个变换过程由矩阵表示为</p>
+<div class="arithmatex">\[ T = T_{rf} T_{st} \]</div>
+</div>
+<div class="tabbed-block">
+<p><strong>Transformation Pipeline</strong></p>
+<p>The entire transformation pipeline that defines either a shape transformation or a group transformation is represented by the matrix T, defined at the end of this subsection.</p>
+<p>Scaling and translation are produced by the following matrix:</p>
+<div class="arithmatex">\[T_{st} = \begin{bmatrix} \frac{D_{x}^{'}}{D_{x}}  &amp; 0 &amp; B_{x}^{'} -(\frac{D_{x}^{'}}{D_{x}}) B_x \\ 0 &amp; \frac{D_{y}^{'}}{D_{y}} &amp; B_{y}^{'} - (\frac{D_{y}^{'}}{D_{y}})B_y\\  0 &amp; 0 &amp; 1 \end{bmatrix} \cdot \]</div>
+<p>The following matrix translates the bounding box to the origin in preparation for rotation and flipping:</p>
+<div class="arithmatex">\[ U = \begin{bmatrix} 1  &amp; 0 &amp; -(B_{x}^{'} + \frac{D_{x}^{'}}{2})\\ 0  &amp; 1 &amp; -(B_{y}^{'} + \frac{D_{y}^{'}}{2})\\ 0  &amp; 0 &amp; 1 \end{bmatrix} \cdot \]</div>
+<p>Rotation and flipping are produced by the following matrix:</p>
+<div class="arithmatex">\[ T_{rf} = U^{-1}\begin{bmatrix} cos\theta &amp; -sin\theta &amp; 0 \\  sin\theta &amp; cos\theta &amp; 0 \\  0 &amp; 0 &amp; 1 \end{bmatrix}\begin{bmatrix}  F_x &amp; 0 &amp; 0 \\  0 &amp; F_y &amp; 0 \\  0 &amp; 0 &amp; 1 \end{bmatrix} U \cdot  \]</div>
+<p>The entire transformation pipeline for one step in the group hierarchy is represented by the matrix</p>
+<div class="arithmatex">\[ T = T_{rf} T_{st} \]</div>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

@@ -1,0 +1,3458 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter-15/">
+      
+      
+        <link rel="next" href="../chapter-17/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>16. 部件概览 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#16-部件概览" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              16. 部件概览
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#161-wordprocessingml-概览" class="md-nav__link">
+    16.1 WordprocessingML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#162-spreadsheetml-概览" class="md-nav__link">
+    16.2 SpreadsheetML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#163-presentationml-概览" class="md-nav__link">
+    16.3 PresentationML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#164-drawingml-概览" class="md-nav__link">
+    16.4 DrawingML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#165-shared-概览" class="md-nav__link">
+    16.5 Shared 概览
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#161-wordprocessingml-概览" class="md-nav__link">
+    16.1 WordprocessingML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#162-spreadsheetml-概览" class="md-nav__link">
+    16.2 SpreadsheetML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#163-presentationml-概览" class="md-nav__link">
+    16.3 PresentationML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#164-drawingml-概览" class="md-nav__link">
+    16.4 DrawingML 概览
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#165-shared-概览" class="md-nav__link">
+    16.5 Shared 概览
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="16-部件概览">16. 部件概览🌟<a class="headerlink" href="#16-部件概览" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>This clause is informative.</strong></p>
+<p>为方便起见，以下子条款指定每个部件的根元素，并在适用时链接到定义包内该部件的根元素的相应子章节。 </p>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>此处使用的术语 “部件(part)” 和 “包(package)” 在 ECMA-376-2 中定义。 </p>
+</div>
+<p>请注意，ECMA-376 的本部分中未定义其中一些部件的内容，在这种情况下，根元素被列为“不适用(Not applicable)”，参考为 “n/a”。 
+对于那些根元素被列为“不适用(Not applicable)”的部件，ECMA-376 的第 1 部分定义了该部件的用途及其内容的结构。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Part Overview</strong></p>
+<p><strong>This clause is informative.</strong></p>
+<p>For convenience, the following subclauses specify the root elements for each part and, when applicable, link to the appropriate subclause that defines the root element for that part within the package. [Note: The terms part and package, as used here, are defined in ECMA-376-2. end note] Note that the contents of some of these parts are not defined in this Part of ECMA-376, in which case, the root element is listed as "Not applicable" and the Reference is "n/a". For those parts where the Root Element is listed as "Not Applicable", a definition of the part’s use and how its content shall be structured is defined in this Part 1 of ECMA-376.</p>
+</div>
+</div>
+</div>
+<h2 id="161-wordprocessingml-概览">16.1 WordprocessingML 概览<a class="headerlink" href="#161-wordprocessingml-概览" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>部件(Part)</strong></td>
+            <td><strong>根节点/元素(Root Element)</strong></td>
+            <td><strong>参考(Ref.)</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Alternative Format Import</td>
+            <td>Not applicable </td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>comments </td>
+            <td>[§17.13.4.6]</td>
+        </tr>
+        <tr>
+            <td>Document Settings</td>
+            <td>settings </td>
+            <td>[§17.15.1.78]</td>
+        </tr>
+        <tr>
+            <td>Endnotes</td>
+            <td>endnotes </td>
+            <td>[§17.11.8]</td>
+        </tr>
+        <tr>
+            <td>Font Table</td>
+            <td>fonts </td>
+            <td>[§17.8.3.11]</td>
+        </tr>
+        <tr>
+            <td>Footer</td>
+            <td>ftr </td>
+            <td>[§17.10.3]</td>
+        </tr>
+        <tr>
+            <td>Footnotes</td>
+            <td>footnotes </td>
+            <td>[§17.11.15]</td>
+        </tr>
+        <tr>
+            <td>Glossary Document</td>
+            <td>glossaryDocument </td>
+            <td>[§17.12.10]</td>
+        </tr>
+        <tr>
+            <td>Header</td>
+            <td>hdr </td>
+            <td>[§17.10.4]</td>
+        </tr>
+        <tr>
+            <td>Mail Merge Recipient Data</td>
+            <td>recipients </td>
+            <td>[§17.14.29]</td>
+        </tr>
+        <tr>
+            <td>Main Document</td>
+            <td>document </td>
+            <td>[§17.2.3]</td>
+        </tr>
+        <tr>
+            <td>Numbering Definitions</td>
+            <td>numbering </td>
+            <td>[§17.9.16]</td>
+        </tr>
+        <tr>
+            <td>Style Definitions</td>
+            <td>styles </td>
+            <td>[§17.7.4.18]</td>
+        </tr>
+        <tr>
+            <td>Web Settings</td>
+            <td>webSettings </td>
+            <td>[§17.15.2.45]</td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><strong>WordprocessingML Summary</strong></p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>Part</strong></td>
+            <td><strong>Root Element</strong></td>
+            <td><strong>Ref.</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Alternative Format Import</td>
+            <td>Not applicable </td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>comments </td>
+            <td>[§17.13.4.6]</td>
+        </tr>
+        <tr>
+            <td>Document Settings</td>
+            <td>settings </td>
+            <td>[§17.15.1.78]</td>
+        </tr>
+        <tr>
+            <td>Endnotes</td>
+            <td>endnotes </td>
+            <td>[§17.11.8]</td>
+        </tr>
+        <tr>
+            <td>Font Table</td>
+            <td>fonts </td>
+            <td>[§17.8.3.11]</td>
+        </tr>
+        <tr>
+            <td>Footer</td>
+            <td>ftr </td>
+            <td>[§17.10.3]</td>
+        </tr>
+        <tr>
+            <td>Footnotes</td>
+            <td>footnotes </td>
+            <td>[§17.11.15]</td>
+        </tr>
+        <tr>
+            <td>Glossary Document</td>
+            <td>glossaryDocument </td>
+            <td>[§17.12.10]</td>
+        </tr>
+        <tr>
+            <td>Header</td>
+            <td>hdr </td>
+            <td>[§17.10.4]</td>
+        </tr>
+        <tr>
+            <td>Mail Merge Recipient Data</td>
+            <td>recipients </td>
+            <td>[§17.14.29]</td>
+        </tr>
+        <tr>
+            <td>Main Document</td>
+            <td>document </td>
+            <td>[§17.2.3]</td>
+        </tr>
+        <tr>
+            <td>Numbering Definitions</td>
+            <td>numbering </td>
+            <td>[§17.9.16]</td>
+        </tr>
+        <tr>
+            <td>Style Definitions</td>
+            <td>styles </td>
+            <td>[§17.7.4.18]</td>
+        </tr>
+        <tr>
+            <td>Web Settings</td>
+            <td>webSettings </td>
+            <td>[§17.15.2.45]</td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h2 id="162-spreadsheetml-概览">16.2 SpreadsheetML 概览<a class="headerlink" href="#162-spreadsheetml-概览" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>部件(Part)</strong></td>
+            <td><strong>根节点/元素(Root Element)</strong></td>
+            <td><strong>参考(Ref.)</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Calculation Chain</td>
+            <td>calcChain </td>
+            <td>[§18.6.2]</td>
+        </tr>
+        <tr>
+            <td>Chartsheet</td>
+            <td>chartsheet </td>
+            <td>[§18.3.1.12]</td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>comments </td>
+            <td>[§18.7.6]</td>
+        </tr>
+        <tr>
+            <td>Connections</td>
+            <td>connections </td>
+            <td>[§18.13.2]</td>
+        </tr>
+        <tr>
+            <td>Custom Property</td>
+            <td>Not applicable </td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Custom XML Mappings</td>
+            <td>MapInfo </td>
+            <td>[§18.16.3]</td>
+        </tr>
+        <tr>
+            <td>Dialogsheet</td>
+            <td>dialogsheet </td>
+            <td>[§18.3.1.34]</td>
+        </tr>
+        <tr>
+            <td>Drawing</td>
+            <td>wsDr </td>
+            <td>[§20.5.2.35]</td>
+        </tr>
+        <tr>
+            <td>External Workbook References</td>
+            <td>externalLink </td>
+            <td>[§18.14.8]</td>
+        </tr>
+        <tr>
+            <td>Metadata</td>
+            <td>metadata </td>
+            <td>[§18.9.8]</td>
+        </tr>
+        <tr>
+            <td>Pivot Table</td>
+            <td>pivotTableDefinition </td>
+            <td>[§18.10.1.73]</td>
+        </tr>
+        <tr>
+            <td>Pivot Table Cache Definition</td>
+            <td>pivotCacheDefinition </td>
+            <td>[§18.10.1.67]</td>
+        </tr>
+        <tr>
+            <td>Pivot Table Cache Records</td>
+            <td>pivotCacheRecords </td>
+            <td>[§18.10.1.68]</td>
+        </tr>
+        <tr>
+            <td>Query Table</td>
+            <td>queryTable </td>
+            <td>[§18.12.2]</td>
+        </tr>
+        <tr>
+            <td>Shared String Table</td>
+            <td>sst </td>
+            <td>[§18.4.9]</td>
+        </tr>
+        <tr>
+            <td>Shared Workbook Revision Headers</td>
+            <td>headers </td>
+            <td>[§18.11.1.1]</td>
+        </tr>
+        <tr>
+            <td>Shared Workbook Revision Log</td>
+            <td>revisions </td>
+            <td>[§18.11.1.16]</td>
+        </tr>
+        <tr>
+            <td>Shared Workbook User Data</td>
+            <td>users </td>
+            <td>[§18.11.2.2]</td>
+        </tr>
+        <tr>
+            <td>Single Cell Table Definitions</td>
+            <td>singleXmlCells </td>
+            <td>[§18.5.2.2]</td>
+        </tr>
+        <tr>
+            <td>Styles</td>
+            <td>styleSheet </td>
+            <td>[§18.8.39]</td>
+        </tr>
+        <tr>
+            <td>Table Definition</td>
+            <td>table </td>
+            <td>[§18.5.1.2]</td>
+        </tr>
+        <tr>
+            <td>Volatile Dependencies</td>
+            <td>volTypes </td>
+            <td>[§18.15.6]</td>
+        </tr>
+        <tr>
+            <td>Workbook</td>
+            <td>workbook </td>
+            <td>[§18.2.27]</td>
+        </tr>
+        <tr>
+            <td>Worksheet</td>
+            <td>worksheet </td>
+            <td>[§18.3.1.99]</td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><strong>SpreadsheetML Summary</strong></p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>Part</strong></td>
+            <td><strong>Root Element</strong></td>
+            <td><strong>Ref.</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Calculation Chain</td>
+            <td>calcChain </td>
+            <td>[§18.6.2]</td>
+        </tr>
+        <tr>
+            <td>Chartsheet</td>
+            <td>chartsheet </td>
+            <td>[§18.3.1.12]</td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>comments </td>
+            <td>[§18.7.6]</td>
+        </tr>
+        <tr>
+            <td>Connections</td>
+            <td>connections </td>
+            <td>[§18.13.2]</td>
+        </tr>
+        <tr>
+            <td>Custom Property</td>
+            <td>Not applicable </td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Custom XML Mappings</td>
+            <td>MapInfo </td>
+            <td>[§18.16.3]</td>
+        </tr>
+        <tr>
+            <td>Dialogsheet</td>
+            <td>dialogsheet </td>
+            <td>[§18.3.1.34]</td>
+        </tr>
+        <tr>
+            <td>Drawing</td>
+            <td>wsDr </td>
+            <td>[§20.5.2.35]</td>
+        </tr>
+        <tr>
+            <td>External Workbook References</td>
+            <td>externalLink </td>
+            <td>[§18.14.8]</td>
+        </tr>
+        <tr>
+            <td>Metadata</td>
+            <td>metadata </td>
+            <td>[§18.9.8]</td>
+        </tr>
+        <tr>
+            <td>Pivot Table</td>
+            <td>pivotTableDefinition </td>
+            <td>[§18.10.1.73]</td>
+        </tr>
+        <tr>
+            <td>Pivot Table Cache Definition</td>
+            <td>pivotCacheDefinition </td>
+            <td>[§18.10.1.67]</td>
+        </tr>
+        <tr>
+            <td>Pivot Table Cache Records</td>
+            <td>pivotCacheRecords </td>
+            <td>[§18.10.1.68]</td>
+        </tr>
+        <tr>
+            <td>Query Table</td>
+            <td>queryTable </td>
+            <td>[§18.12.2]</td>
+        </tr>
+        <tr>
+            <td>Shared String Table</td>
+            <td>sst </td>
+            <td>[§18.4.9]</td>
+        </tr>
+        <tr>
+            <td>Shared Workbook Revision Headers</td>
+            <td>headers </td>
+            <td>[§18.11.1.1]</td>
+        </tr>
+        <tr>
+            <td>Shared Workbook Revision Log</td>
+            <td>revisions </td>
+            <td>[§18.11.1.16]</td>
+        </tr>
+        <tr>
+            <td>Shared Workbook User Data</td>
+            <td>users </td>
+            <td>[§18.11.2.2]</td>
+        </tr>
+        <tr>
+            <td>Single Cell Table Definitions</td>
+            <td>singleXmlCells </td>
+            <td>[§18.5.2.2]</td>
+        </tr>
+        <tr>
+            <td>Styles</td>
+            <td>styleSheet </td>
+            <td>[§18.8.39]</td>
+        </tr>
+        <tr>
+            <td>Table Definition</td>
+            <td>table </td>
+            <td>[§18.5.1.2]</td>
+        </tr>
+        <tr>
+            <td>Volatile Dependencies</td>
+            <td>volTypes </td>
+            <td>[§18.15.6]</td>
+        </tr>
+        <tr>
+            <td>Workbook</td>
+            <td>workbook </td>
+            <td>[§18.2.27]</td>
+        </tr>
+        <tr>
+            <td>Worksheet</td>
+            <td>worksheet </td>
+            <td>[§18.3.1.99]</td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h2 id="163-presentationml-概览">16.3 PresentationML 概览<a class="headerlink" href="#163-presentationml-概览" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>部件(Part)</strong></td>
+            <td><strong>根节点/元素(Root Element)</strong></td>
+            <td><strong>参考(Ref.)</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Comment Authors</td>
+            <td>cmAuthorLst</td>
+            <td><a href="../chapter19/comments/#1943-cmauthorlst-list-of-comment-authors">§19.4.3</a></td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>cmLst</td>
+            <td><a href="../chapter19/comments/#1944-cmlst-comment-list">§19.4.4</a></td>
+        </tr>
+        <tr>
+            <td>Handout Master</td>
+            <td>handoutMaster</td>
+            <td><a href="../chapter19/slides/#193124-handoutmaster-讲义母板">§19.3.1.24</a></td>
+        </tr>
+        <tr>
+            <td>Notes Master</td>
+            <td>notesMaster</td>
+            <td><a href="../chapter19/slides/#193127-notesmaster-笔记母板">§19.3.1.27</a></td>
+        </tr>
+        <tr>
+            <td>Notes Slide</td>
+            <td>notes</td>
+            <td><a href="../chapter19/slides/#193126-notes-笔记幻灯片">§19.3.1.26</a></td>
+        </tr>
+        <tr>
+            <td>Presentation</td>
+            <td>presentation</td>
+            <td><a href="../chapter19/presentation/#192126-presentation-演示文稿">§19.2.1.26</a></td>
+        </tr>
+        <tr>
+            <td>Presentation Properties</td>
+            <td>presentationPr</td>
+            <td><a href="../chapter19/presentation/#192127-presentationpr-演示文稿级别的属性">§19.2.1.27</a></td>
+        </tr>
+        <tr>
+            <td>Slide</td>
+            <td>sld</td>
+            <td><a href="../chapter19/slides/#193138-sld-演示幻灯片">§19.3.1.38</a></td>
+        </tr>
+        <tr>
+            <td>Slide Layout</td>
+            <td>sldLayout</td>
+            <td><a href="../chapter19/slides/#193139-sldlayout-幻灯片布局版式">§19.3.1.39</a></td>
+        </tr>
+        <tr>
+            <td>Slide Master</td>
+            <td>sldMaster</td>
+            <td><a href="../chapter19/slides/#193142-sldmaster-幻灯片母版">§19.3.1.42</a></td>
+        </tr>
+        <tr>
+            <td>Slide Synchronization Data</td>
+            <td>sldSyncPr</td>
+            <td>[§19.6.1]</td>
+        </tr>
+        <tr>
+            <td>User-Defined Tags</td>
+            <td>tagLst</td>
+            <td><a href="../chapter19/slides/#19332-taglst-可编程选项卡列表">§19.3.3.2</a></td>
+        </tr>
+        <tr>
+            <td>View Properties</td>
+            <td>viewPr</td>
+            <td><a href="../chapter19/presentation/#192218-viewpr-演示文稿级别的视图属性">§19.2.2.18</a></td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><strong>PresentationML Summary</strong></p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>Part</strong></td>
+            <td><strong>Root Element</strong></td>
+            <td><strong>Ref.</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Comment Authors</td>
+            <td>cmAuthorLst</td>
+            <td><a href="../chapter19/comments/#1943-cmauthorlst-list-of-comment-authors">§19.4.3</a></td>
+        </tr>
+        <tr>
+            <td>Comments</td>
+            <td>cmLst</td>
+            <td><a href="../chapter19/comments/#1944-cmlst-comment-list">§19.4.4</a></td>
+        </tr>
+        <tr>
+            <td>Handout Master</td>
+            <td>handoutMaster</td>
+            <td><a href="../chapter19/slides/#193124-handoutmaster-讲义母板">§19.3.1.24</a></td>
+        </tr>
+        <tr>
+            <td>Notes Master</td>
+            <td>notesMaster</td>
+            <td><a href="../chapter19/slides/#193127-notesmaster-笔记母板">§19.3.1.27</a></td>
+        </tr>
+        <tr>
+            <td>Notes Slide</td>
+            <td>notes</td>
+            <td><a href="../chapter19/slides/#193126-notes-笔记幻灯片">§19.3.1.26</a></td>
+        </tr>
+        <tr>
+            <td>Presentation</td>
+            <td>presentation</td>
+            <td><a href="../chapter19/presentation/#192126-presentation-演示文稿">§19.2.1.26</a></td>
+        </tr>
+        <tr>
+            <td>Presentation Properties</td>
+            <td>presentationPr</td>
+            <td><a href="../chapter19/presentation/#192127-presentationpr-演示文稿级别的属性">§19.2.1.27</a></td>
+        </tr>
+        <tr>
+            <td>Slide</td>
+            <td>sld</td>
+            <td><a href="../chapter19/slides/#193138-sld-演示幻灯片">§19.3.1.38</a></td>
+        </tr>
+        <tr>
+            <td>Slide Layout</td>
+            <td>sldLayout</td>
+            <td><a href="../chapter19/slides/#193139-sldlayout-幻灯片布局版式">§19.3.1.39</a></td>
+        </tr>
+        <tr>
+            <td>Slide Master</td>
+            <td>sldMaster</td>
+            <td><a href="../chapter19/slides/#193142-sldmaster-幻灯片母版">§19.3.1.42</a></td>
+        </tr>
+        <tr>
+            <td>Slide Synchronization Data</td>
+            <td>sldSyncPr</td>
+            <td>[§19.6.1]</td>
+        </tr>
+        <tr>
+            <td>User-Defined Tags</td>
+            <td>tagLst</td>
+            <td><a href="../chapter19/slides/#19332-taglst-可编程选项卡列表">§19.3.3.2</a></td>
+        </tr>
+        <tr>
+            <td>View Properties</td>
+            <td>viewPr</td>
+            <td><a href="../chapter19/presentation/#192218-viewpr-演示文稿级别的视图属性">§19.2.2.18</a></td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h2 id="164-drawingml-概览">16.4 DrawingML 概览<a class="headerlink" href="#164-drawingml-概览" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>部件(Part)</strong></td>
+            <td><strong>根节点/元素(Root Element)</strong></td>
+            <td><strong>参考(Ref.)</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Chart</td>
+            <td>chartSpace</td>
+            <td><a href="../chapter21/charts/#212229-chartspace-chart-space">§21.2.2.29</a></td>
+        </tr>
+        <tr>
+            <td>Chart Drawing</td>
+            <td>userShapes</td>
+            <td><a href="../chapter21/charts/#2122220-usershapes-user-shapes">§21.2.2.220</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Colors</td>
+            <td>colorsDef</td>
+            <td><a href="../chapter21/diagram/#21443-colorsdef-color-transform-definitions">§21.4.4.3</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Data</td>
+            <td>dataModel</td>
+            <td><a href="../chapter21/diagram/#214210-datamodel-data-model">§21.4.2.10</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Layout Definition</td>
+            <td>layoutDef</td>
+            <td><a href="../chapter21/diagram/#214216-layoutdef-layout-definition">§21.4.2.16</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Style</td>
+            <td>styleDef</td>
+            <td><a href="../chapter21/diagram/#21457-styledef-style-definition">§21.4.5.7</a></td>
+        </tr>
+        <tr>
+            <td>Theme</td>
+            <td>theme</td>
+            <td><a href="../chapter20/main/shared_style_sheet/#20169-theme-主题">§20.1.6.9</a></td>
+        </tr>
+        <tr>
+            <td>Theme Override</td>
+            <td>themeOverride</td>
+            <td><a href="../chapter20/main/shared_style_sheet/#201612-themeoverride-主题覆盖">§20.1.6.12</a></td>
+        </tr>
+        <tr>
+            <td>Table Styles</td>
+            <td>tblStyleLst</td>
+            <td><a href="../chapter20/main/styles/#2014227-tblstylelst-表格样式列表">§20.1.4.2.27</a></td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><strong>DrawingML Summary</strong></p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>Part</strong></td>
+            <td><strong>Root Element</strong></td>
+            <td><strong>Ref.</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Chart</td>
+            <td>chartSpace</td>
+            <td><a href="../chapter21/charts/#212229-chartspace-chart-space">§21.2.2.29</a></td>
+        </tr>
+        <tr>
+            <td>Chart Drawing</td>
+            <td>userShapes</td>
+            <td><a href="../chapter21/charts/#2122220-usershapes-user-shapes">§21.2.2.220</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Colors</td>
+            <td>colorsDef</td>
+            <td><a href="../chapter21/diagram/#21443-colorsdef-color-transform-definitions">§21.4.4.3</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Data</td>
+            <td>dataModel</td>
+            <td><a href="../chapter21/diagram/#214210-datamodel-data-model">§21.4.2.10</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Layout Definition</td>
+            <td>layoutDef</td>
+            <td><a href="../chapter21/diagram/#214216-layoutdef-layout-definition">§21.4.2.16</a></td>
+        </tr>
+        <tr>
+            <td>Diagram Style</td>
+            <td>styleDef</td>
+            <td><a href="../chapter21/diagram/#21457-styledef-style-definition">§21.4.5.7</a></td>
+        </tr>
+        <tr>
+            <td>Theme</td>
+            <td>theme</td>
+            <td><a href="../chapter20/main/shared_style_sheet/#20169-theme-主题">§20.1.6.9</a></td>
+        </tr>
+        <tr>
+            <td>Theme Override</td>
+            <td>themeOverride</td>
+            <td><a href="../chapter20/main/shared_style_sheet/#201612-themeoverride-主题覆盖">§20.1.6.12</a></td>
+        </tr>
+        <tr>
+            <td>Table Styles</td>
+            <td>tblStyleLst</td>
+            <td><a href="../chapter20/main/styles/#2014227-tblstylelst-表格样式列表">§20.1.4.2.27</a></td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<h2 id="165-shared-概览">16.5 Shared 概览<a class="headerlink" href="#165-shared-概览" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>Part</strong></td>
+            <td><strong>Root Element</strong></td>
+            <td><strong>Ref.</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Additional Characteristics</td>
+            <td>additionalCharacteristics</td>
+            <td>[§22.7.2.1]</td>
+        </tr>
+        <tr>
+            <td>Audio</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Bibliography</td>
+            <td>Sources</td>
+            <td>[§22.6.2.60]</td>
+        </tr>
+        <tr>
+            <td>Custom XML Data Storage</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Custom XML Data Storage Properties</td>
+            <td>datastoreItem</td>
+            <td>[§22.5.2.1]</td>
+        </tr>
+        <tr>
+            <td>Digital Signature Origin</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Digital Signature XML Signature</td>
+            <td>Signature</td>
+            <td>Defined in ECMA-376-2</td>
+        </tr>
+        <tr>
+            <td>Embedded Control Persistence</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Embedded Object</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Embedded Package</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>File Properties, Core</td>
+            <td>coreProperties</td>
+            <td>Defined in ECMA-376-2</td>
+        </tr>
+        <tr>
+            <td>File Properties, Custom</td>
+            <td>Properties</td>
+            <td>[§22.3.2.1]</td>
+        </tr>
+        <tr>
+            <td>File Properties, Extended</td>
+            <td>Properties</td>
+            <td>[§22.2.2.21]</td>
+        </tr>
+        <tr>
+            <td>Font</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Printer Settings</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Thumbnail</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Video</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Shared Summary</strong></p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <td><strong>Part</strong></td>
+            <td><strong>Root Element</strong></td>
+            <td><strong>Ref.</strong></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Additional Characteristics</td>
+            <td>additionalCharacteristics</td>
+            <td>[§22.7.2.1]</td>
+        </tr>
+        <tr>
+            <td>Audio</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Bibliography</td>
+            <td>Sources</td>
+            <td>[§22.6.2.60]</td>
+        </tr>
+        <tr>
+            <td>Custom XML Data Storage</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Custom XML Data Storage Properties</td>
+            <td>datastoreItem</td>
+            <td>[§22.5.2.1]</td>
+        </tr>
+        <tr>
+            <td>Digital Signature Origin</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Digital Signature XML Signature</td>
+            <td>Signature</td>
+            <td>Defined in ECMA-376-2</td>
+        </tr>
+        <tr>
+            <td>Embedded Control Persistence</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Embedded Object</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Embedded Package</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>File Properties, Core</td>
+            <td>coreProperties</td>
+            <td>Defined in ECMA-376-2</td>
+        </tr>
+        <tr>
+            <td>File Properties, Custom</td>
+            <td>Properties</td>
+            <td>[§22.3.2.1]</td>
+        </tr>
+        <tr>
+            <td>File Properties, Extended</td>
+            <td>Properties</td>
+            <td>[§22.2.2.21]</td>
+        </tr>
+        <tr>
+            <td>Font</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Printer Settings</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Thumbnail</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+        <tr>
+            <td>Video</td>
+            <td>Not applicable</td>
+            <td>n/a</td>
+        </tr>
+    </tbody>
+</table></p>
+</div>
+</div>
+</div>
+<!--链接定义-->
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

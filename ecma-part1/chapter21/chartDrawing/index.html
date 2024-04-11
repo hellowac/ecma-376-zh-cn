@@ -1,0 +1,4552 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../charts/">
+      
+      
+        <link rel="next" href="../diagram/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>21.3 DrawingML - Chart Drawings - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#213-drawingml---chart-drawings" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              21.3 DrawingML - Chart Drawings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_22" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_22" id="__nav_2_22_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_22_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_22">
+            <span class="md-nav__icon md-icon"></span>
+            21. DrawingML - 组件参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21.1 DrawingML - Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21.2 DrawingML - Charts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    21.3 DrawingML - Chart Drawings
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    21.3 DrawingML - Chart Drawings
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2131-目录" class="md-nav__link">
+    21.3.1 目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2132-元素" class="md-nav__link">
+    21.3.2 元素
+  </a>
+  
+    <nav class="md-nav" aria-label="21.3.2 元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21321-abssizeanchor-绝对锚形状尺寸" class="md-nav__link">
+    21.3.2.1 absSizeAnchor (绝对锚形状尺寸)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21322-blipfill-图片填充" class="md-nav__link">
+    21.3.2.2 blipFill (图片填充)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21323-cnvcxnsppr-非可视连接形状绘图属性" class="md-nav__link">
+    21.3.2.3 cNvCxnSpPr (非可视连接形状绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21324-cnvgraphicframepr-非可视图形框架绘图属性" class="md-nav__link">
+    21.3.2.4 cNvGraphicFramePr (非可视图形框架绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21325-cnvgrpsppr-非可视组形状绘图属性" class="md-nav__link">
+    21.3.2.5 cNvGrpSpPr (非可视组形状绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21326-cnvpicpr-非视觉绘图属性" class="md-nav__link">
+    21.3.2.6 cNvPicPr (非视觉绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21327-cnvpr-非可视绘图属性" class="md-nav__link">
+    21.3.2.7 cNvPr (非可视绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21328-cnvsppr-非视觉形状绘图属性" class="md-nav__link">
+    21.3.2.8 cNvSpPr (非视觉形状绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21329-cxnsp-连接形状" class="md-nav__link">
+    21.3.2.9 cxnSp (连接形状)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213210-ext-形状范围" class="md-nav__link">
+    21.3.2.10 ext (形状范围)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213211-from-起始锚点" class="md-nav__link">
+    21.3.2.11 from (起始锚点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213212-graphicframe-图框" class="md-nav__link">
+    21.3.2.12 graphicFrame (图框)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213213-grpsp-组合形状" class="md-nav__link">
+    21.3.2.13 grpSp (组合形状)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213214-grpsppr-组合形状属性" class="md-nav__link">
+    21.3.2.14 grpSpPr (组合形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213215-nvcxnsppr-连接器非视觉属性" class="md-nav__link">
+    21.3.2.15 nvCxnSpPr (连接器非视觉属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213216-nvgraphicframepr-非可视图形框架属性" class="md-nav__link">
+    21.3.2.16 nvGraphicFramePr (非可视图形框架属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213217-nvgrpsppr-非视觉组合形状属性" class="md-nav__link">
+    21.3.2.17 nvGrpSpPr (非视觉组合形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213218-nvpicpr-非视觉图片属性" class="md-nav__link">
+    21.3.2.18 nvPicPr (非视觉图片属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213219-nvsppr-非视觉形状属性" class="md-nav__link">
+    21.3.2.19 nvSpPr (非视觉形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213220-pic-图片" class="md-nav__link">
+    21.3.2.20 pic (图片)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213221-relsizeanchor-相对锚定形状尺寸" class="md-nav__link">
+    21.3.2.21 relSizeAnchor (相对锚定形状尺寸)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213222-sp-形状" class="md-nav__link">
+    21.3.2.22 sp (形状)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213223-sppr-形状属性" class="md-nav__link">
+    21.3.2.23 spPr (形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213224-style-形状样式" class="md-nav__link">
+    21.3.2.24 style (形状样式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213225-to-结束锚点" class="md-nav__link">
+    21.3.2.25 to (结束锚点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213226-txbody-形状文本正文" class="md-nav__link">
+    21.3.2.26 txBody (形状文本正文)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213227-x-相对x坐标" class="md-nav__link">
+    21.3.2.27 x (相对X坐标)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213228-xfrm-图形框架变换" class="md-nav__link">
+    21.3.2.28 xfrm (图形框架变换)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213229-y-相对-y-坐标" class="md-nav__link">
+    21.3.2.29 y (相对 Y 坐标)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2133-简单类型" class="md-nav__link">
+    21.3.3 简单类型
+  </a>
+  
+    <nav class="md-nav" aria-label="21.3.3 简单类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21331-st_markercoordinate-图表标记坐标值" class="md-nav__link">
+    21.3.3.1 ST_MarkerCoordinate (图表标记坐标值)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    21.4 DrawingML - Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2131-目录" class="md-nav__link">
+    21.3.1 目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2132-元素" class="md-nav__link">
+    21.3.2 元素
+  </a>
+  
+    <nav class="md-nav" aria-label="21.3.2 元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21321-abssizeanchor-绝对锚形状尺寸" class="md-nav__link">
+    21.3.2.1 absSizeAnchor (绝对锚形状尺寸)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21322-blipfill-图片填充" class="md-nav__link">
+    21.3.2.2 blipFill (图片填充)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21323-cnvcxnsppr-非可视连接形状绘图属性" class="md-nav__link">
+    21.3.2.3 cNvCxnSpPr (非可视连接形状绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21324-cnvgraphicframepr-非可视图形框架绘图属性" class="md-nav__link">
+    21.3.2.4 cNvGraphicFramePr (非可视图形框架绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21325-cnvgrpsppr-非可视组形状绘图属性" class="md-nav__link">
+    21.3.2.5 cNvGrpSpPr (非可视组形状绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21326-cnvpicpr-非视觉绘图属性" class="md-nav__link">
+    21.3.2.6 cNvPicPr (非视觉绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21327-cnvpr-非可视绘图属性" class="md-nav__link">
+    21.3.2.7 cNvPr (非可视绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21328-cnvsppr-非视觉形状绘图属性" class="md-nav__link">
+    21.3.2.8 cNvSpPr (非视觉形状绘图属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21329-cxnsp-连接形状" class="md-nav__link">
+    21.3.2.9 cxnSp (连接形状)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213210-ext-形状范围" class="md-nav__link">
+    21.3.2.10 ext (形状范围)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213211-from-起始锚点" class="md-nav__link">
+    21.3.2.11 from (起始锚点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213212-graphicframe-图框" class="md-nav__link">
+    21.3.2.12 graphicFrame (图框)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213213-grpsp-组合形状" class="md-nav__link">
+    21.3.2.13 grpSp (组合形状)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213214-grpsppr-组合形状属性" class="md-nav__link">
+    21.3.2.14 grpSpPr (组合形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213215-nvcxnsppr-连接器非视觉属性" class="md-nav__link">
+    21.3.2.15 nvCxnSpPr (连接器非视觉属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213216-nvgraphicframepr-非可视图形框架属性" class="md-nav__link">
+    21.3.2.16 nvGraphicFramePr (非可视图形框架属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213217-nvgrpsppr-非视觉组合形状属性" class="md-nav__link">
+    21.3.2.17 nvGrpSpPr (非视觉组合形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213218-nvpicpr-非视觉图片属性" class="md-nav__link">
+    21.3.2.18 nvPicPr (非视觉图片属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213219-nvsppr-非视觉形状属性" class="md-nav__link">
+    21.3.2.19 nvSpPr (非视觉形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213220-pic-图片" class="md-nav__link">
+    21.3.2.20 pic (图片)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213221-relsizeanchor-相对锚定形状尺寸" class="md-nav__link">
+    21.3.2.21 relSizeAnchor (相对锚定形状尺寸)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213222-sp-形状" class="md-nav__link">
+    21.3.2.22 sp (形状)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213223-sppr-形状属性" class="md-nav__link">
+    21.3.2.23 spPr (形状属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213224-style-形状样式" class="md-nav__link">
+    21.3.2.24 style (形状样式)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213225-to-结束锚点" class="md-nav__link">
+    21.3.2.25 to (结束锚点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213226-txbody-形状文本正文" class="md-nav__link">
+    21.3.2.26 txBody (形状文本正文)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213227-x-相对x坐标" class="md-nav__link">
+    21.3.2.27 x (相对X坐标)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213228-xfrm-图形框架变换" class="md-nav__link">
+    21.3.2.28 xfrm (图形框架变换)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213229-y-相对-y-坐标" class="md-nav__link">
+    21.3.2.29 y (相对 Y 坐标)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2133-简单类型" class="md-nav__link">
+    21.3.3 简单类型
+  </a>
+  
+    <nav class="md-nav" aria-label="21.3.3 简单类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21331-st_markercoordinate-图表标记坐标值" class="md-nav__link">
+    21.3.3.1 ST_MarkerCoordinate (图表标记坐标值)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="213-drawingml---chart-drawings">21.3 DrawingML - Chart Drawings<a class="headerlink" href="#213-drawingml---chart-drawings" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在图表中，有时需要包含 DrawingML 元素（形状或图片），这些元素应该是父图表中的子对象。 这种关系允许这些元素可以选择随图表调整大小、随图表自动移动等。</p>
+<p>图表绘图命名空间发挥此功能，指定在图表中锚定和显示 DrawingML 对象所需的所有信息。</p>
+</div>
+<div class="tabbed-block">
+<p>Within a chart, it is sometimes necessary to include DrawingML elements (shapes or pictures) which should be a child object within the parent chart. This relationship allows those elements to optionally be resized with the chart, automatically moved with the chart, etc.</p>
+<p>The Chart Drawing namespace acts in this capacity, specifying all information necessary to anchor and display DrawingML objects within a chart.</p>
+</div>
+</div>
+</div>
+<h2 id="2131-目录">21.3.1 目录<a class="headerlink" href="#2131-目录" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>21.3.2 Elements<ul>
+<li>21.3.2.1 absSizeAnchor (Absolute Anchor Shape Size)</li>
+<li>21.3.2.2 blipFill (Picture Fill)</li>
+<li>21.3.2.3 cNvCxnSpPr (Non-Visual Connection Shape Drawing Properties)</li>
+<li>21.3.2.4 cNvGraphicFramePr (Non-Visual Graphic Frame Drawing Properties)</li>
+<li>21.3.2.5 cNvGrpSpPr (Non-Visual Group Shape Drawing Properties)</li>
+<li>21.3.2.6 cNvPicPr (Non-Visual Picture Drawing Properties)</li>
+<li>21.3.2.7 cNvPr (Non-Visual Drawing Properties)</li>
+<li>21.3.2.8 cNvSpPr (Non-Visual Shape Drawing Properties)</li>
+<li>21.3.2.9 cxnSp (Connection Shape)</li>
+<li>21.3.2.10 ext (Shape Extent)</li>
+<li>21.3.2.11 from (Starting Anchor Point)</li>
+<li>21.3.2.12 graphicFrame (Graphic Frame)</li>
+<li>21.3.2.13 grpSp (Group Shape)</li>
+<li>21.3.2.14 grpSpPr (Group Shape Properties)</li>
+<li>21.3.2.15 nvCxnSpPr (Connector Non Visual Properties)</li>
+<li>21.3.2.16 nvGraphicFramePr (Non-Visual Graphic Frame Properties)</li>
+<li>21.3.2.17 nvGrpSpPr (Non-Visual Group Shape Properties)</li>
+<li>21.3.2.18 nvPicPr (Non-Visual Picture Properties)</li>
+<li>21.3.2.19 nvSpPr (Non-Visual Shape Properties)</li>
+<li>21.3.2.20 pic (Picture)</li>
+<li>21.3.2.21 relSizeAnchor (Relative Anchor Shape Size)</li>
+<li>21.3.2.22 sp (Shape)</li>
+<li>21.3.2.23 spPr (Shape Properties)</li>
+<li>21.3.2.24 style (Shape Style)</li>
+<li>21.3.2.25 to (Ending Anchor Point)</li>
+<li>21.3.2.26 txBody (Shape Text Body)</li>
+<li>21.3.2.27 x (Relative X Coordinate)</li>
+<li>21.3.2.28 xfrm (Graphic Frame Transform)</li>
+<li>21.3.2.29 y (Relative Y Coordinate)</li>
+</ul>
+</li>
+<li>21.3.3 Simple Types<ul>
+<li>21.3.3.1 ST_MarkerCoordinate (Chart Marker Coordinate Value)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Table of Contents</strong></p>
+<p><strong>This subclause is informative.</strong></p>
+<ul>
+<li>21.3.2 Elements<ul>
+<li>21.3.2.1 absSizeAnchor (Absolute Anchor Shape Size)</li>
+<li>21.3.2.2 blipFill (Picture Fill)</li>
+<li>21.3.2.3 cNvCxnSpPr (Non-Visual Connection Shape Drawing Properties)</li>
+<li>21.3.2.4 cNvGraphicFramePr (Non-Visual Graphic Frame Drawing Properties)</li>
+<li>21.3.2.5 cNvGrpSpPr (Non-Visual Group Shape Drawing Properties)</li>
+<li>21.3.2.6 cNvPicPr (Non-Visual Picture Drawing Properties)</li>
+<li>21.3.2.7 cNvPr (Non-Visual Drawing Properties)</li>
+<li>21.3.2.8 cNvSpPr (Non-Visual Shape Drawing Properties)</li>
+<li>21.3.2.9 cxnSp (Connection Shape)</li>
+<li>21.3.2.10 ext (Shape Extent)</li>
+<li>21.3.2.11 from (Starting Anchor Point)</li>
+<li>21.3.2.12 graphicFrame (Graphic Frame)</li>
+<li>21.3.2.13 grpSp (Group Shape)</li>
+<li>21.3.2.14 grpSpPr (Group Shape Properties)</li>
+<li>21.3.2.15 nvCxnSpPr (Connector Non Visual Properties)</li>
+<li>21.3.2.16 nvGraphicFramePr (Non-Visual Graphic Frame Properties)</li>
+<li>21.3.2.17 nvGrpSpPr (Non-Visual Group Shape Properties)</li>
+<li>21.3.2.18 nvPicPr (Non-Visual Picture Properties)</li>
+<li>21.3.2.19 nvSpPr (Non-Visual Shape Properties)</li>
+<li>21.3.2.20 pic (Picture)</li>
+<li>21.3.2.21 relSizeAnchor (Relative Anchor Shape Size)</li>
+<li>21.3.2.22 sp (Shape)</li>
+<li>21.3.2.23 spPr (Shape Properties)</li>
+<li>21.3.2.24 style (Shape Style)</li>
+<li>21.3.2.25 to (Ending Anchor Point)</li>
+<li>21.3.2.26 txBody (Shape Text Body)</li>
+<li>21.3.2.27 x (Relative X Coordinate)</li>
+<li>21.3.2.28 xfrm (Graphic Frame Transform)</li>
+<li>21.3.2.29 y (Relative Y Coordinate)</li>
+</ul>
+</li>
+<li>21.3.3 Simple Types<ul>
+<li>21.3.3.1 ST_MarkerCoordinate (Chart Marker Coordinate Value)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="2132-元素">21.3.2 元素<a class="headerlink" href="#2132-元素" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下元素定义 ChartDrawing 命名空间的内容：</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Elements</strong></p>
+<p>The following element define the contents of the ChartDrawing namespace:</p>
+</div>
+</div>
+</div>
+<h3 id="21321-abssizeanchor-绝对锚形状尺寸">21.3.2.1 absSizeAnchor (绝对锚形状尺寸)<a class="headerlink" href="#21321-abssizeanchor-绝对锚形状尺寸" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了在图表中描述的形状应该基于相对锚点进行调整大小。这是通过两个元素实现的。from元素指定了形状边界框的左上角在RTL（从右到左）实现中的位置。然后，ext元素指定了形状边界框的右下角在RTL（从右到左）实现中的位置，从而确定了形状的大小。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AbsSizeAnchor) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>absSizeAnchor (Absolute Anchor Shape Size)</strong></p>
+<p>This element specifies that the shape described here to reside within a chart should be sized based on relative anchor points. This is achieved via two elements. The from element specifies the top left corner of the shape bounding box in a RTL(right-to-left) implementation. The ext element then specifies the bottom right corner of the shape bounding box in a RTL(right-to-left) implementation and thus the size of the shape.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AbsSizeAnchor) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21322-blipfill-图片填充">21.3.2.2 blipFill (图片填充)<a class="headerlink" href="#21322-blipfill-图片填充" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定图片对象具有的图片填充类型。由于图片默认已经具有图片填充，因此可以为图片对象指定两种填充。下面是一个示例。</p>
+<p>[Example: 考虑下面的图片，它应用了一个模糊填充。用于填充这个图片对象的图像具有透明像素而不是白色像素。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/dml-charts1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/dml-charts1.png" /></a></p>
+<p>上面的图片对象显示为这种填充类型的示例。 end example]</p>
+<p>[Example: 现在考虑同样的图片对象，但在图片的形状属性部分应用了额外的渐变填充。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gradFill&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;tx2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:shade</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;50000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;39999&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;tx2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:tint</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;70000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;C4D6EB&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;100000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;bg1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:gsLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p>上面的图片对象是作为这种双重填充类型的示例显示的。 End example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>dpi</strong> (DPI 设置 / DPI Setting)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定用于计算 blip 大小的 DPI（每英寸点数）。如果未提供或为零，则使用 blip 中的 DPI。</p>
+<p>[Note: 该属性主要用于跟踪文档中的图片质量。打印和屏幕查看所需的质量级别不同，因此需要跟踪此信息。 end note]</p>
+<p>该属性的可能取值由W3C XML Schema的unsignedInt数据类型定义。</p>
+</dd>
+<dt><strong>rotWithShape</strong> (随形状旋转 / Rotate With Shape)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定填充应随形状旋转。也就是说，当用图片填充的形状和包含形状（比如矩形）进行旋转变换时，填充也会以相同的旋转进行变换。</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_BlipFillProperties) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>blipFill (Picture Fill)</strong></p>
+<p>This element specifies the kind of picture fill that the picture object has. Because a picture has a picture fill already by default, it is possible to have two fills specified for a picture object. An example of this is shown below.</p>
+<p>[Example: Consider the picture below that has a blip fill applied to it. The image used to fill this picture object has transparent pixels instead of white pixels.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/dml-charts1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/dml-charts1.png" /></a></p>
+<p>The above picture object is shown as an example of this fill kind. end example]</p>
+<p>[Example: Consider now the same picture object but with an additional gradient fill applied within the shape properties portion of the picture.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:blip</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:stretch&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:fillRect/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:stretch&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gradFill&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;tx2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:shade</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;50000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;39999&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;tx2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:tint</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;20000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:schemeClr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;70000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;C4D6EB&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:gs</span><span style="color: #bbbbbb"> </span><span style="color: #687822">pos=</span><span style="color: #BA2121">&quot;100000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:schemeClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;bg1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:gs&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:gsLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:spPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p>The above picture object is shown as an example of this double fill kind. End example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>dpi</strong> (DPI Setting)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies the DPI (dots per inch) used to calculate the size of the blip. If not present or zero, the DPI in the blip is used.</p>
+<p>[Note: This attribute is primarily used to keep track of the picture quality within a document. There are different levels of quality needed for print than on-screen viewing and thus a need to track this information. end note]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema unsignedInt datatype.</p>
+</dd>
+<dt><strong>rotWithShape</strong> (Rotate With Shape)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies that the fill should rotate with the shape. That is, when the shape that has been filled with a picture and the containing shape (say a rectangle) is transformed with a rotation then the fill is transformed with the same rotation.</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_BlipFillProperties) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21323-cnvcxnsppr-非可视连接形状绘图属性">21.3.2.3 cNvCxnSpPr (非可视连接形状绘图属性)<a class="headerlink" href="#21323-cnvcxnsppr-非可视连接形状绘图属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定连接器形状的非可视绘图属性。这些非可视属性是生成应用程序在渲染父图表时会使用的属性。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualConnectorProperties) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cNvCxnSpPr (Non-Visual Connection Shape Drawing Properties)</strong></p>
+<p>This element specifies the non-visual drawing properties for a connector shape. These non-visual properties are properties that the generating application would utilize when rendering the parent chart.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualConnectorProperties) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21324-cnvgraphicframepr-非可视图形框架绘图属性">21.3.2.4 cNvGraphicFramePr (非可视图形框架绘图属性)<a class="headerlink" href="#21324-cnvgraphicframepr-非可视图形框架绘图属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了图形框架的非可视绘图属性。这些非可视属性是生成应用程序在呈现图表时会使用的属性。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualGraphicFrameProperties) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cNvGraphicFramePr (Non-Visual Graphic Frame Drawing Properties)</strong></p>
+<p>This element specifies the non-visual drawing properties for a graphic frame. These non-visual properties are properties that the generating application would utilize when rendering the chart.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualGraphicFrameProperties) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21325-cnvgrpsppr-非可视组形状绘图属性">21.3.2.5 cNvGrpSpPr (非可视组形状绘图属性)<a class="headerlink" href="#21325-cnvgrpsppr-非可视组形状绘图属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了组合形状的非可视绘图属性。这些非可视属性是生成应用程序在呈现图表时会使用的属性。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualGroupDrawingShapeProps) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cNvGrpSpPr (Non-Visual Group Shape Drawing Properties)</strong></p>
+<p>This element specifies the non-visual drawing properties for a group shape. These non-visual properties are properties that the generating application would utilize when rendering the chart.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualGroupDrawingShapeProps) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21326-cnvpicpr-非视觉绘图属性">21.3.2.6 cNvPicPr (非视觉绘图属性)<a class="headerlink" href="#21326-cnvpicpr-非视觉绘图属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了图片画布的非可视属性。生成应用程序将使用这些属性来确定如何更改特定图片对象的某些属性。</p>
+<p>[Example: 请考虑以下的DrawingML。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;pic:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Lilly_by_Lisher.jpg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;pic:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/pic:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;pic:nvPr/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p>End example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt>preferRelativeResize (相对调整大小优先 / Relative Resize Preferred)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定用户界面是否应根据图片的当前大小或原始大小显示图片的调整大小。如果将此属性设置为true，则缩放相对于原始图片大小而不是当前图片大小。</p>
+<p>[Example: 考虑这样一种情况：在文档中调整了图片的大小，现在它的大小是原始插入图片大小的50%。如果用户选择在生成应用程序中稍后调整该图片的大小，则应检查此属性的值。</p>
+<p>如果此属性设置为true，则显示50%的值。同样，如果此属性设置为false，则应显示100%的值，因为图片尚未从其当前（较小）大小调整。 end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualPictureProperties) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cNvPicPr (Non-Visual Picture Drawing Properties)</strong></p>
+<p>This element specifies the non-visual properties for the picture canvas. These properties are to be used by the generating application to determine how certain properties are to be changed for the picture object in question.</p>
+<p>[Example: Consider the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;pic:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Lilly_by_Lisher.jpg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;pic:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/pic:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;pic:nvPr/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p>End example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt>preferRelativeResize (Relative Resize Preferred)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies if the user interface should show the resizing of the picture based on the picture's current size or its original size. If this attribute is set to true, then scaling is relative to the original picture size as opposed to the current picture size.</p>
+<p>[Example: Consider the case where a picture has been resized within a document and is now 50% of the originally inserted picture size. Now if the user chooses to make a later adjustment to the size of this picture within the generating application, then the value of this attribute should be checked.</p>
+<p>If this attribute is set to true then a value of 50% is shown. Similarly, if this attribute is set to false, then a value of 100% should be shown because the picture has not yet been resized from its current (smaller) size. end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualPictureProperties) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21327-cnvpr-非可视绘图属性">21.3.2.7 cNvPr (非可视绘图属性)<a class="headerlink" href="#21327-cnvpr-非可视绘图属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定非可视画布属性。这允许存储不影响图片外观的附加信息。</p>
+<p>[Example: Consider the following ChartDrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Lilly_by_Lisher.jpg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:pic&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>descr</strong> (Alternative Text for Object)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定当前DrawingML对象的替代文本，供辅助技术或不显示当前对象的应用程序使用。</p>
+<p>如果省略此元素，则父对象没有替代文本。</p>
+<p>[Example: 考虑一个 DrawingML 对象，定义如下：</p>
+<p><code>&lt;… descr="A picture of a bowl of fruit"&gt;</code></p>
+<p>descr属性包含可用于替代实际DrawingML对象的备用文本。 end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+<dt><strong>hidden</strong> (Hidden)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定此DrawingML对象是否显示。当一个DrawingML对象在文档中显示时，该对象可以被隐藏（即存在但不可见）。该属性确定对象是否被渲染或隐藏。</p>
+<p>[Note: 一个应用程序可以有设置，允许查看该对象。 end note]</p>
+<p>如果省略了此属性，则父级DrawingML对象将被显示（即不隐藏）。</p>
+<p>[Example: 考虑一个必须在文档内容中隐藏的内联DrawingML对象。此设置将如下指定：</p>
+<p><code>&lt;… hidden="true" /&gt;</code></p>
+<p>隐藏属性的值为true，表示当文档显示时，DrawingML对象将被隐藏且不会显示出来。 end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>id</strong> (Unique Identifier)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定当前文档中当前DrawingML对象的唯一标识符。此ID可用于帮助唯一标识此对象，以便其他文档部分可以引用它。</p>
+<p>如果同一文档中的多个对象共享相同的id属性值，则该文档将被视为不符合规范。</p>
+<p>[Example: 考虑一个 DrawingML 对象，定义如下：</p>
+<p><code>&lt;… id="10" … &gt;</code></p>
+<p>id属性的值为10，这是该DrawingML对象的唯一标识符。 end example]</p>
+<p>The possible values for this attribute are defined by the ST_DrawingElementId simple type (§20.1.10.21).</p>
+</dd>
+<dt><strong>name</strong> (Name)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定对象的名称。 [Note: 通常，这用于存储图片对象的原始文件名。 end note]</p>
+<p>[Example: 考虑一个 DrawingML 对象，定义如下：</p>
+<p><code>&lt; … name="foo.jpg" &gt;</code></p>
+<p>name属性的值为foo.jpg，这是这个DrawingML对象的名称。 end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+<dt><strong>title</strong> (Title)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定当前DrawingML对象的标题（标题）。</p>
+<p>如果省略此属性，则父对象没有标题文本。</p>
+<p>[Example: 考虑一个 DrawingML 对象，定义如下：</p>
+<p><code>&lt;… title="Process Flow Diagram"&gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualDrawingProps) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cNvPr (Non-Visual Drawing Properties)</strong></p>
+<p>This element specifies non-visual canvas properties. This allows for additional information that does not affect the appearance of the picture to be stored.</p>
+<p>[Example: Consider the following ChartDrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:pic&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Lilly_by_Lisher.jpg&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:pic&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>descr</strong> (Alternative Text for Object)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies alternative text for the current DrawingML object, for use by assistive technologies or applications which do not display the current object.</p>
+<p>If this element is omitted, then no alternative text is present for the parent object.</p>
+<p>[Example: Consider a DrawingML object defined as follows:</p>
+<p><code>&lt;… descr="A picture of a bowl of fruit"&gt;</code></p>
+<p>The descr attribute contains alternative text which can be used in place of the actual DrawingML object. end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+<dt><strong>hidden</strong> (Hidden)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies whether this DrawingML object is displayed. When a DrawingML object is displayed within a document, that object can be hidden (i.e., present, but not visible). This attribute determines whether the object is rendered or made hidden. [Note: An application can have settings which allow this object to be viewed. end note]</p>
+<p>If this attribute is omitted, then the parent DrawingML object shall be displayed (i.e., not hidden).</p>
+<p>[Example: Consider an inline DrawingML object which must be hidden within the document's content. This setting would be specified as follows:</p>
+<p><code>&lt;… hidden="true" /&gt;</code></p>
+<p>The hidden attribute has a value of true, which specifies that the DrawingML object is hidden and not displayed when the document is displayed. end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>id</strong> (Unique Identifier)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies a unique identifier for the current DrawingML object within the current document. This ID can be used to assist in uniquely identifying this object so that it can be referred to by other parts of the document.</p>
+<p>If multiple objects within the same document share the same id attribute value, then the document shall be considered non-conformant.</p>
+<p>[Example: Consider a DrawingML object defined as follows:</p>
+<p><code>&lt;… id="10" … &gt;</code></p>
+<p>The id attribute has a value of 10, which is the unique identifier for this DrawingML object. end example]</p>
+<p>The possible values for this attribute are defined by the ST_DrawingElementId simple type (§20.1.10.21).</p>
+</dd>
+<dt><strong>name</strong> (Name)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies the name of the object. [Note: Typically, this is used to store the original file name of a picture object. end note]</p>
+<p>[Example: Consider a DrawingML object defined as follows:</p>
+<p><code>&lt; … name="foo.jpg" &gt;</code></p>
+<p>The name attribute has a value of foo.jpg, which is the name of this DrawingML object. end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+<dt><strong>title</strong> (Title)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies the title (caption) of the current DrawingML object.</p>
+<p>If this attribute is omitted, then no title text is present for the parent object.</p>
+<p>[Example: Consider a DrawingML object defined as follows:</p>
+<p><code>&lt;… title="Process Flow Diagram"&gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualDrawingProps) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21328-cnvsppr-非视觉形状绘图属性">21.3.2.8 cNvSpPr (非视觉形状绘图属性)<a class="headerlink" href="#21328-cnvsppr-非视觉形状绘图属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了形状的非可视绘图属性。生成应用程序将使用这些属性来确定如何处理该形状。</p>
+<p>[Example: 考虑应用了形状锁定的形状。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:spLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noGrp=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cNvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+</code></pre></div>
+<p>该形状锁存储在该形状的非可视绘图属性中。 end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>txBox</strong> (Text Box)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定相应的形状为文本框，因此生成应用程序应将其视为文本框。如果省略此属性，则假定相应的形状不是特定的文本框。</p>
+<p>[Note: 因为一个形状没有被指定为文本框，并不意味着它不能附带文本。文本框只是一个具有特定属性的专用形状。 end note]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualDrawingShapeProps) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cNvSpPr (Non-Visual Shape Drawing Properties)</strong></p>
+<p>This element specifies the non-visual drawing properties for a shape. These properties are to be used by the generating application to determine how the shape should be dealt with.</p>
+<p>[Example: Consider the shape that has a shape lock applied to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:spLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noGrp=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cNvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+</code></pre></div>
+<p>This shape lock is stored within the non-visual drawing properties for this shape. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>txBox</strong> (Text Box)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies that the corresponding shape is a text box and thus should be treated as such by the generating application. If this attribute is omitted then it is assumed that the corresponding shape is not specifically a text box.</p>
+<p>[Note: Because a shape is not specified to be a text box does not mean that it cannot have text attached to it. A text box is merely a specialized shape with specific properties. end note]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_NonVisualDrawingShapeProps) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="21329-cxnsp-连接形状">21.3.2.9 cxnSp (连接形状)<a class="headerlink" href="#21329-cxnsp-连接形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了用于连接两个sp元素的连接形状。一旦使用cxnSp指定了连接，生成应用程序将决定连接器的确切路径。也就是说，连接器的路由算法由生成应用程序决定，因为所需路径可能因应用程序的具体需求而不同。</p>
+<p>[Example:</p>
+<p><a class="glightbox" href="../imgs/dml-charts2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/dml-charts2.png" /></a></p>
+<p>end example]</p>
+<p>[Example: 考虑以下连接两个常规形状的连接器形状。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdrcdr:grpSp&gt;</span>
+<span style="color: #bbbbbb">    </span>…<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:cxnSp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Elbow Connector 3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:stCxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:endCxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cNvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cxnSp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdrcdr:grpSp&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fPublished</strong> (Publish to Server)</dt>
+<dd>
+<p>指定形状是否在将工作表发送到电子表格服务器时一同发布。这适用于与文档服务器进行接口时使用。</p>
+<p>[Example: 考虑以下形状，在将其发布回电子表格服务器时，它不会与工作表一起发布。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>..
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>macro</strong> (Reference to Custom Function)</dt>
+<dd>
+<p>该元素指定与图表关联的自定义函数。 [Example: 宏脚本、插件功能等等。 end example]</p>
+<p>该字符串的格式应由应用程序定义，如果不理解应该忽略。</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Connector) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cxnSp (Connection Shape)</strong></p>
+<p>This element specifies a connection shape that is used to connect two sp elements. Once a connection is specified using a cxnSp, it is left to the generating application to determine the exact path the connector takes. That is the connector routing algorithm is left up to the generating application as the desired path might be different depending on the specific needs of the application.</p>
+<p>[Example:</p>
+<p><a class="glightbox" href="../imgs/dml-charts2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/dml-charts2.png" /></a></p>
+<p>end example]</p>
+<p>[Example: Consider the following connector shape that connects two regular shapes.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdrcdr:grpSp&gt;</span>
+<span style="color: #bbbbbb">    </span>…<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:cxnSp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Elbow Connector 3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:stCxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:endCxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">idx=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cNvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvCxnSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cxnSp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdrcdr:grpSp&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fPublished</strong> (Publish to Server)</dt>
+<dd>
+<p>Specifies whether the shape shall be published with the worksheet when sent to the spreadsheet server. This is for use when interfacing with a document server.</p>
+<p>[Example: Consider the following shape that is not published with the worksheet when it is published back on the spreadsheet server.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>..
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+</dl>
+<p><strong>macro</strong> (Reference to Custom Function)</p>
+<p>This element specifies the custom function associated with the chart. [Example: A macro script, add-in function, and so on. end example]</p>
+<p>The format of this string shall be application-defined, and should be ignored if not understood.</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Connector) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213210-ext-形状范围">21.3.2.10 ext (形状范围)<a class="headerlink" href="#213210-ext-形状范围" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素描述了绘图元素应该延伸多远的长度和宽度属性。</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>cx</strong> (Extent Length)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定以EMU为单位的范围矩形的长度。该矩形将决定对象在显示时的大小（通过对原始对象进行任何缩放的结果）。</p>
+<p>[Example: 考虑如下指定的 DrawingML 对象：</p>
+<p>&lt;… cx="1828800" cy="200000"/&gt;</p>
+<p>cx属性指定了该对象的高度为1828800个EMU（英制度量单位）。 end example]</p>
+<p>The possible values for this attribute are defined by the ST_PositiveCoordinate simple type (§20.1.10.41).</p>
+</dd>
+<dt><strong>cy</strong> (Extent Width)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定以EMU为单位的范围矩形的宽度。该矩形将决定对象在显示时的大小（通过对原始对象进行任何缩放的结果）。</p>
+<p>[Example: 考虑如下指定的 DrawingML 对象：</p>
+<p>&lt; … cx="1828800" cy="200000"/&gt;</p>
+<p>cy属性指定该对象的宽度为200000 EMUs（英制度量单位）。 end example]</p>
+<p>The possible values for this attribute are defined by the ST_PositiveCoordinate simple type (§20.1.10.41).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_PositiveSize2D) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ext (Shape Extent)</strong></p>
+<p>This element describes the length and width properties for how far a drawing element should extend for.</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>cx</strong> (Extent Length)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies the length of the extents rectangle in EMUs. This rectangle shall dictate the size of the object as displayed (the result of any scaling to the original object).</p>
+<p>[Example: Consider a DrawingML object specified as follows:</p>
+<p>&lt;… cx="1828800" cy="200000"/&gt;</p>
+<p>The cx attributes specifies that this object has a height of 1828800 EMUs (English Metric Units). end example]</p>
+<p>The possible values for this attribute are defined by the ST_PositiveCoordinate simple type (§20.1.10.41).</p>
+</dd>
+<dt><strong>cy</strong> (Extent Width)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+</dd>
+</dl>
+<p>Specifies the width of the extents rectangle in EMUs. This rectangle shall dictate the size of the object as displayed (the result of any scaling to the original object).</p>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="nx">Example</span><span class="p">:</span><span class="w"> </span><span class="nx">Consider</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">DrawingML</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">specified</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nx">follows</span><span class="p">:</span>
+
+<span class="p">&lt;</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="nx">cx</span><span class="p">=</span><span class="s">&quot;1828800&quot;</span><span class="w"> </span><span class="nx">cy</span><span class="p">=</span><span class="s">&quot;200000&quot;</span><span class="o">/</span><span class="p">&gt;</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">cy</span><span class="w"> </span><span class="nx">attribute</span><span class="w"> </span><span class="nx">specifies</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">object</span><span class="w"> </span><span class="nx">has</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="nx">width</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="mi">200000</span><span class="w"> </span><span class="nx">EMUs</span><span class="w"> </span><span class="p">(</span><span class="nx">English</span><span class="w"> </span><span class="nx">Metric</span><span class="w"> </span><span class="nx">Units</span><span class="p">).</span><span class="w"> </span><span class="nx">end</span><span class="w"> </span><span class="nx">example</span><span class="p">]</span>
+
+<span class="nx">The</span><span class="w"> </span><span class="nx">possible</span><span class="w"> </span><span class="nx">values</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">this</span><span class="w"> </span><span class="nx">attribute</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">defined</span><span class="w"> </span><span class="nx">by</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">ST_PositiveCoordinate</span><span class="w"> </span><span class="nx">simple</span><span class="w"> </span><span class="k">type</span><span class="w"> </span><span class="p">(</span><span class="err">§</span><span class="m m-Double">20.1.10.41</span><span class="p">).</span>
+</code></pre></div>
+
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_PositiveSize2D) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213211-from-起始锚点">21.3.2.11 from (起始锚点)<a class="headerlink" href="#213211-from-起始锚点" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定绘图元素的第一个锚点。它用于将形状的顶部和左侧固定在图表内部。也就是说，当相应的图表调整时，形状也会相应调整。</p>
+<p>[Example: 请考虑以下图表绘制内容：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:from&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.04583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.53125<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:from&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:to&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.24583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.86458<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:to&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">macro=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">textlink=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>上面的例子显示了第一个锚点通过from元素进行指定。 end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Marker) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>from (Starting Anchor Point)</strong></p>
+<p>This element specifies the first anchor point for the drawing element. This is used to anchor the top and left sides of the shape within the chart. That is when the corresponding chart is adjusted, the shape is also adjusted.</p>
+<p>[Example: Consider the following Chart Drawing content:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:from&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.04583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.53125<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:from&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:to&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.24583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.86458<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:to&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">macro=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">textlink=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>The above example shows the first anchor point being specified via the from element. end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Marker) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213212-graphicframe-图框">21.3.2.12 graphicFrame (图框)<a class="headerlink" href="#213212-graphicframe-图框" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了一个图形框架的存在。该框架包含了由外部来源生成的图形，并需要一个容器来在幻灯片表面上显示。</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fPublished</strong> (发布到服务器 / Publish To Server)</dt>
+<dd>
+<p>指定形状是否在将工作表发送到电子表格服务器时一同发布。这适用于与文档服务器进行接口时使用。</p>
+<p>[Example: 考虑以下形状，在将其发布回电子表格服务器时，不会与工作表一起发布。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>macro</strong> (参考自定义函数 / Reference to Custom Function)</dt>
+<dd>
+<p>该元素指定与图表关联的自定义函数。 [Example: A macro script, add-in function, and so on. end example]</p>
+<p>该字符串的格式应由应用程序定义，如果不理解应该忽略。</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GraphicFrame) is located in §A.5.2. end note]</p>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>graphicFrame (Graphic Frame)</strong></p>
+<p>This element specifies the existence of a graphics frame. This frame contains a graphic that was generated by an external source and needs a container in which to be displayed on the slide surface.</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fPublished</strong> (Publish To Server)</dt>
+<dd>
+<p>Specifies whether the shape shall be published with the worksheet when sent to the spreadsheet server. This is for use when interfacing with a document server.</p>
+<p>[Example: Consider the following shape that is not published with the worksheet when it
+is published back on the spreadsheet server.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>macro</strong> (Reference to Custom Function)</dt>
+<dd>
+<p>This element specifies the custom function associated with the chart. [Example: A macro script, add-in function, and so on. end example]</p>
+<p>The format of this string shall be application-defined, and should be ignored if not understood.</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GraphicFrame) is located in §A.5.2. end note]</p>
+</details>
+</div>
+</div>
+</div>
+<h3 id="213213-grpsp-组合形状">21.3.2.13 grpSp (组合形状)<a class="headerlink" href="#213213-grpsp-组合形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了一个表示多个形状组合在一起的组合形状。这个形状应该被视为一个普通形状，但不同于由单个几何描述的形状，它由包含在其中的所有形状几何组成。在组合形状中，组成组合的每个形状都像通常一样被指定。然而，组合元素的理念是可以同时应用于多个形状的单个变换。</p>
+<p>[Example: 请考虑以下组合形状。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:grpSp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Group 9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvGrpSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;838200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2426208&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;978408&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;838200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2426208&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;978408&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:grpSp&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，我们看到在一个单独的组内指定了三个形状。这三个形状的位置和大小都像在形状树中一样被指定。生成应用程序应该在计算出组形状的边界框之后应用变换。 end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GroupShape) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>grpSp (Group Shape)</strong></p>
+<p>This element specifies a group shape that represents many shapes grouped together. This shape is to be treated just as if it were a regular shape but instead of being described by a single geometry it is made up of all the shape geometries encompassed within it. Within a group shape each of the shapes that make up the group are specified just as they normally would. The idea behind grouping elements however is that a single transform can apply to many shapes at the same time.</p>
+<p>[Example: Consider the following group shape.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:grpSp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Group 9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvGrpSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;838200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2426208&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;978408&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:chOff</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;838200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:chExt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;2426208&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;978408&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:grpSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:grpSp&gt;</span>
+</code></pre></div>
+<p>In the above example we see three shapes specified within a single group. These three shapes have their position and sizes specified just as they normally would within the shape tree. The generating application should apply the transformation after the bounding box for the group shape has been calculated. end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GroupShape) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213214-grpsppr-组合形状属性">21.3.2.14 grpSpPr (组合形状属性)<a class="headerlink" href="#213214-grpsppr-组合形状属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了在相应组内的所有形状中共有的属性。如果组形状属性和各个形状属性之间存在冲突，则应以各个形状属性为优先。</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>bwMode</strong> (Black and White Mode)</dt>
+<dd>
+<p>指定组形状应仅使用黑白颜色进行渲染。也就是说，当渲染相应的形状时，组形状的着色信息应转换为黑色或白色。</p>
+<p>在渲染此图像时，不使用灰色，只使用纯黑和纯白。</p>
+<p>[Note: 这并不意味着组的形状仅以黑白颜色信息存储。相反，这个属性设置了形状在渲染时使用的渲染模式。 end note]</p>
+<p>The possible values for this attribute are defined by the ST_BlackWhiteMode simple type (§20.1.10.10).</p>
+</dd>
+</dl>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GroupShapeProperties) is located in §A.4.1. end note]</p>
+</details>
+</div>
+<div class="tabbed-block">
+<p><strong>grpSpPr (Group Shape Properties)</strong></p>
+<p>This element specifies the properties that are to be common across all of the shapes within the corresponding group. If there are any conflicting properties within the group shape properties and the individual shape properties then the individual shape properties should take precedence.</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>bwMode</strong> (Black and White Mode)</dt>
+<dd>
+<p>Specifies that the group shape should be rendered using only black and white coloring. That is the coloring information for the group shape should be converted to either black or white when rendering the corresponding shapes.</p>
+<p>No gray is to be used in rendering this image, only stark black and stark white.</p>
+<p>[Note: This does not mean that the group shapes themselves are stored with only black and white color information. This attribute instead sets the rendering mode that the shapes use when rendering. end note]</p>
+<p>The possible values for this attribute are defined by the ST_BlackWhiteMode simple type (§20.1.10.10).</p>
+</dd>
+</dl>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GroupShapeProperties) is located in §A.4.1. end note]</p>
+</details>
+</div>
+</div>
+</div>
+<h3 id="213215-nvcxnsppr-连接器非视觉属性">21.3.2.15 nvCxnSpPr (连接器非视觉属性)<a class="headerlink" href="#213215-nvcxnsppr-连接器非视觉属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了连接形状的所有非可视属性。该元素是非可视标识属性、形状属性和应用属性的容器，这些属性与连接形状相关联。这样可以存储不影响连接形状外观的附加信息。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ConnectorNonVisual) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>nvCxnSpPr (Connector Non Visual Properties)</strong></p>
+<p>This element specifies all non-visual properties for a connection shape. This element is a container for the nonvisual identification properties, shape properties and application properties that are to be associated with a connection shape. This allows for additional information that does not affect the appearance of the connection shape to be stored.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ConnectorNonVisual) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213216-nvgraphicframepr-非可视图形框架属性">21.3.2.16 nvGraphicFramePr (非可视图形框架属性)<a class="headerlink" href="#213216-nvgraphicframepr-非可视图形框架属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了图形框架的所有非可视属性。该元素是非可视标识属性、形状属性和应用属性的容器，这些属性与图形框架相关联。这样可以存储不影响图形框架外观的附加信息。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GraphicFrameNonVisual) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>nvGraphicFramePr (Non-Visual Graphic Frame Properties)</strong></p>
+<p>This element specifies all non-visual properties for a graphic frame. This element is a container for the non-visual identification properties, shape properties and application properties that are to be associated with a graphic frame. This allows for additional information that does not affect the appearance of the graphic frame to be stored.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GraphicFrameNonVisual) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213217-nvgrpsppr-非视觉组合形状属性">21.3.2.17 nvGrpSpPr (非视觉组合形状属性)<a class="headerlink" href="#213217-nvgrpsppr-非视觉组合形状属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了组合形状的所有非可视属性。该元素是非可视标识属性、形状属性和应用属性的容器，这些属性与组合形状相关联。这样可以存储不影响组合形状外观的附加信息。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GroupShapeNonVisual) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>nvGrpSpPr (Non-Visual Group Shape Properties)</strong></p>
+<p>This element specifies all non-visual properties for a group shape. This element is a container for the non-visual identification properties, shape properties and application properties that are to be associated with a group shape. This allows for additional information that does not affect the appearance of the group shape to be stored.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_GroupShapeNonVisual) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213218-nvpicpr-非视觉图片属性">21.3.2.18 nvPicPr (非视觉图片属性)<a class="headerlink" href="#213218-nvpicpr-非视觉图片属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定图片的非可视属性。这允许存储与图片外观无关的附加信息。</p>
+<p>[Example: 考虑以下 DrawingML。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p>End example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_PictureNonVisual) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>nvPicPr (Non-Visual Picture Properties)</strong></p>
+<p>This element specifies the non visual properties for a picture. This allows for additional information that does not affect the appearance of the picture to be stored.</p>
+<p>[Example: Consider the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;pic:pic&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/pic:nvPicPr&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/pic:pic&gt;</span>
+</code></pre></div>
+<p>End example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_PictureNonVisual) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213219-nvsppr-非视觉形状属性">21.3.2.19 nvSpPr (非视觉形状属性)<a class="headerlink" href="#213219-nvsppr-非视觉形状属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了形状的所有非可视属性。该元素是非可视标识属性、形状属性和与形状相关联的应用程序属性的容器。这样可以存储不影响形状外观的附加信息。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ShapeNonVisual) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>nvSpPr (Non-Visual Shape Properties)</strong></p>
+<p>This element specifies all non-visual properties for a shape. This element is a container for the non-visual identification properties, shape properties and application properties that are to be associated with a shape. This allows for additional information that does not affect the appearance of the shape to be stored.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ShapeNonVisual) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213220-pic-图片">21.3.2.20 pic (图片)<a class="headerlink" href="#213220-pic-图片" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定文档中图片对象的存在。</p>
+<p>[Example: 考虑以下的ChartDrawingML，它指定了文档中存在一张图片。这张图片可以具有非可视属性，以及与之相关联的图片填充和形状属性。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;lake.JPG&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">descr=</span><span style="color: #BA2121">&quot;Picture of a Lake&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:blipFill&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:spPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:pic&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fPublished</strong> (Publish to Server)</dt>
+<dd>
+<p>指定形状在将工作表发送到电子表格服务器时是否应发布。这适用于与文档服务器进行接口时使用。</p>
+<p>[Example: 考虑以下形状，在将其发布回电子表格服务器时，它不会与工作表一起发布。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt>macro (Reference to Custom Function)</dt>
+<dd>
+<p>该元素指定与图表关联的自定义函数。 [Example: 宏脚本、插件功能等等。 end example]</p>
+<p>该字符串的格式应由应用程序定义，如果不理解应该忽略。</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Picture) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>pic (Picture)</strong></p>
+<p>This element specifies the existence of a picture object within the document.</p>
+<p>[Example: Consider the following ChartDrawingML that specifies the existence of a picture within a document. This picture can have non-visual properties, a picture fill as well as shape properties attached to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;lake.JPG&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">descr=</span><span style="color: #BA2121">&quot;Picture of a Lake&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noChangeAspect=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/cdr:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:blipFill&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:blipFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:spPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/cdr:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:pic&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fPublished</strong> (Publish to Server)</dt>
+<dd>
+<p>Specifies whether the shape shall be published with the worksheet when sent to the spreadsheet server. This is for use when interfacing with a document server.</p>
+<p>[Example: Consider the following shape that is not published with the worksheet when it is published back on the spreadsheet server.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt>macro (Reference to Custom Function)</dt>
+<dd>
+<p>This element specifies the custom function associated with the chart. [Example: A macro script, add-in function, and so on. end example]</p>
+<p>The format of this string shall be application-defined, and should be ignored if not understood.</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Picture) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213221-relsizeanchor-相对锚定形状尺寸">21.3.2.21 relSizeAnchor (相对锚定形状尺寸)<a class="headerlink" href="#213221-relsizeanchor-相对锚定形状尺寸" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了在图表中描述的形状应该基于相对锚点进行大小调整。这是通过两个元素实现的。from元素指定了形状边界框的左上角在RTL（从右到左）实现中的位置。然后，to元素指定了形状边界框的右下角在RTL（从右到左）实现中的位置，从而确定了形状的大小。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_RelSizeAnchor) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>relSizeAnchor (Relative Anchor Shape Size)</strong></p>
+<p>This element specifies that the shape described here to reside within a chart should be sized based on relative anchor points. This is achieved via two elements. The from element specifies the top left corner of the shape bounding box in a RTL(right-to-left) implementation. The to element then specifies the bottom right corner of the shape bounding box in a RTL(right-to-left) implementation and thus the size of the shape.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_RelSizeAnchor) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213222-sp-形状">21.3.2.22 sp (形状)<a class="headerlink" href="#213222-sp-形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了一个形状的存在。一个形状可以是预设的，也可以是使用DrawingML框架定义的自定义几何图形。除了几何图形之外，每个形状还可以附加可视和非可视属性。文本和相应的样式信息也可以附加到形状上。该形状与其他形状一起在形状树或组形状元素中指定。</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fLocksText</strong> (锁定文本 / Lock Text)</dt>
+<dd>
+<p>指定是否允许在电子表格上保护的工作表中编辑此形状内的文本。这允许在电子表格文档中基于每个形状指定锁定或“保护(protected)”的文本。如果未指定此属性，则假定为0或false。</p>
+<p>[Example: Consider the following shape that does not have locked text on.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fLocksText=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>fPublished</strong> (发布到服务器 / Publish to Server)</dt>
+<dd>
+<p>指定形状在将工作表发送到电子表格服务器时是否应发布。这适用于与文档服务器进行接口时使用。</p>
+<p>[Example: 考虑以下形状，在将其发布回电子表格服务器时，它不会与工作表一起发布。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>macro</strong> (参考自定义函数 / Reference to Custom Function)</dt>
+<dd>
+<p>该元素指定与图表关联的自定义函数。 [Example: 宏脚本、插件功能等等。 end example]</p>
+<p>该字符串的格式应由应用程序定义，如果不理解应该忽略。</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+<dt>textlink (文本链接 / Text Link)</dt>
+<dd>
+<p>指定此形状中包含的文本是否与电子表格中的单元格链接。也就是说，形状中的文本具有引用的电子表格单元格中定义的值。</p>
+<p>[Example: 考虑以下形状，其中的文本与单元格A1链接。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">macro=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">textlink=</span><span style="color: #BA2121">&quot;A1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Shape) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>sp (Shape)</strong></p>
+<p>This element specifies the existence of a single shape. A shape can either be a preset or a custom geometry, defined using the DrawingML framework. In addition to geometry, each shape can have both visual and nonvisual properties attached. Text and corresponding styling information can also be attached to a shape. This shape is specified along with all other shapes within either the shape tree or group shape elements.</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>fLocksText</strong> (Lock Text)</dt>
+<dd>
+<p>Specifies whether to allow for the editing of text within this shape when the worksheet on which the shape resides has been protected as defined by SpreadsheetML. This allows for the specifying of locked or "protected" text on a per-shape basis within a spreadsheet document. If this attribute is not specified then a value of 0, or false is assumed.</p>
+<p>[Example: Consider the following shape that does not have locked text on.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fLocksText=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>fPublished</strong> (Publish to Server)</dt>
+<dd>
+<p>Specifies whether the shape shall be published with the worksheet when sent to the spreadsheet server. This is for use when interfacing with a document server.</p>
+<p>[Example: Consider the following shape that is not published with the worksheet when it is published back on the spreadsheet server.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fPublished=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema boolean datatype.</p>
+</dd>
+<dt><strong>macro</strong> (Reference to Custom Function)</dt>
+<dd>
+<p>This element specifies the custom function associated with the chart. [Example: A macro script, add-in function, and so on. end example]</p>
+<p>The format of this string shall be application-defined, and should be ignored if not understood.</p>
+<p>[Example:</p>
+<p><code>&lt;… macro="DoWork()" &gt;</code></p>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+<dt>textlink (Text Link)</dt>
+<dd>
+<p>Specifies whether the text contained within this shape is linked to a cell within the spreadsheet. That is the text within the shape has the value defined in the referenced spreadsheet cell.</p>
+<p>[Example: Consider the following shape with text linked to cell A1.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">macro=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">textlink=</span><span style="color: #BA2121">&quot;A1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the W3C XML Schema string datatype.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Shape) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213223-sppr-形状属性">21.3.2.23 spPr (形状属性)<a class="headerlink" href="#213223-sppr-形状属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定可以应用于特殊形状（如连接器形状或图片）的视觉形状属性。这些属性与描述形状的视觉属性相同，但在此用于描述文档中特定对象的附加属性。这使得这些形状既具有形状的属性，又具有仅适用于它们的特定属性。</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>bwMode</strong> (黑白模式 / Black and White Mode)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>指定图片应该使用纯黑白色进行渲染。也就是说，在渲染图片时，图片的着色信息应该被转换为黑色或白色。</p>
+<p>不要使用灰色来渲染这张图片，只使用纯黑和纯白。</p>
+<p>[Note: 这并不意味着文件中存储的图片本身一定是黑白图片。这个属性实际上是设置图片在渲染时所应用的渲染模式。 end note]</p>
+<p>The possible values for this attribute are defined by the ST_BlackWhiteMode simple type (§20.1.10.10).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ShapeProperties) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>spPr (Shape Properties)</strong></p>
+<p>This element specifies the visual shape properties that can be applied to a special shape such as a connector shape or picture. These are the same properties that are allowed to describe the visual properties of a shape but are used here to describe additional object-specific properties within a document. This allows for these shapes to have both the properties of a shape as well as specific properties that are unique to only them.</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>bwMode</strong> (Black and White Mode)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/drawingml/main</p>
+<p>Specifies that the picture should be rendered using only black and white coloring. That is the coloring information for the picture should be converted to either black or white when rendering the picture.</p>
+<p>No gray is to be used in rendering this image, only stark black and stark white.</p>
+<p>[Note: This does not mean that the picture itself that is stored within the file is necessarily a black and white picture. This attribute instead sets the rendering mode that the picture has applied to when rendering. end note]</p>
+<p>The possible values for this attribute are defined by the ST_BlackWhiteMode simple type (§20.1.10.10).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ShapeProperties) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213224-style-形状样式">21.3.2.24 style (形状样式)<a class="headerlink" href="#213224-style-形状样式" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>元素指定应用于形状的样式以及与每个样式组件（如线条和填充）相对应的引用。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ShapeStyle) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>style (Shape Style)</strong></p>
+<p>The element specifies the style that is applied to a shape and the corresponding references for each of the style components such as lines and fills.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ShapeStyle) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213225-to-结束锚点">21.3.2.25 to (结束锚点)<a class="headerlink" href="#213225-to-结束锚点" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了绘图元素的第二个锚点。它用于将形状的底部和右侧锚定在电子表格中。也就是说，当相应的图表被调整时，形状也会被调整。</p>
+<p>[Example: 考虑以下 ChartDrawingML</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:from&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.04583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.53125<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:from&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:to&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.24583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.86458<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:to&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">macro=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">textlink=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>上面的例子显示了通过to元素指定第二个锚点。 end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Marker) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>to (Ending Anchor Point)</strong></p>
+<p>This element specifies the second anchor point for the drawing element. This is used to anchor the bottom and right sides of the shape within the spreadsheet. That is when the corresponding chart is adjusted, the shape is also adjusted.</p>
+<p>[Example: Consider the following ChartDrawingML</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;cdr:relSizeAnchor&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:from&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.04583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.53125<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:from&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:to&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:x&gt;</span>0.24583<span style="color: #008000; font-weight: bold">&lt;/cdr:x&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;cdr:y&gt;</span>0.86458<span style="color: #008000; font-weight: bold">&lt;/cdr:y&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:to&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cdr:sp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">macro=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">textlink=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cdr:sp&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/cdr:relSizeAnchor&gt;</span>
+</code></pre></div>
+<p>The above example shows the second anchor point being specified via the to element. end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Marker) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213226-txbody-形状文本正文">21.3.2.26 txBody (形状文本正文)<a class="headerlink" href="#213226-txbody-形状文本正文" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了要包含在相应形状内的文本的存在。所有可见文本和可见文本相关属性都包含在该元素内。可以有多个段落，每个段落内可以有多个文本运行。</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_TextBody) is located in §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>txBody (Shape Text Body)</strong></p>
+<p>This element specifies the existence of text to be contained within the corresponding shape. All visible text and visible text related properties are contained within this element. There can be multiple paragraphs and within paragraphs multiple runs of text.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_TextBody) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213227-x-相对x坐标">21.3.2.27 x (相对X坐标)<a class="headerlink" href="#213227-x-相对x坐标" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了相对于图表绘图对象内部的形状的基于百分比的水平位置所使用的相对 x 坐标。坐标边界在下面列出的相应简单类型中指定。</p>
+<p>The possible values for this element are defined by the ST_MarkerCoordinate simple type (§21.3.3.1).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_MarkerCoordinate) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>x (Relative X Coordinate)</strong></p>
+<p>This element specifies the relative x coordinate that is used to define the percentage-based horizontal position for a shape within a chart drawing object. The coordinate boundaries are specified within the corresponding simple type listed below.</p>
+<p>The possible values for this element are defined by the ST_MarkerCoordinate simple type (§21.3.3.1).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_MarkerCoordinate) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="213228-xfrm-图形框架变换">21.3.2.28 xfrm (图形框架变换)<a class="headerlink" href="#213228-xfrm-图形框架变换" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">中文</label><label for="__tabbed_31_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定要应用于图形框的二维变换。</p>
+<p>参考: <a href="../../chapter20/main/coordinate/#20175-xfrm-分组对象的-2d-变换">xfrm</a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>xfrm (Graphic Frame Transform)</strong></p>
+<p>This element specifies a 2-D transform to be applied to a Graphic Frame.</p>
+<p>see also: <a href="../../chapter20/main/coordinate/#20175-xfrm-分组对象的-2d-变换">xfrm</a></p>
+</div>
+</div>
+</div>
+<h3 id="213229-y-相对-y-坐标">21.3.2.29 y (相对 Y 坐标)<a class="headerlink" href="#213229-y-相对-y-坐标" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">中文</label><label for="__tabbed_32_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定了相对y坐标，用于定义图表绘图对象内形状的基于百分比的垂直位置。坐标边界在下面列出的相应简单类型中指定。</p>
+<p>The possible values for this element are defined by the ST_MarkerCoordinate simple type (§21.3.3.1).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_MarkerCoordinate) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>y (Relative Y Coordinate)</strong></p>
+<p>This element specifies the relative y coordinate that is used to define the percentage-based vertical position for a shape within a chart drawing object. The coordinate boundaries are specified within the corresponding simple type listed below.</p>
+<p>The possible values for this element are defined by the ST_MarkerCoordinate simple type (§21.3.3.1).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_MarkerCoordinate) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="2133-简单类型">21.3.3 简单类型<a class="headerlink" href="#2133-简单类型" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">中文</label><label for="__tabbed_33_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这是专门用于DrawingML - Chart Drawings的简单类型的完整列表。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Simple Types</strong></p>
+<p>This is the complete list of simple types dedicated to DrawingML – Chart Drawings.</p>
+</div>
+</div>
+</div>
+<h3 id="21331-st_markercoordinate-图表标记坐标值">21.3.3.1 ST_MarkerCoordinate (图表标记坐标值)<a class="headerlink" href="#21331-st_markercoordinate-图表标记坐标值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">中文</label><label for="__tabbed_34_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这个简单类型指定了图表标记的坐标值。它被表示为图表宽度或高度的0.0到1.0之间的分数位置，其中0.0表示左边缘或顶部。这个简单类型的内容是对W3C XML Schema双精度数据类型的限制。这个简单类型还指定了以下限制：</p>
+<ul>
+<li>这个简单类型的最小值大于等于0.0。</li>
+<li>这个简单类型的最大值小于等于1.0。</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_MarkerCoordinate) is located in §A.5.2. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_MarkerCoordinate (Chart Marker Coordinate Value)</strong></p>
+<p>This simple type specifies the chart marker coordinate value. It is to be represented as a fractional position between 0.0 and 1.0 of the chart width or height with 0.0 being the left or top edge.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema double datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type has a minimum value of greater than or equal to 0.0.</li>
+<li>This simple type has a maximum value of less than or equal to 1.0.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_MarkerCoordinate) is located in §A.5.2. end note]</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

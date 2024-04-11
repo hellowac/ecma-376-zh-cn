@@ -1,0 +1,3526 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lxmlobjectify/">
+      
+      
+        <link rel="next" href="../../../struct/theme/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>在lxml中使用自定义元素类 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#在lxml中使用自定义元素类" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              在lxml中使用自定义元素类
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ecma-part1/" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../ecma-part1/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ecma-part1/chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ecma-part1/chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ecma-part1/chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ecma-part1/chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../ecma-part1/annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part1/bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            lxml库
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lxml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lxml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../whylxml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    为何选择lxml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installinglxml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装lxml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../benchmarksandspeed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基准和速度
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../elementtreecompatibilityoflxmletree/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lxml.tree 与 ElementTree 的兼容性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lxmlfaq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lxml 常见问题解答
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../lxmlobjectify/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    利用lxml进行开发
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2_8" id="__nav_7_2_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    扩展lxml
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_7_2_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            扩展lxml
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    在lxml中使用自定义元素类
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    在lxml中使用自定义元素类
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-代理的背后实现" class="md-nav__link">
+    Element 代理的背后实现
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-初始化" class="md-nav__link">
+    Element 初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#设置类查找方案" class="md-nav__link">
+    设置类查找方案
+  </a>
+  
+    <nav class="md-nav" aria-label="设置类查找方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基于默认类的查找" class="md-nav__link">
+    基于默认类的查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#基于命名空间的类查找" class="md-nav__link">
+    基于命名空间的类查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#基于属性的查找" class="md-nav__link">
+    基于属性的查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#基于自定义元素类的查找" class="md-nav__link">
+    基于自定义元素类的查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-中基于树的元素类查找" class="md-nav__link">
+    Python 中基于树的元素类查找
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#使用自定义类生成-xml" class="md-nav__link">
+    使用自定义类生成 XML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实现命名空间" class="md-nav__link">
+    实现命名空间
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#element-代理的背后实现" class="md-nav__link">
+    Element 代理的背后实现
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#element-初始化" class="md-nav__link">
+    Element 初始化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#设置类查找方案" class="md-nav__link">
+    设置类查找方案
+  </a>
+  
+    <nav class="md-nav" aria-label="设置类查找方案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#基于默认类的查找" class="md-nav__link">
+    基于默认类的查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#基于命名空间的类查找" class="md-nav__link">
+    基于命名空间的类查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#基于属性的查找" class="md-nav__link">
+    基于属性的查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#基于自定义元素类的查找" class="md-nav__link">
+    基于自定义元素类的查找
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-中基于树的元素类查找" class="md-nav__link">
+    Python 中基于树的元素类查找
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#使用自定义类生成-xml" class="md-nav__link">
+    使用自定义类生成 XML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#实现命名空间" class="md-nav__link">
+    实现命名空间
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="在lxml中使用自定义元素类">在lxml中使用自定义元素类<a class="headerlink" href="#在lxml中使用自定义元素类" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>lxml 对自定义 Element 类有非常复杂的支持。 您可以为元素提供自己的类，并让 lxml 默认将它们用于特定解析器生成的所有元素，仅用于特定命名空间中的特定标记名称，甚至用于树中特定位置的确切元素。</p>
+<p>自定义Element必须继承自<code>lxml.etree.ElementBase</code>类，该类为子类提供Element接口：</p>
+<div class="language-pycon highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">lxml</span> <span style="color: #008000; font-weight: bold">import</span> etree
+
+<span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">honk</span>(etree<span style="color: #666666">.</span>ElementBase):
+<span style="color: #000080; font-weight: bold">... </span>   <span style="color: #AA22FF">@property</span>
+<span style="color: #000080; font-weight: bold">... </span>   <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honking</span>(<span style="color: #008000">self</span>):
+<span style="color: #000080; font-weight: bold">... </span>      <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;honking&#39;</span>) <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;true&#39;</span>
+</code></pre></div>
+<p>这定义了一个新的 Element 类 <code>honk</code> 以及有一个 <code>honking</code> 属性。</p>
+<p>以下文档描述了如何使 lxml.etree 使用这些自定义 Element 类。</p>
+</div>
+<div class="tabbed-block">
+<p>Using custom Element classes in lxml</p>
+<p>lxml has very sophisticated support for custom Element classes. You can provide your own classes for Elements and have lxml use them by default for all elements generated by a specific parser, only for a specific tag name in a specific namespace or even for an exact element at a specific position in the tree.</p>
+<p>Custom Elements must inherit from the lxml.etree.ElementBase class, which provides the Element interface for subclasses:</p>
+<div class="language-pycon highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">lxml</span> <span style="color: #008000; font-weight: bold">import</span> etree
+
+<span style="color: #000080; font-weight: bold">&gt;&gt;&gt; </span><span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">honk</span>(etree<span style="color: #666666">.</span>ElementBase):
+<span style="color: #000080; font-weight: bold">... </span>   <span style="color: #AA22FF">@property</span>
+<span style="color: #000080; font-weight: bold">... </span>   <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honking</span>(<span style="color: #008000">self</span>):
+<span style="color: #000080; font-weight: bold">... </span>      <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;honking&#39;</span>) <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;true&#39;</span>
+</code></pre></div>
+<p>This defines a new Element class honk with a property honking.</p>
+<p>The following document describes how you can make lxml.etree use these custom Element classes.</p>
+</div>
+</div>
+</div>
+<h2 id="element-代理的背后实现">Element 代理的背后实现<a class="headerlink" href="#element-代理的背后实现" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>lxml.etree 基于 libxml2，以 C 结构保存整个 XML 树。 为了与 Python 代码通信，它根据需要为 XML 元素创建 Python 代理对象。</p>
+<p><a class="glightbox" href="../imgs/proxies.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="proxies" src="../imgs/proxies.png" /></a></p>
+<p>C 元素和 Python Element 类之间的映射是完全可配置的。 当您使用lxml.etree的API向lxml.etree请求一个元素时，它会为您实例化您的类。 您所要做的就是告诉 lxml 对于哪种元素使用哪个类。 这是通过类查找方案完成的，如以下各节所述。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Background on Element proxies</strong></p>
+<p>Being based on libxml2, lxml.etree holds the entire XML tree in a C structure. To communicate with Python code, it creates Python proxy objects for the XML elements on demand.</p>
+<p><a class="glightbox" href="../imgs/proxies.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="proxies" src="../imgs/proxies.png" /></a></p>
+<p>The mapping between C elements and Python Element classes is completely configurable. When you ask lxml.etree for an Element by using its API, it will instantiate your classes for you. All you have to do is tell lxml which class to use for which kind of Element. This is done through a class lookup scheme, as described in the sections below.</p>
+</div>
+</div>
+</div>
+<h2 id="element-初始化">Element 初始化<a class="headerlink" href="#element-初始化" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>预先要知道一件事。 元素类不得具有<code>__init___</code>或<code>__new__</code>方法。 除了存储在底层 XML 树中的数据之外，也不应该有任何内部状态。 元素实例是根据需要创建的并进行垃圾收集，因此通常无法预测为它们创建代理的时间和频率。 更糟糕的是，当调用 <code>__init__</code> 方法时，对象甚至还没有初始化来表示 XML 标记，因此在子类中提供 <code>__init__</code> 方法没有多大用处。</p>
+<p>大多数用例不需要任何类初始化或代理状态，因此您现在可以跳到下一部分。 但是，如果您确实需要在实例化时设置元素类，或者需要一种在代理实例而不是 XML 树中持久存储状态的方法，可以使用以下方法。</p>
+<p>关于 Element 代理，有一个重要的保证。 一旦代理被实例化，只要存在对它的 Python 引用，它就会保持活动状态，并且对树中 XML 元素的任何访问都将返回这个实例。 因此，如果您需要在自定义 Element 类中存储本地状态（通常不鼓励这样做），您可以通过保持树中的 Elements 处于活动状态来实现此目的。 如果树没有改变，你可以简单地这样做：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>proxy_cache <span style="color: #666666">=</span> <span style="color: #008000">list</span>(root<span style="color: #666666">.</span>iter())
+</code></pre></div>
+<p>或者这样</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>proxy_cache <span style="color: #666666">=</span> <span style="color: #008000">set</span>(root<span style="color: #666666">.</span>iter())
+</code></pre></div>
+<p>或使用任何其他合适的容器。 请注意，如果树发生变化，您必须手动保持此缓存最新，这在某些情况下可能会变得棘手。</p>
+<p>对于代理初始化，ElementBase 类有一个可以重写的<code>_init()</code>方法，这与普通的<code>__init__()</code>方法相反。 它可用于修改 XML 树，例如 <strong>构造特殊子项</strong> 或 <strong>验证和更新属性</strong>。</p>
+<p><code>_init()</code> 的语义如下：</p>
+<ul>
+<li>它在 Element 类实例化时调用一次。 也就是说，当 lxml 创建元素的 Python 表示形式时。 此时，元素对象已完全初始化以表示树中的特定 XML 元素。</li>
+<li>该方法可以完全访问 XML 树。 可以按照与程序中其他任何地方完全相同的方式进行修改。</li>
+<li>在底层 C 树中 XML 元素的生命周期内，元素的 Python 表示可能会被多次创建。 子类提供的 <code>_init()</code> 代码本身必须特别注意，多次执行要么是无害的，要么被 XML 树中的某种标志阻止。 后者可以通过修改属性值或删除或添加特定子节点，然后在运行 init 进程之前进行验证来实现。</li>
+<li><code>_init()</code> 中引发的任何异常都将通过 API 调用传播，从而导致元素的创建。 因此，请小心您在此处编写的代码，因为它的异常可能会出现在各种意想不到的地方。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Element initialization</strong></p>
+<p>There is one thing to know up front. Element classes must not have an <code>__init___</code> or <code>__new__</code> method. There should not be any internal state either, except for the data stored in the underlying XML tree. Element instances are created and garbage collected at need, so there is normally no way to predict when and how often a proxy is created for them. Even worse, when the <code>__init__</code> method is called, the object is not even initialized yet to represent the XML tag, so there is not much use in providing an <code>__init__</code> method in subclasses.</p>
+<p>Most use cases will not require any class initialisation or proxy state, so you can content yourself with skipping to the next section for now. However, if you really need to set up your element class on instantiation, or need a way to persistently store state in the proxy instances instead of the XML tree, here is a way to do so.</p>
+<p>There is one important guarantee regarding Element proxies. Once a proxy has been instantiated, it will keep alive as long as there is a Python reference to it, and any access to the XML element in the tree will return this very instance. Therefore, if you need to store local state in a custom Element class (which is generally discouraged), you can do so by keeping the Elements in a tree alive. If the tree doesn't change, you can simply do this:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>proxy_cache <span style="color: #666666">=</span> <span style="color: #008000">list</span>(root<span style="color: #666666">.</span>iter())
+</code></pre></div>
+<p>or</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>proxy_cache <span style="color: #666666">=</span> <span style="color: #008000">set</span>(root<span style="color: #666666">.</span>iter())
+</code></pre></div>
+<p>or use any other suitable container. Note that you have to keep this cache manually up to date if the tree changes, which can get tricky in cases.</p>
+<p>For proxy initialisation, ElementBase classes have an <code>_init()</code> method that can be overridden, as oppose to the normal <code>__init__()</code> method. It can be used to modify the XML tree, e.g. to construct special children or verify and update attributes.</p>
+<p>The semantics of <code>_init()</code> are as follows:</p>
+<ul>
+<li>It is called once on Element class instantiation time. That is, when a Python representation of the element is created by lxml. At that time, the element object is completely initialized to represent a specific XML element within the tree.</li>
+<li>The method has complete access to the XML tree. Modifications can be done in exactly the same way as anywhere else in the program.</li>
+<li>Python representations of elements may be created multiple times during the lifetime of an XML element in the underlying C tree. The _init() code provided by subclasses must take special care by itself that multiple executions either are harmless or that they are prevented by some kind of flag in the XML tree. The latter can be achieved by modifying an attribute value or by removing or adding a specific child node and then verifying this before running through the init process.</li>
+<li>Any exceptions raised in _init() will be propagated through the API call that lead to the creation of the Element. So be careful with the code you write here as its exceptions may turn up in various unexpected places.</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="设置类查找方案">设置类查找方案<a class="headerlink" href="#设置类查找方案" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>部署自定义元素类时要做的第一件事是在解析器上注册类查找方案。 lxml.etree 提供了相当多不同的方案，它们也支持基于名称空间或属性值的类查找。 大多数查找都支持回退链接，这允许在前一个查找机制未能找到类时接管下一个查找机制。</p>
+<p>例如，将 <code>honk</code> 元素设置为解析器的默认元素类的工作方式如下：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> parser_lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup(element<span style="color: #666666">=</span>honk)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(parser_lookup)
+</code></pre></div>
+<p>基于解析器的方案有一个缺点：<code>Element()</code> 工厂不知道您的专用解析器，并创建一个部署默认解析器的新文档：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>Element(<span style="color: #BA2121">&quot;root&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">False</span>
+</code></pre></div>
+<p>因此，您应该避免在使用自定义类的代码中使用此工厂函数。 解析器的 <code>makeelement()</code> 方法提供了一个简单的替换：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;root&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>如果您在模块级别使用解析器，则可以通过添加如下代码轻松地将模块级别 <code>Element()</code> 工厂重定向到解析器方法：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> module_level_parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> Element <span style="color: #666666">=</span> module_level_parser<span style="color: #666666">.</span>makeelement
+</code></pre></div>
+<p>虽然 <code>XML()</code> 和 <code>HTML()</code> 工厂也依赖于默认解析器，但您可以将不同的解析器作为第二个参数传递给它们：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(<span style="color: #BA2121">&quot;&lt;test/&gt;&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(element, honk))
+<span style="color: #008000; font-weight: bold">False</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(<span style="color: #BA2121">&quot;&lt;test/&gt;&quot;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(element, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>每当您使用解析器创建文档时，它将继承查找方案，并且该文档的所有后续元素实例化都将使用它：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(<span style="color: #BA2121">&quot;&lt;test/&gt;&quot;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(element, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>SubElement(element, <span style="color: #BA2121">&quot;subel&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>对于在 Python 解释器中测试代码和小型项目，您还可以考虑在默认解析器上设置查找方案。 然而，为了避免干扰其他模块，通常更好的主意是为每个模块使用专用解析器（或使用线程时使用解析器池），然后仅为该解析器注册所需的查找方案。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Setting up a class lookup scheme</strong></p>
+<p>The first thing to do when deploying custom element classes is to register a class lookup scheme on a parser. lxml.etree provides quite a number of different schemes that also support class lookup based on namespaces or attribute values. Most lookups support fallback chaining, which allows the next lookup mechanism to take over when the previous one fails to find a class.</p>
+<p>For example, setting the honk Element as a default element class for a parser works as follows:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> parser_lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup(element<span style="color: #666666">=</span>honk)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(parser_lookup)
+</code></pre></div>
+<p>There is one drawback of the parser based scheme: the Element() factory does not know about your specialised parser and creates a new document that deploys the default parser:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>Element(<span style="color: #BA2121">&quot;root&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">False</span>
+</code></pre></div>
+<p>You should therefore avoid using this factory function in code that uses custom classes. The makeelement() method of parsers provides a simple replacement:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;root&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>If you use a parser at the module level, you can easily redirect a module level Element() factory to the parser method by adding code like this:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> module_level_parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> Element <span style="color: #666666">=</span> module_level_parser<span style="color: #666666">.</span>makeelement
+</code></pre></div>
+<p>While the XML() and HTML() factories also depend on the default parser, you can pass them a different parser as second argument:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(<span style="color: #BA2121">&quot;&lt;test/&gt;&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(element, honk))
+<span style="color: #008000; font-weight: bold">False</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(<span style="color: #BA2121">&quot;&lt;test/&gt;&quot;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(element, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>Whenever you create a document with a parser, it will inherit the lookup scheme and all subsequent element instantiations for this document will use it:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(<span style="color: #BA2121">&quot;&lt;test/&gt;&quot;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(element, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>SubElement(element, <span style="color: #BA2121">&quot;subel&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>For testing code in the Python interpreter and for small projects, you may also consider setting a lookup scheme on the default parser. To avoid interfering with other modules, however, it is usually a better idea to use a dedicated parser for each module (or a parser pool when using threads) and then register the required lookup scheme only for this parser.</p>
+</div>
+</div>
+</div>
+<h3 id="基于默认类的查找">基于默认类的查找<a class="headerlink" href="#基于默认类的查找" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这是最简单的查找机制。 它始终返回默认元素类。 因此，不支持进一步的后备，但此方案对于其他自定义查找机制来说是一个很好的后备。 具体来说，它还处理注释和处理指令，这些在将代理映射到类时很容易被忘记。</p>
+<p>Usage:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+<p>请注意，新解析器的默认设置是使用全局回退，这也是默认查找（如果没有另外配置）。</p>
+<p>要更改默认元素实现，您可以将新类传递给构造函数。 虽然它接受元素、注释和 pi 节点的类，但大多数用例只会覆盖元素类：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;myelement&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">False</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup(element<span style="color: #666666">=</span>honk)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;myelement&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">False</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;myelement&quot;</span>, honking<span style="color: #666666">=</span><span style="color: #BA2121">&#39;true&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> etree<span style="color: #666666">.</span>tostring(el)
+<span style="color: #BA2121">b&#39;&lt;myelement honking=&quot;true&quot;/&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> root <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(
+<span style="color: #666666">...</span>     <span style="color: #BA2121">&#39;&lt;root honking=&quot;true&quot;&gt;&lt;!--comment--&gt;&lt;/root&gt;&#39;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> root<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(root[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Default class lookup</strong></p>
+<p>This is the most simple lookup mechanism. It always returns the default element class. Consequently, no further fallbacks are supported, but this scheme is a nice fallback for other custom lookup mechanisms. Specifically, it also handles comments and processing instructions, which are easy to forget about when mapping proxies to classes.</p>
+<p>Usage:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+<p>Note that the default for new parsers is to use the global fallback, which is also the default lookup (if not configured otherwise).</p>
+<p>To change the default element implementation, you can pass your new class to the constructor. While it accepts classes for element, comment and pi nodes, most use cases will only override the element class:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;myelement&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">False</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup(element<span style="color: #666666">=</span>honk)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;myelement&quot;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">isinstance</span>(el, honk))
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">False</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&quot;myelement&quot;</span>, honking<span style="color: #666666">=</span><span style="color: #BA2121">&#39;true&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> etree<span style="color: #666666">.</span>tostring(el)
+<span style="color: #BA2121">b&#39;&lt;myelement honking=&quot;true&quot;/&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> root <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(
+<span style="color: #666666">...</span>     <span style="color: #BA2121">&#39;&lt;root honking=&quot;true&quot;&gt;&lt;!--comment--&gt;&lt;/root&gt;&#39;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> root<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(root[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="基于命名空间的类查找">基于命名空间的类查找<a class="headerlink" href="#基于命名空间的类查找" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这是一种高级查找机制，支持<strong>命名空间</strong>/<strong>标记名称特定的元素类</strong>。 您可以通过调用以下命令来选择它：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+<p>请参阅下面有关<a href="https://lxml.de/element_classes.html#implementing-namespaces">实现命名空间</a> 的单独部分，了解如何使用它。</p>
+<p>该方案支持回退机制，在找不到命名空间或没有为元素名称注册类的情况下使用该机制。 通常，这里使用默认的类查找。 要更改它，请将所需的后备查找方案传递给构造函数：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> fallback <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup(element<span style="color: #666666">=</span>honk)
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup(fallback)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> root <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(
+<span style="color: #666666">...</span>     <span style="color: #BA2121">&#39;&lt;root honking=&quot;true&quot;&gt;&lt;!--comment--&gt;&lt;/root&gt;&#39;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> root<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(root[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Namespace class lookup</strong></p>
+<p>This is an advanced lookup mechanism that supports namespace/tag-name specific element classes. You can select it by calling:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+<p>See the separate section on <a href="https://lxml.de/element_classes.html#implementing-namespaces">implementing namespaces</a> below to learn how to make use of it.</p>
+<p>This scheme supports a fallback mechanism that is used in the case where the namespace is not found or no class was registered for the element name. Normally, the default class lookup is used here. To change it, pass the desired fallback lookup scheme to the constructor:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> fallback <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementDefaultClassLookup(element<span style="color: #666666">=</span>honk)
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup(fallback)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> root <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(
+<span style="color: #666666">...</span>     <span style="color: #BA2121">&#39;&lt;root honking=&quot;true&quot;&gt;&lt;!--comment--&gt;&lt;/root&gt;&#39;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> root<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(root[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="基于属性的查找">基于属性的查找<a class="headerlink" href="#基于属性的查找" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该方案使用从属性值到类的映射。 属性名称在初始化时设置，然后用于在字典中查找相应的值。 它的设置如下：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> id_class_mapping <span style="color: #666666">=</span> {<span style="color: #BA2121">&#39;1234&#39;</span> : honk} <span style="color: #3D7B7B; font-style: italic"># 将属性值映射到类</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>AttributeBasedElementClassLookup(
+<span style="color: #666666">...</span>                                      <span style="color: #BA2121">&#39;id&#39;</span>, id_class_mapping)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+<p>以下是如何使用它：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;a id=&quot;123&quot;&gt;&lt;b id=&quot;1234&quot;/&gt;&lt;b id=&quot;1234&quot; honking=&quot;true&quot;/&gt;&lt;/a&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> a <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(xml, parser)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> a<span style="color: #666666">.</span>honking       <span style="color: #3D7B7B; font-style: italic"># id 不匹配！</span>
+Traceback (most recent call last):
+<span style="color: #CB3F38; font-weight: bold">AttributeError</span>: <span style="color: #BA2121">&#39;lxml.etree._Element&#39;</span> <span style="color: #008000">object</span> has no attribute <span style="color: #BA2121">&#39;honking&#39;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> a[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">False</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> a[<span style="color: #666666">1</span>]<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>如果未找到该属性或其值不在映射中，则此查找方案将使用其后备。 通常，这里使用默认的类查找。 例如，如果您想使用名称空间查找，可以使用以下代码：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> fallback <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>AttributeBasedElementClassLookup(
+<span style="color: #666666">...</span>                       <span style="color: #BA2121">&#39;id&#39;</span>, id_class_mapping, fallback)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Attribute based lookup</strong></p>
+<p>This scheme uses a mapping from attribute values to classes. An attribute name is set at initialisation time and is then used to find the corresponding value in a dictionary. It is set up as follows:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> id_class_mapping <span style="color: #666666">=</span> {<span style="color: #BA2121">&#39;1234&#39;</span> : honk} <span style="color: #3D7B7B; font-style: italic"># maps attribute values to classes</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>AttributeBasedElementClassLookup(
+<span style="color: #666666">...</span>                                      <span style="color: #BA2121">&#39;id&#39;</span>, id_class_mapping)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+<p>And here is how to use it:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;a id=&quot;123&quot;&gt;&lt;b id=&quot;1234&quot;/&gt;&lt;b id=&quot;1234&quot; honking=&quot;true&quot;/&gt;&lt;/a&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> a <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(xml, parser)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> a<span style="color: #666666">.</span>honking       <span style="color: #3D7B7B; font-style: italic"># id does not match !</span>
+Traceback (most recent call last):
+<span style="color: #CB3F38; font-weight: bold">AttributeError</span>: <span style="color: #BA2121">&#39;lxml.etree._Element&#39;</span> <span style="color: #008000">object</span> has no attribute <span style="color: #BA2121">&#39;honking&#39;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> a[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">False</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> a[<span style="color: #666666">1</span>]<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>This lookup scheme uses its fallback if the attribute is not found or its value is not in the mapping. Normally, the default class lookup is used here. If you want to use the namespace lookup, for example, you can use this code:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> fallback <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>AttributeBasedElementClassLookup(
+<span style="color: #666666">...</span>                       <span style="color: #BA2121">&#39;id&#39;</span>, id_class_mapping, fallback)
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="基于自定义元素类的查找">基于自定义元素类的查找<a class="headerlink" href="#基于自定义元素类的查找" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这是在每个元素的基础上查找元素类的最可定制的方法。 它允许您在子类中实现自定义查找方案：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyLookup</span>(etree<span style="color: #666666">.</span>CustomElementClassLookup):
+<span style="color: #666666">...</span>     <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lookup</span>(<span style="color: #008000">self</span>, node_type, document, namespace, name):
+<span style="color: #666666">...</span>         <span style="color: #008000; font-weight: bold">if</span> node_type <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;element&#39;</span>:
+<span style="color: #666666">...</span>             <span style="color: #008000; font-weight: bold">return</span> honk  <span style="color: #3D7B7B; font-style: italic"># 这里更有选择性一点......</span>
+<span style="color: #666666">...</span>         <span style="color: #008000; font-weight: bold">else</span>:
+<span style="color: #666666">...</span>             <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">None</span>  <span style="color: #3D7B7B; font-style: italic"># 传递给（默认）后备</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(MyLookup())
+
+<span style="color: #666666">&gt;&gt;&gt;</span> root <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(
+<span style="color: #666666">...</span>     <span style="color: #BA2121">&#39;&lt;root honking=&quot;true&quot;&gt;&lt;!--comment--&gt;&lt;/root&gt;&#39;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> root<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(root[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+<p><code>.lookup()</code> 方法必须返回 <code>None</code> （这会触发回退机制）或 <code>lxml.etree.ElementBase</code> 的子类。 它可以根据节点类型（“element”、“comment”、“PI”、“entity”之一）、元素的 XML 文档或其命名空间或标记名称做出任何所需的决定。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Custom element class lookup</strong></p>
+<p>This is the most customisable way of finding element classes on a per-element basis. It allows you to implement a custom lookup scheme in a subclass:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyLookup</span>(etree<span style="color: #666666">.</span>CustomElementClassLookup):
+<span style="color: #666666">...</span>     <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lookup</span>(<span style="color: #008000">self</span>, node_type, document, namespace, name):
+<span style="color: #666666">...</span>         <span style="color: #008000; font-weight: bold">if</span> node_type <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;element&#39;</span>:
+<span style="color: #666666">...</span>             <span style="color: #008000; font-weight: bold">return</span> honk  <span style="color: #3D7B7B; font-style: italic"># be a bit more selective here ...</span>
+<span style="color: #666666">...</span>         <span style="color: #008000; font-weight: bold">else</span>:
+<span style="color: #666666">...</span>             <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000; font-weight: bold">None</span>  <span style="color: #3D7B7B; font-style: italic"># pass on to (default) fallback</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(MyLookup())
+
+<span style="color: #666666">&gt;&gt;&gt;</span> root <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(
+<span style="color: #666666">...</span>     <span style="color: #BA2121">&#39;&lt;root honking=&quot;true&quot;&gt;&lt;!--comment--&gt;&lt;/root&gt;&#39;</span>, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> root<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(root[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+<p>The .lookup() method must return either None (which triggers the fallback mechanism) or a subclass of lxml.etree.ElementBase. It can take any decision it wants based on the node type (one of "element", "comment", "PI", "entity"), the XML document of the element, or its namespace or tag name.</p>
+</div>
+</div>
+</div>
+<h3 id="python-中基于树的元素类查找">Python 中基于树的元素类查找<a class="headerlink" href="#python-中基于树的元素类查找" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在纯 Python 中很难做出比自定义方案允许的更复杂的决策，因为这会导致先有鸡还是先有蛋的问题。 在树中的元素被实例化为 Python 元素代理之前，它需要访问树。</p>
+<p>幸运的是，有一种方法可以做到这一点。 PythonElementClassLookup 的工作方式与自定义查找方案类似：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyLookup</span>(etree<span style="color: #666666">.</span>PythonElementClassLookup):
+<span style="color: #666666">...</span>     <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lookup</span>(<span style="color: #008000">self</span>, document, element):
+<span style="color: #666666">...</span>         <span style="color: #008000; font-weight: bold">return</span> MyElementClass <span style="color: #3D7B7B; font-style: italic"># 其他地方定义的</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(MyLookup())
+</code></pre></div>
+<p>和以前一样，<code>lookup()</code> 方法的第一个参数是包含 <code>Element</code> 的不透明文档实例。 第二个参数是一个轻量级 <code>Element</code> 代理实现，仅在查找期间有效。 不要试图保留对它的引用。 一旦查找完成，代理就会失效。 如果您访问实例化查找调用范围之外的任何属性或方法，您将收到 <code>AssertionError</code>。</p>
+<p>在查找过程中，元素对象的行为大多类似于普通的 <code>Element</code> 实例。 它提供了 <code>tag</code>、<code>text</code>、<code>tail</code>等属性，并支持索引、<strong>切片</strong>以及<code>getchildren()</code>、<code>getparent()</code>等方法。 它不支持迭代，也不支持任何类型的修改。 它的所有属性都是只读的，不能删除或插入到其他树中。 您可以使用它作为起点来自由遍历树并收集其元素提供的任何类型的信息。 一旦您决定了该元素使用哪个类，您只需返回它并让 lxml 负责清理实例化的代理类。</p>
+<div class="admonition info">
+<p class="admonition-title">旁注</p>
+<p>这个查找方案最初位于一个名为 <code>lxml.pyclasslookup</code> 的单独模块中。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>Tree based element class lookup in Python</strong></p>
+<p>Taking more elaborate decisions than allowed by the custom scheme is difficult to achieve in pure Python, as it results in a chicken-and-egg problem. It would require access to the tree - before the elements in the tree have been instantiated as Python Element proxies.</p>
+<p>Luckily, there is a way to do this. The PythonElementClassLookup works similar to the custom lookup scheme:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">MyLookup</span>(etree<span style="color: #666666">.</span>PythonElementClassLookup):
+<span style="color: #666666">...</span>     <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">lookup</span>(<span style="color: #008000">self</span>, document, element):
+<span style="color: #666666">...</span>         <span style="color: #008000; font-weight: bold">return</span> MyElementClass <span style="color: #3D7B7B; font-style: italic"># defined elsewhere</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(MyLookup())
+</code></pre></div>
+<p>As before, the first argument to the lookup() method is the opaque document instance that contains the Element. The second arguments is a lightweight Element proxy implementation that is only valid during the lookup. Do not try to keep a reference to it. Once the lookup is finished, the proxy will become invalid. You will get an AssertionError if you access any of the properties or methods outside the scope of the lookup call where they were instantiated.</p>
+<p>During the lookup, the element object behaves mostly like a normal Element instance. It provides the properties tag, text, tail etc. and supports indexing, slicing and the getchildren(), getparent() etc. methods. It does not support iteration, nor does it support any kind of modification. All of its properties are read-only and it cannot be removed or inserted into other trees. You can use it as a starting point to freely traverse the tree and collect any kind of information that its elements provide. Once you have taken the decision which class to use for this element, you can simply return it and have lxml take care of cleaning up the instantiated proxy classes.</p>
+<p>Sidenote: this lookup scheme originally lived in a separate module called lxml.pyclasslookup.</p>
+</div>
+</div>
+</div>
+<h2 id="使用自定义类生成-xml">使用自定义类生成 XML<a class="headerlink" href="#使用自定义类生成-xml" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在 lxml 2.1 之前，您无法自己实例化代理类。 在创建现有 XML 元素的对象表示形式时，只有 <code>lxml.etree</code> 可以做到这一点。 然而，从 lxml 2.2 开始，实例化此类将简单地创建一个新元素：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> honk(honking<span style="color: #666666">=</span><span style="color: #BA2121">&#39;true&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>tag
+<span style="color: #BA2121">&#39;honk&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>但请注意，您在此处创建的代理将像任何其他代理一样被垃圾收集。 因此，您不能指望 <code>lxml.etree</code> 使用在释放其引用后再次访问此元素时实例化的同一类。 因此，您应该始终使用相应的类查找方案，该方案返回它们创建的元素的 <code>Element</code> 代理类。 <code>ElementNamespaceClassLookup</code> 通常是一个很好的匹配。</p>
+<p>您可以使用自定义 <code>Element</code> 类来快速创建 <code>XML</code> 片段：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">hale</span>(etree<span style="color: #666666">.</span>ElementBase): <span style="color: #008000; font-weight: bold">pass</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">bopp</span>(etree<span style="color: #666666">.</span>ElementBase): <span style="color: #008000; font-weight: bold">pass</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> hale( <span style="color: #BA2121">&quot;some &quot;</span>, honk(honking <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;true&#39;</span>), bopp, <span style="color: #BA2121">&quot; text&quot;</span> )
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(etree<span style="color: #666666">.</span>tostring(el, encoding<span style="color: #666666">=</span><span style="color: #BA2121">&#39;unicode&#39;</span>))
+<span style="color: #666666">&lt;</span>hale<span style="color: #666666">&gt;</span>some <span style="color: #666666">&lt;</span>honk honking<span style="color: #666666">=</span><span style="color: #BA2121">&quot;true&quot;</span><span style="color: #666666">/&gt;&lt;</span>bopp<span style="color: #666666">/&gt;</span> text<span style="color: #666666">&lt;/</span>hale<span style="color: #666666">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Generating XML with custom classes</strong></p>
+<p>Up to lxml 2.1, you could not instantiate proxy classes yourself. Only lxml.etree could do that when creating an object representation of an existing XML element. Since lxml 2.2, however, instantiating this class will simply create a new Element:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> honk(honking<span style="color: #666666">=</span><span style="color: #BA2121">&#39;true&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>tag
+<span style="color: #BA2121">&#39;honk&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> el<span style="color: #666666">.</span>honking
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>Note, however, that the proxy you create here will be garbage collected just like any other proxy. You can therefore not count on lxml.etree using the same class that you instantiated when you access this Element a second time after letting its reference go. You should therefore always use a corresponding class lookup scheme that returns your Element proxy classes for the elements that they create. The ElementNamespaceClassLookup is generally a good match.</p>
+<p>You can use custom Element classes to quickly create XML fragments:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">hale</span>(etree<span style="color: #666666">.</span>ElementBase): <span style="color: #008000; font-weight: bold">pass</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">bopp</span>(etree<span style="color: #666666">.</span>ElementBase): <span style="color: #008000; font-weight: bold">pass</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> el <span style="color: #666666">=</span> hale( <span style="color: #BA2121">&quot;some &quot;</span>, honk(honking <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;true&#39;</span>), bopp, <span style="color: #BA2121">&quot; text&quot;</span> )
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(etree<span style="color: #666666">.</span>tostring(el, encoding<span style="color: #666666">=</span><span style="color: #BA2121">&#39;unicode&#39;</span>))
+<span style="color: #666666">&lt;</span>hale<span style="color: #666666">&gt;</span>some <span style="color: #666666">&lt;</span>honk honking<span style="color: #666666">=</span><span style="color: #BA2121">&quot;true&quot;</span><span style="color: #666666">/&gt;&lt;</span>bopp<span style="color: #666666">/&gt;</span> text<span style="color: #666666">&lt;/</span>hale<span style="color: #666666">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="实现命名空间">实现命名空间<a class="headerlink" href="#实现命名空间" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>lxml 允许您从字面意义上实现名称空间。 如上所述设置命名空间类查找机制后，您可以通过调用查找的 <code>get_namespace(uri)</code> 方法构建新的元素命名空间（或检索现有的元素命名空间）：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> namespace <span style="color: #666666">=</span> lookup<span style="color: #666666">.</span>get_namespace(<span style="color: #BA2121">&#39;http://hui.de/honk&#39;</span>)
+</code></pre></div>
+<p>然后向该命名空间注册新的元素类型，例如在标签名称 <code>honk</code> 下：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> namespace[<span style="color: #BA2121">&#39;honk&#39;</span>] <span style="color: #666666">=</span> honk
+</code></pre></div>
+<p>如果您在一个模块中声明了许多 <code>Element</code> 类，并且它们的命名方式都与它们创建的元素相同，则只需在模块末尾使用 <code>namespace.update(globals())</code> 即可自动声明它们。 该实现足够智能，可以忽略不是 <code>Element</code> 类的所有内容。</p>
+<p>之后，您可以通过 lxml 的普通 API 创建和使用 XML 元素：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;honk xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;/&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(xml, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>手动创建元素时也是如此：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&#39;{http://hui.de/honk}honk&#39;</span>,
+<span style="color: #666666">...</span>                                   honking<span style="color: #666666">=</span><span style="color: #BA2121">&#39;true&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>本质上，这允许您做的是根据 <code>Elements</code> 的命名空间和标签名称为 <code>Elements</code> 提供自定义 API。</p>
+<p>一个有点相关的主题是<a href="https://lxml.de/extensions.html">扩展函数</a>，它使用类似的机制来注册 Python 函数以在 XPath 和 XSLT 中使用。</p>
+<p>在上面的设置示例中，我们仅将 <code>honk Element</code> 类与 <code>honk</code> 元素关联。 如果 XML 树在同一命名空间中包含不同的元素，它们不会采用相同的实现：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> (<span style="color: #BA2121">&#39;&lt;honk xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;bla/&gt;&lt;!--comment--&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;/honk&gt;&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(xml, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honking)
+Traceback (most recent call last):
+  <span style="color: #666666">...</span>
+<span style="color: #CB3F38; font-weight: bold">AttributeError</span>: <span style="color: #BA2121">&#39;lxml.etree._Element&#39;</span> <span style="color: #008000">object</span> has no attribute <span style="color: #BA2121">&#39;honking&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">1</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+<p>因此，您可以为每个命名空间中的每个元素名称提供一个实现，并让 <code>lxml</code> 即时选择正确的实现。 如果您希望每个命名空间有一个元素实现（忽略元素名称），或者希望除少数元素之外的大多数元素都有一个公共类，则可以通过使用空元素名称（无）注册该类来为整个命名空间指定默认实现。</p>
+<p>您可以考虑在这里遵循面向对象的方法。 如果构建元素类的类层次结构，则还可以为未提供特定元素类时使用的命名空间实现基类。 同样，您可以只传递 <code>None</code> 作为元素名称：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HonkNSElement</span>(etree<span style="color: #666666">.</span>ElementBase):
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honk</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&quot;HONK&quot;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> namespace[<span style="color: #008000; font-weight: bold">None</span>] <span style="color: #666666">=</span> HonkNSElement  <span style="color: #3D7B7B; font-style: italic"># 命名空间的默认元素</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HonkElement</span>(HonkNSElement):
+<span style="color: #666666">...</span>    <span style="color: #AA22FF">@property</span>
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honking</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;honking&#39;</span>) <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;true&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> namespace[<span style="color: #BA2121">&#39;honk&#39;</span>] <span style="color: #666666">=</span> HonkElement  <span style="color: #3D7B7B; font-style: italic"># 特定标签的元素</span>
+</code></pre></div>
+<p>现在，您可以依靠 lxml 始终返回此命名空间的元素的 <code>HonkNSElement</code> 类型或其子类的对象：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> (<span style="color: #BA2121">&#39;&lt;honk xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;bla/&gt;&lt;!--comment--&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;/honk&gt;&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(xml, parser)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">HonkElement</span><span style="color: #BA2121">&#39;&gt;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element[<span style="color: #666666">0</span>]))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">HonkNSElement</span><span style="color: #BA2121">&#39;&gt;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honk())
+HONK
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honk())
+HONK
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honking)
+Traceback (most recent call last):
+<span style="color: #666666">...</span>
+<span style="color: #CB3F38; font-weight: bold">AttributeError</span>: <span style="color: #BA2121">&#39;HonkNSElement&#39;</span> <span style="color: #008000">object</span> has no attribute <span style="color: #BA2121">&#39;honking&#39;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">1</span>]<span style="color: #666666">.</span>text)  <span style="color: #3D7B7B; font-style: italic"># 对非元素使用后备</span>
+comment
+</code></pre></div>
+<p>从 lxml 4.1 开始，使用类装饰器可以更方便地完成注册。 命名空间注册表对象可以使用名称（或 <code>None</code>）作为参数进行调用，然后可以用作装饰器。</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> honk_elements <span style="color: #666666">=</span> lookup<span style="color: #666666">.</span>get_namespace(<span style="color: #BA2121">&#39;http://hui.de/honk&#39;</span>)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF">@honk_elements</span>(<span style="color: #008000; font-weight: bold">None</span>)
+<span style="color: #666666">...</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HonkNSElement</span>(etree<span style="color: #666666">.</span>ElementBase):
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honk</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&quot;HONK&quot;</span>
+</code></pre></div>
+<p>如果类与标签同名，您也可以省略调用并使用空白装饰器：</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF">@honk_elements</span>
+<span style="color: #666666">...</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">honkel</span>(HonkNSElement):
+<span style="color: #666666">...</span>    <span style="color: #AA22FF">@property</span>
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honking</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;honking&#39;</span>) <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;true&#39;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;honkel xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;&gt;&lt;bla/&gt;&lt;!--comment--&gt;&lt;/honkel&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(xml, parser)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">honkel</span><span style="color: #BA2121">&#39;&gt;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element[<span style="color: #666666">0</span>]))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">HonkNSElement</span><span style="color: #BA2121">&#39;&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Implementing namespaces</strong></p>
+<p>lxml allows you to implement namespaces, in a rather literal sense. After setting up the namespace class lookup mechanism as described above, you can build a new element namespace (or retrieve an existing one) by calling the get_namespace(uri) method of the lookup:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> lookup <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>ElementNamespaceClassLookup()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XMLParser()
+<span style="color: #666666">&gt;&gt;&gt;</span> parser<span style="color: #666666">.</span>set_element_class_lookup(lookup)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> namespace <span style="color: #666666">=</span> lookup<span style="color: #666666">.</span>get_namespace(<span style="color: #BA2121">&#39;http://hui.de/honk&#39;</span>)
+</code></pre></div>
+<p>and then register the new element type with that namespace, say, under the tag name honk:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> namespace[<span style="color: #BA2121">&#39;honk&#39;</span>] <span style="color: #666666">=</span> honk
+</code></pre></div>
+<p>If you have many Element classes declared in one module, and they are all named like the elements they create, you can simply use namespace.update(globals()) at the end of your module to declare them automatically. The implementation is smart enough to ignore everything that is not an Element class.</p>
+<p>After this, you create and use your XML elements through the normal API of lxml:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;honk xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;/&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(xml, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>The same works when creating elements by hand:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> parser<span style="color: #666666">.</span>makeelement(<span style="color: #BA2121">&#39;{http://hui.de/honk}honk&#39;</span>,
+<span style="color: #666666">...</span>                                   honking<span style="color: #666666">=</span><span style="color: #BA2121">&#39;true&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+</code></pre></div>
+<p>Essentially, what this allows you to do, is to give Elements a custom API based on their namespace and tag name.</p>
+<p>A somewhat related topic are <a href="https://lxml.de/extensions.html">extension functions</a> which use a similar mechanism for registering Python functions for use in XPath and XSLT.</p>
+<p>In the setup example above, we associated the honk Element class only with the 'honk' element. If an XML tree contains different elements in the same namespace, they do not pick up the same implementation:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> (<span style="color: #BA2121">&#39;&lt;honk xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;bla/&gt;&lt;!--comment--&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;/honk&gt;&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>XML(xml, parser)
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honking)
+Traceback (most recent call last):
+  <span style="color: #666666">...</span>
+<span style="color: #CB3F38; font-weight: bold">AttributeError</span>: <span style="color: #BA2121">&#39;lxml.etree._Element&#39;</span> <span style="color: #008000">object</span> has no attribute <span style="color: #BA2121">&#39;honking&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">1</span>]<span style="color: #666666">.</span>text)
+comment
+</code></pre></div>
+<p>You can therefore provide one implementation per element name in each namespace and have lxml select the right one on the fly. If you want one element implementation per namespace (ignoring the element name) or prefer having a common class for most elements except a few, you can specify a default implementation for an entire namespace by registering that class with the empty element name (None).</p>
+<p>You may consider following an object oriented approach here. If you build a class hierarchy of element classes, you can also implement a base class for a namespace that is used if no specific element class is provided. Again, you can just pass None as an element name:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HonkNSElement</span>(etree<span style="color: #666666">.</span>ElementBase):
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honk</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&quot;HONK&quot;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> namespace[<span style="color: #008000; font-weight: bold">None</span>] <span style="color: #666666">=</span> HonkNSElement  <span style="color: #3D7B7B; font-style: italic"># default Element for namespace</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HonkElement</span>(HonkNSElement):
+<span style="color: #666666">...</span>    <span style="color: #AA22FF">@property</span>
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honking</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;honking&#39;</span>) <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;true&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> namespace[<span style="color: #BA2121">&#39;honk&#39;</span>] <span style="color: #666666">=</span> HonkElement  <span style="color: #3D7B7B; font-style: italic"># Element for specific tag</span>
+</code></pre></div>
+<p>Now you can rely on lxml to always return objects of type HonkNSElement or its subclasses for elements of this namespace:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> (<span style="color: #BA2121">&#39;&lt;honk xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;bla/&gt;&lt;!--comment--&gt;&#39;</span>
+<span style="color: #666666">...</span>        <span style="color: #BA2121">&#39;&lt;/honk&gt;&#39;</span>)
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(xml, parser)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">HonkElement</span><span style="color: #BA2121">&#39;&gt;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element[<span style="color: #666666">0</span>]))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">HonkNSElement</span><span style="color: #BA2121">&#39;&gt;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honking)
+<span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element<span style="color: #666666">.</span>honk())
+HONK
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honk())
+HONK
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">0</span>]<span style="color: #666666">.</span>honking)
+Traceback (most recent call last):
+<span style="color: #666666">...</span>
+<span style="color: #CB3F38; font-weight: bold">AttributeError</span>: <span style="color: #BA2121">&#39;HonkNSElement&#39;</span> <span style="color: #008000">object</span> has no attribute <span style="color: #BA2121">&#39;honking&#39;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(honk_element[<span style="color: #666666">1</span>]<span style="color: #666666">.</span>text)  <span style="color: #3D7B7B; font-style: italic"># uses fallback for non-elements</span>
+comment
+</code></pre></div>
+<p>Since lxml 4.1, the registration is more conveniently done with class decorators. The namespace registry object is callable with a name (or None) as argument and can then be used as decorator.</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> honk_elements <span style="color: #666666">=</span> lookup<span style="color: #666666">.</span>get_namespace(<span style="color: #BA2121">&#39;http://hui.de/honk&#39;</span>)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF">@honk_elements</span>(<span style="color: #008000; font-weight: bold">None</span>)
+<span style="color: #666666">...</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">HonkNSElement</span>(etree<span style="color: #666666">.</span>ElementBase):
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honk</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&quot;HONK&quot;</span>
+</code></pre></div>
+<p>If the class has the same name as the tag, you can also leave out the call and use the blank decorator instead:</p>
+<div class="language-python highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF">@honk_elements</span>
+<span style="color: #666666">...</span> <span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">honkel</span>(HonkNSElement):
+<span style="color: #666666">...</span>    <span style="color: #AA22FF">@property</span>
+<span style="color: #666666">...</span>    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">honking</span>(<span style="color: #008000">self</span>):
+<span style="color: #666666">...</span>       <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;honking&#39;</span>) <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;true&#39;</span>
+
+<span style="color: #666666">&gt;&gt;&gt;</span> xml <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&lt;honkel xmlns=&quot;http://hui.de/honk&quot; honking=&quot;true&quot;&gt;&lt;bla/&gt;&lt;!--comment--&gt;&lt;/honkel&gt;&#39;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> honk_element <span style="color: #666666">=</span> etree<span style="color: #666666">.</span>fromstring(xml, parser)
+
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">honkel</span><span style="color: #BA2121">&#39;&gt;</span>
+<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">print</span>(<span style="color: #008000">type</span>(honk_element[<span style="color: #666666">0</span>]))
+<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">HonkNSElement</span><span style="color: #BA2121">&#39;&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

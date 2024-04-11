@@ -1,0 +1,4223 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../officedocumentrelationships/">
+      
+      
+        <link rel="next" href="../../chapter-23/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>22.9 Shared Simple Types - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#229-shared-simple-types" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              22.9 Shared Simple Types
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_23" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_23_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_23">
+            <span class="md-nav__icon md-icon"></span>
+            22. Shared MLs 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.1 Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extendedproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.2 扩展属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.3 自定义属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../varianttypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.4 变体类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customxmldata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.5 自定义 XML Data 属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.6 参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additionalcharacteri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.7 附加特性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../officedocumentrelationships/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.8 Office 文档关系
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    22.9 Shared Simple Types
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    22.9 Shared Simple Types
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2291-目录" class="md-nav__link">
+    22.9.1 目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2292-简单类型" class="md-nav__link">
+    22.9.2 简单类型
+  </a>
+  
+    <nav class="md-nav" aria-label="22.9.2 简单类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22921-st_calendartype-日历类型" class="md-nav__link">
+    22.9.2.1 ST_CalendarType (日历类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22922-st_conformanceclass-文档一致性等级值" class="md-nav__link">
+    22.9.2.2 ST_ConformanceClass (文档一致性等级值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22923-st_fixedpercentage-带符号的固定百分比值" class="md-nav__link">
+    22.9.2.3 ST_FixedPercentage (带符号的固定百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22924-st_guid-128-bit-guid" class="md-nav__link">
+    22.9.2.4 ST_Guid (128-Bit GUID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22925-st_hexcolorrgb-十六进制颜色值" class="md-nav__link">
+    22.9.2.5 ST_HexColorRGB (十六进制颜色值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22926-st_lang-语言参考" class="md-nav__link">
+    22.9.2.6 ST_Lang (语言参考)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22927-st_onoff-开关值" class="md-nav__link">
+    22.9.2.7 ST_OnOff (开/关值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22928-st_panose-panose-1整数" class="md-nav__link">
+    22.9.2.8 ST_Panose (Panose-1整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22929-st_percentage-带符号的百分比值" class="md-nav__link">
+    22.9.2.9 ST_Percentage (带符号的百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229210-st_positivefixedpercentage-带符号的正固定百分比值" class="md-nav__link">
+    22.9.2.10 ST_PositiveFixedPercentage (带符号的正固定百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229211-st_positivepercentage-带符号的正百分比值" class="md-nav__link">
+    22.9.2.11 ST_PositivePercentage (带符号的正百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229212-st_positiveuniversalmeasure-积极的普遍测量" class="md-nav__link">
+    22.9.2.12 ST_PositiveUniversalMeasure (积极的普遍测量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229213-st_string-字符串" class="md-nav__link">
+    22.9.2.13 ST_String (字符串)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229214-st_twipsmeasure-以二十分之一点为单位的测量" class="md-nav__link">
+    22.9.2.14 ST_TwipsMeasure (以二十分之一点为单位的测量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229215-st_universalmeasure-通用测量" class="md-nav__link">
+    22.9.2.15 ST_UniversalMeasure (通用测量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229216-st_unsigneddecimalnumber-无符号十进制数值" class="md-nav__link">
+    22.9.2.16 ST_UnsignedDecimalNumber (无符号十进制数值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229217-st_verticalalignrun-垂直定位位置" class="md-nav__link">
+    22.9.2.17 ST_VerticalAlignRun (垂直定位位置)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229218-st_xalign-水平对齐位置" class="md-nav__link">
+    22.9.2.18 ST_XAlign (水平对齐位置)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229219-st_xstring-转义字符串" class="md-nav__link">
+    22.9.2.19 ST_Xstring (转义字符串)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229220-st_yalign-垂直对齐位置" class="md-nav__link">
+    22.9.2.20 ST_YAlign (垂直对齐位置)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229221-st_xmlname-xml-名称" class="md-nav__link">
+    22.9.2.21 ST_XmlName (XML 名称)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2291-目录" class="md-nav__link">
+    22.9.1 目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2292-简单类型" class="md-nav__link">
+    22.9.2 简单类型
+  </a>
+  
+    <nav class="md-nav" aria-label="22.9.2 简单类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22921-st_calendartype-日历类型" class="md-nav__link">
+    22.9.2.1 ST_CalendarType (日历类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22922-st_conformanceclass-文档一致性等级值" class="md-nav__link">
+    22.9.2.2 ST_ConformanceClass (文档一致性等级值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22923-st_fixedpercentage-带符号的固定百分比值" class="md-nav__link">
+    22.9.2.3 ST_FixedPercentage (带符号的固定百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22924-st_guid-128-bit-guid" class="md-nav__link">
+    22.9.2.4 ST_Guid (128-Bit GUID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22925-st_hexcolorrgb-十六进制颜色值" class="md-nav__link">
+    22.9.2.5 ST_HexColorRGB (十六进制颜色值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22926-st_lang-语言参考" class="md-nav__link">
+    22.9.2.6 ST_Lang (语言参考)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22927-st_onoff-开关值" class="md-nav__link">
+    22.9.2.7 ST_OnOff (开/关值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22928-st_panose-panose-1整数" class="md-nav__link">
+    22.9.2.8 ST_Panose (Panose-1整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22929-st_percentage-带符号的百分比值" class="md-nav__link">
+    22.9.2.9 ST_Percentage (带符号的百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229210-st_positivefixedpercentage-带符号的正固定百分比值" class="md-nav__link">
+    22.9.2.10 ST_PositiveFixedPercentage (带符号的正固定百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229211-st_positivepercentage-带符号的正百分比值" class="md-nav__link">
+    22.9.2.11 ST_PositivePercentage (带符号的正百分比值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229212-st_positiveuniversalmeasure-积极的普遍测量" class="md-nav__link">
+    22.9.2.12 ST_PositiveUniversalMeasure (积极的普遍测量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229213-st_string-字符串" class="md-nav__link">
+    22.9.2.13 ST_String (字符串)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229214-st_twipsmeasure-以二十分之一点为单位的测量" class="md-nav__link">
+    22.9.2.14 ST_TwipsMeasure (以二十分之一点为单位的测量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229215-st_universalmeasure-通用测量" class="md-nav__link">
+    22.9.2.15 ST_UniversalMeasure (通用测量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229216-st_unsigneddecimalnumber-无符号十进制数值" class="md-nav__link">
+    22.9.2.16 ST_UnsignedDecimalNumber (无符号十进制数值)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229217-st_verticalalignrun-垂直定位位置" class="md-nav__link">
+    22.9.2.17 ST_VerticalAlignRun (垂直定位位置)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229218-st_xalign-水平对齐位置" class="md-nav__link">
+    22.9.2.18 ST_XAlign (水平对齐位置)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229219-st_xstring-转义字符串" class="md-nav__link">
+    22.9.2.19 ST_Xstring (转义字符串)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229220-st_yalign-垂直对齐位置" class="md-nav__link">
+    22.9.2.20 ST_YAlign (垂直对齐位置)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#229221-st_xmlname-xml-名称" class="md-nav__link">
+    22.9.2.21 ST_XmlName (XML 名称)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="229-shared-simple-types">22.9 Shared Simple Types<a class="headerlink" href="#229-shared-simple-types" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下简单类型代表整个 Office Open XML 中使用的常见值格式，并且已进行集中处理以确保其用法保持一致。</p>
+</div>
+<div class="tabbed-block">
+<p>The following simple types represent common value formats used throughout Office Open XML, and have been centralized in order to ensure their usage remains consistent.</p>
+</div>
+</div>
+</div>
+<h2 id="2291-目录">22.9.1 目录<a class="headerlink" href="#2291-目录" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><a href="#2292-简单类型">22.9.2 简单类型</a><ul>
+<li><a href="#22921-st_calendartype-日历类型">22.9.2.1 ST_CalendarType (日历类型)</a></li>
+<li><a href="#22922-st_conformanceclass-文档一致性等级值">22.9.2.2 ST_ConformanceClass (文档一致性等级值)</a></li>
+<li><a href="#22923-st_fixedpercentage-带符号的固定百分比值">22.9.2.3 ST_FixedPercentage (带符号的固定百分比值)</a></li>
+<li><a href="#22924-st_guid-128-bit-guid">22.9.2.4 ST_Guid (128-Bit GUID)</a></li>
+<li><a href="#22925-st_hexcolorrgb-十六进制颜色值">22.9.2.5 ST_HexColorRGB (十六进制颜色值)</a></li>
+<li><a href="#22926-st_lang-语言参考">22.9.2.6 ST_Lang (语言参考)</a></li>
+<li><a href="#22927-st_onoff-开关值">22.9.2.7 ST_OnOff (开/关值)</a></li>
+<li><a href="#22928-st_panose-panose-1整数">22.9.2.8 ST_Panose (Panose-1整数)</a></li>
+<li><a href="#22929-st_percentage-带符号的百分比值">22.9.2.9 ST_Percentage (带符号的百分比值)</a></li>
+<li><a href="#229210-st_positivefixedpercentage-带符号的正固定百分比值">22.9.2.10 ST_PositiveFixedPercentage (带符号的正固定百分比值)</a></li>
+<li><a href="#229211-st_positivepercentage-带符号的正百分比值">22.9.2.11 ST_PositivePercentage (带符号的正百分比值)</a></li>
+<li><a href="#229212-st_positiveuniversalmeasure-积极的普遍测量">22.9.2.12 ST_PositiveUniversalMeasure (积极的普遍测量)</a></li>
+<li><a href="#229213-st_string-字符串">22.9.2.13 ST_String (字符串)</a></li>
+<li><a href="#229214-st_twipsmeasure-以二十分之一点为单位的测量">22.9.2.14 ST_TwipsMeasure (以二十分之一点为单位的测量)</a></li>
+<li><a href="#229215-st_universalmeasure-通用测量">22.9.2.15 ST_UniversalMeasure (通用测量)</a></li>
+<li><a href="#229216-st_unsigneddecimalnumber-无符号十进制数值">22.9.2.16 ST_UnsignedDecimalNumber (无符号十进制数值)</a></li>
+<li><a href="#229217-st_verticalalignrun-垂直定位位置">22.9.2.17 ST_VerticalAlignRun (垂直定位位置)</a></li>
+<li><a href="#229218-st_xalign-水平对齐位置">22.9.2.18 ST_XAlign (水平对齐位置)</a></li>
+<li><a href="#229219-st_xstring-转义字符串">22.9.2.19 ST_Xstring (转义字符串)</a></li>
+<li><a href="#229220-st_yalign-垂直对齐位置">22.9.2.20 ST_YAlign (垂直对齐位置)</a></li>
+<li><a href="#229221-st_xmlname-xml-名称">22.9.2.21 ST_XmlName (XML 名称)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Table of Contents</strong></p>
+<p><strong>This subclause is informative.</strong></p>
+<ul>
+<li>22.9.2 Simple Types<ul>
+<li>22.9.2.1 ST_CalendarType (Calendar Types)</li>
+<li>22.9.2.2 ST_ConformanceClass (Document Conformance Class Value)</li>
+<li>22.9.2.3 ST_FixedPercentage (Fixed Percentage Value with Sign)</li>
+<li>22.9.2.4 ST_Guid (128-Bit GUID)</li>
+<li>22.9.2.5 ST_HexColorRGB (Hexadecimal Color Value)</li>
+<li>22.9.2.6 ST_Lang (Language Reference)</li>
+<li>22.9.2.7 ST_OnOff (On/Off Value)</li>
+<li>22.9.2.8 ST_Panose (Panose-1 Number)</li>
+<li>22.9.2.9 ST_Percentage (Percentage Value with Sign)</li>
+<li>22.9.2.10 ST_PositiveFixedPercentage (Positive Fixed Percentage Value with Sign)</li>
+<li>22.9.2.11 ST_PositivePercentage (Positive Percentage Value with Sign)</li>
+<li>22.9.2.12 ST_PositiveUniversalMeasure (Positive Universal Measurement)</li>
+<li>22.9.2.13 ST_String (String)</li>
+<li>22.9.2.14 ST_TwipsMeasure (Measurement in Twentieths of a Point)</li>
+<li>22.9.2.15 ST_UniversalMeasure (Universal Measurement)</li>
+<li>22.9.2.16 ST_UnsignedDecimalNumber (Unsigned Decimal Number Value)</li>
+<li>22.9.2.17 ST_VerticalAlignRun (Vertical Positioning Location)</li>
+<li>22.9.2.18 ST_XAlign (Horizontal Alignment Location)</li>
+<li>22.9.2.19 ST_Xstring (Escaped String)</li>
+<li>22.9.2.20 ST_YAlign (Vertical Alignment Location)</li>
+<li>22.9.2.21 ST_XmlName (XML Name)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="2292-简单类型">22.9.2 简单类型<a class="headerlink" href="#2292-简单类型" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这是专用于共享简单类型的简单类型的完整列表。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Simple Types</strong></p>
+<p>This is the complete list of simple types dedicated to Shared Simple Types.</p>
+</div>
+</div>
+</div>
+<h3 id="22921-st_calendartype-日历类型">22.9.2.1 ST_CalendarType (日历类型)<a class="headerlink" href="#22921-st_calendartype-日历类型" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定可在 Office Open XML 文档上下文中使用的可能的日历类型。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下结构化文档标签属性：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sdtPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:date</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:fullDate=</span><span style="color: #BA2121">&quot;2006-01-01T06:30:00Z&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:calendar</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;gregorian&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:date&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:sdtPr&gt;</span>
+</code></pre></div>
+<p>Calendar 元素指定可以在文档中显示的日历的日历类型必须是公历格式（gregorian）。</p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<details class="abstract">
+<summary>枚举</summary>
+<dl>
+<dt><strong>gregorian</strong> (公历/Gregorian)</dt>
+<dd>
+<p>指定应使用 ISO 8601 中定义的公历。 该日历应本地化为适当的语言</p>
+</dd>
+<dt><strong>gregorianArabic</strong> (公历阿拉伯历/Gregorian Arabic Calendar) </dt>
+<dd>
+<p>指定应使用 ISO 8601 中定义的公历。</p>
+<p>该日历的值应以阿拉伯语显示。</p>
+</dd>
+<dt><strong>gregorianMeFrench</strong> (公历中东法国日历/Gregorian Middle East French Calendar)</dt>
+<dd>
+<p>指定应使用 ISO 8601 中定义的公历。</p>
+<p>The values for this calendar should be presented in Middle East French.</p>
+</dd>
+<dt><strong>gregorianUs</strong> (公历英语日历/Gregorian English Calendar)</dt>
+<dd>
+<p>指定应使用 ISO 8601 中定义的公历。</p>
+<p>该日历的值应以英语显示。</p>
+</dd>
+<dt><strong>gregorianXlitEnglish</strong> (公历音译英语/Gregorian Transliterated English)</dt>
+<dd>
+<p>指定应使用 ISO 8601 中定义的公历。</p>
+<p>该日历的值应该是相应阿拉伯字符中英文字符串的表示形式（公历英文的阿拉伯音译）。</p>
+</dd>
+<dt><strong>gregorianXlitFrench</strong> (格里高利音译法文/Gregorian Transliterated French) </dt>
+<dd>
+<p>指定应使用 ISO 8601 中定义的公历。</p>
+<p>此日历的值应该是相应阿拉伯字符中法语字符串的表示形式（公历法语的阿拉伯音译）。</p>
+</dd>
+<dt><strong>hebrew</strong> (希伯来语/Hebrew)</dt>
+<dd>
+<p>指定应使用希伯来阴历，如逾越节 [Har'El, Zvi] 的高斯公式和口述律法完整重述 (Mishneh Torah) 所描述的那样。</p>
+</dd>
+<dt><strong>hijri</strong> (回历/Hijri) </dt>
+<dd>
+<p>规定应使用沙特阿拉伯王国、伊斯兰事务部、捐赠、宣教和指南所规定的回历农历。</p>
+</dd>
+<dt><strong>japan</strong> (日本天皇时代/Japanese Emperor Era)</dt>
+<dd>
+<p>指定应使用日本工业标准 JIS X 0301 中描述的日本天皇纪元日历。</p>
+</dd>
+<dt><strong>korea</strong> (朝鲜檀君时代/Korean Tangun Era)</dt>
+<dd>
+<p>规定应使用韩国第 4 号法律法令所述的韩国檀君纪元日历。</p>
+</dd>
+<dt><strong>none</strong> (无日历类型/No Calendar Type) </dt>
+<dd>
+<p>指定不应使用日历。</p>
+</dd>
+<dt><strong>saka</strong> (坂艾拉/Saka Era)</dt>
+<dd>
+<p>指定应使用印度日历改革委员会所描述的萨卡时代日历，作为印度星历和航海年历的一部分。</p>
+</dd>
+<dt><strong>taiwan</strong> (台湾/Taiwan)</dt>
+<dd>
+<p>指定应使用中国国家标准 CNS 7648 定义的台湾历。</p>
+</dd>
+<dt><strong>thai</strong> (泰国/Thai) </dt>
+<dd>
+<p>指定由 H.M. 皇家法令定义的泰历。 国王 Vajiravudh（拉玛六世）在皇家公报 B.E. 2456（公元 1913 年）和首相 Phibunsongkhram（公元 1941 年）的法令中，以公历 1 月 1 日开始年份，并将零年映射到公历公元前 543 年，应使用 。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: 此简单类型的内容模型 (ST_CalendarType) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_CalendarType (Calendar Types)</strong></p>
+<p>This simple type specifies the possible types of calendars which can be used within the context of an Office Open XML document.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following structured document tag properties:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sdtPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:date</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:fullDate=</span><span style="color: #BA2121">&quot;2006-01-01T06:30:00Z&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:calendar</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;gregorian&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:date&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:sdtPr&gt;</span>
+</code></pre></div>
+<p>The calendar element specifies that the calendar type for a calendar which can be displayed in the document must be the Gregorian calendar format (gregorian).</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<details class="abstract">
+<summary>Enumeration</summary>
+<dl>
+<dt><strong>gregorian</strong> (Gregorian)</dt>
+<dd>
+<p>Specifies that the Gregorian calendar, as defined in ISO 8601, shall be used. This calendar should be localized into the appropriate language</p>
+</dd>
+<dt><strong>gregorianArabic</strong> (Gregorian Arabic Calendar) </dt>
+<dd>
+<p>Specifies that the Gregorian calendar, as defined in ISO 8601, shall be used.</p>
+<p>The values for this calendar should be presented in Arabic.</p>
+</dd>
+<dt><strong>gregorianMeFrench</strong> (Gregorian Middle East French Calendar)</dt>
+<dd>
+<p>Specifies that the Gregorian calendar, as defined in ISO 8601, shall be used.</p>
+<p>The values for this calendar should be presented in Middle East French.</p>
+</dd>
+<dt><strong>gregorianUs</strong> (Gregorian English Calendar)</dt>
+<dd>
+<p>Specifies that the Gregorian calendar, as defined in ISO 8601, shall be used.</p>
+<p>The values for this calendar should be presented in English.</p>
+</dd>
+<dt><strong>gregorianXlitEnglish</strong> (Gregorian Transliterated English)</dt>
+<dd>
+<p>Specifies that the Gregorian calendar, as defined in ISO 8601, shall be used.</p>
+<p>The values for this calendar should be the representation of the English strings in the corresponding Arabic characters (the Arabic transliteration of the English for the Gregorian calendar).</p>
+</dd>
+<dt>gregorianXlitFrench (Gregorian Transliterated French) </dt>
+<dd>
+<p>Specifies that the Gregorian calendar, as defined in ISO 8601, shall be used.</p>
+<p>The values for this calendar should be the representation of the French strings in the corresponding Arabic characters (the Arabic transliteration of the French for the Gregorian calendar).</p>
+</dd>
+<dt>hebrew (Hebrew)</dt>
+<dd>
+<p>Specifies that the Hebrew lunar calendar, as described by the Gauss formula for Passover [Har'El, Zvi] and The Complete Restatement of Oral Law (Mishneh Torah), shall be used.</p>
+</dd>
+<dt>hijri (Hijri) </dt>
+<dd>
+<p>Specifies that the Hijri lunar calendar, as described by the Kingdom of Saudi Arabia, Ministry of Islamic Affairs, Endowments, Da‘wah and Guidance, shall be used.</p>
+</dd>
+<dt>japan (Japanese Emperor Era)</dt>
+<dd>
+<p>Specifies that the Japanese Emperor Era calendar, as described by Japanese Industrial Standard JIS X 0301, shall be used.</p>
+</dd>
+<dt>korea (Korean Tangun Era)</dt>
+<dd>
+<p>Specifies that the Korean Tangun Era calendar, as described by Korean Law Enactment No. 4, shall be used.</p>
+</dd>
+<dt>none (No Calendar Type) </dt>
+<dd>
+<p>Specifies that no calendar should be used.</p>
+</dd>
+<dt>saka (Saka Era)</dt>
+<dd>
+<p>Specifies that the Saka Era calendar, as described by the Calendar Reform Committee of India, as part of the Indian Ephemeris and Nautical Almanac, shall be used.</p>
+</dd>
+<dt>taiwan (Taiwan)</dt>
+<dd>
+<p>Specifies that the Taiwanese calendar, as defined by the Chinese National Standard CNS 7648, shall be used.</p>
+</dd>
+<dt>thai (Thai) </dt>
+<dd>
+<p>Specifies that the Thai calendar, as defined by the Royal Decree of H.M. King Vajiravudh (Rama VI) in Royal Gazette B. E. 2456 (1913 A.D.) and by the decree of Prime Minister Phibunsongkhram (1941 A.D.) to start the year on the Gregorian January 1 and to map year zero to Gregorian year 543 B.C., shall be used.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_CalendarType) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22922-st_conformanceclass-文档一致性等级值">22.9.2.2 ST_ConformanceClass (文档一致性等级值)<a class="headerlink" href="#22922-st_conformanceclass-文档一致性等级值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定特定 Office Open XML 文档所遵循的一致性类别.</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 SpreadsheetML Workbook 部分标记：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;workbook</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #687822">conformance=</span><span style="color: #BA2121">&quot;transitional&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/workbook&gt;</span>
+</code></pre></div>
+<p>该SpreadsheetML 文档的一致性属性值为transitional，因此它符合SML Transitional 一致性类。</p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<details class="abstract">
+<summary>枚举</summary>
+<dl>
+<dt><strong>strict</strong> (Office Open XML Strict) </dt>
+<dd>
+<p>指定文档符合 Office Open XML 严格(Strict) 模式。</p>
+</dd>
+<dt><strong>transitional</strong> (Office Open XML Transitional)</dt>
+<dd>
+<p>指定文档符合 Office Open XML 过渡(Transitional) 模式。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: 此简单类型的内容模型 (ST_ConformanceClass) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_ConformanceClass (Document Conformance Class Value)</strong></p>
+<p>This simple type specifies the conformance class to which a particular Office Open XML document conforms.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following SpreadsheetML Workbook part markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;workbook</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #687822">conformance=</span><span style="color: #BA2121">&quot;transitional&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/workbook&gt;</span>
+</code></pre></div>
+<p>This SpreadsheetML document has a conformance attribute value of transitional, therefore it conforms to the SML Transitional conformance class.</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<details class="abstract">
+<summary>Enumeration</summary>
+<dl>
+<dt><strong>strict</strong> (Office Open XML Strict) </dt>
+<dd>
+<p>Specifies that the document conforms to Office Open XML Strict.</p>
+</dd>
+<dt><strong>transitional</strong> (Office Open XML Transitional)</dt>
+<dd>
+<p>Specifies that the document conforms to Office Open XML Transitional.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_ConformanceClass) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22923-st_fixedpercentage-带符号的固定百分比值">22.9.2.3 ST_FixedPercentage (带符号的固定百分比值)<a class="headerlink" href="#22923-st_fixedpercentage-带符号的固定百分比值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容将包含从 -100% 到 100%（包括 100%）的百分比测量值，包括尾随百分号 (U+0025)。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>属性的值是关联表格单元格的宽度。</p>
+</details>
+<p>此简单类型的内容是 ST_Percentage 数据类型的限制 (§22.9.2.9).</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>-?((100)|([0-9][0-9]?))(\.[0-9][0-9]?)?%</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_FixedPercentage) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_FixedPercentage (Fixed Percentage Value with Sign)</strong></p>
+<p>This simple type specifies that its contents will contain a percentage measurement from -100% up to and including 100%, including a trailing percent sign (U+0025).</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>The value of the w attribute is the width of the associated table cell. </p>
+</details>
+<p>This simple type's contents are a restriction of the ST_Percentage datatype (§22.9.2.9).</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>-?((100)|([0-9][0-9]?))(\.[0-9][0-9]?)?%</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_FixedPercentage) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22924-st_guid-128-bit-guid">22.9.2.4 ST_Guid (128-Bit GUID)<a class="headerlink" href="#22924-st_guid-128-bit-guid" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其值应为 128 位全局唯一标识符 (GUID) 值.</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 WordprocessingML 片段，了解单个术语表文档条目的属性:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:docPartPr&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;w:guid</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;{00000000-5BD2-4BC8-9F70-7020E1357FB2}&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:docPartPr&gt;</span>
+</code></pre></div>
+<p>guid 元素指定与父条目关联的唯一标识符应为{00000000-5BD2-4BC8-9F70-7020E1357FB2}。 应用程序可以根据需要使用该值，例如，唯一地标识一个部件，无论其名称如何。</p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构令牌数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>\{[0-9A-F]{8}-[0-9AF]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_Guid) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_Guid (128-Bit GUID)</strong></p>
+<p>This simple type specifies that its values shall be a 128-bit globally unique identifier (GUID) value.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment for the properties of a single glossary document entry</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:docPartPr&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&lt;w:guid</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;{00000000-5BD2-4BC8-9F70-7020E1357FB2}&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:docPartPr&gt;</span>
+</code></pre></div>
+<p>The guid element specifies that the unique identifier associated with the parent entry shall be {00000000- 5BD2-4BC8-9F70-7020E1357FB2}. This value can be used as needed by an application, for example, to uniquely identify a part regardless of its name</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema token datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>\{[0-9A-F]{8}-[0-9AF]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}\}</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Guid) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22925-st_hexcolorrgb-十六进制颜色值">22.9.2.5 ST_HexColorRGB (十六进制颜色值)<a class="headerlink" href="#22925-st_hexcolorrgb-十六进制颜色值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容应包含 RRGGBB 十六进制格式的颜色值，使用六个十六进制数字指定。 每个红色、绿色和蓝色颜色值（从 0 到 255）都编码为两个十六进制数字。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑如下定义的颜色：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Red: 122
+Green: 23
+Blue: 209
+</code></pre></div>
+<p>生成的 RRGGBB 值将是 7A17D1，因为每种颜色都会转换为其十六进制等效值。</p>
+</details>
+<p>此简单类型的内容是 W3C XML Schema hexBinary 数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>这个简单类型的内容的长度正好是 6 个十六进制数字。</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_HexColorRGB) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_HexColorRGB (Hexadecimal Color Value)</strong></p>
+<p>This simple type specifies that its contents shall contain a color value in RRGGBB hexadecimal format, specified using six hexadecimal digits. Each of the red, green, and blue color values, from 0-255, is encoded as two hexadecimal digits.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider a color defined as follows:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>Red: 122
+Green: 23
+Blue: 209
+</code></pre></div>
+<p>The resulting RRGGBB value would be 7A17D1, as each color is transformed into its hexadecimal equivalent.</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema hexBinary datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents have a length of exactly 6 hexadecimal digit(s).</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_HexColorRGB) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22926-st_lang-语言参考">22.9.2.6 ST_Lang (语言参考)<a class="headerlink" href="#22926-st_lang-语言参考" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容包含 RFC 4646/BCP 47 定义的语言标识符。</p>
+<p>该语言的内容是根据父 XML 元素的上下文进行解释的。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑定义如下的语言代码：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:lang</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;en-CA&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>因此，该语言被指定为英语 (en) 和加拿大 (CA)，从而使用英语（加拿大）语言设置.</p>
+</details>
+<p>此简单类型的内容是 W3C XML Schema 字符串数据类型的限制</p>
+<p>[Note: 此简单类型的内容模型 (ST_Lang) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_Lang (Language Reference)</strong></p>
+<p>This simple type specifies that its contents contains a language identifier as defined by RFC 4646/BCP 47.</p>
+<p>The contents of this language are interpreted based on the context of the parent XML element.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider a language code defined as follows :</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:lang</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;en-CA&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>This language is therefore specified as English (en) and Canada (CA), resulting in use of the English (Canada) language setting.</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype</p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Lang) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22927-st_onoff-开关值">22.9.2.7 ST_OnOff (开/关值)<a class="headerlink" href="#22927-st_onoff-开关值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型为 WordprocessingML 文档中定义的任何二进制（true 或 false）属性指定一组值。</p>
+<p>值 1 或 true 指定应打开该属性。 这是该属性的默认值，当父元素存在时隐含该值，但该属性被省略。</p>
+<p>值 0 或 false 指定应显式关闭该属性。</p>
+<p>此简单类型的内容是 W3C XML Schema 布尔数据类型的限制</p>
+<p>[Note: 此简单类型的内容模型 (ST_OnOff) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_OnOff (On/Off Value)</strong></p>
+<p>This simple type specifies a set of values for any binary (true or false) property defined in a WordprocessingML document.</p>
+<p>A value of 1 or true specifies that the property shall be turned on. This is the default value for this attribute, and is implied when the parent element is present, but this attribute is omitted. </p>
+<p>A value of 0 or false specifies that the property shall be explicitly turned off.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema boolean datatype</p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_OnOff) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22928-st_panose-panose-1整数">22.9.2.8 ST_Panose (Panose-1整数)<a class="headerlink" href="#22928-st_panose-panose-1整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定 Panose-1 字体分类。 该值用作一条信息，以在所需字体不可用时指导选择类似的替代字体。</p>
+<p>[Guidance: ISO/IEC 14496-22 引用 1997 年的 Panose 规范，但 ECMA-376 的某些实现可能遵循 Panose 规范的较旧前体版本。 两个版本之间的某些值不兼容，这些差异的处理是实现定义的。</p>
+<p>为旧版本设计的 Panose-1 值应匹配以下 3 个正则表达式之一：</p>
+<ul>
+<li><code>\s*(00\s*){10}\s*</code></li>
+<li><code>\s*(01\s*){10}\s*</code></li>
+<li><code>\s*0[2-5]\s*0[0-9A-Fa-f]\s*0[0-9ABab]\s*0[0-9]\s*0[0-9]\s*0[0-9Aa]\s*0[0-9ABab]\s*0[0-9A-Fa-f]\s*0[0-9A-Da-d]\s*0[0-7]\s*</code></li>
+</ul>
+<p>为 ISO/IEC 14496-22 设计的 Panose-1 值应与以下 6 个正则表达式之一匹配：</p>
+<ul>
+<li><code>\s*(00\s*){10}\s*</code></li>
+<li><code>\s*(01\s*){10}\s*</code></li>
+<li><code>\s*02\s*0[0-9A-Fa-f]\s*0[0-9ABab]\s*0[0-9]\s*0[0-9]\s*0[0-9Aa]\s*0[0-9ABab]\s*0[0-9A-Fa-f]\s*0[0-9A-Da-d]\s*0[0-7]\s*</code></li>
+<li><code>\s*03\s*0[0-9]\s*0[0-9ABab]\s*0[0-3]\s*0[0-6]\s*0[0-9]\s*0[0-9Aa]\s*0[0-9A-Dad]\s*0[0-9A-Da-d]\s*0[0-6]\s*</code></li>
+<li><code>\s*04\s*0[0-9A-Ca-c]\s*0[0-9ABab]\s*0[0-9]\s*0[0-9A-Da-d]\s*(0[0-9A-Faf]|10)\s*0[0-7]\s*0[0-8]\s*0[0-9A-Fa-f]\s*0[0-5]\s*</code></li>
+<li><code>\s*05\s*0[0-9A-Ca-c]\s*01\s*0[0-3]\s*01\s*0[0-9]\s*0[0-9]\s*0[0-9]\s*0[0-9]\s*0[0-9]\s*</code></li>
+</ul>
+<p>end guidance]</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑为单一字体存储的以下信息：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:font</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:name=</span><span style="color: #BA2121">&quot;Times New Roman&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:panose1</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;02020603050405020304&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:font&gt;</span>
+</code></pre></div>
+<p>panose1 元素通过其 val 属性值 02020603050405020304 指定其 Panose-1 编号。</p>
+</details>
+<p>此简单类型的内容是 W3C XML Schema hexBinary 数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>这个简单类型的内容的长度正好是 20 个十六进制数字。</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_Panose) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_Panose (Panose-1 Number)</strong></p>
+<p>This simple type specifies a Panose-1 font classification. This value is used as one piece of information to guide selection of a similar alternate font if the desired font is unavailable.</p>
+<p>[Guidance: ISO/IEC 14496-22 refers to the Panose specification dated 1997, but some implementations of ECMA-376 may follow an older precursor version of the Panose specification. Some values between the two versions are incompatible and the handling of these differences is implementation-defined.</p>
+<p>Panose-1 values designed for the older version should match one of the following 3 regular expressions:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>\s*(00\s*){10}\s*
+\s*(01\s*){10}\s*
+\s*0[2-5]\s*0[0-9A-Fa-f]\s*0[0-9ABab]\s*0[0-9]\s*0[0-9]\s*0[0-9Aa]\s*0[0-9ABab]\s*0[0-9A-Fa-f]\s*0[0-9A-Da-d]\s*0[0-7]\s*
+</code></pre></div>
+<p>Panose-1 values designed for ISO/IEC 14496-22 should match one of the following 6 regular expressions:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>\s*(00\s*){10}\s*
+\s*(01\s*){10}\s*
+\s*02\s*0[0-9A-Fa-f]\s*0[0-9ABab]\s*0[0-9]\s*0[0-9]\s*0[0-9Aa]\s*0[0-9ABab]\s*0[0-9A-Fa-f]\s*0[0-9A-Da-d]\s*0[0-7]\s*
+\s*03\s*0[0-9]\s*0[0-9ABab]\s*0[0-3]\s*0[0-6]\s*0[0-9]\s*0[0-9Aa]\s*0[0-9A-Dad]\s*0[0-9A-Da-d]\s*0[0-6]\s*\s*04\s*0[0-9A-Ca-c]\s*0[0-9ABab]\s*0[0-9]\s*0[0-9A-Da-d]\s*(0[0-9A-Faf]|10)\s*0[0-7]\s*0[0-8]\s*0[0-9A-Fa-f]\s*0[0-5]\s*\s*05\s*0[0-9A-Ca-c]\s*01\s*0[0-3]\s*01\s*0[0-9]\s*0[0-9]\s*0[0-9]\s*0[0-9]\s*0[0-9]\s*
+</code></pre></div>
+<p>end guidance]</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following information stored for a single font:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:font</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:name=</span><span style="color: #BA2121">&quot;Times New Roman&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:panose1</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;02020603050405020304&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:font&gt;</span>
+</code></pre></div>
+<p>The panose1 element specifies its Panose-1 number via its val attribute value of 02020603050405020304.</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema hexBinary datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents have a length of exactly 20 hexadecimal digit(s).</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Panose) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22929-st_percentage-带符号的百分比值">22.9.2.9 ST_Percentage (带符号的百分比值)<a class="headerlink" href="#22929-st_percentage-带符号的百分比值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容将包含百分比测量值，并带有尾随百分号 (U+0025)。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>w 属性的值是关联表格单元格的宽度。</p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>-?[0-9]+(\.[0-9]+)?%</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_Percentage) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_Percentage (Percentage Value with Sign)</strong></p>
+<p>This simple type specifies that its contents will contain a percentage measurement, with a trailing percent sign (U+0025).</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>The value of the w attribute is the width of the associated table cell.</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>-?[0-9]+(\.[0-9]+)?%</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Percentage) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229210-st_positivefixedpercentage-带符号的正固定百分比值">22.9.2.10 ST_PositiveFixedPercentage (带符号的正固定百分比值)<a class="headerlink" href="#229210-st_positivefixedpercentage-带符号的正固定百分比值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容将包含从 0% 到 100%（含）的正百分比测量值，包括尾随百分号 (U+0025)。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>w 属性的值是关联表格单元格的宽度。</p>
+</details>
+<p>此简单类型的内容是 ST_Percentage 数据类型的限制 (§22.9.2.9)</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>((100)|([0-9][0-9]?))(\.[0-9][0-9]?)?%</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_PositiveFixedPercentage) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_PositiveFixedPercentage (Positive Fixed Percentage Value with Sign)</strong></p>
+<p>This simple type specifies that its contents will contain a positive percentage measurement from 0% to 100% inclusive, including a trailing percent sign (U+0025).</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>The value of the w attribute is the width of the associated table cell. </p>
+</details>
+<p>This simple type's contents are a restriction of the ST_Percentage datatype (§22.9.2.9)</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>((100)|([0-9][0-9]?))(\.[0-9][0-9]?)?%</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_PositiveFixedPercentage) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229211-st_positivepercentage-带符号的正百分比值">22.9.2.11 ST_PositivePercentage (带符号的正百分比值)<a class="headerlink" href="#229211-st_positivepercentage-带符号的正百分比值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容将包含正百分比测量值，包括尾随百分号 (U+0025)。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>w 属性的值是关联表格单元格的宽度。</p>
+</details>
+<p>此简单类型的内容是 ST_Percentage 数据类型的限制 (§22.9.2.9).</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>此简单类型的内容应与以下正则表达式模式匹配： <code>[0-9]+(\.[0-9]+)?%</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_PositivePercentage) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_PositivePercentage (Positive Percentage Value with Sign)</strong></p>
+<p>This simple type specifies that its contents will contain a positive percentage measurement, including a trailing percent sign (U+0025).</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:tcPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:tcW</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;pct&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;33.3%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>The value of the w attribute is the width of the associated table cell. </p>
+</details>
+<p>This simple type's contents are a restriction of the ST_Percentage datatype (§22.9.2.9).</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>[0-9]+(\.[0-9]+)?%</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_PositivePercentage) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229212-st_positiveuniversalmeasure-积极的普遍测量">22.9.2.12 ST_PositiveUniversalMeasure (积极的普遍测量)<a class="headerlink" href="#229212-st_positiveuniversalmeasure-积极的普遍测量" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这种简单类型指定其内容将包含使用常用度量单位之一表示的度量。 该类型的内容是一个正十进制数，后面紧跟一个单位标识符。 单位标识符区分大小写，并且应为小写。 符合要求的应用程序不需要在加载和保存特定文档之间保留度量单位。</p>
+<p>应支持与 ST_UniversalMeasure 类型 (§22.9.2.15) 中相同的测量单位集。</p>
+<p>此简单类型的内容是 ST_UniversalMeasure 数据类型的限制 (§22.9.2.15).</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_PositiveUniversalMeasure) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_PositiveUniversalMeasure (Positive Universal Measurement)</strong></p>
+<p>This simple type specifies that its contents will contain a measurement expressed using one of common measure units. The content of this type is a positive decimal number immediately followed by a unit identifier. Unit identifiers are case sensitive and shall be in lowercase. Conforming applications are not required to preserve units of measure between loading and saving a particular document.</p>
+<p>The same set of units of measure as in ST_UniversalMeasure type (§22.9.2.15) shall be supported.</p>
+<p>This simple type's contents are a restriction of the ST_UniversalMeasure datatype (§22.9.2.15).</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_PositiveUniversalMeasure) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229213-st_string-字符串">22.9.2.13 ST_String (字符串)<a class="headerlink" href="#229213-st_string-字符串" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这个简单类型指定其内容包含一个字符串。</p>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>[Note: 此简单类型的内容模型 (ST_String) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>String</strong></p>
+<p>This simple type specifies that its contents contains a string.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_String) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229214-st_twipsmeasure-以二十分之一点为单位的测量">22.9.2.14 ST_TwipsMeasure (以二十分之一点为单位的测量)<a class="headerlink" href="#229214-st_twipsmeasure-以二十分之一点为单位的测量" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这个简单类型指定其内容包含凋灵：</p>
+<ul>
+<li>正整数，其内容由二十分之一点的测量值（相当于 1/1440 英寸）组成，或者</li>
+<li>紧跟单位标识符的正十进制数。</li>
+</ul>
+<p>此测量的内容是根据父 XML 元素的上下文进行解释的。</p>
+<p>[Example: 考虑类型为 ST_TwipsMeasure 的属性值 720。 此属性值指定二分之一英寸或 36 点（720 二十分之一点 = 36 点 = 0.5 英寸）的大小。 end example]</p>
+<p>[Example: 考虑类型为 ST_HpsMeasure 的属性值 12.7mm。 该属性值指定尺寸为 0.0127 米或二分之一英寸或 36 点。 end example]</p>
+<p>这个简单类型是以下类型的联合：</p>
+<ul>
+<li>ST_PositiveUniversalMeasure 简单类型 (§22.9.2.12).</li>
+<li>ST_UnsignedDecimalNumber 简单类型 (§22.9.2.16).</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_TwipsMeasure) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_TwipsMeasure (Measurement in Twentieths of a Point)</strong></p>
+<p>This simple type specifies that its contents contain wither:</p>
+<ul>
+<li>A positive whole number, whose contents consist of a measurement in twentieths of a point (equivalent to 1/1440<sup>th</sup> of an inch), or</li>
+<li>A positive decimal number immediately following by a unit identifier.</li>
+</ul>
+<p>The contents of this measurement are interpreted based on the context of the parent XML element.</p>
+<p>[Example: Consider an attribute value of 720 whose type is ST_TwipsMeasure. This attribute value specifies a size of one-half of an inch or 36 points (720 twentieths of a point = 36 points = 0.5 inches). end example]</p>
+<p>[Example: Consider an attribute value of 12.7mm whose type is ST_HpsMeasure. This attribute value specifies a size of 0.0127 meter or one-half of an inch or 36 points. end example]</p>
+<p>This simple type is a union of the following types:</p>
+<ul>
+<li>The ST_PositiveUniversalMeasure simple type (§22.9.2.12).</li>
+<li>The ST_UnsignedDecimalNumber simple type (§22.9.2.16).</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_TwipsMeasure) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229215-st_universalmeasure-通用测量">22.9.2.15 ST_UniversalMeasure (通用测量)<a class="headerlink" href="#229215-st_universalmeasure-通用测量" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这种简单类型指定其内容将包含使用常用度量单位之一表示的度量。 该类型的内容是一个十进制数，后面紧跟一个单位标识符。 单位标识符区分大小写，并且应为小写。 符合要求的应用程序不需要在加载和保存特定文档之间保留度量单位。</p>
+<p>下表列出了允许的计量单位及其基于现有标准的定义或表示为其他计量单位的换算。</p>
+<table>
+<thead>
+<tr>
+<th>单位标识符</th>
+<th>定义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cm</td>
+<td>按照 ISO 31 的定义。</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>按照 ISO 31 的定义。</td>
+</tr>
+<tr>
+<td>in</td>
+<td>1 in = 2.54 cm (informative)</td>
+</tr>
+<tr>
+<td>pt</td>
+<td>1 pt = 1/72 in (informative)</td>
+</tr>
+<tr>
+<td>pc</td>
+<td>1 pc = 12 pt (informative)</td>
+</tr>
+<tr>
+<td>pi</td>
+<td>1 pi = 12 pt (informative)</td>
+</tr>
+</tbody>
+</table>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_UniversalMeasure) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_UniversalMeasure (Universal Measurement)</strong></p>
+<p>This simple type specifies that its contents will contain measurement expressed using one of common measure units. The content of this type is a decimal number immediately followed by a unit identifier. Unit identifiers are case sensitive and shall be in lowercase. Conforming applications are not required to preserve units of measure between loading and saving a particular document.</p>
+<p>The following table lists units of measure which are allowed together with their definition based on existing standard or expressed as a conversion from other unit of measure.</p>
+<table>
+<thead>
+<tr>
+<th>Unit Identifier</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cm</td>
+<td>As defined in ISO 31.</td>
+</tr>
+<tr>
+<td>mm</td>
+<td>As defined in ISO 31.</td>
+</tr>
+<tr>
+<td>in</td>
+<td>1 in = 2.54 cm (informative)</td>
+</tr>
+<tr>
+<td>pt</td>
+<td>1 pt = 1/72 in (informative)</td>
+</tr>
+<tr>
+<td>pc</td>
+<td>1 pc = 12 pt (informative)</td>
+</tr>
+<tr>
+<td>pi</td>
+<td>1 pi = 12 pt (informative)</td>
+</tr>
+</tbody>
+</table>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>-?[0-9]+(\.[0-9]+)?(mm|cm|in|pt|pc|pi)</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_UniversalMeasure) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229216-st_unsigneddecimalnumber-无符号十进制数值">22.9.2.16 ST_UnsignedDecimalNumber (无符号十进制数值)<a class="headerlink" href="#229216-st_unsigneddecimalnumber-无符号十进制数值" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定其内容包含正整数十进制数，其内容根据父 XML 元素的上下文进行解释。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:pPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:divId</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;1512645511&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>val 属性的值是关联的 HTML div 的 ID。</p>
+<p>但是，请考虑以下片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ilvl</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:ilvl&gt;</span>
+</code></pre></div>
+<p>在这种情况下，val属性中的十进制数字是关联编号级别的ID。 在每种情况下，十进制数值都在父元素的上下文中进行解释。</p>
+</details>
+<p>此简单类型的内容是 W3C XML Schema unsignedLong 数据类型的限制。</p>
+<p>[Note: 此简单类型的内容模型 (ST_UnsignedDecimalNumber) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_UnsignedDecimalNumber(Unsigned Decimal Number Value)</strong></p>
+<p>This simple type specifies that its contents contain a positive whole decimal number, whose contents are interpreted based on the context of the parent XML element.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:pPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:divId</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;1512645511&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+</code></pre></div>
+<p>The value of the val attribute is the ID of the associated HTML div.</p>
+<p>However, consider the following fragment:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ilvl</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb"> </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:ilvl&gt;</span>
+</code></pre></div>
+<p>In this case, the decimal number in the val attribute is the ID of the associated numbering level. In each case, the decimal number value is interpreted in the context of the parent element.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema unsignedLong datatype.</p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_UnsignedDecimalNumber) is located in §A.6.9. end note]</p>
+</details>
+</div>
+</div>
+</div>
+<h3 id="229217-st_verticalalignrun-垂直定位位置">22.9.2.17 ST_VerticalAlignRun (垂直定位位置)<a class="headerlink" href="#229217-st_verticalalignrun-垂直定位位置" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型指定此运行内容相对于运行文本的默认外观的对齐方式的可能值。 这允许将文本重新定位为下标或上标，而无需更改运行属性的字体大小.</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑一个在显示其内容时必须定位为上标的运行。 此要求将使用以下 WordprocessingML 指定：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:rPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:vertAlign</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;superscript&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:rPr&gt;</span>
+</code></pre></div>
+<p>生成的运行定位为上标，因此它以运行内容的默认基线位置上方的较小尺寸呈现。</p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<details class="abstract">
+<summary>枚举</summary>
+<dl>
+<dt><strong>baseline</strong> (常规垂直定位/Regular Vertical Positioning)</dt>
+<dd>
+<p>指定父运行中的文本应位于基线处并以与周围文本相同的大小显示.</p>
+</dd>
+<dt><strong>subscript</strong> (下标/Subscript)</dt>
+<dd>
+<p>指定该文本应该是下标。</p>
+<p>此设置应将此运行中的文本降低到基线以下，并将其更改为较小的尺寸（如果有较小的尺寸可用）。</p>
+</dd>
+<dt><strong>superscript</strong> (上标/Superscript)</dt>
+<dd>
+<p>指定该文本应为上标。</p>
+<p>此设置应将本次运行中的文本升高到基线以上，并将其更改为较小的尺寸（如果有较小的尺寸可用）。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: 此简单类型的内容模型 (ST_VerticalAlignRun) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_VerticalAlignRun(Vertical Positioning Location)</strong></p>
+<p>This simple type specifies possible values for the alignment of the contents of this run in relation to the default appearance of the run's text. This allows the text to be repositioned as subscript or superscript without altering the font size of the run properties.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider a run which must be positioning as superscript when displaying its contents. This requirement would be specified using the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:rPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:vertAlign</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;superscript&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:rPr&gt;</span>
+</code></pre></div>
+<p>The resulting run is positioned as superscript, therefore it is rendered in a smaller size above the default baseline location for the contents of the run.</p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<details class="abstract">
+<summary>Enumeration</summary>
+<dl>
+<dt>baseline (Regular Vertical Positioning)</dt>
+<dd>
+<p>Specifies that the text in the parent run shall be located at the baseline and presented in the same size as surrounding text.</p>
+</dd>
+<dt>subscript (Subscript)</dt>
+<dd>
+<p>Specifies that this text should be subscript.</p>
+<p>This setting shall lower the text in this run below the baseline and change it to a smaller size, if a smaller size is available.</p>
+</dd>
+<dt>superscript (Superscript)</dt>
+<dd>
+<p>Specifies that this text should be superscript.</p>
+<p>This setting shall raise the text in this run above the baseline and change it to a smaller size, if a smaller size is available.</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_VerticalAlignRun) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229218-st_xalign-水平对齐位置">22.9.2.18 ST_XAlign (水平对齐位置)<a class="headerlink" href="#229218-st_xalign-水平对齐位置" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这个简单类型指定父浮动对象的一组可能的相对水平位置。 该相对位置是相对于父对象指定的水平锚点指定的。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下指定文本框架的 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:pPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:framePr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;2419&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:h=</span><span style="color: #BA2121">&quot;2189&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hRule=</span><span style="color: #BA2121">&quot;atLeast&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hSpace=</span><span style="color: #BA2121">&quot;187&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">w:wrap=</span><span style="color: #BA2121">&quot;around&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:vAnchor=</span><span style="color: #BA2121">&quot;text&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hAnchor=</span><span style="color: #BA2121">&quot;page&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:xAlign=</span><span style="color: #BA2121">&quot;left&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:y=</span><span style="color: #BA2121">&quot;73&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Text<span style="color: #bbbbbb"> </span>Frame<span style="color: #bbbbbb"> </span>Content.<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+</code></pre></div>
+<p>此文本框架通过 xAlign 属性的存在指定将框架与锚点对象（在本例中为页面）的左侧对齐。</p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<details class="abstract">
+<summary>Enumeration</summary>
+<dl>
+<dt><strong>center</strong> (水平居中/Centered Horizontally)</dt>
+<dd>
+<p>指定父对象应相对于锚点设置居中。</p>
+<p>[Example: 页面水平居中. end example]</p>
+</dd>
+<dt><strong>inside</strong> (里面/Inside) </dt>
+<dd>
+<p>指定父对象应位于锚点对象内部。</p>
+<p>[Example: 水平文本边距内. end example]</p>
+</dd>
+<dt><strong>left</strong> (水平左对齐/Left Aligned Horizontally)</dt>
+<dd>
+<p>指定父对象应相对于锚点设置左对齐。</p>
+<p>[Example: 在页面上水平左对齐.  end example]</p>
+</dd>
+<dt><strong>outside</strong> (外部/Outside)</dt>
+<dd>
+<p>指定父对象应位于锚点对象之外.</p>
+<p>[Example: 水平文本边距之外. end example]</p>
+</dd>
+<dt><strong>right</strong> (水平右对齐/Right Aligned Horizontally)</dt>
+<dd>
+<p>指定父对象应相对于锚点设置右对齐.</p>
+<p>[Example: 在页面上水平右对齐. end example]</p>
+</dd>
+</dl>
+</details>
+<p>[Note: 此简单类型的内容模型 (ST_XAlign) 的 W3C XML 架构定义位于 §A.6.9. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>(Horizontal Alignment Location)</strong></p>
+<p>This simple type specifies the set of possible relative horizontal positions for the parent floating object. This relative position is specified relative to the horizontal anchor specified by the parent object.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment specifying a text frame:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:pPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:framePr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;2419&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:h=</span><span style="color: #BA2121">&quot;2189&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hRule=</span><span style="color: #BA2121">&quot;atLeast&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hSpace=</span><span style="color: #BA2121">&quot;187&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">w:wrap=</span><span style="color: #BA2121">&quot;around&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:vAnchor=</span><span style="color: #BA2121">&quot;text&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hAnchor=</span><span style="color: #BA2121">&quot;page&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:xAlign=</span><span style="color: #BA2121">&quot;left&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:y=</span><span style="color: #BA2121">&quot;73&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Text<span style="color: #bbbbbb"> </span>Frame<span style="color: #bbbbbb"> </span>Content.<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+</code></pre></div>
+<p>This text frame specifies by the presence of the xAlign attribute to align the frame on the left side of the anchor object, in this case, the page. </p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<details class="abstract">
+<summary>Enumeration</summary>
+<dl>
+<dt>center (Centered Horizontally)</dt>
+<dd>
+<p>Specifies that the parent object shall be centered with respect to the anchor settings.</p>
+<p>[Example: Centered on the page horizontally. end example]</p>
+</dd>
+<dt>inside (Inside) </dt>
+<dd>
+<p>Specifies that the parent object shall be inside of the anchor object.</p>
+<p>[Example: Inside the text margin horizontally. end example]</p>
+</dd>
+<dt>left (Left Aligned Horizontally)</dt>
+<dd>
+<p>Specifies that the parent object shall be left aligned with respect to the anchor settings.</p>
+<p>[Example: Left aligned on the page horizontally.  end example]</p>
+</dd>
+<dt>outside (Outside)</dt>
+<dd>
+<p>Specifies that the parent object shall be outside of the anchor object.</p>
+<p>[Example: Outside the text margin horizontally. end example]</p>
+</dd>
+<dt>right (Right Aligned Horizontally)</dt>
+<dd>
+<p>Specifies that the parent object shall be right aligned with respect to the anchor settings.</p>
+<p>[Example: Right aligned on the page horizontally. end example]</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_XAlign) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229219-st_xstring-转义字符串">22.9.2.19 ST_Xstring (转义字符串)<a class="headerlink" href="#229219-st_xstring-转义字符串" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>支持转义无效 XML 字符的字符串。</p>
+<p>对于 XML 1.0 规范定义的无法在 XML 中表示的所有字符，将使用 Unicode 数字字符表示转义字符格式 <code>_xHHHH_</code> 对这些字符进行转义，其中 H 表示字符值中的十六进制字符. [Example: XML 1.0 文档中不允许使用 Unicode 字符 8，因此必须将其转义为 <code>_x0008_</code>。 end example]</p>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>[Note: 此简单类型的内容模型 (ST_Xstring) 的 W3C XML 架构定义位于 §A.6.9. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>(Escaped String)</strong></p>
+<p>String of characters with support for escaped invalid-XML characters.</p>
+<p>For all characters which cannot be represented in XML as defined by the XML 1.0 specification, the characters are escaped using the Unicode numerical character representation escape character format <em>xHHHH</em>, where H represents a hexadecimal character in the character's value. [Example: The Unicode character 8 is not permitted in an XML 1.0 document, so it must be escaped as <em>x0008</em>. end example]</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Xstring) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229220-st_yalign-垂直对齐位置">22.9.2.20 ST_YAlign (垂直对齐位置)<a class="headerlink" href="#229220-st_yalign-垂直对齐位置" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这个简单类型指定父浮动对象的一组可能的相对垂直位置。 该相对位置是相对于父对象指定的垂直锚点指定的。</p>
+<details class="info">
+<summary>Example</summary>
+<p>考虑以下指定文本框架的 WordprocessingML 片段：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:pPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:framePr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;2419&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:h=</span><span style="color: #BA2121">&quot;2189&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hRule=</span><span style="color: #BA2121">&quot;atLeast&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hSpace=</span><span style="color: #BA2121">&quot;187&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">w:wrap=</span><span style="color: #BA2121">&quot;around&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:vAnchor=</span><span style="color: #BA2121">&quot;margin&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hAnchor=</span><span style="color: #BA2121">&quot;page&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:x=</span><span style="color: #BA2121">&quot;1643&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:y=</span><span style="color: #BA2121">&quot;73&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">w:yAlign=</span><span style="color: #BA2121">&quot;center&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Text<span style="color: #bbbbbb"> </span>Frame<span style="color: #bbbbbb"> </span>Content.<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+</code></pre></div>
+<p>此文本框架通过 yAlign 属性的存在指定将框架垂直对齐于锚点对象的中心（在本例中为边距）。 </p>
+</details>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<details class="abstract">
+<summary>枚举值</summary>
+<dl>
+<dt><strong>bottom</strong> (底部/Bottom)</dt>
+<dd>
+<p>指定父对象应与锚点对象的下边缘垂直对齐。</p>
+<p>[Example: 在当前段落的底部. end example]</p>
+</dd>
+<dt><strong>center</strong> (垂直居中/Centered Vertically)</dt>
+<dd>
+<p>指定父对象应相对于锚点对象垂直居中。 不得与 baseJc 元素一起使用。</p>
+<p>[Example: 页面垂直居中. end example]</p>
+</dd>
+<dt><strong>inline</strong> (与文字一致/In line With Text)</dt>
+<dd>
+<p>指定父对象应与周围文本垂直对齐 (i.e. 当放置在文档中时，不得允许任何文本环绕它。 不得与基本元件一起使用.)</p>
+</dd>
+<dt><strong>inside</strong> (内部锚点范围 / Inside Anchor Extents)</dt>
+<dd>
+<p>指定父对象应与锚点对象的边缘垂直对齐，并位于该对象内部。 不得与 baseJc 元素一起使用。</p>
+<p>[Example: 文本边距内部垂直. end example]</p>
+</dd>
+<dt><strong>outside</strong> (外锚范围 / Outside Anchor Extents) </dt>
+<dd>
+<p>指定父对象应与锚点对象的边缘垂直对齐，并位于该对象的外部。 不得与 base 元素一起使用。</p>
+<p>[Example: 垂直方向位于文本边距之外.  end example]</p>
+</dd>
+<dt><strong>top</strong> (顶部 / Top) </dt>
+<dd>
+<p>指定父对象应与锚点对象的上边缘垂直对齐 .</p>
+<p>[Example: 在当前段落的顶部. end example]</p>
+</dd>
+</dl>
+</details>
+<p>[Note: 此简单类型的内容模型 (ST_YAlign) 的 W3C XML 架构定义位于 §A.6.9 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>(Vertical Alignment Location)</strong></p>
+<p>This simple type specifies the set of possible relative vertical positions for the parent floating object. This relative position is specified relative to the vertical anchor specified by the parent object.</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment specifying a text frame:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:pPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:framePr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:w=</span><span style="color: #BA2121">&quot;2419&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:h=</span><span style="color: #BA2121">&quot;2189&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hRule=</span><span style="color: #BA2121">&quot;atLeast&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hSpace=</span><span style="color: #BA2121">&quot;187&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">w:wrap=</span><span style="color: #BA2121">&quot;around&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:vAnchor=</span><span style="color: #BA2121">&quot;margin&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:hAnchor=</span><span style="color: #BA2121">&quot;page&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:x=</span><span style="color: #BA2121">&quot;1643&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:y=</span><span style="color: #BA2121">&quot;73&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">w:yAlign=</span><span style="color: #BA2121">&quot;center&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:pPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Text<span style="color: #bbbbbb"> </span>Frame<span style="color: #bbbbbb"> </span>Content.<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+</code></pre></div>
+<p>This text frame specifies by the presence of the yAlign attribute to vertically align the frame in the center of the anchor object, in this case, the margin. </p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<details class="abstract">
+<summary>Enumeration</summary>
+<dl>
+<dt>bottom (Bottom)</dt>
+<dd>
+<p>Specifies that the parent object shall be vertically aligned to the bottom edge of the anchor object.</p>
+<p>[Example: At the bottom of the current paragraph. end example]</p>
+</dd>
+<dt>center (Centered Vertically)</dt>
+<dd>
+<p>Specifies that the parent object shall be vertically centered with respect to the anchor object. Shall not be used with the baseJc element. </p>
+<p>[Example: Centered on the page vertically. end example]</p>
+</dd>
+<dt>inline (In line With Text)</dt>
+<dd>
+<p>Specifies that the parent object shall be vertically aligned in line with the surrounding text (i.e. shall not allow any text wrapping around it when positioned in the document. Shall not be used with the base element.)</p>
+</dd>
+<dt>inside (Inside Anchor Extents)</dt>
+<dd>
+<p>Specifies that the parent object shall be vertically aligned to the edge of the anchor object, and positioned inside that object. Shall not be used with the baseJc element.</p>
+<p>[Example: Inside the text margins vertically. end example]</p>
+</dd>
+<dt>outside (Outside Anchor Extents) </dt>
+<dd>
+<p>Specifies that the parent object shall be vertically aligned to the edge of the anchor object, and positioned outside that object. Shall not be used with the baseJc element.</p>
+<p>[Example: Outside the text margins vertically.  end example]</p>
+</dd>
+<dt>top (Top) </dt>
+<dd>
+<p>Specifies that the parent object shall be vertically aligned to the top edge of the anchor object .</p>
+<p>[Example: At the top of the current paragraph. end example]</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_YAlign) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="229221-st_xmlname-xml-名称">22.9.2.21 ST_XmlName (XML 名称)<a class="headerlink" href="#229221-st_xmlname-xml-名称" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此简单类型应包含 XML 非殖民名称 (NCName)。</p>
+<details class="info">
+<summary>Example</summary>
+<p>请考虑以下 WordprocessingML 片段，了解单个自定义 XML 元素的属性:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:customXmlPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:attr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:name=</span><span style="color: #BA2121">&quot;company&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:uri=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/2006/example&quot;</span>
+<span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:customXmlPr&gt;</span>
+</code></pre></div>
+<p>attr 元素指定与属性名称关联的 NCName 应为 company. </p>
+</details>
+<p>此简单类型的内容是 W3C XML Schema NCName 数据类型的限制。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_XmlName(XML Name)</strong></p>
+<p>This simple type shall contain an XML non-colonized name (NCName).</p>
+<details class="info">
+<summary>Example</summary>
+<p>Consider the following WordprocessingML fragment for the properties of a single custom XML element:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:customXmlPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:attr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:name=</span><span style="color: #BA2121">&quot;company&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:uri=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/2006/example&quot;</span>
+<span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:customXmlPr&gt;</span>
+</code></pre></div>
+<p>The attr element specifies that the NCName associated with the attribute name shall be company. </p>
+</details>
+<p>This simple type's contents are a restriction of the W3C XML Schema NCName datatype.</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

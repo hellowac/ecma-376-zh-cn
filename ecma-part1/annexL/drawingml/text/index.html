@@ -1,0 +1,3824 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../styles/">
+      
+      
+        <link rel="next" href="../tables/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.4 文本 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l44-文本" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.4 文本
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l441-简介" class="md-nav__link">
+    L.4.4.1 简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l442-概述" class="md-nav__link">
+    L.4.4.2 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l443-正文级别属性" class="md-nav__link">
+    L.4.4.3 正文级别属性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.4.3 正文级别属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4431-设置文本区域" class="md-nav__link">
+    L.4.4.3.1 设置文本区域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4432-操作文本" class="md-nav__link">
+    L.4.4.3.2 操作文本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4433-向后和向前兼容性" class="md-nav__link">
+    L.4.4.3.3 向后和向前兼容性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4434-段落级别属性" class="md-nav__link">
+    L.4.4.3.4 段落级别属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4435-间距对齐方式和方向" class="md-nav__link">
+    L.4.4.3.5 间距、对齐方式和方向
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4436-制表符和换行符" class="md-nav__link">
+    L.4.4.3.6 制表符和换行符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4437-添加项目符号" class="md-nav__link">
+    L.4.4.3.7 添加项目符号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4438-run级和字符级属性" class="md-nav__link">
+    L.4.4.3.8 Run级和字符级属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4439-视觉特性" class="md-nav__link">
+    L.4.4.3.9 视觉特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l44310-交互性属性" class="md-nav__link">
+    L.4.4.3.10 交互性属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l44311-国际语言支持" class="md-nav__link">
+    L.4.4.3.11 国际语言支持
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3daspects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pictures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l441-简介" class="md-nav__link">
+    L.4.4.1 简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l442-概述" class="md-nav__link">
+    L.4.4.2 概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l443-正文级别属性" class="md-nav__link">
+    L.4.4.3 正文级别属性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.4.3 正文级别属性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4431-设置文本区域" class="md-nav__link">
+    L.4.4.3.1 设置文本区域
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4432-操作文本" class="md-nav__link">
+    L.4.4.3.2 操作文本
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4433-向后和向前兼容性" class="md-nav__link">
+    L.4.4.3.3 向后和向前兼容性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4434-段落级别属性" class="md-nav__link">
+    L.4.4.3.4 段落级别属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4435-间距对齐方式和方向" class="md-nav__link">
+    L.4.4.3.5 间距、对齐方式和方向
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4436-制表符和换行符" class="md-nav__link">
+    L.4.4.3.6 制表符和换行符
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4437-添加项目符号" class="md-nav__link">
+    L.4.4.3.7 添加项目符号
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4438-run级和字符级属性" class="md-nav__link">
+    L.4.4.3.8 Run级和字符级属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4439-视觉特性" class="md-nav__link">
+    L.4.4.3.9 视觉特性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l44310-交互性属性" class="md-nav__link">
+    L.4.4.3.10 交互性属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l44311-国际语言支持" class="md-nav__link">
+    L.4.4.3.11 国际语言支持
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l44-文本">L.4.4 文本<a class="headerlink" href="#l44-文本" title="Permanent link">&para;</a></h1>
+<p><strong>Text</strong></p>
+<h2 id="l441-简介">L.4.4.1 简介<a class="headerlink" href="#l441-简介" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>本小节提供了 DrawingML 文本的高级概述。</p>
+<p>了解这些架构（因为它们彼此相关）的最佳方法是按以下顺序了解 DrawingML 文本文件格式。</p>
+<ul>
+<li>文本概述</li>
+<li>正文级别的属性</li>
+<li>段落级别的属性</li>
+<li>Run和字符级别的属性</li>
+</ul>
+<p>配套模式建立在本文档中讨论的基础上。 由于下面会遇到这些问题，因此提供了它们的指南中的重点。</p>
+<p>本小节提供了 DrawingML 文件格式文本部分的结构化细分。 其他子条款建立在这个基础上，并解释有关文本框架、文本样式、文本字段和嵌入字体等主题的更多信息。</p>
+<p>请注意，本文档中描述的 DrawingML 文本与 WordprocessingML 文本不同，因为它周围的文件框架已针对以图形为中心、类似演示的方式进行了优化。 相比之下，WordprocessingML Text 允许以针对打印文档布局优化的格式存储文本，但不适用于 <code>&lt;a:&gt;</code> 命名空间中的基于艺术的文本。</p>
+<p>请注意，本文档中使用的“p”命名空间引用了 PresentationML 特定的模式(Schema)，而本文档中使用的“a”命名空间引用了DrawingML 特定的模式(Schema)。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Introduction</strong></p>
+<p>This subclause provides a high-level overview of DrawingML text.</p>
+<p>The best way to understand these schemas as they relate to one another is to learn about the</p>
+<p>DrawingML Text file format in the following order.</p>
+<ul>
+<li>Text Overview</li>
+<li>Body Level Properties</li>
+<li>Paragraph Level Properties</li>
+<li>Run and Character Level Properties</li>
+</ul>
+<p>Companion schemas build on the ones discussed in this document. As these are encountered below, pointers to them are provided.</p>
+<p>This subclause provides a structured breakdown of the text portion of the DrawingML file format. Other subclauses build on this foundation and explain more about topics such as text frame, text styles, text fields, and embedded fonts.</p>
+<p>Note that DrawingML Text described within this document is distinct from WordprocessingML Text in that the file framework surrounding it has been optimized for use in a graphics-centric, presentation-like manner. As a contrast, WordprocessingML Text allows for text to be stored in a format that is optimized for layout of printed documents but not for art-based text as is found within the <a:> namespace.</p>
+<p>Note that the use of the "p" namespace within this document references to the PresentationML-specific schemas while the use of the "a" namespace within this document references to the DrawingML-specific schemas.</p>
+</div>
+</div>
+</div>
+<h2 id="l442-概述">L.4.4.2 概述<a class="headerlink" href="#l442-概述" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>考虑具有以下基本结构的 XML 树：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;sld&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cSld&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;spTree&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;nvGrpSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;grpSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/grpSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sp&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/nvSpPr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;spPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/spPr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/style&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;txBody&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rtlCol=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">anchor=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;p&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;pPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;r&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/t&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;/r&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/txBody&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/sp&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/spTree&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cSld&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/sld&gt;</span>
+</code></pre></div>
+<p>在上面的结构中，我们对匹配的 <code>p:txBody</code> 标签中包含的内容感兴趣。 对该标签与上述基本幻灯片结构相关的理解涵盖了有效消化本描述的其余部分所需的模式(Schema)背景。</p>
+<ins class="critic block">
+<p>请注意，<strong>形状是所有文本所在的标准容器</strong>。 通常，<em>该形状没有附加任何视觉属性，因此不会渲染可见的形状</em>； 尽管如此，<strong>形状仍然存在并且确实包含任何内容文本</strong>。</p>
+</ins>
+<p>每个形状都包含一个嵌入矩形，其中<strong>包含附加到该形状的任何文本</strong>。 该形状具有在所有四个边（顶部、底部、左侧和右侧）上缓冲此矩形的<strong>边距</strong>或插图(insets)，就像页面上的边距一样。 在考虑形状内的文本时，记住这些插入(inset)属性很有用。</p>
+<p>下面提供了对此的说明。</p>
+<p><a class="glightbox" href="../imgs/text-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-1.png" /></a></p>
+<p>让我们看看 <code>p:txBody</code> 中包含的不同元素标签。 下面列出的只是这里讨论的那些标签。 （请注意，此示例框架是一个骨架，并未完全显示所需的所有元素和属性。）</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">                </span>required,<span style="color: #bbbbbb"> </span>只列出一次.
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">              </span>optional,<span style="color: #bbbbbb"> </span>如果存在仅列出一次.
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span><span style="color: #bbbbbb">                       </span>required,<span style="color: #bbbbbb"> </span>实例数量没有限制.
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">               </span>optional,<span style="color: #bbbbbb"> </span>如果存在仅列出一次.
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span><span style="color: #bbbbbb">                   </span>required,<span style="color: #bbbbbb"> </span>实例数量没有限制.
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">           </span>optional,<span style="color: #bbbbbb"> </span>如果存在仅列出一次.
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">                                </span>本次run的实际文本包含在此处.
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:endParaRPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">        </span>optional,<span style="color: #bbbbbb"> </span>如果存在仅列出一次.
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+<p><table border=1>
+    <tr>
+        <th><strong>元素(Element)</strong></th>
+        <th><strong>用途(Purpose)</strong></th>
+        <th><strong>描述(Description)</strong></th>
+    </tr>
+    <tr>
+        <td>a:bodyPr</td>
+        <td>正文属性(Body Properties)</td>
+        <td>
+            描述文本锚点、形状自动调整、列数、文本变形以及 3D 场景和灯光效果。 参见[§L.4.4.3]。
+        </td>
+    </tr>
+    <tr>
+        <td>a:lstStyle</td>
+        <td>列表样式(List Style)</td>
+        <td>
+            用于定义段落及其九个列表级别的样式属性。
+        </td>
+    </tr>
+    <tr>
+        <td>a:p</td>
+        <td>单个段落(Single Paragraph)</td>
+        <td>
+            包含单个段落及其相应的段落级属性。 这里还包含组成该段落的所有文本运行(run)。 参见[§L.4.4.3.4]。
+        </td>
+    </tr>
+    <tr>
+        <td>a:pPr</td>
+        <td>段落属性(Paragraph Properties)</td>
+        <td>
+            描述相应段落的呈现格式和样式。 可以在此空间内使用的一些可能的设置包括但不限于以下内容：间距、边距和对齐方式。 参见[§L.4.4.3.4]。
+        </td>
+    </tr>
+    <tr>
+        <td>a:r</td>
+        <td>单个运行(Single Run)</td>
+        <td>
+            指定段落中是否存在一系列文本。 运行(run)表示可以以文件格式表示的最精细的文本形式。 参见[§L.4.4.3.8]。
+        </td>
+    </tr>
+    <tr>
+        <td>a:rPr</td>
+        <td>运行属性(Run Properties)</td>
+        <td>
+            允许将属性附加到其父 <code>a:r</code> 元素指定的文本串。 这些属性包括但不限于以下内容：下划线、删除线和文本大写。 参见[§L.4.4.3.8]。
+        </td>
+    </tr>
+    <tr>
+        <td>a:t</td>
+        <td>实际文本(Actual text)</td>
+        <td>
+            允许存储所有这些正文、段落和运行级别属性所描述的特定文本。 该标签是最重要的，因为它为之前的所有其他元素和属性提供了上下文。
+        </td>
+    </tr>
+    <tr>
+        <td>a:endParaRPr</td>
+        <td>持久运行属性(Persistent Run Properties)</td>
+        <td>
+            指定当用户在此段落之后开始输入其他文本时要保留的属性。 仅当该段落后面的样式与段落本身不同时才应设置此属性。
+        </td>
+    </tr>
+</table></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Overview</strong></p>
+<p>Consider an XML tree that has the following basic structure:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;sld&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;cSld&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;spTree&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;nvGrpSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/nvGrpSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;grpSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/grpSpPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sp&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;nvSpPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/nvSpPr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;spPr&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/spPr&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;style&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/style&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;txBody&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rtlCol=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">anchor=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;p&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;pPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">algn=</span><span style="color: #BA2121">&quot;ctr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;r&gt;</span>
+<span style="color: #bbbbbb">                            </span><span style="color: #008000; font-weight: bold">&lt;t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/t&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;/r&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/p&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/txBody&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/sp&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sp&gt;</span>…<span style="color: #008000; font-weight: bold">&lt;/sp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/spTree&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/cSld&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/sld&gt;</span>
+</code></pre></div>
+<p>In the structure above, we are interested in the content contained within the matching p:txBody tags. The understanding of this tag in relation to the basic slide structure above encompasses the schema background needed to digest effectively the remainder of this description.</p>
+<p>Note that shapes are the standard container within which all text resides. Usually, the shape does not have any visual properties attached to it and thus no visible shape is rendered; nonetheless, a shape is still present and does house any content text.</p>
+<p>Each shape contains an inset rectangle that houses any text attached to that shape. The shape has margins or insets that buffer this rectangle on all four sides (top, bottom, left, and right) just like margins on a page. When thinking about text within a shape, it is useful to keep these inset properties in mind.</p>
+<p>An illustration of this is provided below.</p>
+<p><a class="glightbox" href="../imgs/text-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-1.png" /></a></p>
+<p>Let's look at the different element tags contained within p:txBody. Listed below are only those tags discussed here. (Note that this sample framework is a skeleton and does not fully show all elements and attributes needed.)</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">                </span>required,<span style="color: #bbbbbb"> </span>only<span style="color: #bbbbbb"> </span>listed<span style="color: #bbbbbb"> </span>once.
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">              </span>optional,<span style="color: #bbbbbb"> </span>if<span style="color: #bbbbbb"> </span>present<span style="color: #bbbbbb"> </span>only<span style="color: #bbbbbb"> </span>listed<span style="color: #bbbbbb"> </span>once.
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span><span style="color: #bbbbbb">                       </span>required,<span style="color: #bbbbbb"> </span>no<span style="color: #bbbbbb"> </span>limit<span style="color: #bbbbbb"> </span>on<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>number<span style="color: #bbbbbb"> </span>of<span style="color: #bbbbbb"> </span>instances.
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">               </span>optional,<span style="color: #bbbbbb"> </span>if<span style="color: #bbbbbb"> </span>present<span style="color: #bbbbbb"> </span>only<span style="color: #bbbbbb"> </span>listed<span style="color: #bbbbbb"> </span>once.
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span><span style="color: #bbbbbb">                   </span>required,<span style="color: #bbbbbb"> </span>no<span style="color: #bbbbbb"> </span>limit<span style="color: #bbbbbb"> </span>on<span style="color: #bbbbbb"> </span>the<span style="color: #bbbbbb"> </span>number<span style="color: #bbbbbb"> </span>of<span style="color: #bbbbbb"> </span>instances.
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">           </span>optional,<span style="color: #bbbbbb"> </span>if<span style="color: #bbbbbb"> </span>present<span style="color: #bbbbbb"> </span>only<span style="color: #bbbbbb"> </span>listed<span style="color: #bbbbbb"> </span>once.
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">                                </span>Actual<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>for<span style="color: #bbbbbb"> </span>this<span style="color: #bbbbbb"> </span>run<span style="color: #bbbbbb"> </span>is<span style="color: #bbbbbb"> </span>contained<span style="color: #bbbbbb"> </span>here.
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:endParaRPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">        </span>optional,<span style="color: #bbbbbb"> </span>if<span style="color: #bbbbbb"> </span>present<span style="color: #bbbbbb"> </span>only<span style="color: #bbbbbb"> </span>listed<span style="color: #bbbbbb"> </span>once.
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+<p><table border=1>
+    <tr>
+        <th><strong>Element</strong></th>
+        <th><strong>Purpose</strong></th>
+        <th><strong>Description</strong></th>
+    </tr>
+    <tr>
+        <td>a:bodyPr</td>
+        <td>Body Properties</td>
+        <td>
+            Describes text anchor points, shape autofit, number of columns, text warping, and 3D scenes and lighting effects. See §L.4.4.3.
+        </td>
+    </tr>
+    <tr>
+        <td>a:lstStyle</td>
+        <td>List Style</td>
+        <td>
+            Used to define style properties for the paragraph and its nine list levels.
+        </td>
+    </tr>
+    <tr>
+        <td>a:p</td>
+        <td>Single Paragraph</td>
+        <td>
+            Houses a single paragraph and its corresponding paragraphlevel properties. Contained within here are also all the text runs that comprise this paragraph. See §L.4.4.3.4.
+        </td>
+    </tr>
+    <tr>
+        <td>a:pPr</td>
+        <td>Paragraph Properties</td>
+        <td>
+            Describes the format and style with which the corresponding paragraph is presented. Some possible settings that can be utilized within this space include, but are not limited to, the following: spacing, margins, and alignment. See §L.4.4.3.4.
+        </td>
+    </tr>
+    <tr>
+        <td>a:r</td>
+        <td>Single Run</td>
+        <td>
+            Specifies the existence of a run of text within a paragraph. A run represents the most granular form of text that can be represented in the file format. See §L.4.4.3.8.
+        </td>
+    </tr>
+    <tr>
+        <td>a:rPr</td>
+        <td>Run Properties </td>
+        <td>
+            Allows the attachment of properties to the run of text specified by its parent a:r element. These properties include, but are not limited to, the following: underline, strikethrough, and text caps. See §L.4.4.3.8.
+        </td>
+    </tr>
+    <tr>
+        <td>a:t</td>
+        <td>Actual text</td>
+        <td>
+            Allows for the storage of the specific text that all these body, paragraph and run level properties are describing. This tag is the most important as it gives context to all the other elements and attributes that have come before it.
+        </td>
+    </tr>
+    <tr>
+        <td>a:endParaRPr</td>
+        <td>Persistent Run Properties</td>
+        <td>
+            Specifies the properties that are to persist should the user begin to enter additional text after this paragraph. This property should only be set when the style that should follow this paragraph is different from the paragraph itself.
+        </td>
+    </tr>
+</table></p>
+</div>
+</div>
+</div>
+<h2 id="l443-正文级别属性">L.4.4.3 正文级别属性<a class="headerlink" href="#l443-正文级别属性" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在本节中，我们将探讨可以附加到整个正文的各种属性。 如上面的示例 XML 所示，共有三个可用的基本属性级别。 正文层面的属性是其中最广泛的。 请注意，其中一些正文级属性作为属性应用于正文属性标记，而其他属性则表示为子元素。 应用每个属性的具体方法可以在上面列出的模式(Schema)中找到。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">    </span>《=<span style="color: #bbbbbb"> </span>本条涵盖的主要内容(Main<span style="color: #bbbbbb"> </span>element)
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Body Level Properties</strong></p>
+<p>In this subclause, we'll explore the sorts of properties that can be attached to the body as a whole. As shown in the sample XML above, there are three essential property levels available. The body-level properties are to the broadest of these. Note that some of these body-level properties are applied as attributes to the body property tag while others are expressed as child elements. The specific method by which each property is applied can be found in the schemas listed above. </p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">    </span>《=<span style="color: #bbbbbb"> </span>Main<span style="color: #bbbbbb"> </span>element<span style="color: #bbbbbb"> </span>covered<span style="color: #bbbbbb"> </span>in<span style="color: #bbbbbb"> </span>this<span style="color: #bbbbbb"> </span>subclause<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4431-设置文本区域">L.4.4.3.1 设置文本区域<a class="headerlink" href="#l4431-设置文本区域" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>让我们从最初如何描述文本区域开始。 该区域是该正文的所有子文本所在的容器。 首先，了解<strong>插入(inset)属性</strong>很有用； 具体来说，顶部、底部、左侧和右侧插入属性也称为文本正文的内部边距。 锚点属性(anchor attribute)允许我们指定文本区域应锚定在其边界矩形内的位置。 </p>
+<p>下面的内部绿色框突出显示了该边界矩形的图示。 请注意，此处的边界矩形固定在右侧。</p>
+<p><a class="glightbox" href="../imgs/text-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-2.png" /></a></p>
+<p>这是文本在里面的显示方式。 属性自动调整允许三种基本场景：</p>
+<ul>
+<li>No AutoFit: 允许文本流到容器之外.</li>
+<li>Normal AutoFit: 使用定义的约束调整文本大小以适合容器区域。 （当文本太大或太长而无法放入文本容器时使用。）</li>
+<li>Shape AutoFit: 实际文本容器的大小已调整以包含所有文本。 （这是唯一可以导致容器尺寸发生变化的选项。）</li>
+</ul>
+<p>术语流(term flow)用于描述文本在此文本区域内移动的方式，并描述每个正文属性如何影响文本区域内的文本。</p>
+<p>文本流动的一种方式是从一行到下一行。 这可以通过使用 <code>textwrapping</code> 属性自动完成。 另一种方法是使用列。 XML 框架允许指定多个列，文本将自动分解为这些列。 此功能还允许指定列间距和从右到左的布局，而不是默认的从左到右的布局。 文本流动的另一种方式是垂直而不是水平。 为此，可以描述许多不同形式的垂直文本：从出现旋转的文本到字符真正堆叠的文本。 当指定东亚字体时，甚至可以使文本以不同的方式流动。</p>
+<p>在查看流(flow)时，讨论溢出的可能性很有用。 也就是说，文本必须流到文本区域之外，因为它太大而无法容纳在内部。 为此，有两种常见的溢出类型：垂直和水平。 垂直溢出可以通过三种方式处理：</p>
+<ul>
+<li>
+<p>overflow: 这允许文本流(flow)到文本区域之外.</p>
+<p><a class="glightbox" href="../imgs/text-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-3.png" /></a></p>
+</li>
+<li>
+<p>ellipsis: 这会裁剪溢出的文本并添加“...”以表示存在隐藏文本.</p>
+<p><a class="glightbox" href="../imgs/text-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-4.png" /></a></p>
+</li>
+<li>
+<p>clip: 这会将文本裁剪为省略号，但不会插入“...”，因此用户不会发现存在隐藏文本. </p>
+<p><a class="glightbox" href="../imgs/text-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-5.png" /></a></p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Setting Up the Text Area</strong></p>
+<p>Let's start with how a text area might be initially described. This area is the container within which all the child text for this body resides. First, it is useful to understand the inset properties; specifically,  he top, bottom, left and right inset properties that are also known as internal margins for the text body. The anchor attribute allows us to specify where the text area should be anchored within its bounding rectangle. </p>
+<p>An illustration of this bounding rectangle is highlighted below by the inner green box. Notice here that the bounding rectangle is anchored to the right.</p>
+<p><a class="glightbox" href="../imgs/text-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-2.png" /></a></p>
+<p>Hereis how the text appears inside. Attribute AutoFit allows for three basic scenarios:</p>
+<ul>
+<li>No AutoFit: The text is allowed to flow outside the container.</li>
+<li>Normal AutoFit: The text is resized using defined constraints to fit inside the container area. (This is used when the text is too large or long to fit in the text container.)</li>
+<li>Shape AutoFit: The actual text container is resized to contain all the text. (This is the only option that can cause the container to have its dimensions changed.)</li>
+</ul>
+<p>The term flow is used to describe the way in which text moves around inside this text area, and to describe how each of the body properties affects the text within the text area.</p>
+<p>One way that text can flow is from one line to the next. This can be done automatically by using the textwrapping attribute. Another way is to use columns. The XML framework allows for the specification of a number of columns into which the text is to be automatically broken. This feature also allows for the specifying of the spacing of columns and a right-to-left layout instead of the default left-to-right. Another way that text can flow is vertical instead of horizontal. For this, there are many different forms of vertical text that can be described: from text that appears rotated to text where the characters are truly stacked. The text can even be made to flow differently when an East Asian font is specified.</p>
+<p>When looking at the flow it is useful to discuss the potential for overflow. That is, the text must flow outside the text area because it is too large to fit inside. For this, there are two common overflow types: vertical and horizontal. The vertical overflow can be handled in three ways:</p>
+<ul>
+<li>
+<p>overflow: This allows the text to flow outside the text area.</p>
+<p><a class="glightbox" href="../imgs/text-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-3.png" /></a></p>
+</li>
+<li>
+<p>ellipsis: This crops the text that overflows and adds "…" to denote that there is hidden text.</p>
+<p><a class="glightbox" href="../imgs/text-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-4.png" /></a></p>
+</li>
+<li>
+<p>clip: This crops the text just as ellipsis but does not insert "…", so the user has no indication that there is hidden text. </p>
+<p><a class="glightbox" href="../imgs/text-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-5.png" /></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4432-操作文本">L.4.4.3.2 操作文本<a class="headerlink" href="#l4432-操作文本" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>让我们看看如何在文本正文级别进一步增强文本。 请注意，以下属性仅适用于整个文本正文，因此不能应用于特定段落或在文本正文中运行。 这些属性如下：</p>
+<ul>
+<li>
+<p>Text Warping: 文本区域内的文本根据预定义的形状自行扭曲。 该形状位于前面描述的边界框内。 这种效果称为文本扭曲，并在 DrawingML 中进一步定义其预设形状。</p>
+<p><a class="glightbox" href="../imgs/text-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="1234" src="../imgs/text-6.png" /></a></p>
+</li>
+<li>
+<p>3D Text: 文本可以根据 3D 场景进行描述。 使用此标签提供了三个基本选项:</p>
+<ul>
+<li>文本驻留在 3D 场景中，但作为平面文本.</li>
+<li>文本可以驻留在 3D 场景中，并对其应用 3D 效果（例如斜角或挤压）。</li>
+<li>文本位于 3D 场景之上。</li>
+</ul>
+</li>
+<li>
+<p>Rotated and Upright Text: 可以指定应用于文本区域内的文本的特定旋转。 请注意，这与应用于文本区域所在形状的旋转不同。 如果未专门设置此属性，则使用容器形状的旋转。</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Manipulating the Text</strong></p>
+<p>Let's look at the ways in which the text can be further enhanced at the text body level. Note that the properties that follow apply only to the text body as a whole and thus cannot be applied to a specific paragraph or run within the text body. Theses properties are as follows:</p>
+<ul>
+<li>
+<p>Text Warping: Text within the text area is made to distort itself according to a predefined shape. This shape resides within the bounding box described earlier. This effect is known as text warping and has its preset shapes defined further within DrawingML.</p>
+<p><a class="glightbox" href="../imgs/text-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="1234" src="../imgs/text-6.png" /></a></p>
+</li>
+<li>
+<p>3D Text: Text can be described with respect to a 3D scene. Using this tag provides three basic options:</p>
+<ul>
+<li>The text resides within a 3D scene, but as planar text.</li>
+<li>The text is allowed to reside within the 3D scene and has 3D effects (such as bevel or extrusion) applied to it.</li>
+<li>The text resides on top of a 3D scene.</li>
+</ul>
+</li>
+<li>
+<p>Rotated and Upright Text: A particular rotation can be specified that is applied to the text within the text area. Note that this is different from the rotation that is applied to the shape within which the text area resides. If this attribute is not specifically set then the rotation of the container shape is used.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4433-向后和向前兼容性">L.4.4.3.3 向后和向前兼容性<a class="headerlink" href="#l4433-向后和向前兼容性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在考虑对过去设计和未来创新的支持时，以下领域值得关注。</p>
+<ul>
+<li>From WordArt: 这是特定于处理以前的艺术字文本的。 既然文本被简单地描述为形状，则不需要特定于艺术字的描述。 然而，需要确定哪些文本来自旧的艺术字样式，以防需要以旧格式写回它们。</li>
+<li>Future Extensions: 未来扩展的能力已通过 ext 标签提供给 body 属性标签。 这可以以最广泛的方式使用，因为它是一个复杂的类型，因此可以描述最复杂的未来属性。 请注意，下面的每个模式子条款都有自己的 ext 标签(tag)。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Backwards and Forwards Compatibility</strong></p>
+<p>The following areas are of interest when considering support for both past design and future innovation.</p>
+<ul>
+<li>From WordArt: This is specific to dealing with previous WordArt text. Now that text is described as simply a shape, there is no need for a WordArt-specific description. There is, however, the need to identify which pieces of text were from the old WordArt styles in case there is the need to write them back out in their old format.</li>
+<li>Future Extensions: The ability for future extensions has been provided to the body property tag via the ext tag. This can be used the widest way possible as it is a complex type and can thus describe the most complex future properties. Note that each of the schema subclauses below have their own ext tag.</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4434-段落级别属性">L.4.4.3.4 段落级别属性<a class="headerlink" href="#l4434-段落级别属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在本小节中，我们探讨可以将哪些类型的属性附加到<strong>整个段落</strong>。 与前面描述的正文标记的属性相比，段落级属性允许对文本进行更精细的描述。 请记住，可以在此级别应用的属性不是正文或运行级别的重复项，而是仅对段落元素是<strong>唯一</strong>的。 再次需要注意的是，其中一些段落级属性作为段落属性标记的属性应用，而其他属性则表示为子元素。 应用每个属性的具体方法可以在上面列出的模式(schema)中找到。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">     </span>《=<span style="color: #bbbbbb"> </span>本条涵盖的主要内容
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:r&gt;&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Paragraph-Level Properties</strong></p>
+<p>In this subclause, we explore what sorts of properties can be attached to a paragraph as a whole. Paragraph-level properties allow for a more granular description of the text than the properties of the body tag described earlier. Keep in mind that the properties that can be applied at this level are not duplicates of the body or run levels, but unique only to the paragraph element. Once again, it should be noted that some of these paragraph-level properties are applied as attributes to the paragraph property tag while others are expressed as child elements. The specific method by which each property is applied can be found in the schemas listed above.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">     </span>《=<span style="color: #bbbbbb"> </span>Main<span style="color: #bbbbbb"> </span>element<span style="color: #bbbbbb"> </span>covered<span style="color: #bbbbbb"> </span>in<span style="color: #bbbbbb"> </span>this<span style="color: #bbbbbb"> </span>subclause<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:r&gt;&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4435-间距对齐方式和方向">L.4.4.3.5 间距、对齐方式和方向<a class="headerlink" href="#l4435-间距对齐方式和方向" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>XML 文件格式允许以行间距的形式指定行之间的间距，也可以通过边距和特殊的前后间距指定段落外的间距。 除此之外，还可以指定段落开头的缩进间距。</p>
+<p>标准对齐选项包括左对齐、右对齐、居中、两端对齐和分布式。 对齐对齐会导致每行文本被拉伸到某个点。 为了确保短行保持可读性，它们不会被拉伸。 分布式对齐非常相似，但会拉伸每一行，无论该行的长度如何。</p>
+<p>使用特定的 rtl 标签(tag)将文本方向指定为从左到右（默认）或从右到左。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Spacing, Alignment, and Direction</strong></p>
+<p>The XML file format allows for the specifying of spacing both between lines in the form of line spacing, and also outside the paragraph via margins and special before/after spacing. In addition to this, there is also the ability to specify indent spacing for the beginning of the paragraph.</p>
+<p>The standard alignment options include left-aligned, right-aligned, centered, justified, and distributed. Justified alignment causes each line of text to be stretched out to a certain point. To ensure that short lines remain readable, they are not stretched. Distributed alignment is quite similar, but stretches every line, regardless of that line's length.</p>
+<p>Text direction is specified as either left-to-right (the default) or right-to-left using the specific rtl tag.</p>
+</div>
+</div>
+</div>
+<h3 id="l4436-制表符和换行符">L.4.4.3.6 制表符和换行符<a class="headerlink" href="#l4436-制表符和换行符" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>当默认制表符不足以容纳相关段落时，可以选择在 XML 文件格式中包含自定义制表位。 为此所需的信息是默认制表符大小属性和显示适用于该段落的所有制表符停止位置的完整制表符停止列表。 请记住，如果文件格式中未明确声明制表位，则在需要制表符时应用程序的业务逻辑必须使用其自己的默认位置。</p>
+<p>换行符是一个标签，通知应用程序是否应根据拉丁语法规则或东亚语法规则将文本字符串分成多行。 东亚选项使用避头尾设置来确定是否允许单词作为文本行的开头或结尾。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Tabs and Line Breaks</strong></p>
+<p>When the default tabs are not sufficient for the paragraph in question there is the option of including custom tab stops in the XML file format. The information required for this is both a default tab size attribute and a full tab stop list showing all tab stop positions that apply to this paragraph. Keep in mind that if tab stops are not explicitly stated in the file format that the business logic of the application must use its own default positions if tabs are needed.</p>
+<p>Line break is a tag that informs the application as to whether it should break up a string of text onto multiple lines based on Latin grammar rules or East Asian grammar rules. The East Asian option uses the Kinsoku settings to determine whether a word is allowed to begin or end a line of text.</p>
+</div>
+</div>
+</div>
+<h3 id="l4437-添加项目符号">L.4.4.3.7 添加项目符号<a class="headerlink" href="#l4437-添加项目符号" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>项目符号是按段落指定的，因此可以在单个文本正文中混合和匹配项目符号，以显示为连贯的文本组。 可用的子弹类型有：</p>
+<ul>
+<li>
+<p>字符项目符号(Character Bullets): 使用字体字符来表示项目符号，并且可以设置为以任何大小（文本百分比）、颜色（所有可用，包括主题颜色）和字体显示。 属性有项目符号颜色、项目符号大小、项目符号字体、项目符号字符（代表实际项目符号）</p>
+<p><a class="glightbox" href="../imgs/text-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-7.png" /></a></p>
+</li>
+<li>
+<p>自动编号项目符号(Auto-Numbered Bullets): 使用应用程序逻辑仅使用项目符号方案和起始编号将一系列数字/字符分配给特定的项目符号项目。 （使用起始编号时，起始编号后列出的所有项目符号段落都会根据最后已知的起始编号自动编号。此自动编号的范围仅在其当前文本正文内，起始编号不会延续 到不同的文本正文。）属性包括“开始位置”编号、“项目符号方案”（字母、罗马数字等）、“项目符号颜色”、“项目符号大小”和“项目符号字体”。</p>
+<p><a class="glightbox" href="../imgs/text-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-8.png" /></a></p>
+</li>
+<li>
+<p>图片项目符号(Blip Bullets): 使用图片来表示项目符号项目。 这种类型的应用项目符号唯一可用的附加属性是大小（文本的百分比）。 如果该图形不在应用程序的标准图形集中，则附加的图形将转换为 PNG 格式，放置在文档容器中，并给出一个稍后用于引用该图像的关系 ID。 属性是嵌入 id（对应于项目符号图形）和项目符号大小。</p>
+<p><a class="glightbox" href="../imgs/text-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-9.png" /></a></p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Adding Bullets</strong></p>
+<p>Bullets are specified per paragraph, so bullets can be mixed and matched within a single text body to appear as a coherent text group. The types of bullets available are:</p>
+<ul>
+<li>
+<p>Character Bullets: Uses a font character to denote a bullet and can be set to appear in any size (percentage of text), color (all available including theme colors), and font. The properties are Bullet Color, Bullet Size, Bullet Font Typeface, Bullet Character (represents the actual bullet)</p>
+<p><a class="glightbox" href="../imgs/text-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-7.png" /></a></p>
+</li>
+<li>
+<p>Auto-Numbered Bullets: Uses the application logic to assign a series of numbers/characters to a specific bulleted item using just a bullet scheme and a starting number. (When a starting number is used, all bulleted paragraphs listed after the start number are automatically numbered based on this last known start number. The scope of this auto-numbering is only within its current text body, no start at number would ever carry over to a different text body.) The properties are Start At number, Bullet Scheme (letters, roman numerals, etc.), Bullet Color, Bullet Size, and Bullet Font Typeface.</p>
+<p><a class="glightbox" href="../imgs/text-8.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-8.png" /></a></p>
+</li>
+<li>
+<p>Blip Bullets: Uses a picture to denote a bulleted item. The only additional property available with this type of applied bullet is the size (percentage of text). If the graphic is not in the applications tandard set of graphics then the attached graphic is converted to a PNG format, placed in the document container and is given a relationship id that is used later to reference the image. The properties are Embed id (corresponds to a bullet graphic) and Bullet Size</p>
+<p><a class="glightbox" href="../imgs/text-9.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-9.png" /></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4438-run级和字符级属性">L.4.4.3.8 Run级和字符级属性<a class="headerlink" href="#l4438-run级和字符级属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在本小节中，我们将探讨此 XML 框架中可用的最精细的文本属性，即在文本运行和字符级别描述的属性。 此级别通常是将文本分解为不同格式的部分的级别，因为最常用的文本属性几乎都驻留在此级别。 这允许表示一些非常详细的格式。 同样，应该注意的是，为了保持一致性，其中一些运行和字符级别属性作为属性应用于运行属性标记，而其他属性则表示为子元素。 应用每个属性的具体方法可以在上面列出的模式中找到。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">        </span>《=<span style="color: #bbbbbb"> </span>本条涵盖的主要内容(main<span style="color: #bbbbbb"> </span>element)
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;&lt;/a:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Run-Level and Character-Level Properties</strong></p>
+<p>In this subclause, we'll explore the most granular text properties available in this XML framework, namely those described at the text run and character level. This level is usually the level in which text is broken up into differently formatted parts, because the most commonly used text properties almost all reside at this level. This allows for some very detailed formatting to be represented. Again, it should be noted that for consistency that some of these run and character level properties are applied as attributes to the run property tag while others are expressed as child elements. The specific method by which each property is applied can be found in the schemas listed above.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:lstStyle</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:r&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:rPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb">        </span>《=<span style="color: #bbbbbb"> </span>Main<span style="color: #bbbbbb"> </span>element<span style="color: #bbbbbb"> </span>covered<span style="color: #bbbbbb"> </span>in<span style="color: #bbbbbb"> </span>this<span style="color: #bbbbbb"> </span>subclause<span style="color: #bbbbbb"> </span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Your<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>here!<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;&lt;/a:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4439-视觉特性">L.4.4.3.9 视觉特性<a class="headerlink" href="#l4439-视觉特性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>当寻求格式化一系列文本时，可能需要指定的第一个属性是字体。 XML 文件格式不仅允许指定拉丁字体，还允许指定东亚、复杂脚本和符号字体。 这四个字体桶为应用程序提供了附加信息，用于以适合特定字体的方式布局文本。 除了实际使用的字体之外，还有字体的大小。 要指定这一点，只需使用 <code>sz</code> 属性和一个以磅为单位的大小的 <code>1/100</code> 的值。</p>
+<p>XML 框架中允许的其他常见格式属性包括<strong>粗体</strong>、<strong>斜体</strong>、<strong>下划线</strong>和<strong>删除线</strong>。 粗体和斜体属性的使用只需通过布尔值 <code>0</code> 或 <code>1</code> 即可。但是，使用<strong>下划线和删除线可以进行更具体的选择</strong>。 下划线有 17 个值，范围从单线到波浪双线。 除了指定要使用的下划线样式之外，框架还可以指定下划线的填充属性。 </p>
+<p>它们是纯色、多色渐变和纹理填充。 对于删除线，有两种选择：单删除线和双删除线。</p>
+<p>当标准格式不够时，可以为特定的文本运行定义更复杂的效果。 这些属性的基本细分是<strong>线条属性</strong>、<strong>填充属性</strong>和<strong>效果属性</strong>。 每个区域中都封装有各种可定制的效果。 例如，快速查看线条属性，可以揭示指定颜色、渐变或图案填充以及应用的宽度和样式的能力。 沿着这些线，<strong>填充属性允许透明填充、实心填充、渐变填充、纹理填充甚至图片填充</strong>。 虽然这些功能本身就为 XML 文件格式在描述文本方面提供了足够的稳健性，但还可以使用其他功能。 由于文本被视为与形状相同，因此<strong>一串文本几乎可以应用所有形状效果</strong>，就像它是一个形状一样。 这些效果包括<strong>阴影</strong>、<strong>发光</strong>和<strong>反射</strong>，并放置在运行属性标签下的效果列表中。 下面提供了这些线条、填充和效果的示例。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:rPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ln&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span>《=<span style="color: #bbbbbb"> </span>这儿是线条特性
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:gradFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span>《=<span style="color: #bbbbbb"> </span>这儿是填充特性
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:effectLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:reflection</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span>《=<span style="color: #bbbbbb"> </span>这儿是阴影(Effect)属性
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:effectLst&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:rPr&gt;</span>
+</code></pre></div>
+<p>一些额外的属性值得注意：</p>
+<ul>
+<li>Minimum kerning size: 这指定了仍然发生字距调整的最小字体大小。 当没有标签存在时，默认值为 0，允许任何文本大小的<strong>字距调整</strong>。</li>
+<li>Spacing between characters: 这里的单位与字体大小的单位相同。 沿着指定水平间距的思路，可以通过基线标签指定垂直间距。 这通常用于下标和上标文本，并以与字体大小相同的单位指定。</li>
+<li>Capitalization and Normalize: 大写将字符的大小写设置为全部小写字母或全部大写字母。 对于此属性，除了“无(none)”设置之外，只有这两个设置，此时此属性将被忽略。 标准化高度采用所有较短的字符并调整它们的高度，以便它们与较高的字符相同。 该属性通过布尔值设置。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Visual Properties</strong></p>
+<p>When looking to format a run of text the first property that one might need to specify would be the font typeface. The XML file format allows for the specification of not only Latin Fonts but also East Asian, Complex Script, and Symbol fonts as well. These four font buckets give the application additional information that is used to layout text in a manner fitting for the specific font. Along with the actual font being used, comes the size of the font. To specify this simply use the sz attribute and along with a value that is 1/100<sup>th</sup> of the size in points.</p>
+<p>Other common formatting properties allowed in the XML framework are bold, italic, underline and strikethrough. The use of both the bold and italic properties is simply via a Boolean value of 0 or 1. The usage of the underline and strikethrough, however, allow a more specific selection to be made. There are 17 values for underline, which range from a single line to wavy double lines. In addition to specifying the style of underline that is to be used, the framework can also specify fill properties for the underline. </p>
+<p>These are solid color, multi-color gradient, and texture fill. For strikethrough, there are two options: single and double strike through.</p>
+<p>When standard formatting isn't adequate, more complex effects can be defined for a specific run of text. The basic breakdown for these is line properties, fill properties and effect properties. Encapsulated within each of these areas is a wide range of customizable effects. A quick look at line properties, for example, reveals the ability to specify a color, gradient, or pattern fill, along with a width and style applied. Along these lines fill properties allows for transparent fill, solid fill, gradient fill, texture fill and even picture fill. While these features alone give the XML file format plenty of robustness in describing text, other features are also available. Because text is treated the same as a shape, a run of text can have virtually all shape effects applied to it just as if it were a shape. These effects include shadow, glow, and reflection, and are placed in an effect list under the run properties tag. An example of what these lines, fills and effects might look like is provided below.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:rPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:ln&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:solidFill</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span>《=<span style="color: #bbbbbb"> </span>Line<span style="color: #bbbbbb"> </span>properties<span style="color: #bbbbbb"> </span>here
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:ln&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:gradFill&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:gsLst</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span>《=<span style="color: #bbbbbb"> </span>Fill<span style="color: #bbbbbb"> </span>properties<span style="color: #bbbbbb"> </span>here
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:gradFill&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:effectLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:reflection</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span><span style="color: #bbbbbb"> </span>《=<span style="color: #bbbbbb"> </span>Effect<span style="color: #bbbbbb"> </span>properties<span style="color: #bbbbbb"> </span>here
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:effectLst&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:rPr&gt;</span>
+</code></pre></div>
+<p>A few additional properties are worth noting:</p>
+<ul>
+<li>Minimum kerning size: This specifies the smallest font size at which kerning still occurs. When no tag is present for this the default value is 0, allowing kerning at any text size.</li>
+<li>Spacing between characters: The units here are the same as are used for font size. Along the lines of specifying horizontal spacing, vertical spacing can be specified via the baseline tag. This is typically used for subscript and superscript text and is specified in the same units as font size.</li>
+<li>Capitalization and Normalize: Capitalization sets the case of the character to either all small caps or all large caps. For this property there are only these two settings aside from the "none" setting at which point this property is ignored. Normalize height takes all shorter characters and adjusts their height up so that they are the same as taller characters. This property is set via a Boolean value.</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l44310-交互性属性">L.4.4.3.10 交互性属性<a class="headerlink" href="#l44310-交互性属性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<dl>
+<dt>超链接(Hyperlinks)</dt>
+<dd>
+<p>XML 文件格式允许输入通过单击或鼠标悬停激活的超链接。 这两个标签分别是 <code>HyperlinkClick</code> 和 <code>HyperlinkMouseOver</code>。 它们都允许指定指向另一个资源的链接，就像在常见网站上找到的链接一样。</p>
+</dd>
+<dt>拼写和智能标签(Spelling and Smart Tags)</dt>
+<dd>
+<p>尽管拼写很大程度上是文本编辑的应用程序定义的一部分，并且最有可能在应用程序本身内完成，但可以通过几种方法将拼写设置和首选项保留在文件格式中。 一种方法是通过拼写错误位，它只是保存是否存在已知的拼写错误。 接下来是拼写脏位。 每当用户输入新文本并且应用程序没有机会检查这段文本上的拼写错误时，就会设置此设置。 最后，在这个领域中，我们实际上有一个用户偏好，即不进行校样，该偏好会在下次打开文档时保留。 这允许用户指定他们不想检查拼写的单词。 与拼写检查一起出现的是智能标签的概念，必须像拼写错误一样检查智能标签。 为此，有两个相关标签。 第一个是智能标签清理，它允许设置一个布尔值，以确定是否已检查这部分文本是否存在新的智能标签。 接下来是实际的智能标签 ID。 一旦一段文本被确定为智能标签，就会分配一个智能标签 ID，该 ID 指向实际的智能标签信息。</p>
+</dd>
+</dl>
+</div>
+<div class="tabbed-block">
+<p><strong>Properties for Interactivity</strong></p>
+<p>Hyperlinks: The XML file format allows for the inputting of hyperlinks that are activated by either click or mouse over. These two tags are HyperlinkClick and HyperlinkMouseOver, respectfully. They both allow for the specifying of a link to another resource very much like those found on a common website.</p>
+<p>Spelling and Smart Tags: Although spelling is very much an application-defined part of text editing and is most likely to be done within the application itself there are a few ways that spelling settings and preferences can be persisted within the file format. One way is through the spelling error bit, which simply saves whether there is a known spelling mistake. The next is the spelling dirty bit. This gets set whenever the user has entered new text and the application has not had a chance to check for spelling errors on this piece of text. Lastly, in this realm we actually have a user preference of no proofing that is persisted for the next time a document is opened. This allows the user to specify a word that they do not want to have checked for spelling. Along with spell-checking comes the notion of smart tags which must be checked for just like spelling mistakes. For this there are two related tags. The first is the smart tag clean, which allows for a boolean value to be set determining if this portion of text has been checked for the presence of new smart tags. The next is the actual smart tag id. Once a piece of text has been determined to be a smart tag then a smart tag id is assigned which points to the actual smart tag information.</p>
+</div>
+</div>
+</div>
+<h3 id="l44311-国际语言支持">L.4.4.3.11 国际语言支持<a class="headerlink" href="#l44311-国际语言支持" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>存在语言 ID 的概念，它只是一个帮助应用程序布置文本的值。 对此有帮助的标签是语言 ID 标签和备用语言 ID 标签。 这些共同使得文件格式更加稳健，并且可以针对单次文本处理多种语言。 此外，还有 <code>kumimoji</code> 标签，它通过指定数字是与文本垂直显示（默认）还是水平显示来帮助东亚文本的布局。 下面提供了应用了组字词的一系列文本的插图。</p>
+<p><a class="glightbox" href="../imgs/text-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-10.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>International Language Support</strong></p>
+<p>There exists the notion of the language id, which is simply a value that assists the application in laying out the text. The tags that help with this are the language id tag and the alternate language id tag. Together, these allow the file format to be robust and handle multiple languages for a single run of text. In addition, there is also the kumimoji tag, which aids with the layout of East Asian text by specifying whether numbers appear vertically with text (default) or horizontally. An illustration of a run of text with kumimoji applied is provided below.</p>
+<p><a class="glightbox" href="../imgs/text-10.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/text-10.png" /></a></p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

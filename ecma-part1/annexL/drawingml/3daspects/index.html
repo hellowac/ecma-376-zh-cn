@@ -1,0 +1,3837 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../tables/">
+      
+      
+        <link rel="next" href="../coordinate/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.6 3D方面 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l46-3d方面" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.6 3D方面
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l461-介绍" class="md-nav__link">
+    L.4.6.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l462-3-d" class="md-nav__link">
+    L.4.6.2 3-D
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.2 3-D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4621-3-d-scene" class="md-nav__link">
+    L.4.6.2.1 3-D Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4622-camera" class="md-nav__link">
+    L.4.6.2.2 Camera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4623-light" class="md-nav__link">
+    L.4.6.2.3 Light
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4624-backdrop" class="md-nav__link">
+    L.4.6.2.4 Backdrop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l463-styles" class="md-nav__link">
+    L.4.6.3 Styles
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.3 Styles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4631-simple-types" class="md-nav__link">
+    L.4.6.3.1 Simple Types
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.3.1 Simple Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l46311-bevel-type" class="md-nav__link">
+    L.4.6.3.1.1 Bevel Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46312-preset-material-type" class="md-nav__link">
+    L.4.6.3.1.2 Preset Material Type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4632-complex-types" class="md-nav__link">
+    L.4.6.3.2 Complex Types
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.3.2 Complex Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l46321-bevel" class="md-nav__link">
+    L.4.6.3.2.1 Bevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46322-shape-3-d" class="md-nav__link">
+    L.4.6.3.2.2 Shape 3-D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46323-flat-text" class="md-nav__link">
+    L.4.6.3.2.3 Flat Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46324-group-text-3-d" class="md-nav__link">
+    L.4.6.3.2.4 Group, Text 3-D
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_def/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pictures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l461-介绍" class="md-nav__link">
+    L.4.6.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l462-3-d" class="md-nav__link">
+    L.4.6.2 3-D
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.2 3-D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4621-3-d-scene" class="md-nav__link">
+    L.4.6.2.1 3-D Scene
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4622-camera" class="md-nav__link">
+    L.4.6.2.2 Camera
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4623-light" class="md-nav__link">
+    L.4.6.2.3 Light
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4624-backdrop" class="md-nav__link">
+    L.4.6.2.4 Backdrop
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l463-styles" class="md-nav__link">
+    L.4.6.3 Styles
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.3 Styles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4631-simple-types" class="md-nav__link">
+    L.4.6.3.1 Simple Types
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.3.1 Simple Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l46311-bevel-type" class="md-nav__link">
+    L.4.6.3.1.1 Bevel Type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46312-preset-material-type" class="md-nav__link">
+    L.4.6.3.1.2 Preset Material Type
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4632-complex-types" class="md-nav__link">
+    L.4.6.3.2 Complex Types
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.6.3.2 Complex Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l46321-bevel" class="md-nav__link">
+    L.4.6.3.2.1 Bevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46322-shape-3-d" class="md-nav__link">
+    L.4.6.3.2.2 Shape 3-D
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46323-flat-text" class="md-nav__link">
+    L.4.6.3.2.3 Flat Text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l46324-group-text-3-d" class="md-nav__link">
+    L.4.6.3.2.4 Group, Text 3-D
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l46-3d方面">L.4.6 3D方面<a class="headerlink" href="#l46-3d方面" title="Permanent link">&para;</a></h1>
+<p><strong>3D Aspects</strong></p>
+<h2 id="l461-介绍">L.4.6.1 介绍<a class="headerlink" href="#l461-介绍" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>DrawingML 的这一方面主要处理 3D 方面，可以分为两个主题：与对象关联的 3D 属性，以及与对象关联的样式信息。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Introduction</strong></p>
+<p>This aspect of DrawingML deals mainly with the 3-D aspects, and can be broken down into two topics: 3-D properties associated with an object, and the styling information associated with an object.</p>
+</div>
+</div>
+</div>
+<h2 id="l462-3-d">L.4.6.2 3-D<a class="headerlink" href="#l462-3-d" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Here we'll explain the 3-D definitions contained in DrawingML. The goal here is to define a 3-D scene so that lighting calculations can be made on the geometry within the scene.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>3-D</strong></p>
+<p>Here we'll explain the 3-D definitions contained in DrawingML. The goal here is to define a 3-D scene so that lighting calculations can be made on the geometry within the scene.</p>
+</div>
+</div>
+</div>
+<h3 id="l4621-3-d-scene">L.4.6.2.1 3-D Scene<a class="headerlink" href="#l4621-3-d-scene" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Every 3-D scene consists of a camera, a light, and a backdrop, that define the associated properties of the scene. The complex type, CT_Scene3D, defines the scene as follows:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Scene3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:cname=</span><span style="color: #BA2121">&quot;Scene3D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;camera&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Camera&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;lightRig&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Backdrop&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ext&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_OfficeArtExtension&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>As was stated above, the complex type, CT_Scene3D, contains a camera, a set of lights (the light rig), and a backdrop. Those familiar with 3-D rendering techniques understand the usage of a camera and set of lights, or light rig. The backdrop, however, is a special structure (which is defined below) that allows for a special plane to render certain effects that need to be rendered together in a single plane. The final element of a CT_Scene3D is the ext element. This is a DrawingML structure used for future extensibility. This element is seen in other complex types dealing with the 3-D scene as well.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>3-D Scene</strong></p>
+<p>Every 3-D scene consists of a camera, a light, and a backdrop, that define the associated properties of the scene. The complex type, CT_Scene3D, defines the scene as follows:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Scene3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:cname=</span><span style="color: #BA2121">&quot;Scene3D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;camera&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Camera&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;lightRig&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Backdrop&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ext&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_OfficeArtExtension&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>As was stated above, the complex type, CT_Scene3D, contains a camera, a set of lights (the light rig), and a backdrop. Those familiar with 3-D rendering techniques understand the usage of a camera and set of lights, or light rig. The backdrop, however, is a special structure (which is defined below) that allows for a special plane to render certain effects that need to be rendered together in a single plane. The final element of a CT_Scene3D is the ext element. This is a DrawingML structure used for future extensibility. This element is seen in other complex types dealing with the 3-D scene as well.</p>
+</div>
+</div>
+</div>
+<h3 id="l4622-camera">L.4.6.2.2 Camera<a class="headerlink" href="#l4622-camera" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex type, CT_Camera, defines a camera within the 3-D scene. A camera is based on a preset, with an optional rotation, field-of-view, and zoom, which all act as overrides for the preset values. A camera is defined in the following way:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Camera&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;rot&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_SphereCoords&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:dataStructure=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;prst&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PresetCameraType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;required&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;fov&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_FOVAngle&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;zoom&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositivePercentage&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;100%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>The only complex type contained in the camera, CT_SphereCoords, is a complex type defined elsewhere within the DrawingML. There are three simple types associated with a camera:</p>
+<ul>
+<li>ST_FOVAngle (field of view angle), which is a positive angle between 0 and 180 in 60,000th of a degree.</li>
+<li>ST_PositivePercentage (zoom), which is defined as a percentage.</li>
+<li>ST_PresentCameraType (preset camera)</li>
+</ul>
+<p>Figure 1 below shows some different presets applied to a shape.</p>
+<p><a class="glightbox" href="../imgs/3d-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/3d-1.png" /></a></p>
+<p>Figure 7: Different default cameras applied to a shape</p>
+<p>The available options for ST_PresetCameraType are as follows:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>legacyObliqueTopLeft
+legacyObliqueTop
+legacyObliqueLeft
+legacyObliqueFront
+legacyObliqueRight
+legacyObliqueBottomLeft
+legacyObliqueBottom
+legacyObliqueBottomRight
+legacyPerspectiveTopLeft
+legacyPerspectiveTop
+legacyPerspectiveTopRight
+legacyPerspectiveLeft
+legacyPerspectiveFront
+legacyPerspectiveRight
+legacyPerspectiveBottomLeft
+legacyPerspectiveBottom
+legacyPerspectiveBottomRight
+orthographicFront
+isomentricTopUp
+isometricTopDown
+isomentricBottomDown
+isometricLeftUp
+isometricLeftDown
+isometricRightUp
+isometricRightDown
+isometricOffAxis1Left
+isometricOffAxis1Right
+isometricOffAxis1Top
+isometricOffAxis2Left
+isometricOffAxis2Right
+isometricOffAxis2Top
+isometricOffAxis3Left
+isometricOffAxis3Right
+isometricOffAxis3Bottom
+isometricOffAxis4Left
+isometricOffAxis4Right
+isometricOffAxis4Bottom
+obliqueTopLeft
+obliqueTopRight
+obliqueLeft
+obliqueRight
+obliqueBottomLeft
+obliqueBottom
+obliqueBottomRight
+perspectiveFront
+perspectiveLeft
+perspectiveRight
+perspectiveAbove
+perspectiveBelow
+perspectiveAboveLeftFacing
+perspectiveAboveRightFacing
+perspectiveContrastingRightFacing
+perspectiveContrastingLeftFacing
+perspectiveHeroicLeftFacing
+perspectiveHeroicRightFacing
+perspectiveHeroicExtremeLeftFacing
+perspectiveHeroicExtremeRightFacing
+perspectiveRelaxed
+perspectiveRelaxedModerately
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Camera</strong></p>
+<p>The complex type, CT_Camera, defines a camera within the 3-D scene. A camera is based on a preset, with an optional rotation, field-of-view, and zoom, which all act as overrides for the preset values. A camera is defined in the following way:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Camera&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;rot&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_SphereCoords&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:dataStructure=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;prst&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PresetCameraType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;required&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;fov&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_FOVAngle&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;zoom&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositivePercentage&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;100%&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>The only complex type contained in the camera, CT_SphereCoords, is a complex type defined elsewhere within the DrawingML. There are three simple types associated with a camera:</p>
+<ul>
+<li>ST_FOVAngle (field of view angle), which is a positive angle between 0 and 180 in 60,000th of a degree.</li>
+<li>ST_PositivePercentage (zoom), which is defined as a percentage.</li>
+<li>ST_PresentCameraType (preset camera)</li>
+</ul>
+<p>Figure 1 below shows some different presets applied to a shape.</p>
+<p><a class="glightbox" href="../imgs/3d-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/3d-1.png" /></a></p>
+<p>Figure 7: Different default cameras applied to a shape</p>
+<p>The available options for ST_PresetCameraType are as follows:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>legacyObliqueTopLeft
+legacyObliqueTop
+legacyObliqueLeft
+legacyObliqueFront
+legacyObliqueRight
+legacyObliqueBottomLeft
+legacyObliqueBottom
+legacyObliqueBottomRight
+legacyPerspectiveTopLeft
+legacyPerspectiveTop
+legacyPerspectiveTopRight
+legacyPerspectiveLeft
+legacyPerspectiveFront
+legacyPerspectiveRight
+legacyPerspectiveBottomLeft
+legacyPerspectiveBottom
+legacyPerspectiveBottomRight
+orthographicFront
+isomentricTopUp
+isometricTopDown
+isomentricBottomDown
+isometricLeftUp
+isometricLeftDown
+isometricRightUp
+isometricRightDown
+isometricOffAxis1Left
+isometricOffAxis1Right
+isometricOffAxis1Top
+isometricOffAxis2Left
+isometricOffAxis2Right
+isometricOffAxis2Top
+isometricOffAxis3Left
+isometricOffAxis3Right
+isometricOffAxis3Bottom
+isometricOffAxis4Left
+isometricOffAxis4Right
+isometricOffAxis4Bottom
+obliqueTopLeft
+obliqueTopRight
+obliqueLeft
+obliqueRight
+obliqueBottomLeft
+obliqueBottom
+obliqueBottomRight
+perspectiveFront
+perspectiveLeft
+perspectiveRight
+perspectiveAbove
+perspectiveBelow
+perspectiveAboveLeftFacing
+perspectiveAboveRightFacing
+perspectiveContrastingRightFacing
+perspectiveContrastingLeftFacing
+perspectiveHeroicLeftFacing
+perspectiveHeroicRightFacing
+perspectiveHeroicExtremeLeftFacing
+perspectiveHeroicExtremeRightFacing
+perspectiveRelaxed
+perspectiveRelaxedModerately
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4623-light">L.4.6.2.3 Light<a class="headerlink" href="#l4623-light" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex type, CT_LightRig, defines the lighting of the scene. A light rig consists of a preset direction, preset rig type, and a rotation that serves as an override for the direction. The complex type is defined as:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_LightRig&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;rot&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_SphereCoords&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;rig&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_LightRigType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;required&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;dir&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_LightRigDirection&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;required&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>Just as with the camera, the complex type, CT_SphereCoords, is defined elsewhere in the DrawingML. This element, however, serves as an override for the default light right direction. Figure 2 below shows some of the different preset lights applied to a shape.</p>
+<p><a class="glightbox" href="../imgs/3d-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3d2" src="../imgs/3d-2.png" /></a></p>
+<p>Figure 8: Some preset lights applied to a shape.</p>
+<p>The types of available light rigs are:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>legacyFlat1
+legacyFlat2
+legacyFlat3
+legacyFlat4
+legacyNormal1
+legacyNormal2
+legacyNormal3
+legacyNormal4
+legacyHarsh1
+legacyHarsh2
+legacyHarsh3
+legacyHarsh4
+threePoint
+balanced
+soft
+harsh
+flood
+contrasting
+morning
+sunrise
+sunset
+chilly
+freezing
+flat
+twoPoint
+glow
+brightRoom
+</code></pre></div>
+<p>The types of available present directions are:</p>
+<ul>
+<li>tl – top left</li>
+<li>t – top</li>
+<li>tr – top right</li>
+<li>l – left</li>
+<li>r – right</li>
+<li>bl – bottom left</li>
+<li>b – bottom</li>
+<li>br – bottom right</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Light</strong></p>
+<p>The complex type, CT_LightRig, defines the lighting of the scene. A light rig consists of a preset direction, preset rig type, and a rotation that serves as an override for the direction. The complex type is defined as:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_LightRig&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;rot&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_SphereCoords&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;rig&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_LightRigType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;required&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;dir&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_LightRigDirection&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;required&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>Just as with the camera, the complex type, CT_SphereCoords, is defined elsewhere in the DrawingML. This element, however, serves as an override for the default light right direction. Figure 2 below shows some of the different preset lights applied to a shape.</p>
+<p><a class="glightbox" href="../imgs/3d-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="3d2" src="../imgs/3d-2.png" /></a></p>
+<p>Figure 8: Some preset lights applied to a shape.</p>
+<p>The types of available light rigs are:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>legacyFlat1
+legacyFlat2
+legacyFlat3
+legacyFlat4
+legacyNormal1
+legacyNormal2
+legacyNormal3
+legacyNormal4
+legacyHarsh1
+legacyHarsh2
+legacyHarsh3
+legacyHarsh4
+threePoint
+balanced
+soft
+harsh
+flood
+contrasting
+morning
+sunrise
+sunset
+chilly
+freezing
+flat
+twoPoint
+glow
+brightRoom
+</code></pre></div>
+<p>The types of available present directions are:</p>
+<ul>
+<li>tl – top left</li>
+<li>t – top</li>
+<li>tr – top right</li>
+<li>l – left</li>
+<li>r – right</li>
+<li>bl – bottom left</li>
+<li>b – bottom</li>
+<li>br – bottom right</li>
+</ul>
+</div>
+</div>
+</div>
+<h3 id="l4624-backdrop">L.4.6.2.4 Backdrop<a class="headerlink" href="#l4624-backdrop" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex type, CT_Backdrop, defines a unique place in the 3-D scene. The backdrop is a flat 2-D plane that can hold effects, such as shadows, oriented in 3-D space. The points and vectors contained within the backdrop are relative to world space. The complex type is defined as:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Backdrop&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;anchor&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Point3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;norm&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Vector3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;up&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Vector3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ext&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_OfficeArtExtension&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>All of the complex types defined within this backdrop are defined elsewhere in DrawingML. As with other complex types, the backdrop also contains an element reserved for future extensibility.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Backdrop</strong></p>
+<p>The complex type, CT_Backdrop, defines a unique place in the 3-D scene. The backdrop is a flat 2-D plane that can hold effects, such as shadows, oriented in 3-D space. The points and vectors contained within the backdrop are relative to world space. The complex type is defined as:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Backdrop&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;anchor&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Point3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;norm&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Vector3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;up&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Vector3D&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ext&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_OfficeArtExtension&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+<p>All of the complex types defined within this backdrop are defined elsewhere in DrawingML. As with other complex types, the backdrop also contains an element reserved for future extensibility.</p>
+</div>
+</div>
+</div>
+<h2 id="l463-styles">L.4.6.3 Styles<a class="headerlink" href="#l463-styles" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The 3-D styles section encompasses the properties for 3-D shapes. These properties are those that get applied to the 3-D shape, such as a bevel or a contour, and they define the look of the shape in 3-D. A number of simple types used within the complex types of this group are defined below.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Styles</strong></p>
+<p>The 3-D styles section encompasses the properties for 3-D shapes. These properties are those that get applied to the 3-D shape, such as a bevel or a contour, and they define the look of the shape in 3-D. A number of simple types used within the complex types of this group are defined below.</p>
+</div>
+</div>
+</div>
+<h3 id="l4631-simple-types">L.4.6.3.1 Simple Types<a class="headerlink" href="#l4631-simple-types" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The simple types defined here outline the different presets available to the user. These presets are applied to the shapes through the complex type definitions that are outlined later.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Simple Types</strong></p>
+<p>The simple types defined here outline the different presets available to the user. These presets are applied to the shapes through the complex type definitions that are outlined later.</p>
+</div>
+</div>
+</div>
+<h4 id="l46311-bevel-type">L.4.6.3.1.1 Bevel Type<a class="headerlink" href="#l46311-bevel-type" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The simple type, ST_BevelPresetType, defines a preset bevel for a shape and some examples can be seen in figure 3. </p>
+<p><a class="glightbox" href="../imgs/3d-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/3d-3.png" /></a></p>
+<p>Figure 9: Different bevel types applied to a shape</p>
+<p>The different types of bevels available are:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>relaxedInset
+circle
+slope
+cross
+angle
+softRound
+convex
+coolSlant
+divot
+riblet
+hardedge
+artDeco
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Bevel Type</strong></p>
+<p>The simple type, ST_BevelPresetType, defines a preset bevel for a shape and some examples can be seen in figure 3. </p>
+<p><a class="glightbox" href="../imgs/3d-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/3d-3.png" /></a></p>
+<p>Figure 9: Different bevel types applied to a shape</p>
+<p>The different types of bevels available are:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>relaxedInset
+circle
+slope
+cross
+angle
+softRound
+convex
+coolSlant
+divot
+riblet
+hardedge
+artDeco
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="l46312-preset-material-type">L.4.6.3.1.2 Preset Material Type<a class="headerlink" href="#l46312-preset-material-type" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The simple type, ST_PresetMaterialType, defines a material for the shape. The material properties describe the surface appearance of the shape, and are used in lighting calculations to define exactly how the light interacts with the shape. Some example material types can be seen in figure 4.</p>
+<p><a class="glightbox" href="../imgs/3d-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/3d-4.png" /></a></p>
+<p>Figure 10: Different material types on a shape.</p>
+<p>The different preset material types are:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>legacyMatte
+legacyPlastic
+legacyMetal
+legacyWireframe
+matte
+plastic
+metal
+warmMatte
+translucentPowder
+powder
+dkEdge
+softEdge
+clear
+flat
+softMetal
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Preset Material Type</strong></p>
+<p>The simple type, ST_PresetMaterialType, defines a material for the shape. The material properties describe the surface appearance of the shape, and are used in lighting calculations to define exactly how the light interacts with the shape. Some example material types can be seen in figure 4.</p>
+<p><a class="glightbox" href="../imgs/3d-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/3d-4.png" /></a></p>
+<p>Figure 10: Different material types on a shape.</p>
+<p>The different preset material types are:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>legacyMatte
+legacyPlastic
+legacyMetal
+legacyWireframe
+matte
+plastic
+metal
+warmMatte
+translucentPowder
+powder
+dkEdge
+softEdge
+clear
+flat
+softMetal
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="l4632-complex-types">L.4.6.3.2 Complex Types<a class="headerlink" href="#l4632-complex-types" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex types in this area define the actual 3-D properties that get applied to a shape. These properties work together in order to define the geometry of a shape along with the scene related properties that define the look of the geometry of the shape.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Complex Types</strong></p>
+<p>The complex types in this area define the actual 3-D properties that get applied to a shape. These properties work together in order to define the geometry of a shape along with the scene related properties that define the look of the geometry of the shape.</p>
+</div>
+</div>
+</div>
+<h4 id="l46321-bevel">L.4.6.3.2.1 Bevel<a class="headerlink" href="#l46321-bevel" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex type, CT_Bevel, defines a bevel for a shape. The bevel consists of a width and a height value, along with a preset bevel. The complex type is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Bevel&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;w&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;76200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;h&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;76200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;prst&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_BevelPresetType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;circle&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Bevel</strong></p>
+<p>The complex type, CT_Bevel, defines a bevel for a shape. The bevel consists of a width and a height value, along with a preset bevel. The complex type is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Bevel&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;w&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;76200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;h&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;76200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;prst&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_BevelPresetType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;circle&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="l46322-shape-3-d">L.4.6.3.2.2 Shape 3-D<a class="headerlink" href="#l46322-shape-3-d" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex type, CT_Shape3D, defines all of the 3-D properties associated with an individual shape. A shape can have two bevels, one on the top and one on the bottom. An extrusion color also defined, which, when applied, applies a color to the surface of the extrusion. There is also an extrusion width, which defines the width of the extrusion. A contour color and width can be defined for the shape. A zaxi anchor is defined within the complex type and is the anchor relative to the shape’s top face. The shape 3-D complex type also holds a present material. Finally the shape 3-D contains another element just as in previous complex types, which is used for future extensibility. The CT_Shape3D complex type is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Shape3D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;bevelT&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Bevel&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;bevelB&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Bevel&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;extrusionClr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Color&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;contourClr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Color&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ext&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_OfficeArtExtension&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;z&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_Coordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;extrusionH&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;contourW&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;prstMaterial&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PresetMaterialType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;warmMatte&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Shape 3-D</strong></p>
+<p>The complex type, CT_Shape3D, defines all of the 3-D properties associated with an individual shape. A shape can have two bevels, one on the top and one on the bottom. An extrusion color also defined, which, when applied, applies a color to the surface of the extrusion. There is also an extrusion width, which defines the width of the extrusion. A contour color and width can be defined for the shape. A zaxi anchor is defined within the complex type and is the anchor relative to the shape’s top face. The shape 3-D complex type also holds a present material. Finally the shape 3-D contains another element just as in previous complex types, which is used for future extensibility. The CT_Shape3D complex type is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_Shape3D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;bevelT&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Bevel&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;bevelB&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Bevel&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;extrusionClr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Color&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;contourClr&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_Color&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ext&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_OfficeArtExtension&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:sequence&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;z&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_Coordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;extrusionH&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;contourW&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PositiveCoordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;prstMaterial&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_PresetMaterialType&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;warmMatte&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="l46323-flat-text">L.4.6.3.2.3 Flat Text<a class="headerlink" href="#l46323-flat-text" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The complex type, CT_FlatText, defines a text object in a 3-D scene that should be rendered as a normal, flat, text overlay outside of the 3-D scene. The complex type is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_FlatText&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;z&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_Coordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Flat Text</strong></p>
+<p>The complex type, CT_FlatText, defines a text object in a 3-D scene that should be rendered as a normal, flat, text overlay outside of the 3-D scene. The complex type is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:complexType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;CT_FlatText&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;z&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;ST_Coordinate&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">use=</span><span style="color: #BA2121">&quot;optional&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">default=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:complexType&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h4 id="l46324-group-text-3-d">L.4.6.3.2.4 Group, Text 3-D<a class="headerlink" href="#l46324-group-text-3-d" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The final structure to be defined is a group, EG_Text3D, which describes how text should be applied in the 3-D scene. If the text object is a member of the 3-D scene, then there are three different ways it can be displayed:</p>
+<ul>
+<li>If no EG_Text3D choice is provided, the text is rendered in a scene coherent manner and is rendered in perspective inside of the 3D scene as a planar shape inside the 3-D.</li>
+<li>If CT_Shape3D is provided then the text is scene coherent and fully 3-D.</li>
+<li>If CT_FlatText is provided then the text is drawn as normal 2-D text rendered on top of the 3-D scene.</li>
+</ul>
+<p>An EG_Text3D is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:group</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;EG_Text3D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:choice</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:cname=</span><span style="color: #BA2121">&quot;Text3DChoice&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:cnameMember=</span><span style="color: #BA2121">&quot;text3DChoice&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sp3dtype=&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_FlatText&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:choice&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:group&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><strong>Group, Text 3-D</strong></p>
+<p>The final structure to be defined is a group, EG_Text3D, which describes how text should be applied in the 3-D scene. If the text object is a member of the 3-D scene, then there are three different ways it can be displayed:</p>
+<ul>
+<li>If no EG_Text3D choice is provided, the text is rendered in a scene coherent manner and is rendered in perspective inside of the 3D scene as a planar shape inside the 3-D.</li>
+<li>If CT_Shape3D is provided then the text is scene coherent and fully 3-D.</li>
+<li>If CT_FlatText is provided then the text is drawn as normal 2-D text rendered on top of the 3-D scene.</li>
+</ul>
+<p>An EG_Text3D is defined in the following manner:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;xsd:group</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;EG_Text3D&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsd:choice</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:cname=</span><span style="color: #BA2121">&quot;Text3DChoice&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">oxsd:cnameMember=</span><span style="color: #BA2121">&quot;text3DChoice&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsd:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sp3dtype=&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">type=</span><span style="color: #BA2121">&quot;CT_FlatText&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxOccurs=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsd:choice&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsd:group&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

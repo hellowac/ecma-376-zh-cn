@@ -1,0 +1,3724 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../shape_pr/">
+      
+      
+        <link rel="next" href="../pictures/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>L.4.9 形状定义和属性 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#l49-形状定义和属性" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              L.4.9 形状定义和属性
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36" id="__nav_2_36_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_36_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36">
+            <span class="md-nav__icon md-icon"></span>
+            附录L:入门读物
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.1 WordprocessingML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.2 SpreadsheetML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.3 PresentationML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_36_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    L.4 DrawingML 简介
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_36_5" id="__nav_2_36_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_36_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_36_5">
+            <span class="md-nav__icon md-icon"></span>
+            L.4 DrawingML 简介
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.1 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.2 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.3 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.4 文本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.5 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3daspects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.6 3D方面
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_pr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.8 形状属性和效果
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    L.4.9 形状定义和属性
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l491-介绍" class="md-nav__link">
+    L.4.9.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l492-坐标系" class="md-nav__link">
+    L.4.9.2 坐标系
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.2 坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4921-文档坐标系" class="md-nav__link">
+    L.4.9.2.1 文档坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4922-形状坐标系" class="md-nav__link">
+    L.4.9.2.2 形状坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4923-路径坐标系" class="md-nav__link">
+    L.4.9.2.3 路径坐标系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l493-指定预设形状" class="md-nav__link">
+    L.4.9.3 指定预设形状
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.3 指定预设形状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4931-定义预设形状" class="md-nav__link">
+    L.4.9.3.1 定义预设形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4932-调整预设形状" class="md-nav__link">
+    L.4.9.3.2 调整预设形状
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l494-指定自定义形状" class="md-nav__link">
+    L.4.9.4 指定自定义形状
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.4 指定自定义形状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4941-定义几何形状" class="md-nav__link">
+    L.4.9.4.1 定义几何形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4942-调整几何形状" class="md-nav__link">
+    L.4.9.4.2 调整几何形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4943-几何引导guides" class="md-nav__link">
+    L.4.9.4.3 几何引导(guides)
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.4.3 几何引导(guides)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l49431-调整手柄" class="md-nav__link">
+    L.4.9.4.3.1 调整手柄
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4944-附加特性" class="md-nav__link">
+    L.4.9.4.4 附加特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.4.4 附加特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l49441-连接点" class="md-nav__link">
+    L.4.9.4.4.1 连接点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l49442-文本矩形" class="md-nav__link">
+    L.4.9.4.4.2 文本矩形
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pictures/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.10 图片
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wordml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.11 WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../spreadml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.12 SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../charts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.13 图表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chart_drawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.14 图表绘图
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.4.15 Diagrams
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.5 VML 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sharedml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.6 Shared MLs 简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../topics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    L.7 其他主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#l491-介绍" class="md-nav__link">
+    L.4.9.1 介绍
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l492-坐标系" class="md-nav__link">
+    L.4.9.2 坐标系
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.2 坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4921-文档坐标系" class="md-nav__link">
+    L.4.9.2.1 文档坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4922-形状坐标系" class="md-nav__link">
+    L.4.9.2.2 形状坐标系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4923-路径坐标系" class="md-nav__link">
+    L.4.9.2.3 路径坐标系
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l493-指定预设形状" class="md-nav__link">
+    L.4.9.3 指定预设形状
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.3 指定预设形状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4931-定义预设形状" class="md-nav__link">
+    L.4.9.3.1 定义预设形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4932-调整预设形状" class="md-nav__link">
+    L.4.9.3.2 调整预设形状
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l494-指定自定义形状" class="md-nav__link">
+    L.4.9.4 指定自定义形状
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.4 指定自定义形状">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l4941-定义几何形状" class="md-nav__link">
+    L.4.9.4.1 定义几何形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4942-调整几何形状" class="md-nav__link">
+    L.4.9.4.2 调整几何形状
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4943-几何引导guides" class="md-nav__link">
+    L.4.9.4.3 几何引导(guides)
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.4.3 几何引导(guides)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l49431-调整手柄" class="md-nav__link">
+    L.4.9.4.3.1 调整手柄
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l4944-附加特性" class="md-nav__link">
+    L.4.9.4.4 附加特性
+  </a>
+  
+    <nav class="md-nav" aria-label="L.4.9.4.4 附加特性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l49441-连接点" class="md-nav__link">
+    L.4.9.4.4.1 连接点
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l49442-文本矩形" class="md-nav__link">
+    L.4.9.4.4.2 文本矩形
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="l49-形状定义和属性">L.4.9 形状定义和属性<a class="headerlink" href="#l49-形状定义和属性" title="Permanent link">&para;</a></h1>
+<p><strong>Shape Definitions and Attributes</strong></p>
+<h2 id="l491-介绍">L.4.9.1 介绍<a class="headerlink" href="#l491-介绍" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>DrawingML 的这一方面主要处理形状及其属性，分为两个主题:</p>
+<ul>
+<li>使用预设形状</li>
+<li>定义自定义形状及其属性</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><strong>Introduction</strong></p>
+<p>This aspect of DrawingML deals mainly with the shapes and their attributes, and is broken down into two topics:</p>
+<ul>
+<li>Working with preset shapes</li>
+<li>Defining custom shapes and their properties</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="l492-坐标系">L.4.9.2 坐标系 <img alt="🌏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f30f.svg" title=":earth_asia:" /><a class="headerlink" href="#l492-坐标系" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>要指定形状，必须首先理解一些高级系统，即所使用的坐标系。 这些是文档、形状和路径坐标系，在以下子条款中描述。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>The Coordinate Systems</strong></p>
+<p>To specify a shape there are a few high level systems that must first be understood, namely the coordinate systems that are used. These are the document, shape and path coordinate systems, described in the following sub clauses.</p>
+</div>
+</div>
+</div>
+<h3 id="l4921-文档坐标系">L.4.9.2.1 文档坐标系<a class="headerlink" href="#l4921-文档坐标系" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>要首先指定文档中的形状，必须了解<strong>文档坐标系</strong>。 该系统具有 <code>x</code> 和 <code>y</code> 分量，并以文档左上角的值 (0,0) 开始。 随着 <code>x</code> 坐标的增加，该点向右移动。 随着 <code>y</code> 坐标增加，该点向下移动。 文档坐标系内的测量单位是 <strong>EMU</strong>。 除了指定形状的位置之外，还必须指定形状的<strong>宽度和高度</strong>，这称为<strong>形状的范围</strong>。 该值再次使用EMU单位测量。 要指定这两个值，将使用以下变换。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3200400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1600200&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1200000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1000000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p>在这里我们可以看到这个新形状放置在文档坐标系内的 <code>x = 3200400</code> 和 <code>y = 1600200</code> 处。 另外，我们看到这个形状的宽度为 1200000 EMU，高度为1000000 EMU。</p>
+<p>宽度和高度设置包含整个形状的边界框。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>The Document Coordinate System</strong></p>
+<p>To first specify a shape within a document the document coordinate system must be understood. This system has both an x and y component and starts with a value of (0,0) in the upper left corner of the document. As the x-coordinate increases, the point moves to the right. As the y-coordinate increases, the point moves downwards. The units of measurement within the document coordinate system are EMUs. In addition to specifying a position for the shape, you must also specify the width and height of the shape, which is called the extent of the shape. This value is again measured in EMUs. To specify these two values, the following transform would be used.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3200400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1600200&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1200000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1000000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p>Here we can see that this new shape is placed at x = 3200400 and y = 1600200 within the document coordinate system. In addition, we see that this shape has a width of 1200000 EMUs and a height of 1000000 EMUs.</p>
+<p>The width and height set the bounding box within which the entire shape is contained.</p>
+</div>
+</div>
+</div>
+<h3 id="l4922-形状坐标系">L.4.9.2.2 形状坐标系<a class="headerlink" href="#l4922-形状坐标系" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>现在我们已经指定了宽度和高度，现在我们可以开始解释形状坐标系。 形状坐标系同时具有 <code>x</code> 和 <code>y</code> 分量，并以形状左上角的 <code>(0,0)</code> 值开始。 该坐标系的宽度和高度由形状的范围指定，最近在上面指定，单位再次是 <strong>EMU</strong>。 该坐标系用于定义许多形状属性的位置。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>The Shape Coordinate System</strong></p>
+<p>Now that we have a width and height specified, we can now move into the explanation of the shape coordinate system. The shape coordinate system has both an x and y component and starts with a value of (0,0) in the upper left corner of the shape. The width and height of this coordinate system are specified by the extent of the shape, which was recently specified above, and the units are once again EMUs. This coordinate system is used to define the locations of many of the shape attributes.</p>
+</div>
+</div>
+</div>
+<h3 id="l4923-路径坐标系">L.4.9.2.3 路径坐标系<a class="headerlink" href="#l4923-路径坐标系" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>最终坐标系是<strong>路径坐标系</strong>，它也具有 <code>x</code> 和 <code>y</code> 分量，并从形状左上角的值 <code>(0,0)</code> 开始。 现在必须知道，该坐标系是唯一的，因为它的单位是相对于坐标空间的指定宽度和高度的。 <strong>路径坐标系与形状坐标系具有完全相同的 EMU 尺寸，但单位不同</strong>。 形状坐标系使用 <strong>EMU</strong>，<ins class="critic"> <strong>而路径坐标系使用 (1/width) 作为 x 单位，使用 (1/height) 作为 y 单位</strong> </ins>。 也就是说，如果指定路径的宽度为 <code>2</code>、高度为 <code>1</code>，则路径坐标 <code>(1,1)</code> 将等于形状坐标系中的 <code>(600000,1000000)</code>。 一旦描述了路径元素，稍后就可以更好地理解<strong>路径坐标系</strong>。</p>
+<p>请注意，所有尺寸和坐标都必须使用整数指定。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>The Path Coordinate System</strong></p>
+<p>The final coordinate system is the path coordinate system which also has both an x and y component and starts with a value of (0,0) in the upper left corner of the shape. Now it must be known that this coordinate system is a unique one in that its units are relative to the specified width and height of the coordinate space. The path coordinate system has exactly the same EMU dimensions as the shape coordinate system but different units. While the shape coordinate system uses EMUs, the path coordinate system uses (1/width) as the x units and (1/height) as the y units. That is if the path was  specified to have a width of 2 and a height of 1, then the path coordinate (1,1) would be equivalent to (600000,1000000) in the shape coordinate system. The path coordinate system is better understood later, once the path element is described.</p>
+<p>Note that all dimensions and coordinates must be specified using whole numbers.</p>
+</div>
+</div>
+</div>
+<h2 id="l493-指定预设形状">L.4.9.3 指定预设形状<a class="headerlink" href="#l493-指定预设形状" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在 DrawingML 的“形状定义和属性”部分中，有许多可以使用的预定义形状，确切地说有 <code>187</code> 个。 当然，如果用户不希望使用预设形状，则始终可以选择指定自定义形状，这将在 [§L.4.9.4] 中进一步描述。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Specifying a Preset Shape</strong></p>
+<p>Within the Shape Definitions and Attributes section of DrawingML there are many pre-defined shapes that can be used, 187 to be exact. Of course, if the user does not wish to use a preset shape there is always the option of specifying a custom shape that is described further in §L.4.9.4. </p>
+</div>
+</div>
+</div>
+<h3 id="l4931-定义预设形状">L.4.9.3.1 定义预设形状<a class="headerlink" href="#l4931-定义预设形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>指定预设形状非常容易，因为这是围绕预设的整个概念。 它们旨在解决形状定义的最常见情况。</p>
+<p>例如，要指定心形，可以使用以下 DrawingML 代码。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1981200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;533400&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1143000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;heart&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-1.png" /></a></p>
+<p>该心形是由生成应用程序使用该形状的自定义形状代码来渲染的，该形状在参考文档中的 <code>ST_ShapeTypes</code> 中有完整记录。 因此，我们看到用户需要指定预设名称才能在文档中放置形状。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Defining a Preset Shape</strong></p>
+<p>It is quite easy to specify a preset shape as that is the whole notion around presets. They are meant to solve the most common cases of shape definition.</p>
+<p>To specify a heart shape for instance the following DrawingML code can be used.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1981200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;533400&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1143000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;heart&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-1.png" /></a></p>
+<p>This heart is rendered by the generating application using the custom shape code for this shape, which is fully documented within ST_ShapeTypes located in the reference documentation. Thus, we see that the user need on specify the preset name to place a shape within their document.</p>
+</div>
+</div>
+</div>
+<h3 id="l4932-调整预设形状">L.4.9.3.2 调整预设形状<a class="headerlink" href="#l4932-调整预设形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>虽然指定预设形状很方便并且大多数时候看起来都不错。 用户可能还需要调整此预设以更适合其文档的需要。 为此，我们引入调整值的概念。 预设形状是使用直线、曲线和计算构建的，就像定义自定义形状一样。 为了允许调整这些预设形状，我们将形状的某些属性基于调整值而不是具体尺寸。 这意味着可以修改它们，从而修改形状的几何形状。</p>
+<p>将使用以下 DrawingML 代码指定一个简单的箭头。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3276600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;978408&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;484632&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rightArrow&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:avLst&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 50000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 50000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:avLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-2.png" /></a></p>
+<p>这指定了上面显示的基本箭头，这可能足以满足用户的文档需求，但也可能不够。 如果此标准箭头不够，则可以调整此形状的两个调整值。 例如，如果箭头主体太大，则可以减小 <code>adj1</code> 的值。 以下 DrawingML 代码将指定这种情况。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 18553&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-3.png" /></a></p>
+<p>同样，如果箭头本身太短，则可以增加 <code>adj2</code> 的值。 以下 DrawingML 代码将指定这种情况。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 81447&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-4.png" /></a></p>
+<p>因此，可以看出，虽然每个预设确实是具有预定义几何形状的预设，但它是可以修改的。 通过使用调整值，用户能够根据其文档需求自定义预设形状，而无需指定完全自定义的形状。</p>
+<p>请注意，此处用于调整值的值没有实际单位，因为它们只是构成形状几何的方程中的输入参数。 有关这些方程及其参数的更多信息将在 [§L.4.9.4.2] 中讨论。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Adjusting a Preset Shape</strong></p>
+<p>While specifying a preset shape is convenient and looks good most of the time. There might also be the need for the user to adjust this preset to more closely suit the needs of their document. For this we introduce the notion of adjust values. The preset shape is built using lines, curves and calculations, just as a custom shape would be defined. To allow for the adjusting of these preset shapes we have based  certain properties of shapes on adjust values rather than concrete dimensions. This means that they can be modified which in turn modifies the geometry of the shape.</p>
+<p>A simple arrow would be specified using the following DrawingML code.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3276600&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;990600&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;978408&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;484632&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;rightArrow&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:avLst&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 50000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 50000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:avLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-2.png" /></a></p>
+<p>This specifies the basic arrow shown above which might be sufficient for the document needs of the user but it also might not. If this standard arrow is not sufficient then the two adjust values for this shape can be adjusted. For instance, if the body of the arrow is too large then the value for adj1 can be decreased. The following DrawingML code would specify such a case.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 18553&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-3.png" /></a></p>
+<p>Similarly, if the arrow head itself was too short then the value of adj2 can be increased. The following DrawingML code would specify such a case.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;adj2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;val 81447&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-4.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-4.png" /></a></p>
+<p>Thus, it can be seen that while each preset is indeed a preset with a pre-defined geometry, it can be modified. Through the use of adjust values, the user is able to custom fit a preset shape to their document needs without having to specify an entirely custom shape.</p>
+<p>Note that the values used here for adjust values have no real units as they are simply input parameters into the equations that make up the shape geometry. More on these equations and their parameters are discussed in §L.4.9.4.2.</p>
+</div>
+</div>
+</div>
+<h2 id="l494-指定自定义形状">L.4.9.4 指定自定义形状<a class="headerlink" href="#l494-指定自定义形状" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>除了指定预设形状之外，还可以指定自定义形状。 这是通过从一组构造方法定义几何形状并将各种形状属性应用于该几何形状来实现的。 这补充了预设形状，使用户有机会使用任何认为必要的自定义属性来指定完整的形状。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Specifying a Custom Shape</strong></p>
+<p>In addition to the specifying of a preset shape there is also the possibility of a specifying a custom shape. This is accomplished by defining a geometry from a set of construction methods and applying various shape properties to this geometry. This compliments preset shapes, giving the user the opportunity to specify a complete shape with any custom properties that are deemed necessary.</p>
+</div>
+</div>
+</div>
+<h3 id="l4941-定义几何形状">L.4.9.4.1 定义几何形状<a class="headerlink" href="#l4941-定义几何形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>就像预设形状一样，自定义形状具有由偏移和范围变换值指定的位置和形状边界框。 形状坐标系由这些值定义，如上面第 1.2 节所述。 <strong>路径坐标系</strong>也部分由这些值定义，因为它的宽度和高度由这些值设置。 然而，路径系统的单位由路径的指定宽度和高度决定。</p>
+<p>可以使用以下 DrawingML 代码指定具有单个路径的自定义形状。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3200400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1600200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1200000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1000000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:custGeom&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:pathLst&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:path</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">h=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:moveTo&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:moveTo&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:close</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:path&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:pathLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:custGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-5.png" /></a></p>
+<p>从上面的代码中可以看出，路径的宽度和高度为 <code>2</code>。<strong>这意味着路径坐标空间的 x 坐标单位为（&frac12; * 形状宽度(shape width)），单位为（&frac12; * 形状高度(shape height)） 为 y 坐标。</strong> 这样我们就可以看到<strong>路径坐标系</strong>中的坐标 <code>(2,2)</code> 与<strong>形状坐标系</strong>中的 <strong>(1200000,1000000)</strong> 相同。</p>
+<p>为了定义上面的<strong>形状路径</strong>，我们可以看到有几个不同的部分来定义这个自定义形状。 第一个是定义所谓的路径列表中的第一条路径。 应该注意的是，路径列表中可以有多个路径，有些已填充，有些未填充，有些已勾勒出轮廓，有些未填充。 要定义路径，我们必须通过以下 DrawingML 指定该路径的<strong>宽度</strong>、<strong>高度</strong>和<strong>单位</strong>。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:path</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">h=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>如前所述，这会为此路径设置<strong>路径坐标系</strong>。 接下来，我们需要将绘图光标移动到路径坐标系中我们希望开始绘制形状的点。 下面的 DrawingML 就是这样做的。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:moveTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:moveTo&gt;</span>
+</code></pre></div>
+<p>这会将绘图光标移动到左下位置 <strong>(0,2)</strong>，相当于形状坐标系中的 <strong>(0,1000000)</strong>。 接下来，我们现在可以开始通过以下线条绘制形状中的第一条线。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+</code></pre></div>
+<p>这会从当前绘图光标位置 <strong>(0,2)</strong> 到 <strong>(2,2)</strong> （路径坐标系的右下角）绘制一条线。 这相当于在形状坐标系中画一条从<strong>（0,1000000）</strong>到<strong>（1200000,1000000）</strong>的线。 现在我们已经绘制了三角形的底边，我们可以通过以下操作继续绘制形状的最后一条边。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+</code></pre></div>
+<p>这将绘制从当前绘图光标位置 <strong>(2,2)</strong> 到 <strong>(1,0) </strong>绘制的最后一条线，该位置位于路径坐标系的顶部中间。 这相当于在形状坐标系中从<strong>(1200000,1000000)</strong>到<strong>(600000,1000000)</strong>画一条线。 绘制大部分三角形后，在路径末尾指定的<code>&lt;close/&gt;</code>元素会绘制一条从路径中的最后一个点回到路径中的第一个点的线。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:close/&gt;</span>
+</code></pre></div>
+<p>这最终确定了指定形状路径的边缘。 由于该路径的填充设置为正常，因此无论是否指定该关闭标记，该路径都会填充。 然而，它的指定决定了在最终绘制光标点和路径起点之间绘制有最终边缘。 既然路径已经完全指定，这个形状就可以被填充，从而被认为完成了。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Defining the Geometry</strong></p>
+<p>Just like a preset shape, a custom shape has a position and a shape bounding box that is specified by the offset and extent transform values. The shape coordinate system is defined by these values as was described in section 1.2 above. The path coordinate system is also partially defined by these in that it has it’s width and height set by these values. The units of the path system however are determined by the specified width and height of the path.</p>
+<p>A custom shape with a single path can be specified using the following DrawingML code.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;3200400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;1600200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1200000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1000000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:custGeom&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:pathLst&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:path</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">h=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:moveTo&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:moveTo&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                        </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;a:close</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/a:path&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:pathLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:custGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-5.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-5.png" /></a></p>
+<p>As can be seen in the above code, the path has a width and height of 2. This means that the path coordinate space has units of (&frac12; * shape width) for x-coordinate and (&frac12; * shape height) for the ycoordinate. Thu we see that a coordinate of (2,2) in the path coordinate system is the same as (1200000,1000000) within the shape coordinate system.</p>
+<p>To define the shape path above we can see that there are a few different parts to defining this custom shape. The first is to define the first path in what is called the path list. It should be noted that the path list can have multiple paths in it, some filled, some not, some outlined, some not. To define the path we must specify the width, height and thus units for this path via the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:path</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">h=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>This sets up the path coordinate system for this path as was previously described. Next we need to move the drawing cursor to the point in this path coordinate system that we wish to start drawing our shape from. The following DrawingML does just that.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:moveTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:moveTo&gt;</span>
+</code></pre></div>
+<p>This moves the drawing cursor to the bottom left position (0,2) which is equivalent to (0,1000000) in the shape coordinate system. Following this we can now start by drawing the first line in the shape via the following line.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+</code></pre></div>
+<p>This draws a line from the current drawing cursor position of (0,2) to (2,2) which is the bottom right corner of the path coordinate system. This is equivalent to drawing a line from (0,1000000) to (1200000,1000000) in the shape coordinate system. Now that we have the bottom edge of the triangle drawn we can continue to the final edge in the shape via the following.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+</code></pre></div>
+<p>This draws the final line that is drawn from the current drawing cursor position of (2,2) to (1,0) which is in the top middle of the path coordinate system. This is equivalent to drawing a line from (1200000,1000000) to (600000,1000000) in the shape coordinate system. With most of the triangle drawn the <code>&lt;close/&gt;</code> element specified at the end of the path draws a line from the last point in the path back to the first point in the path.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:close/&gt;</span>
+</code></pre></div>
+<p>This finalizes the edges of the shape path being specified. Since the fill of this path is set to normal, this path has a fill no matter if this close tag is specified or not. However, the fact that it is specified determines that there is a final edge drawn between the final drawing cursor point and the path starting point. Now that the path has been fully specified, this shape can be filled and thus be considered finished.</p>
+</div>
+</div>
+</div>
+<h3 id="l4942-调整几何形状">L.4.9.4.2 调整几何形状<a class="headerlink" href="#l4942-调整几何形状" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>现在我们已经展示了如何指定自定义形状，我们可以看看如何调整它。 此调整不同于使用形状变换元素进行的典型调整大小。 使用这些形状调整方法，可以使形状具有许多不同的调整大小/调整特性。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Adjusting the Geometry</strong></p>
+<p>Now that we have shown how a custom shape can be specified we can look at how it might be adjusted. This adjusting is different from the typical resizing that can happen by using the shape transform elements. Using these shape adjusting methods, a shape can be made to have many different resize/adjustment characteristics.</p>
+</div>
+</div>
+</div>
+<h3 id="l4943-几何引导guides">L.4.9.4.3 几何引导(guides)<a class="headerlink" href="#l4943-几何引导guides" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>形状内的引导本质上是具有一定数量的输入和单个输出的方程。 参考线用于计算形状的构造值，因此可以操纵它来控制形状的整体几何形状。</p>
+<p>下面的 DrawingML 中可以看到这样的示例。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;gdLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;y1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;*/ h adj1 100&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/gdLst&gt;</span>
+</code></pre></div>
+<p>本指南根据 3 个输入参数计算其输出，并将该输出分配给名为 <code>y1</code> 的指南。 这里计算中使用的公式是乘除公式。 本指南的结果按以下方式计算：<code>y1 = ((h * adj1) / 100)</code>。 计算出此处的结果后，稍后可以在<code>&lt;gdlst&gt;</code>或<code>&lt;path&gt;</code>中使用指南 <code>y1</code> 来计算进一步的值。 也就是说，它可以用作计算另一个指导值的输入。 然后，这些指导允许基于一系列方程而不是静态路径坐标值的路径。 要在定义路径时使用指导(guides)，我们只需在路径列表中指定以下内容即可。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;y1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+</code></pre></div>
+<p>这将绘制一条线到点 <code>(2,y1)</code>，其中 <code>y1</code> 是上面所示的引导方程的计算结果。 然后，这条线的绘制会根据 <code>h</code> 和 <code>adj1</code> 的输入参数而变化，这也是之前计算的指导(guides)。</p>
+<p>请注意，虽然 <code>h</code> 是先前计算的指南。 它不是针对每个形状进行计算的，而是生成应用程序为形状提供的内置指南。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Geometry Guides</strong></p>
+<p>A guide within a shape is essentially an equation with a set number of inputs and a single output. A guide is used to calculate construction values for a shape and thus can be manipulated to govern the shape's overall geometry.</p>
+<p>An example of this can be seen in the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;gdLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;gd</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;y1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">fmla=</span><span style="color: #BA2121">&quot;*/ h adj1 100&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/gdLst&gt;</span>
+</code></pre></div>
+<p>This guide calculates it’s output based on 3 input parameters and assign this output to a guide named y1. The formula that is used in the calculation here is the multiply divide formula. The result for this guide is calculated in the following manner: y1 = ((h * adj1) / 100). After the result here is calculated, the guide y1 can be used later within the <code>&lt;gdlst&gt;</code> or<code>&lt;path&gt;</code> to calculate further values. That is it can be used as an input for calculating another guide value. These guides then allow for a path to be based off of series of equations rather than static path coordinate values. To use a guide in the defining of a path we would simply specify the following within the path list.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:lnTo&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:pt</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;y1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:lnTo&gt;</span>
+</code></pre></div>
+<p>This would draw a line to the point (2,y1) where y1 is the calculated result of the guide equation shown above. The drawing of this line then changes based on the input parameters of h and adj1 which are previously calculated guides as well.</p>
+<p>Note that while h is a previously calculated guide. It is not calculated for each shape, rather it is a built-in guide that the generating application makes available to the shape.</p>
+</div>
+</div>
+</div>
+<h4 id="l49431-调整手柄">L.4.9.4.3.1 调整手柄<a class="headerlink" href="#l49431-调整手柄" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>为了允许调整形状的 UI，我们引入了<strong>调整手柄</strong>的概念。 <strong>该调整手柄链接到调整值，然后将这些值用作先前定义的引导方程的输入</strong>。 因此，这里描述的数字链直接改变了相关形状的几何形状。 可以指定两种类型的调整手柄。 <strong><code>XY</code> 调节手柄作用于水平/垂直方向，并具有两个相关的导向装置，分别是水平导向装置和垂直导向装置。 极向调节手柄以极向方式起作用，并且还具有两个相关的导轨。 一个用于径向宽度，另一个用于径向角度。 指定调整手柄具有 x 和 y 坐标以及这些调整手柄。</strong> 然后可以在生成应用程序的 UI 中移动该调整手柄，以调整一对参考线，从而调整正在渲染的形状。</p>
+<p>可以通过以下 DrawingML 指定调整手柄。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;ahXY</span><span style="color: #bbbbbb"> </span><span style="color: #687822">gdRefX=</span><span style="color: #BA2121">&quot;adj1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minX=</span><span style="color: #BA2121">&quot;-2147483647&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxX=</span><span style="color: #BA2121">&quot;2147483647&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">gdRefY=</span><span style="color: #BA2121">&quot;adj2&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">minY=</span><span style="color: #BA2121">&quot;-2147483647&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxY=</span><span style="color: #BA2121">&quot;2147483647&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;x1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;y1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/ahXY&gt;</span>
+</code></pre></div>
+<p>上面是一个 <strong>XY 调整手柄</strong>，它有两个引导引用、<code>x</code> 和 <code>y</code> 坐标的最小和最大允许位置，以及形状坐标系中应放置此调整手柄的位置。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Adjust Handles</strong></p>
+<p>To allow for the adjusting UI of a shape we introduce the notion of an adjust handle. This adjust handle is linked to adjust values that are then used as input to the guide equations defined previously. The numerical chain described here thus directly changes the geometry of the related shape. There are two types of adjust handles that can be specified. An XY adjust handle acts in the horizontal/vertical direction and has two related guides, both a horizontal and a vertical respectively. A polar adjust handle acts in a polar manner and has two related guides as well. One guide for the radial width and the other for the radial angle. An adjust handle is specified to have an x and y coordinate as well as these adjust handles. This adjust handle can then be moved around in a generating application’s UI to adjust a pair of guides which in turn adjusts the shape being rendered.</p>
+<p>An adjust handle can be specified by the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;ahXY</span><span style="color: #bbbbbb"> </span><span style="color: #687822">gdRefX=</span><span style="color: #BA2121">&quot;adj1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">minX=</span><span style="color: #BA2121">&quot;-2147483647&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxX=</span><span style="color: #BA2121">&quot;2147483647&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">gdRefY=</span><span style="color: #BA2121">&quot;adj2&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">minY=</span><span style="color: #BA2121">&quot;-2147483647&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">maxY=</span><span style="color: #BA2121">&quot;2147483647&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;pos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;x1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;y1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/ahXY&gt;</span>
+</code></pre></div>
+<p>Above is an XY adjust handle that has two guide references, a min and max allowed position for both the x and y coordinates as well as a position within the shape coordinate system where this adjust handle should be placed.</p>
+</div>
+</div>
+</div>
+<h3 id="l4944-附加特性">L.4.9.4.4 附加特性<a class="headerlink" href="#l4944-附加特性" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Additional Properties</strong></p>
+<p>除了指定形状的几何形状以及所有相关的调整之外，还有一些其他具有特殊意义的特性。 这些特性不会影响形状的几何形状，而是增强形状，使其可用于更专业的任务。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Additional Properties</strong></p>
+<p>In addition to specifying the geometry for a shape and all the associated adjustments for it there are also a few other properties that are of special significance. These properties do not act on the geometry of the shape but instead enhance a shape so that it can be used for a more specialized task.</p>
+</div>
+</div>
+</div>
+<h4 id="l49441-连接点">L.4.9.4.4.1 连接点<a class="headerlink" href="#l49441-连接点" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>正如人们在尝试绘制具有形状和这些形状之间的连接的图表时可能经历过的那样，在不完全重新绘制形状之间的连接的情况下移动图表的一部分是相当困难的。 为此，存在<strong>连接位置</strong>的概念，它<strong>允许指定形状内的特定点以将连接形状附加到其上</strong>。 这允许用户从一组形状构建图表并使用连接形状将它们连接在一起。 连接位置在连接列表中指定，<strong>由 x 坐标、y 坐标和连接角度组成</strong>。</p>
+<p>以下 DrawingML 代码定义了两个连接点，该三角形的每条边各有一个。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:cxnLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:cxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;10800000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;679622&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:cxn&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:cxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1705233&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;679622&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:cxn&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:cxnLst&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-6.png" /></a></p>
+<p>连接角度的工作原理是指定连接器应连接的角度（以 <code>60,000</code> 度为单位）。 下图显示了实际的连接点以及与该点的侧面相对应的连接角度。 生成应用程序连接器路由算法使用该信息以及形状的几何形状来正确地围绕连接的形状路由连接器。</p>
+<p><a class="glightbox" href="../imgs/shdef-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-7.png" /></a></p>
+</div>
+<div class="tabbed-block">
+<p><strong>Connection Sites</strong></p>
+<p>As one might have experienced when trying to draw a diagram with shapes and connections between those shapes, it is quite difficult to move a part of your diagram without entirely redrawing the connections between shapes. For this, there is the notion of connection sites that allow for the specification of specific points within a shape to attach connection shapes to. This allows a user to build a diagram from a set of shapes and connect them together using connection shapes. A connection site is specified within the connection list and consists of an x-coordinate, y-coordinate and an attachment angle.</p>
+<p>The following DrawingML code defines two connection sites, one at each edge of this triangle.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:cxnLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:cxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;10800000&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;679622&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:cxn&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:cxn</span><span style="color: #bbbbbb"> </span><span style="color: #687822">ang=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:pos</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1705233&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;679622&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/a:cxn&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:cxnLst&gt;</span>
+</code></pre></div>
+<p><a class="glightbox" href="../imgs/shdef-6.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-6.png" /></a></p>
+<p>The attachment angle works by specifying an angle in 60,000ths of a degree that a connector should attach to. The diagram below shows an actual connection point and the attachment angles that correspond to the sides of this point. This information along with the geometry of the shape is used by the generating applications connector routing algorithm to correctly route connectors around connected shapes.</p>
+<p><a class="glightbox" href="../imgs/shdef-7.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/shdef-7.png" /></a></p>
+</div>
+</div>
+</div>
+<h4 id="l49442-文本矩形">L.4.9.4.4.2 文本矩形 <img alt="🌏" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f30f.svg" title=":earth_asia:" /><a class="headerlink" href="#l49442-文本矩形" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>每个形状内都有一个<strong>文本框</strong>，<em>允许将文本附加到任何给定的形状</em>。 <strong>文本矩形定义文本在形状内的位置</strong>。 根据为附加到此形状的文本正文选择的“自动调整(Auto-fit)”选项，文本可能会故意流出此文本矩形之外。 还必须指出的是，该文本矩形也是用于计算<code>&lt;prstTxWarp&gt;</code>几何形状的边界框。 该文本矩形的 EMU 尺寸用于计算该几何形状，就像变换范围元素用于计算实际形状一样。</p>
+<p>以下 DrawingML 指定形状内的文本矩形。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:rect</span><span style="color: #bbbbbb"> </span><span style="color: #687822">l=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">t=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;1200000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;1000000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>上面显示的文本矩形的左边缘为 <code>0</code> 的 <code>x</code> 坐标，上边缘为 <code>0</code> 的 <code>y</code> 坐标，右边缘为 <code>1200000</code> 的 <code>x</code> 坐标，下边缘为 <code>1000000</code> 的 <code>y</code> 坐标。 这有效地指定了宽度为 <code>1200000</code> 个 EMU、高度为 <code>1000000</code> 个 EMU 的空间。</p>
+<p>请注意，可以设置此文本矩形的边缘，以便允许将文本放置在形状的实际几何形状之外。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Text Rectangle</strong></p>
+<p>Within each shape is a text box that allows for the attaching of text to any given shape. The text rectangle defines where text resides within the shape. Depending on Auto-fit options that are selected for the body of text attached to this shape the text might intentionally flow outside this text rectangle. It must also be pointed out that this text rectangle is also the bounding box that is used to compute the geometry of a <code>&lt;prstTxWarp&gt;</code>. The EMU dimensions of this text rectangle is used to compute this geometry just like the transform extent element is used to compute the actual shape.</p>
+<p>The following DrawingML specifies a text rectangle within a shape.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:rect</span><span style="color: #bbbbbb"> </span><span style="color: #687822">l=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">t=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r=</span><span style="color: #BA2121">&quot;1200000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">b=</span><span style="color: #BA2121">&quot;1000000&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>The text rectangle shown above has a left edge of 0 x-coordinate, top edge of 0 y-coordinate, right edge of 1200000 x-coordinate and a bottom edge of 1000000 y-coordinate. This effectively specifies a space that is 1200000 EMUs in width and 1000000 EMUs in height.</p>
+<p>Note that the edges of this text rectangle can be set so as to allow text to be placed outside the actual geometry of the shape.</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

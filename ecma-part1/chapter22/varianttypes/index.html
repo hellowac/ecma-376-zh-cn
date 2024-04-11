@@ -1,0 +1,4573 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../customproperties/">
+      
+      
+        <link rel="next" href="../customxmldata/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>22.4 变体类型 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#224-变体类型" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              22.4 变体类型
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_23" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_23" id="__nav_2_23_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_23_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_23">
+            <span class="md-nav__icon md-icon"></span>
+            22. Shared MLs 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.1 Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extendedproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.2 扩展属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customproperties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.3 自定义属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    22.4 变体类型
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    22.4 变体类型
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2241-目录" class="md-nav__link">
+    22.4.1 目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2242-元素" class="md-nav__link">
+    22.4.2 元素
+  </a>
+  
+    <nav class="md-nav" aria-label="22.4.2 元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22421-array-数组" class="md-nav__link">
+    22.4.2.1 array (数组)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22422-blob-二进制blob" class="md-nav__link">
+    22.4.2.2 blob (二进制Blob)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22423-bool-boolean" class="md-nav__link">
+    22.4.2.3 bool (Boolean)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22424-bstr-基本字符串" class="md-nav__link">
+    22.4.2.4 bstr (基本字符串)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22425-clsid-class-id" class="md-nav__link">
+    22.4.2.5 clsid (Class ID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22426-cy-货币" class="md-nav__link">
+    22.4.2.6 cy (货币)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22427-date-日期和时间" class="md-nav__link">
+    22.4.2.7 date (日期和时间)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22428-decimal-十进制" class="md-nav__link">
+    22.4.2.8 decimal (十进制)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22429-empty-空" class="md-nav__link">
+    22.4.2.9 empty (空)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224210-error-错误状态代码" class="md-nav__link">
+    22.4.2.10 error (错误状态代码)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224211-filetime-文件时间" class="md-nav__link">
+    22.4.2.11 filetime (文件时间)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224212-i1-1-字节-有符号整数" class="md-nav__link">
+    22.4.2.12 i1 (1-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224213-i2-2-字节-有符号整数" class="md-nav__link">
+    22.4.2.13 i2 (2-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224214-i4-4-字节-有符号整数" class="md-nav__link">
+    22.4.2.14 i4 (4-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224215-i8-8-字节-有符号整数" class="md-nav__link">
+    22.4.2.15 i8 (8-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224216-int-整数" class="md-nav__link">
+    22.4.2.16 int (整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224217-lpstr-lpstr" class="md-nav__link">
+    22.4.2.17 lpstr (LPSTR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224218-lpwstr-lpwstr" class="md-nav__link">
+    22.4.2.18 lpwstr (LPWSTR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224219-null-null" class="md-nav__link">
+    22.4.2.19 null (Null)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224220-oblob-二进制-blob-对象" class="md-nav__link">
+    22.4.2.20 oblob (二进制 Blob 对象)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224221-ostorage-二进制存储对象" class="md-nav__link">
+    22.4.2.21 ostorage (二进制存储对象)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224222-ostream-二进制流对象" class="md-nav__link">
+    22.4.2.22 ostream (二进制流对象)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224223-r4-4-字节-real-number" class="md-nav__link">
+    22.4.2.23 r4 (4-字节 Real Number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224224-r8-8-字节-real-number" class="md-nav__link">
+    22.4.2.24 r8 (8-字节 Real Number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224225-storage-二进制存储" class="md-nav__link">
+    22.4.2.25 storage (二进制存储)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224226-stream-二进制流" class="md-nav__link">
+    22.4.2.26 stream (二进制流)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224227-ui1-1-字节-无符号整数" class="md-nav__link">
+    22.4.2.27 ui1 (1-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224228-ui2-2-字节-无符号整数" class="md-nav__link">
+    22.4.2.28 ui2 (2-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224229-ui4-4-字节-无符号整数" class="md-nav__link">
+    22.4.2.29 ui4 (4-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224230-ui8-8-字节-无符号整数" class="md-nav__link">
+    22.4.2.30 ui8 (8-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224231-uint-无符号整数" class="md-nav__link">
+    22.4.2.31 uint (无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224232-variant-变体" class="md-nav__link">
+    22.4.2.32 variant (变体)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224233-vector-向量" class="md-nav__link">
+    22.4.2.33 vector (向量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224234-vstream-二进制版本化流" class="md-nav__link">
+    22.4.2.34 vstream (二进制版本化流)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2243-简单类型" class="md-nav__link">
+    22.4.3 简单类型
+  </a>
+  
+    <nav class="md-nav" aria-label="22.4.3 简单类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22431-st_arraybasetype-数组-基本类型-简单类型" class="md-nav__link">
+    22.4.3.1 ST_ArrayBaseType (数组 基本类型 简单类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22432-st_cy-货币简单类型" class="md-nav__link">
+    22.4.3.2 ST_Cy (货币简单类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22433-st_error-错误状态代码简单类型" class="md-nav__link">
+    22.4.3.3 ST_Error (错误状态代码简单类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22434-st_vectorbasetype-向量基类型简单类型" class="md-nav__link">
+    22.4.3.4 ST_VectorBaseType (向量基类型简单类型)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customxmldata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.5 自定义 XML Data 属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.6 参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../additionalcharacteri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.7 附加特性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../officedocumentrelationships/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.8 Office 文档关系
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sharedsimpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    22.9 Shared Simple Types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2241-目录" class="md-nav__link">
+    22.4.1 目录
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2242-元素" class="md-nav__link">
+    22.4.2 元素
+  </a>
+  
+    <nav class="md-nav" aria-label="22.4.2 元素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22421-array-数组" class="md-nav__link">
+    22.4.2.1 array (数组)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22422-blob-二进制blob" class="md-nav__link">
+    22.4.2.2 blob (二进制Blob)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22423-bool-boolean" class="md-nav__link">
+    22.4.2.3 bool (Boolean)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22424-bstr-基本字符串" class="md-nav__link">
+    22.4.2.4 bstr (基本字符串)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22425-clsid-class-id" class="md-nav__link">
+    22.4.2.5 clsid (Class ID)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22426-cy-货币" class="md-nav__link">
+    22.4.2.6 cy (货币)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22427-date-日期和时间" class="md-nav__link">
+    22.4.2.7 date (日期和时间)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22428-decimal-十进制" class="md-nav__link">
+    22.4.2.8 decimal (十进制)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22429-empty-空" class="md-nav__link">
+    22.4.2.9 empty (空)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224210-error-错误状态代码" class="md-nav__link">
+    22.4.2.10 error (错误状态代码)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224211-filetime-文件时间" class="md-nav__link">
+    22.4.2.11 filetime (文件时间)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224212-i1-1-字节-有符号整数" class="md-nav__link">
+    22.4.2.12 i1 (1-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224213-i2-2-字节-有符号整数" class="md-nav__link">
+    22.4.2.13 i2 (2-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224214-i4-4-字节-有符号整数" class="md-nav__link">
+    22.4.2.14 i4 (4-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224215-i8-8-字节-有符号整数" class="md-nav__link">
+    22.4.2.15 i8 (8-字节 有符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224216-int-整数" class="md-nav__link">
+    22.4.2.16 int (整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224217-lpstr-lpstr" class="md-nav__link">
+    22.4.2.17 lpstr (LPSTR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224218-lpwstr-lpwstr" class="md-nav__link">
+    22.4.2.18 lpwstr (LPWSTR)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224219-null-null" class="md-nav__link">
+    22.4.2.19 null (Null)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224220-oblob-二进制-blob-对象" class="md-nav__link">
+    22.4.2.20 oblob (二进制 Blob 对象)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224221-ostorage-二进制存储对象" class="md-nav__link">
+    22.4.2.21 ostorage (二进制存储对象)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224222-ostream-二进制流对象" class="md-nav__link">
+    22.4.2.22 ostream (二进制流对象)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224223-r4-4-字节-real-number" class="md-nav__link">
+    22.4.2.23 r4 (4-字节 Real Number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224224-r8-8-字节-real-number" class="md-nav__link">
+    22.4.2.24 r8 (8-字节 Real Number)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224225-storage-二进制存储" class="md-nav__link">
+    22.4.2.25 storage (二进制存储)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224226-stream-二进制流" class="md-nav__link">
+    22.4.2.26 stream (二进制流)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224227-ui1-1-字节-无符号整数" class="md-nav__link">
+    22.4.2.27 ui1 (1-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224228-ui2-2-字节-无符号整数" class="md-nav__link">
+    22.4.2.28 ui2 (2-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224229-ui4-4-字节-无符号整数" class="md-nav__link">
+    22.4.2.29 ui4 (4-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224230-ui8-8-字节-无符号整数" class="md-nav__link">
+    22.4.2.30 ui8 (8-字节 无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224231-uint-无符号整数" class="md-nav__link">
+    22.4.2.31 uint (无符号整数)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224232-variant-变体" class="md-nav__link">
+    22.4.2.32 variant (变体)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224233-vector-向量" class="md-nav__link">
+    22.4.2.33 vector (向量)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224234-vstream-二进制版本化流" class="md-nav__link">
+    22.4.2.34 vstream (二进制版本化流)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2243-简单类型" class="md-nav__link">
+    22.4.3 简单类型
+  </a>
+  
+    <nav class="md-nav" aria-label="22.4.3 简单类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22431-st_arraybasetype-数组-基本类型-简单类型" class="md-nav__link">
+    22.4.3.1 ST_ArrayBaseType (数组 基本类型 简单类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22432-st_cy-货币简单类型" class="md-nav__link">
+    22.4.3.2 ST_Cy (货币简单类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22433-st_error-错误状态代码简单类型" class="md-nav__link">
+    22.4.3.3 ST_Error (错误状态代码简单类型)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22434-st_vectorbasetype-向量基类型简单类型" class="md-nav__link">
+    22.4.3.4 ST_VectorBaseType (向量基类型简单类型)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="224-变体类型">22.4 变体类型<a class="headerlink" href="#224-变体类型" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>本子章节指定可以包含在接受变体类型结构的文件属性中的数据类型集。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Variant Types</strong></p>
+<p>This subclause specifies the set of data types which can be included within file properties that accept variant type structures. </p>
+</div>
+</div>
+</div>
+<h2 id="2241-目录">22.4.1 目录<a class="headerlink" href="#2241-目录" title="Permanent link">&para;</a></h2>
+<p>This subclause is informative</p>
+<ul>
+<li>22.4.2 Elements<ul>
+<li>22.4.2.1 array (Array)</li>
+<li>22.4.2.2 blob (Binary Blob)</li>
+<li>22.4.2.3 bool (Boolean)</li>
+<li>22.4.2.4 bstr (Basic String)</li>
+<li>22.4.2.5 clsid (Class ID)</li>
+<li>22.4.2.6 cy (Currency)</li>
+<li>22.4.2.7 date (Date and Time)</li>
+<li>22.4.2.8 decimal (Decimal)</li>
+<li>22.4.2.9 empty (Empty)</li>
+<li>22.4.2.10 error (Error Status Code)</li>
+<li>22.4.2.11 filetime (File Time)</li>
+<li>22.4.2.12 i1 (1-Byte Signed Integer)</li>
+<li>22.4.2.13 i2 (2-Byte Signed Integer)</li>
+<li>22.4.2.14 i4 (4-Byte Signed Integer)</li>
+<li>22.4.2.15 i8 (8-Byte Signed Integer)</li>
+<li>22.4.2.16 int (Integer)</li>
+<li>22.4.2.17 lpstr (LPSTR)</li>
+<li>22.4.2.18 lpwstr (LPWSTR)</li>
+<li>22.4.2.19 null (Null)</li>
+<li>22.4.2.20 oblob (Binary Blob Object)</li>
+<li>22.4.2.21 ostorage (Binary Storage Object)  </li>
+<li>22.4.2.22 ostream (Binary Stream Object)</li>
+<li>22.4.2.23 r4 (4-Byte Real Number)</li>
+<li>22.4.2.24 r8 (8-Byte Real Number)</li>
+<li>22.4.2.25 storage (Binary Storage)</li>
+<li>22.4.2.26 stream (Binary Stream)</li>
+<li>22.4.2.27 ui1 (1-Byte Unsigned Integer)</li>
+<li>22.4.2.28 ui2 (2-Byte Unsigned Integer)</li>
+<li>22.4.2.29 ui4 (4-Byte Unsigned Integer)</li>
+<li>22.4.2.30 ui8 (8-Byte Unsigned Integer)</li>
+<li>22.4.2.31 uint (Unsigned Integer)</li>
+<li>22.4.2.32 variant (Variant)</li>
+<li>22.4.2.33 vector (Vector)</li>
+<li>22.4.2.34 vstream (Binary Versioned Stream)</li>
+</ul>
+</li>
+<li>22.4.3 Simple Types<ul>
+<li>22.4.3.1 ST_ArrayBaseType (Array Base Type Simple Type)</li>
+<li>22.4.3.2 ST_Cy (Currency Simple Type)</li>
+<li>22.4.3.3 ST_Error (Error Status Code Simple Type)</li>
+<li>22.4.3.4 ST_VectorBaseType (Vector Base Type Simple Type)</li>
+</ul>
+</li>
+</ul>
+<p>End of informative text.</p>
+<h2 id="2242-元素">22.4.2 元素<a class="headerlink" href="#2242-元素" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>以下元素定义了该命名空间的内容：</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Elements</strong></p>
+<p>The following elements define the contents of this namespace:</p>
+</div>
+</div>
+</div>
+<h3 id="22421-array-数组">22.4.2.1 array (数组)<a class="headerlink" href="#22421-array-数组" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>数组元素定义数组变体类型。 数组内容应具有由 baseType 属性指定的统一类型。 数组的内容是使用适当变体类型的重复子元素来定义的。</p>
+<p>可以通过使用“,”分隔符在 lBound 和 uBound 属性中指定每个维度的长度来定义多维数组。 多维数组的子元素按照声明维度的顺序沿每个维度进行索引。</p>
+<p>换句话说，数组应填充如下：</p>
+<ul>
+<li>第一个索引应增加到其最大值 [Example: [0,0,0] 至 [max,0,0] end example]</li>
+<li>第二个索引应增加到其最大值 [Example: [0,1,0] 至 [0,max,0] endexample]</li>
+<li>应填充后续索引，直到添加所有提供的值</li>
+<li>数组中的所有其他值均应为空值 (i.e. 不应假定默认值).</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>“i4”类型的 2x3 变体类型数组指定如下：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;vt:array</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lBounds=</span><span style="color: #BA2121">&quot;0,0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uBounds=</span><span style="color: #BA2121">&quot;1,2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;i4&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>0<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>4<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/vt:array&gt;</span>
+</code></pre></div>
+<p>得到数组: [0,0] = 0, [1,0] = 1, [0,1] = 2, [1,1] = 3, [0,2] = 4. </p>
+</div>
+<p><table>
+    <thead>
+        <tr>
+            <th>属性</th>
+            <th>描述</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>baseType (数组基本类型) </td>
+            <td>
+                baseType 属性指定数组的基本变体类型.<br/><br/>
+                允许的值为：variant、i1、i2、i4、int、ui1、ui2、ui4、uint、r4、r8、decimal、bstr、date、bool、cy 和 error.<br/><br/>
+                该属性的可能值由 ST_ArrayBaseType 简单类型定义 ([§22.4.3.1]).
+            </td>
+        </tr>
+        <tr>
+            <td>lBounds (数组下限属性)</td>
+            <td>
+                lBounds 属性以以下格式指定数组的下限：#, #, # … #，其中每个 # 代表一个整数。<br/><br/>
+                此属性的可能值由 W3C XML Schema int 数据类型定义。
+            </td>
+        </tr>
+        <tr>
+            <td>uBounds (数组上限属性)</td>
+            <td>
+                uBounds 属性以以下格式指定数组的上限：#, #, # … #，其中每个 # 代表一个整数.<br/><br/>
+                此属性的可能值由 W3C XML Schema int 数据类型定义。
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_Array) 的 W3C XML 模式定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>array (Array)</strong></p>
+<p>The array element defines the array variant type. Array contents shall be of uniform type as specified by the
+baseType attribute. The contents of an array are defined using repeated child elements of the appropriate
+variant type.</p>
+<p>Multi-dimensional arrays can be defined by specifying the length of each dimension in the lBound and uBound
+attributes through the use of the "," delimiter. Child elements of multi-dimensional arrays are indexed along
+each dimension in the order the dimensions are declared.</p>
+<p>In other words, the array shall be filled as follows:</p>
+<ul>
+<li>The first index shall be incremented to its maximum value [Example: [0,0,0] to [max,0,0] end example]</li>
+<li>The second index shall be incremented to its maximum value [Example: [0,1,0] to [0,max,0] endexample]</li>
+<li>Subsequent indices shall be filled until all provided values have been added</li>
+<li>All other values shall have null values within the array (i.e. no default value shall be assumed).</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A 2x3 variant type array of type "i4" is specified as follows:</p>
+<p><div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;vt:array</span><span style="color: #bbbbbb"> </span><span style="color: #687822">lBounds=</span><span style="color: #BA2121">&quot;0,0&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">uBounds=</span><span style="color: #BA2121">&quot;1,2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;i4&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>0<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>1<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>2<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>3<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>4<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/vt:array&gt;</span>
+</code></pre></div>
+The resulting array: [0,0] = 0, [1,0] = 1, [0,1] = 2, [1,1] = 3, [0,2] = 4. </p>
+</div>
+<p><table>
+    <thead>
+        <tr>
+            <th>Attributes</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>baseType (Array Base Type) </td>
+            <td>
+                The baseType attribute specifies the base variant type of an array.<br/><br/>
+                The allowed values are: variant, i1, i2, i4, int, ui1, ui2, ui4, uint, r4, r8, decimal, bstr, date, bool, cy, and error.<br/><br/>
+                The possible values for this attribute are defined by the ST_ArrayBaseType simple type (§22.4.3.1).
+            </td>
+        </tr>
+        <tr>
+            <td>lBounds (Array Lower Bounds Attribute)</td>
+            <td>
+                The lBounds attribute specifies the lower bound of an array in the format: #, #, # … # where each # represents an integer.<br/><br/>
+                The possible values for this attribute are defined by the W3C XML Schema int datatype.
+            </td>
+        </tr>
+        <tr>
+            <td>uBounds (Array Upper Bounds Attribute)</td>
+            <td>
+                The uBounds attribute specifies the upper bound of an array in the format: #, #, # … # where each # represents an integer.<br/><br/>
+                The possible values for this attribute are defined by the W3C XML Schema int datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Array) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22422-blob-二进制blob">22.4.2.2 blob (二进制Blob)<a class="headerlink" href="#22422-blob-二进制blob" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定 base64 二进制 blob 变体类型。</p>
+<p>该类型定义如下：DWORD 字节数，后跟相应数量的数据字节。 字节计数不包括计数本身长度的四个字节； 空 blob 成员的计数为零，后跟零字节。</p>
+<p>此元素的可能值由 W3C XML 架构 base64Binary 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>blob (Binary Blob)</strong></p>
+<p>This element specifies a base64 binary blob variant type.</p>
+<p>This type is defined as follows: a DWORD count of bytes, followed by that many bytes of data. The byte count does not include the four bytes for the length of the count itself; an empty blob member would have a count of zero, followed by zero bytes.</p>
+<p>The possible values for this element are defined by the W3C XML Schema base64Binary datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22423-bool-boolean">22.4.2.3 bool (Boolean)<a class="headerlink" href="#22423-bool-boolean" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定布尔变量类型。</p>
+<p>该元素的可能值由 W3C XML 架构布尔数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>bool (Boolean)</strong></p>
+<p>This element specifies a Boolean variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema boolean datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22424-bstr-基本字符串">22.4.2.4 bstr (基本字符串)<a class="headerlink" href="#22424-bstr-基本字符串" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素定义了一个二进制基本字符串变体类型，它可以存储任何有效的 Unicode 字符。 
+不能直接在 XML 中表示的 Unicode 字符（如 XML 1.0 规范所定义）应使用 Unicode 数字字符表示转义字符格式 <em>xHHHH</em> 进行转义，其中 H 表示字符值中的十六进制字符。 [Example：XML 1.0 文档中不允许使用 Unicode 字符 8，因此应将其转义为 <code>_x0008_</code>。] 要存储转义序列的文字形式，初始下划线本身应被转义（即存储为 <code>_x005F_</code>）. [Example: 字符串文字<code>_x0008_</code> 将存储为 <code>_x005F_x0008_</code>。 end example]</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>bstr (Basic String)</strong></p>
+<p>This element defines a binary basic string variant type, which can store any valid Unicode character. Unicode characters that cannot be directly represented in XML as defined by the XML 1.0 specification, shall be escaped using the Unicode numerical character representation escape character format <em>xHHHH</em>, where H represents a hexadecimal character in the character's value. [Example: The Unicode character 8 is not permitted in an XML 1.0 document, so it shall be escaped as <em>x0008</em>. end example] To store the literal form of an escape sequence, the initial underscore shall itself be escaped (i.e. stored as <em>x005F</em>). [Example: The string literal <em>x0008</em> would be stored as <em>x005F_x0008</em>. end example]</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22425-clsid-class-id">22.4.2.5 clsid (Class ID)<a class="headerlink" href="#22425-clsid-class-id" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定类 ID 变体类型。 该值应为全局唯一标识符，格式为： {HHHHHHHH-HHHH-HHHH-HHHH-HHHHHHHH}.</p>
+<p>该元素的可能值由 ST_Guid 简单类型 ([§22.9.2.4]) 定义。</p>
+<p>[Note: 该元素内容模型 (ST_Guid) 的 W3C XML 架构定义位于 [§A.6.9]. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>clsid (Class ID)</strong></p>
+<p>This element specifies a class ID variant type. The value shall be a Globally Unique Identifier with format: {HHHHHHHH-HHHH-HHHH-HHHH-HHHHHHHH}.</p>
+<p>The possible values for this element are defined by the ST_Guid simple type (§22.9.2.4).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_Guid) is located in §A.6.9. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22426-cy-货币">22.4.2.6 cy (货币)<a class="headerlink" href="#22426-cy-货币" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定小数点后恰好四位数字的货币变体类型。</p>
+<p>该元素的可能值由 ST_Cy 简单类型 ([§22.4.3.2]) 定义。</p>
+<p>[Note: 该元素内容模型 (ST_Cy) 的 W3C XML 模式定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>cy (Currency)</strong></p>
+<p>This element specifies a currency variant type with exactly four digits after the decimal point.</p>
+<p>The possible values for this element are defined by the ST_Cy simple type (§22.4.3.2).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_Cy) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22427-date-日期和时间">22.4.2.7 date (日期和时间)<a class="headerlink" href="#22427-date-日期和时间" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定 RFC 3339 中定义的日期时间类型的日期变体类型。</p>
+<p>此元素的可能值由 W3C XML 架构 dateTime 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>date (Date and Time)</strong></p>
+<p>This element specifies a date variant type of type date-time as defined in RFC 3339.</p>
+<p>The possible values for this element are defined by the W3C XML Schema dateTime datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22428-decimal-十进制">22.4.2.8 decimal (十进制)<a class="headerlink" href="#22428-decimal-十进制" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定十进制变体类型。</p>
+<p>此元素的可能值由 W3C XML 架构十进制数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>decimal (Decimal)</strong></p>
+<p>This element specifies a decimal variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema decimal datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="22429-empty-空">22.4.2.9 empty (空)<a class="headerlink" href="#22429-empty-空" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定空变体类型。 不允许任何值或子元素。</p>
+<p>[Note: 该元素内容模型 (CT_Empty) 的 W3C XML 架构定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>empty (Empty)</strong></p>
+<p>This element specifies an empty variant type. No values or child elements are allowed.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Empty) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="224210-error-错误状态代码">22.4.2.10 error (错误状态代码)<a class="headerlink" href="#224210-error-错误状态代码" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>错误元素指定 0xHHHHHHHH 形式的 32 位错误状态代码变量类型。 每个H代表一个十六进制数字。</p>
+<p>该元素的可能值由 ST_Error 简单类型（[§22.4.3.3]）定义。</p>
+<p>[Note: 该元素内容模型 (ST_Error) 的 W3C XML 模式定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>error (Error Status Code)</strong></p>
+<p>The error element specifies a 32-bit error status code variant type of the form 0xHHHHHHHH. Each H represents a hexadecimal digit.</p>
+<p>The possible values for this element are defined by the ST_Error simple type (§22.4.3.3).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (ST_Error) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="224211-filetime-文件时间">22.4.2.11 filetime (文件时间)<a class="headerlink" href="#224211-filetime-文件时间" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定 RFC 3339 中定义的日期时间类型的文件时间变体类型。</p>
+<p>此元素的可能值由 W3C XML 架构 dateTime 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>filetime (File Time)</strong></p>
+<p>This element specifies a file-time variant type of type date-time as defined in RFC 3339.</p>
+<p>The possible values for this element are defined by the W3C XML Schema dateTime datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224212-i1-1-字节-有符号整数">22.4.2.12 i1 (1-字节 有符号整数)<a class="headerlink" href="#224212-i1-1-字节-有符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 1 字节有符号整数变量类型。</p>
+<p>该元素的可能值由 W3C XML 模式字节数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>i1 (1-Byte Signed Integer)</strong></p>
+<p>This element specifies a 1-byte signed integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema byte datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224213-i2-2-字节-有符号整数">22.4.2.13 i2 (2-字节 有符号整数)<a class="headerlink" href="#224213-i2-2-字节-有符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 2 字节有符号整数变体类型。</p>
+<p>该元素的可能值由 W3C XML 模式短数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>i2 (2-Byte Signed Integer)</strong></p>
+<p>This element specifies a 2-byte signed integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema short datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224214-i4-4-字节-有符号整数">22.4.2.14 i4 (4-字节 有符号整数)<a class="headerlink" href="#224214-i4-4-字节-有符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 4 字节有符号整数变量类型。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>i4 (4-Byte Signed Integer)</strong></p>
+<p>This element specifies a 4-byte signed integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224215-i8-8-字节-有符号整数">22.4.2.15 i8 (8-字节 有符号整数)<a class="headerlink" href="#224215-i8-8-字节-有符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 8 字节有符号整数变体类型。</p>
+<p>该元素的可能值由 W3C XML 模式长数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>i8 (8-Byte Signed Integer)</strong></p>
+<p>This element specifies a 8-byte signed integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema long datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224216-int-整数">22.4.2.16 int (整数)<a class="headerlink" href="#224216-int-整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定整数变体类型。</p>
+<p>该元素的可能值由 W3C XML Schema int 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>int (Integer)</strong></p>
+<p>This element specifies an integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema int datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224217-lpstr-lpstr">22.4.2.17 lpstr (LPSTR)<a class="headerlink" href="#224217-lpstr-lpstr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定字符串变体类型。 对于 XML 1.0 规范定义的无法在 XML 中表示的所有字符，将使用 Unicode 数字字符表示转义字符格式 <em>xHHHH</em> 对这些字符进行转义，其中 H 表示字符值中的十六进制字符。</p>
+<p>[Example: XML 1.0 文档中不允许使用 Unicode 字符 8，因此必须将其转义为 <em>x0008</em>。 end example]</p>
+<p>此元素的可能值由 W3C XML 架构字符串数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>lpstr (LPSTR)</strong></p>
+<p>This element specifies a string variant type. For all characters that cannot be represented in XML as defined by the XML 1.0 specification, the characters are escaped using the Unicode numerical character representation escape character format <em>xHHHH</em>, where H represents a hexadecimal character in the character's value.</p>
+<p>[Example: The Unicode character 8 is not permitted in an XML 1.0 document, so it must be escaped as <em>x0008</em>. end example]</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224218-lpwstr-lpwstr">22.4.2.18 lpwstr (LPWSTR)<a class="headerlink" href="#224218-lpwstr-lpwstr" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定字符串变体类型。 对于 XML 1.0 规范定义的无法在 XML 中表示的所有字符，将使用 Unicode 数字字符表示转义字符格式 <em>xHHHH</em> 对这些字符进行转义，其中 H 表示字符值中的十六进制字符。</p>
+<p>[Example: XML 1.0 文档中不允许使用 Unicode 字符 8，因此必须将其转义为 <em>x0008</em>。 end example]</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>lpwstr (LPWSTR)</strong></p>
+<p>This element specifies a string variant type. For all characters that cannot be represented in XML as defined by the XML 1.0 specification, the characters are escaped using the Unicode numerical character representation escape character format <em>xHHHH</em>, where H represents a hexadecimal character in the character's value.</p>
+<p>[Example: The Unicode character 8 is not permitted in an XML 1.0 document, so it must be escaped as <em>x0008</em>. end example]</p>
+<p>The possible values for this element are defined by the W3C XML Schema string datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224219-null-null">22.4.2.19 null (Null)<a class="headerlink" href="#224219-null-null" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定空变体类型。</p>
+<p>[Note: 该元素内容模型 (CT_Null) 的 W3C XML 模式定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>null (Null)</strong></p>
+<p>This element specifies a null variant type.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Null) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="224220-oblob-二进制-blob-对象">22.4.2.20 oblob (二进制 Blob 对象)<a class="headerlink" href="#224220-oblob-二进制-blob-对象" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定 base64 二进制 blob 对象变体类型。</p>
+<p>该类型定义如下：一个 blob 成员，包含一个序列化对象，其表示形式与 ostream 元素中出现的表示形式相同。 也就是说，DWORD 字节计数（其中字节计数不包括其本身的大小），其格式为类标识符后跟该类的初始化数据。</p>
+<p>此元素的可能值由 W3C XML 架构 base64Binary 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>oblob (Binary Blob Object)</strong></p>
+<p>This element specifies a base64 binary blob object variant type.</p>
+<p>This type is defined as follows: A blob member that contains a serialized object in the same representation that would appear in the ostream element. That is, a DWORD byte count (where the byte count does not include the size of itself) which is in the format of a class identifier followed by initialization data for that class.</p>
+<p>The possible values for this element are defined by the W3C XML Schema base64Binary datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224221-ostorage-二进制存储对象">22.4.2.21 ostorage (二进制存储对象)<a class="headerlink" href="#224221-ostorage-二进制存储对象" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 Base64 二进制存储对象变体类型。</p>
+<p>该类型定义如下： 与存储元素相同，但指示指定存储应包含可加载对象。</p>
+<p>此元素的可能值由 W3C XML 架构 base64Binary 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ostorage (Binary Storage Object)</strong></p>
+<p>This element specifies a base64 binary storage object variant type.</p>
+<p>This type is defined as follows: Identical to the storage element, but indicates that the designated storage shall contain a loadable object.</p>
+<p>The possible values for this element are defined by the W3C XML Schema base64Binary datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224222-ostream-二进制流对象">22.4.2.22 ostream (二进制流对象)<a class="headerlink" href="#224222-ostream-二进制流对象" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定二进制流对象变体类型。</p>
+<p>该类型定义如下： 与流元素的定义相同，但指示流包含一个序列化对象，它是一个 CLSID – 请参阅 ST_Guid 简单类型 ([§22.9.2.4]) – 后跟指定的初始化数据类。</p>
+<p>此元素的可能值由 W3C XML 架构 base64Binary 数据类型定义.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ostream (Binary Stream Object)</strong></p>
+<p>This element specifies a binary stream object variant type.</p>
+<p>This type is defined as follows: Identical to the definition of the stream element, but indicates that the stream contains a serialized object, which is a CLSID – see the ST_Guid simple type (§22.9.2.4) – followed by initialization data for the specified class.</p>
+<p>The possible values for this element are defined by the W3C XML Schema base64Binary datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224223-r4-4-字节-real-number">22.4.2.23 r4 (4-字节 Real Number)<a class="headerlink" href="#224223-r4-4-字节-real-number" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 4 字节实数变量类型。</p>
+<p>该元素的可能值由 W3C XML 架构浮点数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>r4 (4-Byte Real Number)</strong></p>
+<p>This element specifies a 4-byte real number variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema float datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224224-r8-8-字节-real-number">22.4.2.24 r8 (8-字节 Real Number)<a class="headerlink" href="#224224-r8-8-字节-real-number" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 8 字节实数变量类型。</p>
+<p>该元素的可能值由 W3C XML 模式双精度数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>r8 (8-Byte Real Number)</strong></p>
+<p>This element specifies a 8-byte real number variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema double datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224225-storage-二进制存储">22.4.2.25 storage (二进制存储)<a class="headerlink" href="#224225-storage-二进制存储" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定二进制存储变体类型。</p>
+<p>该类型定义如下： 包含用于结构化存储的 Base64 编码数据。</p>
+<p>此元素的可能值由 W3C XML 架构 base64Binary 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>storage (Binary Storage)</strong></p>
+<p>This element specifies a binary storage variant type.</p>
+<p>This type is defined as follows: Contains the base64-encoded data for a structured storage.</p>
+<p>The possible values for this element are defined by the W3C XML Schema base64Binary datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224226-stream-二进制流">22.4.2.26 stream (二进制流)<a class="headerlink" href="#224226-stream-二进制流" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定二进制流变体类型。</p>
+<p>该类型定义如下： 包含结构化存储流的 base64 编码数据。</p>
+<p>此元素的可能值由 W3C XML 架构 base64Binary 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>stream (Binary Stream)</strong></p>
+<p>This element specifies a binary stream variant type.</p>
+<p>This type is defined as follows: Contains the base64-encoded data for a structured storage stream.</p>
+<p>The possible values for this element are defined by the W3C XML Schema base64Binary datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224227-ui1-1-字节-无符号整数">22.4.2.27 ui1 (1-字节 无符号整数)<a class="headerlink" href="#224227-ui1-1-字节-无符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 1 字节无符号整数变量类型。</p>
+<p>此元素的可能值由 W3C XML 架构 unsignedByte 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ui1 (1-Byte Unsigned Integer)</strong></p>
+<p>This element specifies a 1-byte unsigned integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema unsignedByte datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224228-ui2-2-字节-无符号整数">22.4.2.28 ui2 (2-字节 无符号整数)<a class="headerlink" href="#224228-ui2-2-字节-无符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 2 字节无符号整数变量类型。</p>
+<p>此元素的可能值由 W3C XML 架构 unsignedShort 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ui2 (2-Byte Unsigned Integer)</strong></p>
+<p>This element specifies a 2-byte unsigned integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema unsignedShort datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224229-ui4-4-字节-无符号整数">22.4.2.29 ui4 (4-字节 无符号整数)<a class="headerlink" href="#224229-ui4-4-字节-无符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">中文</label><label for="__tabbed_31_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 4 字节无符号整数变量类型。</p>
+<p>此元素的可能值由 W3C XML 架构 unsignedInt 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ui4 (4-Byte Unsigned Integer)</strong></p>
+<p>This element specifies a 4-byte unsigned integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema unsignedInt datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224230-ui8-8-字节-无符号整数">22.4.2.30 ui8 (8-字节 无符号整数)<a class="headerlink" href="#224230-ui8-8-字节-无符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">中文</label><label for="__tabbed_32_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 8 字节无符号整数变量类型。</p>
+<p>此元素的可能值由 W3C XML 架构 unsignedLong 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ui8 (8-Byte Unsigned Integer)</strong></p>
+<p>This element specifies a 8-byte unsigned integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema unsignedLong datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224231-uint-无符号整数">22.4.2.31 uint (无符号整数)<a class="headerlink" href="#224231-uint-无符号整数" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">中文</label><label for="__tabbed_33_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定无符号整数变体类型。</p>
+<p>此元素的可能值由 W3C XML 架构 unsignedInt 数据类型定义。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>uint (Unsigned Integer)</strong></p>
+<p>This element specifies an unsigned integer variant type.</p>
+<p>The possible values for this element are defined by the W3C XML Schema unsignedInt datatype.</p>
+</div>
+</div>
+</div>
+<h3 id="224232-variant-变体">22.4.2.32 variant (变体)<a class="headerlink" href="#224232-variant-变体" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">中文</label><label for="__tabbed_34_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素可以包含任意变体类型的 1 个子元素。 该元素仅作为向量或数组变体类型的子元素有效。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A vector of variant types:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;variant&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>12<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>WorkSheets<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+</code></pre></div>
+</div>
+<p>[Note: 该元素内容模型 (CT_Variant) 的 W3C XML 架构定义位于 [§A.6.4]. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>variant (Variant)</strong></p>
+<p>This element can contain exactly 1 child element of any variant type. This element is only valid as a child element of a vector or array variant type.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A vector of variant types:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;variant&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:i4&gt;</span>12<span style="color: #008000; font-weight: bold">&lt;/vt:i4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:variant&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>WorkSheets<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/vt:variant&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+</code></pre></div>
+</div>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Variant) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="224233-vector-向量">22.4.2.33 vector (向量)<a class="headerlink" href="#224233-vector-向量" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">中文</label><label for="__tabbed_35_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素定义向量变体类型。 矢量内容应具有由 baseType 属性指定的统一类型。 向量的内容是使用适当变体类型的重复子元素来定义的。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>lpstr 变体类型的向量:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;lpstr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>One<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Two<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Three<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+</code></pre></div>
+</div>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>属性</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>baseType (向量基类型)</td>
+            <td>
+                baseType 属性指定向量的基本变体类型.<br/><br/>
+                允许的值为：variant、i1、i2、i4、i8、ui1、ui2、ui4、ui8、r4、r8、lpstr、lpwstr、bstr、date、filetime、bool、cy、error 和 clsid.<br/><br/>
+                该属性的可能值由 ST_VectorBaseType 简单类型定义 ([§22.4.3.4]).
+            </td>
+        </tr>
+        <tr>
+            <td>size (向量大小)</td>
+            <td>
+                指定向量中的元素数量.<br/><br/>
+                此属性的可能值由 W3C XML 架构 unsignedInt 数据类型定义.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_Vector) 的 W3C XML 模式定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>vector (Vector)</strong></p>
+<p>This element defines the vector variant type. Vector contents shall be of uniform type as specified by the baseType attribute. The contents of a vector are defined using repeated child elements of the appropriate variant type.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>A vector of lpstr variant types:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;vt:vector</span><span style="color: #bbbbbb"> </span><span style="color: #687822">baseType=</span><span style="color: #BA2121">&quot;lpstr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>One<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Two<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;vt:lpstr&gt;</span>Three<span style="color: #008000; font-weight: bold">&lt;/vt:lpstr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/vt:vector&gt;</span>
+</code></pre></div>
+</div>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>baseType (Vector Base Type)</td>
+            <td>
+                The baseType attribute specifies the base variant type of a vector.<br/><br/>
+                The allowed values are: variant, i1, i2, i4, i8, ui1, ui2, ui4, ui8, r4, r8, lpstr, lpwstr, bstr, date, filetime, bool, cy, error, and clsid.<br/><br/>
+                The possible values for this attribute are defined by the ST_VectorBaseType simple type (§22.4.3.4).
+            </td>
+        </tr>
+        <tr>
+            <td>size (Vector Size)</td>
+            <td>
+                Specifies the number of elements in the vector.<br/><br/>
+                The possible values for this attribute are defined by the W3C XML Schema unsignedInt datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Vector) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="224234-vstream-二进制版本化流">22.4.2.34 vstream (二进制版本化流)<a class="headerlink" href="#224234-vstream-二进制版本化流" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">中文</label><label for="__tabbed_36_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定二进制版本化流变体类型。</p>
+<p>该类型定义如下：具有 GUID 版本（版本属性）的流元素内容。</p>
+<p>[Note: 该元素内容模型 (CT_Vstream) 的 W3C XML 模式定义位于 [§A.6.4] 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>vstream (Binary Versioned Stream)</strong></p>
+<p>This element specifies a binary versioned stream variant type.</p>
+<p>This type is defined as follows: A stream element's content with a GUID version (the version attribute).</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Vstream) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="2243-简单类型">22.4.3 简单类型<a class="headerlink" href="#2243-简单类型" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">中文</label><label for="__tabbed_37_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>这是专用于变体类型的简单类型的完整列表。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Simple Types</strong></p>
+<p>This is the complete list of simple types dedicated to Variant Types.</p>
+</div>
+</div>
+</div>
+<h3 id="22431-st_arraybasetype-数组-基本类型-简单类型">22.4.3.1 ST_ArrayBaseType (数组 基本类型 简单类型)<a class="headerlink" href="#22431-st_arraybasetype-数组-基本类型-简单类型" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="38:2"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><input id="__tabbed_38_2" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="__tabbed_38_1">中文</label><label for="__tabbed_38_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>ST_ArrayBaseType 简单类型将数组的 baseType 属性的允许值定义为：variant、i1、i2、i4、int、ui1、ui2、ui4、uint、r4、r8、decimal、bstr、date、bool、cy 和 error。</p>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>枚举值</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bool (布尔基本类型)</td>
+            <td>
+                指定数组内容的变量类型应为 bool.
+            </td>
+        </tr>
+        <tr>
+            <td>bstr (基本字符串基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 bstr.
+            </td>
+        </tr>
+        <tr>
+            <td>cy (货币基础类型) </td>
+            <td>
+                指定数组内容的变体类型应为 cy.
+            </td>
+        </tr>
+        <tr>
+            <td>date (日期和时间基础类型)</td>
+            <td>
+                指定数组内容的变体类型应为 date.
+            </td>
+        </tr>
+        <tr>
+            <td>decimal (Decimal 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 decimal.
+            </td>
+        </tr>
+        <tr>
+            <td>error (错误状态代码基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 error.
+            </td>
+        </tr>
+        <tr>
+            <td>i1 (1-字节 有符号整数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 i1.
+            </td>
+        </tr>
+        <tr>
+            <td>i2 (2-字节 有符号整数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 i2.
+            </td>
+        </tr>
+        <tr>
+            <td>i4 (4-字节 有符号整数 基本类型) </td>
+            <td>
+                指定数组内容的变体类型应为 i4.
+            </td>
+        </tr>
+        <tr>
+            <td>int (Integer 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 int.
+            </td>
+        </tr>
+        <tr>
+            <td>r4 (4-字节 实数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 r4.
+            </td>
+        </tr>
+        <tr>
+            <td>r8 (8-字节 实数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 r8.
+            </td>
+        </tr>
+        <tr>
+            <td>ui1 (1-字节 无符号整数 基本类型) </td>
+            <td>
+                指定数组内容的变体类型应为 ui1.
+            </td>
+        </tr>
+        <tr>
+            <td>ui2 (2-字节 无符号整数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 ui2.
+            </td>
+        </tr>
+        <tr>
+            <td>ui4 (4-字节 无符号整数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 ui4.
+            </td>
+        </tr>
+        <tr>
+            <td>uint (无符号整数 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 uint.
+            </td>
+        </tr>
+        <tr>
+            <td>variant (Variant 基本类型)</td>
+            <td>
+                指定数组内容的变体类型应为 variant.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 此简单类型的内容模型 (ST_ArrayBaseType) 的 W3C XML 架构定义位于 §A.6.4. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_ArrayBaseType (Array Base Type Simple Type)</strong></p>
+<p>The ST_ArrayBaseType simple type defines the allowed values for an array's baseType attribute as: variant, i1, i2, i4, int, ui1,ui2, ui4, uint, r4, r8, decimal, bstr, date, bool, cy, and error.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>Enumeration Value</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bool (Boolean Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be bool.
+            </td>
+        </tr>
+        <tr>
+            <td>bstr (Basic String Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be bstr.
+            </td>
+        </tr>
+        <tr>
+            <td>cy (Curency Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be cy.
+            </td>
+        </tr>
+        <tr>
+            <td>date (Date and Time Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be date.
+            </td>
+        </tr>
+        <tr>
+            <td>decimal (Decimal Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be decimal.
+            </td>
+        </tr>
+        <tr>
+            <td>error (Error Status Code Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be error.
+            </td>
+        </tr>
+        <tr>
+            <td>i1 (1-Byte Signed Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be i1.
+            </td>
+        </tr>
+        <tr>
+            <td>i2 (2-Byte Signed Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be i2.
+            </td>
+        </tr>
+        <tr>
+            <td>i4 (4-Byte Signed Integer Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be i4.
+            </td>
+        </tr>
+        <tr>
+            <td>int (Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be int.
+            </td>
+        </tr>
+        <tr>
+            <td>r4 (4-Byte Real Number Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be r4.
+            </td>
+        </tr>
+        <tr>
+            <td>r8 (8-Byte Real Number Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be r8.
+            </td>
+        </tr>
+        <tr>
+            <td>ui1 (1-Byte Unsigned Integer Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be ui1.
+            </td>
+        </tr>
+        <tr>
+            <td>ui2 (2-Byte Unsigned Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be ui2.
+            </td>
+        </tr>
+        <tr>
+            <td>ui4 (4-Byte Unsigned Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be ui4.
+            </td>
+        </tr>
+        <tr>
+            <td>uint (Unsigned Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be uint.
+            </td>
+        </tr>
+        <tr>
+            <td>variant (Variant Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a array shall be variant.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_ArrayBaseType) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22432-st_cy-货币简单类型">22.4.3.2 ST_Cy (货币简单类型)<a class="headerlink" href="#22432-st_cy-货币简单类型" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="39:2"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><input id="__tabbed_39_2" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="__tabbed_39_1">中文</label><label for="__tabbed_39_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>ST_Cy 简单类型将 cy 元素定义为小数点后恰好四位数字的货币变体类型。</p>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>\s*[0-9]*\.[0-9]{4}\s*</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_Cy) 的 W3C XML 架构定义位于 [§A.6.4]. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_Cy (Currency Simple Type)</strong></p>
+<p>The ST_Cy simple type defines the cy element as a currency variant type with exactly four digits after the decimal point.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>\s*[0-9]*\.[0-9]{4}\s*</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Cy) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22433-st_error-错误状态代码简单类型">22.4.3.3 ST_Error (错误状态代码简单类型)<a class="headerlink" href="#22433-st_error-错误状态代码简单类型" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="40:2"><input checked="checked" id="__tabbed_40_1" name="__tabbed_40" type="radio" /><input id="__tabbed_40_2" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="__tabbed_40_1">中文</label><label for="__tabbed_40_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>ST_Error 简单类型定义了 0xHHHHHHHH 形式的 32 位错误状态代码变体类型。 每个H代表一个十六进制。</p>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>这个简单类型还指定了以下限制：</p>
+<ul>
+<li>该简单类型的内容应与以下正则表达式模式匹配: <code>\s*0x[0-9A-Zaz]{8}\s*</code>.</li>
+</ul>
+<p>[Note: 此简单类型的内容模型 (ST_Error) 的 W3C XML 架构定义位于 [§A.6.4]. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_Error (Error Status Code Simple Type)</strong></p>
+<p>The ST_Error simple type defines a 32-bit error status code variant type of the form 0xHHHHHHHH. Each H represents a hexadecimal.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type also specifies the following restrictions:</p>
+<ul>
+<li>This simple type's contents shall match the following regular expression pattern: <code>\s*0x[0-9A-Zaz]{8}\s*</code>.</li>
+</ul>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_Error) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="22434-st_vectorbasetype-向量基类型简单类型">22.4.3.4 ST_VectorBaseType (向量基类型简单类型)<a class="headerlink" href="#22434-st_vectorbasetype-向量基类型简单类型" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="41:2"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><input id="__tabbed_41_2" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">中文</label><label for="__tabbed_41_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>ST_VectorBaseType 简单类型将向量的 baseType 属性的允许值定义为：variant、i1、i2、i4、i8、ui1、ui2、ui4、ui8、r4、r8、lpstr、lpwstr、bstr、date、filetime、bool、cy 、error和 clsid。</p>
+<p>此简单类型的内容是 W3C XML 架构字符串数据类型的限制。</p>
+<p>此简单类型仅限于下表中列出的值：</p>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>枚举值</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bool (Boolean 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 bool.
+            </td>
+        </tr>
+        <tr>
+            <td>bstr (基本字符串 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 bstr.
+            </td>
+        </tr>
+        <tr>
+            <td>clsid (Class ID 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 clsid.
+            </td>
+        </tr>
+        <tr>
+            <td>cy (Curency 基本类型) </td>
+            <td>
+                指定向量内容的变体类型应为 cy.
+            </td>
+        </tr>
+        <tr>
+            <td>date (日期时间 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 date.
+            </td>
+        </tr>
+        <tr>
+            <td>error (错误状态代码 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 error.
+            </td>
+        </tr>
+        <tr>
+            <td>filetime (文件时间 基本类型) </td>
+            <td>
+                指定向量内容的变体类型应为 filetime.
+            </td>
+        </tr>
+        <tr>
+            <td>i1 (1-字节 有符号整数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 i1.
+            </td>
+        </tr>
+        <tr>
+            <td>i2 (2-字节 有符号整数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 i2.
+            </td>
+        </tr>
+        <tr>
+            <td>i4 (4-字节 有符号整数 基本类型) </td>
+            <td>
+                指定向量内容的变体类型应为 i4.
+            </td>
+        </tr>
+        <tr>
+            <td>i8 (8-字节 有符号整数 基本类型) </td>
+            <td>
+                指定向量内容的变体类型应为 i8.
+            </td>
+        </tr>
+        <tr>
+            <td>lpstr (LPSTR 基本类型)  </td>
+            <td>
+                指定向量内容的变体类型应为 lpstr.
+            </td>
+        </tr>
+        <tr>
+            <td>lpwstr (LPWSTR 基本类型) </td>
+            <td>
+                指定向量内容的变体类型应为 lpwstr.
+            </td>
+        </tr>
+        <tr>
+            <td>r4 (4-字节 实数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 r4.
+            </td>
+        </tr>
+        <tr>
+            <td>r8 (8-字节 实数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 r8.
+            </td>
+        </tr>
+        <tr>
+            <td>ui1 (1-字节 无符号整数 基本类型) </td>
+            <td>
+                指定向量内容的变体类型应为 ui1.
+            </td>
+        </tr>
+        <tr>
+            <td>ui2 (2-字节 无符号整数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 ui2.
+            </td>
+        </tr>
+        <tr>
+            <td>ui4 (4-字节 无符号整数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 ui4.
+            </td>
+        </tr>
+        <tr>
+            <td>ui8 (8-字节 无符号整数 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 ui8.
+            </td>
+        </tr>
+        <tr>
+            <td>variant (Variant 基本类型)</td>
+            <td>
+                指定向量内容的变体类型应为 variant.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 此简单类型的内容模型 (ST_VectorBaseType) 的 W3C XML 架构定义位于 [§A.6.4]. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>ST_VectorBaseType (Vector Base Type Simple Type)</strong></p>
+<p>The ST_VectorBaseType simple type defines the allowed values for a vector's baseType attribute as: variant, i1, i2, i4, i8, ui1, ui2, ui4, ui8, r4, r8, lpstr, lpwstr, bstr, date, filetime, bool, cy, error, and clsid.</p>
+<p>This simple type's contents are a restriction of the W3C XML Schema string datatype.</p>
+<p>This simple type is restricted to the values listed in the following table:</p>
+<p><table>
+    <thead>
+        <tr>
+            <th><strong>Enumeration Value</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>bool (Boolean Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be bool.
+            </td>
+        </tr>
+        <tr>
+            <td>bstr (Basic String Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be bstr.
+            </td>
+        </tr>
+        <tr>
+            <td>clsid (Class ID Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be clsid.
+            </td>
+        </tr>
+        <tr>
+            <td>cy (Curency Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be cy.
+            </td>
+        </tr>
+        <tr>
+            <td>date (Date and Time Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be date.
+            </td>
+        </tr>
+        <tr>
+            <td>error (Error Status Code Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be error.
+            </td>
+        </tr>
+        <tr>
+            <td>filetime (File Time Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be filetime.
+            </td>
+        </tr>
+        <tr>
+            <td>i1 (1-Byte Signed Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be i1.
+            </td>
+        </tr>
+        <tr>
+            <td>i2 (2-Byte Signed Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be i2.
+            </td>
+        </tr>
+        <tr>
+            <td>i4 (4-Byte Signed Integer Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be i4.
+            </td>
+        </tr>
+        <tr>
+            <td>i8 (8-Byte Signed Integer Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be i8.
+            </td>
+        </tr>
+        <tr>
+            <td>lpstr (LPSTR Base Type)  </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be lpstr.
+            </td>
+        </tr>
+        <tr>
+            <td>lpwstr (LPWSTR Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be lpwstr.
+            </td>
+        </tr>
+        <tr>
+            <td>r4 (4-Byte Real Number Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be r4.
+            </td>
+        </tr>
+        <tr>
+            <td>r8 (8-Byte Real Number Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be r8.
+            </td>
+        </tr>
+        <tr>
+            <td>ui1 (1-Byte Unsigned Integer Base Type) </td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be ui1.
+            </td>
+        </tr>
+        <tr>
+            <td>ui2 (2-Byte Unsigned Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be ui2.
+            </td>
+        </tr>
+        <tr>
+            <td>ui4 (4-Byte Unsigned Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be ui4.
+            </td>
+        </tr>
+        <tr>
+            <td>ui8 (4-Byte Unsigned Integer Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be ui8.
+            </td>
+        </tr>
+        <tr>
+            <td>variant (Variant Base Type)</td>
+            <td>
+                Specifies that the variant type for the contents of a vector shall be variant.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this simple type’s content model (ST_VectorBaseType) is located in §A.6.4. end note]</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

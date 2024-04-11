@@ -1,0 +1,4203 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3d/">
+      
+      
+        <link rel="next" href="../coordinate/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>20.1.6 共享样式表 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2016-共享样式表" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20.1.6 共享样式表
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_21" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_21" id="__nav_2_21_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_21_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_21">
+            <span class="md-nav__icon md-icon"></span>
+            20. DrawingML - 框架参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_21_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    20.1 DrawingML - Main
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_21_2" id="__nav_2_21_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_21_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_21_2">
+            <span class="md-nav__icon md-icon"></span>
+            20.1 DrawingML - Main
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.2 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../audioandvideo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.3 音频和视频
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.4 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.5 3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    20.1.6 共享样式表
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    20.1.6 共享样式表
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#20161-clrmap-颜色映射" class="md-nav__link">
+    20.1.6.1 clrMap (颜色映射)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20162-clrscheme-颜色方案" class="md-nav__link">
+    20.1.6.2 clrScheme (颜色方案)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20163-custclrlst-定制颜色列表" class="md-nav__link">
+    20.1.6.3 custClrLst (定制颜色列表)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20164-extraclrscheme-额外的配色方案" class="md-nav__link">
+    20.1.6.4 extraClrScheme (额外的配色方案)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20165-extraclrschemelst-额外配色方案列表" class="md-nav__link">
+    20.1.6.5 extraClrSchemeLst (额外配色方案列表)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20166-masterclrmapping-主颜色映射" class="md-nav__link">
+    20.1.6.6 masterClrMapping (主颜色映射)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20167-objectdefaults-对象默认属性" class="md-nav__link">
+    20.1.6.7 objectDefaults (对象默认属性)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20168-overrideclrmapping-颜色映射覆盖" class="md-nav__link">
+    20.1.6.8 overrideClrMapping (颜色映射覆盖)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20169-theme-主题" class="md-nav__link">
+    20.1.6.9 theme (主题)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201610-themeelements-主题元素集" class="md-nav__link">
+    20.1.6.10 themeElements (主题元素集)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201611-thememanager-主题管理器" class="md-nav__link">
+    20.1.6.11 themeManager (主题管理器)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201612-themeoverride-主题覆盖" class="md-nav__link">
+    20.1.6.12 themeOverride (主题覆盖)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_fill/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.8 形状填充、效果和线条属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.10 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.2 DrawingML - Picture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lockedcanvas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.3 DrawingML - Locked Canvas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../worddrawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.4 DrawingML - WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreaddrawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.5 DrawingML - SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#20161-clrmap-颜色映射" class="md-nav__link">
+    20.1.6.1 clrMap (颜色映射)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20162-clrscheme-颜色方案" class="md-nav__link">
+    20.1.6.2 clrScheme (颜色方案)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20163-custclrlst-定制颜色列表" class="md-nav__link">
+    20.1.6.3 custClrLst (定制颜色列表)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20164-extraclrscheme-额外的配色方案" class="md-nav__link">
+    20.1.6.4 extraClrScheme (额外的配色方案)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20165-extraclrschemelst-额外配色方案列表" class="md-nav__link">
+    20.1.6.5 extraClrSchemeLst (额外配色方案列表)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20166-masterclrmapping-主颜色映射" class="md-nav__link">
+    20.1.6.6 masterClrMapping (主颜色映射)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20167-objectdefaults-对象默认属性" class="md-nav__link">
+    20.1.6.7 objectDefaults (对象默认属性)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20168-overrideclrmapping-颜色映射覆盖" class="md-nav__link">
+    20.1.6.8 overrideClrMapping (颜色映射覆盖)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20169-theme-主题" class="md-nav__link">
+    20.1.6.9 theme (主题)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201610-themeelements-主题元素集" class="md-nav__link">
+    20.1.6.10 themeElements (主题元素集)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201611-thememanager-主题管理器" class="md-nav__link">
+    20.1.6.11 themeManager (主题管理器)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#201612-themeoverride-主题覆盖" class="md-nav__link">
+    20.1.6.12 themeOverride (主题覆盖)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="2016-共享样式表">20.1.6 共享样式表<a class="headerlink" href="#2016-共享样式表" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>DrawingML 中包含的共享样式表方面负责包含格式选项和样式，应用程序可以使用它们来定义文档的某种外观或感觉。 
+任何文档类别（[Note：例如，演示文稿]）都可以使用共享样式表来提取视觉信息，从而以某种方式或主题格式化文档。 共享样式表包含不特定于文档类别的信息。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Shared Style Sheet</strong></p>
+<p>The shared style sheet aspects contained within DrawingML are responsible for containing formatting options and styles which can be used by applications to define a certain look or feel to documents. The shared style sheet can be used by any document category ([Note: For example, a presentation. end note]) to pull visual information from which formats the document in a certain way, or theme. The shared style sheet contains information that is not document-category specific.</p>
+</div>
+</div>
+</div>
+<h2 id="20161-clrmap-颜色映射">20.1.6.1 clrMap (颜色映射)<a class="headerlink" href="#20161-clrmap-颜色映射" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定颜色映射层，允许用户定义背景和文本的颜色。 这允许交换背景和背景顶部文本的浅色/深色，以保持文本的可读性。
+在更深层次上，这准确指定了配色方案中前 12 个值引用的颜色。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下使用中的颜色图示例：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;clrMap</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg1=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx1=</span><span style="color: #BA2121">&quot;dk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg2=</span><span style="color: #BA2121">&quot;lt2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx2=</span><span style="color: #BA2121">&quot;dk2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent1=</span><span style="color: #BA2121">&quot;accent1&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent2=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent3=</span><span style="color: #BA2121">&quot;accent3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent4=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent6=</span><span style="color: #BA2121">&quot;accent6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">hlink=</span><span style="color: #BA2121">&quot;hlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">folHlink=</span><span style="color: #BA2121">&quot;folHlink&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>在此示例中，我们看到 bg1 映射到 lt1，tx1 映射到 dk1，依此类推。</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>属性</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                accent1 (强调色 1)
+            </td>
+            <td>
+                指定与强调色 1 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent2 (强调色 2)
+            </td>
+            <td>
+                指定与强调色 2 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent3 (强调色 3)
+            </td>
+            <td>
+                指定与强调色 3 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent4 (强调色 4)
+            </td>
+            <td>
+                指定与强调色 4 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent5 (强调色 5)
+            </td>
+            <td>
+                指定与强调色 5 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent6 (强调色 6)
+            </td>
+            <td>
+                指定与强调色 1 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg1 (背景色 1)
+            </td>
+            <td>
+                指定与背景色 1 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg2 (背景色 2)
+            </td>
+            <td>
+                指定与背景色 2 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                folHlink (已关注的超链接)
+            </td>
+            <td>
+                指定定义的颜色，该颜色与已关注超链接的颜色相关联.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                hlink (超链接)
+            </td>
+            <td>
+                指定与超链接颜色关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx1 (文本 1)
+            </td>
+            <td>
+                指定与第一个文本颜色关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx2 (文本 2) 
+            </td>
+            <td>
+                指定与第二个文本颜色关联的定义颜色.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型定义 (§20.1.10.14).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_ColorMapping) 的 W3C XML 模式定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>clrMap (Color Map)</strong></p>
+<p>This element specifics the color mapping layer which allows a user to define colors for background and text. This allows for swapping out of light/dark colors for backgrounds and the text on top of the background in order to maintain readability of the text On a deeper level, this specifies exactly which colors the first 12 values refer to in the color scheme.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following example of a color map in use:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;clrMap</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg1=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx1=</span><span style="color: #BA2121">&quot;dk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg2=</span><span style="color: #BA2121">&quot;lt2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx2=</span><span style="color: #BA2121">&quot;dk2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent1=</span><span style="color: #BA2121">&quot;accent1&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent2=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent3=</span><span style="color: #BA2121">&quot;accent3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent4=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent6=</span><span style="color: #BA2121">&quot;accent6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">hlink=</span><span style="color: #BA2121">&quot;hlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">folHlink=</span><span style="color: #BA2121">&quot;folHlink&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>In this example, we see that bg1 is mapped to lt1, tx1 is mapped to dk1, and so on.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                accent1 (Accent 1)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 1 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent2 (Accent 2)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 2 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent3 (Accent 3)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 3 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent1 (Accent 4)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 4 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent1 (Accent 5)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 5 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent1 (Accent 6)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 6 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg1 (Background 1)
+            </td>
+            <td>
+                A color defined which is associated as the first background color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg2 (Background 2)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the second background color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                folHlink (Followed Hyperlink)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the color for a followed hyperlink.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                hlink (Hyperlink)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the color for a hyperlink.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx1 (Text 1)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the first text color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx2 (Text 2) 
+            </td>
+            <td>
+                Specifies a color defined which is associated as the second text color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ColorMapping) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20162-clrscheme-颜色方案">20.1.6.2 clrScheme (颜色方案)<a class="headerlink" href="#20162-clrscheme-颜色方案" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素定义了一组颜色，称为配色方案。 配色方案负责定义十二种颜色的列表。 这十二种颜色包括六种强调色、两种深色、两种浅色以及每个超链接和已关注超链接的颜色。</p>
+<p>配色方案颜色元素按顺序出现。 以下列表显示了索引值和相应的颜色名称。</p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>序列索引</strong></th>
+            <th><strong>元素 (颜色) 名称</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                0
+            </td>
+            <td>
+                dk1 (暗色 1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                lt1 (亮色 1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2
+            </td>
+            <td>
+                dk2 (暗色 2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3
+            </td>
+            <td>
+                lt2 (亮色 2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4
+            </td>
+            <td>
+                accent1 (强调色 1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                5
+            </td>
+            <td>
+                accent2 (强调色 2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6
+            </td>
+            <td>
+                accent3 (强调色 3)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                7
+            </td>
+            <td>
+                accent4 (强调色 4)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                8
+            </td>
+            <td>
+                accent5 (强调色 5)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                9
+            </td>
+            <td>
+                accent6 (强调色 6)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                10
+            </td>
+            <td>
+                hlink (超链接)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                11
+            </td>
+            <td>
+                folHlink (已关注超链接)
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下在 DrawingML 中定义的配色方案示例:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dk1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;windowText&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dk1&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lt1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;window&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lt1&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dk2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;04617B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dk2&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lt2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;DBF5F9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lt2&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0F6FC6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent1&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;009DD9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent2&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent3&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0BD0D9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent3&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10CF9B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent5&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;7CCA62&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent5&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent6&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;A5C249&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent6&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;hlink&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FF9800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/hlink&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;folHlink&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;F45511&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/folHlink&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/clrScheme&gt;</span>
+</code></pre></div>
+<p>在此示例中，定义了示例配色方案中的 12 种主题颜色.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>属性</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                name (名称)
+            </td>
+            <td>
+                此配色方案的通用名称。 该名称可以显示在用户界面的配色方案列表中. </bar></br>
+                此属性的可能值由 W3C XML 架构字符串数据类型定义.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_ColorScheme) 的 W3C XML 模式定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>clrScheme (Color Scheme)</strong></p>
+<p>This element defines a set of colors which are referred to as a color scheme. The color scheme is responsible for defining a list of twelve colors. The twelve colors consist of six accent colors, two dark colors, two light colors and a color for each of a hyperlink and followed hyperlink.</p>
+<p>The Color Scheme Color elements appear in a sequence. The following listing shows the index value and corresponding Color Name.</p>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Sequence Index</strong></th>
+            <th><strong>Element (Color) Name</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                0
+            </td>
+            <td>
+                dk1 (Dark 1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1
+            </td>
+            <td>
+                lt1 (Light 1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                2
+            </td>
+            <td>
+                dk2 (Dark 2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                3
+            </td>
+            <td>
+                lt2 (Light 2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                4
+            </td>
+            <td>
+                accent1 (Accent 1)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                5
+            </td>
+            <td>
+                accent2 (Accent 2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                6
+            </td>
+            <td>
+                accent3 (Accent 3)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                7
+            </td>
+            <td>
+                accent4 (Accent 4)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                8
+            </td>
+            <td>
+                accent5 (Accent 5)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                9
+            </td>
+            <td>
+                accent6 (Accent 6)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                10
+            </td>
+            <td>
+                hlink (Hyperlink)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                11
+            </td>
+            <td>
+                folHlink (Followed Hyperlink)
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following example of a color scheme defined in DrawingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dk1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;windowText&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dk1&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lt1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;window&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lt1&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;dk2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;04617B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/dk2&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;lt2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;DBF5F9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/lt2&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0F6FC6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent1&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;009DD9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent2&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent3&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0BD0D9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent3&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10CF9B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent4&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent5&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;7CCA62&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent5&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;accent6&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;A5C249&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/accent6&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;hlink&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FF9800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/hlink&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;folHlink&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;F45511&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/folHlink&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/clrScheme&gt;</span>
+</code></pre></div>
+<p>In this example, are defined the 12 theme colors in the sample color scheme.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                name (Name)
+            </td>
+            <td>
+                The common name for this color scheme. This name can show up in the user interface in a list of color schemes. </bar></br>
+                The possible values for this attribute are defined by the W3C XML Schema string datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ColorScheme) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20163-custclrlst-定制颜色列表">20.1.6.3 custClrLst (定制颜色列表)<a class="headerlink" href="#20163-custclrlst-定制颜色列表" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素允许创建自定义调色板，并与其他配色方案一起显示。 例如，当有人想要维护公司调色板时，这可能非常有用。</p>
+<p>[Note: 该元素内容模型 (CT_CustomColorList) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>custClrLst (Custom Color List)</strong></p>
+<p>This element allows for a custom color palette to be created and which shows up alongside other color schemes. This can be very useful, for example, when someone would like to maintain a corporate color palette.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_CustomColorList) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20164-extraclrscheme-额外的配色方案">20.1.6.4 extraClrScheme (额外的配色方案)<a class="headerlink" href="#20164-extraclrscheme-额外的配色方案" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素定义了辅助配色方案，其中包括配色方案和颜色映射。 这主要用于向后兼容性问题和早期版本所需的往返信息。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下在 DrawingML 中使用的额外配色方案示例：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;extraClrScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;extraColorSchemeSample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;dk1&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;windowText&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/dk1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lt1&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;window&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/lt1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;dk2&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;04617B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/dk2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lt2&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;DBF5F9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/lt2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent1&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0F6FC6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent2&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;009DD9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent3&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0BD0D9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent3&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent4&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10CF9B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent5&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;7CCA62&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent5&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent6&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;A5C249&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent6&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;hlink&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FF9800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/hlink&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;folHlink&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;F45511&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/folHlink&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/clrScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;clrMap</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg1=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx1=</span><span style="color: #BA2121">&quot;dk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg2=</span><span style="color: #BA2121">&quot;lt2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx2=</span><span style="color: #BA2121">&quot;dk2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent1=</span><span style="color: #BA2121">&quot;accent1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent2=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent3=</span><span style="color: #BA2121">&quot;accent3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent4=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent6=</span><span style="color: #BA2121">&quot;accent6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">hlink=</span><span style="color: #BA2121">&quot;hlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">folHlink=</span><span style="color: #BA2121">&quot;folHlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/extraClrScheme&gt;</span>
+</code></pre></div>
+<p>在此示例中，额外的配色方案包含一个配色方案和该配色方案的颜色图.</p>
+<p>[Note: 该元素内容模型 (CT_ColorSchemeAndMapping) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>extraClrScheme (Extra Color Scheme)</strong></p>
+<p>This element defines an auxiliary color scheme, which includes both a color scheme and color mapping. This is mainly used for backward compatibility concerns and roundtrips information required by earlier versions.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following example of an extra color scheme in use in DrawingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;extraClrScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;extraColorSchemeSample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;dk1&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;windowText&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/dk1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lt1&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;sysClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;window&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/lt1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;dk2&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;04617B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/dk2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lt2&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;DBF5F9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/lt2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent1&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0F6FC6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent1&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent2&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;009DD9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent2&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent3&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;0BD0D9&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent3&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent4&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;10CF9B&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent4&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent5&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;7CCA62&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent5&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;accent6&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;A5C249&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/accent6&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;hlink&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;FF9800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/hlink&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;folHlink&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;F45511&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/folHlink&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/clrScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;clrMap</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg1=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx1=</span><span style="color: #BA2121">&quot;dk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg2=</span><span style="color: #BA2121">&quot;lt2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx2=</span><span style="color: #BA2121">&quot;dk2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent1=</span><span style="color: #BA2121">&quot;accent1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent2=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent3=</span><span style="color: #BA2121">&quot;accent3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent4=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent6=</span><span style="color: #BA2121">&quot;accent6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">hlink=</span><span style="color: #BA2121">&quot;hlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">folHlink=</span><span style="color: #BA2121">&quot;folHlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/extraClrScheme&gt;</span>
+</code></pre></div>
+<p>In this example, the extra color scheme contains a color scheme and a color map for that color scheme.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ColorSchemeAndMapping) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="20165-extraclrschemelst-额外配色方案列表">20.1.6.5 extraClrSchemeLst (额外配色方案列表)<a class="headerlink" href="#20165-extraclrschemelst-额外配色方案列表" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素是文档中存在的额外配色方案列表的容器.</p>
+<p>[Note: 该元素内容模型 (CT_ColorSchemeList) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>extraClrSchemeLst (Extra Color Scheme List)</strong></p>
+<p>This element is a container for the list of extra color schemes present in a document.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ColorSchemeList) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20166-masterclrmapping-主颜色映射">20.1.6.6 masterClrMapping (主颜色映射)<a class="headerlink" href="#20166-masterclrmapping-主颜色映射" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素是在文档中使用颜色映射的选择的一部分。 还定义了 overrideClrMapping (§20.1.6.8) 元素，当指定该元素时，将使用覆盖而不是主文件中定义的颜色映射。 如果指定了该元素，那么我们将专门使用 master.xml 中定义的颜色映射。</p>
+<p>[Note: 该元素内容模型 (CT_EmptyElement) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>masterClrMapping (Master Color Mapping)</strong></p>
+<p>This element is a part of a choice for which color mapping is used within the document. There is also defined an overrideClrMapping (§20.1.6.8) element which, when specified, the override is used rather than the color mapping defined in the master. If this element is specified, then we specifically use the color mapping defined in the master.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_EmptyElement) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20167-objectdefaults-对象默认属性">20.1.6.7 objectDefaults (对象默认属性)<a class="headerlink" href="#20167-objectdefaults-对象默认属性" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素允许定义默认形状、线条和文本框格式属性。 应用程序可以在插入文档时使用此信息来格式化形状（或文本）。</p>
+<p>[Note: 该元素内容模型 (CT_ObjectStyleDefaults) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>objectDefaults (Object Defaults)</strong></p>
+<p>This element allows for the definition of default shape, line, and textbox formatting properties. An application can use this information to format a shape (or text) initially on insertion into a document.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ObjectStyleDefaults) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20168-overrideclrmapping-颜色映射覆盖">20.1.6.8 overrideClrMapping (颜色映射覆盖)<a class="headerlink" href="#20168-overrideclrmapping-颜色映射覆盖" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素提供文档中颜色映射的覆盖。 定义后，此颜色映射将用于代替已定义的颜色映射或主颜色映射。 此颜色映射的定义方式与本文档中的其他映射相同。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>请考虑以下 DrawingML 中的覆盖颜色映射示例：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;overrideClrMapping</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg1=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx1=</span><span style="color: #BA2121">&quot;dk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg2=</span><span style="color: #BA2121">&quot;lt2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx2=</span><span style="color: #BA2121">&quot;dk2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent1=</span><span style="color: #BA2121">&quot;accent1&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent2=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent3=</span><span style="color: #BA2121">&quot;accent3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent4=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent6=</span><span style="color: #BA2121">&quot;accent6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">hlink=</span><span style="color: #BA2121">&quot;hlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">folHlink=</span><span style="color: #BA2121">&quot;folHlink&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>属性</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                accent1 (强调色 1)
+            </td>
+            <td>
+                指定与强调色 1 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent2 (强调色 2)
+            </td>
+            <td>
+                指定与强调色 2 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent3 (强调色 3)
+            </td>
+            <td>
+                指定与强调色 3 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent4 (强调色 4)
+            </td>
+            <td>
+                指定与强调色 4 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent5 (强调色 5)
+            </td>
+            <td>
+                指定与强调色 5 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent6 (强调色 6)
+            </td>
+            <td>
+                指定与强调色 6 关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg1 (背景色 1)
+            </td>
+            <td>
+                定义为第一个背景颜色的颜色.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg2 (背景色 2)
+            </td>
+            <td>
+                指定与第二背景颜色关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                folHlink (已关注超链接)
+            </td>
+            <td>
+                指定定义的颜色，该颜色与已关注超链接的颜色相关联.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                hlink (超链接)
+            </td>
+            <td>
+                指定与超链接颜色关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx1 (文本 1)
+            </td>
+            <td>
+                指定与第一个文本颜色关联的颜色定义.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx2 (文本 2) 
+            </td>
+            <td>
+                指定与第二个文本颜色关联的定义颜色.</br></br>
+                该属性的可能值由 ST_ColorSchemeIndex 简单类型 (§20.1.10.14) 定义。
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_ColorMapping) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>overrideClrMapping (Override Color Mapping)</strong></p>
+<p>This element provides an override for the color mapping in a document. When defined, this color mapping is used in place of the already defined color mapping, or master color mapping. This color mapping is defined in the same manner as the other mappings within this document.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following example of an override color mapping in DrawingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;overrideClrMapping</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg1=</span><span style="color: #BA2121">&quot;lt1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx1=</span><span style="color: #BA2121">&quot;dk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">bg2=</span><span style="color: #BA2121">&quot;lt2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">tx2=</span><span style="color: #BA2121">&quot;dk2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent1=</span><span style="color: #BA2121">&quot;accent1&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent2=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent3=</span><span style="color: #BA2121">&quot;accent3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent4=</span><span style="color: #BA2121">&quot;accent4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">accent6=</span><span style="color: #BA2121">&quot;accent6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">hlink=</span><span style="color: #BA2121">&quot;hlink&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">folHlink=</span><span style="color: #BA2121">&quot;folHlink&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                accent1 (Accent 1)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 1 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent2 (Accent 2)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 2 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent3 (Accent 3)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 3 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent1 (Accent 4)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 4 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent1 (Accent 5)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 5 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                accent1 (Accent 6)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the accent 6 color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg1 (Background 1)
+            </td>
+            <td>
+                A color defined which is associated as the first background color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                bg2 (Background 2)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the second background color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                folHlink (Followed Hyperlink)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the color for a followed hyperlink.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                hlink (Hyperlink)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the color for a hyperlink.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx1 (Text 1)
+            </td>
+            <td>
+                Specifies a color defined which is associated as the first text color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                tx2 (Text 2) 
+            </td>
+            <td>
+                Specifies a color defined which is associated as the second text color.</br></br>
+                The possible values for this attribute are defined by the ST_ColorSchemeIndex simple type (§20.1.10.14).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_ColorMapping) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20169-theme-主题">20.1.6.9 theme (主题)<a class="headerlink" href="#20169-theme-主题" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素定义与共享样式表（或主题）关联的根级复杂类型。 该元素通过主题保存文档可用的所有不同格式选项，并定义在文档中使用主题对象时文档的整体外观和感觉。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>将下图视为应用于演示文稿的不同主题的示例:</p>
+<p><a class="glightbox" href="../imgs/20dml-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/20dml-17.png" /></a></p>
+<p>在此示例中，我们了解主题如何影响演示文稿中不同对象的字体、颜色、背景、填充和效果。</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>属性</strong></th>
+            <th><strong>描述</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                name (名称)
+            </td>
+            <td>
+                指定主题的名称. </bar></br>
+                此属性的可能值由 W3C XML 架构字符串数据类型定义.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_OfficeStyleSheet) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>theme (Theme)</strong></p>
+<p>This element defines the root level complex type associated with a shared style sheet (or theme). This element holds all the different formatting options available to a document through a theme and defines the overall look and feel of the document when themed objects are used within the document.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following image as an example of different themes in use applied to a presentation:</p>
+<p><a class="glightbox" href="../imgs/20dml-17.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/20dml-17.png" /></a></p>
+<p>In this example, we see how a theme can affect font, colors, backgrounds, fills, and effects for different objects in a presentation.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                name (Name)
+            </td>
+            <td>
+                Specifies the name given to the theme. </bar></br>
+                The possible values for this attribute are defined by the W3C XML Schema string datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_OfficeStyleSheet) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="201610-themeelements-主题元素集">20.1.6.10 themeElements (主题元素集)<a class="headerlink" href="#201610-themeelements-主题元素集" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素定义主题的主题格式选项，并且是主题的主力。 这是文档包含和使用大部分共享主题信息的地方。 此元素包含颜色方案、字体方案和格式方案元素，它们定义主题定义的不同格式方面。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下在 DrawingML 中定义的主题元素示例：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;themeElements&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/clrScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;fontScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/fontScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;fmtScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;fillStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/fillStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lnStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/lnStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;effectStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/effectStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;bgFillStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/bgFillStyleLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/fmtScheme&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/themeElements&gt;</span>
+</code></pre></div>
+<p>在这个例子中，我们看到了主题元素如何定义的基本结构，并省略了每个单独部分的真正内容以节省空间。 每个部分（颜色方案、字体方案、格式方案）均在 DrawingML 中的其他位置定义。</p>
+<p>[Note: 该元素内容模型 (CT_BaseStyles) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p><strong>themeElements (Theme Elements)</strong></p>
+<p>This element defines the theme formatting options for the theme and is the workhorse of the theme. This is where the bulk of the shared theme information is contained and used by a document. This element contains the color scheme, font scheme, and format scheme elements which define the different formatting aspects of what a theme defines.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following example of a theme elements defined in DrawingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;themeElements&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;clrScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/clrScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;fontScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/fontScheme&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;fmtScheme</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;sample&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;fillStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/fillStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;lnStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/lnStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;effectStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/effectStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;bgFillStyleLst&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/bgFillStyleLst&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/fmtScheme&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/themeElements&gt;</span>
+</code></pre></div>
+<p>In this example, we see the basic structure of how a theme elements is defined and have left out the true guts of each individual piece to save room. Each part (color scheme, font scheme, format scheme) is defined elsewhere within DrawingML.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_BaseStyles) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+</div>
+<h2 id="201611-thememanager-主题管理器">20.1.6.11 themeManager (主题管理器)<a class="headerlink" href="#201611-thememanager-主题管理器" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>主题文件的起始部件。</p>
+<p>[Note: 该元素内容模型 (CT_EmptyElement) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>themeManager (Theme Manager)</strong></p>
+<p>The starting part for a theme file.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_EmptyElement) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="201612-themeoverride-主题覆盖">20.1.6.12 themeOverride (主题覆盖)<a class="headerlink" href="#201612-themeoverride-主题覆盖" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素允许进行覆盖，仅更改单个对象（例如表格）的颜色、字体或效果。 目前，它仅用于控制演示文稿中非顶级母版的覆盖。</p>
+<p>[Note: 该元素内容模型 (CT_BaseStylesOverride) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>themeOverride (Theme Override)</strong></p>
+<p>This element allows for an override which changes just the colors, fonts, or effects of a single object, like a table for example. Currently it is used only to control overrides on the non-top-level masters within a presentation.</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_BaseStylesOverride) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

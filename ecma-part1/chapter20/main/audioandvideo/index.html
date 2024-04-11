@@ -1,0 +1,3598 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../basics/">
+      
+      
+        <link rel="next" href="../styles/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>20.1.3 音频和视频 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2013-音频和视频" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              20.1.3 音频和视频
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-17/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_21" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_21" id="__nav_2_21_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_21_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_21">
+            <span class="md-nav__icon md-icon"></span>
+            20. DrawingML - 框架参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_21_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    20.1 DrawingML - Main
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_21_2" id="__nav_2_21_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_21_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_21_2">
+            <span class="md-nav__icon md-icon"></span>
+            20.1 DrawingML - Main
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.2 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    20.1.3 音频和视频
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    20.1.3 音频和视频
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#20131-audiocd-cd-中的音频" class="md-nav__link">
+    20.1.3.1 audioCd (CD 中的音频)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20132-audiofile-文件中的音频" class="md-nav__link">
+    20.1.3.2 audioFile (文件中的音频)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20133-end-音频结束时间" class="md-nav__link">
+    20.1.3.3 end (音频结束时间)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20134-quicktimefile-来自文件的-quicktime" class="md-nav__link">
+    20.1.3.4 quickTimeFile (来自文件的 QuickTime)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20135-st-音频开始时间" class="md-nav__link">
+    20.1.3.5 st (音频开始时间)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20136-videofile-文件中的视频" class="md-nav__link">
+    20.1.3.6 videoFile (文件中的视频)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20137-wavaudiofile-wav-文件中的音频" class="md-nav__link">
+    20.1.3.7 wavAudioFile (WAV 文件中的音频)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.4 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.5 3D
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared_style_sheet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.6 共享样式表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../coordinate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.7 坐标系和变换
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_fill/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.8 形状填充、效果和线条属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shape_definitions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.9 形状定义和属性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simple_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.1.10 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../picture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.2 DrawingML - Picture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lockedcanvas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.3 DrawingML - Locked Canvas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../worddrawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.4 DrawingML - WordprocessingML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spreaddrawing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20.5 DrawingML - SpreadsheetML Drawing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#20131-audiocd-cd-中的音频" class="md-nav__link">
+    20.1.3.1 audioCd (CD 中的音频)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20132-audiofile-文件中的音频" class="md-nav__link">
+    20.1.3.2 audioFile (文件中的音频)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20133-end-音频结束时间" class="md-nav__link">
+    20.1.3.3 end (音频结束时间)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20134-quicktimefile-来自文件的-quicktime" class="md-nav__link">
+    20.1.3.4 quickTimeFile (来自文件的 QuickTime)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20135-st-音频开始时间" class="md-nav__link">
+    20.1.3.5 st (音频开始时间)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20136-videofile-文件中的视频" class="md-nav__link">
+    20.1.3.6 videoFile (文件中的视频)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20137-wavaudiofile-wav-文件中的音频" class="md-nav__link">
+    20.1.3.7 wavAudioFile (WAV 文件中的音频)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="2013-音频和视频">20.1.3 音频和视频<a class="headerlink" href="#2013-音频和视频" title="Permanent link">&para;</a></h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>DrawingML 框架的音频和视频部分处理可以附加到文档中的对象的这两种类型的所有媒体。 文件中可以表示的音频类型包括 CD 音频、QuickTime 音频和任何其他通用音频。 处理通用音频时，可以选择将其嵌入文件中并链接它。 如果音频文件的大小太大，从而使文档的大小增加了不希望的量，那么链接选项是优选的。 对于视频，有两种可以表示的类型，即 QuickTime 电影或任何其他通用电影。 处理通用视频时，只能选择链接到媒体，因为视频太大而无法嵌入文档中。</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Audio and Video</strong></p>
+<p>The Audio and Video portion of the DrawingML framework deals with all media of these two kinds that can be attached to objects within a document. Types of audio that can be represented within a file are CD audio, QuickTime audio, and any other generic audio. When dealing with generic audio there is the option for embedding it within the file and also linking it. The linking option is preferable if the size of the audio file is too large and thus increases the size of the document by an undesirable amount. For video there are two kinds that can be represented and that is either a QuickTime movie or any other generic movie. When dealing with generic video there is only the option of linking to the media as video is too large to embed within a document.</p>
+</div>
+</div>
+</div>
+<h2 id="20131-audiocd-cd-中的音频">20.1.3.1 audioCd (CD 中的音频)<a class="headerlink" href="#20131-audiocd-cd-中的音频" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 CD 中是否存在音频。 该元素在对象的非视觉属性中指定。 音频应附加到对象，因为这是它在文档中的表示方式。 然而，声音的实际播放是在计时元素下指定的计时节点列表内完成的。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下图片对象，其中附有 CD 中的音频。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:audioCd&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:st</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:end</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;65&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:audioCd&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，我们看到该图片附加了一个 audioCD 元素。 该图片就像普通图片或形状一样放置在文档中。 该图片的 id（在本例中为 7）用于引用定时节点列表中的该 audioCD 元素。 在此示例中，我们看到该 CD 的音频在第一首曲目的 0 秒标记处开始播放，并在第三首曲目的 1 分 5 秒标记处结束。</p>
+</div>
+<p>[Note: 该元素内容模型 (CT_AudioCD) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>audioCd (Audio from CD)</strong></p>
+<p>This element specifies the existence of Audio from a CD. This element is specified within the non-visual properties of an object. The audio shall be attached to an object as this is how it is represented within the document. The actual playing of the sound however is done within the timing node list that is specified under the timing element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following picture object that has an audio from a CD attached to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:audioCd&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:st</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;a:end</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;65&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/a:audioCd&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>In the above example, we see that there is a single audioCD element attached to this picture. This picture is placed within the document just as a normal picture or shape would be. The id of this picture, namely 7 in this case, is used to refer to this audioCD element from within the timing node list. For this example we see that the audio for this CD starts playing at the 0 second mark on the first track and ends on the 1 minute 5 second mark of the third track. </p>
+</div>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AudioCD) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20132-audiofile-文件中的音频">20.1.3.2 audioFile (文件中的音频)<a class="headerlink" href="#20132-audiofile-文件中的音频" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定音频文件的存在。 该元素在对象的非视觉属性中指定。 音频应附加到对象，因为这是它在文档中的表示方式。 然而，音频的实际播放是在计时元素下指定的计时节点列表内完成的。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下附加有音频文件的图片对象。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:audioFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，我们看到该图片附加了一个 audioFile 元素。 该图片就像普通图片或形状一样放置在文档中。 该图片的 id（在本例中为 7）用于引用定时节点列表中的该 audioFile 元素。 链接关系 ID 用于检索实际音频文件以进行播放。</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                contentType (链接音频文件的内容类型/Content Type of Linked Audio File)
+            </td>
+            <td>
+                指定此元素引用的外部文件的内容类型。 内容类型定义媒体类型、子类型和可选参数集，如第 2 部分中所定义。如果呈现应用程序无法处理指定内容类型的外部内容，则可以忽略指定内容. [Note: [§15.2.2] 中提供了建议的音频类型列表。 end note]</br></br>
+                如果省略此属性，应用程序应尝试通过读取关系目标的内容来确定内容类型.</br></br>
+                想要互操作性的生产者应该使用以下标准格式:</br>
+                • audio/mpeg ISO/IEC 11172-3</br></br>
+                此属性的可能值由 W3C XML 架构字符串数据类型定义.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                link (关联关系 ID/Linked Relationship ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                指定链接对象的标识信息。 该属性用于指定不驻留在该文件中的对象的位置.</br></br>
+                该属性的可能值由 ST_RelationshipId 简单类型定义 (§22.8.2.1).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_AudioFile) 的 W3C XML 架构定义位于 §A.4.1. 中  end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>audioFile (Audio from File)</strong></p>
+<p>This element specifies the existence of an audio file. This element is specified within the non-visual properties of an object. The audio shall be attached to an object as this is how it is represented within the document. The actual playing of the audio however is done within the timing node list that is specified under the timing element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following picture object that has an audio file attached to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:audioFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>In the above example, we see that there is a single audioFile element attached to this picture. This picture is placed within the document just as a normal picture or shape would be. The id of this picture, namely 7 in this case, is used to refer to this audioFile element from within the timing node list. The Linked relationship id is used to retrieve the actual audio file for playback purposes.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                contentType (Content Type of Linked Audio File)
+            </td>
+            <td>
+                Specifies the content type for the external file that is referenced by this element. Content types define a media type, a subtype, and an optional set of parameters, as defined in Part 2. If a rendering application cannot process external content of the content type specified, then the specified content can be ignored. [Note: A list of suggested audio types is provided in §15.2.2. end note]</br></br>
+                If this attribute is omitted, application should attempt to determine the content type by reading the contents of the relationship’s target.</br></br>
+                A producer that wants interoperability should use the following standard format:</br>
+                • audio/mpeg ISO/IEC 11172-3</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema string datatype.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                link (Linked Relationship ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                Specifies the identification information for a linked object. This attribute is used to specify the location of an object that does not reside within this file.</br></br>
+                The possible values for this attribute are defined by the ST_RelationshipId simple type (§22.8.2.1).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AudioFile) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20133-end-音频结束时间">20.1.3.3 end (音频结束时间)<a class="headerlink" href="#20133-end-音频结束时间" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>end (Audio End Time)</strong></p>
+<p>该元素指定 CD 音频声音元素的结束点。 该元素包含声音应停止播放的时间和曲目。 该元素与音频开始时间元素结合使用来指定整个audioCD声音元素的时间跨度。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下 DrawingML。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:audioCd&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:st</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:end</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;65&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:audioCd&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，所示的audioCD声音元素指定了从第一个轨道的2秒到第三个轨道的1分5秒的音频部分。</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                time (时间)
+            </td>
+            <td>
+                指定 CD 音频应停止的时间（以秒为单位）。 如果省略该属性，则假定值为 0.</br></br>
+                此属性的可能值由 W3C XML 架构 unsignedInt 数据类型定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                track (轨道)
+            </td>
+            <td>
+                指定此音频在 CD 的哪个轨道上停止播放。 该属性为必填项，不能省略.</br></br>
+                此属性的可能值由 W3C XML 架构 unsignedByte 数据类型定义。
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_AudioCDTime) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>end (Audio End Time)</strong></p>
+<p>This element specifies the end point for a CD Audio sound element. Encompassed within this element are the time and track at which the sound should halt its playback. This element is used in conjunction with an Audio Start Time element to specify the time span for an entire audioCD sound element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:audioCd&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:st</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:end</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;65&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:audioCd&gt;</span>
+</code></pre></div>
+<p>In the above example, the audioCD sound element shown specifies for a portion of audio spanning from 2 seconds into the first track to 1 minute, 5 seconds into the third track.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                time (Time)
+            </td>
+            <td>
+                Specifies the time in seconds that the CD Audio should be stopped at. If this attribute is omitted, then a value of 0 is assumed.</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema unsignedInt datatype.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                track (Track)
+            </td>
+            <td>
+                Specifies which track of the CD this Audio stops playing at. This attribute is required and cannot be omitted.</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema unsignedByte datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AudioCDTime) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20134-quicktimefile-来自文件的-quicktime">20.1.3.4 quickTimeFile (来自文件的 QuickTime)<a class="headerlink" href="#20134-quicktimefile-来自文件的-quicktime" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定 QuickTime 文件是否存在，如 2007-09-04 版本的 QuickTime 文件格式规范中所定义: http://developer.apple.com/documentation/QuickTime/QTFF/qtff.pdf. [Note: 有关 QuickTime 格式的更多信息: http://developer.apple.com/reference/QuickTime/. end note]. 该元素在对象的非视觉属性中指定。 QuickTime 文件应附加到对象，因为这是它在文档中的表示方式。 然而，QuickTime 的实际播放是在计时元素下指定的计时节点列表内完成的。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下附加有 QuickTime 文件的图片对象。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:quickTimeFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，我们看到该图片附加了一个 QuickTimeFile 元素。 该图片就像普通图片或形状一样放置在文档中。 该图片的 id（在本例中为 7）用于引用计时节点列表中的该 QuickTimeFile 元素。 链接关系 ID 用于检索实际视频文件以进行播放. </p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                link (关联关系 ID/Linked Relationship ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                指定链接对象的标识信息。 该属性用于指定不驻留在该文件中的对象的位置.</br></br>
+                该属性的可能值由 ST_RelationshipId 简单类型定义 (§22.8.2.1).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_QuickTimeFile) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>quickTimeFile (QuickTime from File)</strong></p>
+<p>This element specifies the existence of a QuickTime file, as defined in the 2007-09-04 version of the QuickTime File Format Specification: http://developer.apple.com/documentation/QuickTime/QTFF/qtff.pdf. [Note: For more information on the QuickTime format: http://developer.apple.com/reference/QuickTime/. end note]. This element is specified within the non-visual properties of an object. The QuickTime file shall be attached to an object as this is how it is represented within the document. The actual playing of the QuickTime however is done within the timing node list that is specified under the timing element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following picture object that has a QuickTime file attached to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:quickTimeFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>In the above example, we see that there is a single quickTimeFile element attached to this picture. This picture is placed within the document just as a normal picture or shape would be. The id of this picture, namely 7 in this case, is used to refer to this quickTimeFile element from within the timing node list. The Linked relationship id is used to retrieve the actual video file for playback purposes. </p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                link (Linked Relationship ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                Specifies the identification information for a linked object. This attribute is used to specify the location of an object that does not reside within this file.</br></br>
+                The possible values for this attribute are defined by the ST_RelationshipId simple type (§22.8.2.1).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_QuickTimeFile) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20135-st-音频开始时间">20.1.3.5 st (音频开始时间)<a class="headerlink" href="#20135-st-音频开始时间" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定 CD 音频声音元素的起点。 该元素包含声音应开始播放的时间和曲目。 该元素与音频结束时间元素结合使用来指定整个audioCD声音元素的时间跨度。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下 DrawingML。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:audioCd&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:st</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:end</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;65&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:audioCd&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，所示的 audioCD 声音元素指定了从第一个轨道的2秒到第三个轨道的1分5秒的音频部分。</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                time (时间)
+            </td>
+            <td>
+                指定 CD 音频应启动的时间（以秒为单位）。 如果省略该属性，则假定值为 0.</br></br>
+                此属性的可能值由 W3C XML 架构 unsignedInt 数据类型定义.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                track (轨道)
+            </td>
+            <td>
+                指定此音频开始在 CD 的哪个轨道上播放。 该属性为必填项，不能省略.</br></br>
+                此属性的可能值由 W3C XML 架构 unsignedByte 数据类型定义.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_AudioCDTime) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>st (Audio Start Time)</strong></p>
+<p>This element specifies the start point for a CD Audio sound element. Encompassed within this element are the time and track at which the sound should begin its playback. This element is used in conjunction with an Audio End Time element to specify the time span for an entire audioCD sound element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:audioCd&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:st</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:end</span><span style="color: #bbbbbb"> </span><span style="color: #687822">track=</span><span style="color: #BA2121">&quot;3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">time=</span><span style="color: #BA2121">&quot;65&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:audioCd&gt;</span>
+</code></pre></div>
+<p>In the above example, the audioCD sound element shown specifies for a portion of audio spanning from 2 seconds into the first track to 1 minute, 5 seconds into the third track.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                time (Time)
+            </td>
+            <td>
+                Specifies the time in seconds that the CD Audio should be started at. If this attribute is omitted, then a value of 0 is assumed.</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema unsignedInt datatype.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                track (Track)
+            </td>
+            <td>
+                Specifies which track of the CD this Audio begins playing on. This attribute is required and cannot be omitted.</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema unsignedByte datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AudioCDTime) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20136-videofile-文件中的视频">20.1.3.6 videoFile (文件中的视频)<a class="headerlink" href="#20136-videofile-文件中的视频" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定视频文件的存在。 该元素在对象的非视觉属性中指定。 视频应附加到对象上，因为这是它在文档中的表示方式。 然而，视频的实际播放是在定时元素下指定的定时节点列表内完成的。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑下面附加了视频的图片对象。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:videoFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，我们看到该图片附加了一个 videoFile 元素。 该图片就像普通图片或形状一样放置在文档中。 该图片的 id（在本例中为 7）用于引用定时节点列表中的该 videoFile 元素。 链接关系 ID 用于检索实际视频文件以进行播放。</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                contentType (链接视频文件的内容类型)
+            </td>
+            <td>
+                指定此元素引用的外部文件的内容类型。 内容类型定义媒体类型、子类型和可选参数集，如第 2 部分中所定义。如果呈现应用程序无法处理指定内容类型的外部内容，则可以忽略指定内容. [Note: 第 15.2.17 节中提供了建议的视频类型列表。 end note]</br></br>
+                如果省略此属性，应用程序应尝试通过读取关系目标的内容来确定内容类型.</br></br>
+                此属性的可能值由 W3C XML 架构字符串数据类型定义.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                link (关联关系 ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                指定链接视频文件的标识信息。 该属性用于指定不驻留在该文件中的对象的位置.</br></br>
+                该属性的可能值由 ST_RelationshipId 简单类型定义 (§22.8.2.1).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_VideoFile) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>videoFile (Video from File)</strong></p>
+<p>This element specifies the existence of a video file. This element is specified within the non-visual properties of an object. The video shall be attached to an object as this is how it is represented within the document. The actual playing of the video however is done within the timing node list that is specified under the timing element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following picture object that has a video attached to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:videoFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:link=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>In the above example, we see that there is a single videoFile element attached to this picture. This picture is placed within the document just as a normal picture or shape would be. The id of this picture, namely 7 in this case, is used to refer to this videoFile element from within the timing node list. The Linked relationship id is used to retrieve the actual video file for playback purposes.</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                contentType (Content Type of Linked Video File)
+            </td>
+            <td>
+                Specifies the content type for the external file that is referenced by this element. Content types define a media type, a subtype, and an optional set of parameters, as defined in Part 2. If a rendering application cannot process external content of the content type specified, then the specified content can be ignored. [Note: A list of suggested video types is provided in §15.2.17. end note]</br></br>
+                If this attribute is omitted, application should attempt to determine the content type by reading the contents of the relationship’s target.</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema string datatype.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                link (Linked Relationship ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                Specifies the identification information for a linked video file. This attribute is used to specify the location of an object that does not reside within this file.</br></br>
+                The possible values for this attribute are defined by the ST_RelationshipId simple type (§22.8.2.1).
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_VideoFile) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="20137-wavaudiofile-wav-文件中的音频">20.1.3.7 wavAudioFile (WAV 文件中的音频)<a class="headerlink" href="#20137-wavaudiofile-wav-文件中的音频" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定音频 WAV 文件是否存在。 该元素在对象的非视觉属性中指定。 音频应附加到对象，因为这是它在文档中的表示方式。 然而，音频的实际播放是在计时元素下指定的计时节点列表内完成的。</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>考虑以下附加有音频 WAV 文件的图片对象。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:wavAudioFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，我们看到该图片附加了一个 wavAudioFile 元素。 该图片就像普通图片或形状一样放置在文档中。 该图片的 id（在本例中为 7）用于引用定时节点列表中的该 wavAudioFile 元素。 嵌入关系 ID 用于检索实际音频文件以进行播放。</p>
+<p>[Note: 该元素通常用于在文档中嵌入音频文件。 要链接到通用音频文件，应使用 audioFile 元素. end note]</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                embed (嵌入音频文件关系 ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                指定嵌入音频文件的标识信息。 该属性用于指定本地驻留在文件内的对象的位置. [Note: §15.2.2 节中提供了建议的音频类型列表。 end note]</br></br>
+                该属性的可能值由 ST_RelationshipId 简单类型 (§22.8.2.1) 定义。
+            </td>
+        </tr>
+        <tr>
+            <td>
+                name (声音名称)
+            </td>
+            <td>
+                指定相应声音的原始名称或给定的短名称。 如果用户需要在 UI 中的其他声音中识别该声音，则可以通过为附加声音提供人类可读的名称来区分该声音与其他声音.</br></br>
+                此属性的可能值由 W3C XML 架构字符串数据类型定义。
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: 该元素内容模型 (CT_EmbeddedWAVAudioFile) 的 W3C XML 架构定义位于 §A.4.1 中。 end note]</p>
+</div>
+<div class="tabbed-block">
+<p><strong>wavAudioFile (Audio from WAV File)</strong></p>
+<p>This element specifies the existence of an audio WAV file. This element is specified within the non-visual properties of an object. The audio shall be attached to an object as this is how it is represented within the document. The actual playing of the audio however is done within the timing node list that is specified under the timing element.</p>
+<div class="admonition info">
+<p class="admonition-title">Example</p>
+<p>Consider the following picture object that has an audio WAV file attached to it.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:pic&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Rectangle 6&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:hlinkClick</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">action=</span><span style="color: #BA2121">&quot;ppaction://media&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:picLocks</span><span style="color: #bbbbbb"> </span><span style="color: #687822">noRot=</span><span style="color: #BA2121">&quot;1&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:cNvPicPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:wavAudioFile</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:embed=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvPicPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/p:pic&gt;</span>
+</code></pre></div>
+<p>In the above example, we see that there is a single wavAudioFile element attached to this picture. This picture is placed within the document just as a normal picture or shape would be. The id of this picture, namely 7 in this case, is used to refer to this wavAudioFile element from within the timing node list. The Embedded relationship id is used to retrieve the actual audio file for playback purposes. </p>
+<p>[Note: This element is generally used for the purposes of embedding audio files within the document. For linking to generic audio files the audioFile element should be used. end note]</p>
+</div>
+<p><table border=1>
+    <thead>
+        <tr>
+            <th><strong>Attributes</strong></th>
+            <th><strong>Description</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                embed (Embedded Audio File Relationship ID)</br></br>
+                Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships
+            </td>
+            <td>
+                Specifies the identification information for an embedded audio file. This attribute is used to specify the location of an object that resides locally within the file. [Note: A list of suggested audio types is provided in §15.2.2. end note]</br></br>
+                The possible values for this attribute are defined by the ST_RelationshipId simple type (§22.8.2.1).
+            </td>
+        </tr>
+        <tr>
+            <td>
+                name (Sound Name)
+            </td>
+            <td>
+                Specifies the original name or given short name for the corresponding sound. This is used to distinguish this sound from others by providing a human readable name for the attached sound should the user need to identify the sound among others within the UI.</br></br>
+                The possible values for this attribute are defined by the W3C XML Schema string datatype.
+            </td>
+        </tr>
+    </tbody>
+</table></p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_EmbeddedWAVAudioFile) is located in §A.4.1. end note]</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
