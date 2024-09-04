@@ -1748,41 +1748,34 @@
 
         此 DrawingML 渲染的输出形状如上所示。
 
-    <table border=1>
-        <thead>
-            <tr>
-                <th>**Attributes**</th>
-                <th>**Description**</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    prst (预设形状)
-                </td>
-                <td>
-                    指定用于该形状的预设几何体。 此预设可以具有 ST_ShapeType 枚举列表中的任何值。 为了渲染预设几何体，需要此属性.</br></br>
-                    [Example: 考虑下面的示例 DrawingML.</br></br>
-                    `<p:sp>`</br>
-                    `    <p:nvSpPr>`</br>
-                    `        <p:cNvPr id="4" name="Sun 3" />`</br>
-                    `        <p:cNvSpPr />`</br>
-                    `        <p:nvPr />`</br>
-                    `    </p:nvSpPr>`</br>
-                    `    <p:spPr>`</br>
-                    `        <a:xfrm>`</br>
-                    `            <a:off x="1981200" y="533400" />`</br>
-                    `            <a:ext cx="1143000" cy="1066800" />`</br>
-                    `        </a:xfrm>`</br>
-                    `        <a:prstGeom prst="sun"></a:prstGeom>`</br>
-                    `    </p:spPr>`</br>
-                    `</p:sp>`</br>
-                    在上面的示例中，使用预设几何形状来定义形状。 这里使用的形状是太阳形状. end example]</br></br>
-                    该属性的可能值由 ST_ShapeType 简单类型定义 (§20.1.10.56).
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    ??? abstract "Attributes"
+
+        - **prst** (预设形状)
+            
+            指定用于该形状的预设几何体。 此预设可以具有 ST_ShapeType 枚举列表中的任何值。 为了渲染预设几何体，需要此属性.
+
+            [Example: 考虑下面的示例 DrawingML.
+            
+            ```xml
+            <p:sp>
+                <p:nvSpPr>
+                    <p:cNvPr id="4" name="Sun 3" />
+                    <p:cNvSpPr />
+                    <p:nvPr />
+                </p:nvSpPr>
+                <p:spPr>
+                    <a:xfrm>
+                        <a:off x="1981200" y="533400" />
+                        <a:ext cx="1143000" cy="1066800" />
+                    </a:xfrm>
+                    <a:prstGeom prst="sun"></a:prstGeom>
+                </p:spPr>
+            </p:sp>
+            ```
+
+            在上面的示例中，使用预设几何形状来定义形状。 这里使用的形状是太阳形状. end example]
+            
+            该属性的可能值由 ST_ShapeType 简单类型定义 ([§20.1.10.56]).
 
     [Note: 该元素内容模型 (CT_PresetGeometry2D) 的 W3C XML 架构定义位于 §A.4.1. end note]
 
@@ -1908,42 +1901,35 @@
 
     [Note: 由于这是一个形状，因此它具有形状坐标系和路径坐标系. end note]
 
-    <table border=1>
-        <thead>
-            <tr>
-                <th>**Attributes**</th>
-                <th>**Description**</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    prst (预设变形形状)
-                </td>
-                <td>
-                    指定用于文本片段形状扭曲的预设几何体。 此预设可以具有 ST_TextShapeType 枚举列表中的任何值。 为了渲染文本扭曲，需要此属性。</br></br>
-                    [Example: 考虑下面的示例 DrawingML.</br></br>
-                    `<p:sp>`</br>
-                    `    <p:txBody>`</br>
-                    `        <p:bodyPr wrap="none" rtlCol="0">`</br>
-                    `           <a:prstTxWarp prst="textInflate">`</br>
-                    `           </a:prstTxWarp>`
-                    `           <a:spAutoFit/>`</br>
-                    `        </p:bodyPr>`</br>
-                    `        <p:lstStyle>`</br>
-                    `        <a:p>`</br>
-                    `        …`</br>
-                    `           <a:t>Sample Text</a:t>`</br>
-                    `        …`</br>
-                    `        </a:p>`</br>
-                    `    </p:txBody>`</br>
-                    `</p:sp>`</br>
-                    在上面的示例中，使用预设文本形状几何形状来定义扭曲形状。 这里使用的形状是太阳形状. end example]</br></br>
-                    该属性的可能值由 ST_TextShapeType 简单类型定义 (§20.1.10.76).
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    ??? abstract "Attributes"
+
+        - **prst** (预设变形形状)
+
+            指定用于文本片段形状扭曲的预设几何体。 此预设可以具有 ST_TextShapeType 枚举列表中的任何值。 为了渲染文本扭曲，需要此属性。
+
+            [Example: 考虑下面的示例 DrawingML.
+            
+            ```xml
+            <p:sp>
+                <p:txBody>
+                    <p:bodyPr wrap="none" rtlCol="0">
+                    <a:prstTxWarp prst="textInflate">
+                    </a:prstTxWarp>
+                    <a:spAutoFit/>
+                    </p:bodyPr>
+                    <p:lstStyle>
+                    <a:p>
+                    …
+                    <a:t>Sample Text</a:t>
+                    …
+                    </a:p>
+                </p:txBody>
+            </p:sp>
+            ```
+
+            在上面的示例中，使用预设文本形状几何形状来定义扭曲形状。 这里使用的形状是太阳形状. end example]
+
+            该属性的可能值由 ST_TextShapeType 简单类型定义 ([§20.1.10.76]).
 
     [Note: 该元素内容模型 (CT_PresetTextShape) 的 W3C XML 架构定义位于 §A.4.1. end note]
 
