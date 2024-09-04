@@ -1,0 +1,3540 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="hellowac">
+      
+      
+      
+      
+        <link rel="prev" href="../16fields/">
+      
+      
+        <link rel="next" href="../18simpletypes/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>17.17 杂项主题 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1717-杂项主题" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17.17 杂项主题
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            17. WordprocessingML 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02maindocment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.2 主文档故事
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03paragraphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.3 段落和富文本格式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04tabls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.4 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05custom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.5 自定义标记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06sections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.6 节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.7 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.8 字体
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09numbering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.9 编号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10headeres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.10 标题和页脚
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11footnotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.11 脚注和尾注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.12 术语表文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13annotations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.13 注解/批注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14mailmerge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.14 邮件合并
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.15 设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.16 字段和超链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    17.17 杂项主题
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    17.17 杂项主题
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#17171-子文档" class="md-nav__link">
+    17.17.1 子文档
+  </a>
+  
+    <nav class="md-nav" aria-label="17.17.1 子文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171711-subdoc-子文档位置的锚点" class="md-nav__link">
+    17.17.1.1 subDoc (子文档位置的锚点)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17172-替代格式导入" class="md-nav__link">
+    17.17.2 替代格式导入
+  </a>
+  
+    <nav class="md-nav" aria-label="17.17.2 替代格式导入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171721-altchunk-导入外部内容的锚点" class="md-nav__link">
+    17.17.2.1 altChunk (导入外部内容的锚点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#171722-altchunkpr-外部内容导入属性" class="md-nav__link">
+    17.17.2.2 altChunkPr (外部内容导入属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#171723-matchsrc-导入时保持源格式" class="md-nav__link">
+    17.17.2.3 matchSrc (导入时保持源格式)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17173-往返替代内容" class="md-nav__link">
+    17.17.3 往返替代内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17174-布尔属性-ct_onoff" class="md-nav__link">
+    17.17.4 布尔属性 (CT_OnOff)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18simpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.18 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#17171-子文档" class="md-nav__link">
+    17.17.1 子文档
+  </a>
+  
+    <nav class="md-nav" aria-label="17.17.1 子文档">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171711-subdoc-子文档位置的锚点" class="md-nav__link">
+    17.17.1.1 subDoc (子文档位置的锚点)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17172-替代格式导入" class="md-nav__link">
+    17.17.2 替代格式导入
+  </a>
+  
+    <nav class="md-nav" aria-label="17.17.2 替代格式导入">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#171721-altchunk-导入外部内容的锚点" class="md-nav__link">
+    17.17.2.1 altChunk (导入外部内容的锚点)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#171722-altchunkpr-外部内容导入属性" class="md-nav__link">
+    17.17.2.2 altChunkPr (外部内容导入属性)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#171723-matchsrc-导入时保持源格式" class="md-nav__link">
+    17.17.2.3 matchSrc (导入时保持源格式)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17173-往返替代内容" class="md-nav__link">
+    17.17.3 往返替代内容
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17174-布尔属性-ct_onoff" class="md-nav__link">
+    17.17.4 布尔属性 (CT_OnOff)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="1717-杂项主题">17.17 杂项主题<a class="headerlink" href="#1717-杂项主题" title="Permanent link">&para;</a></h1>
+<p><strong>Miscellaneous Topics</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>本节涵盖了在WordprocessingML文档中其他地方未涵盖的主题。</p>
+</div>
+<div class="tabbed-block">
+<p>This section covers topics not covered elsewhere within the WordprocessingML documentation.</p>
+</div>
+</div>
+</div>
+<h2 id="17171-子文档">17.17.1 子文档<a class="headerlink" href="#17171-子文档" title="Permanent link">&para;</a></h2>
+<p><strong>Subdocuments</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在WordprocessingML文档中，有时需要将一个大型文档拆分为两个或多个单独的WordprocessingML文档文件，以便每个文件可以独立地分发、编辑和处理。</p>
+<p>[示例：一本书可能由五章组成，每一章由不同的作者编辑。因此，书籍的编辑者希望创建六个WordprocessingML文档 - 每个作者都可以在其章节上进行工作，并创建一个主文档，该文档适当地整合了五章的内容。示例结束]</p>
+<p>当一个WordprocessingML文档以这种方式由其他WordprocessingML文档组成时，生成的文档称为主文档及其子文档。</p>
+<ul>
+<li>子文档是一个WordprocessingML文档 - 文档中没有特定的信息将其分类为子文档，除非它被合并到另一个文档中。</li>
+<li>主文档是一个将一个或多个子文档（以及可选的WordprocessingML内容）合并起来创建较大文档的文档。</li>
+</ul>
+<p>[示例：考虑一个用于编写书籍的WordprocessingML文档：</p>
+<p><a class="glightbox" href="../imgs/Image11624.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image11624.png" /></a></p>
+<p>为了让多个作者共同编写该文档，书中的每一章都放在一个单独的文件中（下面突出显示的部分）：</p>
+<p><a class="glightbox" href="../imgs/Image11626.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image11626.png" /></a></p>
+<p>结果是三个WordprocessingML文档：</p>
+<ul>
+<li>一个主文档（包含书籍的标题、第一段落以及每一章的子文档的引用）</li>
+<li>两个子文档（每个章节一个）示例结束]</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Within a WordprocessingML document, it is sometimes necessary to break a large document into two or more separate WordprocessingML document files, allowing each of these files to be distributed, edited, and handled independently.</p>
+<p>[Example: A book might consist of five chapters, each edited by a separate author. The editor for the book would therefore desire to create six WordprocessingML documents - one for each author to work on their chapter, and a main document which collates the content of the five chapters appropriately. end example]</p>
+<p>When a WordprocessingML document is comprised of other WordprocessingML documents in this way, the
+resulting documents are called a master document and its subdocuments.</p>
+<ul>
+<li>A subdocument is a WordprocessingML document - there is no specific information in a document which classifies it as such, other than that it is incorporated into another document.</li>
+<li>A master document is a document which incorporates one or more subdocuments (as well as optional WordprocessingML content) to create a larger document</li>
+</ul>
+<p>[Example: Consider a WordprocessingML document which is being used to write a book:</p>
+<p><a class="glightbox" href="../imgs/Image11624.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image11624.png" /></a></p>
+<p>To allow this document to be written by multiple authors, each chapter in the book is placed in a separate file (the sections highlighted in red below):</p>
+<p><a class="glightbox" href="../imgs/Image11626.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image11626.png" /></a></p>
+<p>The result is three WordprocessingML documents:</p>
+<ul>
+<li>A master document (containing the title of the book, the first paragraph, and references to the subdocuments for each chapter)</li>
+<li>Two subdocuments (one for each chapter)</li>
+</ul>
+<p>end example]</p>
+</div>
+</div>
+</div>
+<h3 id="171711-subdoc-子文档位置的锚点">17.17.1.1 subDoc (子文档位置的锚点)<a class="headerlink" href="#171711-subdoc-子文档位置的锚点" title="Permanent link">&para;</a></h3>
+<p><strong>subDoc (Anchor for Subdocument Location)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定主文档中的位置，用于插入指定子文档的内容。指定的子文档内容应根据需要显示在主文档中的指定位置，但应保留为子文档位置指定的独立文件的一部分。子文档的位置应由其Id属性与此元素上的id属性匹配的关系来指定。</p>
+<p>如果此元素指定的关系的关系类型不是 http://purl.oclc.org/ooxml/officeDocument/relationships/subDocument ，不存在或没有TargetMode属性值为External，则应将文档视为不符合规范。</p>
+<p>当子文档在主文档中指定的位置显示时，以下逻辑确定了如何处理子文档和相关主文档的样式和格式：</p>
+<ul>
+<li>子文档中的所有直接格式将被保留。</li>
+<li>对于每个子文档中的样式：<ul>
+<li>如果在主文档中存在具有相同styleId属性值的样式，则使用主文档中的样式显示子文档的内容。</li>
+<li>否则，将样式导入主文档并使用原始样式显示内容。</li>
+<li>如果后续的子文档也包含具有相同styleId属性值的样式，则忽略后者的样式，并使用导入到主文档的样式版本显示内容。</li>
+</ul>
+</li>
+</ul>
+<p>[示例：考虑由三章组成的书，其中两章已被分成以下子文档（红色矩形表示每个子文档内容的边界）：</p>
+<p><a class="glightbox" href="../imgs/Image11626.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image11626.png" /></a></p>
+<p>生成的主文档将包括其自己的WordprocessingML内容以及适当位置的子文档锚点：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>My<span style="color: #bbbbbb"> </span>Book<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Once<span style="color: #bbbbbb"> </span>upon<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>time…<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:subDoc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;subDocRel1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:subDoc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;subDocRel2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>两个subDoc元素指定了与id为subDocRel1和subDocRel2的关系对应的子文档必须在第一和第二段内容之后按顺序导入。检查相应关系部分项目的内容，我们可以看到这些关系的目标：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;subDocRel1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">TargetMode=</span><span style="color: #BA2121">&quot;External&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/subDocument&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;Chapter1.docx&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;subDocRel2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">TargetMode=</span><span style="color: #BA2121">&quot;External&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/subDocument&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;Chapter2.docx&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>相应的关系部分项目显示，要导入的两个文件位于与当前文件相同的位置，分别命名为Chapter1.docx和Chapter2.docx。示例结束]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong>（关系到部件）</dt>
+<dd>
+<p>命名空间：http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>指定到指定部件的关系ID。</p>
+<p>指定的关系应与父元素所需的关系类型相匹配：</p>
+<ul>
+<li>对于contentPart元素，关系类型应为 http://purl.oclc.org/ooxml/officeDocument/relationships/customXml</li>
+<li>对于footerReference元素，关系类型应为 http://purl.oclc.org/ooxml/officeDocument/relationships/footer</li>
+<li>对于headerReference元素，关系类型应为 http://purl.oclc.org/ooxml/officeDocument/relationships/header</li>
+<li>对于embedBold、embedBoldItalic、embedItalic或embedRegular元素，关系类型应为 http://purl.oclc.org/ooxml/officeDocument/relationships/font</li>
+<li>对于printerSettings元素，关系类型应为 http://purl.oclc.org/ooxml/officeDocument/relationships/printerSettings</li>
+<li>对于longDesc或hyperlink元素，关系类型应为 http://purl.oclc.org/ooxml/officeDocument/relationships/hyperlink</li>
+</ul>
+<p>[示例：考虑一个具有以下id属性的XML元素：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>该标记指定与关系ID rId1相关联的关系部件，其中包含父XML元素的相应关系信息。示例结束]</p>
+<p>The possible values for this attribute are defined by the ST_RelationshipId simple type (<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Rel) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies a location within a master document for the insertion of the contents of a specified subdocument. The specified subdocument's contents should appear at the specified location within the master document as needed, but shall remain part of the separate file specified by the subdocument location. The location of the subdocument shall be specified by the relationship whose Id attribute matches the id attribute on this element.</p>
+<p>If the relationship type of the relationship specified by this element is not http://purl.oclc.org/ooxml/officeDocument/relationships/subDocument, is not present, or does not have a TargetMode attribute value of External, then the document shall be considered non-conformant.</p>
+<p>When a subdocument is displayed at the specified location within the master document, the following logic determines how the styles and formatting of the subdocument and associated master document shall be handled:</p>
+<ul>
+<li>All direct formatting in the subdocument is retained.</li>
+<li>For each style in each subdocument:<ul>
+<li>If a style with the same styleId attribute value exists in the master document, display the contents of the subdocument using the style in the master document.</li>
+<li>Otherwise, import the style into the master document and display the content using the original style.</li>
+<li>If a subsequent subdocument also contains a style with the same styleId attribute value, the latter’s style is ignored and the content is displayed using the version of the style imported into the master document.</li>
+</ul>
+</li>
+</ul>
+<p>[Example: Consider a book consisting of three chapters, two of which have been divided into subdocuments as follows (the red rectangle indicates the bounds of each subdocument's contents):</p>
+<p><a class="glightbox" href="../imgs/Image11626.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image11626.png" /></a></p>
+<p>The resulting master document would consist of its own WordprocessingML content as well as subdocument anchors in the appropriate locations:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>My<span style="color: #bbbbbb"> </span>Book<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Once<span style="color: #bbbbbb"> </span>upon<span style="color: #bbbbbb"> </span>a<span style="color: #bbbbbb"> </span>time…<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:subDoc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;subDocRel1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:subDoc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;subDocRel2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>The two subDoc elements specify that the subdocuments targeted by the relationships with an ID of subDocRel1 and subDocRel2 must be imported in that order after the content of the first two paragraphs of content. Examining the contents of the corresponding relationship part item, we can see the targets for those relationships:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;subDocRel1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">TargetMode=</span><span style="color: #BA2121">&quot;External&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/subDocument&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;Chapter1.docx&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;subDocRel2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">TargetMode=</span><span style="color: #BA2121">&quot;External&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/subDocument&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;Chapter2.docx&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>The corresponding relationship part item shows that the two files to be imported are located in the same location as the current file and name Chapter1.docx and Chapter2.docx respectively. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong> (Relationship to Part)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>Specifies the relationship ID to a specified part.</p>
+<p>The specified relationship shall match the relationship type required by the parent element:</p>
+<ul>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/customXml for the contentPart element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/footer for the footerReference element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/header for the headerReference element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/font for the embedBold, embedBoldItalic, embedItalic, or embedRegular elements</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/printerSettings for the printerSettings element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/hyperlink for the longDesc or hyperlink element</li>
+</ul>
+<p>[Example: Consider an XML element which has the following id attribute:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>The markup specifies the associated relationship part with relationship ID rId1 contains the corresponding relationship information for the parent XML element. end example]</p>
+<p>The possible values for this attribute are defined by the ST_RelationshipId simple type (<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Rel) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="17172-替代格式导入">17.17.2 替代格式导入<a class="headerlink" href="#17172-替代格式导入" title="Permanent link">&para;</a></h2>
+<p><strong>Alternative Format Import </strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>在生成WordprocessingML文档时，有时需要在文档中包含现有的文档内容（以下简称外部内容）。通常包含外部内容是因为它存储的格式不是ECMA-376定义的WordprocessingML格式。</p>
+<p>如<a href="../../chapter-11/#1131-替代格式导入部件">§11.3.1</a>所述，符合规范的生产者不得创建利用此机制的WordprocessingML包。</p>
+<p>为了在无需将外部内容转换为先决条件的情况下包含这些内容，WordprocessingML提供了一个功能，使应用程序能够实现任何格式的外部内容作为WordprocessingML文档的一部分进行导入。这个功能称为外部内容导入，允许在WordprocessingML包中包含任意内容类型的内容，当包被理解该内容类型的应用程序使用时，将其打开并合并到主文档中。</p>
+<p>[示例：考虑一个基于以下现有HTML内容创建的WordprocessingML文档：</p>
+<div class="language-html highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;<span style="color: #008000; font-weight: bold">html</span> <span style="border: 1px solid #FF0000">…</span> &gt;
+    &lt;<span style="color: #008000; font-weight: bold">body</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;margin-left:200px;margin-top:50px&quot;</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Paragraph one.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">blockquote</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;border:5px solid #00FFFF&quot;</span>&gt;Paragraph in a
+        blockquote.&lt;/<span style="color: #008000; font-weight: bold">blockquote</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Paragraph two.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+    &lt;/<span style="color: #008000; font-weight: bold">body</span>&gt;
+&lt;/<span style="color: #008000; font-weight: bold">html</span>&gt;
+</code></pre></div>
+<p>此内容可以使用ECMA-376定义的XML语法转换为其WordprocessingML等价物，或者一个更基本的工具可以使用外部内容导入功能将HTML文档包含在WordprocessingML包中，从而允许该内容的后续使用者导入生成的HTML。</p>
+<p>当打开生成的WordprocessingML包时，必须读取HTML文档（如果这是一个被使用的应用程序理解的替代格式），并迁移到主WordprocessingML文档中的适当位置。示例结束]</p>
+</div>
+<div class="tabbed-block">
+<p>When generating WordprocessingML documents, it is sometimes necessary to include existing document content (henceforth called external content) within the document. External content in a document is typically included because it was stored in a format other than the WordprocessingML format defined by ECMA-376.</p>
+<p>As described in <a href="../../chapter-11/#1131-替代格式导入部件">§11.3.1</a>, conforming producers shall not create WordprocessingML packages which utilize this mechanism.</p>
+<p>In order to facilitate the inclusion of such content without requiring its conversion as a prerequisite to its inclusion in a document, WordprocessingML includes the facility for applications to implement the import of external content in any format as part of a WordprocessingML document. This functionality, called external content import, allows the inclusion of content of an arbitrary content type within the WordprocessingML package, which shall then be opened and merged into the main document when the package is consumed by applications which understand that content type.</p>
+<p>[Example: Consider a WordprocessingML document which is being created based on the following existing HTML content:</p>
+<div class="language-html highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;<span style="color: #008000; font-weight: bold">html</span> <span style="border: 1px solid #FF0000">…</span> &gt;
+    &lt;<span style="color: #008000; font-weight: bold">body</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;margin-left:200px;margin-top:50px&quot;</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Paragraph one.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">blockquote</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;border:5px solid #00FFFF&quot;</span>&gt;Paragraph in a
+        blockquote.&lt;/<span style="color: #008000; font-weight: bold">blockquote</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Paragraph two.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+    &lt;/<span style="color: #008000; font-weight: bold">body</span>&gt;
+&lt;/<span style="color: #008000; font-weight: bold">html</span>&gt;
+</code></pre></div>
+<p>This content could be converted to its WordprocessingML equivalents using the XML syntax defined by ECMA- 376, or a more basic tool can use the external content import to include the HTML document within a WordprocessingML package, allowing a subsequent consumer of that content to import the resulting HTML.</p>
+<p>When the resulting WordprocessingML package is opened, the HTML document must be read (if it is an alternate format understood by the consuming application) and migrated into the appropriate location in the main WordprocessingML document. end example]</p>
+</div>
+</div>
+</div>
+<h3 id="171721-altchunk-导入外部内容的锚点">17.17.2.1 altChunk (导入外部内容的锚点)<a class="headerlink" href="#171721-altchunk-导入外部内容的锚点" title="Permanent link">&para;</a></h3>
+<p><strong>altChunk (Anchor for Imported External Content)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定文档中的一个位置，用于插入包含外部内容的指定文件的内容，这些内容将被导入到主WordprocessingML文档中。指定文件的内容应出现在文档中的指定位置，从此之后可以作为常规WordprocessingML内容进行处理，而无需区分其来源。要导入的外部内容的位置应由其关系的Id属性与此元素的id属性匹配的关系来指定。</p>
+<p>如果此元素指定的关系的关系类型不是 http://purl.oclc.org/ooxml/officeDocument/relationships/aFChunk，或者不存在，或者没有TargetMode属性值为Internal，那么该文档应被视为不符合规范。如果应用程序无法处理由目标部分指定的内容类型的外部内容，则它应忽略指定的备用内容，但继续处理文件。如果可能，还应提供某种指示，说明未导入未知内容。</p>
+<p>[示例：考虑一个WordprocessingML文档，其内容必须从以下HTML文档中导入：</p>
+<div class="language-HTML highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;<span style="color: #008000; font-weight: bold">html</span> <span style="border: 1px solid #FF0000">…</span> &gt;
+    &lt;<span style="color: #008000; font-weight: bold">body</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;margin-left:200px;margin-top:50px&quot;</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;第一段。&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">blockquote</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;border:5px solid #00FFFF&quot;</span>&gt;块引用中的段落。&lt;/<span style="color: #008000; font-weight: bold">blockquote</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;第二段。&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+    &lt;/<span style="color: #008000; font-weight: bold">body</span>&gt;
+&lt;/<span style="color: #008000; font-weight: bold">html</span>&gt;
+</code></pre></div>
+<p>生成的WordprocessingML主文档将包含其自身的WordprocessingML内容以及在适当位置的外部内容导入锚：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:altChunk</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>altChunk元素指定由ID为altChunk1的关系目标的外部内容必须在文档开头导入。检查相应的关系部分项的内容，我们可以看到该关系的目标：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">TargetMode=</span><span style="color: #BA2121">&quot;Internal&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/aFChunk&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;import.htm&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>相应的关系部分项显示要导入的文件位于主文档旁边，名称为import.htm。结束示例]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong>（与部分的关系）</dt>
+<dd>
+<p>命名空间：http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>指定包含备用内容以供导入的指定部分的关系ID。</p>
+<p>如果指定的关系与父元素要求的关系类型不匹配，则此文档应被视为不符合规范。</p>
+<p>[示例：考虑一个具有以下id属性的XML元素：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>该标记指定了关联的关系部分，其关系ID为rId10，包含父XML元素的相应关系信息。结束示例]</p>
+<p>如果省略此属性，则应忽略父元素。</p>
+<p>此属性的可能值由ST_RelationshipId简单类型定义（<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>）。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AltChunk) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies a location within a document for the insertion of the contents of a specified file containing external content to be imported into the main WordprocessingML document. The specified file's contents should appear at the specified location within the document, and can henceforth be emitted as regular WordprocessingML without distinction to its origin. The location of the external content to be imported shall be specified by the relationship whose Id attribute matches the id attribute on this element.</p>
+<p>If the relationship type of the relationship specified by this element is not http://purl.oclc.org/ooxml/officeDocument/relationships/aFChunk, is not present, or does not have a TargetMode attribute value of Internal, then the document shall be considered non-conformant. If an application cannot process external content of the content type specified by the targeted part, then it should ignore the specified alternate content but continue to process the file. If possible, it should also provide some indication that unknown content was not imported.</p>
+<p>[Example: Consider a WordprocessingML document consisting of contents which must be imported from the following HTML document:</p>
+<div class="language-HTML highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>&lt;<span style="color: #008000; font-weight: bold">html</span> <span style="border: 1px solid #FF0000">…</span> &gt;
+    &lt;<span style="color: #008000; font-weight: bold">body</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;margin-left:200px;margin-top:50px&quot;</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Paragraph one.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">blockquote</span> <span style="color: #687822">style</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;border:5px solid #00FFFF&quot;</span>&gt;Paragraph in a
+        blockquote.&lt;/<span style="color: #008000; font-weight: bold">blockquote</span>&gt;
+        &lt;<span style="color: #008000; font-weight: bold">p</span>&gt;Paragraph two.&lt;/<span style="color: #008000; font-weight: bold">p</span>&gt;
+    &lt;/<span style="color: #008000; font-weight: bold">body</span>&gt;
+&lt;/<span style="color: #008000; font-weight: bold">html</span>&gt;
+</code></pre></div>
+<p>The resulting WordprocessingML host document would consist of its own WordprocessingML content as well as an external content import anchor in the appropriate location:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:altChunk</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>The altChunk element specifies that the external content targeted by the relationship with an ID of altChunk1 must be imported at the beginning of the document. Examining the contents of the corresponding relationship part item, we can see the targets for that relationship:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">TargetMode=</span><span style="color: #BA2121">&quot;Internal&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/aFChunk&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;import.htm&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>The corresponding relationship part item shows that the file to be imported is located next to the main document and is named import.htm. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong> (Relationship to Part)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>Specifies the relationship ID to a specified part containing alternate content for import.</p>
+<p>If the specified relationship does not match the relationship type required by the parent element, then this document shall be considered to be non-conformant.</p>
+<p>[Example: Consider an XML element which has the following id attribute:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>The markup specifies the associated relationship part with relationship ID rId1 contains the corresponding relationship information for the parent XML element. end example]</p>
+<p>If this attribute is omitted, the parent element shall be ignored.</p>
+<p>The possible values for this attribute are defined by the ST_RelationshipId simple type (<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AltChunk) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="171722-altchunkpr-外部内容导入属性">17.17.2.2 altChunkPr (外部内容导入属性)<a class="headerlink" href="#171722-altchunkpr-外部内容导入属性" title="Permanent link">&para;</a></h3>
+<p><strong>altChunkPr (External Content Import Properties)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定要应用于父altChunk元素指定的外部内容导入的一组属性。在ECMA-376标准中，仅指定了一项属性。</p>
+<p>[示例：考虑一个包含在适当位置具有外部内容导入锚点的WordprocessingML文档：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:altChunk</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:altChunkPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:matchSrc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;false&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:altChunkPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:altChunk&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>altChunkPr 元素指定在导入指定内容时应用于外部内容导入的一组属性。结束示例]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AltChunkPr) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies the set of properties which shall be applied to the import of the external content specified by the parent altChunk element. Within ECMA-376, only one property is specified.</p>
+<p>[Example: Consider a WordprocessingML document consisting of contents which contains an external content import anchor in the appropriate location:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:altChunk</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:altChunkPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:matchSrc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;false&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:altChunkPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:altChunk&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>The altChunkPr element specifies the set of properties applied to the external content import when importing the specified content. end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_AltChunkPr) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h3 id="171723-matchsrc-导入时保持源格式">17.17.2.3 matchSrc (导入时保持源格式)<a class="headerlink" href="#171723-matchsrc-导入时保持源格式" title="Permanent link">&para;</a></h3>
+<p><strong>matchSrc (Keep Source Formatting on Import)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定导入内容中存在的任何样式定义是否应被主WordprocessingML文档中存在的相同样式覆盖。如果此元素的val属性为true，则在导入内容和主文档中同时存在的任何样式应通过重新定义样式名称和/或ID以保持在导入内容上的样式。相反，如果此元素的val属性为false，则在导入内容和主文档中同时存在的任何样式应应用主文档中的样式来替换导入内容中的样式。</p>
+<p>如果省略此元素，则主文档中的样式应覆盖导入内容中的相同样式。</p>
+<p>[示例：考虑一个包含在适当位置具有外部内容导入锚点的WordprocessingML文档：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:altChunk</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;altChunk1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:altChunkPr&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:matchSrc</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;true&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:altChunkPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:altChunk&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+</code></pre></div>
+<p>matchSrc元素的val属性值为true，这指定了在导入指定内容时必须保留冲突的样式。例如，如果在两个地方都定义了“标题 1”样式，则应用程序必须确保生成的文档不会丢失任何实例的格式。结束示例]</p>
+<p>This element’s content model is defined by the common boolean property definition in <a href="./#17174-布尔属性-ct_onoff">§17.17.4</a>.</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies if any style definitions present in the imported content shall be overridden by identical styles present in the host WordprocessingML document. If this element's val attribute is true, then any style exists in both the imported content and main document shall be maintained on the imported content by redefining the style name and/or ID as needed. Conversely, if this element's val attribute is false, any style which exists in both the imported content and main document shall apply the style form the main document in place of the style in the imported content.</p>
+<p>If this element is omitted, then styles from the main document shall override identical styles from the imported content.</p>
+<p>[Example: Consider a WordprocessingML document consisting of contents which contains an external content
+import anchor in the appropriate location:</p>
+<p>```xml
+<w:body>
+<w:altChunk r:id="altChunk1">
+<w:altChunkPr>
+<w:matchSrc w:val="true" />
+</w:altChunkPr>
+</w:altChunk>
+<w:p/>
+<w:sectPr>
+…
+</w:sectPr>
+</w:body></p>
+<p>The matchSrc element has a val attribute value of true, which specifies that conflicting styles must be maintained when importing the specified content. For example, if the Heading 1 style was defined in both places, then applications must ensure that the resulting document does not lose either instance of its formatting as appropriate. end example]</p>
+<p>This element’s content model is defined by the common boolean property definition in <a href="./#17174-布尔属性-ct_onoff">§17.17.4</a>.</p>
+</div>
+</div>
+</div>
+<h2 id="17173-往返替代内容">17.17.3 往返替代内容<a class="headerlink" href="#17173-往返替代内容" title="Permanent link">&para;</a></h2>
+<p><strong>Roundtripping Alternate Content</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>WordprocessingML未定义一组位置，应用程序应在这些位置尽可能尝试存储和往返所有在备用内容块中未选择的选项。因此，这种行为由应用程序定义。有关备用内容块的进一步讨论，请参见[§L.1.18.4]。</p>
+</div>
+<div class="tabbed-block">
+<p>WordprocessingML does not define a set of locations where applications should, whenever possible, attempt to store and roundtrip all non-taken choices in alternate content blocks. This behavior is therefore application-defined. For further discussion of alternate content blocks see [§L.1.18.4].</p>
+</div>
+</div>
+</div>
+<h2 id="17174-布尔属性-ct_onoff">17.17.4 布尔属性 (CT_OnOff)<a class="headerlink" href="#17174-布尔属性-ct_onoff" title="Permanent link">&para;</a></h2>
+<p><strong>Boolean Property (CT_OnOff)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此通用复杂类型指定了在整个 WordprocessingML 中使用的布尔属性。</p>
+<details class="abstract">
+<summary>属性</summary>
+<dl>
+<dt><strong>val</strong>（开/关值）</dt>
+<dd>
+<p>指定由父 XML 元素定义的属性的二进制值。</p>
+<p>值为 1 或 true 表示该属性应被明确应用。这是此属性的默认值，并在父元素存在但未指定此属性时被隐含应用。</p>
+<p>值为 0 或 false 表示该属性应被明确关闭。</p>
+<p>[示例：例如，考虑以下开/关属性：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>w:val=&quot;false&quot;/&gt;
+</code></pre></div>
+<p>val 属性明确声明该属性为 false。end example]</p>
+<p>此属性的可能值由 ST_OnOff 简单类型定义（<a href="../../chapter22/sharedsimpletypes/#22927-st_onoff-开关值">§22.9.2.7</a>）。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this complex type’s content model (CT_OnOff) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This common complex type specifies a boolean attribute used throughout WordprocessingML.</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>val</strong> (On/Off Value)</dt>
+<dd>
+<p>Specifies a binary value for the property defined by the parent XML element.</p>
+<p>A value of 1 or true specifies that the property shall be explicitly applied. This is the default value for this attribute, and is implied when the parent element is present, but this attribute is omitted.</p>
+<p>A value of 0 or false specifies that the property shall be explicitly turned off.</p>
+<p>[Example: For example, consider the following on/off property:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>w:val=&quot;false&quot;/&gt;
+</code></pre></div>
+<p>The val attribute explicitly declares that the property is false. end example]</p>
+<p>The possible values for this attribute are defined by the ST_OnOff simple type (<a href="../../chapter22/sharedsimpletypes/#22927-st_onoff-开关值">§22.9.2.7</a>).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this complex type’s content model (CT_OnOff) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
