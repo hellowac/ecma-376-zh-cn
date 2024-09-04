@@ -1,0 +1,3760 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="hellowac">
+      
+      
+      
+      
+        <link rel="prev" href="../13annotations/">
+      
+      
+        <link rel="next" href="../15settings/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>17.14 邮件合并 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1714-邮件合并" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17.14 邮件合并
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            17. WordprocessingML 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02maindocment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.2 主文档故事
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03paragraphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.3 段落和富文本格式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04tabls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.4 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05custom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.5 自定义标记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06sections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.6 节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.7 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.8 字体
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09numbering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.9 编号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10headeres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.10 标题和页脚
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11footnotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.11 脚注和尾注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.12 术语表文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13annotations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.13 注解/批注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    17.14 邮件合并
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    17.14 邮件合并
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#17141-active-记录包含在邮件合并中" class="md-nav__link">
+    17.14.1 active (记录包含在邮件合并中)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17142-activerecord-合并文档中当前显示的记录" class="md-nav__link">
+    17.14.2 activeRecord (合并文档中当前显示的记录)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17143-addressfieldname-包含电子邮件地址的列" class="md-nav__link">
+    17.14.3 addressFieldName (包含电子邮件地址的列)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17144-checkerrors-邮件合并错误报告设置" class="md-nav__link">
+    17.14.4 checkErrors (邮件合并错误报告设置)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17145-coldelim-数据源的列分隔符" class="md-nav__link">
+    17.14.5 colDelim (数据源的列分隔符)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17146-column-正在映射的列的索引" class="md-nav__link">
+    17.14.6 column (正在映射的列的索引)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17147-column-包含记录的唯一值的列的索引" class="md-nav__link">
+    17.14.7 column (包含记录的唯一值的列的索引)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17148-connectstring-数据源连接字符串" class="md-nav__link">
+    17.14.8 connectString (数据源连接字符串)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17149-datasource-数据源文件路径" class="md-nav__link">
+    17.14.9 dataSource (数据源文件路径)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171410-datatype-数据源类型" class="md-nav__link">
+    17.14.10 dataType (数据源类型)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171411-destination-合并文档目标" class="md-nav__link">
+    17.14.11 destination (合并文档目标)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171412-donotsuppressblanklines-从合并文档中删除空行" class="md-nav__link">
+    17.14.12 doNotSuppressBlankLines (从合并文档中删除空行)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171413-dynamicaddress-使用基于国家地区的地址字段排序" class="md-nav__link">
+    17.14.13 dynamicAddress (使用基于国家/地区的地址字段排序)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171414-fhdr-数据源的第一行包含列名称" class="md-nav__link">
+    17.14.14 fHdr (数据源的第一行包含列名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171415-fieldmapdata-用于合并字段映射的外部数据源" class="md-nav__link">
+    17.14.15 fieldMapData (用于合并字段映射的外部数据源)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171416-headersource-标头定义文件路径" class="md-nav__link">
+    17.14.16 headerSource (标头定义文件路径)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171417-lid-合并字段名称语言-id" class="md-nav__link">
+    17.14.17 lid (合并字段名称语言 ID)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171418-linktoquery-查询包含外部查询文件的链接" class="md-nav__link">
+    17.14.18 linkToQuery (查询包含外部查询文件的链接)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171419-mailasattachment-合并文档至电子邮件附件" class="md-nav__link">
+    17.14.19 mailAsAttachment (合并文档至电子邮件附件)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171420-mailmerge-邮件合并设置" class="md-nav__link">
+    17.14.20 mailMerge (邮件合并设置)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171421-mailsubject-合并电子邮件或传真主题行" class="md-nav__link">
+    17.14.21 mailSubject (合并电子邮件或传真主题行)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171422-maindocumenttype-源文档类型" class="md-nav__link">
+    17.14.22 mainDocumentType (源文档类型)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171423-mappedname-预定义合并字段名称" class="md-nav__link">
+    17.14.23 mappedName (预定义合并字段名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171424-name-列的数据源名称" class="md-nav__link">
+    17.14.24 name (列的数据源名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171425-odso-office-数据源对象设置" class="md-nav__link">
+    17.14.25 odso (Office 数据源对象设置)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171426-query-查询要合并的数据源记录" class="md-nav__link">
+    17.14.26 query (查询要合并的数据源记录)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171427-recipientdata-关于单个数据源记录的数据" class="md-nav__link">
+    17.14.27 recipientData (关于单个数据源记录的数据)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171428-recipientdata-参考数据源的包含排除数据" class="md-nav__link">
+    17.14.28 recipientData (参考数据源的包含/排除数据)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171429-recipients-数据源的包含排除数据" class="md-nav__link">
+    17.14.29 recipients (数据源的包含/排除数据)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171430-src-odso-数据源文件路径" class="md-nav__link">
+    17.14.30 src (ODSO 数据源文件路径)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171431-table-数据源表名称" class="md-nav__link">
+    17.14.31 table (数据源表名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171432-type-odso-数据源类型" class="md-nav__link">
+    17.14.32 type (ODSO 数据源类型)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171433-type-合并字段映射" class="md-nav__link">
+    17.14.33 type (合并字段映射)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171434-udl-udl-连接字符串" class="md-nav__link">
+    17.14.34 udl (UDL 连接字符串)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171435-uniquetag-记录的唯一值" class="md-nav__link">
+    17.14.35 uniqueTag (记录的唯一值)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171436-viewmergeddata-查看文档中的合并数据" class="md-nav__link">
+    17.14.36 viewMergedData (查看文档中的合并数据)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.15 设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.16 字段和超链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17miscellaneous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.17 杂项主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18simpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.18 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#17141-active-记录包含在邮件合并中" class="md-nav__link">
+    17.14.1 active (记录包含在邮件合并中)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17142-activerecord-合并文档中当前显示的记录" class="md-nav__link">
+    17.14.2 activeRecord (合并文档中当前显示的记录)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17143-addressfieldname-包含电子邮件地址的列" class="md-nav__link">
+    17.14.3 addressFieldName (包含电子邮件地址的列)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17144-checkerrors-邮件合并错误报告设置" class="md-nav__link">
+    17.14.4 checkErrors (邮件合并错误报告设置)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17145-coldelim-数据源的列分隔符" class="md-nav__link">
+    17.14.5 colDelim (数据源的列分隔符)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17146-column-正在映射的列的索引" class="md-nav__link">
+    17.14.6 column (正在映射的列的索引)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17147-column-包含记录的唯一值的列的索引" class="md-nav__link">
+    17.14.7 column (包含记录的唯一值的列的索引)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17148-connectstring-数据源连接字符串" class="md-nav__link">
+    17.14.8 connectString (数据源连接字符串)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17149-datasource-数据源文件路径" class="md-nav__link">
+    17.14.9 dataSource (数据源文件路径)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171410-datatype-数据源类型" class="md-nav__link">
+    17.14.10 dataType (数据源类型)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171411-destination-合并文档目标" class="md-nav__link">
+    17.14.11 destination (合并文档目标)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171412-donotsuppressblanklines-从合并文档中删除空行" class="md-nav__link">
+    17.14.12 doNotSuppressBlankLines (从合并文档中删除空行)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171413-dynamicaddress-使用基于国家地区的地址字段排序" class="md-nav__link">
+    17.14.13 dynamicAddress (使用基于国家/地区的地址字段排序)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171414-fhdr-数据源的第一行包含列名称" class="md-nav__link">
+    17.14.14 fHdr (数据源的第一行包含列名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171415-fieldmapdata-用于合并字段映射的外部数据源" class="md-nav__link">
+    17.14.15 fieldMapData (用于合并字段映射的外部数据源)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171416-headersource-标头定义文件路径" class="md-nav__link">
+    17.14.16 headerSource (标头定义文件路径)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171417-lid-合并字段名称语言-id" class="md-nav__link">
+    17.14.17 lid (合并字段名称语言 ID)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171418-linktoquery-查询包含外部查询文件的链接" class="md-nav__link">
+    17.14.18 linkToQuery (查询包含外部查询文件的链接)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171419-mailasattachment-合并文档至电子邮件附件" class="md-nav__link">
+    17.14.19 mailAsAttachment (合并文档至电子邮件附件)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171420-mailmerge-邮件合并设置" class="md-nav__link">
+    17.14.20 mailMerge (邮件合并设置)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171421-mailsubject-合并电子邮件或传真主题行" class="md-nav__link">
+    17.14.21 mailSubject (合并电子邮件或传真主题行)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171422-maindocumenttype-源文档类型" class="md-nav__link">
+    17.14.22 mainDocumentType (源文档类型)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171423-mappedname-预定义合并字段名称" class="md-nav__link">
+    17.14.23 mappedName (预定义合并字段名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171424-name-列的数据源名称" class="md-nav__link">
+    17.14.24 name (列的数据源名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171425-odso-office-数据源对象设置" class="md-nav__link">
+    17.14.25 odso (Office 数据源对象设置)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171426-query-查询要合并的数据源记录" class="md-nav__link">
+    17.14.26 query (查询要合并的数据源记录)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171427-recipientdata-关于单个数据源记录的数据" class="md-nav__link">
+    17.14.27 recipientData (关于单个数据源记录的数据)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171428-recipientdata-参考数据源的包含排除数据" class="md-nav__link">
+    17.14.28 recipientData (参考数据源的包含/排除数据)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171429-recipients-数据源的包含排除数据" class="md-nav__link">
+    17.14.29 recipients (数据源的包含/排除数据)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171430-src-odso-数据源文件路径" class="md-nav__link">
+    17.14.30 src (ODSO 数据源文件路径)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171431-table-数据源表名称" class="md-nav__link">
+    17.14.31 table (数据源表名称)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171432-type-odso-数据源类型" class="md-nav__link">
+    17.14.32 type (ODSO 数据源类型)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171433-type-合并字段映射" class="md-nav__link">
+    17.14.33 type (合并字段映射)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171434-udl-udl-连接字符串" class="md-nav__link">
+    17.14.34 udl (UDL 连接字符串)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171435-uniquetag-记录的唯一值" class="md-nav__link">
+    17.14.35 uniqueTag (记录的唯一值)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#171436-viewmergeddata-查看文档中的合并数据" class="md-nav__link">
+    17.14.36 viewMergedData (查看文档中的合并数据)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="1714-邮件合并">17.14 邮件合并<a class="headerlink" href="#1714-邮件合并" title="Permanent link">&para;</a></h1>
+<p><strong>Mail Merge</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>邮件合并是指WordprocessingML文档与外部数据源的数据协同工作的操作，根据WordprocessingML中称为字段的一组代码，将这些数据导入到文档中。</p>
+<p>一个包含 mailMerge 元素（[§17.14.20]）并因此连接到外部数据源的 WordprocessingML 文档称为<em>源文档</em>(source document)。除了连接到外部数据源并包含字段之外，源文档还可以包含任何常规的 WordprocessingML 构造，例如：</p>
+<ul>
+<li>文本运行(Text runs)</li>
+<li>段落(Paragraphs)</li>
+<li>图像(Images)</li>
+<li>表格(Tables)</li>
+<li>编号(Numbering)</li>
+<li>等等</li>
+</ul>
+<p>存储在 WordprocessingML 文档中的邮件合并数据有两个关键部分：</p>
+<p>9.&nbsp;连接文档与外部数据源的信息
+10.&nbsp;使用外部数据填充文档中字段的信息</p>
+<p>一旦合并文档中的字段被外部数据填充，邮件合并就完成了，生成的文件称为<em>邮件合并文档(mail merged documents)</em>或简称为<em>合并文档(merged documents)</em>。 WordprocessingML 文档的邮件合并设置存储在两个位置：</p>
+<ul>
+<li>标准邮件合并设置存储为 mailMerge 元素（[§17.14.20]）的子元素</li>
+<li>一组存储在 odso 元素（[§17.14.25]）中的附加邮件合并设置，统称为 Office Data Source Object 设置。 Office Data Source Object 是与邮件合并一起存储的标准设置的扩展，它执行两个功能：首先，它提供有关邮件合并数据源的附加信息，具体而言：关于如何将数据源中的列映射到 MERGEFIELD 字段的信息以及在创建合并文档时应包括和排除的记录的信息。其次，它提供一个备用的连接信息集，应该在 dataType 元素（[§17.14.10]）指定为 native 的情况下使用。此备用连接字符串为选择支持 ODSO 连接字符串语法的应用程序提供了附加的连接信息。</li>
+</ul>
+<p>【示例：考虑一个包含静态 WordprocessingML 构造（如文本运行和段落）以及两个调用 Courtesy Title 和 Last Name 数据的 WordprocessingML MERGEFIELD 字段（[§17.16.5.35]）的 WordprocessingML 文档。每个字段的字段代码如下，由 <code>{}</code> 字符界定：</p>
+<p><a class="glightbox" href="../imgs/16img02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../imgs/16img02.png" /></a></p>
+<p>如果将以下 WordprocessingML 添加到此文档中，此文档将成为<em>源文档</em>(source document)，而不仅仅是一个标准的 WordprocessingML 文档，因为 mailMerge （§17.14.20）元素指定了连接到外部电子表格数据源所需的元素和属性。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:mailMerge&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:dataType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;spreadsheet&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:query</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;SELECT * FROM `Sheet1$`&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:dataSource</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:mailMerge&gt;</span>
+</code></pre></div>
+<p>在这里，dataType（[§17.14.10]）和dataSource（[§17.14.9]）元素指定给定文档必须连接到由 dataSource 元素（[§17.14.9]）中的关系值 rId1 指定的外部数据源目标。在连接到外部数据源的同时，源文档与托管应用程序和/或数据源访问应用程序一起从外部数据源提取数据，以执行由 connectString（[§17.14.8]）和 query（[§17.14.26]）元素指定的合并操作。】</p>
+</div>
+<div class="tabbed-block">
+<p>Mail merge refers to an operation by which WordprocessingML documents can work in conjunction with data from an external data source, importing this data into a document according to a set of codes contained in WordprocessingML known as fields.</p>
+<p>A WordprocessingML document that contains the mailMerge element ([§17.14.20]) and is therefore connected to an external data source, is known as a <em>source document</em>. In addition to being connected to an external data source and containing fields, a source document can contain any regular WordprocessingML constructs such as:</p>
+<ul>
+<li>Text runs</li>
+<li>Paragraphs</li>
+<li>Images</li>
+<li>Tables</li>
+<li>Numbering</li>
+<li>Etc.</li>
+</ul>
+<p>There are two key parts of the mail merge data stored in a WordprocessingML document</p>
+<p>9.&nbsp;Information connecting a document to an external data source</p>
+<p>10.&nbsp;Information populating fields within that document with external data.</p>
+<p>Once the fields in a merged document have been populated with external data, mail merge has been completed and the resulting files are known as mail merged documents or simply merged documents.
+The mail merge settings for a WordprocessingML document are stored in two locations:</p>
+<ul>
+<li>The standard mail merge settings are stored as the child elements of the mailMerge element ([§17.14.20])
+= A set of additional mail merge settings stored in the odso element ([§17.14.25]), and collectively referred to as the Office Data Source Object settings. The Office Data Source Object is an extension to the standard settings stored with a mail merge which performs two functions: First, it provides additional information about the mail merge data source, specifically: information about how to map the columns in the data source to MERGEFIELD fields and information about records which shall be included and excluded when creating merged documents. Second, it provides an alternate set of connection information which should be used when the dataType element ([§17.14.10]) specifies a value of native. This alternate connection string provides additional connection information for applications which choose to support the ODSO connection string syntax.</li>
+</ul>
+<p>[Example: Consider a WordprocessingML document containing static WordprocessingML constructs such as text runs and paragraphs in addition to two WordprocessingML MERGEFIELD fields ([§17.16.5.35]) calling for Courtesy Title and Last Name data. The field codes for each field are displayed, delimited by {} characters:</p>
+<p><figure markdown="span">
+  <a class="glightbox" href="../imgs/16img02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image title" src="../imgs/16img02.png" /></a>
+</figure></p>
+<p>If the following WordprocessingML was added to this document, this document would become a source
+document rather than just a standard WordprocessingML document, as the mailMerge (§17.14.20) element specifies the elements and attributes necessary to enabled the document to connect to an external spreadsheet data source.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:mailMerge&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:dataType</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;spreadsheet&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:query</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:val=</span><span style="color: #BA2121">&quot;SELECT * FROM `Sheet1$`&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:dataSource</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId1&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:mailMerge&gt;</span>
+</code></pre></div>
+<p>Here, the dataType ([§17.14.10]) and dataSource ([§17.14.9]) elements specify that the given document must be connected to the external data source target by the relationship whose relationship value is rId1 as specified in the dataSource element ([§17.14.9]). While connected to the external data source, the source document together with the hosting application and/or data source access application extracts data from the external data source to perform the merge as specified by the connectString ([§17.14.8]) and query ([§17.14.26]) elements. end example]</p>
+</div>
+</div>
+</div>
+<h2 id="17141-active-记录包含在邮件合并中">17.14.1 active (记录包含在邮件合并中)<a class="headerlink" href="#17141-active-记录包含在邮件合并中" title="Permanent link">&para;</a></h2>
+<p><strong>active (Record Is Included in Mail Merge)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17142-activerecord-合并文档中当前显示的记录">17.14.2 activeRecord (合并文档中当前显示的记录)<a class="headerlink" href="#17142-activerecord-合并文档中当前显示的记录" title="Permanent link">&para;</a></h2>
+<p><strong>activeRecord (Record Currently Displayed In Merged Document)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17143-addressfieldname-包含电子邮件地址的列">17.14.3 addressFieldName (包含电子邮件地址的列)<a class="headerlink" href="#17143-addressfieldname-包含电子邮件地址的列" title="Permanent link">&para;</a></h2>
+<p><strong>addressFieldName (Column Containing E-mail Address)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17144-checkerrors-邮件合并错误报告设置">17.14.4 checkErrors (邮件合并错误报告设置)<a class="headerlink" href="#17144-checkerrors-邮件合并错误报告设置" title="Permanent link">&para;</a></h2>
+<p><strong>checkErrors (Mail Merge Error Reporting Setting)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17145-coldelim-数据源的列分隔符">17.14.5 colDelim (数据源的列分隔符)<a class="headerlink" href="#17145-coldelim-数据源的列分隔符" title="Permanent link">&para;</a></h2>
+<p><strong>colDelim (Column Delimiter for Data Source)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17146-column-正在映射的列的索引">17.14.6 column (正在映射的列的索引)<a class="headerlink" href="#17146-column-正在映射的列的索引" title="Permanent link">&para;</a></h2>
+<p><strong>column (Index of Column Being Mapped)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17147-column-包含记录的唯一值的列的索引">17.14.7 column (包含记录的唯一值的列的索引)<a class="headerlink" href="#17147-column-包含记录的唯一值的列的索引" title="Permanent link">&para;</a></h2>
+<p><strong>column (Index of Column Containing Unique Values for Record)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">中文</label><label for="__tabbed_8_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17148-connectstring-数据源连接字符串">17.14.8 connectString (数据源连接字符串)<a class="headerlink" href="#17148-connectstring-数据源连接字符串" title="Permanent link">&para;</a></h2>
+<p><strong>connectString (Data Source Connection String)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">中文</label><label for="__tabbed_9_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="17149-datasource-数据源文件路径">17.14.9 dataSource (数据源文件路径)<a class="headerlink" href="#17149-datasource-数据源文件路径" title="Permanent link">&para;</a></h2>
+<p><strong>dataSource (Data Source File Path)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">中文</label><label for="__tabbed_10_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171410-datatype-数据源类型">17.14.10 dataType (数据源类型)<a class="headerlink" href="#171410-datatype-数据源类型" title="Permanent link">&para;</a></h2>
+<p><strong>dataType (Data Source Type)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">中文</label><label for="__tabbed_11_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171411-destination-合并文档目标">17.14.11 destination (合并文档目标)<a class="headerlink" href="#171411-destination-合并文档目标" title="Permanent link">&para;</a></h2>
+<p><strong>destination (Merged Document Destination)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:2"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">中文</label><label for="__tabbed_12_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171412-donotsuppressblanklines-从合并文档中删除空行">17.14.12 doNotSuppressBlankLines (从合并文档中删除空行)<a class="headerlink" href="#171412-donotsuppressblanklines-从合并文档中删除空行" title="Permanent link">&para;</a></h2>
+<p><strong>doNotSuppressBlankLines (Remove Blank Lines from Merged Documents)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><input id="__tabbed_13_2" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">中文</label><label for="__tabbed_13_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171413-dynamicaddress-使用基于国家地区的地址字段排序">17.14.13 dynamicAddress (使用基于国家/地区的地址字段排序)<a class="headerlink" href="#171413-dynamicaddress-使用基于国家地区的地址字段排序" title="Permanent link">&para;</a></h2>
+<p><strong>dynamicAddress (Use Country-Based Address Field Ordering)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><input id="__tabbed_14_2" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">中文</label><label for="__tabbed_14_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171414-fhdr-数据源的第一行包含列名称">17.14.14 fHdr (数据源的第一行包含列名称)<a class="headerlink" href="#171414-fhdr-数据源的第一行包含列名称" title="Permanent link">&para;</a></h2>
+<p><strong>fHdr (First Row of Data Source Contains Column Names)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><input id="__tabbed_15_2" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">中文</label><label for="__tabbed_15_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171415-fieldmapdata-用于合并字段映射的外部数据源">17.14.15 fieldMapData (用于合并字段映射的外部数据源)<a class="headerlink" href="#171415-fieldmapdata-用于合并字段映射的外部数据源" title="Permanent link">&para;</a></h2>
+<p><strong>fieldMapData (External Data Source to Merge Field Mapping)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><input id="__tabbed_16_2" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">中文</label><label for="__tabbed_16_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171416-headersource-标头定义文件路径">17.14.16 headerSource (标头定义文件路径)<a class="headerlink" href="#171416-headersource-标头定义文件路径" title="Permanent link">&para;</a></h2>
+<p><strong>headerSource (Header Definition File Path)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><input id="__tabbed_17_2" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">中文</label><label for="__tabbed_17_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171417-lid-合并字段名称语言-id">17.14.17 lid (合并字段名称语言 ID)<a class="headerlink" href="#171417-lid-合并字段名称语言-id" title="Permanent link">&para;</a></h2>
+<p><strong>lid (Merge Field Name Language ID)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><input id="__tabbed_18_2" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">中文</label><label for="__tabbed_18_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171418-linktoquery-查询包含外部查询文件的链接">17.14.18 linkToQuery (查询包含外部查询文件的链接)<a class="headerlink" href="#171418-linktoquery-查询包含外部查询文件的链接" title="Permanent link">&para;</a></h2>
+<p><strong>linkToQuery (Query Contains Link to External Query File)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><input id="__tabbed_19_2" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">中文</label><label for="__tabbed_19_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171419-mailasattachment-合并文档至电子邮件附件">17.14.19 mailAsAttachment (合并文档至电子邮件附件)<a class="headerlink" href="#171419-mailasattachment-合并文档至电子邮件附件" title="Permanent link">&para;</a></h2>
+<p><strong>mailAsAttachment (Merged Document To E-Mail Attachment)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><input id="__tabbed_20_2" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">中文</label><label for="__tabbed_20_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171420-mailmerge-邮件合并设置">17.14.20 mailMerge (邮件合并设置)<a class="headerlink" href="#171420-mailmerge-邮件合并设置" title="Permanent link">&para;</a></h2>
+<p><strong>mailMerge (Mail Merge Settings)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="21:2"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><input id="__tabbed_21_2" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">中文</label><label for="__tabbed_21_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171421-mailsubject-合并电子邮件或传真主题行">17.14.21 mailSubject (合并电子邮件或传真主题行)<a class="headerlink" href="#171421-mailsubject-合并电子邮件或传真主题行" title="Permanent link">&para;</a></h2>
+<p><strong>mailSubject (Merged E-mail or Fax Subject Line)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="22:2"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><input id="__tabbed_22_2" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">中文</label><label for="__tabbed_22_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171422-maindocumenttype-源文档类型">17.14.22 mainDocumentType (源文档类型)<a class="headerlink" href="#171422-maindocumenttype-源文档类型" title="Permanent link">&para;</a></h2>
+<p><strong>mainDocumentType (Source Document Type)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:2"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><input id="__tabbed_23_2" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">中文</label><label for="__tabbed_23_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171423-mappedname-预定义合并字段名称">17.14.23 mappedName (预定义合并字段名称)<a class="headerlink" href="#171423-mappedname-预定义合并字段名称" title="Permanent link">&para;</a></h2>
+<p><strong>mappedName (Predefined Merge Field Name)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="24:2"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><input id="__tabbed_24_2" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">中文</label><label for="__tabbed_24_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171424-name-列的数据源名称">17.14.24 name (列的数据源名称)<a class="headerlink" href="#171424-name-列的数据源名称" title="Permanent link">&para;</a></h2>
+<p><strong>name (Data Source Name for Column)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="25:2"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><input id="__tabbed_25_2" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">中文</label><label for="__tabbed_25_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171425-odso-office-数据源对象设置">17.14.25 odso (Office 数据源对象设置)<a class="headerlink" href="#171425-odso-office-数据源对象设置" title="Permanent link">&para;</a></h2>
+<p><strong>odso (Office Data Source Object Settings)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="26:2"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><input id="__tabbed_26_2" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">中文</label><label for="__tabbed_26_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171426-query-查询要合并的数据源记录">17.14.26 query (查询要合并的数据源记录)<a class="headerlink" href="#171426-query-查询要合并的数据源记录" title="Permanent link">&para;</a></h2>
+<p><strong>query (Query For Data Source Records To Merge)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="27:2"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><input id="__tabbed_27_2" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">中文</label><label for="__tabbed_27_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171427-recipientdata-关于单个数据源记录的数据">17.14.27 recipientData (关于单个数据源记录的数据)<a class="headerlink" href="#171427-recipientdata-关于单个数据源记录的数据" title="Permanent link">&para;</a></h2>
+<p><strong>recipientData (Data About Single Data Source Record)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:2"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><input id="__tabbed_28_2" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">中文</label><label for="__tabbed_28_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171428-recipientdata-参考数据源的包含排除数据">17.14.28 recipientData (参考数据源的包含/排除数据)<a class="headerlink" href="#171428-recipientdata-参考数据源的包含排除数据" title="Permanent link">&para;</a></h2>
+<p><strong>recipientData (Reference to Inclusion/Exclusion Data for Data Source)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:2"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><input id="__tabbed_29_2" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">中文</label><label for="__tabbed_29_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171429-recipients-数据源的包含排除数据">17.14.29 recipients (数据源的包含/排除数据)<a class="headerlink" href="#171429-recipients-数据源的包含排除数据" title="Permanent link">&para;</a></h2>
+<p><strong>recipients (Inclusion/Exclusion Data for Data Source)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="30:2"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><input id="__tabbed_30_2" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">中文</label><label for="__tabbed_30_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171430-src-odso-数据源文件路径">17.14.30 src (ODSO 数据源文件路径)<a class="headerlink" href="#171430-src-odso-数据源文件路径" title="Permanent link">&para;</a></h2>
+<p><strong>src (ODSO Data Source File Path)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="31:2"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><input id="__tabbed_31_2" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">中文</label><label for="__tabbed_31_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171431-table-数据源表名称">17.14.31 table (数据源表名称)<a class="headerlink" href="#171431-table-数据源表名称" title="Permanent link">&para;</a></h2>
+<p><strong>table (Data Source Table Name)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:2"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><input id="__tabbed_32_2" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">中文</label><label for="__tabbed_32_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171432-type-odso-数据源类型">17.14.32 type (ODSO 数据源类型)<a class="headerlink" href="#171432-type-odso-数据源类型" title="Permanent link">&para;</a></h2>
+<p><strong>type (ODSO Data Source Type)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:2"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><input id="__tabbed_33_2" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">中文</label><label for="__tabbed_33_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171433-type-合并字段映射">17.14.33 type (合并字段映射)<a class="headerlink" href="#171433-type-合并字段映射" title="Permanent link">&para;</a></h2>
+<p><strong>type (Merge Field Mapping)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="34:2"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><input id="__tabbed_34_2" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">中文</label><label for="__tabbed_34_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171434-udl-udl-连接字符串">17.14.34 udl (UDL 连接字符串)<a class="headerlink" href="#171434-udl-udl-连接字符串" title="Permanent link">&para;</a></h2>
+<p><strong>udl (UDL Connection String)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:2"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><input id="__tabbed_35_2" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">中文</label><label for="__tabbed_35_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171435-uniquetag-记录的唯一值">17.14.35 uniqueTag (记录的唯一值)<a class="headerlink" href="#171435-uniquetag-记录的唯一值" title="Permanent link">&para;</a></h2>
+<p><strong>uniqueTag (Unique Value for Record)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="36:2"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><input id="__tabbed_36_2" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">中文</label><label for="__tabbed_36_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="171436-viewmergeddata-查看文档中的合并数据">17.14.36 viewMergedData (查看文档中的合并数据)<a class="headerlink" href="#171436-viewmergeddata-查看文档中的合并数据" title="Permanent link">&para;</a></h2>
+<p><strong>viewMergedData (View Merged Data Within Document)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="37:2"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><input id="__tabbed_37_2" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">中文</label><label for="__tabbed_37_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

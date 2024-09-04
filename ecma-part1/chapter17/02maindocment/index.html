@@ -1,0 +1,3354 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="hellowac">
+      
+      
+      
+      
+        <link rel="prev" href="../01toc/">
+      
+      
+        <link rel="next" href="../03paragraphs/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>17.2 主文档故事 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#172-主文档故事" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17.2 主文档故事
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            17. WordprocessingML 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    17.2 主文档故事
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    17.2 主文档故事
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1721-background-文档背景" class="md-nav__link">
+    17.2.1 background (文档背景)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1722-body-文档正文" class="md-nav__link">
+    17.2.2 body (文档正文)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1723-document-文档" class="md-nav__link">
+    17.2.3 document (文档)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03paragraphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.3 段落和富文本格式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04tabls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.4 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05custom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.5 自定义标记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06sections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.6 节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.7 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.8 字体
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09numbering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.9 编号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10headeres/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.10 标题和页脚
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11footnotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.11 脚注和尾注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.12 术语表文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13annotations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.13 注解/批注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14mailmerge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.14 邮件合并
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.15 设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.16 字段和超链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17miscellaneous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.17 杂项主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18simpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.18 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1721-background-文档背景" class="md-nav__link">
+    17.2.1 background (文档背景)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1722-body-文档正文" class="md-nav__link">
+    17.2.2 body (文档正文)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1723-document-文档" class="md-nav__link">
+    17.2.3 document (文档)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="172-主文档故事">17.2 主文档故事<a class="headerlink" href="#172-主文档故事" title="Permanent link">&para;</a></h1>
+<p><strong>Main Document Story</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>根据<a href="../../chapter-4/">第4节</a>的定义，WordprocessingML文档包含了类别为Wordprocessing的Office Open XML文档的标记。从语法上讲，该文档由两种信息的编译组成，这些信息被组合在一起以创建此版本：</p>
+<ul>
+<li>属性(Properties)[示例：样式、编号定义等]</li>
+<li>故事(Stories)[示例：主文档、注释、页眉等]</li>
+</ul>
+<p>在WordprocessingML中，故事(stories)是一个或多个由<code>p</code>元素(<a href="../03paragraphs/#173122-p-段落">§17.3.1.22</a>)的父元素定义的唯一容器。故事(stories)包含文档的内容。文档的属性应用于每个故事(stories)的内容以创建该版本。大部分WordprocessingML文档的内容位于主文档故事(story)中，该故事(story)存储在主文档部件的body元素内（<a href="../../chapter-11/#11310-主文档部件">§11.3.10</a>）。</p>
+<p>[示例：考虑一个只有一个段落的主文档故事的文档。该文档在其主文档部件中需要以下WordprocessingML：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>段落位于body元素内部，使其成为主文档故事的一部分。结束示例]</p>
+</div>
+<div class="tabbed-block">
+<p>As defined in §4, a WordprocessingML document contains the markup for a rendition of an Office Open XML document of category Wordprocessing. Syntactically, the document consists of a compilation of two kinds of information, which are combined to create this rendition:</p>
+<ul>
+<li>Properties [Example: styles, numbering definitions, etc. end example]</li>
+<li>Stories [Example: main document, comments, headers, etc. end example]</li>
+</ul>
+<p>In WordprocessingML, stories are unique containers for one or more paragraphs, as defined by the parent elements of the p element (<a href="../03paragraphs/#173122-p-段落">§17.3.1.22</a>). Stories contain the document's content. The properties of the document are applied to the contents of each story to create the rendition. Most of the content in a WordprocessingML document is located in the main document story, which is stored inside the body element within the Main Document part (<a href="../../chapter-11/#11310-主文档部件">§11.3.10</a>).</p>
+<p>[Example: Consider a document with a single paragraph in the main document story. This document would require the following WordprocessingML in its main document part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>The fact that the paragraph is inside the body element makes it part of the main document story. end example]</p>
+</div>
+</div>
+</div>
+<h2 id="1721-background-文档背景">17.2.1 background (文档背景)<a class="headerlink" href="#1721-background-文档背景" title="Permanent link">&para;</a></h2>
+<p><strong>background (Document Background)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定包含背景元素的文档的每个页面的背景。文档的背景是整个页面表面的图像或填充，位于所有其他文档内容之后。</p>
+<p>背景元素的绘图(drawing)<a href="../03paragraphs/#17339-drawing-drawingml对象">§17.3.3.9</a>子元素允许将任何DrawingML效果应用于文档的背景。</p>
+<p>然而，对于纯色填充背景，此元素上的属性允许使用任何RGB或主题颜色值（后者是对文档主题部分的引用）。</p>
+<p>[示例：考虑一个使用从黑色到accent3主题颜色之间的渐变填充背景的文档，如下所示：</p>
+<p><a class="glightbox" href="../imgs/Image7260.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image7260.jpg" /></a></p>
+<p>此背景需要以下WordprocessingML标记：</p>
+<p><w:background w:themeColor="accent3">
+    <w:drawing>
+        <wp:inline … >
+            <a:graphic>
+                <a:graphicData … >
+                    …
+                </a:graphicData>
+            </a:graphic>
+        </wp:inline>
+    </w:drawing>
+</w:background></p>
+<p>生成的背景由来自themeColor属性的accent3主题颜色的单色填充组成，位于gradientCenter填充下方。示例结束]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>color</strong>（背景颜色）</dt>
+<dd>
+<p>指定文档背景的颜色。</p>
+<p>该值可以定义为以下两种形式之一：</p>
+<ul>
+<li>使用RGB颜色模型的颜色值，其红、绿和蓝值以0到255的数字编写，以十六进制编码并连接在一起。【示例：全强度红色将是255红、0绿、0蓝，编码为FF、00、00，并连接为FF0000。示例结束】。RGB颜色在sRGB颜色空间中指定。</li>
+<li>auto，以便允许使用者自动确定背景颜色，以使文档的文本可读。【示例：具有白色文本和自动背景颜色的文档可能会使用黑色背景，以确保内容的可读性。示例结束】</li>
+</ul>
+<p>如果背景通过themeColor属性指定使用主题颜色，则忽略此值。【注意：应用程序不建议在同一父元素上同时指定color和themeColor属性。注释结束】</p>
+<p>如果既没有color属性也没有themeColor属性，则将处理父页面，就好像没有定义背景一样。</p>
+<p>【示例：考虑以下值为2C34FF的背景颜色：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:color=</span><span style="color: #BA2121">&quot;2C34FF&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>因此，背景颜色是具有RGB值44、52、255（上述十六进制值的十进制解码）的颜色。示例结束】</p>
+<p>此属性的可能值由ST_HexColor简单类型（<a href="../17miscellaneous/#171838-st_hexcolor-色值">§17.18.38</a>）定义。</p>
+</dd>
+<dt><strong>themeColor</strong>（背景主题颜色）</dt>
+<dd>
+<p>指定用于生成背景颜色的基本主题颜色。背景颜色是与themeColor关联的RGB值，进一步通过themeTint或themeShade（如果存在）进行转换，否则背景颜色就是与themeColor关联的RGB值。</p>
+<p>指定的主题颜色是对文档主题部分（<a href="../../chapter-14/#1427-主题部件">§14.2.7</a>和<a href="../../chapter20/main/shared_style_sheet/#20169-theme-主题">§20.1.6.9</a>）中预定义的主题颜色之一的引用，这允许在文档中集中设置颜色信息。</p>
+<p>如果指定了颜色属性，则将忽略其值，而使用该属性与任何适当的themeTint和themeShade属性值计算所产生的颜色。</p>
+<p>为了确定要显示的颜色，执行以下操作：</p>
+<ul>
+<li>使用ST_ThemeColor简单类型（<a href="../17miscellaneous/#171897-st_themecolor-主题颜色">§17.18.97</a>）中指定的映射，读取clrSchemeMapping元素（<a href="../15settings/#1715120-clrschememapping-主题颜色映射">§17.15.1.20</a>）上的适当属性。</li>
+<li>使用该值和ST_ColorSchemeIndex简单类型（<a href="../17miscellaneous/#1718103-st_wmlcolorschemeindex-主题颜色参考">§17.18.103</a>）中指定的映射，读取文档主题部分中的适当元素，以获取基本主题颜色。</li>
+<li>根据themeTint或themeShade属性的存在修改指定的颜色。</li>
+</ul>
+<p>[示例：考虑配置为使用accent5主题颜色的背景，导致以下WordprocessingML标记：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeColor=</span><span style="color: #BA2121">&quot;accent5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>如果设置部分包含以下标记：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:clrSchemeMapping</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>和主题部分包含以下XML标记：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:accent5&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;BCBCBC&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:accent5&gt;</span>
+</code></pre></div>
+<p>则生成的背景颜色将为BCBCBC。结束示例]</p>
+<p>此属性的可能值由ST_ThemeColor简单类型（<a href="../17miscellaneous/#171897-st_themecolor-主题颜色">§17.18.97</a>）定义。</p>
+</dd>
+<dt><strong>themeShade</strong>（背景主题颜色阴影）</dt>
+<dd>
+<p>指定应用于此背景的提供的主题颜色（如果有）的阴影值。如果未指定themeColor属性，则不应指定此属性。</p>
+<p>如果提供了themeShade，则将其应用于主题颜色（来自主题部分）的RGB值，以确定应用于此背景的最终颜色。</p>
+<p>如果提供了themeTint，则应忽略此属性的值。</p>
+<p>themeShade值存储为应用于当前背景的阴影值的十六进制编码（从0到255）。</p>
+<p>[示例：考虑在文档中应用了60％的阴影到背景上。该阴影计算如下：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝑆𝑥𝑚𝑙 = 0.6 ∗ 255
+    = 153
+    = 99(十六进制)
+</code></pre></div>
+<p>文件格式中生成的themeShade值将为99。结束示例]</p>
+<p>给定一个以RRGGBB格式定义的RGB颜色，阴影应用如下：</p>
+<ul>
+<li>将颜色转换为HSL颜色格式（值从0到1）</li>
+<li>
+<p>根据以下方式修改亮度因子：</p>
+<p>L′ = L ∗ Shade<sub>percentage</sub></p>
+</li>
+<li>
+<p>将结果HSL颜色转换为RGB</p>
+</li>
+</ul>
+<p>[示例：考虑一个使用accent2主题颜色的背景的文档，其RGB值（以RRGGBB十六进制格式）为C0504D。</p>
+<p>等效的HSL颜色值为（1/360，0.48，0.53）。</p>
+<p>将阴影百分比设为75％应用于亮度后，我们得到：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝐿′  = 0.53 ∗ 0.75
+    = 0.39698
+</code></pre></div>
+<p>将结果HSL颜色值（360，0.48，0.39698）转换回RGB，我们得到943634。</p>
+<p>这个转换后的值可以在结果背景的颜色属性中看到：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:color=</span><span style="color: #BA2121">&quot;943634&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeColor=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeShade=</span><span style="color: #BA2121">&quot;BF&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>结束示例]</p>
+<p>此属性的可能值由ST_UcharHexNumber简单类型（<a href="../17miscellaneous/#171898-st_ucharhexnumber-两位十六进制值">§17.18.98</a>）定义。</p>
+</dd>
+<dt><strong>themeTint</strong>（背景主题颜色色调）</dt>
+<dd>
+<p>指定应用于此背景的提供的主题颜色（如果有）的色调值。如果未指定themeColor属性，则不应指定此属性。</p>
+<p>如果提供了themeTint，则将其应用于主题颜色（来自主题部分）的RGB值，以确定应用于文档背景的最终颜色。</p>
+<p>themeTint值存储为应用于当前背景的色调值的十六进制编码（从0到255）。</p>
+<p>[示例：考虑在文档中应用了60％的色调到背景上。该色调计算如下：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝑇𝑥𝑚𝑙 = 0.4 ∗ 255
+    = 102
+    = 66(十六进制)
+</code></pre></div>
+<p>文件格式中生成的themeTint值将为66。结束示例]</p>
+<p>给定一个以RRGGBB格式定义的RGB颜色，色调应用如下：</p>
+<ul>
+<li>将颜色转换为HSL颜色格式（值从0到1）</li>
+<li>
+<p>根据以下方式修改亮度因子：</p>
+<p>L′ = L ∗ Tint<sub>pct</sub> + (1 − Tint<sub>pct</sub> )</p>
+</li>
+<li>
+<p>将结果HSL颜色转换为RGB</p>
+</li>
+</ul>
+<p>[示例：考虑一个使用accent2主题颜色的背景的文档，其RGB值（以RRGGBB十六进制格式）为4F81BD。</p>
+<p>等效的HSL颜色值为（213/360，0.45，0.53）。</p>
+<p>将色调百分比设为60％应用于亮度后，我们得到：</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝐿′ = 0.53 ∗ 0.6 + (1 − .6)
+    = 0.71
+</code></pre></div>
+<p>将结果HSL颜色值（213/360，0.45，0.71）转换回RGB，我们得到95B3D7。</p>
+<p>这个转换后的值可以在结果背景的颜色属性中看到：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:color=</span><span style="color: #BA2121">&quot;95B3D7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeColor=</span><span style="color: #BA2121">&quot;accent2&quot;</span>
+<span style="color: #687822">w:themeTint=</span><span style="color: #BA2121">&quot;99&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>结束示例]</p>
+<p>此属性的可能值由ST_UcharHexNumber简单类型（<a href="../17miscellaneous/#171898-st_ucharhexnumber-两位十六进制值">§17.18.98</a>）定义。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Background) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies the background for every page of the document containing the background element. A document's background is the image or fill for the entire page surface, behind all other document content.</p>
+<p>The drawing §17.3.3.9 child elements of the background element allows any DrawingML effect to be applied to the document's background.</p>
+<p>For solid color fill backgrounds, however, the attributes on this element allow the use of any RGB or theme color value (the latter a reference to the document's themes part).</p>
+<p>[Example: Consider a document which utilizes a gradient fill background moving between black and the accent3 theme color, as follows:</p>
+<p><a class="glightbox" href="../imgs/Image7260.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image7260.jpg" /></a></p>
+<p>This background would require the following WordprocessingML markup:</p>
+<p><w:background w:themeColor="accent3">
+    <w:drawing>
+        <wp:inline … >
+            <a:graphic>
+                <a:graphicData … >
+                    …
+                </a:graphicData>
+            </a:graphic>
+        </wp:inline>
+    </w:drawing>
+</w:background></p>
+<p>The resulting background consists of a single color fill of the accent3 theme color from the themeColor attribute, layered under a gradientCenter fill. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>color</strong> (Background Color)</dt>
+<dd>
+<p>Specifies the color for the background of the document.</p>
+<p>This value can be defined as either:</p>
+<ul>
+<li>A color value using the RGB color model whose red, green, and blue values are written as numbers in the range 0 to 255, hex encoded, and concatenated. [Example: Full intensity red would be 255 red, 0 green, 0 blue, encoded to FF, 00, 00, and concatenated to FF0000. end example]. RGB colors are specified in the sRGB color space.</li>
+<li>auto to allow a consumer to automatically determine the background color in order to make the document's text readable. [Example: A document with white text and a background color of auto might result in the use of a black background, in order to ensure legibility of the content. end example]</li>
+</ul>
+<p>If the background specifies the use of a theme color via the themeColor attribute, this value is ignored. [Note: Applications are discouraged from specifying both the color and themeColor attributes on the same parent element. end note]</p>
+<p>If neither the color nor themeColor attributes are present, the parent page shall be treated as though it has no background defined.</p>
+<p>[Example: Consider a background color with value 2C34FF, as follows:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:color=</span><span style="color: #BA2121">&quot;2C34FF&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>The background color is therefore the color with RGB value 44,52,255 (the decimal decoding of the hex value above). end example]</p>
+<p>The possible values for this attribute are defined by the ST_HexColor simple type (<a href="../17miscellaneous/#171838-st_hexcolor-色值">§17.18.38</a>).</p>
+</dd>
+<dt><strong>themeColor</strong> (Background Theme Color)</dt>
+<dd>
+<p>Specifies the base theme color used to generate the background color. The background color is the RGB value associated with themeColor as further transformed by themeTint or themeShade (if one is present), else the background color is the RGB value associated with themeColor.</p>
+<p>The specified theme color is a reference to one of the predefined theme colors, located in the document's Theme part (<a href="../../chapter-14/#1427-主题部件">§14.2.7</a> and <a href="../../chapter20/main/shared_style_sheet/#20169-theme-主题">§20.1.6.9</a>), which allows color information to be set centrally in the document.</p>
+<p>If the color attribute is specified, its value shall be ignored in favor of the color resulting from the use of this attribute with any appropriate themeTint and themeShade attribute value calculations applied.</p>
+<p>To determine the color to display, the following actions are performed:</p>
+<ul>
+<li>Using the mapping specified in the ST_ThemeColor simple type (<a href="../17miscellaneous/#171897-st_themecolor-主题颜色">§17.18.97</a>), the appropriate attribute on the clrSchemeMapping element (<a href="../15settings/#1715120-clrschememapping-主题颜色映射">§17.15.1.20</a>) is read.</li>
+<li>Using that value and the mapping specified in the ST_ColorSchemeIndex simple type (<a href="../17miscellaneous/#1718103-st_wmlcolorschemeindex-主题颜色参考">§17.18.103</a>), the appropriate element in the document’s Theme part is read to get the base theme color.</li>
+<li>The specified color is modified based on the presence of the themeTint or themeShade attribute.</li>
+</ul>
+<p>[Example: Consider a background configured to use the accent5 theme color, resulting in the following WordprocessingML markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeColor=</span><span style="color: #BA2121">&quot;accent5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>If the Settings part contained the following markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:clrSchemeMapping</span><span style="color: #bbbbbb"> </span><span style="border: 1px solid #FF0000">…</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:accent5=</span><span style="color: #BA2121">&quot;accent5&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>and the Theme part contained the following XML markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;a:accent5&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;a:srgbClr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">val=</span><span style="color: #BA2121">&quot;BCBCBC&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/a:accent5&gt;</span>
+</code></pre></div>
+<p>the resulting background color would be BCBCBC. end example]</p>
+<p>The possible values for this attribute are defined by the ST_ThemeColor simple type (§17.18.97).</p>
+</dd>
+<dt><strong>themeShade</strong> (Background Theme Color Shade)</dt>
+<dd>
+<p>Specifies the shade value applied to the supplied theme color (if any) for this background. If the themeColor attribute is not specified, this attribute shall not be specified.</p>
+<p>If the themeShade is supplied, then it is applied to the RGB value of the theme color (from the theme part) to determine the final color applied to this background.</p>
+<p>If the themeTint is supplied, the value of this attribute shall be ignored.</p>
+<p>The themeShade value is stored as a hex encoding of the shade value (from 0–255) applied to the current background.</p>
+<p>[Example: Consider a shade of 60% applied to a background in a document. This shade is calculated as follows:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝑆𝑥𝑚𝑙 = 0.6 ∗ 255
+    = 153
+    = 99(ℎ𝑒𝑥)
+</code></pre></div>
+<p>The resulting themeShade value in the file format would be 99. end example]</p>
+<p>Given an RGB color defined as three hex values in RRGGBB format, the shade is applied as follows:</p>
+<ul>
+<li>Convert the color to the HSL color format (values from 0 to 1)</li>
+<li>
+<p>Modify the luminance factor as follows:</p>
+<p>L′ = L ∗ Shade<sub>percentage</sub></p>
+</li>
+<li>
+<p>Convert the resultant HSL color to RGB</p>
+</li>
+</ul>
+<p>[Example: Consider a document with a background using the accent2 theme color, whose RGB value (in RRGGBB hex format) is C0504D.</p>
+<p>The equivalent HSL color value would be (1/360, 0.48, 0.53).</p>
+<p>Applying the shade formula with a shade percentage of 75% to the luminance, we get:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝐿′  = 0.53 ∗ 0.75
+    = 0.39698
+</code></pre></div>
+<p>Taking the resulting HSL color value of (360 , 0.48,0.39698)and converting back to RGB, we get 943634.</p>
+<p>This transformed value can be seen in the resulting background's color attribute:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:color=</span><span style="color: #BA2121">&quot;943634&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeColor=</span><span style="color: #BA2121">&quot;accent2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeShade=</span><span style="color: #BA2121">&quot;BF&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the ST_UcharHexNumber simple type (<a href="../17miscellaneous/#171898-st_ucharhexnumber-两位十六进制值">§17.18.98</a>).</p>
+</dd>
+<dt><strong>themeTint</strong> (Background Theme Color Tint)</dt>
+<dd>
+<p>Specifies the tint value applied to the supplied theme color (if any) for this background. If the themeColor attribute is not specified, this attribute shall not be specified.</p>
+<p>If the themeTint is supplied, then it is applied to the RGB value of the theme color (from the theme part) to determine the final color applied to the document's background.</p>
+<p>The themeTint value is stored as a hex encoding of the tint value (from 0–255) applied to the current background.</p>
+<p>[Example: Consider a tint of 60% applied to a background in a document. This tint is calculated as follows:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝑇𝑥𝑚𝑙 = 0.4 ∗ 255
+    = 102
+    = 66(ℎ𝑒𝑥)
+</code></pre></div>
+<p>The resulting themeTint value in the file format would be 66. end example]</p>
+<p>Given an RGB color defined as three hex values in RRGGBB format, the shade is applied as follows:</p>
+<ul>
+<li>Convert the color to the HSL color format (values from 0 to 1)</li>
+<li>
+<p>Modify the luminance factor as follows:</p>
+<p>L′ = L ∗ Tint<sub>pct</sub> + (1 − Tint<sub>pct</sub> )</p>
+</li>
+<li>
+<p>Convert the resultant HSL color to RGB</p>
+</li>
+</ul>
+<p>[Example: Consider a document with a background using the accent2 theme color, whose RGB value (in RRGGBB hex format) is 4F81BD.</p>
+<p>The equivalent HSL color value would be (213/360 , 0.45,0.53).</p>
+<p>Applying the tint formula with a tint percentage of 60% to the luminance, we get:</p>
+<div class="language-text highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>𝐿′ = 0.53 ∗ 0.6 + (1 − .6)
+   = 0.71
+</code></pre></div>
+<p>Taking the resulting HSL color value of (213/360 , 0.45,0.71)and converting back to RGB, we get 95B3D7.</p>
+<p>This transformed value can be seen in the resulting background's color attribute:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:background</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:color=</span><span style="color: #BA2121">&quot;95B3D7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:themeColor=</span><span style="color: #BA2121">&quot;accent2&quot;</span>
+<span style="color: #687822">w:themeTint=</span><span style="color: #BA2121">&quot;99&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>The possible values for this attribute are defined by the ST_UcharHexNumber simple type (§17.18.98).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Background) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="1722-body-文档正文">17.2.2 body (文档正文)<a class="headerlink" href="#1722-body-文档正文" title="Permanent link">&para;</a></h2>
+<p><strong>body (Document Body)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定文档主体的内容 - 即主文档编辑表面。</p>
+<p>文档主体包含所谓的块级标记 - 可以作为WordprocessingML文档中段落的同级元素存在的标记。</p>
+<p>[示例：考虑一个主文档故事中只有一个段落的文档。该文档在其主文档部件中需要以下WordprocessingML：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>段落在body元素内部使其成为主文档故事的一部分。结束示例]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Body) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies the contents of the body of the document - the main document editing surface.</p>
+<p>The document body contains what is referred to as block-level markup - markup which can exist as a sibling element to paragraphs in a WordprocessingML document.</p>
+<p>[Example: Consider a document with a single paragraph in the main document story. This document would require the following WordprocessingML in its main document part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>The fact that the paragraph is inside the body element makes it part of the main document story. end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Body) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="1723-document-文档">17.2.3 document (文档)<a class="headerlink" href="#1723-document-文档" title="Permanent link">&para;</a></h2>
+<p><strong>document (Document)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定WordprocessingML文档中主文档部分的内容。</p>
+<p>[示例：考虑一个基本WordprocessingML文档中主文档部分的基本结构如下：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>主文档部分的所有内容都包含在document元素下。结束示例]</p>
+<details class="abstract">
+<summary>属性</summary>
+<dl>
+<dt><strong>conformance</strong>（文档符合类别）</dt>
+<dd>
+<p>指定WordprocessingML文档符合的符合类别（<a href="../../chapter-2/#21-文档一致性">§2.1</a>）。</p>
+<p>如果省略此属性，则其默认值为transitional。</p>
+<p>[示例：考虑以下WordprocessingML主文档部分标记：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:conformance=</span><span style="color: #BA2121">&quot;strict&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>此文档具有strict的符合属性值，因此符合WML Strict符合类别。结束示例]</p>
+<p>此属性的可能值由ST_ConformanceClass简单类型（<a href="../../chapter22/sharedsimpletypes/#22922-st_conformanceclass-文档一致性等级值">§22.9.2.2</a>）定义。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Document) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies the contents of a main document part in a WordprocessingML document.</p>
+<p>[Example: Consider the basic structure of the main document part in a basic WordprocessingML document, as follows:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:body&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:p/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:body&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>All of the contents of the main document part are contained beneath the document element. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>conformance</strong> (Document Conformance Class)</dt>
+<dd>
+<p>Specifies the conformance class (<a href="../../chapter-2/#21-文档一致性">§2.1</a>) to which the WordprocessingML document conforms.</p>
+<p>If this attribute is omitted, its default value is transitional.</p>
+<p>[Example: Consider the following WordprocessingML Main Document part markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:document</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:conformance=</span><span style="color: #BA2121">&quot;strict&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;/w:document&gt;</span>
+</code></pre></div>
+<p>This document has a conformance attribute value of strict, therefore it conforms to the WML Strict conformance class. end example]</p>
+<p>The possible values for this attribute are defined by the ST_ConformanceClass simple type (§22.9.2.2).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_Document) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

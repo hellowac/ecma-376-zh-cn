@@ -907,16 +907,76 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../chapter-17/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter17/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     17. WordprocessingML 参考资料
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -4670,41 +4730,33 @@
 <p><a class="glightbox" href="../imgs/20dml-53.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/20dml-53.png" /></a></p>
 <p>此 DrawingML 渲染的输出形状如上所示。</p>
 </div>
-<p><table border=1>
-    <thead>
-        <tr>
-            <th><strong>Attributes</strong></th>
-            <th><strong>Description</strong></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                prst (预设形状)
-            </td>
-            <td>
-                指定用于该形状的预设几何体。 此预设可以具有 ST_ShapeType 枚举列表中的任何值。 为了渲染预设几何体，需要此属性.</br></br>
-                [Example: 考虑下面的示例 DrawingML.</br></br>
-                <code>&lt;p:sp&gt;</code></br>
-                <code>&lt;p:nvSpPr&gt;</code></br>
-                <code>&lt;p:cNvPr id="4" name="Sun 3" /&gt;</code></br>
-                <code>&lt;p:cNvSpPr /&gt;</code></br>
-                <code>&lt;p:nvPr /&gt;</code></br>
-                <code>&lt;/p:nvSpPr&gt;</code></br>
-                <code>&lt;p:spPr&gt;</code></br>
-                <code>&lt;a:xfrm&gt;</code></br>
-                <code>&lt;a:off x="1981200" y="533400" /&gt;</code></br>
-                <code>&lt;a:ext cx="1143000" cy="1066800" /&gt;</code></br>
-                <code>&lt;/a:xfrm&gt;</code></br>
-                <code>&lt;a:prstGeom prst="sun"&gt;&lt;/a:prstGeom&gt;</code></br>
-                <code>&lt;/p:spPr&gt;</code></br>
-                <code>&lt;/p:sp&gt;</code></br>
-                在上面的示例中，使用预设几何形状来定义形状。 这里使用的形状是太阳形状. end example]</br></br>
-                该属性的可能值由 ST_ShapeType 简单类型定义 (§20.1.10.56).
-            </td>
-        </tr>
-    </tbody>
-</table></p>
+<details class="abstract">
+<summary>Attributes</summary>
+<ul>
+<li>
+<p><strong>prst</strong> (预设形状)</p>
+<p>指定用于该形状的预设几何体。 此预设可以具有 ST_ShapeType 枚举列表中的任何值。 为了渲染预设几何体，需要此属性.</p>
+<p>[Example: 考虑下面的示例 DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">id=</span><span style="color: #BA2121">&quot;4&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;Sun 3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:cNvSpPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:nvPr</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:nvSpPr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:spPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:xfrm&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:off</span><span style="color: #bbbbbb"> </span><span style="color: #687822">x=</span><span style="color: #BA2121">&quot;1981200&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">y=</span><span style="color: #BA2121">&quot;533400&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;a:ext</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cx=</span><span style="color: #BA2121">&quot;1143000&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">cy=</span><span style="color: #BA2121">&quot;1066800&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:xfrm&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstGeom</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;sun&quot;</span><span style="color: #008000; font-weight: bold">&gt;&lt;/a:prstGeom&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:spPr&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，使用预设几何形状来定义形状。 这里使用的形状是太阳形状. end example]</p>
+<p>该属性的可能值由 ST_ShapeType 简单类型定义 ([§20.1.10.56]).</p>
+</li>
+</ul>
+</details>
 <p>[Note: 该元素内容模型 (CT_PresetGeometry2D) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
 </div>
 <div class="tabbed-block">
@@ -4815,42 +4867,34 @@
 </ol>
 <p>[Note: 水平百分比从 0.0 开始，从左到右一直到 1.0。 垂直百分比从 0.0 开始，一直到 1.0，从上到下. end note]</p>
 <p>[Note: 由于这是一个形状，因此它具有形状坐标系和路径坐标系. end note]</p>
-<p><table border=1>
-    <thead>
-        <tr>
-            <th><strong>Attributes</strong></th>
-            <th><strong>Description</strong></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                prst (预设变形形状)
-            </td>
-            <td>
-                指定用于文本片段形状扭曲的预设几何体。 此预设可以具有 ST_TextShapeType 枚举列表中的任何值。 为了渲染文本扭曲，需要此属性。</br></br>
-                [Example: 考虑下面的示例 DrawingML.</br></br>
-                <code>&lt;p:sp&gt;</code></br>
-                <code>&lt;p:txBody&gt;</code></br>
-                <code>&lt;p:bodyPr wrap="none" rtlCol="0"&gt;</code></br>
-                <code>&lt;a:prstTxWarp prst="textInflate"&gt;</code></br>
-                <code>&lt;/a:prstTxWarp&gt;</code>
-                <code>&lt;a:spAutoFit/&gt;</code></br>
-                <code>&lt;/p:bodyPr&gt;</code></br>
-                <code>&lt;p:lstStyle&gt;</code></br>
-                <code>&lt;a:p&gt;</code></br>
-                <code>…</code></br>
-                <code>&lt;a:t&gt;Sample Text&lt;/a:t&gt;</code></br>
-                <code>…</code></br>
-                <code>&lt;/a:p&gt;</code></br>
-                <code>&lt;/p:txBody&gt;</code></br>
-                <code>&lt;/p:sp&gt;</code></br>
-                在上面的示例中，使用预设文本形状几何形状来定义扭曲形状。 这里使用的形状是太阳形状. end example]</br></br>
-                该属性的可能值由 ST_TextShapeType 简单类型定义 (§20.1.10.76).
-            </td>
-        </tr>
-    </tbody>
-</table></p>
+<details class="abstract">
+<summary>Attributes</summary>
+<ul>
+<li>
+<p><strong>prst</strong> (预设变形形状)</p>
+<p>指定用于文本片段形状扭曲的预设几何体。 此预设可以具有 ST_TextShapeType 枚举列表中的任何值。 为了渲染文本扭曲，需要此属性。</p>
+<p>[Example: 考虑下面的示例 DrawingML.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;p:sp&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;p:txBody&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:bodyPr</span><span style="color: #bbbbbb"> </span><span style="color: #687822">wrap=</span><span style="color: #BA2121">&quot;none&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">rtlCol=</span><span style="color: #BA2121">&quot;0&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:prstTxWarp</span><span style="color: #bbbbbb"> </span><span style="color: #687822">prst=</span><span style="color: #BA2121">&quot;textInflate&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:prstTxWarp&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:spAutoFit/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/p:bodyPr&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;p:lstStyle&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:p&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;a:t&gt;</span>Sample<span style="color: #bbbbbb"> </span>Text<span style="color: #008000; font-weight: bold">&lt;/a:t&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/a:p&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/p:txBody&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/p:sp&gt;</span>
+</code></pre></div>
+<p>在上面的示例中，使用预设文本形状几何形状来定义扭曲形状。 这里使用的形状是太阳形状. end example]</p>
+<p>该属性的可能值由 ST_TextShapeType 简单类型定义 ([§20.1.10.76]).</p>
+</li>
+</ul>
+</details>
 <p>[Note: 该元素内容模型 (CT_PresetTextShape) 的 W3C XML 架构定义位于 §A.4.1. end note]</p>
 </div>
 <div class="tabbed-block">
@@ -5216,7 +5260,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
       
         <br>
         创建日期:

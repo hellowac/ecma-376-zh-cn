@@ -907,16 +907,76 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../chapter-17/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../chapter17/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     17. WordprocessingML 参考资料
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -3008,18 +3068,87 @@
 <h2 id="l4111-object-anchoring">L.4.11.1 Object Anchoring<a class="headerlink" href="#l4111-object-anchoring" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<p><strong>aaaa</strong></p>
+<p>当WordprocessingML绘图命名空间用于在文档中锚定一个DrawingML对象时，该对象可以通过以下两种方式之一进行锚定：</p>
+<ul>
+<li>与文本同行 - 对象在常规文本流中显示（修改行高等以适应它）。</li>
+<li>浮动 - 对象在文档中绝对或相对定位，并且根据需要修改文本流以围绕它。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>When the WordprocessingML Drawing namespace is used to anchor a DrawingML object within a document, that object can be anchored in one of two ways:</p>
+<ul>
+<li>In line with text - The object is displayed within the regular text stream (modifying line height and so on to accommodate it).</li>
+<li>Floating – The object is positioned absolutely or relatively within the document and text flow is modified as needed around it.</li>
+</ul>
 </div>
 </div>
 </div>
 <h2 id="l4112-text-wrapping">L.4.11.2 Text Wrapping<a class="headerlink" href="#l4112-text-wrapping" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<p><strong>aaaa</strong></p>
+<p>除了定位数据外，WordprocessingML绘图还需要指定文本如何围绕对象流动。WordprocessingML文档中可以应用于浮动对象的文本环绕有五种不同的类型：</p>
+<ul>
+<li>
+<p>文本前后 - 在这种文本环绕类型中，绘图对象被定位在文档上，文本不会在其周围移动。</p>
+<p><a class="glightbox" href="../imgs/Image31940.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31940.png" /></a></p>
+</li>
+<li>
+<p>正方形环绕 - 在这种文本环绕类型中，绘图对象被定位在文档上，并且文件格式中存储了一个矩形来确定环绕的范围。</p>
+<p><a class="glightbox" href="../imgs/Image31943.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31943.png" /></a></p>
+</li>
+<li>
+<p>紧密环绕 - 在这种文本环绕类型中，创建并存储了一个环绕多边形在WordprocessingML文档中，这个多边形决定了文本如何围绕绘图对象的左右两侧。</p>
+<ul>
+<li>通过环绕 - 在这种文本环绕类型中，就像紧密环绕一样创建了一个环绕多边形，但这种情况下，环绕多边形中的任何缩进都可以用文本填充。</li>
+</ul>
+<p>如果环绕多边形看起来像这样：</p>
+<p><a class="glightbox" href="../imgs/Image21498.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21498.jpg" /></a></p>
+<p>紧密环绕看起来像这样：</p>
+<p><a class="glightbox" href="../imgs/Image21502.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21502.jpg" /></a> <a class="glightbox" href="../imgs/Image21502.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21502.jpg" /></a></p>
+<p>而通过环绕看起来像这样：</p>
+<p><a class="glightbox" href="../imgs/Image21507.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21507.jpg" /></a>
+<a class="glightbox" href="../imgs/Image21507.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21507.jpg" /></a></p>
+<p>在后一种情况下，注意文本填充了环绕多边形内的“缩进”。</p>
+</li>
+<li>
+<p>上下环绕 - 在这种文本环绕类型中，文本不能围绕对象的任一侧流动，只能从文档的底部边缘重新开始。</p>
+<p><a class="glightbox" href="../imgs/Image31961.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31961.jpg" /></a></p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>Aside from positioning data, WordprocessingML Drawing also needs to specify how text flows around the object. There are five different types of text wrapping which can be applied to floating objects present in WordprocessingML documents:</p>
+<ul>
+<li>
+<p>In Front/Behind Text - In this type of text wrapping, the drawing object is positioned on the document and text is not displaced around it.</p>
+<p><a class="glightbox" href="../imgs/Image31940.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31940.png" /></a></p>
+</li>
+<li>
+<p>Square Wrapping - In this type of text wrapping, the drawing object is positioned on the document and a rectangle is stored within the file format to determine the wrapping extents.</p>
+<p><a class="glightbox" href="../imgs/Image31943.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31943.png" /></a></p>
+</li>
+<li>
+<p>Tight Wrapping - In this type of text wrapping, a wrapping polygon is created and stored in the WordprocessingML document, and this polygon determines how text wraps around the left and right sides of the drawing object.</p>
+<p><a class="glightbox" href="../imgs/Image31945.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31945.png" /></a></p>
+</li>
+<li>
+<p>Through Wrapping - In this type of text wrapping, a wrapping polygon is created just like with tight wrapping, but any indents in the wrap polygon can be filled with text in this case.</p>
+<p>If the wrapping polygon looks like the following:</p>
+<p><a class="glightbox" href="../imgs/Image21498.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21498.jpg" /></a></p>
+<p>Tight wrapping would look like this:</p>
+<p><a class="glightbox" href="../imgs/Image21502.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21502.jpg" /></a> <a class="glightbox" href="../imgs/Image21502.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21502.jpg" /></a></p>
+<p>While through wrapping would look like this:</p>
+<p><a class="glightbox" href="../imgs/Image21507.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21507.jpg" /></a>
+<a class="glightbox" href="../imgs/Image21507.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image21507.jpg" /></a></p>
+<p>In the latter case, notice that text fills in the 'indentation' within the wrapping polygon.</p>
+</li>
+<li>
+<p>Top and Bottom Wrapping - In this type of text wrapping, text cannot wrap around either side of the object, and must only restart below the bottom edge of the document.</p>
+<p><a class="glightbox" href="../imgs/Image31961.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image31961.jpg" /></a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -3029,7 +3158,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
       
         <br>
         创建日期:

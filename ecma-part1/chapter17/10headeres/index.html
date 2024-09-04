@@ -1,0 +1,3666 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="hellowac">
+      
+      
+      
+      
+        <link rel="prev" href="../09numbering/">
+      
+      
+        <link rel="next" href="../11footnotes/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.4">
+    
+    
+      
+        <title>17.10 标题和页脚 - ECMA-376标准中文版(部分)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.bd3936ea.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="blue">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1710-标题和页脚" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+你当前浏览的版本已不是最新版本，
+<a href="../../../..">
+    <strong>点击这里</strong>
+</a>查看最新版本的文档
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-header__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECMA-376标准中文版(部分)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              17.10 标题和页脚
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  概述
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Part1(2016)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part2-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part2(2016)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../ecma-part3-refrence/" class="md-tabs__link">
+        
+  
+    
+  
+  Part3(2015)
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/old/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../xsd/new/xmlSchema/pml/" class="md-tabs__link">
+          
+  
+    
+  
+  xsd(新版本)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../other/xsd-parse/" class="md-tabs__link">
+          
+  
+    
+  
+  其他资料
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ECMA-376标准中文版(部分)" class="md-nav__button md-logo" aria-label="ECMA-376标准中文版(部分)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ECMA-376标准中文版(部分)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/hellowac/ecma-376-zh-cn" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    hellowac
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    概述
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            概述
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Part1(2016)
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Part1(2016)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. 适用范围
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. 一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. 规范性参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. 术语和定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. 符号约定
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. 缩略语
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. 一般说明
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. 概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. 包
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. 标记兼容性和可扩展性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-11/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. WordprocessingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-12/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. SpreadsheetML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. PresentationML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-14/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. DrawingML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-15/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-16/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. 部件概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_18" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    17. WordprocessingML 参考资料
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_18" id="__nav_2_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_18_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_18">
+            <span class="md-nav__icon md-icon"></span>
+            17. WordprocessingML 参考资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01toc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.1 目录
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02maindocment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.2 主文档故事
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03paragraphs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.3 段落和富文本格式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04tabls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.4 表格
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05custom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.5 自定义标记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06sections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.6 节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07styles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.7 样式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08fonts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.8 字体
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09numbering/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.9 编号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    17.10 标题和页脚
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    17.10 标题和页脚
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#17101-evenandoddheaders-不同的偶数奇数页页眉和页脚" class="md-nav__link">
+    17.10.1 evenAndOddHeaders (不同的偶数/奇数页页眉和页脚)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17102-footerreference-页脚参考" class="md-nav__link">
+    17.10.2 footerReference (页脚参考)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17103-ftr-页脚" class="md-nav__link">
+    17.10.3 ftr (页脚)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17104-hdr-页眉" class="md-nav__link">
+    17.10.4 hdr (页眉)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17105-headerreference-页眉参考" class="md-nav__link">
+    17.10.5 headerReference (页眉参考)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17106-titlepg-第一页页眉和页脚的不同" class="md-nav__link">
+    17.10.6 titlePg (第一页页眉和页脚的不同)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11footnotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.11 脚注和尾注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.12 术语表文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13annotations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.13 注解/批注
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14mailmerge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.14 邮件合并
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.15 设置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16fields/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.16 字段和超链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17miscellaneous/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.17 杂项主题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18simpletypes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17.18 简单类型
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-18/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. SpareadsheetML 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter19/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    19. PresentationML 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter20/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    20. DrawingML - 框架参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter21/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    21. DrawingML - 组件参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapter22/math/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    22. Shared MLs 参考资料
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapter-23/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    23. Custom XML Schema 参考资料
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录A:Schemas - W3C XML Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-b/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录B:Schemas - RELAX NG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-c/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录C:附加语法约束
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-d/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录D:示例中的命名空间前缀映射
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-e/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录E:WordprocessingML 自定义 XML 数据提取
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-f/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录F:WordprocessingML 页面边框
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-g/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录G:预定义的 SpreadsheetML 样式定义
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-h/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录H:预定义 DrawingML 形状和文本几何形状示例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-i/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录I:双向支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-j/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录J:无障碍最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-k/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录K:根元素位置
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../annexL/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    附录L:入门读物
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../annex-m/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录M:ECMA-376:2016 和 ECMA-376:2006 之间的差异
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    参考文献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part2-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part2(2016)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ecma-part3-refrence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Part3(2015)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            xsd
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/old/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/old/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    xsd(新版本)
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            xsd(新版本)
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/pml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    pml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/sml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    sml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../xsd/new/xmlSchema/wml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    wml.xsd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/opc/opc-contentTypes/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    opc
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/dml-chart/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    dml
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../xsd/new/xmlSchema/shared-additionalCharacteristics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    shared
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    其他资料
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            其他资料
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../other/xsd-parse/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    解析XSD文件
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../lxml/lxml/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    lxml库
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../struct/theme/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    文档树形结构
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#17101-evenandoddheaders-不同的偶数奇数页页眉和页脚" class="md-nav__link">
+    17.10.1 evenAndOddHeaders (不同的偶数/奇数页页眉和页脚)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17102-footerreference-页脚参考" class="md-nav__link">
+    17.10.2 footerReference (页脚参考)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17103-ftr-页脚" class="md-nav__link">
+    17.10.3 ftr (页脚)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17104-hdr-页眉" class="md-nav__link">
+    17.10.4 hdr (页眉)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17105-headerreference-页眉参考" class="md-nav__link">
+    17.10.5 headerReference (页眉参考)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17106-titlepg-第一页页眉和页脚的不同" class="md-nav__link">
+    17.10.6 titlePg (第一页页眉和页脚的不同)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="1710-标题和页脚">17.10 标题和页脚<a class="headerlink" href="#1710-标题和页脚" title="Permanent link">&para;</a></h1>
+<p><strong>Headers and Footers</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>标题和页脚是指出现在WordprocessingML文档每页顶部或底部的文本、图形或数据（如页码、日期、文档标题等）。</p>
+<p>页眉出现在页面顶端边距（页面主要文档内容之上），而页脚出现在文档页面底端边距（页面主要文档内容之下）。</p>
+<p><a class="glightbox" href="../imgs/Image9518.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9518.png" /></a></p>
+<p>由于WordprocessingML是基于流的格式，通过指定文档特定部分的所有页面的页眉和页脚来应用页眉和页脚。</p>
+<p>在文档的每个部分中，可以有最多三种不同类型的页眉和页脚：</p>
+<ul>
+<li>第一页页眉/页脚</li>
+<li>奇数页页眉/页脚</li>
+<li>偶数页页眉/页脚</li>
+</ul>
+<p>第一页页眉和页脚指定了在该部分的第一页上出现的唯一页眉或页脚。奇数页页眉和页脚指定了在给定部分的所有奇数编号页面上出现的唯一页眉和页脚。偶数页页眉和页脚指定了在给定部分的所有偶数编号页面上出现的唯一页眉和页脚。</p>
+</div>
+<div class="tabbed-block">
+<p>Headers and footers refer to text, graphics or data (such as page number, date, document title, and so on) that can appear at the top or bottom of each page in a WordprocessingML document.</p>
+<p>A header appears in the top margin (above the main document content on the page), while a footer appears i the bottom margin of a document page (below the main document content on the page).</p>
+<p><a class="glightbox" href="../imgs/Image9518.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9518.png" /></a></p>
+<p>Since WordprocessingML is a flow-based format, headers and footers are applied by specifying the headers and footers for all pages in a particular section of a document.</p>
+<p>Within each section of a document there can be up to three different types of headers and footers:</p>
+<ul>
+<li>First page header/footer</li>
+<li>Odd page header/footer</li>
+<li>Even page header/footer</li>
+</ul>
+<p>First page headers and footers specify a unique header or footer which shall appear on the first page of a section. Odd page headers and footers specify a unique header and footer which shall appear on all odd numbered pages for a given section. Even page headers and footers specify a unique header and footer which shall appear on all even numbered pages in a given section.</p>
+</div>
+</div>
+</div>
+<h2 id="17101-evenandoddheaders-不同的偶数奇数页页眉和页脚">17.10.1 evenAndOddHeaders (不同的偶数/奇数页页眉和页脚)<a class="headerlink" href="#17101-evenandoddheaders-不同的偶数奇数页页眉和页脚" title="Permanent link">&para;</a></h2>
+<p><strong>evenAndOddHeaders (Different Even/Odd Page Headers and Footers)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">中文</label><label for="__tabbed_2_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定文档中的各节是否应为奇数页和偶数页使用不同的页眉和页脚（分别为奇数页页眉/页脚和偶数页页眉/页脚）。</p>
+<p>如果 <code>val</code> 属性设置为 <code>true</code>，那么文档中的每个节将使用奇数页页眉用于节中的所有奇数页，并使用偶数页页眉用于节中的所有偶数页（根据父节的页码起始值来确定第一页是奇数还是偶数，如 <code>pgNumType</code> 元素上的 <code>start</code> 属性所指定）。如果 <code>val</code> 属性设置为 <code>false</code>，则节中的所有页面将使用奇数页页眉。</p>
+<p>此设置不会影响每个节的首页页眉的存在，该页眉通过 <code>titlePg</code> 元素（<a href="#17106-titlepg-第一页页眉和页脚的不同">§17.10.6</a>）指定。如果指定了首页页眉，则所有后续页面都将应用此设置，包括奇数/偶数页计数中的第一页。</p>
+<p>如果此元素设置为 <code>false</code> 且指定了偶数页页眉/页脚，则将其忽略，且仅显示奇数页页眉/页脚。相反，如果此元素设置为 <code>true</code> 且某节省略了某种页眉/页脚类型，则应从前一节继承相应的页眉/页脚；如果这是文档的第一节，则根据需要创建一个空白页眉/页脚（不会使用其他页眉/页脚类型代替）。</p>
+<p>如果省略此元素，则其值应假定为 <code>false</code>。</p>
+<p>【示例：考虑一个文档，它的每个节必须具有不同的奇数页和偶数页页眉。此要求必须使用以下 WordprocessingML 指定：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:settings&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:evenAndOddHeaders</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:settings&gt;</span>
+</code></pre></div>
+<p>由于设置了 <code>evenAndOddHeaders</code> 属性（且其默认值为 <code>true</code>），该文档现在具有不同的奇数页和偶数页的页眉和页脚。示例结束】</p>
+<p>This element’s content model is defined by the common boolean property definition in <a href="../17miscellaneous/#17174-布尔属性-ct_onoff">§17.17.4</a>.</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies whether sections in this document shall have different headers and footers for even and odd pages (an odd page header/footer and an even page header/footer).</p>
+<p>If the val attribute is set to true, then each section in the document shall use an odd page header for all odd numbered pages in the section, and an even page header for all even numbered pages in the section (counting from the starting value of page numbering for the parent section to determine if the first page is even or odd, as specified with the start attribute on the pgNumType element). If the val attribute is set to false, then all pages in a section shall use the odd page header.</p>
+<p>This setting does not affect the presence of a first page header on each section, which is specified using the titlePg element (<a href="#17106-titlepg-第一页页眉和页脚的不同">§17.10.6</a>). If a first page header is specified, then all subsequent pages shall have this setting applied, including the first page in the odd/even page count.</p>
+<p>If this element is set to false and an even page header/footer is specified , then it shall be ignored and only the odd page header/footer shall be displayed. Conversely, if this element is set to true and either header/footer type is omitted for a given section, the appropriate header/footer should be inherited from the previous section; if this is the first section in the document, then a blank header/footer shall be created as needed (another header/footer type shall not be used in its place).</p>
+<p>If this element is omitted, then its value shall be assumed to be false.</p>
+<p>[Example: Consider a document which must have a different even and odd page header for each section in its contents. This requirement must be specified using the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:settings&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:evenAndOddHeaders</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:settings&gt;</span>
+</code></pre></div>
+<p>Since the evenAndOddHeaders property is set (and its default value is true), this document now has different headers and footers for even and odd pages. end example]</p>
+<p>This element’s content model is defined by the common boolean property definition in <a href="../17miscellaneous/#17174-布尔属性-ct_onoff">§17.17.4</a>.</p>
+</div>
+</div>
+</div>
+<h2 id="17102-footerreference-页脚参考">17.10.2 footerReference (页脚参考)<a class="headerlink" href="#17102-footerreference-页脚参考" title="Permanent link">&para;</a></h2>
+<p><strong>footerReference (Footer Reference)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">中文</label><label for="__tabbed_3_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定一个页脚，该页脚将与文档中的当前节关联。这个页脚将通过id属性进行引用，该属性指定与WordprocessingML包中相应Footer部分的显式关系。</p>
+<p>如果此元素指定的关系的关系类型不是 http://purl.oclc.org/ooxml/officeDocument/relationships/footer ，或者不存在，或者其TargetMode属性值不是Internal，那么该文档将被视为不合规。</p>
+<p>在文档的每个节中，可以有多达三种不同类型的页脚：</p>
+<ul>
+<li>第一页页脚</li>
+<li>奇数页页脚</li>
+<li>偶数页页脚</li>
+</ul>
+<p>当前footerReference指定的页脚类型通过type属性指定。</p>
+<p>如果某一节省略了任何类型的页脚，则适用以下规则：</p>
+<ul>
+<li>如果未指定第一页页脚的footerReference，并且指定了titlePg元素，则第一页页脚应从前一节继承；如果这是文档的第一节，则将创建一个新的空白页脚。如果未指定titlePg元素，则不显示第一页页脚，而使用奇数页页脚代替。</li>
+<li>如果未指定偶数页页脚的footerReference，并且指定了evenAndOddHeaders元素，则偶数页页脚应从前一节继承；如果这是文档的第一节，则将创建一个新的空白页脚。如果未指定evenAndOddHeaders元素，则不显示偶数页页脚，而使用奇数页页脚代替。</li>
+<li>如果未指定奇数页页脚的footerReference，则奇数页页脚应从前一节继承；如果这是文档的第一节，则将创建一个新的空白页脚。</li>
+</ul>
+<p>【示例：考虑一个三页文档，其中定义了不同的第一页、奇数页和偶数页页脚，如下所示：</p>
+<p><a class="glightbox" href="../imgs/Image9522.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9522.png" /></a></p>
+<p>此文档定义了三个页脚，每个页脚都有一个来自文档部分的唯一关系ID，如下的包装标记所示：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId6&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/footer&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;footer1.xml&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId7&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/footer&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;footer2.xml&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId10&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/footer&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;footer3.xml&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>然后，这些关系在节的属性中通过以下WordprocessingML进行引用：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;default&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>生成的节必须在第一页使用关系ID为rId6的页脚部分，在所有后续的偶数页使用关系ID为rId10的页脚部分，并在所有后续的奇数页使用关系ID为rId7的页脚部分。示例结束】</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong>（部件关系）</dt>
+<dd>
+<p>命名空间: http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>指定与指定部分的关系ID。</p>
+<p>指定的关系应与父元素要求的关系类型匹配：</p>
+<ul>
+<li>contentPart元素对应http://purl.oclc.org/ooxml/officeDocument/relationships/customXml</li>
+<li>footerReference元素对应http://purl.oclc.org/ooxml/officeDocument/relationships/footer</li>
+<li>headerReference元素对应http://purl.oclc.org/ooxml/officeDocument/relationships/header</li>
+<li>embedBold、embedBoldItalic、embedItalic或embedRegular元素对应http://purl.oclc.org/ooxml/officeDocument/relationships/font</li>
+<li>printerSettings元素对应http://purl.oclc.org/ooxml/officeDocument/relationships/printerSettings</li>
+<li>longDesc或hyperlink元素对应http://purl.oclc.org/ooxml/officeDocument/relationships/hyperlink</li>
+</ul>
+<p>【示例：考虑一个具有以下id属性的XML元素：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>该标记指定与关系ID rId10相关的关系部分包含父XML元素的相应关系信息。示例结束】</p>
+<p>该属性的可能值由ST_RelationshipId简单类型定义（<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>）。</p>
+</dd>
+<dt><strong>type</strong>（页眉或页脚类型）</dt>
+<dd>
+<p>指定目标关系ID所指定的页眉或页脚类型。此页眉/页脚类型决定当前页眉或页脚显示在哪些页面上。</p>
+<p>如果任何节包含超过一个的同类型页眉或页脚，则该文档将被视为不合规。</p>
+<p>【示例：考虑一个具有以下WordprocessingML的文档：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>生成的节有两个类型为first的页脚，因此不合规。示例结束】</p>
+<p>【示例：考虑一个指定以下页眉引用的WordprocessingML节：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>生成的节必须在第一页使用指定的页眉部分。示例结束】</p>
+<p>该属性的可能值由ST_HdrFtr简单类型定义（<a href="../18simpletypes/#171836-st_hdrftr-页眉或页脚类型">§17.18.36</a>）。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtrRef) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies a single footer which shall be associated with the current section in the document. </p>
+<p>This footer shall be referenced via the id attribute, which specifies an explicit relationship to the appropriate Footer part in the WordprocessingML package.</p>
+<p>If the relationship type of the relationship specified by this element is not
+http://purl.oclc.org/ooxml/officeDocument/relationships/footer, is not present, or does not have a
+TargetMode attribute value of Internal, then the document shall be considered non-conformant.
+Within each section of a document there can be up to three different types of footers:</p>
+<ul>
+<li>First page footer</li>
+<li>Odd page footer</li>
+<li>Even page footer</li>
+</ul>
+<p>The footer type specified by the current footerReference is specified via the type attribute.</p>
+<p>If any type of footer is omitted for a given section, then the following rules shall apply.</p>
+<ul>
+<li>If no footerReference for the first page footer is specified and the titlePg element is specified, then the first page footer shall be inherited from the previous section or, if this is the first section in the document, a new blank footer shall be created. If the titlePg element is not specified, then no first page footer shall be shown, and the odd page footer shall be used in its place.</li>
+<li>If no footerReference for the even page footer is specified and the evenAndOddHeaders element is specified, then the even page footer shall be inherited from the previous section or, if this is the first section in the document, a new blank footer shall be created. If the evenAndOddHeaders element is not specified, then no even page footer shall be shown. and the odd page footer shall be used in its place.</li>
+<li>If no footerReference for the odd page footer is specified then the odd page footer shall be inherited from the previous section or, if this is the first section in the document, a new blank footer shall be created.</li>
+</ul>
+<p>[Example: Consider a three page document with different first, odd, and even page footers defined as follows:</p>
+<p><a class="glightbox" href="../imgs/Image9522.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9522.png" /></a></p>
+<p>This document defines three footers, each of have a relationship from the document part with a unique relationship ID, as shown in the following packaging markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span>…
+<span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId6&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/footer&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;footer1.xml&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId7&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/footer&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;footer2.xml&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId10&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/footer&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;footer3.xml&quot;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>These relationships are then referenced in the section's properties using the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;default&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>The resulting section must use the footer part with relationship id rId6 for the first page, the footer part with relationship id rId10 for all subsequent even pages, and the footer part with relationship id rId7 for all subsequent odd pages. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong> (Relationship to Part)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>Specifies the relationship ID to a specified part.</p>
+<p>The specified relationship shall match the relationship type required by the parent element:</p>
+<ul>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/customXml for the contentPart element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/footer for the footerReference element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/header for the headerReference element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/font for the embedBold, embedBoldItalic, embedItalic, or embedRegular elements</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/printerSettings for the printerSettings element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/hyperlink for the longDesc or hyperlink element</li>
+</ul>
+<p>[Example: Consider an XML element which has the following id attribute:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>The markup specifies the associated relationship part with relationship ID rId1 contains the corresponding relationship information for the parent XML element. end example]</p>
+<p>The possible values for this attribute are defined by the ST_RelationshipId simple type (<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>).</p>
+</dd>
+<dt><strong>type</strong> (Header or Footer Type)</dt>
+<dd>
+<p>Specifies the type of header or footer specified by the target relationship ID. This header/footer type determines the page(s) on which the current header or footer shall be displayed.</p>
+<p>If any section contains more than a single header or footer of each type, then the document shall be considered non-conformant.</p>
+<p>[Example: Consider a document with the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>The resulting section has two footers of type first, and therefore is non-conformant. end example]</p>
+<p>[Example: Consider a WordprocessingML section which specifies the following header reference:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>The resulting section must use the specified header part for the first page. end example]</p>
+<p>The possible values for this attribute are defined by the ST_HdrFtr simple type (<a href="../18simpletypes/#171836-st_hdrftr-页眉或页脚类型">§17.18.36</a>).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtrRef) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="17103-ftr-页脚">17.10.3 ftr (页脚)<a class="headerlink" href="#17103-ftr-页脚" title="Permanent link">&para;</a></h2>
+<p><strong>ftr (Footer)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">中文</label><label for="__tabbed_4_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定一个或多个WordprocessingML文档节中使用的单个页脚的内容。</p>
+<p>在ftr元素中，元素的内容类似于body元素（<a href="../02maindocment/#1722-body-文档正文">§17.2.2</a>）的内容，包含所谓的块级标记——可以作为WordprocessingML文档中段落的兄弟元素存在的标记。</p>
+<p>【示例：考虑以下带有一个页脚的简单单页文档：</p>
+<p><a class="glightbox" href="../imgs/Image9530.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9530.png" /></a></p>
+<p>该文档定义了一个包含文本“Footer”的页脚。页脚的内容存储在一个唯一的Footer部分中。生成的页脚由以下WordprocessingML表示：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Footer<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>由于页脚是块级内容的容器，所有块级元素都可以在其中使用。在此示例中，内容是一个单独的段落。示例结束】</p>
+<p>【示例：考虑一个更复杂的三页文档，其中定义了不同的第一页、奇数页和偶数页页脚：</p>
+<p><a class="glightbox" href="../imgs/Image9533.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9533.jpg" /></a> <a class="glightbox" href="../imgs/Image9534.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9534.jpg" /></a> <a class="glightbox" href="../imgs/Image9535.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9535.jpg" /></a></p>
+<p>该文档定义了存储在三个不同页脚部分中的三个页脚。生成的页脚由以下WordprocessingML表示：</p>
+<p>第一页页脚部分：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>First<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>偶数页页脚部分：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Even<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>奇数页页脚部分：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Odd<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>示例结束】</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtr) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies the content for a single footer for use within one or more sections of a WordprocessingML document.</p>
+<p>Within the ftr element, the content of the element is similar to the content of the body (<a href="../02maindocment/#1722-body-文档正文">§17.2.2</a>) element, and contains what is referred to as block-level markup - markup which can exist as a sibling element to paragraphs in a WordprocessingML document.</p>
+<p>[Example: Consider the following simple one page document with one footer:</p>
+<p><a class="glightbox" href="../imgs/Image9530.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9530.png" /></a></p>
+<p>This document defines one footer with the text footer. The footer contents are stored in a unique footer part. The resulting footer is represented by the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Footer<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>Since footers are containers of block level contents, all block level elements can be used within them. In this particular example, the content is a single paragraph. end example]</p>
+<p>[Example: Consider a more complex three page document with different first, odd, and even page footers defined:</p>
+<p><a class="glightbox" href="../imgs/Image9533.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9533.jpg" /></a> <a class="glightbox" href="../imgs/Image9534.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9534.jpg" /></a> <a class="glightbox" href="../imgs/Image9535.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9535.jpg" /></a></p>
+<p>This document defines three footers stored in three different footer parts. The resulting footers are represented by the following WordprocessingML:</p>
+<p>First page footer part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>First<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>Even page footer part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Even<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>Odd page footer part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:ftr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Odd<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:ftr&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtr) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="17104-hdr-页眉">17.10.4 hdr (页眉)<a class="headerlink" href="#17104-hdr-页眉" title="Permanent link">&para;</a></h2>
+<p><strong>hdr (Header)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">中文</label><label for="__tabbed_5_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定在一个或多个WordprocessingML文档的节中使用的单个页眉的内容。</p>
+<p>在hdr元素中，元素的内容类似于body元素（<a href="../02maindocment/#1722-body-文档正文">§17.2.2</a>）的内容，包含所谓的块级标记 - 可以作为WordprocessingML文档中段落的兄弟元素存在的标记。</p>
+<p>【示例：考虑以下带有一个页眉的简单单页文档：</p>
+<p><a class="glightbox" href="../imgs/Image9540.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9540.png" /></a></p>
+<p>该文档定义了一个包含文本"Header"的页眉。页眉的内容存储在一个唯一的Header部分中。生成的页眉由以下WordprocessingML表示：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Header<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>由于页眉是块级内容的容器，所有块级元素都可以在其中使用。在此示例中，内容是一个单独的段落。示例结束】</p>
+<p>【示例：考虑一个更复杂的三页文档，其中定义了不同的第一页、奇数页和偶数页页眉：</p>
+<p><a class="glightbox" href="../imgs/Image9542.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9542.png" /></a></p>
+<p>该文档定义了存储在三个不同页眉部分中的三个页眉。生成的页眉由以下WordprocessingML表示：</p>
+<p>第一页页眉部分：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>First<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>偶数页页眉部分：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Even<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>奇数页页眉部分：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Odd<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>示例结束】</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtr) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies the content for a single header for use within one or more sections of a WordprocessingML document.</p>
+<p>Within the hdr element, the content of the element is similar to the content of the body (<a href="../02maindocment/#1722-body-文档正文">§17.2.2</a>) element, and contains what is referred to as block-level markup - markup which can exist as a sibling element to paragraphs in a WordprocessingML document.</p>
+<p>[Example: Consider the following simple one page document with one header:</p>
+<p><a class="glightbox" href="../imgs/Image9540.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9540.png" /></a></p>
+<p>This document defines one header with the text Header. The header's contents is stored in a unique Header part. The resulting header is represented by the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Header<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>Since headers are containers of block level contents, all block level elements can be used within them. In this particular example, the content is a single paragraph. end example]</p>
+<p>[Example: Consider a more complex three page document with different first, odd, and even page headers defined:</p>
+<p><a class="glightbox" href="../imgs/Image9542.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9542.png" /></a></p>
+<p>This document defines three headers stored in three different header parts. The resulting headers are represented by the following WordprocessingML:</p>
+<p>First page header part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>First<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>Even page header part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Even<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>Odd page header part:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:hdr&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:p&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;w:r&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;w:t&gt;</span>Odd<span style="color: #008000; font-weight: bold">&lt;/w:t&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/w:r&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/w:p&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/w:hdr&gt;</span>
+</code></pre></div>
+<p>end example]</p>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtr) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="17105-headerreference-页眉参考">17.10.5 headerReference (页眉参考)<a class="headerlink" href="#17105-headerreference-页眉参考" title="Permanent link">&para;</a></h2>
+<p><strong>headerReference (Header Reference)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">中文</label><label for="__tabbed_6_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>该元素指定一个应与文档当前节关联的单个页眉。该页眉将通过id属性进行引用，该属性指定了与WordprocessingML包中的相应页眉部分的显式关系。</p>
+<p>如果此元素指定的关系类型不是 http://purl.oclc.org/ooxml/officeDocument/relationships/header ，或不存在，或其TargetMode属性值不是Internal，那么文档将被视为不符合规范。</p>
+<p>在文档的每一节中，最多可以有三种不同类型的页眉：</p>
+<ul>
+<li>首页页眉</li>
+<li>奇数页页眉</li>
+<li>偶数页页眉</li>
+</ul>
+<p>当前headerReference指定的页眉类型通过type属性来指定。</p>
+<p>如果在给定节中省略了任何类型的页眉，则将应用以下规则：</p>
+<ul>
+<li>如果未指定首页页眉的headerReference且指定了titlePg元素，则首页页眉应从上一节继承，或者如果这是文档的第一节，则应创建一个新的空白页眉。如果未指定titlePg元素，则不显示首页页眉，并使用奇数页页眉代替。</li>
+<li>如果未指定偶数页页眉的headerReference且指定了evenAndOddHeaders元素，则偶数页页眉应从上一节继承，或者如果这是文档的第一节，则应创建一个新的空白页眉。如果未指定evenAndOddHeaders元素，则不显示偶数页页眉，并使用奇数页页眉代替。</li>
+<li>如果未指定奇数页页眉的headerReference，则奇数页页眉应从上一节继承，或者如果这是文档的第一节，则应创建一个新的空白页眉。</li>
+</ul>
+<p>【示例：考虑一个定义了不同的首页、奇数页和偶数页页眉的三页文档，如下所示：</p>
+<p><a class="glightbox" href="../imgs/Image9542.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9542.png" /></a></p>
+<p>该文档定义了三个页眉，每个页眉都有一个来自文档部分的唯一关系ID，如下包标记所示：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/header&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;header1.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId3&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/header&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;header2.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/header&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;header3.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>这些关系在节的属性中通过以下WordprocessingML进行引用：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;default&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>生成的节必须使用关系ID为rId3的页眉部分作为首页页眉，关系ID为rId2的页眉部分作为所有后续偶数页页眉，关系ID为rId5的页眉部分作为所有后续奇数页页眉。示例结束】</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong>（与部件的关系）</dt>
+<dd>
+<p>命名空间：http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>指定与指定部分的关系ID。</p>
+<p>指定的关系应与父元素要求的关系类型匹配：</p>
+<ul>
+<li>对于contentPart元素：http://purl.oclc.org/ooxml/officeDocument/relationships/customXml</li>
+<li>对于footerReference元素：http://purl.oclc.org/ooxml/officeDocument/relationships/footer</li>
+<li>对于headerReference元素：http://purl.oclc.org/ooxml/officeDocument/relationships/header</li>
+<li>对于embedBold、embedBoldItalic、embedItalic或embedRegular元素：http://purl.oclc.org/ooxml/officeDocument/relationships/font</li>
+<li>对于printerSettings元素：http://purl.oclc.org/ooxml/officeDocument/relationships/printerSettings</li>
+<li>对于longDesc或hyperlink元素：http://purl.oclc.org/ooxml/officeDocument/relationships/hyperlink</li>
+</ul>
+<p>【示例：考虑一个具有以下id属性的XML元素：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>该标记指定了关系ID为rId10的关联关系部分，其中包含了父XML元素的相应关系信息。示例结束】</p>
+<p>此属性的可能值由ST_RelationshipId简单类型定义（<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>）。</p>
+</dd>
+<dt><strong>type</strong>（页眉或页脚类型）</dt>
+<dd>
+<p>指定目标关系ID所指定的页眉或页脚类型。该页眉/页脚类型决定了当前页眉或页脚应显示在哪些页面上。</p>
+<p>如果任何节包含多于一个每种类型的页眉或页脚，则文档将被视为不符合规范。</p>
+<p>【示例：考虑一个包含以下WordprocessingML的文档：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>生成的节有两个类型为first的页脚，因此不符合规范。示例结束】</p>
+<p>【示例：考虑一个指定以下页眉引用的WordprocessingML节：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>生成的节必须使用指定的页眉部分作为第一页的页眉。示例结束】</p>
+<p>此属性的可能值由ST_HdrFtr简单类型定义（<a href="../18simpletypes/#171836-st_hdrftr-页眉或页脚类型">§17.18.36</a>）。</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtrRef) is located in §A.1. end note]</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies a single header which shall be associated with the current section in the document. This header shall be referenced via the id attribute, which specifies an explicit relationship to the appropriate Header part in the WordprocessingML package.</p>
+<p>If the relationship type of the relationship specified by this element is not http://purl.oclc.org/ooxml/officeDocument/relationships/header, is not present, or does not have a TargetMode attribute value of Internal, then the document shall be considered non-conformant.</p>
+<p>Within each section of a document there can be up to three different types of headers:</p>
+<ul>
+<li>First page header</li>
+<li>Odd page header</li>
+<li>Even page header</li>
+</ul>
+<p>The header type specified by the current headerReference is specified via the type attribute.</p>
+<p>If any type of header is omitted for a given section, then the following rules shall apply.</p>
+<ul>
+<li>If no headerReference for the first page header is specified and the titlePg element is specified, then the first page header shall be inherited from the previous section or, if this is the first section in the document, a new blank header shall be created. If the titlePg element is not specified, then no first page header shall be shown, and the odd page header shall be used in its place.</li>
+<li>If no headerReference for the even page header is specified and the evenAndOddHeaders element is specified, then the even page header shall be inherited from the previous section or, if this is the first section in the document, a new blank header shall be created. If the evenAndOddHeaders element is not specified, then no even page header shall be shown, and the odd page header shall be used in its place.</li>
+<li>If no headerReference for the odd page header is specified then the odd page header shall be inherited from the previous section or, if this is the first section in the document, a new blank header shall be created.</li>
+</ul>
+<p>[Example: Consider a three page document with different first, odd, and even page header defined as follows:</p>
+<p><a class="glightbox" href="../imgs/Image9542.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="123" src="../imgs/Image9542.png" /></a></p>
+<p>This document defines three headers, each of have a relationship from the document part with a unique relationship ID, as shown in the following packaging markup:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;Relationships</span>
+<span style="color: #bbbbbb">    </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://schemas.openxmlformats.org/package/2006/relationships&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId2&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/header&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;header1.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId3&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/header&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;header2.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;Relationship</span><span style="color: #bbbbbb"> </span><span style="color: #687822">Id=</span><span style="color: #BA2121">&quot;rId5&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Type=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/officeDocument/relationships/header&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">Target=</span><span style="color: #BA2121">&quot;header3.xml&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/Relationships&gt;</span>
+</code></pre></div>
+<p>These relationships are then referenced in the section's properties using the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId3&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId5&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;default&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId2&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>The resulting section must use the header part with relationship id rId3 for the first page, the header part with relationship id rId2 for all subsequent even pages, and the header part with relationship id rId5 for all subsequent odd pages. end example]</p>
+<details class="abstract">
+<summary>Attributes</summary>
+<dl>
+<dt><strong>id</strong> (Relationship to Part)</dt>
+<dd>
+<p>Namespace: http://purl.oclc.org/ooxml/officeDocument/relationships</p>
+<p>Specifies the relationship ID to a specified part.</p>
+<p>The specified relationship shall match the relationship type required by the parent element:</p>
+<ul>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/customXml for the contentPart element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/footer for the footerReference element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/header for the headerReference element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/font for the embedBold, embedBoldItalic, embedItalic, or embedRegular elements</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/printerSettings for the printerSettings element</li>
+<li>http://purl.oclc.org/ooxml/officeDocument/relationships/hyperlink for the longDesc or hyperlink element</li>
+</ul>
+<p>[Example: Consider an XML element which has the following id attribute:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="border: 1px solid #FF0000">&lt;</span>…<span style="color: #bbbbbb"> </span>r:id=&quot;rId10&quot;<span style="color: #bbbbbb"> </span>/&gt;
+</code></pre></div>
+<p>The markup specifies the associated relationship part with relationship ID rId1 contains the corresponding relationship information for the parent XML element. end example]</p>
+<p>The possible values for this attribute are defined by the ST_RelationshipId simple type (<a href="../../chapter22/officedocumentrelationships/#22821-st_relationshipid-显式关系-id">§22.8.2.1</a>).</p>
+</dd>
+<dt><strong>type</strong> (Header or Footer Type)</dt>
+<dd>
+<p>Specifies the type of header or footer specified by the target relationship ID. This header/footer type determines the page(s) on which the current header or footer shall be displayed.</p>
+<p>If any section contains more than a single header or footer of each type, then the
+document shall be considered non-conformant.</p>
+<p>[Example: Consider a document with the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId6&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId7&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;w:footerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;even&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>The resulting section has two footers of type first, and therefore is non-conformant. end example]</p>
+<p>[Example: Consider a WordprocessingML section which specifies the following header reference:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:headerReference</span><span style="color: #bbbbbb"> </span><span style="color: #687822">r:id=</span><span style="color: #BA2121">&quot;rId10&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">w:type=</span><span style="color: #BA2121">&quot;first&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+</code></pre></div>
+<p>The resulting section must use the specified header part for the first page. end example]</p>
+<p>The possible values for this attribute are defined by the ST_HdrFtr simple type (<a href="../18simpletypes/#171836-st_hdrftr-页眉或页脚类型">§17.18.36</a>).</p>
+</dd>
+</dl>
+</details>
+<p>[Note: The W3C XML Schema definition of this element’s content model (CT_HdrFtrRef) is located in §A.1. end note]</p>
+</div>
+</div>
+</div>
+<h2 id="17106-titlepg-第一页页眉和页脚的不同">17.10.6 titlePg (第一页页眉和页脚的不同)<a class="headerlink" href="#17106-titlepg-第一页页眉和页脚的不同" title="Permanent link">&para;</a></h2>
+<p><strong>titlePg (Different First Page Headers and Footers)</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">中文</label><label for="__tabbed_7_2">英文</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>此元素指定文档中的父节是否应为其首页设置不同的页眉和页脚。</p>
+<p>如果val属性设置为true，则文档中的父节将在该节的首页使用首页页眉。如果val属性设置为false，则父节的首页将使用父节的页码起始值来决定首页是否应使用偶数页或奇数页的页眉/页脚，如pgNumType元素的start属性所指定的那样。</p>
+<p>此设置不影响所有节中的偶数页和奇数页页眉的存在情况，这由evenAndOddHeaders元素（<a href="#17101-evenandoddheaders-不同的偶数奇数页页眉和页脚">§17.10.1</a>）指定。</p>
+<p>如果此元素设置为false且指定了首页页眉/页脚，则它将被忽略，并且只显示奇数页页眉/页脚。相反，如果此元素设置为true且给定节没有指定首页页眉/页脚类型，则首页页眉/页脚应继承自前一节；如果这是文档中的第一节，则将创建一个空白的页眉/页脚（不会使用其他页眉/页脚类型替代）。</p>
+<p>如果省略此元素，则其值应视为false。</p>
+<p>【示例：考虑一个必须具有不同首页页眉的节。此需求使用以下WordprocessingML指定：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:titlePg</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>由于存在titlePg属性（其默认属性值为true），因此该文档现在具有不同的首页页眉和页脚。示例结束】</p>
+<p>此元素的内容模型由<a href="../17miscellaneous/#17174-布尔属性-ct_onoff">§17.17.4</a>中的常见布尔属性定义。</p>
+</div>
+<div class="tabbed-block">
+<p>This element specifies whether the parent section in this document shall have a different header and footer for its first page.</p>
+<p>If the val attribute is set to true, then the parent section in the document shall use a first page header for the first page in the section. If the val attribute is set to false, then the first page in the parent section shall use the starting value of page numbering for the parent section to determine if the first page should use the even or odd header/footer, as specified with the start attribute on the pgNumType element.</p>
+<p>This setting does not affect the presence of even and odd page header on all sections, which is specified using the evenAndOddHeaders element (<a href="#17101-evenandoddheaders-不同的偶数奇数页页眉和页脚">§17.10.1</a>).</p>
+<p>If this element is set to false and a first page header/footer is specified , then it shall be ignored and only the odd page header/footer shall be displayed. Conversely, if this element is set to true and the first page header/footer type is omitted for the given section, the first page header/footer should be inherited from the previous section; if this is the first section in the document, then a blank header/footer shall be created (another header/footer type shall not be used in its place).</p>
+<p>If this element is omitted, then its value shall be assumed to be false.</p>
+<p>[Example: Consider a section which must have a different first page header. This requirement is specified using the following WordprocessingML:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;w:sectPr&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;w:titlePg</span><span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span>…
+<span style="color: #008000; font-weight: bold">&lt;/w:sectPr&gt;</span>
+</code></pre></div>
+<p>Since the titlePg property is present (and its default attribute value is true), this document now has a different header and footer for its first page. end example]</p>
+<p>This element’s content model is defined by the common boolean property definition in <a href="../17miscellaneous/#17174-布尔属性-ct_onoff">§17.17.4</a>.</p>
+</div>
+</div>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "content.tabs.link", "content.code.copy", "content.tooltips", "navigation.indexes", "navigation.prune", "navigation.instant"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.94c44541.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

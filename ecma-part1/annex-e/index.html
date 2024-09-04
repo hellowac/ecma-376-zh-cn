@@ -907,16 +907,76 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../chapter-17/" class="md-nav__link">
+    
+    
+      
         
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../chapter17/" class="md-nav__link">
+      
   
   <span class="md-ellipsis">
     17. WordprocessingML 参考资料
   </span>
   
 
-      </a>
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
     </li>
   
 
@@ -2342,11 +2402,167 @@
 
 
 <h1 id="annex-e-informative-wordprocessingml-自定义-xml-数据提取">Annex E. (informative) WordprocessingML 自定义 XML 数据提取<a class="headerlink" href="#annex-e-informative-wordprocessingml-自定义-xml-数据提取" title="Permanent link">&para;</a></h1>
+<p><strong>WordprocessingML Custom XML Data Extraction</strong></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">中文</label><label for="__tabbed_1_2">英文</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block"></div>
 <div class="tabbed-block">
-<p><strong>WordprocessingML Custom XML Data Extraction</strong></p>
+<p>在<a href="../chapter17/05custom/">§17.5</a>中描述的自定义XML标记功能允许WordprocessingML文档包含超出ECMA-376指定的自定义XML语义。为了从WordprocessingML内容中提取这些语义，应用程序可以使用任何所需的方法。</p>
+<p>例如，下面包含了一个执行此任务的XSL转换，当应用于主文档部分时，将提取任何自定义XML标记。</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #9C6500">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;xsl:stylesheet</span><span style="color: #bbbbbb"> </span><span style="color: #687822">version=</span><span style="color: #BA2121">&quot;1.0&quot;</span>
+<span style="color: #687822">xmlns:xsl=</span><span style="color: #BA2121">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span>
+<span style="color: #687822">xmlns:w=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/wordprocessingml/main&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 此参数应与ignoreMixedContent设置具有相同的值（见第1部分的17.15.1.54） --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:param</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ignoreMixedContent&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;false()&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 一些文档结构检查 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;/&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:if</span><span style="color: #bbbbbb"> </span><span style="color: #687822">test=</span><span style="color: #BA2121">&quot;count(//w:customXml/ancestor-or-self::w:customXml[last()]) &gt; 1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>生成的XML文档将不是格式良好的，将具有多个根元素。<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/xsl:if&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 处理文档内容 --&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:apply-templates/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 复制自定义XML元素 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;w:customXml&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;{@w:element}&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">namespace=</span><span style="color: #BA2121">&quot;{@w:uri}&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 复制属性值 --&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:for-each</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;w:customXmlPr/w:attr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;{@w:name}&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">namespace=</span><span style="color: #BA2121">&quot;{@w:uri}&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;@w:val&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/xsl:attribute&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/xsl:for-each&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 处理内容 --&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:apply-templates/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/xsl:element&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 仅复制自定义XML内的文本 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;text()[ancestor::w:customXml[not(.//w:customXml)]]&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">priority=</span><span style="color: #BA2121">&quot;10&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 警告混合内容 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;text()[ancestor::w:customXml]&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">priority=</span><span style="color: #BA2121">&quot;5&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:choose&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:when</span><span style="color: #bbbbbb"> </span><span style="color: #687822">test=</span><span style="color: #BA2121">&quot;$ignoreMixedContent&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>从输出中剥离“<span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>”。<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>此文本是混合内容的一部分，会导致非有效的结果。<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/xsl:when&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:otherwise&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/xsl:otherwise&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/xsl:choose&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 警告未标记的文本 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;text()&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>从输出中剥离“<span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>”。<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>此文本未被根元素包围，会导致非格式良好的结果。<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- 不要获取已删除的内容 --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;w:del|w:moveFrom&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div>
+<p>一旦提取了此自定义标记，生成的XML文档可以与WordprocessingML文档分开进行验证。</p>
+<p>例如，第530页上的示例的自定义XML，一旦提取，将是：</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;invoice</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://www.example.com/2006/invoice&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;customerName&gt;</span>Tristan<span style="color: #bbbbbb"> </span>Davis<span style="color: #008000; font-weight: bold">&lt;/customerName&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/invoice&gt;</span>
+</code></pre></div>
+<p>应用程序可以使用任何所需的方法找到适当的模式（schema）进行验证。例如，使用此标准定义的信息的一种方法可能是：</p>
+<ul>
+<li>在文档设置部分定位schema元素(<a href="../chapter-23/#2321-schema-custom-xml-schema-reference">§23.2.1</a>)，其uri属性与从自定义XML标记中提取的XML文档的根元素的命名空间匹配</li>
+<li>如果该元素还指定了schemaLocation属性，则使用生成的路径来定位用于验证的模式。</li>
+<li>一旦定位了此模式，应根据doNotValidateAgainstSchema(<a href="../chapter17/15settings/#1715143-donotvalidateagainstschema-不根据架构验证自定义-xml-标记">§17.15.1.43</a>)的值触发验证。</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p>The custom XML markup capabilities described in <a href="../chapter17/05custom/">§17.5</a> allow a WordprocessingML document to contain custom XML semantics beyond those specified by ECMA-376. In order to extract those semantics from within WordprocessingML content, an application may employ any desired method.</p>
+<p>As an example, an XSL transformation which performs this task is included below, which, when applied to the Main Document part, would extract any custom XML markup.</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #9C6500">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;xsl:stylesheet</span><span style="color: #bbbbbb"> </span><span style="color: #687822">version=</span><span style="color: #BA2121">&quot;1.0&quot;</span>
+<span style="color: #687822">xmlns:xsl=</span><span style="color: #BA2121">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span>
+<span style="color: #687822">xmlns:w=</span><span style="color: #BA2121">&quot;http://purl.oclc.org/ooxml/wordprocessingml/main&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+
+<span style="color: #3D7B7B; font-style: italic">&lt;!-- This parameter should have the same value as</span>
+<span style="color: #3D7B7B; font-style: italic">ignoreMixedContent settings (see 17.15.1.54 in Part 1) --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:param</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;ignoreMixedContent&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;false()&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- Some document structure checks --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;/&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:if</span><span style="color: #bbbbbb"> </span><span style="color: #687822">test=</span><span style="color: #BA2121">&quot;count(//w:customXml/ancestor-or-</span>
+<span style="color: #BA2121">            self::w:customXml[last()]) &gt; 1&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>Produced<span style="color: #bbbbbb"> </span>XML<span style="color: #bbbbbb"> </span>document<span style="color: #bbbbbb"> </span>will<span style="color: #bbbbbb"> </span>not<span style="color: #bbbbbb"> </span>be<span style="color: #bbbbbb"> </span>WF<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </span>will<span style="color: #bbbbbb"> </span>have<span style="color: #bbbbbb"> </span>more
+<span style="color: #bbbbbb">                </span>then<span style="color: #bbbbbb"> </span>one<span style="color: #bbbbbb"> </span>root<span style="color: #bbbbbb"> </span>element.<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/xsl:if&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- Process content of document --&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:apply-templates/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- copy over custom XML elements --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;w:customXml&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:element</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;{@w:element}&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">namespace=</span><span style="color: #BA2121">&quot;{@w:uri}&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- copy over attribute values --&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:for-each</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;w:customXmlPr/w:attr&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:attribute</span><span style="color: #bbbbbb"> </span><span style="color: #687822">name=</span><span style="color: #BA2121">&quot;{@w:name}&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">namespace=</span><span style="color: #BA2121">&quot;{@w:uri}&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                    </span><span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;@w:val&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;/xsl:attribute&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/xsl:for-each&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- process content --&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:apply-templates/&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/xsl:element&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- copy over only text inside custom XML --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;text()[ancestor::w:customXml[not(.//w:customXml)]]&quot;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #687822">priority=</span><span style="color: #BA2121">&quot;10&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- warn about mixed content --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;text()[ancestor::w:customXml]&quot;</span><span style="color: #bbbbbb"> </span><span style="color: #687822">priority=</span><span style="color: #BA2121">&quot;5&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:choose&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:when</span><span style="color: #bbbbbb"> </span><span style="color: #687822">test=</span><span style="color: #BA2121">&quot;$ignoreMixedContent&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>Stripping<span style="color: #bbbbbb"> </span>&quot;<span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>&quot;<span style="color: #bbbbbb"> </span>from
+<span style="color: #bbbbbb">                    </span>output.<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>This<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>is<span style="color: #bbbbbb"> </span>part<span style="color: #bbbbbb"> </span>of<span style="color: #bbbbbb"> </span>mixed<span style="color: #bbbbbb"> </span>content<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </span>would<span style="color: #bbbbbb"> </span>cause
+<span style="color: #bbbbbb">                    </span>non-valid<span style="color: #bbbbbb"> </span>result.<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/xsl:when&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;xsl:otherwise&gt;</span>
+<span style="color: #bbbbbb">                </span><span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">&lt;/xsl:otherwise&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;/xsl:choose&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- warn about text which is not tagged --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;text()&quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>Stripping<span style="color: #bbbbbb"> </span>&quot;<span style="color: #008000; font-weight: bold">&lt;xsl:value-of</span><span style="color: #bbbbbb"> </span><span style="color: #687822">select=</span><span style="color: #BA2121">&quot;.&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>&quot;<span style="color: #bbbbbb"> </span>from
+<span style="color: #bbbbbb">            </span>output.<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">&lt;xsl:message&gt;</span>This<span style="color: #bbbbbb"> </span>text<span style="color: #bbbbbb"> </span>is<span style="color: #bbbbbb"> </span>not<span style="color: #bbbbbb"> </span>enclosed<span style="color: #bbbbbb"> </span>by<span style="color: #bbbbbb"> </span>root<span style="color: #bbbbbb"> </span>element<span style="color: #bbbbbb"> </span>and<span style="color: #bbbbbb"> </span>would<span style="color: #bbbbbb"> </span>cause
+<span style="color: #bbbbbb">            </span>non-WF<span style="color: #bbbbbb"> </span>result.<span style="color: #008000; font-weight: bold">&lt;/xsl:message&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;/xsl:template&gt;</span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">&lt;!-- do not pick up deleted content --&gt;</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">&lt;xsl:template</span><span style="color: #bbbbbb"> </span><span style="color: #687822">match=</span><span style="color: #BA2121">&quot;w:del|w:moveFrom&quot;</span><span style="color: #008000; font-weight: bold">/&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div>
+<p>Once this custom markup is extracted, the resulting XML document can be validated separately from the WordprocessingML document.</p>
+<p>For example, the custom XML for the example on p. 530, once extracted, would be:</p>
+<div class="language-xml highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code><span style="color: #008000; font-weight: bold">&lt;invoice</span><span style="color: #bbbbbb"> </span><span style="color: #687822">xmlns=</span><span style="color: #BA2121">&quot;http://www.example.com/2006/invoice &quot;</span><span style="color: #008000; font-weight: bold">&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;customerName&gt;</span>Tristan<span style="color: #bbbbbb"> </span>Davis<span style="color: #008000; font-weight: bold">&lt;/customerName&gt;</span>
+<span style="color: #008000; font-weight: bold">&lt;/invoice&gt;</span>
+</code></pre></div>
+<p>An application can employ any desired method to find the appropriate schema(s) for validation. As an example, one such approach using information defined by this Standard might be:</p>
+<ul>
+<li>Locate the schema element (<a href="../chapter-23/#2321-schema-custom-xml-schema-reference">§23.2.1</a>) in the Document Settings part whose uri attribute matches the namespace of the root element in the XML document extracted from custom XML markup</li>
+<li>If that element also specifies a schemaLocation attribute, the resulting path is used to locate the schema used for validation.</li>
+<li>Once this schema is located, validation should be triggered based on the value of doNotValidateAgainstSchema (<a href="../chapter17/15settings/#1715143-donotvalidateagainstschema-不根据架构验证自定义-xml-标记">§17.15.1.43</a>).</li>
+</ul>
 </div>
 </div>
 </div>
@@ -2356,7 +2572,7 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年4月11日</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">2024年9月4日</span>
       
         <br>
         创建日期:
