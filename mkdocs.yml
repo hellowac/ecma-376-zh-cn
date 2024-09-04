@@ -143,7 +143,26 @@ nav:
                   - 14. DrawingML: ecma-part1/chapter-14.md
                   - 15. Shared: ecma-part1/chapter-15.md
                   - 16. 部件概览: ecma-part1/chapter-16.md
-                  - 17. WordprocessingML 参考资料: ecma-part1/chapter-17.md
+                  - 17. WordprocessingML 参考资料:
+                            - ecma-part1/chapter17/index.md
+                            - ecma-part1/chapter17/01toc.md
+                            - ecma-part1/chapter17/02maindocment.md
+                            - ecma-part1/chapter17/03paragraphs.md
+                            - ecma-part1/chapter17/04tabls.md
+                            - ecma-part1/chapter17/05custom.md
+                            - ecma-part1/chapter17/06sections.md
+                            - ecma-part1/chapter17/07styles.md
+                            - ecma-part1/chapter17/08fonts.md
+                            - ecma-part1/chapter17/09numbering.md
+                            - ecma-part1/chapter17/10headeres.md
+                            - ecma-part1/chapter17/11footnotes.md
+                            - ecma-part1/chapter17/12glossary.md
+                            - ecma-part1/chapter17/13annotations.md
+                            - ecma-part1/chapter17/14mailmerge.md
+                            - ecma-part1/chapter17/15settings.md
+                            - ecma-part1/chapter17/16fields.md
+                            - ecma-part1/chapter17/17miscellaneous.md
+                            - ecma-part1/chapter17/18simpletypes.md
                   - 18. SpareadsheetML 参考资料: ecma-part1/chapter-18.md
                   - 19. PresentationML 参考资料:
                             - ecma-part1/chapter19/index.md
